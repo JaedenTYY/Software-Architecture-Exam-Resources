@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CSC3209 Exam Question Search Engine</title>
+<style>
+:root{
+  --bg:#f6f7fb; --panel:#ffffff; --text:#172033; --muted:#637083; --line:#dfe4ec;
+  --accent:#3157d5; --accent2:#1739a5; --soft:#eef2ff; --danger:#a13939; --ok:#24714a;
+  --shadow:0 10px 30px rgba(25,35,60,.08); --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0f1420; --panel:#171e2c; --text:#edf2ff; --muted:#a7b2c5; --line:#2c3547;
+    --accent:#8da6ff; --accent2:#bac8ff; --soft:#202b46; --danger:#ff9d9d; --ok:#86dca9;
+    --shadow:0 10px 30px rgba(0,0,0,.22);
+  }
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent)}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.wrap{max-width:1500px;margin:auto;padding:18px 24px}
+.topline{display:flex;gap:18px;align-items:flex-start;justify-content:space-between}
+h1{font-size:24px;line-height:1.2;margin:0 0 5px}
+.sub{color:var(--muted);font-size:13px}
+.stats{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+.badge{padding:5px 9px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:12px;white-space:nowrap}
+.toolbar{display:grid;grid-template-columns:minmax(260px,2fr) repeat(3,minmax(130px,1fr));gap:9px;margin-top:15px}
+.toolbar2{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:9px;margin-top:9px}
+input,select,button{font:inherit}
+input,select{width:100%;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text);padding:10px 11px}
+button{border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text);padding:9px 12px;cursor:pointer}
+button:hover{border-color:var(--accent)}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.ghost{background:transparent}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+.toggle{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;margin-left:auto}
+main{max-width:1500px;margin:auto;padding:18px 24px 50px}
+.summarybar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted)}
+#results{display:grid;gap:13px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{font-size:11px;padding:3px 7px;border-radius:999px;background:var(--soft);color:var(--accent2);border:1px solid color-mix(in srgb,var(--accent) 20%,var(--line))}
+.chip.diff-Brutal{color:var(--danger)}
+.chip.diff-Hard{color:var(--ok)}
+.qhead{display:flex;gap:10px;align-items:flex-start}
+.qid{font:600 12px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted);padding-top:3px}
+.prompt{font-size:16px;white-space:pre-wrap;flex:1}
+.card-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.small{font-size:12px;padding:6px 9px}
+.answer{display:none;margin-top:13px;padding:14px;border-radius:12px;background:color-mix(in srgb,var(--soft) 70%,var(--panel));border:1px solid var(--line);white-space:pre-wrap}
+.answer.open{display:block}
+.answer strong{color:var(--accent2)}
+.trap{margin-top:9px;color:var(--danger);font-size:13px}
+.source{margin-top:9px;color:var(--muted);font-size:11px}
+.star{font-size:18px;padding:2px 7px;background:transparent;border:0}
+.star.on{color:#d99b00}
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.pager{display:flex;gap:8px;justify-content:center;margin-top:18px}
+.pager button:disabled{opacity:.45;cursor:not-allowed}
+.mock-banner{background:var(--soft);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:14px}
+.refbox{display:none;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:14px}
+.refbox.open{display:block}
+.refgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.refitem{border:1px solid var(--line);border-radius:12px;padding:13px}
+.refitem h3{font-size:14px;margin:0 0 7px}
+.refitem p{margin:5px 0;color:var(--muted)}
+kbd{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:2px 5px;background:var(--panel)}
+mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
+.footer{margin-top:35px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+@media(max-width:950px){.toolbar{grid-template-columns:1fr 1fr}.toolbar2{grid-template-columns:1fr 1fr}.topline{display:block}.stats{justify-content:flex-start;margin-top:10px}.refgrid{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap,main{padding-left:12px;padding-right:12px}.toolbar,.toolbar2{grid-template-columns:1fr}.toggle{margin-left:0}.summarybar{align-items:flex-start;flex-direction:column}}
+@media print{header,.actions,.card-actions,.pager,.refbox,.footer{display:none!important}body{background:white;color:black}.card{box-shadow:none;break-inside:avoid}.answer{display:block;background:white}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="topline">
+      <div>
+        <h1>CSC3209 Exam Question Search Engine</h1>
+        <div class="sub">Searchable hard-question bank grounded in your lecture scope + supplied past-paper grammar.</div>
+      </div>
+      <div class="stats">
+        <span class="badge" id="totalStat"></span>
+        <span class="badge" id="hardStat"></span>
+        <span class="badge" id="favStat">0 favourites</span>
+      </div>
+    </div>
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search: availability, utility tree, P2P, bridging, Observer..." autocomplete="off">
+      <select id="topic"><option value="">All topics</option></select>
+      <select id="subtopic"><option value="">All subtopics / patterns</option></select>
+      <select id="qtype"><option value="">All question types</option></select>
+    </div>
+    <div class="toolbar2">
+      <select id="difficulty"><option value="">All difficulty</option></select>
+      <select id="family"><option value="">All exam families</option></select>
+      <select id="scenario"><option value="">All scenario domains</option></select>
+      <select id="marks"><option value="">All marks</option></select>
+    </div>
+    <div class="actions">
+      <button class="primary" id="randomBtn">Random Hard Question</button>
+      <button id="mockBtn">Generate 50-Mark Mock</button>
+      <button id="refsBtn">Universal Answer Cheatsheet</button>
+      <button id="favBtn">Show Favourites</button>
+      <button id="resetBtn" class="ghost">Reset</button>
+      <button id="exportBtn" class="ghost">Export Current Results</button>
+      <label class="toggle"><input id="searchAnswers" type="checkbox"> Search answer outlines too</label>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="refs" class="refbox">
+    <div class="refgrid">
+      <div class="refitem">
+        <h3>Pattern selection</h3>
+        <p><b>Requirement → problem → pattern → elements/connector → mechanism → QA effect → trade-off.</b></p>
+        <p>Never stop at “X is suitable because X is scalable/secure.” Explain the structural mechanism.</p>
+      </div>
+      <div class="refitem">
+        <h3>Six-part QA scenario</h3>
+        <p><b>Source → Stimulus → Environment → Artifact → Response → Response Measure.</b></p>
+        <p>Stimulus is an event. Response measure must be testable/measurable.</p>
+      </div>
+      <div class="refitem">
+        <h3>Structures</h3>
+        <p><b>Module:</b> code/implementation organization.</p>
+        <p><b>C&amp;C:</b> runtime interaction.</p>
+        <p><b>Allocation:</b> software-to-environment mapping.</p>
+      </div>
+      <div class="refitem">
+        <h3>Critical reasoning</h3>
+        <p>A pattern or tactic <b>may</b> support a QA; it does not guarantee it. Check shared dependencies, bottlenecks, failure modes, boundaries and measurable criteria.</p>
+      </div>
+      <div class="refitem">
+        <h3>Utility Tree</h3>
+        <p><b>Utility → QA → refinement → scenario [Business Value, Architectural Impact]</b>.</p>
+        <p>[H,H] scenarios are strong ASR candidates.</p>
+      </div>
+      <div class="refitem">
+        <h3>Architecture vs design patterns</h3>
+        <p>Architectural patterns organize system structures. GoF design patterns address class/object-level design. Example: Publish-Subscribe vs Observer.</p>
+      </div>
+    </div>
+    <p style="margin-bottom:0">Full reference: <a href="universal_answers.md" target="_blank">universal_answers.md</a> · Coverage: <a href="coverage_matrix.md" target="_blank">coverage_matrix.md</a> · Past-paper grammar: <a href="past_paper_blueprint.md" target="_blank">past_paper_blueprint.md</a></p>
+  </section>
+  <div id="mockBanner"></div>
+  <div class="summarybar">
+    <div id="resultCount"></div>
+    <div>Tip: <kbd>/</kbd> focuses search · <kbd>R</kbd> random · <kbd>M</kbd> mock</div>
+  </div>
+  <section id="results"></section>
+  <div id="pager" class="pager"></div>
+  <div class="footer">
+    Offline package. Favourites stay in this browser using localStorage. Search is performed locally; nothing is uploaded.
+  </div>
+</main>
+
+<script src="questions.js"></script>
+<script>
+(() => {
+  const Q = window.QUESTIONS || [];
+  const $ = id => document.getElementById(id);
+  const els = {
+    search:$("search"), topic:$("topic"), subtopic:$("subtopic"), qtype:$("qtype"),
+    difficulty:$("difficulty"), family:$("family"), scenario:$("scenario"), marks:$("marks"),
+    results:$("results"), count:$("resultCount"), pager:$("pager"), mockBanner:$("mockBanner"),
+    searchAnswers:$("searchAnswers")
+  };
+  let page = 1;
+  const PAGE_SIZE = 40;
+  let mockMode = false;
+  let favOnly = false;
+  let mockQuestions = [];
+  let favorites = new Set(JSON.parse(localStorage.getItem("csc3209-favs") || "[]"));
+
+  const unique = key => [...new Set(Q.map(q => String(q[key] ?? "")).filter(Boolean))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  const fill = (el, vals) => vals.forEach(v => { const o=document.createElement("option"); o.value=v;o.textContent=v;el.appendChild(o); });
+  fill(els.topic,unique("topic")); fill(els.subtopic,unique("subtopic")); fill(els.qtype,unique("type"));
+  fill(els.difficulty,["Hard","Very Hard","Brutal"]); fill(els.family,unique("family")); fill(els.scenario,unique("scenario"));
+  fill(els.marks,unique("marks"));
+
+  $("totalStat").textContent = Q.length.toLocaleString()+" questions";
+  $("hardStat").textContent = Q.filter(q=>q.difficulty==="Brutal").length.toLocaleString()+" brutal";
+  updateFavStat();
+
+  const escapeHtml = s => String(s ?? "").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+  const norm = s => String(s ?? "").toLowerCase().normalize("NFKD").replace(/[–—]/g,"-");
+  const synonyms = {
+    "maintainability":["modifiability"], "modifiable":["modifiability"], "uptime":["availability"],
+    "failover":["availability"], "p2p":["peer-to-peer"], "pubsub":["publish-subscribe"],
+    "c&c":["component-and-connector"], "component connector":["component-and-connector"],
+    "qa":["quality attribute"], "asr":["architecture significant requirement"],
+    "soa":["service-oriented architecture"], "mvc":["model-view-controller"]
+  };
+  const queryTokens = raw => {
+    const n=norm(raw).trim(); if(!n) return [];
+    let tokens=n.split(/\s+/).filter(Boolean);
+    Object.entries(synonyms).forEach(([k,vals])=>{ if(n.includes(k)) tokens.push(...vals); });
+    return [...new Set(tokens)];
+  };
+
+  function searchableText(q, includeAnswers){
+    return norm([
+      q.id,q.topic,q.subtopic,q.type,q.difficulty,q.family,q.scenario,q.prompt,
+      ...(q.tags||[]), includeAnswers?q.answer_outline:"", includeAnswers?q.exam_trap:""
+    ].join(" "));
+  }
+  function score(q,tokens,includeAnswers){
+    if(!tokens.length) return 1;
+    const text=searchableText(q,includeAnswers);
+    let s=0;
+    for(const t of tokens){
+      if(!text.includes(t)) return 0;
+      if(norm(q.subtopic).includes(t)) s+=8;
+      if(norm(q.topic).includes(t)) s+=6;
+      if(norm(q.prompt).includes(t)) s+=5;
+      if(norm((q.tags||[]).join(" ")).includes(t)) s+=3;
+      if(includeAnswers && norm(q.answer_outline).includes(t)) s+=2;
+    }
+    return s;
+  }
+  function filterValue(q,k,v){ return !v || String(q[k])===String(v); }
+
+  function getFiltered(){
+    if(mockMode) return mockQuestions.map(q=>({...q,_score:999}));
+    const tokens=queryTokens(els.search.value);
+    const arr=[];
+    for(const q of Q){
+      if(favOnly && !favorites.has(q.id)) continue;
+      if(!filterValue(q,"topic",els.topic.value)) continue;
+      if(!filterValue(q,"subtopic",els.subtopic.value)) continue;
+      if(!filterValue(q,"type",els.qtype.value)) continue;
+      if(!filterValue(q,"difficulty",els.difficulty.value)) continue;
+      if(!filterValue(q,"family",els.family.value)) continue;
+      if(!filterValue(q,"scenario",els.scenario.value)) continue;
+      if(!filterValue(q,"marks",els.marks.value)) continue;
+      const sc=score(q,tokens,els.searchAnswers.checked);
+      if(sc>0) arr.push({...q,_score:sc});
+    }
+    if(tokens.length) arr.sort((a,b)=>b._score-a._score || b.marks-a.marks || a.id.localeCompare(b.id));
+    else arr.sort((a,b)=>a.id.localeCompare(b.id));
+    return arr;
+  }
+
+  function highlight(text){
+    const raw=els.search.value.trim();
+    if(!raw) return escapeHtml(text);
+    let out=escapeHtml(text);
+    const toks=queryTokens(raw).filter(t=>t.length>2).sort((a,b)=>b.length-a.length);
+    for(const t of toks){
+      try{ out=out.replace(new RegExp(`(${t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,"ig"),"<mark>$1</mark>"); }catch(e){}
+    }
+    return out;
+  }
+
+  function renderCard(q){
+    const tags=(q.tags||[]).slice(0,8).map(t=>`<span class="chip">${escapeHtml(t)}</span>`).join("");
+    const star=favorites.has(q.id)?"★":"☆";
+    return `<article class="card" data-id="${escapeHtml(q.id)}">
+      <div class="meta">
+        <span class="chip diff-${escapeHtml(q.difficulty)}">${escapeHtml(q.difficulty)}</span>
+        <span class="chip">${escapeHtml(q.topic)}</span>
+        <span class="chip">${escapeHtml(q.subtopic)}</span>
+        <span class="chip">${escapeHtml(q.type)}</span>
+        <span class="chip">${escapeHtml(q.family)}</span>
+        <span class="chip">${escapeHtml(q.marks)} marks</span>
+        ${q.scenario?`<span class="chip">${escapeHtml(q.scenario)}</span>`:""}
+      </div>
+      <div class="qhead">
+        <div class="qid">${escapeHtml(q.id)}</div>
+        <div class="prompt">${highlight(q.prompt)}</div>
+        <button class="star ${favorites.has(q.id)?"on":""}" data-action="star" title="Favourite">${star}</button>
+      </div>
+      <div class="card-actions">
+        <button class="small" data-action="answer">Reveal answer</button>
+        <button class="small" data-action="copyq">Copy question</button>
+        <button class="small" data-action="copya">Copy answer</button>
+      </div>
+      <div class="answer"><strong>Answer framework / marking outline</strong>\n\n${escapeHtml(q.answer_outline)}${q.exam_trap?`\n\n<div class="trap"><b>Exam trap:</b> ${escapeHtml(q.exam_trap)}</div>`:""}<div class="source">Grounding: ${escapeHtml(q.source)}</div></div>
+    </article>`;
+  }
+
+  function render(){
+    const arr=getFiltered();
+    const total=arr.length;
+    const pages=Math.max(1,Math.ceil(total/PAGE_SIZE));
+    if(page>pages) page=pages;
+    const start=(page-1)*PAGE_SIZE, shown=arr.slice(start,start+PAGE_SIZE);
+    els.count.textContent = `${total.toLocaleString()} result${total===1?"":"s"}${mockMode?" · mock exam mode":favOnly?" · favourites":""}`;
+    els.results.innerHTML = shown.length ? shown.map(renderCard).join("") : `<div class="empty">No matching questions. Broaden the query or reset filters.</div>`;
+    renderPager(pages);
+  }
+
+  function renderPager(pages){
+    if(pages<=1){ els.pager.innerHTML=""; return; }
+    els.pager.innerHTML=`<button ${page<=1?"disabled":""} data-p="-1">← Previous</button><span class="badge">Page ${page} / ${pages}</span><button ${page>=pages?"disabled":""} data-p="1">Next →</button>`;
+    els.pager.querySelectorAll("button").forEach(b=>b.onclick=()=>{page+=Number(b.dataset.p);render();scrollTo({top:0,behavior:"smooth"});});
+  }
+  function clearMode(){
+    mockMode=false; mockQuestions=[]; els.mockBanner.innerHTML="";
+  }
+  function onFilter(){
+    clearMode(); favOnly=false; $("favBtn").textContent="Show Favourites"; page=1; render(); updateURL();
+  }
+  [els.search,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks,els.searchAnswers].forEach(e=>e.addEventListener(e.tagName==="INPUT"?"input":"change",onFilter));
+
+  function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+  $("randomBtn").onclick=()=>{
+    clearMode(); favOnly=false;
+    const candidates=getFiltered().filter(q=>["Very Hard","Brutal"].includes(q.difficulty));
+    const pool=candidates.length?candidates:Q.filter(q=>["Very Hard","Brutal"].includes(q.difficulty));
+    const q=pick(pool); mockMode=true;mockQuestions=[q];page=1;
+    els.mockBanner.innerHTML=`<div class="mock-banner"><b>Random drill:</b> ${escapeHtml(q.id)}. Attempt it before revealing the answer.</div>`;
+    render(); scrollTo({top:0,behavior:"smooth"});
+  };
+
+  $("mockBtn").onclick=()=>{
+    const selectFamily = fam => Q.filter(q=>q.family===fam && q.type==="Multi-part exam question");
+    const q1=pick(selectFamily("Past Paper Q1")), q2=pick(selectFamily("Past Paper Q2")), q3=pick(selectFamily("Past Paper Q3")), q4=pick(selectFamily("Past Paper Q4"));
+    mockQuestions=[q1,q2,q3,q4].filter(Boolean);
+    mockMode=true;favOnly=false;page=1;
+    const sum=mockQuestions.reduce((a,q)=>a+Number(q.marks||0),0);
+    els.mockBanner.innerHTML=`<div class="mock-banner"><b>Generated mock exam:</b> ${sum} marks · Q1 ${q1?.marks||"?"} + Q2 ${q2?.marks||"?"} + Q3 ${q3?.marks||"?"} + Q4 ${q4?.marks||"?"}. The structure mirrors the recurring four-question past-paper grammar; scenarios are randomized.</div>`;
+    render(); scrollTo({top:0,behavior:"smooth"});
+  };
+
+  $("refsBtn").onclick=()=>{$("refs").classList.toggle("open");};
+  $("favBtn").onclick=()=>{
+    clearMode(); favOnly=!favOnly; $("favBtn").textContent=favOnly?"Show All":"Show Favourites"; page=1; render();
+  };
+  $("resetBtn").onclick=()=>{
+    [els.search,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks].forEach(e=>e.value="");
+    els.searchAnswers.checked=false; favOnly=false; clearMode(); $("favBtn").textContent="Show Favourites"; page=1;render();history.replaceState(null,"",location.pathname);
+  };
+
+  function copy(text){
+    if(navigator.clipboard?.writeText) return navigator.clipboard.writeText(text);
+    const ta=document.createElement("textarea"); ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();
+  }
+  els.results.addEventListener("click",e=>{
+    const btn=e.target.closest("button"); if(!btn)return;
+    const card=btn.closest(".card"), id=card?.dataset.id, q=Q.find(x=>x.id===id);
+    if(!q)return;
+    if(btn.dataset.action==="answer"){
+      const ans=card.querySelector(".answer");ans.classList.toggle("open");btn.textContent=ans.classList.contains("open")?"Hide answer":"Reveal answer";
+    } else if(btn.dataset.action==="star"){
+      favorites.has(id)?favorites.delete(id):favorites.add(id);
+      localStorage.setItem("csc3209-favs",JSON.stringify([...favorites]));updateFavStat();render();
+    } else if(btn.dataset.action==="copyq"){
+      copy(`${q.id} — ${q.prompt}`);
+      btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy question",900);
+    } else if(btn.dataset.action==="copya"){
+      copy(`${q.id} — Answer\n${q.answer_outline}\n\nExam trap: ${q.exam_trap||"None"}`);
+      btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy answer",900);
+    }
+  });
+
+  function updateFavStat(){$("favStat").textContent=`${favorites.size} favourite${favorites.size===1?"":"s"}`;}
+  $("exportBtn").onclick=()=>{
+    const arr=getFiltered();
+    const text=arr.map(q=>`${q.id}\t${q.topic}\t${q.subtopic}\t${q.difficulty}\t${q.marks}\t${q.prompt.replace(/\n/g," ")}\t${q.answer_outline.replace(/\n/g," ")}`).join("\n");
+    const blob=new Blob(["ID\tTopic\tSubtopic\tDifficulty\tMarks\tQuestion\tAnswer\n"+text],{type:"text/tab-separated-values;charset=utf-8"});
+    const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="CSC3209_filtered_questions.tsv";a.click();URL.revokeObjectURL(a.href);
+  };
+
+  function updateURL(){
+    const p=new URLSearchParams();
+    if(els.search.value)p.set("q",els.search.value);
+    [["topic","topic"],["subtopic","subtopic"],["type","qtype"],["difficulty","difficulty"],["family","family"],["scenario","scenario"],["marks","marks"]].forEach(([k,id])=>{if($(id).value)p.set(k,$(id).value)});
+    const s=p.toString();history.replaceState(null,"",s?`?${s}`:location.pathname);
+  }
+  const params=new URLSearchParams(location.search);
+  if(params.get("q"))els.search.value=params.get("q");
+  [["topic","topic"],["subtopic","subtopic"],["type","qtype"],["difficulty","difficulty"],["family","family"],["scenario","scenario"],["marks","marks"]].forEach(([k,id])=>{if(params.get(k))$(id).value=params.get(k)});
+
+  document.addEventListener("keydown",e=>{
+    if(e.target.matches("input,select,textarea")) {
+      if(e.key==="Escape") e.target.blur();
+      return;
+    }
+    if(e.key==="/"){e.preventDefault();els.search.focus();}
+    if(e.key.toLowerCase()==="r")$("randomBtn").click();
+    if(e.key.toLowerCase()==="m")$("mockBtn").click();
+  });
+  render();
+})();
+</script>
+</body>
+</html>

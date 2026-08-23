@@ -1,0 +1,41 @@
+==============================================================
+INTEGRITY CHECK - original project files
+==============================================================
+Every file from the uploaded zip compared against the delivered copy.
+
+MODIFIED : index.html
+
+Total original files : 60
+Files identical      : 59
+Files modified       : 1
+Files missing        : 0
+
+--------------------------------------------------------------
+NOTE ON index.html
+--------------------------------------------------------------
+index.html was modified deliberately, at your request, to
+consolidate all three question banks into ONE search interface
+instead of two separate HTML files.
+
+  * The unmodified original is preserved as:
+        index_ORIGINAL_BACKUP.html
+  * To revert:  cp index_ORIGINAL_BACKUP.html index.html
+
+ALL QUESTION DATA AND SOURCE MATERIAL IS UNTOUCHED:
+        OK  questions.json
+        OK  questions.js
+        OK  questions.tsv
+        OK  ALL_QUESTIONS.md
+        OK  README.md
+        OK  coverage_matrix.md
+        OK  past_paper_blueprint.md
+        OK  source_manifest.md
+        OK  universal_answers.md
+        OK  topic_packs/ (all 14 files identical)
+        OK  Learning Materials/ (all 36 files identical)
+
+==============================================================
+RESULT: PASS
+        All question data and lecture materials byte-identical.
+        index.html modified by request only; backup retained.
+==============================================================

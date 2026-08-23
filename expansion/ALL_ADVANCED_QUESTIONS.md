@@ -1,0 +1,4156 @@
+# All Advanced Depth Questions
+
+171 questions.
+
+---
+
+## ADV-0001 — Allocation of responsibilities (Very Hard, 6 marks)
+
+**Type:** Enumerate decision content  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+State precisely what the design-decision category **Allocation of responsibilities** requires an architect to decide, according to Lecture 5. Your answer must list the specific decisions in the category — not a general description of the category's name.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The category covers identifying the important responsibilities (basic system functions, architectural infrastructure, satisfaction of quality attributes) and determining how they are allocated to non-runtime and runtime elements — modules, components and connectors. Functional decomposition; modelling real-world objects; grouping based on the major modes of system operation; grouping based on similar quality requirements such as processing frame rate, security level, or expected changes.
+
+> **Exam trap:** Restating the category name in a sentence. The marks are for the specific decisions the lecture lists inside it.
+
+*Tags: allocation-of-responsibilities, design-decisions, seven-categories*
+
+</details>
+
+---
+
+## ADV-0002 — Allocation of responsibilities (Brutal, 7 marks)
+
+**Type:** Trace decision to quality consequence  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+For the design-decision category **Allocation of responsibilities**, give one concrete architectural decision, name the mechanism by which it acts, and trace it to **two** quality attributes that move in *opposite* directions. Do not assert quality effects without a mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decision: Placing authentication in a dedicated element rather than duplicating checks across every module.
+
+Mechanism and consequences: Security improves because trust decisions are made in one auditable place; modifiability improves because a change to the authentication rule touches one element. Performance may degrade slightly because every request now crosses an extra element boundary.
+
+Why this belongs to the category: the category is concerned with identifying the important responsibilities (basic system functions, architectural infrastructure, satisfaction of quality attributes) and determining how they are allocated to non-runtime and runtime elements — modules, components and connectors — and because those choices constrain what the other six categories can still decide, the trade-off above cannot be settled in isolation from them.
+
+> **Exam trap:** Naming two qualities that both improve. The question requires opposing directions, which is what makes it a trade-off.
+
+*Tags: allocation-of-responsibilities, trade-off, mechanism, design-decisions*
+
+</details>
+
+---
+
+## ADV-0003 — Coordination model (Very Hard, 6 marks)
+
+**Type:** Enumerate decision content  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+State precisely what the design-decision category **Coordination model** requires an architect to decide, according to Lecture 5. Your answer must list the specific decisions in the category — not a general description of the category's name.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The category covers identifying which elements must coordinate and which are prohibited from coordinating, determining the required properties of that coordination, and choosing communication mechanisms that realise those properties. The properties to decide are timeliness, currency, completeness, correctness and consistency; the mechanism properties are stateful vs stateless, synchronous vs asynchronous, guaranteed vs non-guaranteed delivery, and performance properties such as throughput and latency.
+
+> **Exam trap:** Restating the category name in a sentence. The marks are for the specific decisions the lecture lists inside it.
+
+*Tags: coordination-model, design-decisions, seven-categories*
+
+</details>
+
+---
+
+## ADV-0004 — Coordination model (Brutal, 7 marks)
+
+**Type:** Trace decision to quality consequence  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+For the design-decision category **Coordination model**, give one concrete architectural decision, name the mechanism by which it acts, and trace it to **two** quality attributes that move in *opposite* directions. Do not assert quality effects without a mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decision: Choosing asynchronous, non-guaranteed messaging for a telemetry feed instead of synchronous call-return.
+
+Mechanism and consequences: Performance and availability improve because the producer does not block on a slow or absent consumer. Correctness and completeness degrade because messages may be lost, so the design must tolerate gaps — this is exactly the timeliness-versus-completeness trade the lecture asks you to make explicit.
+
+Why this belongs to the category: the category is concerned with identifying which elements must coordinate and which are prohibited from coordinating, determining the required properties of that coordination, and choosing communication mechanisms that realise those properties — and because those choices constrain what the other six categories can still decide, the trade-off above cannot be settled in isolation from them.
+
+> **Exam trap:** Naming two qualities that both improve. The question requires opposing directions, which is what makes it a trade-off.
+
+*Tags: coordination-model, trade-off, mechanism, design-decisions*
+
+</details>
+
+---
+
+## ADV-0005 — Data model (Very Hard, 6 marks)
+
+**Type:** Enumerate decision content  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+State precisely what the design-decision category **Data model** requires an architect to decide, according to Lecture 5. Your answer must list the specific decisions in the category — not a general description of the category's name.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The category covers choosing the major data abstractions, their operations and their properties — including how data items are created, initialised, accessed, persisted, manipulated, translated and destroyed — plus the metadata needed for consistent interpretation, and the organisation of the data. The organisation decision includes whether data is kept in a relational database, a collection of objects, or both; metadata matters because without it the same bytes can be interpreted inconsistently by different elements.
+
+> **Exam trap:** Restating the category name in a sentence. The marks are for the specific decisions the lecture lists inside it.
+
+*Tags: data-model, design-decisions, seven-categories*
+
+</details>
+
+---
+
+## ADV-0006 — Data model (Brutal, 7 marks)
+
+**Type:** Trace decision to quality consequence  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+For the design-decision category **Data model**, give one concrete architectural decision, name the mechanism by which it acts, and trace it to **two** quality attributes that move in *opposite* directions. Do not assert quality effects without a mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decision: Denormalising a heavily-read table so that a common query needs no join.
+
+Mechanism and consequences: Performance improves because the read path shortens. Modifiability and integrity degrade because the duplicated field must now be updated in more than one place, and any element that writes it must know the duplication exists.
+
+Why this belongs to the category: the category is concerned with choosing the major data abstractions, their operations and their properties — including how data items are created, initialised, accessed, persisted, manipulated, translated and destroyed — plus the metadata needed for consistent interpretation, and the organisation of the data — and because those choices constrain what the other six categories can still decide, the trade-off above cannot be settled in isolation from them.
+
+> **Exam trap:** Naming two qualities that both improve. The question requires opposing directions, which is what makes it a trade-off.
+
+*Tags: data-model, trade-off, mechanism, design-decisions*
+
+</details>
+
+---
+
+## ADV-0007 — Management of resources (Very Hard, 6 marks)
+
+**Type:** Enumerate decision content  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+State precisely what the design-decision category **Management of resources** requires an architect to decide, according to Lecture 5. Your answer must list the specific decisions in the category — not a general description of the category's name.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The category covers arbitrating the use of shared resources: identifying the resources that must be managed and their limits, determining which element manages each, determining how resources are shared and the arbitration strategy under contention, and determining the impact of saturation. Hard resources are CPU, memory, battery, hardware buffers, system clock and I/O ports; soft resources are system locks, software buffers, thread pools and non-thread-safe code. The lecture notes that as a CPU becomes more heavily loaded, performance usually degrades fairly steadily — saturation behaviour differs per resource.
+
+> **Exam trap:** Restating the category name in a sentence. The marks are for the specific decisions the lecture lists inside it.
+
+*Tags: management-of-resources, design-decisions, seven-categories*
+
+</details>
+
+---
+
+## ADV-0008 — Management of resources (Brutal, 7 marks)
+
+**Type:** Trace decision to quality consequence  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+For the design-decision category **Management of resources**, give one concrete architectural decision, name the mechanism by which it acts, and trace it to **two** quality attributes that move in *opposite* directions. Do not assert quality effects without a mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decision: Introducing a bounded thread pool with a rejection policy instead of creating a thread per request.
+
+Mechanism and consequences: Performance and availability improve under load because saturation becomes predictable and bounded rather than collapsing. Usability may degrade because some requests are rejected outright; the design must decide what a rejected user sees.
+
+Why this belongs to the category: the category is concerned with arbitrating the use of shared resources: identifying the resources that must be managed and their limits, determining which element manages each, determining how resources are shared and the arbitration strategy under contention, and determining the impact of saturation — and because those choices constrain what the other six categories can still decide, the trade-off above cannot be settled in isolation from them.
+
+> **Exam trap:** Naming two qualities that both improve. The question requires opposing directions, which is what makes it a trade-off.
+
+*Tags: management-of-resources, trade-off, mechanism, design-decisions*
+
+</details>
+
+---
+
+## ADV-0009 — Mapping among architectural elements (Very Hard, 6 marks)
+
+**Type:** Enumerate decision content  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+State precisely what the design-decision category **Mapping among architectural elements** requires an architect to decide, according to Lecture 5. Your answer must list the specific decisions in the category — not a general description of the category's name.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The category covers providing two kinds of mapping: between elements in different structure types, and between software elements and environment elements. The first kind maps units of development (modules) to units of execution (threads or processes); the second maps processes to the specific CPUs where they execute. Useful mappings named in the lecture are modules to runtime elements, runtime elements to processors, and items in the data model to data stores.
+
+> **Exam trap:** Restating the category name in a sentence. The marks are for the specific decisions the lecture lists inside it.
+
+*Tags: mapping-among-architectural-elements, design-decisions, seven-categories*
+
+</details>
+
+---
+
+## ADV-0010 — Mapping among architectural elements (Brutal, 7 marks)
+
+**Type:** Trace decision to quality consequence  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+For the design-decision category **Mapping among architectural elements**, give one concrete architectural decision, name the mechanism by which it acts, and trace it to **two** quality attributes that move in *opposite* directions. Do not assert quality effects without a mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decision: Mapping two previously co-located modules onto separate processes on separate hosts.
+
+Mechanism and consequences: Availability and security improve because a fault or breach in one is contained. Performance degrades because an in-process call becomes a network call, and the coordination model must now handle partial failure — a decision in one category has forced a decision in another.
+
+Why this belongs to the category: the category is concerned with providing two kinds of mapping: between elements in different structure types, and between software elements and environment elements — and because those choices constrain what the other six categories can still decide, the trade-off above cannot be settled in isolation from them.
+
+> **Exam trap:** Naming two qualities that both improve. The question requires opposing directions, which is what makes it a trade-off.
+
+*Tags: mapping-among-architectural-elements, trade-off, mechanism, design-decisions*
+
+</details>
+
+---
+
+## ADV-0011 — Binding time decisions (Very Hard, 6 marks)
+
+**Type:** Enumerate decision content  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+State precisely what the design-decision category **Binding time decisions** requires an architect to decide, according to Lecture 5. Your answer must list the specific decisions in the category — not a general description of the category's name.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The category covers deciding, for every decision made in the other six categories, when the alternatives are bound — the lecture stresses that each of the other categories has an associated binding-time decision. The lecture's own examples are designing run-time negotiation of protocols for the coordination model, and designing a system to accept new peripheral devices plugged in at run time for resource management.
+
+> **Exam trap:** Restating the category name in a sentence. The marks are for the specific decisions the lecture lists inside it.
+
+*Tags: binding-time-decisions, design-decisions, seven-categories*
+
+</details>
+
+---
+
+## ADV-0012 — Binding time decisions (Brutal, 7 marks)
+
+**Type:** Trace decision to quality consequence  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+For the design-decision category **Binding time decisions**, give one concrete architectural decision, name the mechanism by which it acts, and trace it to **two** quality attributes that move in *opposite* directions. Do not assert quality effects without a mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decision: Moving a routing rule from a compile-time constant to a runtime-loaded configuration file.
+
+Mechanism and consequences: Modifiability improves because the rule changes without recompilation or redeployment. Performance degrades slightly because the value must be read and validated at runtime, and security/testability degrade because the set of reachable configurations is now larger and must be validated at runtime rather than proven at build time.
+
+Why this belongs to the category: the category is concerned with deciding, for every decision made in the other six categories, when the alternatives are bound — the lecture stresses that each of the other categories has an associated binding-time decision — and because those choices constrain what the other six categories can still decide, the trade-off above cannot be settled in isolation from them.
+
+> **Exam trap:** Naming two qualities that both improve. The question requires opposing directions, which is what makes it a trade-off.
+
+*Tags: binding-time-decisions, trade-off, mechanism, design-decisions*
+
+</details>
+
+---
+
+## ADV-0013 — Choice of technology (Very Hard, 6 marks)
+
+**Type:** Enumerate decision content  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+State precisely what the design-decision category **Choice of technology** requires an architect to decide, according to Lecture 5. Your answer must list the specific decisions in the category — not a general description of the category's name.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The category covers deciding which technologies are available to realise the decisions made in the other categories, and evaluating them beyond raw capability. The lecture's criteria are whether the supporting tools (IDEs, simulators, testing tools) are adequate; the extent of internal familiarity and external support such as courses, tutorials, examples and availability of contractors; the side effects of the choice such as a required coordination model or constrained resource-management opportunities; and compatibility with the existing technology stack.
+
+> **Exam trap:** Restating the category name in a sentence. The marks are for the specific decisions the lecture lists inside it.
+
+*Tags: choice-of-technology, design-decisions, seven-categories*
+
+</details>
+
+---
+
+## ADV-0014 — Choice of technology (Brutal, 7 marks)
+
+**Type:** Trace decision to quality consequence  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+For the design-decision category **Choice of technology**, give one concrete architectural decision, name the mechanism by which it acts, and trace it to **two** quality attributes that move in *opposite* directions. Do not assert quality effects without a mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decision: Adopting a framework that mandates asynchronous event handling throughout.
+
+Mechanism and consequences: Performance and scalability may improve. But the lecture's 'side effects' criterion bites: the coordination model is no longer free, so a decision in the technology category has removed options in the coordination category. Testability may also degrade because asynchronous flows are harder to control and observe.
+
+Why this belongs to the category: the category is concerned with deciding which technologies are available to realise the decisions made in the other categories, and evaluating them beyond raw capability — and because those choices constrain what the other six categories can still decide, the trade-off above cannot be settled in isolation from them.
+
+> **Exam trap:** Naming two qualities that both improve. The question requires opposing directions, which is what makes it a trade-off.
+
+*Tags: choice-of-technology, trade-off, mechanism, design-decisions*
+
+</details>
+
+---
+
+## ADV-0015 — Seven categories (Brutal, 8 marks)
+
+**Type:** Explain the category system  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+Lecture 5 says the seven design-decision categories 'might overlap, but it's all right if a particular decision exists in two different categories'. Explain why overlap is tolerated, and give one concrete decision that genuinely sits in two categories.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Overlap is tolerated because the categories are a **checklist for completeness**, not a taxonomy for classification. The lecture states the concern of the architect is 'to ensure that every important decision is considered' — a decision filed twice costs nothing, whereas a decision filed nowhere is a gap in the design. Concrete example: choosing a message broker technology is simultaneously a *Choice of technology* decision (tool support, familiarity, stack compatibility) and a *Coordination model* decision (it fixes asynchronous, possibly non-guaranteed delivery). A second example: deciding that device drivers load at run time is both *Binding time* and *Management of resources*. The categories are described in the lecture as 'a rational division of concerns', not a partition.
+
+> **Exam trap:** Treating the overlap as a flaw in the model to be resolved. It is deliberate.
+
+*Tags: seven-categories, overlap, checklist, design-decisions*
+
+</details>
+
+---
+
+## ADV-0016 — Seven categories (Brutal, 8 marks)
+
+**Type:** Diagnose the missing category  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+A design review records decisions about responsibility allocation, the data model, resource management and technology choice, but nothing about coordination, mapping or binding time. For **each** of the three missing categories, state one specific risk the omission creates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Coordination model omitted: the elements have responsibilities but no agreed communication properties, so timeliness, currency, completeness, correctness and consistency are unspecified — integration will discover, rather than decide, whether calls are synchronous and whether delivery is guaranteed.
+
+Mapping omitted: modules exist but their assignment to runtime elements and to processors is undecided, so nobody can reason about performance, availability or security, all of which depend on where things actually execute. The lecture ties the allocation structure directly to these qualities.
+
+Binding time omitted: every other decision has an implicit binding time, and leaving it implicit means it defaults to the earliest and least flexible option. Any later requirement for run-time configurability then becomes an architectural change rather than a local one.
+
+> **Exam trap:** Answering with the definitions of the three categories rather than the risk each omission creates.
+
+*Tags: seven-categories, gap-analysis, review, design-decisions*
+
+</details>
+
+---
+
+## ADV-0017 — Layer tactics (Brutal, 6 marks)
+
+**Type:** Identify tactic within a pattern  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 states that the Layer pattern is built from several tactics, and that 'without any one of its tactics, the pattern might be ineffective'. For the tactic **Increase semantic coherence**: state what it does inside the Layer pattern, and state precisely what would go wrong if it were omitted.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What it does: ensuring a layer's responsibilities all work together without excessive reliance on other layers, by choosing responsibilities that have semantic coherence — which binds together responsibilities likely to be affected by the same change.
+
+If omitted: functionality would be randomly sprinkled throughout the layers, destroying the separation of concerns and hence the ease of modification that is the prime motivation for employing layers in the first place.
+
+The lecture's own illustration: responsibilities dealing with hardware belong in a hardware layer, not an application layer, because a hardware responsibility has no semantic coherence with application responsibilities.
+
+> **Exam trap:** Defining the tactic in the abstract without saying what breaks in Layer specifically. The 'if omitted' half carries the marks.
+
+*Tags: Layer, tactics, increase-semantic-coherence, patterns-comprise-tactics*
+
+</details>
+
+---
+
+## ADV-0018 — Layer tactics (Brutal, 6 marks)
+
+**Type:** Identify tactic within a pattern  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 states that the Layer pattern is built from several tactics, and that 'without any one of its tactics, the pattern might be ineffective'. For the tactic **Restrict dependencies**: state what it does inside the Layer pattern, and state precisely what would go wrong if it were omitted.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What it does: defining an ordering and allowing a layer to use only the services of its adjacent lower layer, which reduces the possible communication paths to the number of layers minus one.
+
+If omitted: any function in any layer could call any other function in any other layer, destroying the low coupling that makes the layering pattern effective.
+
+The lecture notes this limitation 'has a great influence on the dependencies between the layers and makes it much easier to limit the side effects of replacing a layer'.
+
+> **Exam trap:** Defining the tactic in the abstract without saying what breaks in Layer specifically. The 'if omitted' half carries the marks.
+
+*Tags: Layer, tactics, restrict-dependencies, patterns-comprise-tactics*
+
+</details>
+
+---
+
+## ADV-0019 — Layer tactics (Brutal, 6 marks)
+
+**Type:** Identify tactic within a pattern  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 states that the Layer pattern is built from several tactics, and that 'without any one of its tactics, the pattern might be ineffective'. For the tactic **Abstract common services**: state what it does inside the Layer pattern, and state precisely what would go wrong if it were omitted.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What it does: factoring functionality that several clients need into a shared service exposed through the layer's public interface, so callers depend on the abstraction rather than on repeated implementations.
+
+If omitted: the same capability would be reimplemented above the layer boundary in several places, so a change would become a non-local change touching every duplicate.
+
+This is what makes a lower layer worth having at all: it is the reason a layer is a 'grouping of modules that offers a cohesive set of services'.
+
+> **Exam trap:** Defining the tactic in the abstract without saying what breaks in Layer specifically. The 'if omitted' half carries the marks.
+
+*Tags: Layer, tactics, abstract-common-services, patterns-comprise-tactics*
+
+</details>
+
+---
+
+## ADV-0020 — Layer tactics (Brutal, 6 marks)
+
+**Type:** Identify tactic within a pattern  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 states that the Layer pattern is built from several tactics, and that 'without any one of its tactics, the pattern might be ineffective'. For the tactic **Encapsulate**: state what it does inside the Layer pattern, and state precisely what would go wrong if it were omitted.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What it does: hiding a layer's internals behind a public interface, so that changes inside the layer do not ripple outward.
+
+If omitted: callers would bind to internal details, so replacing the layer's implementation would break them and the modifiability argument for layering would collapse.
+
+The lecture states layers 'completely partition a set of software, and each partition is exposed through a public interface'.
+
+> **Exam trap:** Defining the tactic in the abstract without saying what breaks in Layer specifically. The 'if omitted' half carries the marks.
+
+*Tags: Layer, tactics, encapsulate, patterns-comprise-tactics*
+
+</details>
+
+---
+
+## ADV-0021 — Layer tactics (Brutal, 6 marks)
+
+**Type:** Identify tactic within a pattern  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 states that the Layer pattern is built from several tactics, and that 'without any one of its tactics, the pattern might be ineffective'. For the tactic **Restrict communication paths**: state what it does inside the Layer pattern, and state precisely what would go wrong if it were omitted.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What it does: limiting which elements may talk to which, so that the dependency graph stays sparse and analysable.
+
+If omitted: the number of interaction paths would grow combinatorially, making the effect of any change impossible to bound.
+
+Closely related to restrict dependencies; together they are what turn a stack of boxes into an actual layered architecture.
+
+> **Exam trap:** Defining the tactic in the abstract without saying what breaks in Layer specifically. The 'if omitted' half carries the marks.
+
+*Tags: Layer, tactics, restrict-communication-paths, patterns-comprise-tactics*
+
+</details>
+
+---
+
+## ADV-0022 — Pattern vs tactic (Very Hard, 6 marks)
+
+**Type:** Explain the composition relation  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 says 'if a pattern is a molecule, a tactic is an atom' and that 'patterns are built from tactics'. Explain what this composition claim actually asserts, using the Layer pattern, and state the practical consequence for an architect who cannot find a pattern that fits.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The claim is that a pattern is not a primitive: it is a bundle of several smaller design decisions, each of which independently targets a quality-attribute response. The lecture enumerates Layer's bundle as increase semantic coherence, abstract common services, encapsulate, restrict communication paths and use an intermediary/restrict dependencies. Because the bundle is decomposable, an architect who finds no fitting pattern is not stuck: the lecture's second stated reason for cataloguing tactics is that 'if no pattern exists to realize the architect's design goal, tactics allow the architect to construct a design fragment from first principles'. The third reason is that cataloguing makes the choice systematic, since several tactics usually exist for one quality and the choice depends on trade-offs and cost to implement.
+
+> **Exam trap:** Reciting the mnemonic without the consequence. The exam value is in what tactics let you do when no pattern fits.
+
+*Tags: tactics, patterns, molecule-atom, composition*
+
+</details>
+
+---
+
+## ADV-0023 — Broker augmentation (Brutal, 8 marks)
+
+**Type:** Match tactic to specific weakness  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 identifies four weaknesses of the Broker pattern and then augments it with tactics. Name all four weaknesses, and for each state whether the lecture's proposed tactics address it — being explicit about the ones that are left unaddressed.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The four weaknesses are **availability** (the broker is a single point of failure), **performance** (levels of indirection add latency, and the broker is a potential bottleneck), **testability** (brokers sit in complex, highly dynamic multi-process systems with asynchronous requests and responses, making testing and debugging extremely difficult) and **security** (the pattern as presented offers no means to authenticate or authorise clients or servers, and no protection of the communication).
+
+The lecture's tactics address the first two directly: increase available resources gives multiple brokers, maintain multiple copies keeps their state identical, load balancing (an application of scheduling resources) prevents one broker being overloaded while another idles, and heartbeat / exception detection / ping-echo detect faults so clients and peer brokers can be notified.
+
+Testability and security are **not** repaired by that tactic set — they are named as legitimate concerns but the augmentation discussion targets availability and performance. A complete answer says so rather than pretending the four tactics fix everything.
+
+> **Exam trap:** Claiming the four tactics fix all four weaknesses. Replicating brokers does nothing for the missing authentication.
+
+*Tags: Broker, tactics, augmentation, weaknesses*
+
+</details>
+
+---
+
+## ADV-0024 — Tactic side-effect chain (Brutal, 7 marks)
+
+**Type:** Trace a tactic side-effect  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+In Lecture 6's worked example the architect applies a sequence of tactics, each one introducing new concerns. At **step 1** the architect applies **ping/echo**. State why it is applied, list the considerations the lecture associates with it, and name the side effect that drives the next step.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Applied for: detecting faults in components.
+
+Considerations the lecture associates with it: Security — how to prevent a ping flood attack? Performance — how to ensure the performance overhead of ping/echo is small? Modifiability — how to add ping/echo to the existing architecture?
+
+The dominant side effect is performance, which the architect addresses at the next step by applying **increase available resources**.
+
+The general lesson: every tactic has a main effect and side effects, so applying one does not end the design problem — it moves it.
+
+> **Exam trap:** Treating the tactic as a fix with no cost. The lecture's whole point is that each one creates the next problem.
+
+*Tags: tactics, side-effects, cascade, ping/echo*
+
+</details>
+
+---
+
+## ADV-0025 — Tactic side-effect chain (Brutal, 7 marks)
+
+**Type:** Trace a tactic side-effect  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+In Lecture 6's worked example the architect applies a sequence of tactics, each one introducing new concerns. At **step 2** the architect applies **increase available resources**. State why it is applied, list the considerations the lecture associates with it, and name the side effect that drives the next step.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Applied for: absorbing the performance overhead that ping/echo introduced.
+
+Considerations the lecture associates with it: Cost — increased resources cost more. Performance — how to utilise the increased resources efficiently?
+
+The dominant side effect is resource utilisation, which the architect addresses at the next step by applying **a scheduling policy**.
+
+The general lesson: every tactic has a main effect and side effects, so applying one does not end the design problem — it moves it.
+
+> **Exam trap:** Treating the tactic as a fix with no cost. The lecture's whole point is that each one creates the next problem.
+
+*Tags: tactics, side-effects, cascade, increase-available-resources*
+
+</details>
+
+---
+
+## ADV-0026 — Tactic side-effect chain (Brutal, 7 marks)
+
+**Type:** Trace a tactic side-effect  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+In Lecture 6's worked example the architect applies a sequence of tactics, each one introducing new concerns. At **step 3** the architect applies **a scheduling policy**. State why it is applied, list the considerations the lecture associates with it, and name the side effect that drives the next step.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Applied for: using the added resources efficiently rather than merely adding cost and complexity.
+
+Considerations the lecture associates with it: Modifiability — how to add the scheduling policy to the existing architecture? Modifiability — how to change the scheduling policy in the future?
+
+The dominant side effect is modifiability, which the architect addresses at the next step by applying **use an intermediary**.
+
+The general lesson: every tactic has a main effect and side effects, so applying one does not end the design problem — it moves it.
+
+> **Exam trap:** Treating the tactic as a fix with no cost. The lecture's whole point is that each one creates the next problem.
+
+*Tags: tactics, side-effects, cascade, a-scheduling-policy*
+
+</details>
+
+---
+
+## ADV-0027 — Tactic side-effect chain (Brutal, 7 marks)
+
+**Type:** Trace a tactic side-effect  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+In Lecture 6's worked example the architect applies a sequence of tactics, each one introducing new concerns. At **step 4** the architect applies **use an intermediary**. State why it is applied, list the considerations the lecture associates with it, and name the side effect that drives the next step.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Applied for: insulating the choice of scheduling policy from the rest of the system.
+
+Considerations the lecture associates with it: Modifiability — how to ensure that all communication passes through the intermediary?
+
+The dominant side effect is enforcement of the intermediary, which the architect addresses at the next step by applying **restrict dependencies**.
+
+The general lesson: every tactic has a main effect and side effects, so applying one does not end the design problem — it moves it.
+
+> **Exam trap:** Treating the tactic as a fix with no cost. The lecture's whole point is that each one creates the next problem.
+
+*Tags: tactics, side-effects, cascade, use-an-intermediary*
+
+</details>
+
+---
+
+## ADV-0028 — Tactic side-effect chain (Brutal, 7 marks)
+
+**Type:** Trace a tactic side-effect  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+In Lecture 6's worked example the architect applies a sequence of tactics, each one introducing new concerns. At **step 5** the architect applies **restrict dependencies**. State why it is applied, list the considerations the lecture associates with it, and name the side effect that drives the next step.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Applied for: ensuring all communication actually passes through the intermediary.
+
+Considerations the lecture associates with it: Performance — how to ensure the performance overhead of the intermediary is not excessive?
+
+The dominant side effect is performance, which the architect addresses at the next step by applying **(the architect may stop here)**.
+
+The general lesson: every tactic has a main effect and side effects, so applying one does not end the design problem — it moves it.
+
+> **Exam trap:** Treating the tactic as a fix with no cost. The lecture's whole point is that each one creates the next problem.
+
+*Tags: tactics, side-effects, cascade, restrict-dependencies*
+
+</details>
+
+---
+
+## ADV-0029 — Tactic side-effect chain (Brutal, 8 marks)
+
+**Type:** Explain recursion termination  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 asks: 'This design problem has now become recursive! Are we in an infinite progression?' Answer the question as the lecture does, and explain what an architect must judge in order to stop.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+No, it is not infinite. The lecture's answer is that 'eventually the side-effects of each tactic become small enough to ignore'. Termination is therefore a **judgement about magnitude, not a logical endpoint**: at any point in the tree of design decisions the architect may determine that, for example, the performance overhead of the intermediary is small enough that no further design decisions need to be made.
+
+What the architect must judge: whether the remaining side effect is large enough to threaten a prioritised quality-attribute *scenario with a measurable response*. That is why response measures matter — without one, 'small enough' is unfalsifiable and the architect either stops arbitrarily early or keeps designing forever. The lecture also frames the stopping point as reached when 'requirements for a specific system are satisfied', which is the same idea stated from the requirements side.
+
+> **Exam trap:** Answering 'yes, it is infinite' — or answering 'no' without saying what makes the remaining side effect ignorable.
+
+*Tags: tactics, recursion, termination, judgement*
+
+</details>
+
+---
+
+## ADV-0030 — Using tactics to augment patterns (Very Hard, 6 marks)
+
+**Type:** Explain the two-perspective check  
+**Source:** Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 6 says that to make a pattern work in a given architectural context, we must examine it 'from two perspectives'. Name both perspectives and explain why the second is the one architects forget.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Perspective one: **the inherent quality-attribute trade-offs the pattern makes** — patterns exist to achieve certain qualities, so compare the ones they promote and the ones they diminish against your needs. Perspective two: **other quality attributes the pattern is not directly concerned with, but which it nevertheless affects and which matter in your application**.
+
+The second is forgotten because pattern catalogues are written around the problem the pattern solves. Broker is documented as an interoperability/modifiability solution, so an architect checks those. Its effect on testability and security is real but incidental to the pattern's stated purpose, so it goes unexamined until integration. The lecture's framing is that 'patterns solve a specific problem but are neutral or have weaknesses with respect to other qualities' — the weaknesses are in the residual set, not the advertised set.
+
+> **Exam trap:** Giving only the advertised trade-offs. The second perspective is where the marks are.
+
+*Tags: tactics, patterns, two-perspectives, residual-qualities*
+
+</details>
+
+---
+
+## ADV-0031 — Availability (Very Hard, 8 marks)
+
+**Type:** Recall general-scenario values  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Reproduce the **Availability general scenario** table from Lecture 7: give the possible values the lecture lists for Source, Stimulus, Artifact, Environment, Response and Response Measure. Generic placeholders will not earn marks.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Availability is readiness to provide service and to be there when needed; it encompasses reliability and adds the notion of recovery (repair). Fundamentally about minimising service outage time by mitigating faults.
+
+| Portion | Possible values |
+|---|---|
+| Source | internal/external: people, hardware, software, physical infrastructure, physical environment |
+| Stimulus | fault: omission, crash, incorrect timing, incorrect response |
+| Artifact | system's processors, communication channels, persistent storage, processes |
+| Environment | normal operation, startup, shutdown, repair mode, degraded operation, overloaded operation |
+| Response | prevent the fault from becoming a failure; detect the fault (log it, notify appropriate entities); recover from the fault (disable the source of events causing the fault, be temporarily unavailable while repair is effected, fix or mask the fault/failure or contain the damage, operate in degraded mode while repair is effected) |
+| Response Measure | time or time interval when the system must be available; availability percentage such as 99.999%; time to detect the fault; time to repair the fault; time or time interval in which the system can be in degraded mode; proportion or rate of a class of faults the system prevents or handles without failing |
+
+> **Exam trap:** Writing 'normal or peak conditions' for Environment regardless of attribute. Each attribute has its own list — Testability's environments are lifecycle phases, not load levels.
+
+*Tags: availability, general-scenario, possible-values, recall*
+
+</details>
+
+---
+
+## ADV-0032 — Availability (Brutal, 6 marks)
+
+**Type:** Critique a response measure  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+A team writes this response measure for a **Availability** scenario: *'the system will handle it well'*. Explain why this fails the lecture's requirement, and give three measures drawn from the lecture's own Availability list that would be acceptable instead.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+It fails because Lecture 5 requires a quality-attribute requirement to be **unambiguous and testable**, and states the definitions problem directly: it is meaningless to say a system will be 'modifiable' or handle something 'well', since every system is modifiable with respect to one set of changes and not another. Without a measure there is no way to determine whether the requirement is satisfied.
+
+Acceptable measures from the lecture's Availability list: time or time interval when the system must be available; availability percentage such as 99.999%; time to detect the fault; time to repair the fault; time or time interval in which the system can be in degraded mode; proportion or rate of a class of faults the system prevents or handles without failing
+
+> **Exam trap:** Substituting a number from a different attribute — '99.9% uptime' is not a Usability measure.
+
+*Tags: availability, response-measure, testability-of-requirements, critique*
+
+</details>
+
+---
+
+## ADV-0033 — Availability (Very Hard, 7 marks)
+
+**Type:** Match concrete scenario to general scenario  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 7's sample concrete **Availability** scenario is:
+
+> *The heartbeat monitor determines that the server is nonresponsive during normal operations. The system informs the operator and continues to operate with no downtime.*
+
+Decompose it into all six parts and identify, for each part, which entry from the general-scenario table it instantiates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decompose the sentence and map each fragment to its general-scenario slot, checking it against the lecture's list of possible values for Availability:
+
+- Source — from the list: internal/external: people, hardware, software, physical infrastructure, physical environment
+- Stimulus — from the list: fault: omission, crash, incorrect timing, incorrect response
+- Artifact — from the list: system's processors, communication channels, persistent storage, processes
+- Environment — from the list: normal operation, startup, shutdown, repair mode, degraded operation, overloaded operation
+- Response — from the list: prevent the fault from becoming a failure; detect the fault (log it, notify appropriate entities); recover from the fault (disable the source of events causing the fault, be temporarily unavailable while repair is effected, fix or mask the fault/failure or contain the damage, operate in degraded mode while repair is effected)
+- Response Measure — from the list: time or time interval when the system must be available; availability percentage such as 99.999%; time to detect the fault; time to repair the fault; time or time interval in which the system can be in degraded mode; proportion or rate of a class of faults the system prevents or handles without failing
+
+The purpose of the exercise is to show that a concrete scenario is a *selection* from the general scenario, which is why the general table is the thing worth memorising.
+
+> **Exam trap:** Inventing parts the sentence does not contain. If the concrete scenario leaves the environment implicit, say so rather than fabricating one.
+
+*Tags: availability, concrete-scenario, decompose, general-to-concrete*
+
+</details>
+
+---
+
+## ADV-0034 — Interoperability (Very Hard, 8 marks)
+
+**Type:** Recall general-scenario values  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Reproduce the **Interoperability general scenario** table from Lecture 7: give the possible values the lecture lists for Source, Stimulus, Artifact, Environment, Response and Response Measure. Generic placeholders will not earn marks.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Interoperability is the degree to which two or more systems can usefully exchange meaningful information; like all quality attributes it is not a yes-or-no proposition but has shades of meaning.
+
+| Portion | Possible values |
+|---|---|
+| Source | a system |
+| Stimulus | a request to exchange information among system(s) |
+| Artifact | the systems that wish to interoperate |
+| Environment | system(s) wishing to interoperate are discovered at run time, or known prior to run time |
+| Response | the request is appropriately rejected and appropriate entities are notified; or the request is appropriately accepted and information is exchanged successfully; or the request is logged by one or more of the involved systems |
+| Response Measure | percentage of information exchanges correctly processed; percentage of information exchanges correctly rejected |
+
+> **Exam trap:** Writing 'normal or peak conditions' for Environment regardless of attribute. Each attribute has its own list — Testability's environments are lifecycle phases, not load levels.
+
+*Tags: interoperability, general-scenario, possible-values, recall*
+
+</details>
+
+---
+
+## ADV-0035 — Interoperability (Brutal, 6 marks)
+
+**Type:** Critique a response measure  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+A team writes this response measure for a **Interoperability** scenario: *'the system will handle it well'*. Explain why this fails the lecture's requirement, and give three measures drawn from the lecture's own Interoperability list that would be acceptable instead.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+It fails because Lecture 5 requires a quality-attribute requirement to be **unambiguous and testable**, and states the definitions problem directly: it is meaningless to say a system will be 'modifiable' or handle something 'well', since every system is modifiable with respect to one set of changes and not another. Without a measure there is no way to determine whether the requirement is satisfied.
+
+Acceptable measures from the lecture's Interoperability list: percentage of information exchanges correctly processed; percentage of information exchanges correctly rejected
+
+> **Exam trap:** Substituting a number from a different attribute — '99.9% uptime' is not a Usability measure.
+
+*Tags: interoperability, response-measure, testability-of-requirements, critique*
+
+</details>
+
+---
+
+## ADV-0036 — Interoperability (Very Hard, 7 marks)
+
+**Type:** Match concrete scenario to general scenario  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 7's sample concrete **Interoperability** scenario is:
+
+> *Our vehicle information system sends our current location to the traffic monitoring system. The traffic monitoring system combines our location with other information, overlays this information on a Google Map, and broadcasts it. Our location information is correctly included with a probability of 99.9%.*
+
+Decompose it into all six parts and identify, for each part, which entry from the general-scenario table it instantiates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decompose the sentence and map each fragment to its general-scenario slot, checking it against the lecture's list of possible values for Interoperability:
+
+- Source — from the list: a system
+- Stimulus — from the list: a request to exchange information among system(s)
+- Artifact — from the list: the systems that wish to interoperate
+- Environment — from the list: system(s) wishing to interoperate are discovered at run time, or known prior to run time
+- Response — from the list: the request is appropriately rejected and appropriate entities are notified; or the request is appropriately accepted and information is exchanged successfully; or the request is logged by one or more of the involved systems
+- Response Measure — from the list: percentage of information exchanges correctly processed; percentage of information exchanges correctly rejected
+
+The purpose of the exercise is to show that a concrete scenario is a *selection* from the general scenario, which is why the general table is the thing worth memorising.
+
+> **Exam trap:** Inventing parts the sentence does not contain. If the concrete scenario leaves the environment implicit, say so rather than fabricating one.
+
+*Tags: interoperability, concrete-scenario, decompose, general-to-concrete*
+
+</details>
+
+---
+
+## ADV-0037 — Modifiability (Very Hard, 8 marks)
+
+**Type:** Recall general-scenario values  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Reproduce the **Modifiability general scenario** table from Lecture 7: give the possible values the lecture lists for Source, Stimulus, Artifact, Environment, Response and Response Measure. Generic placeholders will not earn marks.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Modifiability is change, and specifically the cost and risk of making changes. To plan for it an architect must consider three questions: what can change, what is the likelihood of the change, and when is the change made and who makes it.
+
+| Portion | Possible values |
+|---|---|
+| Source | end user, developer, system administrator |
+| Stimulus | a directive to add/delete/modify functionality, or change a quality attribute, capacity, or technology |
+| Artifact | code, data, interfaces, components, resources, configurations |
+| Environment | runtime, compile time, build time, initiation time, design time |
+| Response | make the modification; test the modification; deploy the modification |
+| Response Measure | cost in terms of number, size and complexity of affected artifacts; effort; calendar time; money (direct outlay or opportunity cost); extent to which this modification affects other functions or quality attributes; new defects introduced |
+
+> **Exam trap:** Writing 'normal or peak conditions' for Environment regardless of attribute. Each attribute has its own list — Testability's environments are lifecycle phases, not load levels.
+
+*Tags: modifiability, general-scenario, possible-values, recall*
+
+</details>
+
+---
+
+## ADV-0038 — Modifiability (Brutal, 6 marks)
+
+**Type:** Critique a response measure  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+A team writes this response measure for a **Modifiability** scenario: *'the system will handle it well'*. Explain why this fails the lecture's requirement, and give three measures drawn from the lecture's own Modifiability list that would be acceptable instead.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+It fails because Lecture 5 requires a quality-attribute requirement to be **unambiguous and testable**, and states the definitions problem directly: it is meaningless to say a system will be 'modifiable' or handle something 'well', since every system is modifiable with respect to one set of changes and not another. Without a measure there is no way to determine whether the requirement is satisfied.
+
+Acceptable measures from the lecture's Modifiability list: cost in terms of number, size and complexity of affected artifacts; effort; calendar time; money (direct outlay or opportunity cost); extent to which this modification affects other functions or quality attributes; new defects introduced
+
+> **Exam trap:** Substituting a number from a different attribute — '99.9% uptime' is not a Usability measure.
+
+*Tags: modifiability, response-measure, testability-of-requirements, critique*
+
+</details>
+
+---
+
+## ADV-0039 — Modifiability (Very Hard, 7 marks)
+
+**Type:** Match concrete scenario to general scenario  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 7's sample concrete **Modifiability** scenario is:
+
+> *The developer wishes to change the user interface by modifying the code at design time. The modifications are made with no side effects within three hours.*
+
+Decompose it into all six parts and identify, for each part, which entry from the general-scenario table it instantiates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decompose the sentence and map each fragment to its general-scenario slot, checking it against the lecture's list of possible values for Modifiability:
+
+- Source — from the list: end user, developer, system administrator
+- Stimulus — from the list: a directive to add/delete/modify functionality, or change a quality attribute, capacity, or technology
+- Artifact — from the list: code, data, interfaces, components, resources, configurations
+- Environment — from the list: runtime, compile time, build time, initiation time, design time
+- Response — from the list: make the modification; test the modification; deploy the modification
+- Response Measure — from the list: cost in terms of number, size and complexity of affected artifacts; effort; calendar time; money (direct outlay or opportunity cost); extent to which this modification affects other functions or quality attributes; new defects introduced
+
+The purpose of the exercise is to show that a concrete scenario is a *selection* from the general scenario, which is why the general table is the thing worth memorising.
+
+> **Exam trap:** Inventing parts the sentence does not contain. If the concrete scenario leaves the environment implicit, say so rather than fabricating one.
+
+*Tags: modifiability, concrete-scenario, decompose, general-to-concrete*
+
+</details>
+
+---
+
+## ADV-0040 — Performance (Very Hard, 8 marks)
+
+**Type:** Recall general-scenario values  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Reproduce the **Performance general scenario** table from Lecture 7: give the possible values the lecture lists for Source, Stimulus, Artifact, Environment, Response and Response Measure. Generic placeholders will not earn marks.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Performance is time, and the software system's ability to meet timing requirements. Characterising the events that can occur, when they can occur, and the element's time-based response to them is the essence of discussing performance.
+
+| Portion | Possible values |
+|---|---|
+| Source | internal or external to the system |
+| Stimulus | arrival of a periodic, sporadic, or stochastic event |
+| Artifact | system or one or more components in the system |
+| Environment | operational mode: normal, emergency, peak load, overload |
+| Response | process events; change level of service |
+| Response Measure | latency, deadline, throughput, jitter, miss rate |
+
+> **Exam trap:** Writing 'normal or peak conditions' for Environment regardless of attribute. Each attribute has its own list — Testability's environments are lifecycle phases, not load levels.
+
+*Tags: performance, general-scenario, possible-values, recall*
+
+</details>
+
+---
+
+## ADV-0041 — Performance (Brutal, 6 marks)
+
+**Type:** Critique a response measure  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+A team writes this response measure for a **Performance** scenario: *'the system will handle it well'*. Explain why this fails the lecture's requirement, and give three measures drawn from the lecture's own Performance list that would be acceptable instead.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+It fails because Lecture 5 requires a quality-attribute requirement to be **unambiguous and testable**, and states the definitions problem directly: it is meaningless to say a system will be 'modifiable' or handle something 'well', since every system is modifiable with respect to one set of changes and not another. Without a measure there is no way to determine whether the requirement is satisfied.
+
+Acceptable measures from the lecture's Performance list: latency, deadline, throughput, jitter, miss rate
+
+> **Exam trap:** Substituting a number from a different attribute — '99.9% uptime' is not a Usability measure.
+
+*Tags: performance, response-measure, testability-of-requirements, critique*
+
+</details>
+
+---
+
+## ADV-0042 — Performance (Very Hard, 7 marks)
+
+**Type:** Match concrete scenario to general scenario  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 7's sample concrete **Performance** scenario is:
+
+> *Users initiate transactions under normal operations. The system processes the transactions with an average latency of two seconds.*
+
+Decompose it into all six parts and identify, for each part, which entry from the general-scenario table it instantiates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decompose the sentence and map each fragment to its general-scenario slot, checking it against the lecture's list of possible values for Performance:
+
+- Source — from the list: internal or external to the system
+- Stimulus — from the list: arrival of a periodic, sporadic, or stochastic event
+- Artifact — from the list: system or one or more components in the system
+- Environment — from the list: operational mode: normal, emergency, peak load, overload
+- Response — from the list: process events; change level of service
+- Response Measure — from the list: latency, deadline, throughput, jitter, miss rate
+
+The purpose of the exercise is to show that a concrete scenario is a *selection* from the general scenario, which is why the general table is the thing worth memorising.
+
+> **Exam trap:** Inventing parts the sentence does not contain. If the concrete scenario leaves the environment implicit, say so rather than fabricating one.
+
+*Tags: performance, concrete-scenario, decompose, general-to-concrete*
+
+</details>
+
+---
+
+## ADV-0043 — Security (Very Hard, 8 marks)
+
+**Type:** Recall general-scenario values  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Reproduce the **Security general scenario** table from Lecture 7: give the possible values the lecture lists for Source, Stimulus, Artifact, Environment, Response and Response Measure. Generic placeholders will not earn marks.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Security is a measure of the system's ability to protect data and information from unauthorized access while still providing access to people and systems that are authorized. Characterised by CIA — confidentiality, integrity, availability — supported by authentication, nonrepudiation and authorization.
+
+| Portion | Possible values |
+|---|---|
+| Source | human or another system which may have been previously identified (either correctly or incorrectly) or may be currently unknown; a human attacker may be from outside the organization or from inside it |
+| Stimulus | unauthorized attempt is made to display data, change or delete data, access system services, change the system's behavior, or reduce availability |
+| Artifact | system services; data within the system; a component or resources of the system; data produced or consumed by the system |
+| Environment | the system is either online or offline, connected to or disconnected from a network, behind a firewall or open to a network, fully operational, partially operational, or not operational |
+| Response | transactions are carried out such that data/services are protected from unauthorized access, are not manipulated without authorization, parties are identified with assurance, parties cannot repudiate their involvement, and data/resources/services remain available for legitimate use; the system tracks activities by recording access or modification, recording attempts, and notifying appropriate entities when an apparent attack is occurring |
+| Response Measure | how much of a system is compromised when a particular component or data value is compromised; how much time passed before an attack was detected; how many attacks were resisted; how long it takes to recover from a successful attack; how much data is vulnerable to a particular attack |
+
+> **Exam trap:** Writing 'normal or peak conditions' for Environment regardless of attribute. Each attribute has its own list — Testability's environments are lifecycle phases, not load levels.
+
+*Tags: security, general-scenario, possible-values, recall*
+
+</details>
+
+---
+
+## ADV-0044 — Security (Brutal, 6 marks)
+
+**Type:** Critique a response measure  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+A team writes this response measure for a **Security** scenario: *'the system will handle it well'*. Explain why this fails the lecture's requirement, and give three measures drawn from the lecture's own Security list that would be acceptable instead.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+It fails because Lecture 5 requires a quality-attribute requirement to be **unambiguous and testable**, and states the definitions problem directly: it is meaningless to say a system will be 'modifiable' or handle something 'well', since every system is modifiable with respect to one set of changes and not another. Without a measure there is no way to determine whether the requirement is satisfied.
+
+Acceptable measures from the lecture's Security list: how much of a system is compromised when a particular component or data value is compromised; how much time passed before an attack was detected; how many attacks were resisted; how long it takes to recover from a successful attack; how much data is vulnerable to a particular attack
+
+> **Exam trap:** Substituting a number from a different attribute — '99.9% uptime' is not a Usability measure.
+
+*Tags: security, response-measure, testability-of-requirements, critique*
+
+</details>
+
+---
+
+## ADV-0045 — Security (Very Hard, 7 marks)
+
+**Type:** Match concrete scenario to general scenario  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 7's sample concrete **Security** scenario is:
+
+> *A disgruntled employee from a remote location attempts to modify the pay rate table during normal operations. The system maintains an audit trail and the correct data is restored within a day.*
+
+Decompose it into all six parts and identify, for each part, which entry from the general-scenario table it instantiates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decompose the sentence and map each fragment to its general-scenario slot, checking it against the lecture's list of possible values for Security:
+
+- Source — from the list: human or another system which may have been previously identified (either correctly or incorrectly) or may be currently unknown; a human attacker may be from outside the organization or from inside it
+- Stimulus — from the list: unauthorized attempt is made to display data, change or delete data, access system services, change the system's behavior, or reduce availability
+- Artifact — from the list: system services; data within the system; a component or resources of the system; data produced or consumed by the system
+- Environment — from the list: the system is either online or offline, connected to or disconnected from a network, behind a firewall or open to a network, fully operational, partially operational, or not operational
+- Response — from the list: transactions are carried out such that data/services are protected from unauthorized access, are not manipulated without authorization, parties are identified with assurance, parties cannot repudiate their involvement, and data/resources/services remain available for legitimate use; the system tracks activities by recording access or modification, recording attempts, and notifying appropriate entities when an apparent attack is occurring
+- Response Measure — from the list: how much of a system is compromised when a particular component or data value is compromised; how much time passed before an attack was detected; how many attacks were resisted; how long it takes to recover from a successful attack; how much data is vulnerable to a particular attack
+
+The purpose of the exercise is to show that a concrete scenario is a *selection* from the general scenario, which is why the general table is the thing worth memorising.
+
+> **Exam trap:** Inventing parts the sentence does not contain. If the concrete scenario leaves the environment implicit, say so rather than fabricating one.
+
+*Tags: security, concrete-scenario, decompose, general-to-concrete*
+
+</details>
+
+---
+
+## ADV-0046 — Testability (Very Hard, 8 marks)
+
+**Type:** Recall general-scenario values  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Reproduce the **Testability general scenario** table from Lecture 7: give the possible values the lecture lists for Source, Stimulus, Artifact, Environment, Response and Response Measure. Generic placeholders will not earn marks.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Testability is the ease with which software can be made to demonstrate its faults through (typically execution-based) testing. Specifically, the probability that — assuming the software has at least one fault — it will fail on its next test execution. For a system to be properly testable it must be possible to control each component's inputs (and possibly manipulate its internal state) and then observe its outputs (and possibly its internal state).
+
+| Portion | Possible values |
+|---|---|
+| Source | unit testers, integration testers, system testers, acceptance testers, end users, either running tests manually or using automated testing tools |
+| Stimulus | a set of tests are executed due to the completion of a coding increment such as a class, layer or service; the completed integration of a subsystem; the complete implementation of the system; or the delivery of the system to the customer |
+| Artifact | the portion of the system being tested |
+| Environment | design time, development time, compile time, integration time, deployment time, run time |
+| Response | execute test suite and capture results; capture activity that resulted in the fault; control and monitor the state of the system |
+| Response Measure | effort to find a fault or class of faults; effort to achieve a given percentage of state space coverage; probability of a fault being revealed by the next test; time to perform tests; effort to detect faults; length of longest dependency chain in test; length of time to prepare test environment; reduction in risk exposure computed as size(loss) x prob(loss) |
+
+> **Exam trap:** Writing 'normal or peak conditions' for Environment regardless of attribute. Each attribute has its own list — Testability's environments are lifecycle phases, not load levels.
+
+*Tags: testability, general-scenario, possible-values, recall*
+
+</details>
+
+---
+
+## ADV-0047 — Testability (Brutal, 6 marks)
+
+**Type:** Critique a response measure  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+A team writes this response measure for a **Testability** scenario: *'the system will handle it well'*. Explain why this fails the lecture's requirement, and give three measures drawn from the lecture's own Testability list that would be acceptable instead.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+It fails because Lecture 5 requires a quality-attribute requirement to be **unambiguous and testable**, and states the definitions problem directly: it is meaningless to say a system will be 'modifiable' or handle something 'well', since every system is modifiable with respect to one set of changes and not another. Without a measure there is no way to determine whether the requirement is satisfied.
+
+Acceptable measures from the lecture's Testability list: effort to find a fault or class of faults; effort to achieve a given percentage of state space coverage; probability of a fault being revealed by the next test; time to perform tests; effort to detect faults; length of longest dependency chain in test; length of time to prepare test environment; reduction in risk exposure computed as size(loss) x prob(loss)
+
+> **Exam trap:** Substituting a number from a different attribute — '99.9% uptime' is not a Usability measure.
+
+*Tags: testability, response-measure, testability-of-requirements, critique*
+
+</details>
+
+---
+
+## ADV-0048 — Testability (Very Hard, 7 marks)
+
+**Type:** Match concrete scenario to general scenario  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 7's sample concrete **Testability** scenario is:
+
+> *The unit tester completes a code unit during development and performs a test sequence whose results are captured and that gives 85% path coverage within 3 hours of testing.*
+
+Decompose it into all six parts and identify, for each part, which entry from the general-scenario table it instantiates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decompose the sentence and map each fragment to its general-scenario slot, checking it against the lecture's list of possible values for Testability:
+
+- Source — from the list: unit testers, integration testers, system testers, acceptance testers, end users, either running tests manually or using automated testing tools
+- Stimulus — from the list: a set of tests are executed due to the completion of a coding increment such as a class, layer or service; the completed integration of a subsystem; the complete implementation of the system; or the delivery of the system to the customer
+- Artifact — from the list: the portion of the system being tested
+- Environment — from the list: design time, development time, compile time, integration time, deployment time, run time
+- Response — from the list: execute test suite and capture results; capture activity that resulted in the fault; control and monitor the state of the system
+- Response Measure — from the list: effort to find a fault or class of faults; effort to achieve a given percentage of state space coverage; probability of a fault being revealed by the next test; time to perform tests; effort to detect faults; length of longest dependency chain in test; length of time to prepare test environment; reduction in risk exposure computed as size(loss) x prob(loss)
+
+The purpose of the exercise is to show that a concrete scenario is a *selection* from the general scenario, which is why the general table is the thing worth memorising.
+
+> **Exam trap:** Inventing parts the sentence does not contain. If the concrete scenario leaves the environment implicit, say so rather than fabricating one.
+
+*Tags: testability, concrete-scenario, decompose, general-to-concrete*
+
+</details>
+
+---
+
+## ADV-0049 — Usability (Very Hard, 8 marks)
+
+**Type:** Recall general-scenario values  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Reproduce the **Usability general scenario** table from Lecture 7: give the possible values the lecture lists for Source, Stimulus, Artifact, Environment, Response and Response Measure. Generic placeholders will not earn marks.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Usability is how easy it is for the user to accomplish a desired task and the kind of user support the system provides. It comprises learning system features, using a system efficiently, minimizing the impact of errors, adapting the system to user needs, and increasing confidence and satisfaction.
+
+| Portion | Possible values |
+|---|---|
+| Source | end user, possibly in a specialized role |
+| Stimulus | end user tries to use a system efficiently, learn to use the system, minimize the impact of errors, adapt the system, or configure the system |
+| Artifact | system or the specific portion of the system with which the user is interacting |
+| Environment | runtime or configuration time |
+| Response | the system should either provide the user with the features needed or anticipate the user's needs |
+| Response Measure | task time; number of errors; number of tasks accomplished; user satisfaction; gain of user knowledge; ratio of successful operations to total operations; amount of time or data lost when an error occurs |
+
+> **Exam trap:** Writing 'normal or peak conditions' for Environment regardless of attribute. Each attribute has its own list — Testability's environments are lifecycle phases, not load levels.
+
+*Tags: usability, general-scenario, possible-values, recall*
+
+</details>
+
+---
+
+## ADV-0050 — Usability (Brutal, 6 marks)
+
+**Type:** Critique a response measure  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+A team writes this response measure for a **Usability** scenario: *'the system will handle it well'*. Explain why this fails the lecture's requirement, and give three measures drawn from the lecture's own Usability list that would be acceptable instead.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+It fails because Lecture 5 requires a quality-attribute requirement to be **unambiguous and testable**, and states the definitions problem directly: it is meaningless to say a system will be 'modifiable' or handle something 'well', since every system is modifiable with respect to one set of changes and not another. Without a measure there is no way to determine whether the requirement is satisfied.
+
+Acceptable measures from the lecture's Usability list: task time; number of errors; number of tasks accomplished; user satisfaction; gain of user knowledge; ratio of successful operations to total operations; amount of time or data lost when an error occurs
+
+> **Exam trap:** Substituting a number from a different attribute — '99.9% uptime' is not a Usability measure.
+
+*Tags: usability, response-measure, testability-of-requirements, critique*
+
+</details>
+
+---
+
+## ADV-0051 — Usability (Very Hard, 7 marks)
+
+**Type:** Match concrete scenario to general scenario  
+**Source:** Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 7's sample concrete **Usability** scenario is:
+
+> *The user downloads a new application and is using it productively after two minutes of experimentation.*
+
+Decompose it into all six parts and identify, for each part, which entry from the general-scenario table it instantiates.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Decompose the sentence and map each fragment to its general-scenario slot, checking it against the lecture's list of possible values for Usability:
+
+- Source — from the list: end user, possibly in a specialized role
+- Stimulus — from the list: end user tries to use a system efficiently, learn to use the system, minimize the impact of errors, adapt the system, or configure the system
+- Artifact — from the list: system or the specific portion of the system with which the user is interacting
+- Environment — from the list: runtime or configuration time
+- Response — from the list: the system should either provide the user with the features needed or anticipate the user's needs
+- Response Measure — from the list: task time; number of errors; number of tasks accomplished; user satisfaction; gain of user knowledge; ratio of successful operations to total operations; amount of time or data lost when an error occurs
+
+The purpose of the exercise is to show that a concrete scenario is a *selection* from the general scenario, which is why the general table is the thing worth memorising.
+
+> **Exam trap:** Inventing parts the sentence does not contain. If the concrete scenario leaves the environment implicit, say so rather than fabricating one.
+
+*Tags: usability, concrete-scenario, decompose, general-to-concrete*
+
+</details>
+
+---
+
+## ADV-0052 — Runtime vs development-time (Very Hard, 6 marks)
+
+**Type:** Classify by observation method  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf; Lecture7_UnderstandingQualityAttributes_MoreDetailsScenarios (1).pdf
+
+Lecture 5 divides quality attributes into two categories. State the division precisely, classify all seven attributes from Lecture 7, and explain the test you applied — not merely the answer.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The division is between attributes that **describe some property of the system at run time** (the lecture's examples: availability, performance, usability) and those that **describe some property of the development of the system** (its examples: modifiability, testability).
+
+The test to apply: ask whether the response in the scenario is performed by *the system* or by *the developers*. Lecture 5 makes this explicit — 'the response consists of the responsibilities that the system (for runtime qualities) or the developers (for development-time qualities) should perform'.
+
+Applying it: Availability, Performance, Security and Usability are runtime — the system detects, processes, resists or guides. Interoperability is runtime — two systems exchange information while running. Modifiability is development-time — a developer makes, tests and deploys a change. Testability is development/testing-time — a tester executes a suite. Confirmation comes from the Environment rows: Modifiability's environments are 'runtime, compile time, build time, initiation time, design time' and Testability's are lifecycle phases, whereas Performance's are load conditions.
+
+> **Exam trap:** Memorising the list without the test. The examiner can ask about an attribute not on your list.
+
+*Tags: runtime, development-time, classification, who-responds*
+
+</details>
+
+---
+
+## ADV-0053 — Quality attribute considerations (Brutal, 8 marks)
+
+**Type:** Explain the three problems  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+Lecture 5 states there are three problems with conventional discussions of quality attributes, and that scenarios solve two of them. Name all three problems and state precisely which are solved by scenarios and which by something else.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Problem 1 — **the definitions are not testable**. It is meaningless to say a system will be 'modifiable': every system is modifiable with respect to one set of changes and not another, and similarly a system may be robust to some faults and brittle to others.
+
+Problem 2 — **endless time is wasted arguing which quality a concern belongs to**. Is a failure due to a denial-of-service attack an aspect of availability, performance, security or usability? All four communities would claim it and all are to some extent correct, but this does not help architects create solutions.
+
+Problem 3 — **each attribute community has developed its own vocabulary**. Performance has 'events' arriving, security has 'attacks' arriving, availability has 'failures', usability has 'user input' — all possibly referring to the same occurrence.
+
+Scenarios solve problems 1 and 2: a six-part scenario is testable and it sidesteps the ownership argument by describing the occurrence rather than labelling it. Problem 3 is solved differently — by 'a discussion of each attribute, concentrating on its underlying concerns, to illustrate the concepts fundamental to that attribute community'. Saying scenarios solve all three is wrong.
+
+> **Exam trap:** Claiming scenarios fix all three. The lecture explicitly solves the vocabulary problem by a different means.
+
+*Tags: quality-attributes, three-problems, scenarios, vocabulary*
+
+</details>
+
+---
+
+## ADV-0054 — Functionality (Brutal, 7 marks)
+
+**Type:** Explain orthogonality  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+Lecture 5 claims 'functionality does not determine architecture' and that 'functionality and quality attributes are orthogonal'. Defend both claims, then explain why we decompose systems at all if functionality alone does not require it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+First claim: given a set of required functionality there is no end to the architectures that could satisfy it — the functionality could be divided in any number of ways and the sub-pieces assigned to different elements. The lecture pushes this to its limit: 'if functionality were the only thing that mattered, you wouldn't have to divide the system into pieces at all'. A single monolithic blob can be functionally correct.
+
+Second claim: orthogonality means you can vary one while holding the other fixed. The same function can be fast or slow, secure or open, easy or hard to change — so knowing the function tells you nothing about the qualities, and vice versa. Lecture 5's illustration is one functional requirement ('when the user presses the green button the Options dialog appears') carrying separate performance, availability and usability annotations.
+
+Why we decompose anyway: 'we design our systems as structured sets of cooperating architectural elements — modules, layers, classes, services, databases, apps, threads, peers, tiers — to make them understandable and to support a variety of other purposes', and 'those other purposes are the other quality attributes'. Structure exists to serve qualities, not functionality.
+
+> **Exam trap:** Arguing functionality does constrain architecture because 'you need a module for each feature'. That is a convention, not a necessity.
+
+*Tags: functionality, orthogonality, decomposition, why-structure*
+
+</details>
+
+---
+
+## ADV-0055 — Requirement categories (Very Hard, 6 marks)
+
+**Type:** Classify a requirement  
+**Source:** Lecture5_UnderstandingQualityAttributes.pdf
+
+Lecture 5 divides system requirements into three categories. Name them, define each precisely, and classify these four: (a) the system shall run on Ubuntu 24.04; (b) 95% of searches return within 2 seconds; (c) the system shall let a lecturer publish grades; (d) the team shall reuse the existing authentication module.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The three categories are **functional requirements** (what the system must do, how it must behave or react to run-time stimuli), **quality attribute requirements** (annotations that qualify functional requirements — how fast, how resilient to erroneous input, how easy to learn), and **constraints** (a design decision with zero degrees of freedom, i.e. a decision already made for you; the lecture's examples are a requirement to use a certain programming language or to reuse a certain existing module).
+
+(a) Constraint — the platform decision is already made, zero degrees of freedom.
+(b) Quality attribute — it qualifies the search function with a testable performance measure.
+(c) Functional — it states what the system must do.
+(d) Constraint — this is verbatim the lecture's own example of a constraint.
+
+> **Exam trap:** Calling (d) a functional requirement. 'Reuse an existing module' is the lecture's textbook example of a constraint.
+
+*Tags: requirements, constraints, classification, zero-degrees-of-freedom*
+
+</details>
+
+---
+
+## ADV-0056 — Layer — bridging (Brutal, 7 marks)
+
+**Type:** Diagram-reading judgement  
+**Source:** Lecture4_ArchitecturalPatterns_2_ModulePatterns_Layer Pattern.pdf; Lecture10_Documenting Software Architectures.pdf
+
+Lecture 4 says that when looking at a stack of boxes 'sometimes it is impossible to tell whether layer bridging is allowed or not'. Explain what layer bridging is, why the diagram alone cannot settle it, and what the lecture says an architect must therefore do.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Bridging is when modules in one layer are permitted to use modules in a **non-adjacent lower** layer, skipping the layer(s) between. The diagram cannot settle it because the layered notation encodes the allowed-to-use relation through *geometric adjacency* rather than through arrows — adjacency tells you the ordering but not whether a layer may reach past its immediate neighbour. Two designs with identical box stacks can therefore have different usage rules.
+
+The lecture's remedy: the architect 'has to include the answer in the key to the diagram's notation', which it recommends for all diagrams. This connects to Lecture 10's point that lack of a key is 'the most common mistake we see in documentation in practice'.
+
+> **Exam trap:** Saying bridging is forbidden. The lecture does not forbid it — it says the diagram must state whether it is allowed.
+
+*Tags: Layer, bridging, notation-key, adjacency*
+
+</details>
+
+---
+
+## ADV-0057 — Layer — upward calls (Brutal, 8 marks)
+
+**Type:** Resolve an apparent contradiction  
+**Source:** Lecture4_ArchitecturalPatterns_2_ModulePatterns_Layer Pattern.pdf
+
+Lecture 4 states both that 'a layer isn't allowed to use any layer above it' and that 'a layer is allowed to make upward calls'. Resolve the apparent contradiction precisely, and give an example of a legitimate upward call.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+There is no contradiction because 'uses' has a technical definition. The lecture defines it: 'a module *uses* another module when it depends on the answer it gets back'. The prohibition is on *usage*, i.e. on a dependency where correctness requires the response. An upward **call** that expects no answer creates no such dependency, so it is permitted.
+
+Legitimate example: a lower layer raising a callback, event or notification upward — the lower layer announces something and continues regardless of what the upper layer does with it. This is why Publish-Subscribe and MVC-style notification can coexist with strict layering. The test to apply in the exam: does the caller's correctness depend on the returned answer? If yes it is a usage and it is forbidden upward; if no it is merely a call and it is allowed.
+
+> **Exam trap:** Treating 'call' and 'use' as synonyms. The whole resolution turns on the lecture's definition of 'uses'.
+
+*Tags: Layer, upward-calls, uses-relation, callbacks*
+
+</details>
+
+---
+
+## ADV-0058 — Layer — segmented layers (Brutal, 7 marks)
+
+**Type:** Reason about segment rules  
+**Source:** Lecture4_ArchitecturalPatterns_2_ModulePatterns_Layer Pattern.pdf
+
+Lecture 4 discusses layers divided into **segments**. Explain when segmentation arises, what additional information the architect must then supply, and why the lecture says arrows become necessary in segmented diagrams.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Segmentation arises when a finer-grained decomposition of the modules is wanted — typically when a pre-existing set of units, such as imported modules, share the same allowed-to-use relation and are grouped inside one layer.
+
+The architect must then specify **what usage rules are in effect among the segments**. The lecture states many usage rules are possible but they must be made explicit. Its worked figure has the top and bottom layers segmented, with segments of the top layer *not* allowed to use each other while segments of the bottom layer *are*.
+
+Arrows become necessary because adjacency cannot express intra-layer rules: two segments side by side are equally adjacent whether or not they may use each other. The lecture says plainly that without the arrows 'it will be harder to differentiate the different usage rules within segmented layers'.
+
+> **Exam trap:** Assuming all segments in a layer may freely use each other. The rule differs per layer and must be documented.
+
+*Tags: Layer, segments, usage-rules, notation*
+
+</details>
+
+---
+
+## ADV-0059 — Layer — what is not a layered architecture (Brutal, 8 marks)
+
+**Type:** Reject a false example  
+**Source:** Lecture4_ArchitecturalPatterns_2_ModulePatterns_Layer Pattern.pdf; Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 4 shows a diagram of stacked boxes with arrows in which everything is allowed to use everything, and states this 'is decidedly not a layered architecture'. Explain the reasoning it gives, and state the general principle for judging whether a stack of boxes is genuinely layered.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The lecture's reasoning is a modifiability argument, not a notational one: if Layer A is replaced by a different version, Layer C (which uses A) might well have to change — and 'we don't want our virtual machine layer to change every time our application layer changes'. Unrestricted usage destroys exactly the property layering exists to provide.
+
+The general principle: a stack of boxes is layered only if a **unidirectional allowed-to-use relation** actually constrains the dependencies. The lecture is explicit that 'any old set of boxes stacked on top of each other does not constitute a layered architecture'. Connecting to Lecture 6: without the restrict-dependencies tactic the pattern loses the low coupling that makes it effective, so the diagram may look layered while the architecture is not.
+
+A related fine point from the same lecture: orientation carries meaning in this notation. If you turn the diagram upside down so that C is on top, that represents a completely different design — unlike arrow-based diagrams, which keep their semantics under rotation.
+
+> **Exam trap:** Judging by appearance. The test is whether dependencies are actually restricted, not whether the boxes are drawn in a stack.
+
+*Tags: Layer, false-example, unidirectional, orientation*
+
+</details>
+
+---
+
+## ADV-0060 — MVC — constraints (Very Hard, 6 marks)
+
+**Type:** Recall an exact constraint  
+**Source:** Lecture4_ArchitecturalPatterns_5_CCPatterns_Model-view Controller.pdf
+
+State the two constraints Lecture 4 places on the MVC pattern, and explain what would go wrong architecturally if the second were violated.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The two constraints are: (1) there must be at least one instance each of model, view and controller; (2) **the model component should not interact directly with the controller**.
+
+Violating the second collapses the separation the pattern exists to create. The intended flow is that a controller translates user actions into changes to the model or the view, and the model notifies views of state changes. If the model reaches directly into the controller, application state becomes coupled to input mediation: the model can no longer be reused with a different input mechanism, the ability to have many controllers for one model is lost, and the loose coupling that lets the three be developed and tested in parallel disappears.
+
+> **Exam trap:** Giving only the 'at least one of each' constraint. The model-controller prohibition is the examinable one.
+
+*Tags: MVC, constraints, model-controller, coupling*
+
+</details>
+
+---
+
+## ADV-0061 — MVC — many-to-one relations (Very Hard, 6 marks)
+
+**Type:** Explain multiplicity  
+**Source:** Lecture4_ArchitecturalPatterns_5_CCPatterns_Model-view Controller.pdf
+
+Lecture 4 states there may be many views and many controllers associated with one model. Give the lecture's own example of each, and explain what architectural property makes this multiplicity possible.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Many views for one model: a set of business data represented simultaneously as columns of numbers in a spreadsheet, as a scatter plot, and as a pie chart — each a separate view, each dynamically updated as the model changes, for example showing live transactions in a transaction processing system.
+
+Many controllers for one model: a map zoomed and panned via mouse movements, trackball movements, keyboard clicks or voice commands — each form of input managed by its own controller.
+
+What makes it possible: the components are connected by *notification* (events or callbacks carrying state updates) rather than by direct reference, so the model announces a change without knowing how many views exist or what they are. Because the components are loosely coupled they can be developed and tested in parallel and changes to one have minimal impact on the others.
+
+> **Exam trap:** Claiming one model needs one view. The pattern's value is largely in the one-to-many case.
+
+*Tags: MVC, multiplicity, notification, many-views*
+
+</details>
+
+---
+
+## ADV-0062 — MVC — weaknesses (Brutal, 7 marks)
+
+**Type:** Explain a conceptual mismatch  
+**Source:** Lecture4_ArchitecturalPatterns_5_CCPatterns_Model-view Controller.pdf
+
+Lecture 4 gives two weaknesses of MVC, one of which concerns user-interface toolkits. Explain that weakness precisely and say when it should make an architect reject MVC.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The weakness: the model, view and controller abstractions may not be a good fit for some user-interface toolkits. Specifically, MVC splits input and output apart into controller and view, but these functions are 'often combined into individual widgets' in real toolkits — a text box both displays and accepts. The result is a **conceptual mismatch between the architecture and the user interface toolkit**: the architecture prescribes a separation the implementation technology does not naturally provide, so developers end up fighting the toolkit or documenting a structure the code does not have.
+
+The other weakness is that the complexity may not be worth it for simple user interfaces.
+
+When to reject MVC: when the interface is simple enough that the separation buys nothing, or when the chosen toolkit fuses input and output so thoroughly that enforcing the split produces architecture erosion — a documented structure the code silently violates.
+
+> **Exam trap:** Listing 'it is complex' without the toolkit mismatch, which is the more specific and more examinable half.
+
+*Tags: MVC, weaknesses, conceptual-mismatch, toolkit*
+
+</details>
+
+---
+
+## ADV-0063 — Publish-Subscribe — variants (Brutal, 7 marks)
+
+**Type:** Distinguish pattern variants  
+**Source:** Lecture4_ArchitecturalPatterns_10_CCPatterns_Publish-Subscribe.pdf
+
+Lecture 4 states that Publish-Subscribe 'can take several forms'. For the **List-based** variant, describe its mechanism, state its efficiency/decoupling trade-off, and say what distinguishes it from the other two.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Mechanism: every publisher maintains a subscription list — a list of subscribers that have registered an interest in receiving the event.
+
+Trade-off: less decoupled than the others, so it does not provide as much modifiability, but it can be quite efficient in terms of runtime overhead.
+
+Distinguishing point: the publisher holds direct knowledge of its subscribers, which is also why it is the closest architectural analogue of the object-level Observer pattern.
+
+> **Exam trap:** Treating Publish-Subscribe as one undifferentiated pattern. The variant choice changes the modifiability/performance answer.
+
+*Tags: Publish-Subscribe, variants, list-based, topic-vs-content*
+
+</details>
+
+---
+
+## ADV-0064 — Publish-Subscribe — variants (Brutal, 7 marks)
+
+**Type:** Distinguish pattern variants  
+**Source:** Lecture4_ArchitecturalPatterns_10_CCPatterns_Publish-Subscribe.pdf
+
+Lecture 4 states that Publish-Subscribe 'can take several forms'. For the **Broadcast-based** variant, describe its mechanism, state its efficiency/decoupling trade-off, and say what distinguishes it from the other two.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Mechanism: publishers simply publish events which are then broadcast; subscribers — or services acting on their behalf in a distributed system — examine each event as it arrives and determine whether it is of interest.
+
+Trade-off: publishers have less or no knowledge of subscribers, but it has the potential to be very inefficient if there are lots of messages and most messages are not of interest to a particular subscriber.
+
+Distinguishing point: the filtering work moves from the publisher to the subscriber, which is what trades efficiency for decoupling.
+
+> **Exam trap:** Treating Publish-Subscribe as one undifferentiated pattern. The variant choice changes the modifiability/performance answer.
+
+*Tags: Publish-Subscribe, variants, broadcast-based, topic-vs-content*
+
+</details>
+
+---
+
+## ADV-0065 — Publish-Subscribe — variants (Brutal, 7 marks)
+
+**Type:** Distinguish pattern variants  
+**Source:** Lecture4_ArchitecturalPatterns_10_CCPatterns_Publish-Subscribe.pdf
+
+Lecture 4 states that Publish-Subscribe 'can take several forms'. For the **Content-based** variant, describe its mechanism, state its efficiency/decoupling trade-off, and say what distinguishes it from the other two.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Mechanism: each event is associated with a set of attributes and is delivered to a subscriber only if those attributes match subscriber-defined patterns.
+
+Trade-off: the most expressive of the three; the lecture distinguishes it from the previous two, which it categorises broadly as 'topic-based' where topics are predefined events and a component subscribes to all events within the topic.
+
+Distinguishing point: content is 'much more general' than a topic, so subscription granularity is finer, at the cost of evaluating matches per event.
+
+> **Exam trap:** Treating Publish-Subscribe as one undifferentiated pattern. The variant choice changes the modifiability/performance answer.
+
+*Tags: Publish-Subscribe, variants, content-based, topic-vs-content*
+
+</details>
+
+---
+
+## ADV-0066 — Publish-Subscribe — variants (Brutal, 8 marks)
+
+**Type:** Select a variant under constraints  
+**Source:** Lecture4_ArchitecturalPatterns_10_CCPatterns_Publish-Subscribe.pdf
+
+A system publishes 10,000 events per second; each subscriber is interested in well under 1% of them; subscribers are added and removed constantly. Select the Publish-Subscribe variant, justify it against the other two, and state the residual risk.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Select **content-based**. Justification against the alternatives: broadcast-based is explicitly warned against by the lecture in exactly this situation — it 'has the potential to be very inefficient if there are lots of messages and most messages are not of interest to a particular subscriber', which describes this workload precisely. List-based would be efficient at delivery but is 'less decoupled' and 'does not provide as much modifiability', which conflicts with constantly changing subscribers since the publisher must maintain the list. Content-based delivers only where attributes match subscriber-defined patterns, so it satisfies both constraints.
+
+Residual risk: the matching itself is per-event work, so the event distributor becomes the bottleneck and a single point of failure. The pattern's general weaknesses still apply — increased latency, negative effect on scalability and predictability of message delivery time, less control over message ordering, and delivery not guaranteed.
+
+> **Exam trap:** Choosing broadcast because it sounds most decoupled. The lecture names this exact workload as its failure case.
+
+*Tags: Publish-Subscribe, variant-selection, content-based, trade-off*
+
+</details>
+
+---
+
+## ADV-0067 — SOA — connectors (Very Hard, 6 marks)
+
+**Type:** Recall connector types  
+**Source:** Lecture4_ArchitecturalPatterns_9_CCPatterns_Service-Oriented-Architecture.pdf
+
+Lecture 4 names three connector types for the SOA pattern. Describe the **SOAP connector**: what it is, and what its choice implies for coupling between consumer and provider.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The SOAP connector uses the SOAP protocol for synchronous communication between web services, typically over HTTP.
+
+Implication: synchronous coupling: the consumer waits, so consumer availability becomes tied to provider responsiveness.
+
+The lecture notes that in practice SOA environments 'may involve a mix of the three' — the connector is a per-interaction decision, not a system-wide one.
+
+> **Exam trap:** Listing only ESB, registry and orchestration. Those are intermediary *components*; these three are the *connectors*.
+
+*Tags: SOA, connectors, soap, coupling*
+
+</details>
+
+---
+
+## ADV-0068 — SOA — connectors (Very Hard, 6 marks)
+
+**Type:** Recall connector types  
+**Source:** Lecture4_ArchitecturalPatterns_9_CCPatterns_Service-Oriented-Architecture.pdf
+
+Lecture 4 names three connector types for the SOA pattern. Describe the **REST connector**: what it is, and what its choice implies for coupling between consumer and provider.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The REST connector relies on the basic request/reply operations of the HTTP protocol.
+
+Implication: simplicity and ubiquity, at the cost of weaker contract formality than SOAP.
+
+The lecture notes that in practice SOA environments 'may involve a mix of the three' — the connector is a per-interaction decision, not a system-wide one.
+
+> **Exam trap:** Listing only ESB, registry and orchestration. Those are intermediary *components*; these three are the *connectors*.
+
+*Tags: SOA, connectors, rest, coupling*
+
+</details>
+
+---
+
+## ADV-0069 — SOA — connectors (Very Hard, 6 marks)
+
+**Type:** Recall connector types  
+**Source:** Lecture4_ArchitecturalPatterns_9_CCPatterns_Service-Oriented-Architecture.pdf
+
+Lecture 4 names three connector types for the SOA pattern. Describe the **Asynchronous messaging connector**: what it is, and what its choice implies for coupling between consumer and provider.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The Asynchronous messaging connector uses a messaging system to offer point-to-point or publish-subscribe asynchronous message exchanges.
+
+Implication: decouples availability in time — the provider need not be up when the consumer sends — at the cost of losing immediate confirmation.
+
+The lecture notes that in practice SOA environments 'may involve a mix of the three' — the connector is a per-interaction decision, not a system-wide one.
+
+> **Exam trap:** Listing only ESB, registry and orchestration. Those are intermediary *components*; these three are the *connectors*.
+
+*Tags: SOA, connectors, asynchronous, coupling*
+
+</details>
+
+---
+
+## ADV-0070 — SOA — components vs connectors (Brutal, 8 marks)
+
+**Type:** Separate two element kinds  
+**Source:** Lecture4_ArchitecturalPatterns_9_CCPatterns_Service-Oriented-Architecture.pdf
+
+For the SOA pattern, Lecture 4 lists both specialised intermediary components and connector types. Separate the two lists correctly, and explain why confusing them costs marks in an elements-and-relations question.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Components** (specialised intermediaries providing infrastructure services): the ESB, which routes and transforms messages between providers and consumers, converts between protocols or technologies, performs data transformations (format, content, splitting, merging) and performs security checks; the registry of services, used by providers to register and consumers to discover services at run time; and the orchestration server, which coordinates interactions based on business-process and workflow languages, executing scripts on the occurrence of a specific event such as a purchase order request arriving.
+
+**Connectors**: SOAP, REST, and asynchronous messaging.
+
+Why confusing them costs marks: an elements-and-relations answer must say what the runtime *things* are and what the *interaction mechanisms* between them are. Naming an ESB as a connector misdescribes it — an ESB is itself a component that is attached via connectors, which is why the lecture's Relations entry reads 'attachment of the different kinds of components available to the respective connectors'. The distinction also matters for the availability argument: a component can fail independently, and the lecture notes the ESB 'introduces an additional point of failure'.
+
+> **Exam trap:** Calling the ESB a connector. It is an intermediary component attached via connectors.
+
+*Tags: SOA, components, connectors, elements-and-relations*
+
+</details>
+
+---
+
+## ADV-0071 — SOA — optionality (Brutal, 7 marks)
+
+**Type:** Argue element optionality  
+**Source:** Lecture4_ArchitecturalPatterns_9_CCPatterns_Service-Oriented-Architecture.pdf
+
+Explain why an SOA implementation may legitimately contain no ESB, no registry and no orchestration server, and state what the lecture says happens to communication when an ESB is absent.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Because those three are **specialised components an SOA application *may* use**, not mandatory constituents. The pattern's required elements are service providers and service consumers communicating over published interfaces; the intermediaries are added when the specific problem calls for them. The lecture's constraint statement reflects this: 'service consumers are connected to service providers, but intermediary components may be used'.
+
+When an ESB is absent, the lecture states that 'service providers and consumers communicate with each other in a point-to-point fashion'. That is a real architectural difference: point-to-point removes the ESB's latency and its additional point of failure, but also removes routing, protocol conversion, data transformation and the centralised security checks — so the interoperability burden shifts back onto each pair of endpoints.
+
+> **Exam trap:** Asserting SOA requires an ESB. Each intermediary is chosen per problem and each brings its own overhead.
+
+*Tags: SOA, optionality, ESB, point-to-point*
+
+</details>
+
+---
+
+## ADV-0072 — Peer-to-Peer — supernodes and hops (Brutal, 8 marks)
+
+**Type:** Explain discovery mechanics  
+**Source:** Lecture4_ArchitecturalPatterns_8_CCPatterns_Peer-to-Peer.pdf
+
+Explain the mechanics Lecture 4 gives for how a peer finds another peer in a P2P network, including the roles of hops and supernodes, and state the constraints the lecture says may be placed on a P2P network.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Mechanics: peers first connect to the peer-to-peer network, on which they **discover other peers** they can interact with, and then initiate actions by requesting services. A peer's search for another peer is often **propagated from one peer to its connected peers for a limited number of hops**. Some architectures include **supernodes** — specialised peer nodes with indexing or routing capabilities that allow a regular peer's search to reach a larger number of peers.
+
+The constraints the lecture lists as possible restrictions: the number of allowable attachments to any given peer; the number of hops used for searching for a peer; which peers know about which other peers; and the observation that some P2P networks are organised with star topologies in which peers connect only to supernodes.
+
+The architectural significance of the hop limit: it bounds search cost but also bounds reachability, so a resource may exist in the network yet be undiscoverable — availability of the *network* does not guarantee availability of a *specific resource*.
+
+> **Exam trap:** Saying P2P has 'no central element'. Supernodes and star topologies are explicitly in the lecture, and they reintroduce centrality.
+
+*Tags: Peer-to-Peer, supernodes, hops, discovery, constraints*
+
+</details>
+
+---
+
+## ADV-0073 — Peer-to-Peer — availability mechanism (Brutal, 7 marks)
+
+**Type:** State the precondition for a quality  
+**Source:** Lecture4_ArchitecturalPatterns_8_CCPatterns_Peer-to-Peer.pdf
+
+Lecture 4 claims P2P improves availability. State the precise mechanism it gives, then state the precondition that must hold — and give a case where P2P is chosen and availability is nevertheless not improved.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Mechanism: 'typically multiple peers have overlapping capabilities, such as providing access to the same data or providing equivalent services', so a peer acting as client can collaborate with multiple peers acting as servers; if one becomes unavailable, the others can still provide the services to complete the task.
+
+Precondition: the **overlap must actually exist**. Availability comes from redundancy of capability, not from the topology. The lecture's own caution supports this — 'small peer-to-peer systems may not be able to consistently achieve quality goals such as performance and availability'.
+
+Case where it fails: a rare file held by exactly one peer. When that peer leaves, no alternative provider exists and the resource is unavailable, even though the network is fully functional and every other peer is reachable. A second case: the resource exists but lies beyond the configured hop limit, so it cannot be discovered.
+
+> **Exam trap:** Asserting 'P2P is highly available' unconditionally. The lecture's mechanism depends on overlapping capability.
+
+*Tags: Peer-to-Peer, availability, precondition, overlap*
+
+</details>
+
+---
+
+## ADV-0074 — Peer-to-Peer — weaknesses (Very Hard, 6 marks)
+
+**Type:** Explain why decentralisation costs  
+**Source:** Lecture4_ArchitecturalPatterns_8_CCPatterns_Peer-to-Peer.pdf
+
+Lecture 4 lists what becomes more complex in P2P and attributes the complexity to one root cause. Name the items and the cause, and explain the causal link for two of them.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The items: managing **security, data consistency, data/service availability, backup, and recovery** are all more complex. The root cause the lecture gives is that **peer-to-peer systems are decentralized**.
+
+Causal link for security: there is no single mediating element at which to authenticate, authorise, or inspect traffic, so every peer must be independently trustworthy and independently hardened — the trust boundary is distributed across all participants rather than concentrated.
+
+Causal link for data consistency: with no authoritative copy and peers joining and leaving dynamically, concurrent updates can occur at multiple peers with no common serialisation point, so reconciling divergent replicas becomes an application-level problem rather than something the structure solves.
+
+The lecture adds that small P2P systems may not consistently achieve performance and availability goals — the benefits are statistical and depend on scale.
+
+> **Exam trap:** Listing the weaknesses without connecting them to decentralisation, which is the single cause the lecture identifies.
+
+*Tags: Peer-to-Peer, weaknesses, decentralisation, consistency*
+
+</details>
+
+---
+
+## ADV-0075 — Map-Reduce — constraints (Brutal, 8 marks)
+
+**Type:** Recall exact constraints  
+**Source:** Lecture4_ArchitecturalPatterns_12_AllocationPatterns_Map-Reduce.pdf
+
+State the three constraints Lecture 4 places on the Map-Reduce pattern and explain, for each, what design possibility it forecloses.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Constraint 1 — **the data to be analysed must exist as a set of files**. This forecloses applying Map-Reduce directly to streaming or interactively-queried data; the input must be materialised first.
+
+Constraint 2 — **map functions are stateless and do not communicate with each other**. This forecloses any algorithm where one map instance's result depends on another's, which is precisely what allows the infrastructure to run instances in parallel across processors and to restart a failed instance without coordination. Statelessness is the enabler of the resilience, not an incidental restriction.
+
+Constraint 3 — **the only communication between map and reduce instances is the data emitted from the map instances as key/value pairs**. This forecloses side channels, shared memory or direct calls between stages, which is what lets the infrastructure own the shuffle and sort.
+
+Taken together the three constraints are what make the infrastructure's job — deploying, monitoring, and recovering from failure — tractable.
+
+> **Exam trap:** Listing the constraints without explaining that statelessness is what buys the parallelism and recovery.
+
+*Tags: Map-Reduce, constraints, stateless, key-value*
+
+</details>
+
+---
+
+## ADV-0076 — Map-Reduce — weaknesses (Very Hard, 7 marks)
+
+**Type:** Reject the pattern  
+**Source:** Lecture4_ArchitecturalPatterns_12_AllocationPatterns_Map-Reduce.pdf
+
+Lecture 4 gives three conditions under which Map-Reduce is a poor choice. State all three, and for one of them explain the underlying reason in terms of the pattern's mechanism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The three: (1) if you do not have large data sets, the overhead of map-reduce is not justified; (2) if you cannot divide your data set into similar sized subsets, the advantages of parallelism are lost; (3) operations that require multiple reduces are complex to orchestrate.
+
+Underlying reason for (2) — partition skew: the pattern's performance benefit comes from running many map instances concurrently, so total elapsed time is bounded by the *slowest* instance, not the average. If one partition is far larger than the rest, every other processor finishes and idles while that one instance runs, and the achieved parallelism collapses towards serial execution. The infrastructure can restart a failed task but cannot rebalance an unevenly-sized one, so the problem must be prevented at partitioning time.
+
+> **Exam trap:** Explaining skew as a correctness problem. It is purely a performance problem — the answer is still right, just slow.
+
+*Tags: Map-Reduce, weaknesses, skew, when-not-to-use*
+
+</details>
+
+---
+
+## ADV-0077 — Map-Reduce — worked example (Very Hard, 7 marks)
+
+**Type:** Apply the mechanism concretely  
+**Source:** Lecture4_ArchitecturalPatterns_12_AllocationPatterns_Map-Reduce.pdf
+
+Using Lecture 4's own word-count example, explain exactly what the map function emits, what the infrastructure does between the two stages, and what the reduce function receives and produces.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The document is the data set. The **map** function finds every word in the document and outputs a `<word, 1>` pair for each occurrence — the lecture's illustration is a document beginning 'Having a whole book . . .' producing `<Having, 1>`, `<a, 1>`, `<whole, 1>`, `<book, 1>`. Note it emits one pair per *occurrence*, performing no counting itself.
+
+Between the stages the **infrastructure** sorts the emitted pairs so that all pairs sharing a key are grouped together. This is the shuffle/sort, and it is the infrastructure's responsibility, not the programmer's — which is why the lecture describes the pattern as solving 'a distributed and parallel sort of a large data set'.
+
+The **reduce** function then takes that list in sorted order, adds up the 1s for each word to get a count, and outputs the result. In the lecture's extract-transform-load framing, map performs the extract and transform, and reduce performs the load.
+
+> **Exam trap:** Claiming the map function counts. It emits a 1 per occurrence; counting happens in reduce, after the infrastructure sorts.
+
+*Tags: Map-Reduce, word-count, shuffle-sort, worked-example*
+
+</details>
+
+---
+
+## ADV-0078 — Multi-Tier — constraints (Brutal, 7 marks)
+
+**Type:** Recall exact constraints  
+**Source:** Lecture4_ArchitecturalPatterns_13_AllocationPatterns_Multi-Tier.pdf
+
+State the three constraints Lecture 4 places on the Multi-Tier pattern, and explain what the second one rules out.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Constraint 1 — **a software component belongs to exactly one tier**.
+
+Constraint 2 — **tiers induce topological constraints that restrict which components may communicate with other components; specifically, connectors may exist only between components in the same tier or residing in adjacent tiers**. This rules out a presentation-tier component calling a data-tier component directly when an application tier sits between them: the call must pass through the intervening tier. That restriction is precisely what allows each tier to be secured, scaled and deployed independently, because the set of things that can reach a tier is known and bounded.
+
+Constraint 3 — **tiers may constrain the kinds of communication that can take place across adjacent tiers**; the lecture's example is that some tiered patterns require call-return communication in one direction but event-based notification in the other.
+
+> **Exam trap:** Omitting the adjacency restriction, which is the constraint that actually does the security and scaling work.
+
+*Tags: Multi-Tier, constraints, adjacency, topology*
+
+</details>
+
+---
+
+## ADV-0079 — Multi-Tier vs Layer (Brutal, 8 marks)
+
+**Type:** Separate two confusable patterns  
+**Source:** Lecture4_ArchitecturalPatterns_13_AllocationPatterns_Multi-Tier.pdf; Lecture4_ArchitecturalPatterns_2_ModulePatterns_Layer Pattern.pdf
+
+Lecture 4 warns 'Don't confuse tiers with layers!'. Give the precise distinction it states, explain what a tier actually *is*, and give one consequence of the distinction for how each is documented.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The distinction as the lecture states it: **layering is a pattern of modules — a unit of implementation — while tiers applies only to runtime entities**. Layer is therefore a *module* pattern and Multi-Tier is an *allocation* pattern.
+
+What a tier is: the lecture is emphatic that 'tiers are not components, but rather logical groupings of components'. A tier is a grouping construct, which is why its relations are 'is part of' (to group components into tiers), 'communicates with' (to show interaction), and 'allocated to' (when tiers map to computing platforms).
+
+Consequence for documentation: a layered view answers implementation-time questions — what may use what, what changes when a layer is replaced — and belongs in a module view. A tiered view answers runtime and deployment questions — what executes where, what can be scaled or firewalled independently — and belongs in an allocation view. The same system routinely has both, and Lecture 10's cross-view mapping is what relates them.
+
+> **Exam trap:** Saying tiers are 'physical' and layers 'logical'. Tiers are themselves logical groupings that may or may not map onto separate platforms.
+
+*Tags: Multi-Tier, Layer, module-vs-allocation, distinction*
+
+</details>
+
+---
+
+## ADV-0080 — Broker — proxies (Very Hard, 7 marks)
+
+**Type:** Explain an element's purpose  
+**Source:** Lecture4_ArchitecturalPatterns_4_CCPatterns_Broker.pdf
+
+Lecture 4 lists client-side proxy and server-side proxy among the Broker pattern's elements. State what they do, why the lecture marks them optional, and what an architect loses by omitting them.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Both proxies 'manage the actual communication with the broker, including marshaling, sending, and unmarshaling of messages'. They are marked optional because the Relations entry says the attachment relation associates clients '(and, optionally, client-side proxies)' and servers '(and, optionally, server-side proxies)' with brokers — the pattern works without them if clients and servers handle marshalling themselves.
+
+What is lost by omitting them: the marshalling concern moves into the client and server code, so every participant must know the wire format. That re-couples participants to a communication detail the broker was meant to hide, and it means a change of transport or serialisation becomes a change to every client and server rather than a change to the proxy layer. In Lecture 6's terms, the proxy *is* the use-an-intermediary tactic applied to the communication concern specifically.
+
+> **Exam trap:** Treating the proxies as mandatory. The lecture explicitly parenthesises them as optional.
+
+*Tags: Broker, proxies, marshalling, optional-elements*
+
+</details>
+
+---
+
+## ADV-0081 — Broker — testability (Brutal, 7 marks)
+
+**Type:** Explain an unaddressed weakness  
+**Source:** Lecture4_ArchitecturalPatterns_4_CCPatterns_Broker.pdf; Lecture6_Relationships Between Tactics and Patterns.pdf
+
+Lecture 4 lists testability among Broker's weaknesses. State the reason it gives, and explain why this weakness is harder to fix with tactics than Broker's availability weakness.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The reason: brokers are employed in complex multi-process and multiprocessor systems that are typically highly dynamic, with requests and responses typically asynchronous — 'all of this makes testing and debugging such systems extremely difficult'. Lecture 6 adds that a broker 'may be difficult to test' because it operates in highly dynamic environments where the conditions leading to a failure may be difficult to replicate.
+
+Why it is harder to fix than availability: the availability weakness is a *structural* deficiency with a structural remedy — replicate the broker, share state, load balance, add heartbeat. Testability is a deficiency in **controllability and observability**, which Lecture 7 identifies as testability's defining requirements. Replicating brokers does not make the system easier to control or observe; it makes it harder, because there are now more asynchronous interleavings to reproduce. The tactics that repair availability actively worsen testability, which is itself a trade-off point in ATAM terms.
+
+> **Exam trap:** Assuming every listed weakness has a tactic that fixes it. Some tactics make other weaknesses worse.
+
+*Tags: Broker, testability, controllability, tactic-conflict*
+
+</details>
+
+---
+
+## ADV-0082 — Shared-Data — multiple stores (Brutal, 8 marks)
+
+**Type:** Reason about replication  
+**Source:** Lecture4_ArchitecturalPatterns_11_CCPatterns_Shared-Data.pdf
+
+Lecture 4 says that when a system has more than one data store, 'a key architecture concern is the mapping of data and computation to the data'. Explain why multiple stores arise, the two reasons the lecture gives, and the trade-off replication introduces.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Why multiple stores arise — reason one: the data is 'naturally, or historically, partitioned into separable stores'. This is a fact about the domain or the system's history rather than a deliberate quality decision.
+
+Reason two: 'data may be replicated over several stores to improve performance or availability through redundancy'. This is a deliberate decision.
+
+The trade-off replication introduces: redundancy improves read performance and survives the loss of a store, but it creates a consistency obligation — the same logical datum now exists in more than one place and the copies can diverge. The lecture flags data consistency first in its list of the analyses associated with this pattern, alongside performance, security, privacy, availability, scalability and compatibility with existing repositories.
+
+The 'mapping of data and computation to the data' is a key concern because placing computation far from the data it needs reintroduces the latency that replication was meant to remove.
+
+> **Exam trap:** Presenting replication as a pure win. It converts an availability problem into a consistency problem.
+
+*Tags: Shared-Data, replication, multiple-stores, consistency*
+
+</details>
+
+---
+
+## ADV-0083 — Shared-Data — schema coupling (Very Hard, 7 marks)
+
+**Type:** Explain an indirect coupling  
+**Source:** Lecture4_ArchitecturalPatterns_11_CCPatterns_Shared-Data.pdf
+
+Lecture 4 claims Shared-Data supports modifiability *and* lists producer-consumer coupling as a weakness. Reconcile these, naming the exact form of coupling that remains.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+They are consistent because they concern different kinds of coupling. The modifiability benefit is that 'producers do not have direct knowledge of the consumers' — there is no *referential* coupling, since accessors interact only with the store and never with each other, so a consumer can be added without touching any producer.
+
+The residual weakness is that 'producers and consumers of data may be coupled through their knowledge of the structure of the shared data'. This is **schema coupling**: everyone must agree on how the data is shaped and what it means. It is indirect and invisible in a component diagram, which is what makes it dangerous — a change to the schema is a change to the implicit contract every accessor depends on, so it propagates to all of them at once even though no accessor references any other.
+
+The practical consequence: adding an accessor is cheap; changing the schema is expensive. An architect should therefore expect Shared-Data to be modifiable with respect to *participants* and rigid with respect to *data structure*.
+
+> **Exam trap:** Declaring the lecture inconsistent. The two statements are about referential coupling and schema coupling respectively.
+
+*Tags: Shared-Data, schema-coupling, modifiability, reconcile*
+
+</details>
+
+---
+
+## ADV-0084 — Pipe-and-Filter — pipeline parallelism (Brutal, 8 marks)
+
+**Type:** Explain the concurrency mechanism  
+**Source:** Lecture4_ArchitecturalPatterns_6_CCPatterns_Pipe and Filter.pdf
+
+Lecture 4 says filters 'can execute asynchronously and concurrently' and attributes this to one specific property of pipes. Name the property, explain the mechanism, and state the associated cost the lecture gives.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The property: **pipes buffer data during communication**. The lecture states it directly — 'pipes buffer data during communication. Because of this property, filters can execute asynchronously and concurrently.'
+
+Mechanism: buffering decouples the producing filter's timing from the consuming filter's timing. A filter can write its output and continue with the next data item without waiting for the downstream filter to be ready, so at any instant different filters are working on *different data items* simultaneously. This is pipeline parallelism, and it is distinct from data parallelism — the stages are different, not replicated.
+
+The cost: 'having large numbers of independent filters can add substantial amounts of computational overhead, because each filter runs as its own thread or process'. The lecture also warns that pipe-and-filter may be inappropriate for long-running computations without checkpoint/restore, since the failure of any filter or pipe can cause the entire pipeline to fail.
+
+> **Exam trap:** Attributing the concurrency to the filters being independent. Independence is necessary but the *buffering in the pipes* is the stated cause.
+
+*Tags: Pipe-and-Filter, pipeline-parallelism, buffering, overhead*
+
+</details>
+
+---
+
+## ADV-0085 — Pipe-and-Filter — pipe semantics (Very Hard, 6 marks)
+
+**Type:** State exact connector properties  
+**Source:** Lecture4_ArchitecturalPatterns_6_CCPatterns_Pipe and Filter.pdf
+
+State the four properties Lecture 4 attributes to a pipe, and explain what would break if the third were not guaranteed.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The four: (1) a pipe conveys data from a filter's output port(s) to another filter's input port(s); (2) a pipe has a **single source** for its input and a **single target** for its output; (3) a pipe **preserves the sequence** of data items; (4) a pipe **does not alter** the data passing through.
+
+If sequence preservation were not guaranteed, filters could no longer be reasoned about independently. The lecture's stated benefit is that independent processing at each step supports 'reuse, parallelization, and simplified reasoning about overall behavior' — that reasoning depends on each filter seeing the stream in the order the previous filter produced it. Without ordering, a filter's correctness would depend on the arrival interleaving, so filters could not be composed freely, and the reusability the pattern exists to provide would be lost.
+
+Property (4) matters for the same reason: a pipe that transformed data would be a filter, and the separation of transport from transformation would collapse.
+
+> **Exam trap:** Forgetting the single-source/single-target restriction, which is what distinguishes a pipe from a general event bus.
+
+*Tags: Pipe-and-Filter, pipe, connector-properties, ordering*
+
+</details>
+
+---
+
+## ADV-0086 — Client-Server — asymmetry (Very Hard, 7 marks)
+
+**Type:** Explain a structural asymmetry  
+**Source:** Lecture4_ArchitecturalPatterns_7_CCPatterns_Client-Server.pdf; Lecture4_ArchitecturalPatterns_8_CCPatterns_Peer-to-Peer.pdf
+
+Lecture 4 says the computational flow of pure client-server systems is 'asymmetric'. State precisely what is asymmetric, and use the asymmetry to explain both a benefit and a weakness the lecture lists.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What is asymmetric: **clients initiate all interactions**, and therefore the client must know the identity of a service in order to invoke it, whereas servers 'do not know the identity of clients in advance of a service request and must respond to the initiated client requests'. Knowledge and initiative both flow one way.
+
+Benefit that follows: 'because servers can be accessed by any number of clients, it is easy to add new clients to a system'. Since the server holds no knowledge of clients, adding one requires no server change — the asymmetry is exactly what makes client addition free.
+
+Weakness that follows: the server is a **performance bottleneck** and a **single point of failure**, because all initiative converges on it. The same concentration that makes clients cheap to add makes the server critical. The lecture adds a third weakness — decisions about where to locate functionality, in the client or the server, are complex and costly to change after the system is built.
+
+Contrast with P2P, where the interaction is 'typically a request/reply interaction without the asymmetry found in the client-server pattern' and each peer is both client and server.
+
+> **Exam trap:** Saying the asymmetry is that 'servers are more powerful'. It is about who initiates and who knows whom.
+
+*Tags: Client-Server, asymmetry, initiative, bottleneck*
+
+</details>
+
+---
+
+## ADV-0087 — Client-Server — quality claims (Brutal, 7 marks)
+
+**Type:** Correct a mis-stated quality  
+**Source:** Lecture4_ArchitecturalPatterns_7_CCPatterns_Client-Server.pdf
+
+A student writes: 'Client-Server is suitable here because it gives centralized control, which is the quality attribute it enhances.' Correct this using Lecture 4's own statement of the pattern's problem, and name the qualities it actually addresses.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+'Centralized control' is not a quality attribute — it is a *structural property*, i.e. a mechanism. A quality attribute is a property stakeholders can reason about and measure, such as modifiability or availability; centralisation is one of the means by which such qualities are affected.
+
+What the lecture actually claims: the pattern's Problem statement says that 'by managing a set of shared resources and services, we can promote **modifiability and reuse**, by factoring out common services and having to modify these in a single location, or a small number of locations', and that 'we want to improve **scalability and availability** by centralizing the control of these resources and services, while distributing the resources themselves across multiple physical servers'.
+
+So centralised control is the mechanism; modifiability, reuse, scalability and availability are the qualities. The corrected form is: Client-Server centralises control of shared services (mechanism), which can enhance modifiability because a change to a common service happens in one place (quality plus causal link) — while risking performance and availability because the server concentrates load and failure.
+
+> **Exam trap:** Naming a structural property where a quality attribute is required. Examiners test the mechanism-to-quality link, not vocabulary.
+
+*Tags: Client-Server, quality-vs-mechanism, correction, modifiability*
+
+</details>
+
+---
+
+## ADV-0088 — Pattern definition (Very Hard, 7 marks)
+
+**Type:** State the full solution definition  
+**Source:** Lecture4_ArchitecturalPatterns_1_WhatIsPattern_PatternCatalogue.pdf
+
+Lecture 4 defines an architectural pattern as establishing a relationship between a context, a problem and a solution, and then says the solution itself is 'determined and described by' four things. Name all four and explain why the fourth is the one most often omitted in exam answers.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The solution is determined and described by: (1) a set of **element types** — for example data repositories, processes, and objects; (2) a set of **interaction mechanisms or connectors** — for example method calls, events, or a message bus; (3) a **topological layout** of the components; (4) a set of **semantic constraints** covering topology, element behaviour and interaction mechanisms.
+
+The fourth is most often omitted because elements and connectors are visible in any diagram while constraints are not — they are rules about what the diagram is *not allowed* to show. Yet the constraints are frequently what distinguish one pattern from another: a stack of boxes is Layer only because of the unidirectional allowed-to-use constraint, and tiers are Multi-Tier only because connectors may exist only within or between adjacent tiers. An answer that lists elements and connectors but no constraints has described a topology, not a pattern.
+
+> **Exam trap:** Stopping at elements and connectors. The semantic constraints are where the pattern's identity actually lives.
+
+*Tags: pattern-definition, constraints, context-problem-solution*
+
+</details>
+
+---
+
+## ADV-0089 — Other module patterns (Very Hard, 6 marks)
+
+**Type:** Explain a pattern-generation principle  
+**Source:** Lecture4_ArchitecturalPatterns_3_ModulePatterns_OtherModulePatterns.pdf
+
+Lecture 4 has a short slide on 'Other Module Patterns' that states a general principle about how new patterns come into existence. State the principle and give its object-oriented counterpart as the lecture does.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The principle: designers in a particular domain often publish 'standard' module decompositions for systems in that domain, and **these standard decompositions, if put in the 'context, problem, solution' form, constitute module decomposition patterns**. In other words a pattern is not a fixed catalogue entry handed down — any recurring, documented decomposition becomes a pattern once expressed in the context/problem/solution form.
+
+The object-oriented counterpart the lecture gives: similarly, in the object-oriented realm, 'standard' or published class/object design solutions for a class of system constitute object-oriented patterns.
+
+Exam relevance: this legitimises naming a domain-standard decomposition as a pattern in an answer, provided you state its context, problem and solution rather than merely its name.
+
+> **Exam trap:** Assuming the lecture's catalogue is exhaustive. It explicitly describes how further patterns are formed.
+
+*Tags: other-module-patterns, pattern-generation, context-problem-solution*
+
+</details>
+
+---
+
+## ADV-0090 — Work assignment patterns (Brutal, 7 marks)
+
+**Type:** Analyse a work-assignment consequence  
+**Source:** Lecture4_ArchitecturalPatterns_14_AllocationPatterns_Other Allocation Patterns.pdf; Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 4 lists **Platform** among the published work-assignment patterns for globally distributed Agile projects. State the pattern precisely, then analyse one organisational consequence it creates — not merely when to choose it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The pattern: in software product line development, one site is tasked with developing reusable core assets of the product line, and other sites develop applications that use the core assets.
+
+Organisational consequence: creates a producer/consumer dependency between sites: the core-asset site becomes a bottleneck for every application site, so its release cadence constrains all the others.
+
+Why this is architectural rather than purely managerial: Lecture 2 states that architecture 'dictates the structure of an organization, or vice versa' and is 'typically used as the basis for the work-breakdown structure', which in turn dictates units of planning, scheduling and budget, inter-team communication channels, configuration control and file-system organization, and integration and test plans. Lecture 1 makes the same point from the other side — having a work assignment structure in the architecture 'makes it clear that the decision about who does the work has architectural as well as management implications'.
+
+> **Exam trap:** Treating work assignment as a project-management topic. The lecture places it inside the architecture.
+
+*Tags: work-assignment, platform, allocation, organisation*
+
+</details>
+
+---
+
+## ADV-0091 — Work assignment patterns (Brutal, 7 marks)
+
+**Type:** Analyse a work-assignment consequence  
+**Source:** Lecture4_ArchitecturalPatterns_14_AllocationPatterns_Other Allocation Patterns.pdf; Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 4 lists **Competence center** among the published work-assignment patterns for globally distributed Agile projects. State the pattern precisely, then analyse one organisational consequence it creates — not merely when to choose it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The pattern: work is allocated to sites depending on the technical or domain expertise located at a site — the lecture's example is user interface design done at a site where usability engineering experts are located.
+
+Organisational consequence: maximises quality per work item but fragments any feature that spans expertise areas, since one feature may now require coordinated work at several sites.
+
+Why this is architectural rather than purely managerial: Lecture 2 states that architecture 'dictates the structure of an organization, or vice versa' and is 'typically used as the basis for the work-breakdown structure', which in turn dictates units of planning, scheduling and budget, inter-team communication channels, configuration control and file-system organization, and integration and test plans. Lecture 1 makes the same point from the other side — having a work assignment structure in the architecture 'makes it clear that the decision about who does the work has architectural as well as management implications'.
+
+> **Exam trap:** Treating work assignment as a project-management topic. The lecture places it inside the architecture.
+
+*Tags: work-assignment, competence-center, allocation, organisation*
+
+</details>
+
+---
+
+## ADV-0092 — Work assignment patterns (Brutal, 7 marks)
+
+**Type:** Analyse a work-assignment consequence  
+**Source:** Lecture4_ArchitecturalPatterns_14_AllocationPatterns_Other Allocation Patterns.pdf; Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 4 lists **Open source** among the published work-assignment patterns for globally distributed Agile projects. State the pattern precisely, then analyse one organisational consequence it creates — not merely when to choose it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The pattern: many independent contributors develop the software product in accordance with a technical integration strategy, with minimal centralized control except when an independent contributor integrates code into the product line.
+
+Organisational consequence: maximises contributor autonomy and scale but shifts the entire quality burden onto the integration gate, which becomes the only point where architectural conformance can be enforced.
+
+Why this is architectural rather than purely managerial: Lecture 2 states that architecture 'dictates the structure of an organization, or vice versa' and is 'typically used as the basis for the work-breakdown structure', which in turn dictates units of planning, scheduling and budget, inter-team communication channels, configuration control and file-system organization, and integration and test plans. Lecture 1 makes the same point from the other side — having a work assignment structure in the architecture 'makes it clear that the decision about who does the work has architectural as well as management implications'.
+
+> **Exam trap:** Treating work assignment as a project-management topic. The lecture places it inside the architecture.
+
+*Tags: work-assignment, open-source, allocation, organisation*
+
+</details>
+
+---
+
+## ADV-0093 — Other allocation patterns (Very Hard, 6 marks)
+
+**Type:** Recall published deployment patterns  
+**Source:** Lecture4_ArchitecturalPatterns_14_AllocationPatterns_Other Allocation Patterns.pdf
+
+Lecture 4 names published deployment patterns from two named vendors. State what each vendor contributes, and give at least four of the specific topologies the lecture lists.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Microsoft** publishes a 'Tiered Distribution' pattern, which prescribes a particular allocation of components in a multi-tier architecture to the hardware they will run on.
+
+**IBM**, in its WebSphere handbooks, describes a number of what they call 'topologies' along with the quality attribute criteria for choosing among them. The lecture says there are **11 topologies** described for WebSphere version 6, and names: the 'single machine topology (stand-alone server)', 'reverse proxy topology', 'vertical scaling topology', 'horizontal scaling topology', and 'horizontal scaling with IP sprayer topology'.
+
+The examinable point is the framing: these are specialised deployment patterns chosen against quality-attribute criteria, which is why the lecture pairs the topology list with the phrase 'along with the quality attribute criteria for choosing among them'.
+
+> **Exam trap:** Treating Multi-Tier and Map-Reduce as the only allocation patterns. The lecture names a further published family.
+
+*Tags: other-allocation-patterns, WebSphere, tiered-distribution, topologies*
+
+</details>
+
+---
+
+## ADV-0094 — Class (generalization) structure (Very Hard, 6 marks)
+
+**Type:** Recall a specific structure  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 lists several useful structures beyond the headline patterns. For the **Class (generalization) structure**, state its category, its units and relations, what it is used for, and its architectural significance.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Category: **Module structure**.
+
+Units and relations: the module units are called classes; the relation is 'inherits from' or 'is an instance of'.
+
+Used for: reasoning about collections of similar behaviour or capability — for example the classes that other classes inherit from, and parameterized differences.
+
+Significance: it allows one to reason about **reuse and the incremental addition of functionality**; the lecture notes that if any documentation exists for a project following an object-oriented analysis and design process, it is typically this structure.
+
+> **Exam trap:** Answering only 'module, C&C, allocation'. The lecture names specific structures inside each category and they are examinable.
+
+*Tags: class-generalization-structure, module, structures*
+
+</details>
+
+---
+
+## ADV-0095 — Decomposition structure (Very Hard, 6 marks)
+
+**Type:** Recall a specific structure  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 lists several useful structures beyond the headline patterns. For the **Decomposition structure**, state its category, its units and relations, what it is used for, and its architectural significance.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Category: **Module structure**.
+
+Units and relations: the units are modules related to each other by the 'is-a-submodule-of' relation.
+
+Used for: showing how modules are decomposed into smaller modules recursively until they are small enough to be easily understood.
+
+Significance: it determines, to a large degree, the system's **modifiability**, by assuring that likely changes are localized; its units tend to have organization-specific names such as 'segment' or 'subsystem'.
+
+> **Exam trap:** Answering only 'module, C&C, allocation'. The lecture names specific structures inside each category and they are examinable.
+
+*Tags: decomposition-structure, module, structures*
+
+</details>
+
+---
+
+## ADV-0096 — Uses structure (Very Hard, 6 marks)
+
+**Type:** Recall a specific structure  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 lists several useful structures beyond the headline patterns. For the **Uses structure**, state its category, its units and relations, what it is used for, and its architectural significance.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Category: **Module structure**.
+
+Units and relations: the units are modules, perhaps classes, related by the 'uses' relation — a specialized form of dependency in which a unit uses another if the correctness of the first requires the presence of a correctly functioning version (as opposed to a stub) of the second.
+
+Used for: engineering systems that can be extended to add functionality, or from which useful functional subsets can be extracted.
+
+Significance: the ability to easily create a subset of a system allows for **incremental development**; this is also the relation the Layer pattern constrains.
+
+> **Exam trap:** Answering only 'module, C&C, allocation'. The lecture names specific structures inside each category and they are examinable.
+
+*Tags: uses-structure, module, structures*
+
+</details>
+
+---
+
+## ADV-0097 — Data model (Very Hard, 6 marks)
+
+**Type:** Recall a specific structure  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 lists several useful structures beyond the headline patterns. For the **Data model**, state its category, its units and relations, what it is used for, and its architectural significance.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Category: **Module structure**.
+
+Units and relations: it describes the static information structure in terms of data entities and their relationships.
+
+Used for: reasoning about the entities the system manipulates and how they relate.
+
+Significance: the lecture's own example is a banking system whose entities typically include Account, Customer and Loan, where Account has attributes such as account number, type (savings or checking), status and current balance.
+
+> **Exam trap:** Answering only 'module, C&C, allocation'. The lecture names specific structures inside each category and they are examinable.
+
+*Tags: data-model, module, structures*
+
+</details>
+
+---
+
+## ADV-0098 — Deployment structure (Very Hard, 6 marks)
+
+**Type:** Recall a specific structure  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 lists several useful structures beyond the headline patterns. For the **Deployment structure**, state its category, its units and relations, what it is used for, and its architectural significance.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Category: **Allocation structure**.
+
+Units and relations: the elements are software elements (usually a process from a C&C view), hardware entities (processors) and communication pathways; the relations are 'allocated-to' — showing on which physical units the software elements reside — and 'migrates-to' if the allocation is dynamic.
+
+Used for: showing how software is assigned to hardware processing and communication elements.
+
+Significance: it can be used to reason about **performance, data integrity, security and availability**, and is of particular interest in distributed and parallel systems.
+
+> **Exam trap:** Answering only 'module, C&C, allocation'. The lecture names specific structures inside each category and they are examinable.
+
+*Tags: deployment-structure, allocation, structures*
+
+</details>
+
+---
+
+## ADV-0099 — Implementation structure (Very Hard, 6 marks)
+
+**Type:** Recall a specific structure  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 lists several useful structures beyond the headline patterns. For the **Implementation structure**, state its category, its units and relations, what it is used for, and its architectural significance.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Category: **Allocation structure**.
+
+Units and relations: it maps software elements, usually modules, to the file structure(s) in the system's development, integration or configuration control environments.
+
+Used for: answering where each element is stored during development, testing and system building.
+
+Significance: it is what connects the architecture to the build: without it, questions about integration and version control have no architectural answer.
+
+> **Exam trap:** Answering only 'module, C&C, allocation'. The lecture names specific structures inside each category and they are examinable.
+
+*Tags: implementation-structure, allocation, structures*
+
+</details>
+
+---
+
+## ADV-0100 — Work assignment structure (Very Hard, 6 marks)
+
+**Type:** Recall a specific structure  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 lists several useful structures beyond the headline patterns. For the **Work assignment structure**, state its category, its units and relations, what it is used for, and its architectural significance.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Category: **Allocation structure**.
+
+Units and relations: it assigns responsibility for implementing and integrating the modules to the teams who will carry it out.
+
+Used for: answering what the assignment of each software element to development teams is.
+
+Significance: the lecture states that having it be part of the architecture 'makes it clear that the decision about who does the work has architectural as well as management implications'; the architect will know the expertise required on each team, and it determines major communication pathways among teams such as regular teleconferences, wikis and email lists.
+
+> **Exam trap:** Answering only 'module, C&C, allocation'. The lecture names specific structures inside each category and they are examinable.
+
+*Tags: work-assignment-structure, allocation, structures*
+
+</details>
+
+---
+
+## ADV-0101 — Structures provide insight (Brutal, 8 marks)
+
+**Type:** Link structure to quality  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf; Lecture10_Documenting Software Architectures.pdf
+
+Lecture 1 states that 'each structure provides a perspective for reasoning about some of the relevant quality attributes' and gives three specific pairings. State all three pairings with the reasoning the lecture attaches to each.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Pairing 1 — the **module structure**, which embodies what modules use what other modules, 'is strongly tied to the ease with which a system can be extended or contracted'. The reasoning is that extension and contraction are questions about implementation dependencies, which is exactly what the module structure records.
+
+Pairing 2 — the **C&C structure**, which embodies parallelism within the system, 'is strongly tied to the ease with which a system can be made free of deadlock and performance bottlenecks'. Deadlock and bottlenecks are runtime interaction phenomena, invisible in a module view.
+
+Pairing 3 — the **allocation structure** 'is strongly tied to the achievement of performance, availability, and security goals', because those depend on where software actually executes and what it is co-located with.
+
+The general principle: you cannot answer a quality question from the wrong structure. The lecture makes this explicit elsewhere — 'it is difficult to use the module views to make inferences about runtime behavior', so a module view is 'not typically used for analysis of performance, reliability, and many other runtime qualities'.
+
+> **Exam trap:** Trying to argue performance from a module diagram. The lecture says explicitly that this does not work.
+
+*Tags: structures, quality-attributes, insight, wrong-view*
+
+</details>
+
+---
+
+## ADV-0102 — Architecture includes behavior (Brutal, 8 marks)
+
+**Type:** Argue an inclusion boundary  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 claims that 'box-and-line drawings that are passed off as architectures are not architectures at all', yet also says not every aspect of behaviour must be documented. State the criterion that separates the two cases and explain the reasoning behind the box-and-line criticism.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The criterion: 'to the extent that an element's behavior influences another element or influences the acceptability of the system as a whole, this behavior must be considered, and should be documented, as part of the software architecture.' Behaviour that is fine-grained and below the architect's level of concern need not be documented; behaviour with ramifications outside its own element must be.
+
+The box-and-line criticism: such drawings show names and connections but no behaviour, so 'when looking at the names, a reader may well imagine the functionality and behavior of the corresponding elements' — but that imagining 'relies on information that is not present, and could be wrong'. The drawing appears to communicate while actually leaving the reader to invent the semantics, which is worse than saying nothing.
+
+This links directly to the architecture definition: architecture comprises elements, relations **and properties of both**. A diagram with elements and relations but no properties has supplied two thirds of the definition.
+
+> **Exam trap:** Concluding that all behaviour must be documented. The lecture explicitly excludes fine-grained behaviour with no external ramification.
+
+*Tags: behavior, box-and-line, abstraction, documentation*
+
+</details>
+
+---
+
+## ADV-0103 — Architecture is an abstraction (Very Hard, 7 marks)
+
+**Type:** State the omission rule  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 says architecture 'specifically omits certain information about elements'. State the precise rule it gives for what may be omitted, explain why the omission is necessary, and give the consequence for judging whether a decision is architectural.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The rule: an architecture 'omits information that has no ramifications outside of a single element', and 'private details of elements — details having to do solely with internal implementation — are not architectural'. It selects certain details and suppresses others.
+
+Why necessary: the abstraction 'is essential to taming the complexity of an architecture' — the lecture's phrasing is that 'we simply cannot, and do not want to, deal with all of the complexity all of the time'. The abstraction lets us look at the system in terms of its elements, how they are arranged, how they interact, how they are composed and what properties support our reasoning.
+
+Consequence for judging architecturality: combine this with the structure test — 'a structure is architectural if it supports reasoning about the system and the system's properties', where the reasoning must be 'about an attribute of the system that is important to some stakeholder'. So the question to ask about any decision is not 'is it important?' but 'does it have ramifications outside one element, and does it bear on something a stakeholder cares about?'
+
+> **Exam trap:** Using 'is it a big decision?' as the test. The lecture's test is about ramifications outside one element and stakeholder-relevant reasoning.
+
+*Tags: abstraction, omission, architectural-or-not, stakeholder*
+
+</details>
+
+---
+
+## ADV-0104 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 1 of the Quality Attribute Workshop (QAW presentation and introductions)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: QAW facilitators describe the motivation for the QAW and explain each step of the method.
+
+Why it is necessary: everyone in the room needs the same model of what is about to happen, otherwise stakeholders contribute in incompatible formats.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-1, qaw-presentation-and-introductions, requirements*
+
+</details>
+
+---
+
+## ADV-0105 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 2 of the Quality Attribute Workshop (Business/mission presentation)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: a stakeholder representing the business concerns behind the system presents the system's business context, broad functional requirements, constraints and known quality attribute requirements.
+
+Why it is necessary: the quality attributes that will later be prioritised have to be traceable to business drivers, or the prioritisation has no defensible basis.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-2, business/mission-presentation, requirements*
+
+</details>
+
+---
+
+## ADV-0106 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 3 of the Quality Attribute Workshop (Architectural plan presentation)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: an architect presents the system plans as they stand at that point, describing high-level system descriptions, context drawings, constraints and existing technologies.
+
+Why it is necessary: scenarios must be brainstormed against something concrete; without a plan the scenarios float free of any realisable design.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-3, architectural-plan-presentation, requirements*
+
+</details>
+
+---
+
+## ADV-0107 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 4 of the Quality Attribute Workshop (Identification of architectural drivers)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: facilitators share their list of key architectural drivers, quality attributes and architectural challenges gathered from the previous presentations, and ask stakeholders for clarifications, additions, deletions and corrections.
+
+Why it is necessary: this is the first convergence point — the facilitators' reading of the drivers is checked against the stakeholders' own understanding before any scenario work begins.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-4, identification-of-architectural-drivers, requirements*
+
+</details>
+
+---
+
+## ADV-0108 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 5 of the Quality Attribute Workshop (Scenario brainstorming)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: each stakeholder expresses a scenario representing his or her concerns with respect to the system; facilitators ensure at least one representative scenario exists for each architectural driver listed in step 4.
+
+Why it is necessary: coverage matters as much as volume — a driver with no scenario is a requirement nobody has made testable.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-5, scenario-brainstorming, requirements*
+
+</details>
+
+---
+
+## ADV-0109 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 6 of the Quality Attribute Workshop (Scenario consolidation)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: similar scenarios are consolidated where reasonable, with stakeholders' consent, to prevent votes being needlessly split during prioritisation.
+
+Why it is necessary: without consolidation, two phrasings of one concern each attract half the votes and the concern loses to a less important but singly-phrased one.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-6, scenario-consolidation, requirements*
+
+</details>
+
+---
+
+## ADV-0110 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 7 of the Quality Attribute Workshop (Scenario prioritization)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: prioritisation is accomplished by allocating each stakeholder a number of votes equal to 30 percent of the total number of scenarios; stakeholders may allocate any number of their votes to any scenario or combination of scenarios.
+
+Why it is necessary: the 30 percent rule is the examinable detail: it forces stakeholders to discriminate — they cannot vote for everything — while still allowing concentration on a single critical scenario.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-7, scenario-prioritization, requirements*
+
+</details>
+
+---
+
+## ADV-0111 — QAW steps (Very Hard, 6 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 8 of the Quality Attribute Workshop (Scenario refinement)** and explain why this step is necessary — that is, what would go wrong if it were skipped.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+What happens: the top scenarios are refined and elaborated: each is described in the six-part form (stimulus, response, source, artifact, environment, response measure), with questions of concern also raised.
+
+Why it is necessary: refinement is what converts a brainstormed sentence into a testable requirement; unrefined scenarios cannot drive design or evaluation.
+
+The QAW is described in Lecture 8 as a facilitated method that engages system stakeholders early in the life cycle to discover the driving quality attributes of a software-intensive system. It is used before a software architecture has been created.
+
+> **Exam trap:** Listing the eight step names without content. The marks are in what each step produces and why it matters.
+
+*Tags: QAW, step-8, scenario-refinement, requirements*
+
+</details>
+
+---
+
+## ADV-0112 — QAW prioritization (Brutal, 6 marks)
+
+**Type:** Recall an exact numeric rule  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+In QAW scenario prioritization, exactly how many votes does each stakeholder receive, and what is the design rationale for that specific quantity? Explain what would go wrong with a much larger or much smaller allocation.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Each stakeholder is allocated a number of votes **equal to 30 percent of the total number of scenarios**, and may allocate any number of those votes to any scenario or combination of scenarios. With 20 scenarios on the wall, each stakeholder gets 6 votes.
+
+Rationale: the figure is deliberately well below 100 percent so that stakeholders are **forced to discriminate** — they cannot endorse everything, so the vote reveals genuine priority rather than general approval. It is also well above a single vote, so a stakeholder can express *intensity* by concentrating several votes on one scenario they consider critical.
+
+Too many votes (say 90 percent) and everything is voted for, so the ranking flattens and nothing is prioritised. Too few (say one each) and stakeholders can express which scenario they care about most but not how much more they care, and a stakeholder with two equally critical concerns is forced to abandon one.
+
+Note the ordering dependency: step 6 (consolidation) exists precisely so that this vote is not split across duplicate phrasings of the same concern.
+
+> **Exam trap:** Guessing a round number. The lecture gives 30 percent specifically, and it is the kind of detail examiners like.
+
+*Tags: QAW, 30-percent, prioritization, voting*
+
+</details>
+
+---
+
+## ADV-0113 — PALM steps (Very Hard, 5 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 1 of PALM (PALM overview presentation)**, and state where this step sits in PALM's overall purpose.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+At this step, the method, the steps and the expected outcomes are presented to the participants.
+
+PALM (Pedigreed Attribute eLicitation Method) is a seven-step method carried out in a one-and-a-half-day facilitated workshop involving architects and stakeholders who can speak to the relevant business goals. Its overall purpose is to establish whether the quality attribute requirements driving the architecture are actually grounded in business goals — steps 1 to 3 establish shared context, steps 4 and 5 work forwards from goals to needed qualities, and step 6 works backwards from existing quality requirements to check their justification.
+
+> **Exam trap:** Confusing PALM with QAW. QAW elicits and prioritises scenarios; PALM traces quality requirements back to business goals.
+
+*Tags: PALM, step-1, palm-overview-presentation, business-goals*
+
+</details>
+
+---
+
+## ADV-0114 — PALM steps (Very Hard, 5 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 2 of PALM (Business drivers presentation)**, and state where this step sits in PALM's overall purpose.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+At this step, a business manager describes what business goals are motivating the development effort.
+
+PALM (Pedigreed Attribute eLicitation Method) is a seven-step method carried out in a one-and-a-half-day facilitated workshop involving architects and stakeholders who can speak to the relevant business goals. Its overall purpose is to establish whether the quality attribute requirements driving the architecture are actually grounded in business goals — steps 1 to 3 establish shared context, steps 4 and 5 work forwards from goals to needed qualities, and step 6 works backwards from existing quality requirements to check their justification.
+
+> **Exam trap:** Confusing PALM with QAW. QAW elicits and prioritises scenarios; PALM traces quality requirements back to business goals.
+
+*Tags: PALM, step-2, business-drivers-presentation, business-goals*
+
+</details>
+
+---
+
+## ADV-0115 — PALM steps (Very Hard, 5 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 3 of PALM (Architecture drivers presentation)**, and state where this step sits in PALM's overall purpose.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+At this step, the architect presents the driving business and quality attribute requirements.
+
+PALM (Pedigreed Attribute eLicitation Method) is a seven-step method carried out in a one-and-a-half-day facilitated workshop involving architects and stakeholders who can speak to the relevant business goals. Its overall purpose is to establish whether the quality attribute requirements driving the architecture are actually grounded in business goals — steps 1 to 3 establish shared context, steps 4 and 5 work forwards from goals to needed qualities, and step 6 works backwards from existing quality requirements to check their justification.
+
+> **Exam trap:** Confusing PALM with QAW. QAW elicits and prioritises scenarios; PALM traces quality requirements back to business goals.
+
+*Tags: PALM, step-3, architecture-drivers-presentation, business-goals*
+
+</details>
+
+---
+
+## ADV-0116 — PALM steps (Very Hard, 5 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 4 of PALM (Business goals elicitation)**, and state where this step sits in PALM's overall purpose.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+At this step, using the business goal category taxonomy to prompt discussion, stakeholders describe the business goals; goals are consolidated to merge duplicates and then prioritised.
+
+PALM (Pedigreed Attribute eLicitation Method) is a seven-step method carried out in a one-and-a-half-day facilitated workshop involving architects and stakeholders who can speak to the relevant business goals. Its overall purpose is to establish whether the quality attribute requirements driving the architecture are actually grounded in business goals — steps 1 to 3 establish shared context, steps 4 and 5 work forwards from goals to needed qualities, and step 6 works backwards from existing quality requirements to check their justification.
+
+> **Exam trap:** Confusing PALM with QAW. QAW elicits and prioritises scenarios; PALM traces quality requirements back to business goals.
+
+*Tags: PALM, step-4, business-goals-elicitation, business-goals*
+
+</details>
+
+---
+
+## ADV-0117 — PALM steps (Very Hard, 5 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 5 of PALM (Identify potential quality attributes from business goals)**, and state where this step sits in PALM's overall purpose.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+At this step, for each important business goal, participants describe a quality attribute that — if the architecture provided it — would help achieve the goal.
+
+PALM (Pedigreed Attribute eLicitation Method) is a seven-step method carried out in a one-and-a-half-day facilitated workshop involving architects and stakeholders who can speak to the relevant business goals. Its overall purpose is to establish whether the quality attribute requirements driving the architecture are actually grounded in business goals — steps 1 to 3 establish shared context, steps 4 and 5 work forwards from goals to needed qualities, and step 6 works backwards from existing quality requirements to check their justification.
+
+> **Exam trap:** Confusing PALM with QAW. QAW elicits and prioritises scenarios; PALM traces quality requirements back to business goals.
+
+*Tags: PALM, step-5, identify-potential-quality-attributes-from-business-goals, business-goals*
+
+</details>
+
+---
+
+## ADV-0118 — PALM steps (Very Hard, 5 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 6 of PALM (Assign pedigree to existing quality attribute drivers)**, and state where this step sits in PALM's overall purpose.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+At this step, for each existing quality attribute requirement, participants identify whether it is well-founded in a business goal or not; if so the business goal is recorded, and if not the requirement's pedigree is suspect.
+
+PALM (Pedigreed Attribute eLicitation Method) is a seven-step method carried out in a one-and-a-half-day facilitated workshop involving architects and stakeholders who can speak to the relevant business goals. Its overall purpose is to establish whether the quality attribute requirements driving the architecture are actually grounded in business goals — steps 1 to 3 establish shared context, steps 4 and 5 work forwards from goals to needed qualities, and step 6 works backwards from existing quality requirements to check their justification.
+
+> **Exam trap:** Confusing PALM with QAW. QAW elicits and prioritises scenarios; PALM traces quality requirements back to business goals.
+
+*Tags: PALM, step-6, assign-pedigree-to-existing-quality-attribute-drivers, business-goals*
+
+</details>
+
+---
+
+## ADV-0119 — PALM steps (Very Hard, 5 marks)
+
+**Type:** Recall a numbered method step  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+State what happens at **step 7 of PALM (Exercise conclusion)**, and state where this step sits in PALM's overall purpose.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+At this step, the results are reviewed and next steps agreed.
+
+PALM (Pedigreed Attribute eLicitation Method) is a seven-step method carried out in a one-and-a-half-day facilitated workshop involving architects and stakeholders who can speak to the relevant business goals. Its overall purpose is to establish whether the quality attribute requirements driving the architecture are actually grounded in business goals — steps 1 to 3 establish shared context, steps 4 and 5 work forwards from goals to needed qualities, and step 6 works backwards from existing quality requirements to check their justification.
+
+> **Exam trap:** Confusing PALM with QAW. QAW elicits and prioritises scenarios; PALM traces quality requirements back to business goals.
+
+*Tags: PALM, step-7, exercise-conclusion, business-goals*
+
+</details>
+
+---
+
+## ADV-0120 — PALM pedigree (Brutal, 8 marks)
+
+**Type:** Explain the pedigree concept  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Explain what 'pedigree' means in PALM, describe the two directions of reasoning PALM applies (steps 5 and 6), and state what an architect should do about a quality attribute requirement found to have a suspect pedigree.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Pedigree** means the traceable justification of a quality attribute requirement in an actual business goal. A requirement with good pedigree can be traced to a stated goal; one with suspect pedigree cannot, meaning nobody can say what business purpose it serves.
+
+The two directions:
+- **Forwards (step 5)** — for each important business goal, participants describe a quality attribute that, if provided by the architecture, would help achieve that goal. This finds *missing* requirements: goals with no quality attribute supporting them.
+- **Backwards (step 6)** — for each existing quality attribute requirement, participants identify whether it is well-founded in a business goal; if so the goal is recorded, and if not 'the requirement's pedigree is suspect'. This finds *unjustified* requirements.
+
+What to do about a suspect requirement: challenge it rather than silently design for it. Lecture 8 notes elsewhere that stakeholders often ask for far more than is needed and that ASRs 'often make the difference between success and failure' — an unjustified stringent quality requirement consumes architectural effort and forecloses design options for no business return. The step-6 finding is an invitation to renegotiate or delete, and to record the decision either way.
+
+> **Exam trap:** Describing pedigree as documentation quality. It is specifically about traceability to a business goal.
+
+*Tags: PALM, pedigree, traceability, requirements-challenge*
+
+</details>
+
+---
+
+## ADV-0121 — Business goal scenario (Very Hard, 5 marks)
+
+**Type:** Recall a scenario part  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Business goals in Lecture 8 are expressed using their own structured scenario, which is **not** the same as the six-part quality attribute scenario. State what the part **Goal-source** captures, and name how many parts the business goal scenario has in total.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Goal-source**: the people or written artifacts that provided the goal.
+
+The business goal scenario has **seven** parts: Goal-source, Goal-subject, Goal-object, Environment, Goal, Goal-measure, and Pedigree and value. Contrast the six-part quality attribute scenario (source, stimulus, artifact, environment, response, response measure) — the two share only 'environment' and a measurement slot, and confusing them is a common and costly error.
+
+> **Exam trap:** Answering with the six-part QA scenario. Business goals have seven parts and different slot names.
+
+*Tags: business-goals, seven-part, goal-source*
+
+</details>
+
+---
+
+## ADV-0122 — Business goal scenario (Very Hard, 5 marks)
+
+**Type:** Recall a scenario part  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Business goals in Lecture 8 are expressed using their own structured scenario, which is **not** the same as the six-part quality attribute scenario. State what the part **Goal-subject** captures, and name how many parts the business goal scenario has in total.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Goal-subject**: the stakeholders who own the goal and wish it to be true.
+
+The business goal scenario has **seven** parts: Goal-source, Goal-subject, Goal-object, Environment, Goal, Goal-measure, and Pedigree and value. Contrast the six-part quality attribute scenario (source, stimulus, artifact, environment, response, response measure) — the two share only 'environment' and a measurement slot, and confusing them is a common and costly error.
+
+> **Exam trap:** Answering with the six-part QA scenario. Business goals have seven parts and different slot names.
+
+*Tags: business-goals, seven-part, goal-subject*
+
+</details>
+
+---
+
+## ADV-0123 — Business goal scenario (Very Hard, 5 marks)
+
+**Type:** Recall a scenario part  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Business goals in Lecture 8 are expressed using their own structured scenario, which is **not** the same as the six-part quality attribute scenario. State what the part **Goal-object** captures, and name how many parts the business goal scenario has in total.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Goal-object**: the entities to which the goal applies — for example individuals, systems, portions of a system, or the organisation as a whole.
+
+The business goal scenario has **seven** parts: Goal-source, Goal-subject, Goal-object, Environment, Goal, Goal-measure, and Pedigree and value. Contrast the six-part quality attribute scenario (source, stimulus, artifact, environment, response, response measure) — the two share only 'environment' and a measurement slot, and confusing them is a common and costly error.
+
+> **Exam trap:** Answering with the six-part QA scenario. Business goals have seven parts and different slot names.
+
+*Tags: business-goals, seven-part, goal-object*
+
+</details>
+
+---
+
+## ADV-0124 — Business goal scenario (Very Hard, 5 marks)
+
+**Type:** Recall a scenario part  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Business goals in Lecture 8 are expressed using their own structured scenario, which is **not** the same as the six-part quality attribute scenario. State what the part **Environment** captures, and name how many parts the business goal scenario has in total.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Environment**: the context in which the goal is to be achieved, including social, legal, competitive, customer and technological considerations.
+
+The business goal scenario has **seven** parts: Goal-source, Goal-subject, Goal-object, Environment, Goal, Goal-measure, and Pedigree and value. Contrast the six-part quality attribute scenario (source, stimulus, artifact, environment, response, response measure) — the two share only 'environment' and a measurement slot, and confusing them is a common and costly error.
+
+> **Exam trap:** Answering with the six-part QA scenario. Business goals have seven parts and different slot names.
+
+*Tags: business-goals, seven-part, environment*
+
+</details>
+
+---
+
+## ADV-0125 — Business goal scenario (Very Hard, 5 marks)
+
+**Type:** Recall a scenario part  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Business goals in Lecture 8 are expressed using their own structured scenario, which is **not** the same as the six-part quality attribute scenario. State what the part **Goal** captures, and name how many parts the business goal scenario has in total.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Goal**: any business goal, articulated as an outcome.
+
+The business goal scenario has **seven** parts: Goal-source, Goal-subject, Goal-object, Environment, Goal, Goal-measure, and Pedigree and value. Contrast the six-part quality attribute scenario (source, stimulus, artifact, environment, response, response measure) — the two share only 'environment' and a measurement slot, and confusing them is a common and costly error.
+
+> **Exam trap:** Answering with the six-part QA scenario. Business goals have seven parts and different slot names.
+
+*Tags: business-goals, seven-part, goal*
+
+</details>
+
+---
+
+## ADV-0126 — Business goal scenario (Very Hard, 5 marks)
+
+**Type:** Recall a scenario part  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Business goals in Lecture 8 are expressed using their own structured scenario, which is **not** the same as the six-part quality attribute scenario. State what the part **Goal-measure** captures, and name how many parts the business goal scenario has in total.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Goal-measure**: a testable measurement to determine how one would know if the goal has been achieved.
+
+The business goal scenario has **seven** parts: Goal-source, Goal-subject, Goal-object, Environment, Goal, Goal-measure, and Pedigree and value. Contrast the six-part quality attribute scenario (source, stimulus, artifact, environment, response, response measure) — the two share only 'environment' and a measurement slot, and confusing them is a common and costly error.
+
+> **Exam trap:** Answering with the six-part QA scenario. Business goals have seven parts and different slot names.
+
+*Tags: business-goals, seven-part, goal-measure*
+
+</details>
+
+---
+
+## ADV-0127 — Business goal scenario (Very Hard, 5 marks)
+
+**Type:** Recall a scenario part  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Business goals in Lecture 8 are expressed using their own structured scenario, which is **not** the same as the six-part quality attribute scenario. State what the part **Pedigree and value** captures, and name how many parts the business goal scenario has in total.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Pedigree and value**: the degree of confidence the goal-subject has in the goal, plus the goal's volatility and value.
+
+The business goal scenario has **seven** parts: Goal-source, Goal-subject, Goal-object, Environment, Goal, Goal-measure, and Pedigree and value. Contrast the six-part quality attribute scenario (source, stimulus, artifact, environment, response, response measure) — the two share only 'environment' and a measurement slot, and confusing them is a common and costly error.
+
+> **Exam trap:** Answering with the six-part QA scenario. Business goals have seven parts and different slot names.
+
+*Tags: business-goals, seven-part, pedigree-and-value*
+
+</details>
+
+---
+
+## ADV-0128 — Business goal scenario (Brutal, 7 marks)
+
+**Type:** Apply the sentence template  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Lecture 8 gives a fill-in-the-blank template for expressing business goals. State the template exactly, and use it to express this goal: the university's registrar wants the student portal to cut enrolment-period support calls, in a context where a competitor university has just launched a self-service portal.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The template: *'For the system being developed, \<goal-subject\> desires that \<goal-object\> achieve \<goal\> in the context of \<environment\> and will be satisfied if \<goal-measure\>.'*
+
+Applied: *For the system being developed, **the university registrar** desires that **the student portal** achieve **a reduction in support calls during the enrolment period** in the context of **a competitive higher-education market in which a rival institution has just launched a self-service portal** and will be satisfied if **enrolment-period support calls fall by 40 percent against the previous intake's baseline**.*
+
+Note what the template forces: an owner (so the goal is not orphaned), an object (so it is clear what must change), an explicit environment (here competitive), and a testable measure. The remaining two parts — goal-source and pedigree/value — are recorded alongside rather than in the sentence.
+
+> **Exam trap:** Producing a goal with no measure. 'Will be satisfied if' is part of the template and requires something testable.
+
+*Tags: business-goals, template, apply, goal-measure*
+
+</details>
+
+---
+
+## ADV-0129 — Business goals and architecture (Brutal, 8 marks)
+
+**Type:** State the three relationships  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Lecture 8 identifies three distinct ways business goals relate to architecture. State all three with an example of each, and explain why the third is the one most often overlooked.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**One** — business goals often lead to quality attribute requirements. Every quality attribute requirement should originate from some higher purpose; the lecture's example is that if high availability is required, it is because some business goal — such as avoiding lost revenue during outages — demands it.
+
+**Two** — business goals may directly affect the architecture without an intervening quality attribute requirement. The lecture's example: a goal to keep the workforce employed may lead the architect to divide the system into modules for those staff to work on, even if no quality attribute requirement was ever written down for it.
+
+**Three** — business goals may lead to **non-architectural solutions**. Achieving high availability could be addressed by architectural means, but it might also be handled by making a side agreement with a customer — an assurance that the customer will be compensated in case of an outage.
+
+The third is overlooked because it produces no design artifact, so it is invisible to anyone reading the architecture. Its importance is that it can *remove* an architectural requirement: if the availability concern is settled contractually, designing an expensive redundancy scheme for it is wasted effort. An architect who never asks whether a goal has a non-architectural solution over-engineers.
+
+> **Exam trap:** Assuming every business goal must become a quality attribute requirement. The lecture explicitly says some do not.
+
+*Tags: business-goals, three-relationships, non-architectural, requirements*
+
+</details>
+
+---
+
+## ADV-0130 — ASR characteristics (Brutal, 7 marks)
+
+**Type:** Define and apply a selection test  
+**Source:** Lecture8_Architecture and Requirements.pdf; Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 8 defines an Architecturally Significant Requirement. State the definition and its stated characteristics, then apply it: of these four, which are ASRs and why? (a) passwords must be at least 8 characters; (b) the system must support 10,000 concurrent users; (c) the system must remain operational during a data-centre failure; (d) the login page must use the university's brand colours.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Definition: an ASR is a requirement that will have a **profound effect on the architecture** — that is, the architecture might well be significantly different in the absence of such a requirement. Characteristics: ASRs have a profound effect on the architecture, and satisfying them is often what makes the difference between success and failure.
+
+(a) **Not** an ASR. A password length rule is a local validation decision implementable inside one element; the architecture is unchanged whether the number is 8 or 12.
+
+(b) **ASR**. A concurrency target of that magnitude drives decisions about tiering, replication, statelessness and resource management; the architecture without it would be significantly different.
+
+(c) **ASR**. Surviving data-centre loss forces geographic distribution, replication and failover — the deployment and coordination structures both change.
+
+(d) **Not** an ASR. Brand colours have no ramification outside a single presentation element, which fails Lecture 1's test that architecture omits information with no ramifications outside one element.
+
+The test to state in the exam: would the architecture be significantly different if this requirement did not exist?
+
+> **Exam trap:** Marking a requirement as an ASR because it is important. Importance is not the test; architectural consequence is.
+
+*Tags: ASR, definition, selection-test, profound-effect*
+
+</details>
+
+---
+
+## ADV-0131 — Utility tree (Brutal, 8 marks)
+
+**Type:** Explain the tree's structure and purpose  
+**Source:** Lecture8_Architecture and Requirements.pdf
+
+Describe the structure of a utility tree as used in Lecture 8, state what the leaves must contain, explain the two-dimensional prioritisation applied to them, and say what the tree is used for afterwards.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Structure: the root is **utility** — an expression of the overall goodness of the system. Beneath it are the **quality attributes** that comprise utility. Under each attribute are **refinements** of that attribute, and the **leaves** are concrete quality attribute scenarios.
+
+Leaves must be concrete scenarios in the six-part form, with a stimulus and a **response measure** — not vague attribute names. A leaf reading 'good performance' is not a leaf; 'users initiate transactions under normal operations and the system processes them with an average latency of two seconds' is.
+
+Prioritisation is on **two dimensions**: the *business value* of the scenario, and the *architectural impact* — the difficulty of achieving it. Each leaf is rated on both, commonly High/Medium/Low, giving pairs such as (H,H) or (L,M).
+
+What it is used for: the (H,H) scenarios are the ones that both matter most to the business and are hardest to achieve, so they are the ASRs that should drive design effort and, later, the scenarios exercised in evaluation. A scenario that is high value but low architectural impact needs attention but not architectural attention; one that is high impact but low value is a place where effort is being wasted.
+
+> **Exam trap:** Rating leaves on one dimension only. Both value and difficulty are required, and the pair is what identifies the drivers.
+
+*Tags: utility-tree, two-dimensional, business-value, architectural-impact*
+
+</details>
+
+---
+
+## ADV-0132 — Gathering ASRs (Brutal, 8 marks)
+
+**Type:** Compare three elicitation approaches  
+**Source:** Lecture8_Architecture and Requirements.pdf; Lecture5_UnderstandingQualityAttributes.pdf
+
+Lecture 8 describes gathering ASRs from requirements documents, by interviewing stakeholders, and by understanding the business goals. Compare the three on what each is good at and where each fails.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**From requirements documents**: good at capturing what has already been formally agreed, and the natural first place to look. Fails because requirements documents are typically weak on quality attributes — the lecture notes that requirements documents, if they exist at all, are often incomplete with respect to the qualities, and that stakeholders often ask for far more than is needed, so stringent figures may be present without justification.
+
+**By interviewing stakeholders**: good at surfacing concerns nobody wrote down, and at revealing conflicting expectations between stakeholder groups. Fails because stakeholders express concerns in their own community's vocabulary (Lecture 5's third problem), because they may not know what is technically feasible or costly, and because coverage depends on which stakeholders happen to be in the room — this is precisely why QAW formalises the process with facilitators, driver identification and a coverage check.
+
+**By understanding business goals**: good at establishing pedigree and at catching requirements that have no justification, and it can reveal ASRs that no stakeholder articulated. Fails because the translation from goal to quality attribute is not mechanical — the same goal may be satisfiable architecturally *or* non-architecturally (the third relationship), so a goal does not automatically yield a requirement.
+
+The three are complementary rather than alternatives: documents give the baseline, interviews give coverage, goals give justification.
+
+> **Exam trap:** Presenting them as alternatives to choose between. The lecture treats them as three inputs to the same activity.
+
+*Tags: ASR, elicitation, compare, stakeholders*
+
+</details>
+
+---
+
+## ADV-0133 — View documentation template (Very Hard, 6 marks)
+
+**Type:** Recall a template section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 gives a standard organisation for documenting a view. State what the **Primary presentation** section contains, and state the specific documentation failure that occurs when it is omitted or done badly.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Primary presentation**: shows the elements and relations of the view, containing the information to be conveyed about the system first; it should contain the information you wish to present first, and it must be accompanied by a key that explains the notation.
+
+Failure when omitted or done badly: presenting a diagram with no key — the lecture calls the lack of a key 'the most common mistake we see in documentation in practice'.
+
+The full template is Primary presentation, Element catalog, Context diagram, Variability guide, and Rationale.
+
+> **Exam trap:** Listing the five section names without saying what each contains. The content is what is examinable.
+
+*Tags: view-template, primary-presentation, documentation*
+
+</details>
+
+---
+
+## ADV-0134 — View documentation template (Very Hard, 6 marks)
+
+**Type:** Recall a template section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 gives a standard organisation for documenting a view. State what the **Element catalog** section contains, and state the specific documentation failure that occurs when it is omitted or done badly.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Element catalog**: details at least those elements and relations depicted in the primary presentation, and elaborates on other information about them that was not presented there.
+
+Failure when omitted or done badly: assuming the diagram is self-explanatory, so element responsibilities are never written down and readers infer them from names.
+
+The full template is Primary presentation, Element catalog, Context diagram, Variability guide, and Rationale.
+
+> **Exam trap:** Listing the five section names without saying what each contains. The content is what is examinable.
+
+*Tags: view-template, element-catalog, documentation*
+
+</details>
+
+---
+
+## ADV-0135 — View documentation template (Very Hard, 6 marks)
+
+**Type:** Recall a template section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 gives a standard organisation for documenting a view. State what the **Context diagram** section contains, and state the specific documentation failure that occurs when it is omitted or done badly.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Context diagram**: shows how the system depicted in the view relates to its environment.
+
+Failure when omitted or done badly: omitting the boundary, so it is unclear what is inside the system's scope and what is an external actor.
+
+The full template is Primary presentation, Element catalog, Context diagram, Variability guide, and Rationale.
+
+> **Exam trap:** Listing the five section names without saying what each contains. The content is what is examinable.
+
+*Tags: view-template, context-diagram, documentation*
+
+</details>
+
+---
+
+## ADV-0136 — View documentation template (Very Hard, 6 marks)
+
+**Type:** Recall a template section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 gives a standard organisation for documenting a view. State what the **Variability guide** section contains, and state the specific documentation failure that occurs when it is omitted or done badly.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Variability guide**: shows how to exercise any variation points that are a part of the architecture shown in this view.
+
+Failure when omitted or done badly: documenting one fixed configuration when the architecture actually supports several, leaving the options undiscoverable.
+
+The full template is Primary presentation, Element catalog, Context diagram, Variability guide, and Rationale.
+
+> **Exam trap:** Listing the five section names without saying what each contains. The content is what is examinable.
+
+*Tags: view-template, variability-guide, documentation*
+
+</details>
+
+---
+
+## ADV-0137 — View documentation template (Very Hard, 6 marks)
+
+**Type:** Recall a template section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 gives a standard organisation for documenting a view. State what the **Rationale** section contains, and state the specific documentation failure that occurs when it is omitted or done badly.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Rationale**: explains why the design reflected in the view came to be, and provides a convincing argument that it is sound.
+
+Failure when omitted or done badly: recording what was decided but not why, so a later team cannot tell which constraints are still binding and re-litigates settled decisions.
+
+The full template is Primary presentation, Element catalog, Context diagram, Variability guide, and Rationale.
+
+> **Exam trap:** Listing the five section names without saying what each contains. The content is what is examinable.
+
+*Tags: view-template, rationale, documentation*
+
+</details>
+
+---
+
+## ADV-0138 — Beyond views (Very Hard, 5 marks)
+
+**Type:** Recall a beyond-views section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 says architecture documentation contains information that applies to more than one view, organised into named sections. State what the **Documentation roadmap** section provides and why a reader needs it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Documentation roadmap**: describes how the documentation is organised so a reader can find what they need.
+
+The complete beyond-views set is: documentation roadmap, how a view is documented, system overview, mapping between views, rationale, and directory. These exist because the views alone are a collection of partial pictures — the beyond-views material is what makes the collection navigable and coherent.
+
+> **Exam trap:** Documenting views only. The beyond-views material is an explicit and examinable part of the documentation package.
+
+*Tags: beyond-views, documentation-roadmap, documentation*
+
+</details>
+
+---
+
+## ADV-0139 — Beyond views (Very Hard, 5 marks)
+
+**Type:** Recall a beyond-views section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 says architecture documentation contains information that applies to more than one view, organised into named sections. State what the **How a view is documented** section provides and why a reader needs it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**How a view is documented**: explains the standard organisation used for each view, so readers learn the template once rather than per view.
+
+The complete beyond-views set is: documentation roadmap, how a view is documented, system overview, mapping between views, rationale, and directory. These exist because the views alone are a collection of partial pictures — the beyond-views material is what makes the collection navigable and coherent.
+
+> **Exam trap:** Documenting views only. The beyond-views material is an explicit and examinable part of the documentation package.
+
+*Tags: beyond-views, how-a-view-is-documented, documentation*
+
+</details>
+
+---
+
+## ADV-0140 — Beyond views (Very Hard, 5 marks)
+
+**Type:** Recall a beyond-views section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 says architecture documentation contains information that applies to more than one view, organised into named sections. State what the **System overview** section provides and why a reader needs it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**System overview**: gives a short prose description of what the system's function is, who its users are, and any important background or constraints — orienting a reader before any view is read.
+
+The complete beyond-views set is: documentation roadmap, how a view is documented, system overview, mapping between views, rationale, and directory. These exist because the views alone are a collection of partial pictures — the beyond-views material is what makes the collection navigable and coherent.
+
+> **Exam trap:** Documenting views only. The beyond-views material is an explicit and examinable part of the documentation package.
+
+*Tags: beyond-views, system-overview, documentation*
+
+</details>
+
+---
+
+## ADV-0141 — Beyond views (Very Hard, 5 marks)
+
+**Type:** Recall a beyond-views section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 says architecture documentation contains information that applies to more than one view, organised into named sections. State what the **Mapping between views** section provides and why a reader needs it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Mapping between views**: relates the elements of one view to those of another, since the same system element appears differently across views.
+
+The complete beyond-views set is: documentation roadmap, how a view is documented, system overview, mapping between views, rationale, and directory. These exist because the views alone are a collection of partial pictures — the beyond-views material is what makes the collection navigable and coherent.
+
+> **Exam trap:** Documenting views only. The beyond-views material is an explicit and examinable part of the documentation package.
+
+*Tags: beyond-views, mapping-between-views, documentation*
+
+</details>
+
+---
+
+## ADV-0142 — Beyond views (Very Hard, 5 marks)
+
+**Type:** Recall a beyond-views section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 says architecture documentation contains information that applies to more than one view, organised into named sections. State what the **Rationale** section provides and why a reader needs it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Rationale**: explains why the architecture as a whole — not just one view — is as it is.
+
+The complete beyond-views set is: documentation roadmap, how a view is documented, system overview, mapping between views, rationale, and directory. These exist because the views alone are a collection of partial pictures — the beyond-views material is what makes the collection navigable and coherent.
+
+> **Exam trap:** Documenting views only. The beyond-views material is an explicit and examinable part of the documentation package.
+
+*Tags: beyond-views, rationale, documentation*
+
+</details>
+
+---
+
+## ADV-0143 — Beyond views (Very Hard, 5 marks)
+
+**Type:** Recall a beyond-views section  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 says architecture documentation contains information that applies to more than one view, organised into named sections. State what the **Directory** section provides and why a reader needs it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Directory**: provides an index of terms, elements and relations, telling readers where each is defined and used.
+
+The complete beyond-views set is: documentation roadmap, how a view is documented, system overview, mapping between views, rationale, and directory. These exist because the views alone are a collection of partial pictures — the beyond-views material is what makes the collection navigable and coherent.
+
+> **Exam trap:** Documenting views only. The beyond-views material is an explicit and examinable part of the documentation package.
+
+*Tags: beyond-views, directory, documentation*
+
+</details>
+
+---
+
+## ADV-0144 — Notation choice (Brutal, 7 marks)
+
+**Type:** Compare notation classes precisely  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 compares three classes of architectural notation on expressiveness, degree of formality, languages, tools and applicability. Give all five for **Informal notation**, and state the trade-off it represents.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Informal notation**
+
+| Dimension | Value |
+|---|---|
+| Expressiveness | Low |
+| Degree of formality | Low |
+| Languages | Informal diagrams, English |
+| Tools | PowerPoint, informal drawing tools |
+| Applicable to | system aspects that do not require specification, formal analysis or verification |
+
+Trade-off: quick, universally readable, needs no tool training — but ambiguous, unanalysable, and correctness cannot be checked.
+
+> **Exam trap:** Assuming more formal is always better. The lecture ties formality to applicability — formal notation is for safety-critical work.
+
+*Tags: notation, informal, formality, documentation*
+
+</details>
+
+---
+
+## ADV-0145 — Notation choice (Brutal, 7 marks)
+
+**Type:** Compare notation classes precisely  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 compares three classes of architectural notation on expressiveness, degree of formality, languages, tools and applicability. Give all five for **Semiformal notation**, and state the trade-off it represents.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Semiformal notation**
+
+| Dimension | Value |
+|---|---|
+| Expressiveness | Medium |
+| Degree of formality | Medium |
+| Languages | UML, SysML |
+| Tools | modelling tools with UML/SysML support |
+| Applicable to | systems requiring partial specification and limited analysis |
+
+Trade-off: adds defined syntax and partial semantics, so some automated checking and code generation is possible — but semantics remain incomplete, so full verification is not.
+
+> **Exam trap:** Assuming more formal is always better. The lecture ties formality to applicability — formal notation is for safety-critical work.
+
+*Tags: notation, semiformal, formality, documentation*
+
+</details>
+
+---
+
+## ADV-0146 — Notation choice (Brutal, 7 marks)
+
+**Type:** Compare notation classes precisely  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 compares three classes of architectural notation on expressiveness, degree of formality, languages, tools and applicability. Give all five for **Formal notation**, and state the trade-off it represents.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Formal notation**
+
+| Dimension | Value |
+|---|---|
+| Expressiveness | High |
+| Degree of formality | High |
+| Languages | B-Method, Event-B, Z |
+| Tools | Atelier-B and similar provers |
+| Applicable to | safety-critical systems, where the lecture's real-world example is the Paris Metro Line 14 automated train control system |
+
+Trade-off: formal analysis of both syntax and semantics is possible, so properties can be proved — but expertise cost and effort are high, and it is rarely justified outside safety-critical work.
+
+> **Exam trap:** Assuming more formal is always better. The lecture ties formality to applicability — formal notation is for safety-critical work.
+
+*Tags: notation, formal, formality, documentation*
+
+</details>
+
+---
+
+## ADV-0147 — Notation choice (Brutal, 8 marks)
+
+**Type:** Justify a notation for a context  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+For each of the following, choose a notation class from Lecture 10 and justify it: (a) a whiteboard sketch in a design discussion; (b) the design of a food-delivery mobile application; (c) an automated metro train control system.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+(a) **Informal**. Its applicability is 'system aspects that do not require specification, formal analysis or verification' — a discussion sketch is exactly that. Expressiveness and formality are both low, which is appropriate because the artifact's purpose is to support conversation, not to be analysed. The one non-negotiable is a key if the sketch is kept.
+
+(b) **Semiformal**, i.e. UML or SysML. The lecture uses a food-delivery application as its illustration of semiformal modelling. Such a system requires partial specification and limited analysis: structure and interactions must be unambiguous enough for a team to implement consistently, but proving properties would be disproportionate to the risk.
+
+(c) **Formal** — B-Method, Event-B or Z with a prover such as Atelier-B. The lecture names the Paris Metro Line 14 automated train control system as the real-world case. The applicability entry is 'safety-critical systems', and here formal analysis of both syntax and semantics is warranted because a defect can kill people, so the high effort and expertise cost are justified.
+
+The general principle: notation is chosen against consequence of failure and analysis need, not against a preference for rigour.
+
+> **Exam trap:** Choosing formal notation for the mobile app because it is 'more professional'. The cost is not justified by the risk.
+
+*Tags: notation, justify, safety-critical, Paris-Metro*
+
+</details>
+
+---
+
+## ADV-0148 — Choosing views (Brutal, 8 marks)
+
+**Type:** Apply the three-step method  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 gives a three-step method for choosing which views to document. State all three steps, and explain what the second step protects against.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Step 1** — build a stakeholder/view table: enumerate the stakeholders for the project's documentation down the rows, and enumerate the candidate views down the columns, then fill in each cell with how much information the stakeholder requires of that view: none, overview only, moderate detail, or high detail.
+
+**Step 2** — combine views: look for views that require only overview detail, and consider combining them with other views. A combined view shows elements and relations from more than one view in a single presentation.
+
+**Step 3** — prioritise and stage: decide what to do first, driven by which stakeholders need which information soonest, and recognise that documentation need not be complete before it is useful.
+
+What step 2 protects against: producing a large number of thin views that each cost effort to write and maintain but that no stakeholder reads in depth. The lecture's guidance elsewhere is that views which map well onto each other — for instance a deployment view and a component-and-connector view — combine naturally, because the mapping between them is close to one-to-one. Combining unrelated views instead produces an unreadable diagram, so the criterion is whether the overlays genuinely correspond.
+
+> **Exam trap:** Documenting every candidate view at high detail. The method exists to reduce the set, not to justify all of it.
+
+*Tags: choosing-views, stakeholder-view-table, combined-views, documentation*
+
+</details>
+
+---
+
+## ADV-0149 — Documentation principles (Very Hard, 7 marks)
+
+**Type:** Explain a documentation rule  
+**Source:** Lecture10_Documenting Software Architectures.pdf
+
+Lecture 10 states that documentation should be written 'from the reader's point of view' and warns against 'unnecessary repetition'. Explain both rules and the tension between them, and state how the beyond-views material resolves it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Reader's point of view**: documentation is written to be read, not to record the author's thought process. The practical consequences are avoiding unnecessary repetition, avoiding ambiguity (which is why every diagram needs a key), and using a standard organisation so readers know where to look.
+
+**Unnecessary repetition**: the same information restated in several places will drift out of step as the system changes, so the copies eventually contradict each other and the reader cannot tell which is current.
+
+The tension: a reader-centred document wants each stakeholder to find what they need without hunting through material aimed at someone else, which pushes towards repeating shared information in each view. Avoiding repetition pushes the opposite way.
+
+Resolution: state shared information **once**, in the beyond-views sections, and have views reference it. The system overview, the rationale, the mapping between views and the directory exist precisely so that cross-cutting information has a single home. The documentation roadmap and the 'how a view is documented' section then serve the reader-centred goal by making that single home findable — the reader is directed to the information rather than handed a copy of it.
+
+> **Exam trap:** Treating the two rules as independent. The exam value is in seeing they conflict and knowing where the shared material goes.
+
+*Tags: documentation-principles, repetition, reader, beyond-views*
+
+</details>
+
+---
+
+## ADV-0150 — Architecture definition (Brutal, 8 marks)
+
+**Type:** Parse the definition precisely  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 defines software architecture as 'the set of structures needed to reason about the system, which comprise software elements, relations among them, and properties of both'. Analyse each of the four load-bearing terms and explain what the definition deliberately excludes.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Set of structures** (plural): architecture is not one diagram. A system has many structures — module, component-and-connector, allocation, and specific structures within each — and the architecture is the collection of those needed for reasoning.
+
+**Needed to reason about**: this is the selection criterion. A structure is architectural if it supports reasoning about the system and its properties, where the reasoning must be about an attribute important to some stakeholder. Structures that support no such reasoning are not architectural.
+
+**Elements and relations**: the things and how they are connected — the part usually drawn.
+
+**Properties of both**: the part usually omitted. Properties are what let anyone reason at all — a box labelled 'database' with no stated properties supports no inference about performance, availability or anything else. This is why the lecture says box-and-line drawings passed off as architectures 'are not architectures at all'.
+
+What is deliberately excluded: information with no ramifications outside a single element, and private implementation details. Architecture is an abstraction, and the lecture states we 'cannot, and do not want to, deal with all of the complexity all of the time'.
+
+> **Exam trap:** Quoting the definition without unpacking 'properties of both', which is the clause that does the work.
+
+*Tags: definition, structures, properties, abstraction*
+
+</details>
+
+---
+
+## ADV-0151 — Every system has an architecture (Brutal, 7 marks)
+
+**Type:** Resolve a paradox  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 asserts that every software system has a software architecture, yet also that not every architecture is known. Explain both claims, and state the practical consequence for a team inheriting an undocumented system.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Every system has an architecture because a system built from elements that relate to each other *has* structures, whether or not anyone chose them deliberately or wrote them down. Architecture is a property of the system, not of the documentation.
+
+Not every architecture is known because the designers may be long gone, the documentation may have vanished or never existed, the source code may have been lost, or only the executable remains. The lecture's point is that this does not make the architecture cease to exist — it makes it *unknown*.
+
+Practical consequence for a team inheriting such a system: the architecture must be **recovered**, not invented. Because it exists, the team's decisions are already constrained by it whether they know it or not, and acting in ignorance produces the drift Lecture 11 calls architecture erosion. The corollary is that the recovered architecture may not be a good one — the lecture is explicit that 'not all architectures are good architectures', so recovery must be followed by evaluation rather than acceptance.
+
+> **Exam trap:** Concluding 'if it isn't documented it has no architecture'. The lecture says the opposite.
+
+*Tags: every-system, unknown-architecture, recovery, erosion*
+
+</details>
+
+---
+
+## ADV-0152 — Good architecture (Brutal, 8 marks)
+
+**Type:** Separate two rule categories  
+**Source:** Lecture1_What is Software ArchitectureV2 (1).pdf
+
+Lecture 1 offers rules of thumb for good architecture, divided into two categories. Name both categories, give three rules from each, and explain why process rules can be checked before any design exists.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The two categories are **process recommendations** and **structural (product) recommendations**.
+
+Process rules include: the architecture should be the product of a single architect or a small group with an identified technical leader; the architect should base the architecture on a prioritised list of well-specified quality attribute requirements; the architecture should be documented using views addressing the concerns of the most important stakeholders; and the architecture should be evaluated for its ability to deliver the system's important quality attributes.
+
+Structural rules include: the architecture should feature well-defined modules whose functional responsibilities are allocated on the principles of information hiding and separation of concerns; each module should have a well-defined interface encapsulating changeable aspects; quality attributes should be achieved using well-known architectural tactics specific to each attribute; and the architecture should never depend on a particular version of a commercial product or tool.
+
+Why process rules can be checked before design exists: they are about **how the architecture is being produced**, not about what it contains. You can ask whether there is an identified architect, whether prioritised quality attribute requirements exist, and whether an evaluation is scheduled, on day one — before a single element has been chosen. This makes them an early risk indicator: a project failing the process rules will very likely fail the structural ones later.
+
+> **Exam trap:** Mixing the categories. An examiner asking for 'process' recommendations will not accept information hiding.
+
+*Tags: good-architecture, process-rules, structural-rules, rules-of-thumb*
+
+</details>
+
+---
+
+## ADV-0153 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It inhibits or enables a system's quality attributes'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Whether a system will be able to exhibit its desired quality attributes is substantially determined by its architecture — the structures chosen determine what is achievable, though architecture alone cannot guarantee functionality or quality since downstream implementation decisions matter too.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-1*
+
+</details>
+
+---
+
+## ADV-0154 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'Reasoning about and managing change is enabled'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The lecture's classification of changes is the examinable part: a **local** change modifies exactly one element; a **nonlocal** change requires several element modifications but leaves the underlying architectural approach intact; and an **architectural** change affects the fundamental ways elements interact and will likely require changes all over the system. Architecture makes it possible to tell which kind a proposed change is.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-2*
+
+</details>
+
+---
+
+## ADV-0155 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'Early design decisions can be predicted and analysed'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Architecture holds the earliest design decisions, which are both the hardest to get right and the hardest to change later, so evaluating them early is where analysis pays most.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-3*
+
+</details>
+
+---
+
+## ADV-0156 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'Communication among stakeholders is supported'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Architecture provides a common language in which competing concerns can be expressed and negotiated at a level that is intellectually manageable.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-4*
+
+</details>
+
+---
+
+## ADV-0157 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'Early design decisions are defined'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The architecture is the earliest point at which the decisions with system-wide consequence are made explicit and can be inspected.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-5*
+
+</details>
+
+---
+
+## ADV-0158 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It constrains the vocabulary of design alternatives'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Once an architecture is chosen, the set of reasonable downstream design options narrows, which is a benefit because it reduces choice paralysis and enforces consistency.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-6*
+
+</details>
+
+---
+
+## ADV-0159 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It defines constraints on implementation'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Implementations must conform to the resource allocation decisions and connection rules the architecture sets, which is what makes conformance checkable.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-7*
+
+</details>
+
+---
+
+## ADV-0160 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It influences the organizational structure'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Architecture 'dictates the structure of an organization, or vice versa' and is typically used as the basis for the work-breakdown structure, dictating units of planning and budget, inter-team communication channels, configuration control, file-system organization, and integration and test plans.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-8*
+
+</details>
+
+---
+
+## ADV-0161 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It enables evolutionary prototyping'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Once the architecture exists it can be analysed and prototyped as a skeletal system, letting the system run very early in the life cycle with elements filled in as they are completed.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-9*
+
+</details>
+
+---
+
+## ADV-0162 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It enables more accurate cost and schedule estimates'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Cost and schedule estimates based on an understanding of the system's parts are inherently more accurate than those based on the whole, and the work-breakdown structure the architecture provides is what makes such estimates possible.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-10*
+
+</details>
+
+---
+
+## ADV-0163 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It can be the basis for training'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The architecture, including a description of how elements interact to carry out required behaviour, can serve as the introduction to the system for new team members.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-11*
+
+</details>
+
+---
+
+## ADV-0164 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'It can be created as a transferable, reusable model'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The earlier reuse is applied in the life cycle the greater the benefit, and architecture-level reuse is the earliest form available — a product line shares its architecture across products.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-12*
+
+</details>
+
+---
+
+## ADV-0165 — Why architecture matters (Very Hard, 6 marks)
+
+**Type:** Explain one reason in depth  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 gives thirteen reasons software architecture is important. Explain reason **'Independently developed elements can be integrated'** in depth — not merely restate it — and give a concrete consequence for a project that ignores it.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Well-defined interfaces and interaction rules are what make it possible for elements built separately to be combined without redesign.
+
+Consequence of ignoring it: a project that does not attend to this reason loses the specific leverage architecture provides here, and the loss typically shows up late — after implementation has committed to a structure that cannot deliver what is now needed. Lecture 2's framing is that architecture is the earliest artifact at which such consequences are still cheap to address.
+
+> **Exam trap:** Restating the heading as the answer. Each reason has substantive content behind it and that is what is marked.
+
+*Tags: why-architecture-matters, thirteen-reasons, reason-13*
+
+</details>
+
+---
+
+## ADV-0166 — Managing change (Brutal, 8 marks)
+
+**Type:** Classify changes and justify  
+**Source:** Lecture2_Why Is Software Architecture Important (2).pdf
+
+Lecture 2 classifies changes into three categories. Define all three precisely and classify these: (a) changing a validation message's wording; (b) adding a new field that must appear in the UI, the service layer and the database; (c) moving from a single shared database to per-service databases.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+**Local** — a change that modifies exactly one element. **Nonlocal** — a change that requires several element modifications but leaves the underlying architectural approach intact. **Architectural** — a change that affects the fundamental ways in which elements interact with each other, and will likely require changes all over the system.
+
+(a) **Local**. One element, no interaction change.
+
+(b) **Nonlocal**. Three elements must change, but nothing about how they interact is altered — the layering, the call patterns and the data flow are all as before. This is the category students most often mis-classify as architectural simply because it touches several files; the test is not *how many* elements change but whether the *interaction approach* changes.
+
+(c) **Architectural**. Splitting a shared data store changes the fundamental interaction model: what was a Shared-Data arrangement with implicit consistency becomes distributed data requiring explicit coordination, so transaction boundaries, consistency guarantees and failure modes all change system-wide.
+
+The practical value of the classification: it lets an architect price a change request before agreeing to it, and it is why Lecture 2 lists managing change as one of the thirteen reasons.
+
+> **Exam trap:** Classifying by number of files touched. A change touching many elements is nonlocal unless the interaction model changes.
+
+*Tags: change, local, nonlocal, architectural, classification*
+
+</details>
+
+---
+
+## ADV-0167 — Many contexts (Very Hard, 6 marks)
+
+**Type:** Explain one context in depth  
+**Source:** Lecture3_The Many Contexts of Software Architecture.pdf
+
+Lecture 3 says architecture must be considered in four contexts. Explain the **Technical context** — what it covers and why an architect who ignores it produces a worse architecture.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The Technical context covers the technical environment in which the architecture must operate — the available technologies, the state of the practice, and the technical constraints already in place.
+
+Why ignoring it damages the architecture: the architect must know what is technically possible and what is already fixed, since a design that assumes unavailable technology cannot be built.
+
+The four contexts are technical, project life-cycle, business and professional. Lecture 3's point in naming four is that architecture is never evaluated on technical merit alone — the same design can be right in one context and wrong in another.
+
+> **Exam trap:** Naming the four contexts without content. Each carries specific obligations for the architect.
+
+*Tags: contexts, technical-context, four-contexts*
+
+</details>
+
+---
+
+## ADV-0168 — Many contexts (Very Hard, 6 marks)
+
+**Type:** Explain one context in depth  
+**Source:** Lecture3_The Many Contexts of Software Architecture.pdf
+
+Lecture 3 says architecture must be considered in four contexts. Explain the **Project life-cycle context** — what it covers and why an architect who ignores it produces a worse architecture.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The Project life-cycle context covers where architecture sits in the development life cycle and how it relates to the surrounding activities of requirements, design, implementation, testing and maintenance.
+
+Why ignoring it damages the architecture: architecture is not a phase that ends — it is created early but is continually revisited, and the life-cycle model chosen determines when architectural decisions can be revised.
+
+The four contexts are technical, project life-cycle, business and professional. Lecture 3's point in naming four is that architecture is never evaluated on technical merit alone — the same design can be right in one context and wrong in another.
+
+> **Exam trap:** Naming the four contexts without content. Each carries specific obligations for the architect.
+
+*Tags: contexts, project-life-cycle-context, four-contexts*
+
+</details>
+
+---
+
+## ADV-0169 — Many contexts (Very Hard, 6 marks)
+
+**Type:** Explain one context in depth  
+**Source:** Lecture3_The Many Contexts of Software Architecture.pdf
+
+Lecture 3 says architecture must be considered in four contexts. Explain the **Business context** — what it covers and why an architect who ignores it produces a worse architecture.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The Business context covers the business goals, market position, competitive pressures and organisational purposes the system exists to serve.
+
+Why ignoring it damages the architecture: architecture serves business goals, and Lecture 8's PALM exists precisely to make that link traceable; an architecture with no business justification is unmoored.
+
+The four contexts are technical, project life-cycle, business and professional. Lecture 3's point in naming four is that architecture is never evaluated on technical merit alone — the same design can be right in one context and wrong in another.
+
+> **Exam trap:** Naming the four contexts without content. Each carries specific obligations for the architect.
+
+*Tags: contexts, business-context, four-contexts*
+
+</details>
+
+---
+
+## ADV-0170 — Many contexts (Very Hard, 6 marks)
+
+**Type:** Explain one context in depth  
+**Source:** Lecture3_The Many Contexts of Software Architecture.pdf
+
+Lecture 3 says architecture must be considered in four contexts. Explain the **Professional context** — what it covers and why an architect who ignores it produces a worse architecture.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+The Professional context covers the architect's own role — the duties, skills and knowledge expected of the person occupying it.
+
+Why ignoring it damages the architecture: the architecture is a product of a person or small group, so the competence and responsibilities of that role directly bound what the architecture can be; this is why Lecture 1's process rules of thumb begin with identifying a single architect or small group with a technical leader.
+
+The four contexts are technical, project life-cycle, business and professional. Lecture 3's point in naming four is that architecture is never evaluated on technical merit alone — the same design can be right in one context and wrong in another.
+
+> **Exam trap:** Naming the four contexts without content. Each carries specific obligations for the architect.
+
+*Tags: contexts, professional-context, four-contexts*
+
+</details>
+
+---
+
+## ADV-0171 — Architecture Influence Cycle (Brutal, 8 marks)
+
+**Type:** Explain bidirectional influence  
+**Source:** Lecture3_The Many Contexts of Software Architecture.pdf; Lecture2_Why Is Software Architecture Important (2).pdf; Lecture8_Architecture and Requirements.pdf
+
+Explain the Architecture Influence Cycle, giving influences in **both** directions with a concrete example of each, and state what the cycle implies about treating requirements as fixed inputs.
+
+<details>
+<summary><strong>Show answer</strong></summary>
+
+Inbound influences — things that shape the architecture: stakeholders, whose concerns and priorities determine which quality attributes matter; the developing organisation, whose structure, skills and existing assets constrain what can be built; the technical environment, which fixes the available and mandated technologies; and the architect's own experience, which shapes which patterns are reached for.
+
+Outbound influences — things the architecture in turn shapes: the structure of the developing organisation, since Lecture 2 states architecture is typically the basis for the work-breakdown structure and thus dictates teams, budgets and communication channels; the goals of the developing organisation, since a successful architecture can become a reusable asset or a product-line platform that changes what the business sells; customer requirements for the next system, since customers who see what this architecture makes cheap will ask for more of it; and the architect's experience, which feeds forward into future designs.
+
+What it implies about requirements: they cannot be treated as a fixed input handed to the architect. The cycle says the architecture influences the requirements of subsequent systems, so the relationship is iterative — which is exactly why Lecture 8 pairs elicitation methods like QAW and PALM with the architecture rather than placing them strictly before it. An architect who treats the requirements document as immutable has cut the feedback edge of the cycle.
+
+> **Exam trap:** Giving only the inbound half. The cycle is named a cycle because of the return edges.
+
+*Tags: influence-cycle, bidirectional, organisation, requirements*
+
+</details>
+
+---

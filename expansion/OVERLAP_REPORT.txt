@@ -1,0 +1,44 @@
+==============================================================
+OVERLAP REPORT
+==============================================================
+Original bank : 3888 questions
+Advanced Depth: 171 questions
+Code Impl.    : 72 questions
+New total     : 243 questions
+Grand total   : 4131 questions
+
+1. ID COLLISIONS
+   original id pattern : Q00001 ... Q03888
+   new id prefixes     : ADV-, CODE-
+   collisions          : 0
+   duplicate new ids   : 0
+
+2. EXACT PROMPT DUPLICATES vs original: 0
+
+3. EXACT ANSWER DUPLICATES vs original: 0
+
+4. QUESTION-TYPE OVERLAP
+   original types : 45
+   new types      : 97
+   shared types   : 1 ['Architecture vs implementation']
+
+5. NEAR-DUPLICATE PROMPTS (Jaccard similarity on content words)
+   threshold for concern : 0.50
+   items at/above 0.50   : 0
+
+   Ten most similar new questions vs anything in the original bank:
+     0.414  ADV-0012   vs Q02863    For the design-decision category **Binding time decisions**, give one ...
+     0.414  ADV-0010   vs Q02862    For the design-decision category **Mapping among architectural element...
+     0.393  ADV-0014   vs Q02864    For the design-decision category **Choice of technology**, give one co...
+     0.393  ADV-0008   vs Q02861    For the design-decision category **Management of resources**, give one...
+     0.393  ADV-0006   vs Q02860    For the design-decision category **Data model**, give one concrete arc...
+     0.393  ADV-0004   vs Q02859    For the design-decision category **Coordination model**, give one conc...
+     0.393  ADV-0002   vs Q02858    For the design-decision category **Allocation of responsibilities**, g...
+     0.355  ADV-0153   vs Q03644    Lecture 2 gives thirteen reasons software architecture is important. E...
+     0.276  ADV-0049   vs Q02480    Reproduce the **Usability general scenario** table from Lecture 7: giv...
+     0.276  ADV-0046   vs Q02384    Reproduce the **Testability general scenario** table from Lecture 7: g...
+
+==============================================================
+RESULT: PASS - no overlap detected
+Maximum similarity of any new prompt to any original prompt: 0.414
+==============================================================
