@@ -12,6 +12,7 @@ require(path.join(ROOT, "search/universal_references.js"));
 require(path.join(ROOT, "semantic_index.js"));
 require(path.join(ROOT, "search/hybrid-search.js"));
 require(path.join(ROOT, "search/exam-explainer.js"));
+require(path.join(ROOT, "search/predictor-calibration.js"));
 
 const mergeBank = (arr, bank) => (arr || []).map(o => ({ ...o, bank: o.bank || bank }));
 const questions = [
@@ -213,6 +214,7 @@ for (const test of tests) {
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const wiring = [
   ["explainer script", /search\/exam-explainer\.js/.test(html)],
+  ["calibration script", /search\/predictor-calibration\.js/.test(html)],
   ["explainer instantiated", /createExamExplainer/.test(html)],
   ["why routing", /examExplainer\.isWhyQuery\(query\)/.test(html)],
   ["causal mechanism UI", /Causal mechanism/.test(html)],
