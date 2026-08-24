@@ -11,6 +11,7 @@ require(path.join(ROOT, "search/concepts.js"));
 require(path.join(ROOT, "search/universal_references.js"));
 require(path.join(ROOT, "semantic_index.js"));
 require(path.join(ROOT, "search/hybrid-search.js"));
+require(path.join(ROOT, "search/predictor-calibration.js"));
 require(path.join(ROOT, "search/answer-predictor.js"));
 
 const mergeBank = (arr, bank) => (arr || []).map(o => ({ ...o, bank: o.bank || bank }));
