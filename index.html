@@ -71,6 +71,9 @@ button.ghost{background:transparent;box-shadow:none}
 .prediction.collapsed .prediction-body{display:none}
 .prediction-possibility{border:1px solid var(--line);border-radius:var(--radius);padding:10px;margin-top:8px;background:color-mix(in srgb,var(--soft) 45%,var(--panel))}
 .prediction-possibility b{display:block;margin-bottom:3px}
+.mechanism-chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px}
+.mechanism-step{padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel2);font-size:13px}
+.mechanism-arrow{color:var(--muted);font-weight:700}
 main{max-width:1500px;margin:auto;padding:18px 24px 50px}
 .summarybar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted)}
 #results{display:grid;gap:13px}
@@ -115,7 +118,7 @@ kbd{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(-
 mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
 .footer{margin-top:35px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
 @media(max-width:950px){.toolbar{grid-template-columns:1fr 1fr}.toolbar2{grid-template-columns:1fr 1fr}.topline{display:block}.stats{justify-content:flex-start;margin-top:10px}.refgrid,.prediction-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.wrap,main{padding-left:12px;padding-right:12px}.toolbar,.toolbar2{grid-template-columns:1fr}.toggle{margin-left:0}.summarybar{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.wrap,main{padding-left:12px;padding-right:12px}.toolbar,.toolbar2{grid-template-columns:1fr}.toggle{margin-left:0}.summarybar{align-items:flex-start;flex-direction:column}.mechanism-chain{display:grid;grid-template-columns:1fr}.mechanism-arrow{transform:rotate(90deg);justify-self:center}}
 @media print{header,.actions,.card-actions,.pager,.refbox,.footer{display:none!important}body{background:white;color:black}.card{box-shadow:none;break-inside:avoid}.answer{display:block;background:white}}
 </style>
 </head>
@@ -134,7 +137,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
       </div>
     </div>
     <div class="toolbar">
-      <input id="search" type="search" placeholder="Search: availability, utility tree, P2P, ping echo, ATM state, hard soft resources..." autocomplete="off">
+      <input id="search" type="search" placeholder="Search or ask why: availability, P2P, 'why does Layer improve modifiability?'..." autocomplete="off">
       <select id="searchMode" title="Search mode">
         <option value="hybrid">Hybrid</option>
         <option value="semantic">Semantic</option>
@@ -225,10 +228,10 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
 <script src="search/universal_references.js"></script>
 <script src="semantic_index.js"></script>
 <script src="search/hybrid-search.js"></script>
+<script src="search/exam-explainer.js"></script>
 <script src="search/answer-predictor.js"></script>
 <script>
 (() => {
-  // --- merge the three banks; source arrays are never mutated ---
   const mergeBank = (arr, bank) => (arr || []).map(o => ({ ...o, bank: o.bank || bank }));
   const Q = [
     ...mergeBank(window.QUESTIONS, "Original"),
@@ -269,8 +272,10 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   els.predictionToggleText.textContent = els.predictionToggle.checked ? "ON" : "OFF";
   const searchEngine = window.createHybridSearchEngine(Q, window.UNIVERSAL_REFERENCES || [], window.CSC3209_SEARCH_CONFIG);
   const answerPredictor = window.createAnswerPredictor(window.CSC3209_SEARCH_CONFIG);
+  const examExplainer = window.createExamExplainer(window.CSC3209_SEARCH_CONFIG);
   const engineInfo = searchEngine.inspect();
-  els.semanticStatus.textContent = `Concept search ready · ${engineInfo.concepts} concepts · ${engineInfo.references} refs`;
+  const explainerInfo = examExplainer.inspect();
+  els.semanticStatus.textContent = `Concept search ready · ${engineInfo.concepts} concepts · ${engineInfo.references} refs · ${explainerInfo.rules} why rules`;
   let lastSearch = { results: [], concepts: [] };
   let lastResults = [];
   let closedPredictionQuery = "";
@@ -328,12 +333,15 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
       hidePrediction();
       return;
     }
-    const prediction=answerPredictor.predict(query, search.concepts, search.results, window.CSC3209_SEARCH_CONFIG);
-    if(!prediction.shown){
+    const prediction = examExplainer.isWhyQuery(query)
+      ? examExplainer.explain(query, search.concepts, search.results)
+      : answerPredictor.predict(query, search.concepts, search.results, window.CSC3209_SEARCH_CONFIG);
+    if(!prediction?.shown){
       hidePrediction();
       return;
     }
     const state=prediction.state||"answer";
+    const isWhy=prediction.answerMode==="why";
     const alternatives=prediction.alternatives||[];
     const alt=alternatives.length
       ? alternatives.map(c=>`<span class="chip">${escapeHtml(c.label)} · ${c.percent}%</span>`).join("")
@@ -369,22 +377,29 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
     const ambiguity=prediction.ambiguity?.isAmbiguous
       ? `<div class="prediction-section"><h3>Ambiguity</h3>${prediction.ambiguity.notes.map(n=>`<p>${escapeHtml(n)}</p>`).join("")}</div>`
       : "";
+    const mechanismChain=(prediction.mechanismChain||[]).length
+      ? `<div class="prediction-section"><h3>Causal mechanism</h3><div class="mechanism-chain">${prediction.mechanismChain.map((step,i)=>`${i?'<span class="mechanism-arrow">→</span>':''}<span class="mechanism-step">${escapeHtml(step)}</span>`).join("")}</div></div>`
+      : "";
     const title = state==="ambiguous"
       ? `<div class="prediction-title warn">Requirement is ambiguous</div>`
       : state==="insufficient-information"
         ? `<div class="prediction-title muted">Insufficient information</div>`
         : state==="no-evidence"
           ? `<div class="prediction-title muted">No strong local evidence</div>`
-          : `<div class="prediction-title">${escapeHtml(prediction.winner.label)}</div>`;
+          : isWhy
+            ? `<div class="prediction-title">${escapeHtml(prediction.explanationTitle||prediction.winner?.label||"Why this happens")}</div>`
+            : `<div class="prediction-title">${escapeHtml(prediction.winner.label)}</div>`;
     const metrics = state==="answer"
-      ? `<div><span class="chip">${prediction.winner.percent}% weighted evidence</span> <span class="chip">Confidence: ${escapeHtml(prediction.confidence.level)}</span> <span class="chip">${prediction.independentEvidenceGroups} independent evidence groups</span></div>`
+      ? isWhy
+        ? `<div><span class="chip">Causal explanation</span> <span class="chip">Grounded locally</span> <span class="chip">Confidence: ${escapeHtml(prediction.confidence?.level||"Medium")}</span></div>`
+        : `<div><span class="chip">${prediction.winner.percent}% weighted evidence</span> <span class="chip">Confidence: ${escapeHtml(prediction.confidence.level)}</span> <span class="chip">${prediction.independentEvidenceGroups} independent evidence groups</span></div>`
       : `<div><span class="chip">${escapeHtml(prediction.stateLabel||"Prediction state")}</span>${prediction.matchingResults?` <span class="chip">${prediction.matchingResults} matching results considered</span>`:""}</div>`;
     els.predictionPanel.className=`prediction open${predictionCollapsed?" collapsed":""}`;
     els.predictionPanel.innerHTML=`
       <div class="prediction-head">
         <div>
-          <h2>Predicted Exam Answer</h2>
-          <div class="prediction-muted">Intent: ${escapeHtml(prediction.intent.label)}${prediction.subject?` · Subject: ${escapeHtml(prediction.subject.label)}`:""}</div>
+          <h2>${isWhy?"Why / Explanation":"Predicted Exam Answer"}</h2>
+          <div class="prediction-muted">Intent: ${escapeHtml(prediction.intent.label)}${prediction.subject?` · Subject: ${escapeHtml(prediction.subject.label)}`:""}${prediction.target?` · Effect: ${escapeHtml(prediction.target.label)}`:""}</div>
           ${title}
           ${metrics}
         </div>
@@ -396,9 +411,10 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
       <div class="prediction-body">
         <div class="prediction-grid">
           <div>
-            <div class="prediction-section"><h3>Why it fits</h3>${prediction.why.map(line=>`<p>${escapeHtml(line)}</p>`).join("")}</div>
+            <div class="prediction-section"><h3>${isWhy?"Direct answer":"Why it fits"}</h3>${(prediction.why||[]).map(line=>`<p>${escapeHtml(line)}</p>`).join("")}</div>
+            ${mechanismChain}
             ${possibilities}
-            ${state==="answer"?`<div class="prediction-section"><h3>Alternatives</h3><div class="prediction-list">${alt}</div></div>`:""}
+            ${state==="answer"&&!isWhy?`<div class="prediction-section"><h3>Alternatives</h3><div class="prediction-list">${alt}</div></div>`:""}
             ${ambiguity}
             ${missing}
             ${distinction}
@@ -407,14 +423,13 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
             ${related}
           </div>
           <div>
-            ${evidence?`<div class="prediction-section"><h3>Supporting evidence</h3><div class="prediction-evidence">${evidence}</div></div>`:""}
-            <p class="prediction-muted">Percentages are weighted evidence share, not probabilities. The predictor is deterministic and local.</p>
+            ${evidence?`<div class="prediction-section"><h3>Supporting evidence / cross-check</h3><div class="prediction-evidence">${evidence}</div></div>`:""}
+            <p class="prediction-muted">${isWhy?"Why answers are deterministic, course-grounded causal explanations; evidence is extracted from the local question bank and Universal Answers.":"Percentages are weighted evidence share, not probabilities. The predictor is deterministic and local."}</p>
           </div>
         </div>
       </div>`;
   }
 
-  // Escape first, then render the light markdown used by the expansion answers.
   function fmtAnswer(text){
     return escapeHtml(text)
       .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
