@@ -112,6 +112,99 @@ const tests = [
     confidenceOneOf: ["High"]
   },
   {
+    name: "High Severity MVC",
+    query: "Which architectural pattern separates a Model from multiple synchronized Views while Controllers handle user input?",
+    intent: "architectural-pattern",
+    state: "answer",
+    winner: "MVC",
+    category: "architectural-pattern",
+    notWinner: ["Layer"]
+  },
+  {
+    name: "High Severity Map-Reduce",
+    query: "Which architectural pattern partitions a huge dataset across parallel Map tasks, shuffles key/value output, and combines it with Reduce tasks?",
+    intent: "architectural-pattern",
+    state: "answer",
+    winner: "Map-Reduce",
+    category: "architectural-pattern",
+    notWinner: ["Pipe-and-Filter"]
+  },
+  {
+    name: "Generic GoF Singleton intent",
+    query: "Which pattern ensures exactly one controlled instance with a global access point?",
+    intent: "design-pattern",
+    state: "answer",
+    winner: "Singleton",
+    category: "design-pattern",
+    notCategory: "architectural-pattern"
+  },
+  {
+    name: "Generic GoF Composite intent",
+    query: "Which pattern lets clients treat individual leaf objects and recursive composite groups uniformly?",
+    intent: "design-pattern",
+    state: "answer",
+    winner: "Composite",
+    category: "design-pattern",
+    notCategory: "architectural-pattern"
+  },
+  {
+    name: "Generic GoF Facade intent",
+    query: "Which pattern provides one simple unified interface over a complex subsystem?",
+    intent: "design-pattern",
+    state: "answer",
+    winner: "Facade",
+    category: "design-pattern",
+    notCategory: "architectural-pattern"
+  },
+  {
+    name: "Generic GoF State intent",
+    query: "Which pattern lets an object change behavior when its internal state changes instead of spreading conditionals?",
+    intent: "design-pattern",
+    state: "answer",
+    winner: "State",
+    category: "design-pattern",
+    notCategory: "architectural-pattern"
+  },
+  {
+    name: "Generic GoF Factory Method intent",
+    query: "Which pattern delegates object creation so a subclass decides which concrete product to instantiate?",
+    intent: "design-pattern",
+    state: "answer",
+    winner: "Factory Method",
+    category: "design-pattern",
+    notCategory: "architectural-pattern"
+  },
+  {
+    name: "Generic pattern level abstention",
+    query: "Which pattern should I use?",
+    intent: "general",
+    state: "insufficient-information"
+  },
+  {
+    name: "Later lecture ATAM intent",
+    query: "Which evaluation method uses business drivers, a utility tree, risks, sensitivity points and trade-off points?",
+    intent: "framework",
+    state: "answer",
+    winner: "ATAM",
+    category: "framework"
+  },
+  {
+    name: "Later lecture documentation intent",
+    query: "Which documentation concept compares informal, semiformal and formal notation?",
+    intent: "documentation",
+    state: "answer",
+    winner: "Architecture Notation",
+    category: "documentation"
+  },
+  {
+    name: "Later lecture conformance intent",
+    query: "What concept checks that implementation code does not violate the documented architecture?",
+    intent: "testing",
+    state: "answer",
+    winner: "Implementation Conformance",
+    category: "testing"
+  },
+  {
     name: "Regression 1",
     query: "Which architectural pattern lets users receive updates when information changes?",
     intent: "architectural-pattern",
