@@ -43,13 +43,14 @@ The bank is deliberately difficult. It is designed for an open-book exam where r
    - **Semantic**: prioritizes inferred course concepts from natural-language clues.
    - **Exact / Keywords**: lexical-only ranking for predictable emergency lookup.
 5. Leave **Search answers** off when testing yourself; turn it on when using the bank as a reference engine. Concept search still learns from answer outlines so it can find the right idea from answer-style clues, but the checkbox gives answer text extra lexical weight.
-6. Read the **Predicted Exam Answer** panel when it appears. It infers the likely answer category first, then derives a local consensus from matching questions and references.
-7. Use related-concept chips to jump from a clue to the formal CSC3209 term.
-8. Use **Random Hard Question** for drills.
-9. Use **Generate 50-Mark Mock** for an exam-shaped practice set.
-10. Star difficult questions; favourites are stored locally in your browser.
-11. Reveal an answer only after attempting the question.
-12. Open `universal_answers.md` for reusable response structures.
+6. Use the **Predicted Exam Answer** toggle to turn the prediction panel on or off. Normal search continues either way.
+7. Read the **Predicted Exam Answer** panel when it appears. It infers the likely answer category first, then derives a local consensus from matching questions and references.
+8. Use related-concept chips to jump from a clue to the formal CSC3209 term.
+9. Use **Random Hard Question** for drills.
+10. Use **Generate 50-Mark Mock** for an exam-shaped practice set.
+11. Star difficult questions; favourites are stored locally in your browser.
+12. Reveal an answer only after attempting the question.
+13. Open `universal_answers.md` for reusable response structures.
 
 ## Search architecture
 
@@ -91,13 +92,34 @@ Universal answer sections are indexed as separate **Reference** results instead 
 
 The Predicted Exam Answer feature does not call an LLM and does not generate answers from the internet. It derives a deterministic consensus from the local CSC3209 ontology, ranked question bank, Universal Answer references and existing answer frameworks.
 
-The predictor first classifies the query intent before selecting a winner. Supported intents include architectural pattern, design pattern, quality attribute, tactic, structure/view, framework, trade-off, enhanced quality, threatened quality and general. This prevents a query like `best architectural pattern for distributing notifications` from selecting `Performance` merely because performance appears in many answer outlines; only architectural-pattern concepts are eligible to win.
+The predictor first classifies the query intent before selecting a winner. Supported intents include architectural pattern, design pattern, quality attribute, security concept, tactic, structure/view, framework, trade-off, enhanced quality, threatened quality and general. This prevents a query like `best architectural pattern for distributing notifications` from selecting `Performance` merely because performance appears in many answer outlines; only architectural-pattern concepts are eligible to win.
+
+The predictor has four states:
+
+- **Answer**: one compatible answer is clearly supported.
+- **Ambiguous**: multiple answers are plausible because a missing condition changes the mechanism.
+- **Insufficient Information**: the query asks for an answer type but does not give enough architectural detail to justify one.
+- **No Evidence**: the local bank and references do not contain strong enough matching evidence.
+
+For architectural-pattern questions, the predictor checks the mechanism described by the query before trusting corpus consensus. For example, `get information periodically` is intentionally treated as ambiguous unless the query says whether clients poll/request the data or the system pushes event updates. Client-Server is supported by request/reply or polling clues; Publish-Subscribe is supported by event, push, publisher/subscriber or notification clues; SOA requires independent service providers/consumers, published interfaces/contracts, service discovery or interoperability.
+
+The **Predicted Exam Answer** toggle is stored in `localStorage` under `csc3209-predicted-answer-enabled`. Turning it off hides the panel and skips prediction work while leaving Hybrid, Semantic and Exact search unchanged.
 
 Weighted evidence percentage is the winner's share of compatible local evidence, not a probability that the answer is correct. Stronger ranked results contribute more than weak results, and repeated generated variants are dampened by evidence-group clustering so near-duplicate questions do not create fake certainty.
 
-Confidence combines winner dominance, margin over the runner-up, independent evidence groups, underlying search strength and intent confidence. Low confidence is still useful: it means the engine found a plausible answer but the evidence is narrow, close, or the query is underspecified.
+Confidence combines winner dominance, margin over the runner-up, independent evidence groups, intent confidence and direct query alignment. Low confidence is still useful: it means the engine found a plausible answer but the evidence is narrow, close, mostly corpus-derived, or the query is underspecified.
 
 Alternatives and ambiguity are intentional. If multiple concepts solve different interpretations, the panel shows the runner-up concepts and may explain the distinction, for example pushed event updates versus client polling.
+
+Recommended open-book exam workflow:
+
+1. Paste or type the essential requirement from the exam.
+2. Review the inferred intent.
+3. Review the predicted answer, ambiguity warning, or missing information.
+4. Read **Why it fits** and the concise exam-ready justification.
+5. Check alternatives and distinguishing conditions.
+6. Open supporting evidence.
+7. Adapt the justification to the exact scenario instead of copying it blindly.
 
 ## Semantic model and offline behavior
 
