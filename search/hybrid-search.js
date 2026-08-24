@@ -124,12 +124,11 @@
     }
 
     function conceptsFromGeneratedIndex(q, semanticText) {
-      const indexed = generatedConceptIndex.get(q.id);
-      if (!indexed) return inferConcepts(semanticText, q);
+      const indexed = generatedConceptIndex.get(q.id) || [];
       const subtopic = normalize(q.subtopic);
       const topic = normalize(q.topic);
       const tags = new Set((q.tags || []).map(normalize));
-      return indexed.map(id => {
+      const indexedRows = indexed.map(id => {
         const concept = byId[id];
         const label = normalize(concept?.label);
         let strength = 1.8;
@@ -138,7 +137,12 @@
         else if (label && topic === label) { strength = 4.2; reason = "topic"; }
         else if (label && (tags.has(label) || tags.has(id))) { strength = 3.3; reason = "tag"; }
         return { id, strength, reason };
-      }).filter(c => byId[c.id]).sort((a,b)=>b.strength-a.strength).slice(0, 14);
+      }).filter(c => byId[c.id]);
+
+      // The generated index is a build-time optimization, not the source of truth.
+      // Always merge live ontology inference so newly added CSC3209 concepts work
+      // immediately even before semantic_index.js is regenerated.
+      return mergeConceptLists(indexedRows, inferConcepts(semanticText, q)).slice(0, 18);
     }
 
     function mapValues(obj, fn) {
@@ -199,7 +203,7 @@
         }
         if (strength > 0.9) direct.push({ id: entry.concept.id, strength, reason });
       }
-      return mergeConceptLists(direct).slice(0, 14);
+      return mergeConceptLists(direct).slice(0, 18);
     }
 
     function mergeConceptLists(...lists) {
@@ -227,7 +231,7 @@
       const tokens = tokenize(raw);
       const conceptsFound = inferConcepts(raw);
       const expanded = [];
-      for (const c of conceptsFound.slice(0, 8)) {
+      for (const c of conceptsFound.slice(0, 10)) {
         const concept = byId[c.id];
         expanded.push(c);
         for (const relatedId of concept.related || []) {
@@ -390,7 +394,7 @@
             _lexicalScore: lex,
             _semanticScore: semInfo.score,
             _matchedConcepts: semInfo.matches,
-            _concepts: doc.concepts.slice(0, 7).map(c => byId[c.id]?.label).filter(Boolean)
+            _concepts: doc.concepts.slice(0, 9).map(c => byId[c.id]?.label).filter(Boolean)
           });
         }
       }
@@ -398,7 +402,7 @@
         if (!query.tokens.length && !query.concepts.length) return String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
         return b._score - a._score || Number(b.marks || 0) - Number(a.marks || 0) || String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
       });
-      return { results: out, concepts: query.concepts.slice(0, 8).map(c => ({ id: c.id, label: byId[c.id].label, direct: query.directConceptIds.has(c.id) })) };
+      return { results: out, concepts: query.concepts.slice(0, 10).map(c => ({ id: c.id, label: byId[c.id].label, direct: query.directConceptIds.has(c.id) })) };
     }
 
     function passesQuestionFilters(q, options) {
