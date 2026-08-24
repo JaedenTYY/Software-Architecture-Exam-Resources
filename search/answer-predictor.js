@@ -26,6 +26,8 @@
     tactic: "Tactic",
     structure: "Structure / View",
     framework: "Framework",
+    documentation: "Architecture Documentation",
+    testing: "Architecture / Testing Concept",
     "trade-off": "Trade-off",
     "quality-enhanced": "Enhanced Quality",
     "quality-threatened": "Threatened Quality",
@@ -52,6 +54,7 @@
     risk: "Risks",
     reference: "Reference Frameworks",
     documentation: "Documentation",
+    testing: "Testing / Conformance",
     "design-pattern-category": "Design Pattern Categories"
   };
 
@@ -108,19 +111,38 @@
       const has = pattern => pattern.test(q);
       const enhanced = has(/\b(enhance|enhanced|improve|improves|improved|benefit|advantage|support|increase|helps?)\b/);
       const threatened = has(/\b(threat|threaten|threatened|degrade|degraded|degrades|limitation|drawback|disadvantage|trade[ -]?off|penalty|weakness|cost)\b/);
+      const directQueryConcepts = (queryConcepts || [])
+        .filter(c => c.direct && byId[c.id])
+        .map(c => byId[c.id]);
+      const hasDirectDesignPattern = directQueryConcepts.some(c => c.category === "design-pattern");
+      const hasDirectArchitecturalPattern = directQueryConcepts.some(c => c.category === "architectural-pattern");
+      const designPatternClue = has(/\b(only one instance|single instance|private constructor|global access point|leaf and composite|leaf composite|individual and group uniformly|tree structure|part whole|simple unified interface|hide subsystem complexity|complex subsystem|delegate object creation|creation delegated|creator subclass|concrete product|behavior changes with (its )?internal state|state-specific behavior|state transition|avoid .*conditionals|subject .* observers?|dependent objects?|notify observers?|interested objects?|object state changes?)\b/);
+      const architecturalPatternClue = has(/\b(client server|centralized server|request reply|publisher|subscriber|event[- ]driven|pipeline|successive transformations?|peer[- ]to[- ]peer|both request and provide|shared database|common repository|service provider|service consumer|published interfaces?|broker|location transparency|model view controller|multiple views .* same model|map tasks?|reduce tasks?|shuffle sort|large data set|large dataset|batch processing|deployment tiers?|physical tiers?|strict layering|allowed[- ]to[- ]use)\b/);
 
       if (has(/\b(design|gof|implementation|object|class)\s+patterns?\b/) || has(/\bwhich design pattern\b/)) {
         intent = "design-pattern"; confidence = 0.92; reasons.push("query asks for a design pattern");
       } else if (has(/\b(architectural|architecture)\s+patterns?\b/) || has(/\bbest architecture pattern\b/) || has(/\bwhich architectural pattern\b/)) {
         intent = "architectural-pattern"; confidence = 0.94; reasons.push("query asks for an architectural pattern");
       } else if (has(/\b(which|what|best)\s+patterns?\b/)) {
-        intent = "architectural-pattern"; confidence = 0.68; reasons.push("query asks for a pattern without saying design-level");
+        if (hasDirectDesignPattern || designPatternClue) {
+          intent = "design-pattern"; confidence = hasDirectDesignPattern ? 0.9 : 0.8; reasons.push("generic pattern query contains a GoF/design-pattern mechanism");
+        } else if (hasDirectArchitecturalPattern || architecturalPatternClue) {
+          intent = "architectural-pattern"; confidence = hasDirectArchitecturalPattern ? 0.9 : 0.8; reasons.push("generic pattern query contains an architectural-pattern mechanism");
+        } else {
+          intent = "general"; confidence = 0.44; reasons.push("query asks for a pattern but does not establish architectural vs design-pattern level");
+        }
       }
 
-      if (has(/\b(source stimulus environment|response measure|utility tree|business value architecture impact|business value architectural impact|asr|qaw|palm|add)\b/)) {
-        intent = "framework"; confidence = Math.max(confidence, 0.88); reasons.push("query uses framework vocabulary");
+      if (has(/\b(source stimulus environment|response measure|utility tree|business value architecture impact|business value architectural impact|asr|qaw|palm|add|atam|architecture tradeoff analysis|architecture trade-off analysis|sensitivity point|trade[- ]off point)\b/)) {
+        intent = "framework"; confidence = Math.max(confidence, 0.88); reasons.push("query uses framework/evaluation vocabulary");
       }
-      if (has(/\b(structure|view|where software runs|physical machines|code responsibilities|components communicate|runtime interaction|allocation|module|c&c|component and connector)\b/)) {
+      if (has(/\b(informal notation|semiformal notation|semi-formal notation|formal notation|architecture documentation|documenting software architecture|view documentation|element catalog|variability guide|cross[- ]view mapping|primary presentation)\b/)) {
+        intent = "documentation"; confidence = Math.max(confidence, 0.88); reasons.push("query asks about architecture documentation/notation");
+      }
+      if (has(/\b(implementation conformance|architecture code conformance|architecture-code conformance|unit test|integration test|system test|acceptance test|regression test|black[- ]box|white[- ]box|gray[- ]box|grey[- ]box|risk[- ]based testing|testing priorit)\b/)) {
+        intent = "testing"; confidence = Math.max(confidence, 0.86); reasons.push("query asks about architecture implementation/testing");
+      }
+      if (has(/\b(structure|view|where software runs|physical machines|code responsibilities|components communicate|runtime interaction|allocation|module|c&c|component and connector)\b/) && intent === "general") {
         intent = "structure"; confidence = Math.max(confidence, 0.82); reasons.push("query asks about architectural structures/views");
       }
       if (has(/\b(tactic|heartbeat|health check|ping echo|failover|redundancy|replication)\b/) && has(/\bwhat|which|best|use\b/)) {
@@ -143,21 +165,29 @@
         intent = "security-concept"; confidence = Math.max(confidence, 0.94); reasons.push("query asks for a permission security concept");
       }
 
-      if (intent === "general" && has(/\b(automatically receive|receive an update whenever|receive updates? when|whenever .* changes?|new information becomes available|publisher|subscriber|event-driven|event driven|polling|periodically requests?|request .* server every|server every|both request and provide|successive .* transformations?|independent stages|published network interfaces?|service provider|service consumer)\b/)) {
-        intent = "architectural-pattern"; confidence = 0.72; reasons.push("query describes an architectural interaction mechanism");
+      if (intent === "general" && has(/\b(automatically receive|receive an update whenever|receive updates? when|whenever .* changes?|new information becomes available|publisher|subscriber|event-driven|event driven|polling|periodically requests?|request .* server every|server every|both request and provide|successive .* transformations?|independent stages|published network interfaces?|service provider|service consumer|multiple views .* same model|map tasks?|reduce tasks?|shuffle sort|large dataset|large data set)\b/)) {
+        intent = "architectural-pattern"; confidence = 0.72; reasons.push("query describes an architectural interaction/processing mechanism");
       }
 
       if (threatened) polarity = "threatened";
       else if (enhanced) polarity = "enhanced";
 
-      const directConcepts = (queryConcepts || [])
-        .filter(c => c.direct && byId[c.id])
-        .map(c => byId[c.id]);
-      if (intent === "general" && directConcepts.length === 1) {
-        const category = directConcepts[0].category;
-        if (["quality", "security", "framework", "structure", "tactic"].includes(category)) {
-          intent = category === "security" ? "security-concept" : category;
-          confidence = Math.max(confidence, 0.56);
+      if (intent === "general" && directQueryConcepts.length === 1) {
+        const category = directQueryConcepts[0].category;
+        const categoryIntent = {
+          security: "security-concept",
+          quality: "quality",
+          framework: "framework",
+          structure: "structure",
+          tactic: "tactic",
+          documentation: "documentation",
+          testing: "testing",
+          "design-pattern": "design-pattern",
+          "architectural-pattern": "architectural-pattern"
+        }[category];
+        if (categoryIntent) {
+          intent = categoryIntent;
+          confidence = Math.max(confidence, ["design-pattern", "architectural-pattern"].includes(categoryIntent) ? 0.82 : 0.56);
           reasons.push("query directly names one concept");
         }
       }
@@ -173,6 +203,8 @@
       if (intent === "tactic") return new Set(["tactic"]);
       if (intent === "structure") return new Set(["structure"]);
       if (intent === "framework") return new Set(["framework"]);
+      if (intent === "documentation") return new Set(["documentation"]);
+      if (intent === "testing") return new Set(["testing"]);
       if (intent === "trade-off") return new Set(["quality", "security", "architectural-pattern", "design-pattern", "tactic", "risk"]);
       return null;
     }
@@ -265,6 +297,12 @@
       if (has(/\b(broker|intermediary|client proxy|server proxy|location transparency|forward requests?|dynamic binding)\b/)) {
         add("broker", 0.86, "intermediary broker forwards requests", "A broker mediates interaction and provides location transparency between clients and servers.", "Use when an intermediary hides service location or forwards calls.", "Broker requires an intermediary/proxy mechanism.");
       }
+      if (has(/\b(model[- ]view[- ]controller|model view controller|\bmvc\b|multiple (synchronized )?views? .* same model|same (application )?(data|model) .* multiple views?|controller handles? (user )?input|view displays? .* model|separate model .* view .* controller)\b/)) {
+        add("mvc", 0.92, "model, view and controller responsibilities", "The Model holds application state/functionality, Views present it, and Controllers mediate user input so presentation can vary independently.", "Use when the requirement is about multiple or changeable UI representations over the same model with separated input handling.", "MVC = Model/View/Controller presentation separation, not general Layer decomposition.");
+      }
+      if (has(/\b(map[- ]reduce|map tasks?|reduce tasks?|shuffle[ /-]?sort|key[ /-]?value|partition(ed|ing)? .* (large|huge|massive) .* data|large data ?set|large dataset|massive .* batch|parallel batch processing)\b/)) {
+        add("map-reduce", 0.93, "partitioned map/shuffle/reduce batch processing", "Many Map tasks process partitions in parallel, infrastructure shuffles/sorts intermediate key/value data, and Reduce tasks combine the results.", "Use for very large file-based/batch datasets where infrastructure-managed parallelism is the central mechanism.", "Map-Reduce = partitioned batch computation; Pipe-and-Filter = successive stream transformations.");
+      }
       if (has(/\b(multi[- ]tier|deployment tier|physical tiers?|client tier|application tier|data tier|separate runtime environments?|software mapped .* physical)\b/)) {
         add("multi-tier", 0.86, "physical deployment tiers", "Software responsibilities are deployed onto separate physical/runtime tiers.", "Use when the question is about deployment/runtime allocation.", "Multi-Tier = physical deployment; Layer = logical/module organization.");
       }
@@ -306,10 +344,19 @@
         return buildPeriodicAmbiguity(raw, intent, evidenceRows);
       }
 
+      const genericPatternQuery = /\b(which|what|best)\s+patterns?\b/.test(normalize(raw));
+      const directPatternConcept = queryConceptRows.find(row => row.direct && ["architectural-pattern", "design-pattern"].includes(row.concept.category));
+      if (intent.intent === "general" && genericPatternQuery && !directPatternConcept && !architecture.hasAny) {
+        return insufficientPrediction(intent, subject, "The query asks for a pattern but does not establish whether the expected answer is an architectural pattern or a GoF design pattern, nor the mechanism that distinguishes one.", [
+          "Is the question asking about system-level architecture or class/object-level design?",
+          "Add the decisive mechanism, such as request/reply, event distribution, staged transformation, one controlled instance, state-specific behavior, object creation, or subsystem simplification."
+        ]);
+      }
+
       if (intent.intent === "architectural-pattern" && !architecture.hasAny) {
         return insufficientPrediction(intent, subject, "The query asks for an architectural pattern but does not establish the architectural mechanism.", [
-          "What initiates the interaction?",
-          "Is the concern request/reply, event notification, staged transformation, peer resource sharing, shared data, brokering, service interoperability, layering, or deployment tiers?"
+          "What initiates the interaction or processing?",
+          "Is the concern request/reply, event notification, staged transformation, peer resource sharing, shared data, brokering, service interoperability, MVC presentation separation, Map-Reduce batch partitioning, layering, or deployment tiers?"
         ]);
       }
 
@@ -697,6 +744,8 @@
         layer: "responsibilities are separated into layers with controlled dependencies so changes can be localized",
         "shared-data": "multiple components access a shared repository as the communication/data-sharing mechanism",
         broker: "an intermediary broker/proxy forwards requests and provides location transparency",
+        mvc: "application state/functionality is separated into a Model, presentation into Views, and input handling into Controllers so UI representations can vary independently",
+        "map-reduce": "large batch data is partitioned across parallel Map tasks, shuffled/sorted as intermediate key/value data, and combined by Reduce tasks",
         "multi-tier": "software responsibilities are deployed across separate physical/runtime tiers",
         soa: "independently provided network services interact through published service interfaces or contracts"
       };
@@ -705,6 +754,7 @@
         authentication: "the system verifies identity, answering who the user or actor is",
         authorization: "the system checks permissions, answering what the authenticated actor is allowed to do",
         "quality-attribute-scenario": "the answer should structure the requirement as Source, Stimulus, Environment, Artifact, Response, and Response Measure",
+        atam: "the architecture is evaluated against business drivers and prioritized quality-attribute scenarios to identify risks, non-risks, sensitivity points and trade-off points",
         modifiability: "the design localizes changes and reduces ripple effects across unrelated responsibilities",
         performance: "the design affects response time, latency, throughput, or processing delay"
       };
@@ -726,6 +776,8 @@
         if (alt.id === "peer-to-peer") rows.push({ label: alt.label, reason: "Requires peers to both request and provide resources; that symmetric role is not established here." });
         if (alt.id === "publish-subscribe" && !/\b(event|push|whenever|subscriber|publisher|notify)\b/.test(q)) rows.push({ label: alt.label, reason: "Requires event-driven push to subscribers; active polling points to Client-Server instead." });
         if (alt.id === "client-server" && !/\b(request|server|poll|fetch|retrieve|client)\b/.test(q)) rows.push({ label: alt.label, reason: "Requires client-initiated request/reply or polling; event-driven push points to Publish-Subscribe instead." });
+        if (alt.id === "map-reduce" && !/\b(map|reduce|shuffle|partition|batch|large data|dataset|key value)\b/.test(q)) rows.push({ label: alt.label, reason: "Requires partitioned parallel batch processing over large datasets; a simple staged transformation pipeline points to Pipe-and-Filter instead." });
+        if (alt.id === "mvc" && !/\b(model|view|controller|presentation|ui)\b/.test(q)) rows.push({ label: alt.label, reason: "Requires separation of Model, View and Controller responsibilities for presentation/input concerns; generic modular separation alone does not justify MVC." });
       }
       return rows.slice(0, 3);
     }
