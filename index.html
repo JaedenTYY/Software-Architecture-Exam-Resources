@@ -43,6 +43,21 @@ button.ghost{background:transparent}
 .concept-chip.related{opacity:.82}
 .matchline{margin-top:10px;color:var(--muted);font-size:12px}
 .scorepill{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
+.prediction{display:none;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;margin-bottom:14px}
+.prediction.open{display:block}
+.prediction-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.prediction h2{font-size:16px;margin:0 0 8px}
+.prediction-title{font-size:22px;line-height:1.2;margin:4px 0}
+.prediction-grid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:16px;margin-top:12px}
+.prediction-section{margin-top:12px}
+.prediction-section h3{font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin:0 0 6px}
+.prediction p{margin:5px 0}
+.prediction-list{display:flex;flex-wrap:wrap;gap:6px}
+.prediction-evidence{display:grid;gap:7px}
+.prediction-evidence button{text-align:left}
+.prediction-muted{color:var(--muted);font-size:12px}
+.prediction-actions{display:flex;gap:7px;flex-wrap:wrap}
+.prediction.collapsed .prediction-body{display:none}
 main{max-width:1500px;margin:auto;padding:18px 24px 50px}
 .summarybar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted)}
 #results{display:grid;gap:13px}
@@ -85,7 +100,7 @@ main{max-width:1500px;margin:auto;padding:18px 24px 50px}
 kbd{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:2px 5px;background:var(--panel)}
 mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
 .footer{margin-top:35px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
-@media(max-width:950px){.toolbar{grid-template-columns:1fr 1fr}.toolbar2{grid-template-columns:1fr 1fr}.topline{display:block}.stats{justify-content:flex-start;margin-top:10px}.refgrid{grid-template-columns:1fr}}
+@media(max-width:950px){.toolbar{grid-template-columns:1fr 1fr}.toolbar2{grid-template-columns:1fr 1fr}.topline{display:block}.stats{justify-content:flex-start;margin-top:10px}.refgrid,.prediction-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.wrap,main{padding-left:12px;padding-right:12px}.toolbar,.toolbar2{grid-template-columns:1fr}.toggle{margin-left:0}.summarybar{align-items:flex-start;flex-direction:column}}
 @media print{header,.actions,.card-actions,.pager,.refbox,.footer{display:none!important}body{background:white;color:black}.card{box-shadow:none;break-inside:avoid}.answer{display:block;background:white}}
 </style>
@@ -175,6 +190,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
     </div>
     <p style="margin-bottom:0">Full reference: <a href="universal_answers.md" target="_blank">universal_answers.md</a> · Coverage: <a href="coverage_matrix.md" target="_blank">coverage_matrix.md</a> · Past-paper grammar: <a href="past_paper_blueprint.md" target="_blank">past_paper_blueprint.md</a></p>
   </section>
+  <section id="predictionPanel" class="prediction" aria-live="polite"></section>
   <div id="mockBanner"></div>
   <div class="summarybar">
     <div id="resultCount"></div>
@@ -194,6 +210,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
 <script src="search/universal_references.js"></script>
 <script src="semantic_index.js"></script>
 <script src="search/hybrid-search.js"></script>
+<script src="search/answer-predictor.js"></script>
 <script>
 (() => {
   // --- merge the three banks; source arrays are never mutated ---
@@ -209,7 +226,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
     difficulty:$("difficulty"), family:$("family"), scenario:$("scenario"), marks:$("marks"),
     results:$("results"), count:$("resultCount"), pager:$("pager"), mockBanner:$("mockBanner"),
     searchAnswers:$("searchAnswers"), searchMode:$("searchMode"), semanticStatus:$("semanticStatus"),
-    relatedConcepts:$("relatedConcepts")
+    relatedConcepts:$("relatedConcepts"), predictionPanel:$("predictionPanel")
   };
   let page = 1;
   const PAGE_SIZE = 40;
@@ -233,8 +250,13 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   updateFavStat();
   els.searchMode.value = localStorage.getItem("csc3209-search-mode") || "hybrid";
   const searchEngine = window.createHybridSearchEngine(Q, window.UNIVERSAL_REFERENCES || [], window.CSC3209_SEARCH_CONFIG);
+  const answerPredictor = window.createAnswerPredictor(window.CSC3209_SEARCH_CONFIG);
   const engineInfo = searchEngine.inspect();
   els.semanticStatus.textContent = `Concept search ready · ${engineInfo.concepts} concepts · ${engineInfo.references} refs`;
+  let lastSearch = { results: [], concepts: [] };
+  let lastResults = [];
+  let closedPredictionQuery = "";
+  let predictionCollapsed = false;
 
   const escapeHtml = s => String(s ?? "").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
   function getFiltered(){
@@ -256,6 +278,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
       mockMode,
       favorites
     });
+    lastSearch = search;
     renderConceptSuggestions(search.concepts);
     return search.results;
   }
@@ -274,6 +297,65 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   function renderConceptSuggestions(concepts){
     if(!els.search.value.trim() || !concepts.length){ els.relatedConcepts.innerHTML=""; return; }
     els.relatedConcepts.innerHTML = concepts.map(c=>`<button class="concept-chip ${c.direct?"":"related"}" data-concept="${escapeHtml(c.label)}">${escapeHtml(c.label)}</button>`).join("");
+  }
+
+  function renderPrediction(search){
+    const query=els.search.value.trim();
+    if(!query || mockMode || closedPredictionQuery===query){
+      els.predictionPanel.className="prediction";
+      els.predictionPanel.innerHTML="";
+      return;
+    }
+    const prediction=answerPredictor.predict(query, search.concepts, search.results, window.CSC3209_SEARCH_CONFIG);
+    if(!prediction.shown){
+      els.predictionPanel.className="prediction";
+      els.predictionPanel.innerHTML="";
+      return;
+    }
+    const alt=prediction.alternatives.length
+      ? prediction.alternatives.map(c=>`<span class="chip">${escapeHtml(c.label)} · ${c.percent}%</span>`).join("")
+      : `<span class="prediction-muted">No close compatible alternative.</span>`;
+    const related=(prediction.related||[]).slice(0,5).map(group=>`
+      <div class="prediction-section">
+        <h3>${escapeHtml(group.label)}</h3>
+        <div class="prediction-list">${group.concepts.map(c=>`<span class="chip">${escapeHtml(c.label)}</span>`).join("")}</div>
+      </div>`).join("");
+    const evidence=(prediction.evidence||[]).map(e=>`
+      <button class="small" data-action="evidence" data-evidence-id="${escapeHtml(e.id)}">
+        <b>${escapeHtml(e.id)}</b> · ${escapeHtml(e.title)}<br>
+        <span class="prediction-muted">${escapeHtml(e.snippet||"Strong local match")}</span>
+      </button>`).join("");
+    const ambiguity=prediction.ambiguity?.isAmbiguous
+      ? `<div class="prediction-section"><h3>Ambiguity</h3>${prediction.ambiguity.notes.map(n=>`<p>${escapeHtml(n)}</p>`).join("")}</div>`
+      : "";
+    els.predictionPanel.className=`prediction open${predictionCollapsed?" collapsed":""}`;
+    els.predictionPanel.innerHTML=`
+      <div class="prediction-head">
+        <div>
+          <h2>Predicted Exam Answer</h2>
+          <div class="prediction-muted">Intent: ${escapeHtml(prediction.intent.label)}${prediction.subject?` · Subject: ${escapeHtml(prediction.subject.label)}`:""}</div>
+          <div class="prediction-title">${escapeHtml(prediction.winner.label)}</div>
+          <div><span class="chip">${prediction.winner.percent}% weighted evidence</span> <span class="chip">Confidence: ${escapeHtml(prediction.confidence.level)}</span> <span class="chip">${prediction.independentEvidenceGroups} independent evidence groups</span></div>
+        </div>
+        <div class="prediction-actions">
+          <button class="small" data-action="predict-toggle">${predictionCollapsed?"Show details":"Hide details"}</button>
+          <button class="small" data-action="predict-close" aria-label="Close predicted answer">Close</button>
+        </div>
+      </div>
+      <div class="prediction-body">
+        <div class="prediction-grid">
+          <div>
+            <div class="prediction-section"><h3>Why it fits</h3>${prediction.why.map(line=>`<p>${escapeHtml(line)}</p>`).join("")}</div>
+            <div class="prediction-section"><h3>Alternatives</h3><div class="prediction-list">${alt}</div></div>
+            ${ambiguity}
+            ${related}
+          </div>
+          <div>
+            <div class="prediction-section"><h3>Supporting evidence</h3><div class="prediction-evidence">${evidence}</div></div>
+            <p class="prediction-muted">${prediction.matchingResults} matching results considered. Percentages are weighted evidence share, not probabilities.</p>
+          </div>
+        </div>
+      </div>`;
   }
 
   // Escape first, then render the light markdown used by the expansion answers.
@@ -340,6 +422,8 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
 
   function render(){
     const arr=getFiltered();
+    lastResults=arr;
+    renderPrediction(lastSearch);
     const total=arr.length;
     const pages=Math.max(1,Math.ceil(total/PAGE_SIZE));
     if(page>pages) page=pages;
@@ -360,6 +444,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   function onFilter(){
     clearMode(); favOnly=false; $("favBtn").textContent="Show Favourites";
     localStorage.setItem("csc3209-search-mode", els.searchMode.value);
+    if(closedPredictionQuery && closedPredictionQuery!==els.search.value.trim()) closedPredictionQuery="";
     page=1; render(); updateURL();
   }
   [els.search,els.bank,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks,els.searchAnswers,els.searchMode].forEach(e=>e.addEventListener(e.tagName==="INPUT"?"input":"change",onFilter));
@@ -368,6 +453,33 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
     const btn=e.target.closest("button[data-concept]"); if(!btn)return;
     els.search.value=btn.dataset.concept;
     page=1; render(); updateURL(); els.search.focus();
+  });
+
+  els.predictionPanel.addEventListener("click",e=>{
+    const btn=e.target.closest("button"); if(!btn)return;
+    if(btn.dataset.action==="predict-close"){
+      closedPredictionQuery=els.search.value.trim();
+      renderPrediction(lastSearch);
+      return;
+    }
+    if(btn.dataset.action==="predict-toggle"){
+      predictionCollapsed=!predictionCollapsed;
+      renderPrediction(lastSearch);
+      return;
+    }
+    if(btn.dataset.action==="evidence"){
+      const id=btn.dataset.evidenceId;
+      const idx=lastResults.findIndex(r=>r.id===id);
+      if(idx>=0){ page=Math.floor(idx/PAGE_SIZE)+1; render(); }
+      setTimeout(()=>{
+        const card=els.results.querySelector(`.card[data-id="${CSS.escape(id)}"]`);
+        if(!card)return;
+        card.scrollIntoView({behavior:"smooth",block:"center"});
+        const answer=card.querySelector(".answer");
+        const answerBtn=card.querySelector('button[data-action="answer"]');
+        if(answer && answerBtn && !answer.classList.contains("open")) answerBtn.click();
+      },80);
+    }
   });
 
   $("codeBtn").onclick=()=>{
@@ -405,7 +517,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   $("resetBtn").onclick=()=>{
     [els.search,els.bank,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks].forEach(e=>e.value="");
     els.searchAnswers.checked=false; els.searchMode.value="hybrid"; localStorage.setItem("csc3209-search-mode","hybrid");
-    favOnly=false; codeOnly=false; clearMode(); renderConceptSuggestions([]);
+    favOnly=false; codeOnly=false; closedPredictionQuery=""; predictionCollapsed=false; clearMode(); renderConceptSuggestions([]);
     $("favBtn").textContent="Show Favourites";
     $("codeBtn").textContent="Coding Questions Only"; $("codeBtn").classList.remove("primary");
     page=1;render();history.replaceState(null,"",location.pathname);

@@ -9,6 +9,7 @@ Offline study package generated from your supplied notes/lecture materials and t
 - **questions.json** — machine-readable bank for future processing.
 - **search/concepts.js** — CSC3209 concept ontology used for conceptual search, related-concept chips and match explanations.
 - **search/hybrid-search.js** — local hybrid ranking engine.
+- **search/answer-predictor.js** — deterministic predicted-answer consensus layer built on top of ranked search results.
 - **search/universal_references.js** — parsed reference-result sections from the universal answer material.
 - **semantic_index.js** — generated compact fallback concept index. This is not a neural embedding index.
 - **tools/build_universal_references.py** — regenerates reference search sections from `universal_answers.md`.
@@ -42,12 +43,13 @@ The bank is deliberately difficult. It is designed for an open-book exam where r
    - **Semantic**: prioritizes inferred course concepts from natural-language clues.
    - **Exact / Keywords**: lexical-only ranking for predictable emergency lookup.
 5. Leave **Search answers** off when testing yourself; turn it on when using the bank as a reference engine. Concept search still learns from answer outlines so it can find the right idea from answer-style clues, but the checkbox gives answer text extra lexical weight.
-6. Use related-concept chips to jump from a clue to the formal CSC3209 term.
-7. Use **Random Hard Question** for drills.
-8. Use **Generate 50-Mark Mock** for an exam-shaped practice set.
-9. Star difficult questions; favourites are stored locally in your browser.
-10. Reveal an answer only after attempting the question.
-11. Open `universal_answers.md` for reusable response structures.
+6. Read the **Predicted Exam Answer** panel when it appears. It infers the likely answer category first, then derives a local consensus from matching questions and references.
+7. Use related-concept chips to jump from a clue to the formal CSC3209 term.
+8. Use **Random Hard Question** for drills.
+9. Use **Generate 50-Mark Mock** for an exam-shaped practice set.
+10. Star difficult questions; favourites are stored locally in your browser.
+11. Reveal an answer only after attempting the question.
+12. Open `universal_answers.md` for reusable response structures.
 
 ## Search architecture
 
@@ -85,6 +87,18 @@ The concept layer uses the CSC3209 ontology to connect ordinary clues to formal 
 
 Universal answer sections are indexed as separate **Reference** results instead of one large Markdown blob.
 
+## Predicted Exam Answer
+
+The Predicted Exam Answer feature does not call an LLM and does not generate answers from the internet. It derives a deterministic consensus from the local CSC3209 ontology, ranked question bank, Universal Answer references and existing answer frameworks.
+
+The predictor first classifies the query intent before selecting a winner. Supported intents include architectural pattern, design pattern, quality attribute, tactic, structure/view, framework, trade-off, enhanced quality, threatened quality and general. This prevents a query like `best architectural pattern for distributing notifications` from selecting `Performance` merely because performance appears in many answer outlines; only architectural-pattern concepts are eligible to win.
+
+Weighted evidence percentage is the winner's share of compatible local evidence, not a probability that the answer is correct. Stronger ranked results contribute more than weak results, and repeated generated variants are dampened by evidence-group clustering so near-duplicate questions do not create fake certainty.
+
+Confidence combines winner dominance, margin over the runner-up, independent evidence groups, underlying search strength and intent confidence. Low confidence is still useful: it means the engine found a plausible answer but the evidence is narrow, close, or the query is underspecified.
+
+Alternatives and ambiguity are intentional. If multiple concepts solve different interpretations, the panel shows the runner-up concepts and may explain the distinction, for example pushed event updates versus client polling.
+
 ## Semantic model and offline behavior
 
 This version implements the static conceptual semantic fallback, not neural browser embeddings.
@@ -120,6 +134,12 @@ Run the semantic ranking checks:
 
 ```sh
 node tools/run_search_tests.js
+```
+
+Run the predicted-answer checks:
+
+```sh
+node tools/run_answer_predictor_tests.js
 ```
 
 ## Suggested study workflow
