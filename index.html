@@ -27,7 +27,7 @@ h1{font-size:24px;line-height:1.2;margin:0 0 5px}
 .sub{color:var(--muted);font-size:13px}
 .stats{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
 .badge{padding:5px 9px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:12px;white-space:nowrap}
-.toolbar{display:grid;grid-template-columns:minmax(260px,2fr) repeat(3,minmax(130px,1fr));gap:9px;margin-top:15px}
+.toolbar{display:grid;grid-template-columns:minmax(260px,2fr) minmax(150px,.8fr) repeat(4,minmax(130px,1fr));gap:9px;margin-top:15px}
 .toolbar2{display:grid;grid-template-columns:repeat(4,minmax(120px,1fr));gap:9px;margin-top:9px}
 input,select,button{font:inherit}
 input,select{width:100%;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--text);padding:10px 11px}
@@ -37,6 +37,12 @@ button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 button.ghost{background:transparent}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
 .toggle{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;margin-left:auto}
+.searchmeta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;color:var(--muted);font-size:12px}
+.concepts{display:flex;flex-wrap:wrap;gap:6px}
+.concept-chip{font-size:12px;padding:4px 8px;border-radius:999px;background:var(--soft);color:var(--accent2);border:1px solid color-mix(in srgb,var(--accent) 24%,var(--line));cursor:pointer}
+.concept-chip.related{opacity:.82}
+.matchline{margin-top:10px;color:var(--muted);font-size:12px}
+.scorepill{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--muted)}
 main{max-width:1500px;margin:auto;padding:18px 24px 50px}
 .summarybar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted)}
 #results{display:grid;gap:13px}
@@ -55,6 +61,8 @@ main{max-width:1500px;margin:auto;padding:18px 24px 50px}
 .answer strong{color:var(--accent2)}
 .trap{margin-top:9px;color:var(--danger);font-size:13px}
 .source{margin-top:9px;color:var(--muted);font-size:11px}
+.ref-card .prompt{font-weight:650}
+.ref-body{margin-top:10px;color:var(--text);white-space:pre-wrap}
 .answer pre{white-space:pre;overflow-x:auto;background:#0d1117;color:#e6edf3;padding:13px;border-radius:10px;margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.55;border:1px solid #263041}
 .answer pre code{font-family:inherit;background:none;color:inherit;padding:0}
 .codehdr{margin-top:12px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
@@ -98,6 +106,11 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
     </div>
     <div class="toolbar">
       <input id="search" type="search" placeholder="Search: availability, utility tree, P2P, ping echo, ATM state, hard soft resources..." autocomplete="off">
+      <select id="searchMode" title="Search mode">
+        <option value="hybrid">Hybrid</option>
+        <option value="semantic">Semantic</option>
+        <option value="exact">Exact / Keywords</option>
+      </select>
       <select id="bank"><option value="">All banks</option></select>
       <select id="topic"><option value="">All topics</option></select>
       <select id="subtopic"><option value="">All subtopics / patterns</option></select>
@@ -118,6 +131,11 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
       <button id="resetBtn" class="ghost">Reset</button>
       <button id="exportBtn" class="ghost">Export Current Results</button>
       <label class="toggle"><input id="searchAnswers" type="checkbox"> Search answer outlines too</label>
+    </div>
+    <div class="searchmeta">
+      <span class="badge" id="semanticStatus">Concept search loading…</span>
+      <span>Related concepts</span>
+      <div class="concepts" id="relatedConcepts"></div>
     </div>
   </div>
 </header>
@@ -172,6 +190,10 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
 <script src="questions.js"></script>
 <script src="expansion/questions_advanced.js"></script>
 <script src="expansion/questions_code.js"></script>
+<script src="search/concepts.js"></script>
+<script src="search/universal_references.js"></script>
+<script src="semantic_index.js"></script>
+<script src="search/hybrid-search.js"></script>
 <script>
 (() => {
   // --- merge the three banks; source arrays are never mutated ---
@@ -186,7 +208,8 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
     search:$("search"), bank:$("bank"), topic:$("topic"), subtopic:$("subtopic"), qtype:$("qtype"),
     difficulty:$("difficulty"), family:$("family"), scenario:$("scenario"), marks:$("marks"),
     results:$("results"), count:$("resultCount"), pager:$("pager"), mockBanner:$("mockBanner"),
-    searchAnswers:$("searchAnswers")
+    searchAnswers:$("searchAnswers"), searchMode:$("searchMode"), semanticStatus:$("semanticStatus"),
+    relatedConcepts:$("relatedConcepts")
   };
   let page = 1;
   const PAGE_SIZE = 40;
@@ -208,80 +231,49 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   $("totalStat").textContent = Q.length.toLocaleString()+" questions ("+nNew.toLocaleString()+" new)";
   $("hardStat").textContent = Q.filter(q=>q.difficulty==="Brutal").length.toLocaleString()+" brutal · "+nCode+" coding";
   updateFavStat();
+  els.searchMode.value = localStorage.getItem("csc3209-search-mode") || "hybrid";
+  const searchEngine = window.createHybridSearchEngine(Q, window.UNIVERSAL_REFERENCES || [], window.CSC3209_SEARCH_CONFIG);
+  const engineInfo = searchEngine.inspect();
+  els.semanticStatus.textContent = `Concept search ready · ${engineInfo.concepts} concepts · ${engineInfo.references} refs`;
 
   const escapeHtml = s => String(s ?? "").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
-  const norm = s => String(s ?? "").toLowerCase().normalize("NFKD").replace(/[–—]/g,"-");
-  const synonyms = {
-    "maintainability":["modifiability"], "modifiable":["modifiability"], "uptime":["availability"],
-    "failover":["availability"], "p2p":["peer-to-peer"], "pubsub":["publish-subscribe"],
-    "c&c":["component-and-connector"], "component connector":["component-and-connector"],
-    "qa":["quality attribute"], "asr":["architecture significant requirement"],
-    "soa":["service-oriented architecture"], "mvc":["model-view-controller"]
-  };
-  const queryTokens = raw => {
-    const n=norm(raw).trim(); if(!n) return [];
-    let tokens=n.split(/\s+/).filter(Boolean);
-    Object.entries(synonyms).forEach(([k,vals])=>{ if(n.includes(k)) tokens.push(...vals); });
-    return [...new Set(tokens)];
-  };
-
-  function searchableText(q, includeAnswers){
-    return norm([
-      q.id,q.bank,q.topic,q.subtopic,q.type,q.difficulty,q.family,q.scenario,q.prompt,
-      ...(q.tags||[]), q.code_answer||"",
-      includeAnswers?q.answer_outline:"", includeAnswers?q.exam_trap:""
-    ].join(" "));
-  }
-  function score(q,tokens,includeAnswers){
-    if(!tokens.length) return 1;
-    const text=searchableText(q,includeAnswers);
-    let s=0;
-    for(const t of tokens){
-      if(!text.includes(t)) return 0;
-      if(norm(q.id).includes(t)) s+=9;
-      if(norm(q.subtopic).includes(t)) s+=8;
-      if(norm(q.topic).includes(t)) s+=6;
-      if(norm(q.prompt).includes(t)) s+=5;
-      if(norm((q.tags||[]).join(" ")).includes(t)) s+=3;
-      if(norm(q.code_answer||"").includes(t)) s+=3;
-      if(includeAnswers && norm(q.answer_outline).includes(t)) s+=2;
-    }
-    return s;
-  }
-  function filterValue(q,k,v){ return !v || String(q[k])===String(v); }
-
   function getFiltered(){
     if(mockMode) return mockQuestions.map(q=>({...q,_score:999}));
-    const tokens=queryTokens(els.search.value);
-    const arr=[];
-    for(const q of Q){
-      if(favOnly && !favorites.has(q.id)) continue;
-      if(codeOnly && !q.code_answer) continue;
-      if(!filterValue(q,"bank",els.bank.value)) continue;
-      if(!filterValue(q,"topic",els.topic.value)) continue;
-      if(!filterValue(q,"subtopic",els.subtopic.value)) continue;
-      if(!filterValue(q,"type",els.qtype.value)) continue;
-      if(!filterValue(q,"difficulty",els.difficulty.value)) continue;
-      if(!filterValue(q,"family",els.family.value)) continue;
-      if(!filterValue(q,"scenario",els.scenario.value)) continue;
-      if(!filterValue(q,"marks",els.marks.value)) continue;
-      const sc=score(q,tokens,els.searchAnswers.checked);
-      if(sc>0) arr.push({...q,_score:sc});
-    }
-    if(tokens.length) arr.sort((a,b)=>b._score-a._score || b.marks-a.marks || a.id.localeCompare(b.id));
-    else arr.sort((a,b)=>a.id.localeCompare(b.id));
-    return arr;
+    const search = searchEngine.search({
+      query: els.search.value,
+      mode: els.searchMode.value,
+      includeAnswers: els.searchAnswers.checked,
+      bank: els.bank.value,
+      topic: els.topic.value,
+      subtopic: els.subtopic.value,
+      qtype: els.qtype.value,
+      difficulty: els.difficulty.value,
+      family: els.family.value,
+      scenario: els.scenario.value,
+      marks: els.marks.value,
+      favOnly,
+      codeOnly,
+      mockMode,
+      favorites
+    });
+    renderConceptSuggestions(search.concepts);
+    return search.results;
   }
 
   function highlight(text){
     const raw=els.search.value.trim();
     if(!raw) return escapeHtml(text);
     let out=escapeHtml(text);
-    const toks=queryTokens(raw).filter(t=>t.length>2).sort((a,b)=>b.length-a.length);
+    const toks=searchEngine.tokenize(raw).filter(t=>t.length>2).sort((a,b)=>b.length-a.length);
     for(const t of toks){
       try{ out=out.replace(new RegExp(`(${t.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`,"ig"),"<mark>$1</mark>"); }catch(e){}
     }
     return out;
+  }
+
+  function renderConceptSuggestions(concepts){
+    if(!els.search.value.trim() || !concepts.length){ els.relatedConcepts.innerHTML=""; return; }
+    els.relatedConcepts.innerHTML = concepts.map(c=>`<button class="concept-chip ${c.direct?"":"related"}" data-concept="${escapeHtml(c.label)}">${escapeHtml(c.label)}</button>`).join("");
   }
 
   // Escape first, then render the light markdown used by the expansion answers.
@@ -292,9 +284,12 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   }
 
   function renderCard(q){
+    if(q._resultType==="reference") return renderReferenceCard(q);
     const tags=(q.tags||[]).slice(0,8).map(t=>`<span class="chip">${escapeHtml(t)}</span>`).join("");
     const star=favorites.has(q.id)?"★":"☆";
     const bankCls = q.bank==="Advanced Depth" ? "bank-adv" : q.bank==="Code Implementation" ? "bank-code" : "bank-orig";
+    const explain=searchEngine.explainResult(q);
+    const score=q._score?`<span class="scorepill">score ${Math.round(q._score)}</span>`:"";
     return `<article class="card" data-id="${escapeHtml(q.id)}">
       <div class="meta">
         <span class="chip ${bankCls}">${escapeHtml(q.bank)}</span>
@@ -312,12 +307,34 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
         <div class="prompt">${highlight(q.prompt)}</div>
         <button class="star ${favorites.has(q.id)?"on":""}" data-action="star" title="Favourite">${star}</button>
       </div>
+      ${explain?`<div class="matchline">${escapeHtml(explain)} ${score}</div>`:""}
       <div class="card-actions">
         <button class="small" data-action="answer">Reveal answer</button>
         <button class="small" data-action="copyq">Copy question</button>
         <button class="small" data-action="copya">Copy answer</button>
       </div>
       <div class="answer"><strong>Answer framework / marking outline</strong>\n\n${fmtAnswer(q.answer_outline)}${q.code_answer?`<div class="codehdr">${escapeHtml((q.language||"java").toUpperCase())} — full answer code</div><pre><code>${escapeHtml(q.code_answer)}</code></pre>`:""}${q.exam_trap?`\n<div class="trap"><b>Exam trap:</b> ${escapeHtml(q.exam_trap)}</div>`:""}<div class="source">Grounding: ${escapeHtml(q.source)}</div></div>
+    </article>`;
+  }
+
+  function renderReferenceCard(ref){
+    const explain=searchEngine.explainResult(ref);
+    const concepts=(ref._matchedConcepts||[]).map(c=>`<span class="chip">${escapeHtml(c.label)}</span>`).join("");
+    return `<article class="card ref-card" data-id="${escapeHtml(ref.id)}">
+      <div class="meta">
+        <span class="chip">Reference</span>
+        <span class="chip">${escapeHtml(ref.source||"universal_answers.md")}</span>
+        ${concepts}
+      </div>
+      <div class="qhead">
+        <div class="qid">${escapeHtml(ref.id)}</div>
+        <div class="prompt">${highlight(ref.title)}</div>
+      </div>
+      ${explain?`<div class="matchline">${escapeHtml(explain)} <span class="scorepill">score ${Math.round(ref._score||0)}</span></div>`:""}
+      <div class="ref-body">${highlight(ref.body)}</div>
+      <div class="card-actions">
+        <button class="small" data-action="copyref">Copy reference</button>
+      </div>
     </article>`;
   }
 
@@ -341,9 +358,17 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
     mockMode=false; mockQuestions=[]; els.mockBanner.innerHTML="";
   }
   function onFilter(){
-    clearMode(); favOnly=false; $("favBtn").textContent="Show Favourites"; page=1; render(); updateURL();
+    clearMode(); favOnly=false; $("favBtn").textContent="Show Favourites";
+    localStorage.setItem("csc3209-search-mode", els.searchMode.value);
+    page=1; render(); updateURL();
   }
-  [els.search,els.bank,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks,els.searchAnswers].forEach(e=>e.addEventListener(e.tagName==="INPUT"?"input":"change",onFilter));
+  [els.search,els.bank,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks,els.searchAnswers,els.searchMode].forEach(e=>e.addEventListener(e.tagName==="INPUT"?"input":"change",onFilter));
+
+  els.relatedConcepts.addEventListener("click",e=>{
+    const btn=e.target.closest("button[data-concept]"); if(!btn)return;
+    els.search.value=btn.dataset.concept;
+    page=1; render(); updateURL(); els.search.focus();
+  });
 
   $("codeBtn").onclick=()=>{
     clearMode(); favOnly=false; $("favBtn").textContent="Show Favourites";
@@ -379,7 +404,8 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   };
   $("resetBtn").onclick=()=>{
     [els.search,els.bank,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks].forEach(e=>e.value="");
-    els.searchAnswers.checked=false; favOnly=false; codeOnly=false; clearMode();
+    els.searchAnswers.checked=false; els.searchMode.value="hybrid"; localStorage.setItem("csc3209-search-mode","hybrid");
+    favOnly=false; codeOnly=false; clearMode(); renderConceptSuggestions([]);
     $("favBtn").textContent="Show Favourites";
     $("codeBtn").textContent="Coding Questions Only"; $("codeBtn").classList.remove("primary");
     page=1;render();history.replaceState(null,"",location.pathname);
@@ -391,7 +417,14 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   }
   els.results.addEventListener("click",e=>{
     const btn=e.target.closest("button"); if(!btn)return;
-    const card=btn.closest(".card"), id=card?.dataset.id, q=Q.find(x=>x.id===id);
+    const card=btn.closest(".card"), id=card?.dataset.id;
+    if(btn.dataset.action==="copyref"){
+      const ref=(window.UNIVERSAL_REFERENCES||[]).find(x=>x.id===id); if(!ref)return;
+      copy(`${ref.title}\n\n${ref.body}\n\nSource: ${ref.source}`);
+      btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy reference",900);
+      return;
+    }
+    const q=Q.find(x=>x.id===id);
     if(!q)return;
     if(btn.dataset.action==="answer"){
       const ans=card.querySelector(".answer");ans.classList.toggle("open");btn.textContent=ans.classList.contains("open")?"Hide answer":"Reveal answer";
@@ -410,19 +443,26 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   function updateFavStat(){$("favStat").textContent=`${favorites.size} favourite${favorites.size===1?"":"s"}`;}
   $("exportBtn").onclick=()=>{
     const arr=getFiltered();
-    const text=arr.map(q=>`${q.id}\t${q.bank}\t${q.topic}\t${q.subtopic}\t${q.difficulty}\t${q.marks}\t${q.prompt.replace(/\n/g," ")}\t${q.answer_outline.replace(/\n/g," ")}\t${(q.code_answer||"").replace(/\n/g," ")}`).join("\n");
-    const blob=new Blob(["ID\tBank\tTopic\tSubtopic\tDifficulty\tMarks\tQuestion\tAnswer\tCode\n"+text],{type:"text/tab-separated-values;charset=utf-8"});
+    const text=arr.map(q=>{
+      if(q._resultType==="reference") return `${q.id}\tReference\tUniversal Answer Reference\t${q.title}\t\t\t${q.title.replace(/\n/g," ")}\t${q.body.replace(/\n/g," ")}\t`;
+      return `${q.id}\t${q.bank}\t${q.topic}\t${q.subtopic}\t${q.difficulty}\t${q.marks}\t${q.prompt.replace(/\n/g," ")}\t${q.answer_outline.replace(/\n/g," ")}\t${(q.code_answer||"").replace(/\n/g," ")}`;
+    }).join("\n");
+    const blob=new Blob(["ID\tBank/Type\tTopic\tSubtopic/Title\tDifficulty\tMarks\tQuestion/Title\tAnswer/Reference\tCode\n"+text],{type:"text/tab-separated-values;charset=utf-8"});
     const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="CSC3209_filtered_questions.tsv";a.click();URL.revokeObjectURL(a.href);
   };
 
   function updateURL(){
     const p=new URLSearchParams();
     if(els.search.value)p.set("q",els.search.value);
+    if(els.searchMode.value && els.searchMode.value!=="hybrid")p.set("mode",els.searchMode.value);
+    if(els.searchAnswers.checked)p.set("answers","1");
     [["bank","bank"],["topic","topic"],["subtopic","subtopic"],["type","qtype"],["difficulty","difficulty"],["family","family"],["scenario","scenario"],["marks","marks"]].forEach(([k,id])=>{if($(id).value)p.set(k,$(id).value)});
     const s=p.toString();history.replaceState(null,"",s?`?${s}`:location.pathname);
   }
   const params=new URLSearchParams(location.search);
   if(params.get("q"))els.search.value=params.get("q");
+  if(params.get("mode"))els.searchMode.value=params.get("mode");
+  if(params.get("answers")==="1")els.searchAnswers.checked=true;
   [["bank","bank"],["topic","topic"],["subtopic","subtopic"],["type","qtype"],["difficulty","difficulty"],["family","family"],["scenario","scenario"],["marks","marks"]].forEach(([k,id])=>{if(params.get(k))$(id).value=params.get(k)});
 
   document.addEventListener("keydown",e=>{
