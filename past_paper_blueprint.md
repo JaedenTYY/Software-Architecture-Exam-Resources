@@ -1,6 +1,13 @@
 # Past-Paper Blueprint and Exam Grammar
 
-The three supplied papers differ in domain, but their **question grammar is highly stable**. Use this to practise transfer rather than memorizing one scenario.
+The five supplied exam cycles differ in domain, but their **question grammar is highly stable**. Use this to practise transfer rather than memorizing one scenario.
+
+Exam cycles indexed:
+- January 2024
+- August 2024
+- January 2025
+- August 2025
+- January 2026
 
 ## Family Q1 — Pattern selection under requirements
 Typical shape:
@@ -35,22 +42,29 @@ The named pattern changes between papers. Typical asks:
 4. Explain one enhanced quality.
 5. Explain a different threatened quality.
 
-Patterns seen in supplied papers:
+Patterns seen across the supplied papers include:
 - Service-Oriented Architecture
 - Peer-to-Peer
 - Pipe-and-Filter
+- Model-View-Controller
+- Map-Reduce
 
-Therefore the bank applies the same deep-dive grammar to **every architectural pattern in scope**, not only those three.
+Therefore the bank applies the same deep-dive grammar to **every architectural pattern in scope**, not only the patterns that happened to appear historically.
 
-## Family Q4 — Implementation-level design patterns and/or views
-Typical asks:
+## Family Q4 — Design patterns, architecture views and documentation
+Typical asks include:
 1. Explain a GoF design-pattern category.
 2. Name patterns and motivate them with real examples.
 3. Select an implementation-level pattern for a scenario (especially notification → Observer).
-4. Another variation: draw/explain Client-Server and Layer views, then map elements between the two.
+4. Draw/explain Module, Component-and-Connector or Allocation views.
+5. Map elements across views.
+6. Explain view-template/documentation contents and notation choices.
 
 ### High-value distinction
 Architectural patterns shape system structures; GoF design patterns are closer to class/object implementation design. Similar intent (e.g. Publish-Subscribe vs Observer) does not make them the same abstraction level.
+
+## Family Q5 — Additional design-pattern application
+The August 2025 paper includes a fifth question, reinforcing that the exam is not permanently constrained to a four-question layout. Treat question numbers as historical grammar, not a guaranteed final-paper template.
 
 ## Tough variants in this bank
 The generated bank intentionally adds:
@@ -69,4 +83,3 @@ The generated bank intentionally adds:
 - ATAM sensitivity/trade-off points;
 - ADD decisions driven by competing ASRs;
 - architecture/implementation conformance and risk-based testing.
-
