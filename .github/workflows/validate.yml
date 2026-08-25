@@ -1,0 +1,54 @@
+name: Validate CSC3209 search engine
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild generated reference data
+        run: python3 tools/build_universal_references.py
+
+      - name: Rebuild semantic concept index
+        run: python3 tools/build_semantic_index.py
+
+      - name: JavaScript syntax checks
+        run: |
+          node --check search/hybrid-search.js
+          node --check search/exam-explainer.js
+          node --check search/predictor-calibration.js
+          node --check search/past_paper_references.js
+          node --check search/answer-predictor.js
+
+      - name: Semantic search and ranking tests
+        run: node tools/run_search_tests.js
+
+      - name: Answer predictor tests
+        run: node tools/run_answer_predictor_tests.js
+
+      - name: Why explainer tests
+        run: node tools/run_why_explainer_tests.js
+
+      - name: Repository hardening tests
+        run: node tools/run_hardening_tests.js
