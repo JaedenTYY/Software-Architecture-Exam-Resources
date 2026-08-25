@@ -1,6 +1,6 @@
 # CSC3209 Coverage Matrix
 
-This bank is deliberately broader than the existing notes. The notes were used as a baseline, then the lecture decks and three supplied past papers were used to expand the question perspectives.
+This bank is deliberately broader than the existing notes. The notes were used as a baseline, then the lecture material and five supplied past-paper cycles were used to expand the question perspectives. The browser combines the 3,888-question original bank with the Advanced Depth and Code Implementation expansions for **4,131 searchable questions**.
 
 | Lecture / Scope | Core examinable perspectives covered | Questions |
 |---|---|---:|
@@ -18,7 +18,9 @@ This bank is deliberately broader than the existing notes. The notes were used a
 | Lecture 11 — Implementation & Testing | architecture-code conformance; frameworks/templates/tools; testing levels/strategies; risk-based testing | 72 |
 | Lecture 12 — Architecture Evaluation | ATAM 9 steps; risks/non-risks; risk themes; sensitivity/trade-off points; lightweight evaluation | 72 |
 | Lecture 13 — Design Patterns | creational/structural/behavioral catalogues; Factory Method, Singleton, Composite, Facade, Observer, State; architecture vs design level | 416 |
-| Integrated past-paper practice | Q1 pattern selection/trade-offs/QA; Q2 QA + utility tree/notation; Q3 deep pattern analysis; Q4 design patterns/views/mappings | 224 |
+| Integrated past-paper practice | Q1 pattern selection/trade-offs/QA; Q2 QA + utility tree/notation; Q3 deep pattern analysis; later questions design patterns/views/mappings/documentation | 224 |
+
+The perspective counts above describe generated coverage slices and can overlap where one question intentionally exercises several course concepts. They should not be summed to derive the bank total.
 
 ## Architectural-pattern coverage
 
@@ -86,20 +88,26 @@ This bank is deliberately broader than the existing notes. The notes were used a
 | Distinction | 12 |
 | Work assignment patterns | 12 |
 
-## Difficulty
+## Combined difficulty
 
 | Difficulty | Count |
 |---|---:|
-| Hard | 1088 |
-| Very Hard | 1612 |
-| Brutal | 1188 |
+| Hard | 1,102 |
+| Very Hard | 1,736 |
+| Brutal | 1,293 |
 
-## Bank totals
+## Combined bank totals
 
-- Total questions: **3,888**
-- Unique IDs: **3,888**
-- Scenario domains: **32**
-- Topic packs: **14**
+- Total questions: **4,131**
+- Original bank: **3,888**
+- Advanced Depth: **171**
+- Code Implementation: **72**
+- Past-paper/model-answer searchable reference groups: **21** across **5 exam cycles**
+- Past-paper cycles: January 2024, August 2024, January 2025, August 2025, January 2026
+
+## Original generator baseline
+
+The original 3,888-question generator used 32 scenario domains and 14 topic packs. The Advanced Depth and Code Implementation banks are additional expansion layers and are included in the 4,131-question browser total above.
 
 ## Design principle
 
