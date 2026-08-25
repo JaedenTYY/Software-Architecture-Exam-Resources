@@ -63,6 +63,10 @@ jobs:
           node --check tools/run_why_explainer_tests.js
           node --check tools/run_hardening_tests.js
           node --check tools/run_local_semantic_tests.js
+          node --check tools/run_answer_completeness_tests.js
+
+      - name: Question-bank answer completeness audit
+        run: node tools/run_answer_completeness_tests.js
 
       - name: Semantic search and ranking tests
         run: node tools/run_search_tests.js
