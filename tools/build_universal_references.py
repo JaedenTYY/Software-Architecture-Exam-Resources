@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Parse universal_answers.md into section-level browser search results."""
+"""Parse universal and past-paper answer material into browser search results."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ import json
 import re
 from pathlib import Path
 
+from build_past_paper_references import build as build_past_paper_references
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "universal_answers.md"
@@ -45,7 +46,8 @@ def main() -> None:
         + ";\n",
         encoding="utf-8",
     )
-    print(f"Wrote {OUT.relative_to(ROOT)} with {len(sections)} references")
+    print(f"Wrote {OUT.relative_to(ROOT)} with {len(sections)} universal references")
+    build_past_paper_references()
 
 
 if __name__ == "__main__":
