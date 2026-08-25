@@ -40,26 +40,47 @@
     const q = normalize(raw);
     return conceptTerms(concept).some(term => term && !/\s/.test(term) && term.length > 3 && q.includes(term) && !containsTerm(q, term));
   }
-  function resultSupportsConcept(result, concept) {
+  function resultText(result) {
+    return [result.title,result.subtopic,result.topic,result.prompt,result.answer_outline,result.exam_trap,result.body,(result.tags || []).join(" ")].filter(Boolean).join(" ");
+  }
+  function resultSupportsConcept(result, concept, text = null) {
     if (!result || !concept) return false;
     const label = normalize(concept.label), id = normalize(concept.id);
     if ([result.subtopic,result.topic,result.title].some(v => [label,id].includes(normalize(v)))) return true;
     if ((result.tags || []).some(t => [label,id].includes(normalize(t)))) return true;
-    const text = [result.title,result.subtopic,result.topic,result.prompt,result.answer_outline,result.exam_trap,result.body,(result.tags || []).join(" ")].filter(Boolean).join(" ");
-    return conceptTerms(concept).some(term => containsTerm(text, term));
+    const haystack = text == null ? resultText(result) : text;
+    return conceptTerms(concept).some(term => containsTerm(haystack, term));
   }
-  function sanitizeStaleSemanticResult(result, config) {
-    const directBefore = (result._matchedConcepts || []).filter(m => m.kind === "direct");
-    const matched = (result._matchedConcepts || []).filter(m => m.kind !== "direct" || resultSupportsConcept(result, config?.byId?.[m.id]));
-    const concepts = (result._concepts || []).filter(label => {
-      const concept = (config?.concepts || []).find(c => normalize(c.label) === normalize(label));
-      return !concept || resultSupportsConcept(result, concept);
-    });
+
+  // Retrieval sanitation only checks concepts that actually affected this query's
+  // semantic score. The older implementation revalidated every indexed concept
+  // on every returned document and made interactive search unnecessarily slow.
+  function sanitizeDirectSemanticResult(result, config) {
+    const matches = result._matchedConcepts || [];
+    const directBefore = matches.filter(m => m.kind === "direct");
+    if (!directBefore.length) return result;
+    const text = resultText(result);
+    const matched = matches.filter(m => m.kind !== "direct" || resultSupportsConcept(result, config?.byId?.[m.id], text));
     const directAfter = matched.filter(m => m.kind === "direct").length;
-    if (directAfter === directBefore.length) return { ...result, _concepts: concepts };
-    const oldSem = Number(result._semanticScore || 0), ratio = directBefore.length ? directAfter / directBefore.length : 1;
+    if (directAfter === directBefore.length) return result;
+    const oldSem = Number(result._semanticScore || 0), ratio = directAfter / directBefore.length;
     const newSem = oldSem * Math.max(0.2, ratio), oldScore = Number(result._score || 0);
-    return { ...result, _matchedConcepts: matched, _concepts: concepts, _semanticScore: newSem, _score: Math.max(Number(result._lexicalScore || 0) * 0.2, oldScore - oldSem + newSem) };
+    return { ...result, _matchedConcepts: matched, _semanticScore: newSem, _score: Math.max(Number(result._lexicalScore || 0) * 0.2, oldScore - oldSem + newSem) };
+  }
+
+  // Predictor/explainer only consume a small evidence window. Clean potentially
+  // stale generated `_concepts` there rather than across all 4,131 results.
+  function sanitizeEvidenceWindow(results, config, limit = 50) {
+    const byLabel = new Map((config?.concepts || []).map(c => [normalize(c.label), c]));
+    return (results || []).map((result, index) => {
+      if (index >= limit || !(result._concepts || []).length) return result;
+      const text = resultText(result);
+      const concepts = (result._concepts || []).filter(label => {
+        const concept = byLabel.get(normalize(label));
+        return !concept || resultSupportsConcept(result, concept, text);
+      });
+      return concepts.length === (result._concepts || []).length ? result : { ...result, _concepts: concepts };
+    });
   }
 
   function rerankSecurityLookup(search) {
@@ -84,7 +105,7 @@
       const cfg = config || root.CSC3209_SEARCH_CONFIG || {};
       engine.search = function(options = {}) {
         let search = originalSearch(options);
-        let results = (search.results || []).map(r => sanitizeStaleSemanticResult(r, cfg));
+        let results = (search.results || []).map(r => sanitizeDirectSemanticResult(r, cfg));
         if (QUESTION_FILTER_KEYS.some(key => String(options[key] || "").trim())) results = results.filter(r => r._resultType !== "reference");
         search = { ...search, results: results.sort((a,b) => Number(b._score || 0) - Number(a._score || 0)) };
         return rerankSecurityLookup(search);
@@ -189,7 +210,7 @@
       const predictor = factory(config, options), originalPredict = predictor.predict.bind(predictor);
       predictor.predict = function(rawQuery, queryConcepts, rankedResults, configOverride) {
         const q = normalize(rawQuery), cfg = configOverride || config || root.CSC3209_SEARCH_CONFIG || {};
-        const prepared = conservativeReferenceEvidence(rankedResults);
+        const prepared = conservativeReferenceEvidence(sanitizeEvidenceWindow(rankedResults, cfg));
         let p;
         if (asksForTopLevelQuality(rawQuery)) {
           p = originalPredict(rawQuery, queryConcepts, prepared, topLevelQualityConfig(cfg));
@@ -268,7 +289,7 @@
         if (/\b(p2p|peer[- ]?to[- ]?peer)\b.*\b(scalable|scalability|scale|scales|scaling)\b/.test(q)) { concepts=upsertDirectConcept(concepts,cfg,"peer-to-peer"); raw+= " scalability scale more peers add resources demand capacity"; }
         if (/\b(client[- ]?server|client server)\b.*\b(slow|slower|high load|heavy load|many clients|bottleneck|overload|overloaded)\b/.test(q)) { concepts=upsertDirectConcept(concepts,cfg,"client-server"); concepts=upsertDirectConcept(concepts,cfg,"performance"); raw+=" performance bottleneck response time throughput high load"; }
         if (/\bpalm\b/.test(q)) { concepts=removeConcept(concepts,"business-goal"); concepts=upsertDirectConcept(concepts,cfg,"palm"); }
-        const p=originalExplain(raw,concepts,conservativeReferenceEvidence(rankedResults));
+        const p=originalExplain(raw,concepts,conservativeReferenceEvidence(sanitizeEvidenceWindow(rankedResults,cfg)));
         if (!p?.subject) return p;
         const concept=cfg.byId?.[p.subject.id];
         if (!concept || !embeddedFalsePositive(rawQuery,concept) || boundaryDirectIds(rawQuery,queryConcepts,cfg).has(concept.id)) return p;
