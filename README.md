@@ -36,7 +36,48 @@ git pull
 
 ### 2. Run the app
 
-#### Option A — open directly
+#### Option A — same npm workflow as the notes repo
+
+Install dependencies:
+
+```sh
+npm install
+```
+
+Build generated search/reference indexes, vector assets and the browser MiniLM bundle:
+
+```sh
+npm run index
+```
+
+Run the local development server:
+
+```sh
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000/
+```
+
+The dev server also exposes a GitHub Pages-style subpath for path-safety testing:
+
+```text
+http://localhost:3000/Software-Architecture-Exam-Resources/
+```
+
+For the normal production/static check:
+
+```sh
+npm run build
+npm run serve
+```
+
+This repository is already a static site, so `npm run build` validates/regenerates committed static assets instead of producing a Next.js `out/` directory. `npm run serve` serves the repository root as the deployable static site.
+
+#### Option B — open directly
 
 Open `index.html` in your browser.
 
@@ -48,9 +89,9 @@ open index.html
 
 Or simply double-click `index.html` in Finder/File Explorer.
 
-Exact search and CSC3209 concept fallback search work this way. Browser security normally prevents `file://` pages from fetching ONNX/model assets, so full MiniLM vector semantic search requires Option B.
+Exact search and CSC3209 concept fallback search work this way. Browser security normally prevents `file://` pages from fetching ONNX/model assets, so full MiniLM vector semantic search requires the npm dev/serve flow above or another HTTP static server.
 
-#### Option B — run a local static server
+#### Option C — run any local static server
 
 Recommended for full local vector-semantic search:
 
