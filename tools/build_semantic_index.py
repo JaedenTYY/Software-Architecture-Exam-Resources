@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,14 +31,14 @@ def normalize(value: object) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
+@lru_cache(maxsize=None)
+def term_pattern(term: str) -> re.Pattern[str]:
+    return re.compile(rf"(^|[^a-z0-9+#]){re.escape(term)}(?=$|[^a-z0-9+#])")
+
+
 def contains_term(haystack: str, term: str) -> bool:
     """Match a complete token/phrase, never a substring inside another word."""
-    if not term:
-        return False
-    return re.search(
-        rf"(^|[^a-z0-9+#]){re.escape(term)}(?=$|[^a-z0-9+#])",
-        haystack,
-    ) is not None
+    return bool(term and term_pattern(term).search(haystack))
 
 
 def load_concepts() -> list[dict]:
@@ -97,15 +98,10 @@ def main() -> None:
         text = " | ".join(
             str(part or "")
             for part in [
-                q.get("topic"),
-                q.get("subtopic"),
-                q.get("type"),
-                q.get("scenario"),
-                " ".join(q.get("tags", [])),
-                q.get("prompt"),
-                q.get("answer_outline"),
-                q.get("exam_trap"),
-                q.get("source"),
+                q.get("topic"), q.get("subtopic"), q.get("type"),
+                q.get("scenario"), " ".join(q.get("tags", [])),
+                q.get("prompt"), q.get("answer_outline"),
+                q.get("exam_trap"), q.get("source"),
             ]
         )
         documents.append({"id": q["id"], "concepts": infer_concepts(text, q, concepts)})
@@ -117,9 +113,7 @@ def main() -> None:
         "documents": documents,
     }
     OUT.write_text(
-        "window.SEMANTIC_INDEX = "
-        + json.dumps(payload, separators=(",", ":"))
-        + ";\n",
+        "window.SEMANTIC_INDEX = " + json.dumps(payload, separators=(",", ":")) + ";\n",
         encoding="utf-8",
     )
     print(f"Wrote {OUT.relative_to(ROOT)} with {len(documents)} documents")
