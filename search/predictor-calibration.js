@@ -52,9 +52,6 @@
     return conceptTerms(concept).some(term => containsTerm(haystack, term));
   }
 
-  // Retrieval sanitation only checks concepts that actually affected this query's
-  // semantic score. The older implementation revalidated every indexed concept
-  // on every returned document and made interactive search unnecessarily slow.
   function sanitizeDirectSemanticResult(result, config) {
     const matches = result._matchedConcepts || [];
     const directBefore = matches.filter(m => m.kind === "direct");
@@ -68,8 +65,6 @@
     return { ...result, _matchedConcepts: matched, _semanticScore: newSem, _score: Math.max(Number(result._lexicalScore || 0) * 0.2, oldScore - oldSem + newSem) };
   }
 
-  // Predictor/explainer only consume a small evidence window. Clean potentially
-  // stale generated `_concepts` there rather than across all 4,131 results.
   function sanitizeEvidenceWindow(results, config, limit = 50) {
     const byLabel = new Map((config?.concepts || []).map(c => [normalize(c.label), c]));
     return (results || []).map((result, index) => {
@@ -196,6 +191,43 @@
       why:["ATAM is the evaluation method described by the combined clues: business drivers, a Utility Tree, architectural approaches, risks, sensitivity points and trade-off points."],
       examReady:["ATAM evaluates an architecture against business drivers and prioritized quality scenarios, identifying risks, non-risks, sensitivity points and trade-off points before construction is complete."], calibration:"explicit-atam-method" };
   }
+
+  function implementationConformanceClue(q) {
+    return /\bimplementation (code )?(does not|doesn't|must not|violates?|violate|diverges?|drifts?)\b.*\b(documented )?architecture\b/.test(q)
+      || /\b(implementation conformance|architecture[- ]code conformance|architecture erosion|architecture drift|detect dependency violations?|enforce layering in code)\b/.test(q)
+      || (/\bimplementation\b/.test(q) && /\b(documented )?architecture\b/.test(q) && /\b(violate|violation|conformance|dependency)\b/.test(q));
+  }
+  function conformanceFocusedResults(results) {
+    return (results || []).map(result => {
+      const subtopic = normalize(result.subtopic), title = normalize(result.title);
+      const erosion = /\barchitecture (erosion|drift)\b/.test(subtopic) || /\bimplementation[- ]conformance\b/.test(title);
+      const matched = [...(result._matchedConcepts || [])];
+      let concepts = [...(result._concepts || [])];
+      let score = Number(result._score || 0);
+      if (erosion) {
+        score *= 2.2;
+        concepts = ["Implementation Conformance", ...concepts.filter(x => normalize(x) !== "architecture-informed testing" && normalize(x) !== "implementation conformance")];
+        if (!matched.some(m => m.id === "implementation-conformance")) matched.unshift({id:"implementation-conformance",label:"Implementation Conformance",kind:"direct",score:999});
+        matched.splice(0, matched.length, ...matched.filter(m => m.id !== "architecture-testing"));
+      } else if (concepts.some(x => normalize(x) === "architecture-informed testing")) {
+        score *= 0.45;
+      }
+      return { ...result, _score:score, _concepts:concepts, _matchedConcepts:matched };
+    }).sort((a,b) => Number(b._score || 0) - Number(a._score || 0));
+  }
+  function calibrateConformance(p) {
+    if (!p || p.state !== "answer") return p;
+    if (p.winner?.id === "implementation-conformance") {
+      return { ...p, confidence:{...(p.confidence || {}),level:"High",numeric:Math.max(0.72,Number(p.confidence?.numeric || 0)),queryAlignment:1}, ambiguity:{isAmbiguous:false,notes:[]}, alternatives:(p.alternatives || []).filter(a => a.id !== "architecture-testing"), calibration:"explicit-implementation-conformance" };
+    }
+    const candidate = (p.candidates || []).find(c => c.id === "implementation-conformance") || (p.alternatives || []).find(c => c.id === "implementation-conformance");
+    if (!candidate) return p;
+    return { ...p, winner:candidate, alternatives:[p.winner,...(p.alternatives || [])].filter(a => a && a.id !== "implementation-conformance" && a.id !== "architecture-testing").slice(0,3),
+      confidence:{...(p.confidence || {}),level:"High",numeric:Math.max(0.72,Number(p.confidence?.numeric || 0)),queryAlignment:1}, ambiguity:{isAmbiguous:false,notes:[]},
+      why:["Implementation Conformance is the direct concept: the implementation must preserve documented architectural constraints and dependency rules rather than eroding or drifting away from the architecture."],
+      examReady:["Implementation Conformance checks that implemented code and dependencies obey the documented architecture; dependency-rule violations are architecture erosion, not merely a testing-prioritization issue."], calibration:"explicit-implementation-conformance" };
+  }
+
   function enforcePredictionBoundary(p, raw, queryConcepts, config) {
     if (!p || p.state !== "answer" || !p.winner) return p;
     const concept = config?.byId?.[p.winner.id];
@@ -216,6 +248,11 @@
           p = originalPredict(rawQuery, queryConcepts, prepared, topLevelQualityConfig(cfg));
           if (p?.state === "answer" && p.winner && !TOP_LEVEL_QUALITY_IDS.has(p.winner.id)) p = { ...p, state:"insufficient-information", stateLabel:"Insufficient Information", winner:null, alternatives:[], why:["The evidence identifies a supporting quality detail or metric, but not one of the seven top-level CSC3209 quality attributes strongly enough to present as the answer."], missingInformation:["Identify the top-level quality attribute: Availability, Interoperability, Modifiability, Performance, Security, Testability or Usability."] };
           return enforcePredictionBoundary(p, rawQuery, queryConcepts, cfg);
+        }
+        if (implementationConformanceClue(q)) {
+          const concepts = upsertDirectConcept(queryConcepts,cfg,"implementation-conformance");
+          p = originalPredict(`${rawQuery} implementation conformance architecture code conformance`,concepts,conformanceFocusedResults(prepared),configOverride);
+          return enforcePredictionBoundary(calibrateConformance(p),rawQuery,concepts,cfg);
         }
         if (atamMethodClue(q)) {
           const concepts = upsertDirectConcept(queryConcepts, cfg, "atam");
