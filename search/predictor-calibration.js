@@ -92,6 +92,20 @@
     return { ...search, results: rows };
   }
 
+  function p2pResourceMechanismClue(raw) {
+    const q = normalize(raw);
+    const actors = /\b(machines?|computers?|nodes?|peers?|participants?|entities?)\b/.test(q) || /\bfrom others\b/.test(q);
+    const resources = /\bresources?\b/.test(q);
+    const contributes = /\b(contribute|contributes|contributing|provide|provides|providing|share|shares|sharing)\b/.test(q);
+    const consumes = /\b(consume|consumes|consuming|request|requests|requesting|use|uses|using)\b/.test(q);
+    return actors && resources && contributes && consumes;
+  }
+
+  function retrievalQuery(raw, mode) {
+    if (mode === "exact" || !p2pResourceMechanismClue(raw)) return raw;
+    return `${raw} peer-to-peer equal peers request provide resource sharing decentralized`;
+  }
+
   function installHybridSearchCalibration() {
     const factory = root.createHybridSearchEngine;
     if (typeof factory !== "function" || factory.__csc3209Hardening) return;
@@ -99,7 +113,8 @@
       const engine = factory(questions, references, config), originalSearch = engine.search.bind(engine);
       const cfg = config || root.CSC3209_SEARCH_CONFIG || {};
       engine.search = function(options = {}) {
-        let search = originalSearch(options);
+        const calibratedOptions = options.query ? { ...options, query: retrievalQuery(options.query, options.mode) } : options;
+        let search = originalSearch(calibratedOptions);
         let results = (search.results || []).map(r => sanitizeDirectSemanticResult(r, cfg));
         if (QUESTION_FILTER_KEYS.some(key => String(options[key] || "").trim())) results = results.filter(r => r._resultType !== "reference");
         search = { ...search, results: results.sort((a,b) => Number(b._score || 0) - Number(a._score || 0)) };
