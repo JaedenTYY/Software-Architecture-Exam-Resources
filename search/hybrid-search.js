@@ -94,19 +94,20 @@
     }
 
     function buildReferenceDoc(r) {
+      const isPastPaper = r.referenceType === "past-paper";
       const fieldText = {
         id: r.id,
-        topic: "Universal Answer Reference",
+        topic: isPastPaper ? "Past Paper / Model Answer" : "Universal Answer Reference",
         subtopic: r.title,
-        type: "Reference",
+        type: isPastPaper ? "Past Paper / Model Answer" : "Reference",
         tags: (r.concepts || []).join(" "),
         prompt: r.title,
         answer: r.body,
         source: r.source || "universal_answers.md"
       };
-      const semanticText = [r.title, r.body, fieldText.tags].join(" | ");
+      const semanticText = [r.title, r.body, fieldText.tags, fieldText.topic].join(" | ");
       const conceptsFound = mergeConceptLists(
-        (r.concepts || []).map(id => ({ id, strength: 2.8, reason: "reference tag" })),
+        (r.concepts || []).map(id => ({ id, strength: 2.8, reason: isPastPaper ? "past-paper tag" : "reference tag" })),
         inferConcepts(semanticText)
       );
       return {
@@ -219,10 +220,13 @@
     }
 
     function containsTerm(haystack, term) {
-      if (term.length <= 3) {
-        return new RegExp(`(^|\\s)${term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`).test(haystack);
-      }
-      return haystack.includes(term);
+      if (!term) return false;
+      const escaped = String(term).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      // Use phrase/token boundaries for every alias length. The previous
+      // substring path caused false matches such as layer→player and
+      // state→statement. Hyphens/slashes may occur inside a phrase, but the
+      // characters immediately outside the complete phrase must be boundaries.
+      return new RegExp(`(^|[^a-z0-9+#])${escaped}(?=$|[^a-z0-9+#])`).test(haystack);
     }
 
     function getQueryData(raw) {
@@ -287,9 +291,9 @@
         if (doc.norm.id === query.norm) total += weights.exactId;
         if (doc.norm.subtopic === query.norm) total += weights.exactSubtopic;
         if (doc.norm.topic === query.norm) total += weights.exactTopic;
-        if (query.norm.length >= 3 && doc.norm.prompt.includes(query.norm)) total += weights.exactPhrasePrompt;
-        if (query.norm.length >= 3 && doc.norm.tags.includes(query.norm)) total += weights.exactPhraseTags;
-        if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && doc.norm.answer.includes(query.norm)) total += weights.exactPhraseAnswer;
+        if (query.norm.length >= 3 && containsTerm(doc.norm.prompt, query.norm)) total += weights.exactPhrasePrompt;
+        if (query.norm.length >= 3 && containsTerm(doc.norm.tags, query.norm)) total += weights.exactPhraseTags;
+        if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(doc.norm.answer, query.norm)) total += weights.exactPhraseAnswer;
       }
       if (mode === "exact") return total * weights.lexical;
       return total;
@@ -419,6 +423,10 @@
     }
 
     function explainResult(result) {
+      if (result.referenceType === "past-paper") {
+        const conceptsText = result._matchedConcepts?.length ? ` · ${result._matchedConcepts.map(c => c.label).join(" · ")}` : "";
+        return `Past-paper/model-answer match${conceptsText}`;
+      }
       if (result._matchedConcepts?.length) {
         const prefix = result._semanticScore >= result._lexicalScore ? "Semantic match" : "Matched concepts";
         return `${prefix}: ${result._matchedConcepts.map(c => c.label).join(" · ")}`;
