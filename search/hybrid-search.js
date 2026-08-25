@@ -10,12 +10,41 @@
       concept: c,
       terms: [c.label, ...(c.aliases || [])].map(normalize).filter(Boolean)
     }));
-    const generatedConceptIndex = new Map(((root.SEMANTIC_INDEX && root.SEMANTIC_INDEX.documents) || []).map(d => [d.id, d.concepts || []]));
+    const conceptNameLookup = new Map();
+    for (const concept of concepts) {
+      conceptNameLookup.set(normalize(concept.id), concept.id);
+      conceptNameLookup.set(normalize(concept.label), concept.id);
+    }
 
-    const questionDocs = (questions || []).map(q => buildQuestionDoc(q));
-    const referenceDocs = (references || []).map(r => buildReferenceDoc(r));
-    const docs = [...questionDocs, ...referenceDocs];
-    const idf = buildIdf(docs);
+    const generatedConceptIndex = new Map(
+      ((root.SEMANTIC_INDEX && root.SEMANTIC_INDEX.documents) || []).map(d => [d.id, d.concepts || []])
+    );
+
+    const BASE_FIELD_WEIGHTS = {
+      id: 18,
+      subtopic: 12,
+      topic: 8,
+      tags: 7,
+      prompt: 5.5,
+      type: 3,
+      scenario: 2.2,
+      family: 1.6,
+      bank: 1.2,
+      source: 0.8
+    };
+    const ANSWER_WEIGHT = 2.4;
+    const REFERENCE_ANSWER_WEIGHT = 2.4;
+
+    const basePostings = new Map();
+    const answerPostings = new Map();
+    const conceptPostings = new Map();
+    const fuzzyCache = new Map();
+    const answerNormCache = new Map();
+    const docs = [];
+    const questionDocs = [];
+    const referenceDocs = [];
+    const docById = new Map();
+    let answerIndexReady = false;
     let lastQueryKey = "";
     let lastQueryData = null;
 
@@ -53,111 +82,33 @@
 
     function tokenCounts(value) {
       const counts = new Map();
-      for (const token of normalize(value).split(/\s+/).filter(Boolean).map(stem)) {
+      const raw = normalize(value).split(/\s+/).filter(Boolean);
+      for (const rawToken of raw) {
+        if (stop.has(rawToken)) continue;
+        const token = stem(rawToken);
         if (token.length < 2) continue;
         counts.set(token, (counts.get(token) || 0) + 1);
       }
       return counts;
     }
 
-    function buildQuestionDoc(q) {
-      const fieldText = {
-        id: q.id,
-        bank: q.bank,
-        topic: q.topic,
-        subtopic: q.subtopic,
-        type: q.type,
-        difficulty: q.difficulty,
-        family: q.family,
-        scenario: q.scenario,
-        tags: (q.tags || []).join(" "),
-        prompt: q.prompt,
-        answer: [q.answer_outline, q.exam_trap, q.code_answer].filter(Boolean).join(" "),
-        source: q.source
-      };
-      const semanticText = [
-        q.topic, q.subtopic, q.type, q.scenario, fieldText.tags, q.prompt,
-        q.answer_outline, q.exam_trap, q.source
-      ].filter(Boolean).join(" | ");
-      const conceptsFound = conceptsFromGeneratedIndex(q, semanticText);
-      return {
-        kind: "question",
-        id: q.id,
-        item: q,
-        fieldText,
-        norm: mapValues(fieldText, normalize),
-        counts: mapValues(fieldText, tokenCounts),
-        uniqueTokens: new Set(tokenize(Object.values(fieldText).join(" "), { keepStopWords: true })),
-        concepts: conceptsFound,
-        conceptSet: new Set(conceptsFound.map(c => c.id)),
-        semanticText
-      };
+    function containsTerm(haystack, term) {
+      if (boundary.containsTerm) return boundary.containsTerm(haystack, term);
+      if (!term) return false;
+      const escaped = String(term).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+      return new RegExp(`(^|[^a-z0-9+#])${escaped}(s|es)?(?=$|[^a-z0-9+#])`).test(normalize(haystack));
     }
 
-    function buildReferenceDoc(r) {
-      const isPastPaper = r.referenceType === "past-paper";
-      const fieldText = {
-        id: r.id,
-        topic: isPastPaper ? "Past Paper / Model Answer" : "Universal Answer Reference",
-        subtopic: r.title,
-        type: isPastPaper ? "Past Paper / Model Answer" : "Reference",
-        tags: (r.concepts || []).join(" "),
-        prompt: r.title,
-        answer: r.body,
-        source: r.source || "universal_answers.md"
-      };
-      const semanticText = [r.title, r.body, fieldText.tags, fieldText.topic].join(" | ");
-      const conceptsFound = mergeConceptLists(
-        (r.concepts || []).map(id => ({ id, strength: 2.8, reason: isPastPaper ? "past-paper tag" : "reference tag" })),
-        inferConcepts(semanticText)
-      );
-      return {
-        kind: "reference",
-        id: r.id,
-        item: r,
-        fieldText,
-        norm: mapValues(fieldText, normalize),
-        counts: mapValues(fieldText, tokenCounts),
-        uniqueTokens: new Set(tokenize(Object.values(fieldText).join(" "), { keepStopWords: true })),
-        concepts: conceptsFound,
-        conceptSet: new Set(conceptsFound.map(c => c.id)),
-        semanticText
-      };
-    }
-
-    function conceptsFromGeneratedIndex(q, semanticText) {
-      const indexed = generatedConceptIndex.get(q.id) || [];
-      const subtopic = normalize(q.subtopic);
-      const topic = normalize(q.topic);
-      const tags = new Set((q.tags || []).map(normalize));
-      const indexedRows = indexed.map(id => {
-        const concept = byId[id];
-        const label = normalize(concept?.label);
-        let strength = 1.8;
-        let reason = "generated index";
-        if (label && subtopic === label) { strength = 6.2; reason = "subtopic"; }
-        else if (label && topic === label) { strength = 4.2; reason = "topic"; }
-        else if (label && (tags.has(label) || tags.has(id))) { strength = 3.3; reason = "tag"; }
-        return { id, strength, reason };
-      }).filter(c => byId[c.id]);
-
-      // The generated index is a build-time optimization, not the source of truth.
-      // Always merge live ontology inference so newly added CSC3209 concepts work
-      // immediately even before semantic_index.js is regenerated.
-      return mergeConceptLists(indexedRows, inferConcepts(semanticText, q)).slice(0, 18);
-    }
-
-    function mapValues(obj, fn) {
-      return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, fn(v)]));
-    }
-
-    function buildIdf(items) {
-      const df = new Map();
-      for (const doc of items) {
-        for (const token of doc.uniqueTokens) df.set(token, (df.get(token) || 0) + 1);
+    function mergeConceptLists(...lists) {
+      const merged = new Map();
+      for (const list of lists) {
+        for (const c of list || []) {
+          if (!byId[c.id]) continue;
+          const prev = merged.get(c.id);
+          if (!prev || c.strength > prev.strength) merged.set(c.id, c);
+        }
       }
-      const n = Math.max(1, items.length);
-      return token => Math.log(1 + (n - (df.get(token) || 0) + 0.5) / ((df.get(token) || 0) + 0.5));
+      return [...merged.values()].sort((a, b) => b.strength - a.strength);
     }
 
     function inferConcepts(text, q) {
@@ -179,14 +130,14 @@
           }
         }
         if (!strength) {
-          const aliasScores = entry.terms.map(term => {
+          let best = 0;
+          for (const term of entry.terms) {
             const aliasTokens = tokenize(term);
-            if (!aliasTokens.length) return 0;
+            if (!aliasTokens.length) continue;
             const hits = aliasTokens.filter(t => fullTokens.has(t)).length;
-            if (!hits) return 0;
-            return hits / Math.max(2, aliasTokens.length);
-          });
-          const best = Math.max(0, ...aliasScores);
+            if (!hits) continue;
+            best = Math.max(best, hits / Math.max(2, aliasTokens.length));
+          }
           if (best >= 0.65) {
             strength = best * 1.4;
             reason = "term overlap";
@@ -208,23 +159,195 @@
       return mergeConceptLists(direct).slice(0, 18);
     }
 
-    function mergeConceptLists(...lists) {
-      const merged = new Map();
-      for (const list of lists) {
-        for (const c of list || []) {
-          if (!byId[c.id]) continue;
-          const prev = merged.get(c.id);
-          if (!prev || c.strength > prev.strength) merged.set(c.id, c);
-        }
+    function conceptsFromGeneratedIndex(q) {
+      const rows = [];
+      const indexed = generatedConceptIndex.get(q.id) || [];
+      const subtopic = normalize(q.subtopic);
+      const topic = normalize(q.topic);
+      const tags = new Set((q.tags || []).map(normalize));
+
+      for (const id of indexed) {
+        const concept = byId[id];
+        if (!concept) continue;
+        const label = normalize(concept.label);
+        let strength = 1.8;
+        let reason = "generated index";
+        if (label && subtopic === label) { strength = 6.2; reason = "subtopic"; }
+        else if (label && topic === label) { strength = 4.2; reason = "topic"; }
+        else if (label && (tags.has(label) || tags.has(normalize(id)))) { strength = 3.3; reason = "tag"; }
+        rows.push({ id, strength, reason });
       }
-      return [...merged.values()].sort((a, b) => b.strength - a.strength);
+
+      // Runtime document-side ontology inference used to scan every full question
+      // during page startup. Generated concept assignments are now the source of
+      // truth; only cheap exact metadata matches are supplemented here.
+      for (const [value, strength, reason] of [
+        [subtopic, 6.2, "subtopic"],
+        [topic, 4.2, "topic"]
+      ]) {
+        const id = conceptNameLookup.get(value);
+        if (id) rows.push({ id, strength, reason });
+      }
+      for (const tag of tags) {
+        const id = conceptNameLookup.get(tag);
+        if (id) rows.push({ id, strength: 3.3, reason: "tag" });
+      }
+      return mergeConceptLists(rows).slice(0, 18);
     }
 
-    function containsTerm(haystack, term) {
-      if (boundary.containsTerm) return boundary.containsTerm(haystack, term);
-      if (!term) return false;
-      const escaped = String(term).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
-      return new RegExp(`(^|[^a-z0-9+#])${escaped}(s|es)?(?=$|[^a-z0-9+#])`).test(normalize(haystack));
+    function registerConcepts(doc) {
+      for (const concept of doc.concepts) {
+        let set = conceptPostings.get(concept.id);
+        if (!set) conceptPostings.set(concept.id, set = new Set());
+        set.add(doc.index);
+      }
+    }
+
+    function addFieldToPostings(postings, value, fieldWeight, docIndex) {
+      if (!value || !fieldWeight) return;
+      for (const [token, tf] of tokenCounts(value)) {
+        let posting = postings.get(token);
+        if (!posting) postings.set(token, posting = new Map());
+        const contribution = fieldWeight * (1 + Math.log(tf + 1));
+        posting.set(docIndex, (posting.get(docIndex) || 0) + contribution);
+      }
+    }
+
+    function buildQuestionDoc(q) {
+      const tags = (q.tags || []).join(" ");
+      const conceptsFound = conceptsFromGeneratedIndex(q);
+      const doc = {
+        kind: "question",
+        id: q.id,
+        item: q,
+        index: docs.length,
+        norm: {
+          id: normalize(q.id),
+          bank: normalize(q.bank),
+          topic: normalize(q.topic),
+          subtopic: normalize(q.subtopic),
+          type: normalize(q.type),
+          difficulty: normalize(q.difficulty),
+          family: normalize(q.family),
+          scenario: normalize(q.scenario),
+          tags: normalize(tags),
+          prompt: normalize(q.prompt),
+          source: normalize(q.source)
+        },
+        concepts: conceptsFound,
+        conceptSet: new Set(conceptsFound.map(c => c.id)),
+        conceptStrength: new Map(conceptsFound.map(c => [c.id, c.strength]))
+      };
+      docs.push(doc);
+      questionDocs.push(doc);
+      docById.set(doc.id, doc);
+      for (const [field, fieldWeight] of Object.entries(BASE_FIELD_WEIGHTS)) {
+        const value = field === "tags" ? tags : q[field];
+        addFieldToPostings(basePostings, value, fieldWeight, doc.index);
+      }
+      registerConcepts(doc);
+      return doc;
+    }
+
+    function buildReferenceDoc(r) {
+      const isPastPaper = r.referenceType === "past-paper";
+      const tags = (r.concepts || []).join(" ");
+      const titleConcepts = inferConcepts(`${r.title || ""} ${tags}`);
+      const conceptsFound = mergeConceptLists(
+        (r.concepts || []).map(id => ({ id, strength: 2.8, reason: isPastPaper ? "past-paper tag" : "reference tag" })),
+        titleConcepts
+      );
+      const doc = {
+        kind: "reference",
+        id: r.id,
+        item: r,
+        index: docs.length,
+        norm: {
+          id: normalize(r.id),
+          bank: "",
+          topic: normalize(isPastPaper ? "Past Paper / Model Answer" : "Universal Answer Reference"),
+          subtopic: normalize(r.title),
+          type: normalize(isPastPaper ? "Past Paper / Model Answer" : "Reference"),
+          difficulty: "",
+          family: "",
+          scenario: "",
+          tags: normalize(tags),
+          prompt: normalize(r.title),
+          source: normalize(r.source || "universal_answers.md")
+        },
+        concepts: conceptsFound,
+        conceptSet: new Set(conceptsFound.map(c => c.id)),
+        conceptStrength: new Map(conceptsFound.map(c => [c.id, c.strength]))
+      };
+      docs.push(doc);
+      referenceDocs.push(doc);
+      docById.set(doc.id, doc);
+      addFieldToPostings(basePostings, r.id, BASE_FIELD_WEIGHTS.id, doc.index);
+      addFieldToPostings(basePostings, r.title, BASE_FIELD_WEIGHTS.subtopic + BASE_FIELD_WEIGHTS.prompt, doc.index);
+      addFieldToPostings(basePostings, tags, BASE_FIELD_WEIGHTS.tags, doc.index);
+      addFieldToPostings(basePostings, r.body, REFERENCE_ANSWER_WEIGHT, doc.index);
+      addFieldToPostings(basePostings, r.source || "universal_answers.md", BASE_FIELD_WEIGHTS.source, doc.index);
+      registerConcepts(doc);
+      return doc;
+    }
+
+    for (const q of questions || []) buildQuestionDoc(q);
+    for (const r of references || []) buildReferenceDoc(r);
+
+    const totalDocs = Math.max(1, docs.length);
+
+    function ensureAnswerIndex() {
+      if (answerIndexReady) return;
+      for (const doc of questionDocs) {
+        const q = doc.item;
+        const answer = [q.answer_outline, q.exam_trap, q.code_answer].filter(Boolean).join(" ");
+        addFieldToPostings(answerPostings, answer, ANSWER_WEIGHT, doc.index);
+      }
+      answerIndexReady = true;
+      fuzzyCache.clear();
+    }
+
+    function idfFor(posting) {
+      const df = posting ? posting.size : 0;
+      return Math.log(1 + (totalDocs - df + 0.5) / (df + 0.5));
+    }
+
+    function editDistanceAtMostOne(a, b) {
+      if (a === b) return true;
+      if (Math.abs(a.length - b.length) > 1) return false;
+      let i = 0, j = 0, edits = 0;
+      while (i < a.length && j < b.length) {
+        if (a[i] === b[j]) { i += 1; j += 1; continue; }
+        edits += 1;
+        if (edits > 1) return false;
+        if (a.length > b.length) i += 1;
+        else if (b.length > a.length) j += 1;
+        else { i += 1; j += 1; }
+      }
+      return edits + (a.length - i) + (b.length - j) <= 1;
+    }
+
+    function fuzzyAlternatives(token, includeAnswers) {
+      if (token.length < 5) return [];
+      const cacheKey = `${includeAnswers ? 1 : 0}:${token}`;
+      if (fuzzyCache.has(cacheKey)) return fuzzyCache.get(cacheKey);
+      const matches = [];
+      const seen = new Set();
+      const scan = postings => {
+        for (const candidate of postings.keys()) {
+          if (seen.has(candidate)) continue;
+          seen.add(candidate);
+          if (Math.abs(candidate.length - token.length) > 1) continue;
+          if (editDistanceAtMostOne(token, candidate)) {
+            matches.push(candidate);
+            if (matches.length >= 6) return true;
+          }
+        }
+        return false;
+      };
+      if (!scan(basePostings) && includeAnswers) scan(answerPostings);
+      fuzzyCache.set(cacheKey, matches);
+      return matches;
     }
 
     function getQueryData(raw) {
@@ -252,48 +375,66 @@
       return queryData;
     }
 
-    function lexicalScore(doc, query, includeAnswers, mode) {
-      if (!query.tokens.length) return doc.kind === "question" ? 1 : 0;
-      const fieldWeights = {
-        id: 18,
-        subtopic: 12,
-        topic: 8,
-        tags: 7,
-        prompt: 5.5,
-        type: 3,
-        scenario: 2.2,
-        family: 1.6,
-        bank: 1.2,
-        answer: includeAnswers || doc.kind === "reference" ? 2.4 : 0.7,
-        source: 0.8
-      };
-      let total = 0;
-      let matched = 0;
+    function addPostingScores(token, postings, stateByDoc, touched, multiplier) {
+      const posting = postings.get(token);
+      if (!posting) return false;
+      const idf = Math.max(0.6, idfFor(posting));
+      for (const [docIndex, rawScore] of posting) {
+        let state = stateByDoc.get(docIndex);
+        if (!state) stateByDoc.set(docIndex, state = { score: 0, matched: 0 });
+        state.score += rawScore * idf * multiplier;
+        touched.add(docIndex);
+      }
+      return true;
+    }
+
+    function collectLexicalCandidates(query, includeAnswers) {
+      if (includeAnswers) ensureAnswerIndex();
+      const stateByDoc = new Map();
       for (const token of query.tokens) {
-        let tokenScore = 0;
-        for (const [field, counts] of Object.entries(doc.counts)) {
-          const fw = fieldWeights[field] || 1;
-          if (!fw) continue;
-          const tf = counts.get(token) || fuzzyTokenCount(token, doc, field);
-          if (!tf) continue;
-          tokenScore += fw * (1 + Math.log(tf + 1)) * Math.max(0.6, idf(token));
+        const touched = new Set();
+        const exactBase = addPostingScores(token, basePostings, stateByDoc, touched, 1);
+        const exactAnswer = includeAnswers ? addPostingScores(token, answerPostings, stateByDoc, touched, 1) : false;
+        if (!exactBase && !exactAnswer) {
+          for (const fuzzy of fuzzyAlternatives(token, includeAnswers)) {
+            addPostingScores(fuzzy, basePostings, stateByDoc, touched, 0.35);
+            if (includeAnswers) addPostingScores(fuzzy, answerPostings, stateByDoc, touched, 0.35);
+          }
         }
-        if (tokenScore > 0) {
-          matched += 1;
-          total += tokenScore;
-        }
+        for (const docIndex of touched) stateByDoc.get(docIndex).matched += 1;
       }
-      const coverage = matched / Math.max(1, query.tokens.length);
-      total *= 0.35 + coverage;
-      if (query.norm) {
-        if (doc.norm.id === query.norm) total += weights.exactId;
-        if (doc.norm.subtopic === query.norm) total += weights.exactSubtopic;
-        if (doc.norm.topic === query.norm) total += weights.exactTopic;
-        if (query.norm.length >= 3 && containsTerm(doc.norm.prompt, query.norm)) total += weights.exactPhrasePrompt;
-        if (query.norm.length >= 3 && containsTerm(doc.norm.tags, query.norm)) total += weights.exactPhraseTags;
-        if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(doc.norm.answer, query.norm)) total += weights.exactPhraseAnswer;
+      return stateByDoc;
+    }
+
+    function getAnswerNorm(doc) {
+      if (doc.kind === "reference") return normalize(doc.item.body);
+      if (answerNormCache.has(doc.id)) return answerNormCache.get(doc.id);
+      const q = doc.item;
+      const value = normalize([q.answer_outline, q.exam_trap, q.code_answer].filter(Boolean).join(" "));
+      answerNormCache.set(doc.id, value);
+      return value;
+    }
+
+    function exactBoost(doc, query, includeAnswers) {
+      if (!query.norm) return 0;
+      let total = 0;
+      if (doc.norm.id === query.norm) total += weights.exactId;
+      if (doc.norm.subtopic === query.norm) total += weights.exactSubtopic;
+      if (doc.norm.topic === query.norm) total += weights.exactTopic;
+      if (query.norm.length >= 3 && containsTerm(doc.norm.prompt, query.norm)) total += weights.exactPhrasePrompt;
+      if (query.norm.length >= 3 && containsTerm(doc.norm.tags, query.norm)) total += weights.exactPhraseTags;
+      if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(getAnswerNorm(doc), query.norm)) {
+        total += weights.exactPhraseAnswer;
       }
-      if (mode === "exact") return total * weights.lexical;
+      return total;
+    }
+
+    function lexicalScore(doc, query, includeAnswers, mode, lexicalState) {
+      if (!query.tokens.length) return doc.kind === "question" ? 1 : 0;
+      const state = lexicalState || { score: 0, matched: 0 };
+      const coverage = state.matched / Math.max(1, query.tokens.length);
+      let total = state.score * (0.35 + coverage) + exactBoost(doc, query, includeAnswers);
+      if (mode === "exact") total *= weights.lexical;
       return total;
     }
 
@@ -305,7 +446,7 @@
       if (doc.norm.topic === query.norm) score += 0.72;
       if (query.norm.length >= 3 && containsTerm(doc.norm.prompt, query.norm)) score += 0.55;
       if (query.norm.length >= 3 && containsTerm(doc.norm.tags, query.norm)) score += 0.48;
-      if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(doc.norm.answer, query.norm)) score += 0.32;
+      if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(getAnswerNorm(doc), query.norm)) score += 0.32;
       for (const conceptId of query.directConceptIds || []) {
         const concept = byId[conceptId];
         if (!concept || !doc.conceptSet.has(conceptId)) continue;
@@ -321,45 +462,17 @@
       return Math.min(1, score);
     }
 
-    function fuzzyTokenCount(token, doc, field) {
-      if (token.length < 5 || field === "answer" || field === "source") return 0;
-      let best = 0;
-      for (const candidate of doc.counts[field].keys()) {
-        if (Math.abs(candidate.length - token.length) > 1) continue;
-        if (editDistanceAtMostOne(token, candidate)) {
-          best = Math.max(best, 0.35);
-          break;
-        }
-      }
-      return best;
-    }
-
-    function editDistanceAtMostOne(a, b) {
-      if (a === b) return true;
-      if (Math.abs(a.length - b.length) > 1) return false;
-      let i = 0, j = 0, edits = 0;
-      while (i < a.length && j < b.length) {
-        if (a[i] === b[j]) { i += 1; j += 1; continue; }
-        edits += 1;
-        if (edits > 1) return false;
-        if (a.length > b.length) i += 1;
-        else if (b.length > a.length) j += 1;
-        else { i += 1; j += 1; }
-      }
-      return edits + (a.length - i) + (b.length - j) <= 1;
-    }
-
     function semanticScore(doc, query, includeAnswers) {
       if (!query.concepts.length) return { score: 0, matches: [] };
       let score = 0;
       const matches = [];
       for (const qc of query.concepts) {
         const qConcept = byId[qc.id];
-        const direct = doc.concepts.find(c => c.id === qc.id);
-        if (direct) {
+        const directStrength = doc.conceptStrength.get(qc.id);
+        if (directStrength != null) {
           const directQueryConcept = query.directConceptIds.has(qc.id);
           const multiplier = directQueryConcept ? weights.conceptDirect : weights.conceptRelated;
-          const value = multiplier * Math.min(2.5, qc.strength) * Math.min(2.4, direct.strength) / 5;
+          const value = multiplier * Math.min(2.5, qc.strength) * Math.min(2.4, directStrength) / 5;
           score += value;
           if (directQueryConcept) {
             const label = normalize(qConcept.label);
@@ -372,11 +485,20 @@
           matches.push({ id: qc.id, label: qConcept.label, score: value, kind: directQueryConcept ? "direct" : "related" });
           continue;
         }
-        const relatedHit = doc.concepts.find(c => (qConcept.related || []).includes(c.id) || (byId[c.id]?.related || []).includes(qc.id));
-        if (relatedHit) {
-          const value = weights.conceptRelated * Math.min(2.2, qc.strength) * Math.min(2.2, relatedHit.strength) / 6;
+        let relatedId = null;
+        for (const candidateId of qConcept.related || []) {
+          if (doc.conceptSet.has(candidateId)) { relatedId = candidateId; break; }
+        }
+        if (!relatedId) {
+          for (const candidateId of doc.conceptSet) {
+            if ((byId[candidateId]?.related || []).includes(qc.id)) { relatedId = candidateId; break; }
+          }
+        }
+        if (relatedId) {
+          const relatedStrength = doc.conceptStrength.get(relatedId) || 1;
+          const value = weights.conceptRelated * Math.min(2.2, qc.strength) * Math.min(2.2, relatedStrength) / 6;
           score += value;
-          matches.push({ id: relatedHit.id, label: byId[relatedHit.id].label, score: value, kind: "related" });
+          matches.push({ id: relatedId, label: byId[relatedId].label, score: value, kind: "related" });
         }
       }
       if (includeAnswers) score *= 1.08;
@@ -391,18 +513,71 @@
       return { score: score * weights.semantic / 72, matches: deduped.slice(0, 5) };
     }
 
+    function hasStructuredFilters(options) {
+      return ["bank", "topic", "subtopic", "qtype", "difficulty", "family", "scenario", "marks"].some(key => !!options[key]);
+    }
+
+    function passesQuestionFilters(q, options) {
+      if (options.favOnly && !options.favorites?.has(q.id)) return false;
+      if (options.codeOnly && !q.code_answer) return false;
+      const filterMap = [
+        ["bank", "bank"], ["topic", "topic"], ["subtopic", "subtopic"], ["qtype", "type"],
+        ["difficulty", "difficulty"], ["family", "family"], ["scenario", "scenario"], ["marks", "marks"]
+      ];
+      for (const [optionKey, questionKey] of filterMap) {
+        if (options[optionKey] && String(q[questionKey]) !== String(options[optionKey])) return false;
+      }
+      return true;
+    }
+
+    function isEligible(doc, options, includeReferences) {
+      if (doc.kind === "reference") return includeReferences;
+      return passesQuestionFilters(doc.item, options);
+    }
+
+    function addConceptCandidates(candidateIndices, query) {
+      for (const qc of query.concepts) {
+        const posting = conceptPostings.get(qc.id);
+        if (!posting) continue;
+        for (const docIndex of posting) candidateIndices.add(docIndex);
+      }
+    }
+
     function search(options) {
       const query = getQueryData(options.query || "");
       const mode = options.mode || "hybrid";
       const includeAnswers = !!options.includeAnswers;
-      const includeReferences = !!query.norm && !options.favOnly && !options.codeOnly && !options.mockMode;
-      const activeDocs = includeReferences ? docs : questionDocs;
+      const includeReferences = !!query.norm && !options.favOnly && !options.codeOnly && !options.mockMode && !hasStructuredFilters(options);
       const vectorScores = options.vectorScores instanceof Map ? options.vectorScores : null;
+
+      if (!query.tokens.length && !query.concepts.length) {
+        const rows = [];
+        for (const doc of questionDocs) {
+          if (!passesQuestionFilters(doc.item, options)) continue;
+          rows.push({ ...doc.item, _resultType: "question", _score: 1, _lexicalScore: 1, _semanticScore: 0, _vectorScore: 0, _exactMetadataScore: 0, _matchedConcepts: [], _concepts: doc.concepts.slice(0, 9).map(c => byId[c.id]?.label).filter(Boolean) });
+        }
+        rows.sort((a, b) => String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
+        return { results: rows, concepts: [] };
+      }
+
+      const lexicalStates = collectLexicalCandidates(query, includeAnswers);
+      const candidateIndices = new Set(lexicalStates.keys());
+      if (mode !== "exact") addConceptCandidates(candidateIndices, query);
+      if (vectorScores && mode !== "exact") {
+        for (const id of vectorScores.keys()) {
+          const doc = docById.get(id);
+          if (doc) candidateIndices.add(doc.index);
+        }
+      }
+
       const out = [];
-      for (const doc of activeDocs) {
-        if (doc.kind === "question" && !passesQuestionFilters(doc.item, options)) continue;
-        const lex = mode === "semantic" ? 0 : lexicalScore(doc, query, includeAnswers, mode);
-        const lexicalForVector = mode === "semantic" ? lexicalScore(doc, query, includeAnswers, "hybrid") : lex;
+      for (const docIndex of candidateIndices) {
+        const doc = docs[docIndex];
+        if (!doc || !isEligible(doc, options, includeReferences)) continue;
+        const lexicalState = lexicalStates.get(docIndex) || { score: 0, matched: 0 };
+        const rawLex = lexicalScore(doc, query, includeAnswers, mode === "exact" ? "exact" : "hybrid", lexicalState);
+        const lex = mode === "semantic" ? 0 : rawLex;
+        const lexicalForVector = rawLex;
         const semInfo = mode === "exact" ? { score: 0, matches: [] } : semanticScore(doc, query, includeAnswers);
         let lexicalPart = lex;
         if (mode === "hybrid" && query.concepts.length && query.tokens.length > 1) {
@@ -414,29 +589,28 @@
         }
         const vectorScore = vectorScores && mode !== "exact" ? Number(vectorScores.get(doc.id) || 0) : 0;
         const exactScore = exactMetadataScore(doc, query, includeAnswers);
-        const score = mode === "semantic" ? semInfo.score + lex * 0.12 : mode === "exact" ? lex : lexicalPart + semInfo.score;
-        if (!query.tokens.length && !query.concepts.length && doc.kind === "reference") continue;
-        if (!query.tokens.length || score > 0.05 || vectorScore > 0) {
-          out.push({
-            ...doc.item,
-            _resultType: doc.kind,
-            _score: score,
-            _lexicalScore: lex,
-            _lexicalScoreForVector: lexicalForVector,
-            _semanticScore: semInfo.score,
-            _vectorScore: vectorScore,
-            _exactMetadataScore: exactScore,
-            _matchedConcepts: semInfo.matches,
-            _concepts: doc.concepts.slice(0, 9).map(c => byId[c.id]?.label).filter(Boolean)
-          });
-        }
+        const score = mode === "semantic" ? semInfo.score + rawLex * 0.12 : mode === "exact" ? rawLex : lexicalPart + semInfo.score;
+        if (score <= 0.05 && vectorScore <= 0) continue;
+        out.push({
+          ...doc.item,
+          _resultType: doc.kind,
+          _score: score,
+          _lexicalScore: lex,
+          _lexicalScoreForVector: lexicalForVector,
+          _semanticScore: semInfo.score,
+          _vectorScore: vectorScore,
+          _exactMetadataScore: exactScore,
+          _matchedConcepts: semInfo.matches,
+          _concepts: doc.concepts.slice(0, 9).map(c => byId[c.id]?.label).filter(Boolean)
+        });
       }
+
       if (vectorScores && mode !== "exact") applyVectorRanking(out, mode);
-      out.sort((a, b) => {
-        if (!query.tokens.length && !query.concepts.length) return String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
-        return b._score - a._score || Number(b.marks || 0) - Number(a.marks || 0) || String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
-      });
-      return { results: out, concepts: query.concepts.slice(0, 10).map(c => ({ id: c.id, label: byId[c.id].label, direct: query.directConceptIds.has(c.id) })) };
+      out.sort((a, b) => b._score - a._score || Number(b.marks || 0) - Number(a.marks || 0) || String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
+      return {
+        results: out,
+        concepts: query.concepts.slice(0, 10).map(c => ({ id: c.id, label: byId[c.id].label, direct: query.directConceptIds.has(c.id) }))
+      };
     }
 
     function applyVectorRanking(rows, mode) {
@@ -462,27 +636,13 @@
 
     function vectorEligibleIds(options) {
       const query = getQueryData(options.query || "");
-      const includeReferences = !!query.norm && !options.favOnly && !options.codeOnly && !options.mockMode;
-      const activeDocs = includeReferences ? docs : questionDocs;
+      const includeReferences = !!query.norm && !options.favOnly && !options.codeOnly && !options.mockMode && !hasStructuredFilters(options);
       const ids = [];
-      for (const doc of activeDocs) {
-        if (doc.kind === "question" && !passesQuestionFilters(doc.item, options)) continue;
-        ids.push(doc.id);
+      for (const doc of questionDocs) {
+        if (passesQuestionFilters(doc.item, options)) ids.push(doc.id);
       }
+      if (includeReferences) for (const doc of referenceDocs) ids.push(doc.id);
       return ids;
-    }
-
-    function passesQuestionFilters(q, options) {
-      if (options.favOnly && !options.favorites?.has(q.id)) return false;
-      if (options.codeOnly && !q.code_answer) return false;
-      const filterMap = [
-        ["bank", "bank"], ["topic", "topic"], ["subtopic", "subtopic"], ["qtype", "type"],
-        ["difficulty", "difficulty"], ["family", "family"], ["scenario", "scenario"], ["marks", "marks"]
-      ];
-      for (const [optionKey, questionKey] of filterMap) {
-        if (options[optionKey] && String(q[questionKey]) !== String(options[optionKey])) return false;
-      }
-      return true;
     }
 
     function explainResult(result) {
@@ -509,7 +669,13 @@
       explainResult,
       tokenize,
       normalize,
-      inspect: () => ({ questions: questionDocs.length, references: referenceDocs.length, concepts: concepts.length })
+      inspect: () => ({
+        questions: questionDocs.length,
+        references: referenceDocs.length,
+        concepts: concepts.length,
+        strategy: "inverted-index",
+        vocabulary: basePostings.size
+      })
     };
   }
 
