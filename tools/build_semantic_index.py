@@ -2,10 +2,9 @@
 """Build the compact CSC3209 concept index used for search diagnostics.
 
 This fallback semantic index is not a neural embedding index. It maps question
-and reference IDs to concepts inferred from the central course ontology. A true
-embedding build can be added later with sentence-transformers/all-MiniLM-L6-v2,
-but this script intentionally has no third-party dependencies so the static
-study package remains easy to rebuild.
+IDs to concepts inferred from the central course ontology. Matching uses the
+same phrase/token boundary semantics as the browser search so rebuilding the
+index cannot reintroduce substring errors such as layer->player.
 """
 
 from __future__ import annotations
@@ -14,7 +13,6 @@ import json
 import re
 import subprocess
 from pathlib import Path
-
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_FILES = [
@@ -30,6 +28,16 @@ def normalize(value: object) -> str:
     text = text.replace("&", " and ").replace("–", "-").replace("—", "-")
     text = re.sub(r"[^a-z0-9+#.\-/]+", " ", text)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def contains_term(haystack: str, term: str) -> bool:
+    """Match a complete token/phrase, never a substring inside another word."""
+    if not term:
+        return False
+    return re.search(
+        rf"(^|[^a-z0-9+#]){re.escape(term)}(?=$|[^a-z0-9+#])",
+        haystack,
+    ) is not None
 
 
 def load_concepts() -> list[dict]:
@@ -79,12 +87,6 @@ def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
             found.append((concept["id"], score))
     found.sort(key=lambda x: (-x[1], x[0]))
     return [concept_id for concept_id, _ in found[:10]]
-
-
-def contains_term(haystack: str, term: str) -> bool:
-    if len(term) <= 3:
-        return re.search(rf"(^|\s){re.escape(term)}(\s|$)", haystack) is not None
-    return term in haystack
 
 
 def main() -> None:
