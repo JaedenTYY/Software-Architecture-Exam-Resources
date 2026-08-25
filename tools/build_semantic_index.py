@@ -3,8 +3,8 @@
 
 This fallback semantic index is not a neural embedding index. It maps question
 IDs to concepts inferred from the central course ontology. Matching uses the
-same phrase/token boundary semantics as the browser search so rebuilding the
-index cannot reintroduce substring errors such as layer->player.
+same phrase/token/plural boundary semantics as the browser search so rebuilding
+the index cannot reintroduce substring errors such as layer->player.
 """
 
 from __future__ import annotations
@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,7 +22,6 @@ QUESTION_FILES = [
     ROOT / "expansion" / "questions_code.json",
 ]
 OUT = ROOT / "semantic_index.js"
-BOUNDARY_WORD_CHARS = frozenset("abcdefghijklmnopqrstuvwxyz0123456789+#")
 
 # Course/generator labels that are deliberately narrower than the public
 # ontology wording. Keeping these build-time aliases here makes regeneration
@@ -36,21 +36,6 @@ def normalize(value: object) -> str:
     text = text.replace("&", " and ").replace("–", "-").replace("—", "-")
     text = re.sub(r"[^a-z0-9+#.\-/]+", " ", text)
     return re.sub(r"\s+", " ", text).strip()
-
-
-def contains_term(haystack: str, term: str) -> bool:
-    """Match a complete token/phrase, never a substring inside another word."""
-    if not term:
-        return False
-    start = haystack.find(term)
-    while start >= 0:
-        end = start + len(term)
-        left_ok = start == 0 or haystack[start - 1] not in BOUNDARY_WORD_CHARS
-        right_ok = end == len(haystack) or haystack[end] not in BOUNDARY_WORD_CHARS
-        if left_ok and right_ok:
-            return True
-        start = haystack.find(term, start + 1)
-    return False
 
 
 def load_concepts() -> list[dict]:
@@ -97,6 +82,7 @@ def prepare_concepts(concepts: list[dict]) -> list[dict]:
 
 def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
     haystack = normalize(text)
+    haystack_terms = phrase_set(haystack.split())
     found: list[tuple[str, float]] = []
     subtopic = normalize(row.get("subtopic"))
     topic = normalize(row.get("topic"))
@@ -122,13 +108,51 @@ def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
         if architecture_erosion and concept["id"] == "implementation-conformance":
             score += 5.0
         for term in concept["_terms"]:
-            if contains_term(haystack, term):
+            if contains_term(haystack_terms, term):
                 score += 2.0 + min(2.0, len(term.split()) * 0.25)
                 break
         if score > 0:
             found.append((concept["id"], score))
     found.sort(key=lambda x: (-x[1], x[0]))
     return [concept_id for concept_id, _ in found[:10]]
+
+
+def phrase_set(tokens: list[str]) -> set[str]:
+    phrases: set[str] = set()
+    max_len = 12
+    for i in range(len(tokens)):
+        parts = []
+        for token in tokens[i : i + max_len]:
+            parts.append(token)
+            phrases.add(" ".join(parts))
+    return phrases
+
+
+def contains_term(haystack_terms: set[str], term: str) -> bool:
+    return any(variant in haystack_terms for variant in term_variants(term))
+
+
+@lru_cache(maxsize=None)
+def term_variants(term: str) -> tuple[str, ...]:
+    normalized = normalize(term)
+    if not normalized:
+        return tuple()
+    variants = [normalized]
+    parts = normalized.split()
+    if not parts:
+        return tuple(variants)
+    last = parts[-1]
+    if re.fullmatch(r"[a-z0-9]+", last) and len(last) >= 3:
+        plural_last: set[str] = set()
+        if re.search(r"(s|x|z|ch|sh)$", last):
+            plural_last.add(last + "es")
+        else:
+            plural_last.add(last + "s")
+        if re.search(r"[bcdfghjklmnpqrstvwxyz]y$", last):
+            plural_last.add(last[:-1] + "ies")
+        for plural in sorted(plural_last):
+            variants.append(" ".join([*parts[:-1], plural]))
+    return tuple(variants)
 
 
 def main() -> None:

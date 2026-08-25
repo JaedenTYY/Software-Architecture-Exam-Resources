@@ -28,7 +28,7 @@
   const concepts = [
     {
       id: "availability", label: "Availability", category: "quality",
-      aliases: ["availability","available","uptime","readiness to provide service","service remains available","continues working","continue operating","still works","users continue normally","service restored","recovery from faults","server crashes","component crashes","unreachable component","fault tolerance","adding more servers does not guarantee","more servers does not automatically guarantee"],
+      aliases: ["availability","available","uptime","readiness to provide service","service remains available","continues working","continue operating","still works","users continue normally","service restored","recovery from faults","server crashes","component crashes","backend dies","keep service usable","service usable when backend dies","unreachable component","fault tolerance","adding more servers does not guarantee","more servers does not automatically guarantee"],
       related: ["fault","failure","failover","redundancy","single-point-of-failure","health-check","recovery"]
     },
     { id: "fault", label: "Fault", category: "quality", aliases: ["fault","internal fault","defect","bug","component crash","server crash","hardware fault","software fault","fault occurs"], related: ["failure","availability","recovery"] },
@@ -57,7 +57,7 @@
     { id: "dependency", label: "Dependency", category: "principle", aliases: ["dependency","dependencies","allowed to use","depends on","upward call","bridging","ripple effect"], related: ["layer","low-coupling","modifiability"] },
 
     { id: "security", label: "Security", category: "quality", aliases: ["security","secure","attack","unauthorized access","confidentiality","integrity","access control","security boundary","attacker","reject unauthorized"], related: ["authentication","authorization","confidentiality","integrity"] },
-    { id: "authentication", label: "Authentication", category: "security", aliases: ["authentication","authenticate","login","user identity","who are you","prove identity","verify identity","proof of identity","credentials","password","are you really"], related: ["security","authorization"] },
+    { id: "authentication", label: "Authentication", category: "security", aliases: ["authentication","authenticate","login","user identity","who are you","prove identity","verify identity","verify user identity","verify who user actually is","verify who a user actually is","proof of identity","credentials","password","are you really"], related: ["security","authorization"] },
     { id: "authorization", label: "Authorization", category: "security", aliases: ["authorization","authorize","permission","allowed to do","are you allowed","access rights","privilege","role based","what are you allowed to do"], related: ["security","authentication"] },
     { id: "confidentiality", label: "Confidentiality", category: "security", aliases: ["confidentiality","secret","private data","prevent disclosure","data exposure"], related: ["security"] },
     { id: "integrity", label: "Integrity", category: "security", aliases: ["integrity","tampering","modified without permission","unauthorized modification","data correctness"], related: ["security"] },
@@ -118,6 +118,50 @@
     { id: "pattern-selection-framework", label: "Pattern Selection Framework", category: "reference", aliases: ["pattern advantage limitation","pattern selection","requirement concern pattern mechanism qa effect trade off","requirement architectural problem pattern elements connector mechanism quality consequence trade-off"], related: ["quality-attribute-scenario","asr"] }
   ];
 
+  function escapeRegex(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function pluralizeLastToken(term) {
+    const parts = String(term || "").trim().split(/\s+/);
+    if (!parts.length) return [];
+    const last = parts[parts.length - 1];
+    if (!/^[a-z0-9]+$/.test(last) || last.length < 3) return [];
+    const variants = new Set();
+    if (/[sxz]$/.test(last) || /(ch|sh)$/.test(last)) variants.add(`${last}es`);
+    else variants.add(`${last}s`);
+    if (/[bcdfghjklmnpqrstvwxyz]y$/.test(last)) variants.add(`${last.slice(0, -1)}ies`);
+    return [...variants].map(v => [...parts.slice(0, -1), v].join(" "));
+  }
+
+  function termVariants(term) {
+    const normalized = normalizeTerm(term);
+    if (!normalized) return [];
+    return [normalized, ...pluralizeLastToken(normalized)];
+  }
+
+  function normalizeTerm(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[–—]/g, "-")
+      .replace(/&/g, " and ")
+      .replace(/[^a-z0-9+#.\-/]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function containsTerm(haystack, term) {
+    const normalizedHaystack = normalizeTerm(haystack);
+    if (!normalizedHaystack) return false;
+    return termVariants(term).some(variant => {
+      const escaped = escapeRegex(variant).replace(/\s+/g, "\\s+");
+      return new RegExp(`(^|[^a-z0-9+#])${escaped}(?=$|[^a-z0-9+#])`).test(normalizedHaystack);
+    });
+  }
+
+  const boundary = { normalize: normalizeTerm, containsTerm, termVariants };
   const byId = Object.fromEntries(concepts.map(c => [c.id, c]));
-  window.CSC3209_SEARCH_CONFIG = { weights, stopWords, concepts, byId };
+  window.CSC3209_SEARCH_CONFIG = { weights, stopWords, concepts, byId, boundary };
 })();

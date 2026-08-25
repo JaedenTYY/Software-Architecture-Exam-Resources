@@ -12,7 +12,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,17 +21,35 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: npm
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Rebuild generated reference data
-        run: python3 tools/build_universal_references.py
+        run: |
+          python3 tools/build_universal_references.py
+          python3 tools/build_past_paper_references.py
 
       - name: Rebuild semantic concept index
-        run: python3 tools/build_semantic_index.py
+        run: npm run build:semantic
+
+      - name: Check generated deterministic assets are committed
+        run: git diff --exit-code search/universal_references.js search/past_paper_references.js semantic_index.js
+
+      - name: Check vector index freshness
+        run: npm run check:vectors
+
+      - name: Build browser semantic bundle
+        run: npm run build:browser
+
+      - name: Check browser semantic bundle is committed
+        run: git diff --exit-code search/local-semantic.bundle.js
 
       - name: JavaScript syntax checks
         run: |
@@ -40,6 +58,11 @@ jobs:
           node --check search/predictor-calibration.js
           node --check search/past_paper_references.js
           node --check search/answer-predictor.js
+          node --check tools/run_search_tests.js
+          node --check tools/run_answer_predictor_tests.js
+          node --check tools/run_why_explainer_tests.js
+          node --check tools/run_hardening_tests.js
+          node --check tools/run_local_semantic_tests.js
 
       - name: Semantic search and ranking tests
         run: node tools/run_search_tests.js
@@ -52,3 +75,6 @@ jobs:
 
       - name: Repository hardening tests
         run: node tools/run_hardening_tests.js
+
+      - name: Local vector semantic tests
+        run: node tools/run_local_semantic_tests.js

@@ -1,0 +1,18 @@
+{
+  "name": "software-architecture-exam-resources",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:semantic": "python3 tools/build_semantic_index.py",
+    "build:vectors": "node tools/build_vector_index.mjs",
+    "check:vectors": "node tools/check_vector_index.mjs",
+    "build:browser": "esbuild search/local-semantic.js --bundle --format=iife --global-name=CSC3209LocalSemanticBundle --outfile=search/local-semantic.bundle.js",
+    "verify": "python3 tools/build_universal_references.py && python3 tools/build_past_paper_references.py && npm run build:semantic && npm run check:vectors && npm run build:browser && node tools/run_search_tests.js && node tools/run_answer_predictor_tests.js && node tools/run_why_explainer_tests.js && node tools/run_hardening_tests.js && node tools/run_local_semantic_tests.js"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
+}

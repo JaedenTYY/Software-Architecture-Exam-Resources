@@ -9,6 +9,7 @@ require(path.join(ROOT, "expansion/questions_advanced.js"));
 require(path.join(ROOT, "expansion/questions_code.js"));
 require(path.join(ROOT, "search/concepts.js"));
 require(path.join(ROOT, "search/universal_references.js"));
+require(path.join(ROOT, "search/past_paper_references.js"));
 require(path.join(ROOT, "semantic_index.js"));
 require(path.join(ROOT, "search/hybrid-search.js"));
 require(path.join(ROOT, "search/exam-explainer.js"));
@@ -91,25 +92,29 @@ for (const query of [
 }
 
 for (const test of [
+  { query: "layers add boundaries", required: "Layer" },
+  { query: "states change behavior", required: "State" },
   { query: "player profile statistics", forbidden: "Layer" },
   { query: "statement object text", forbidden: "State" },
-  { query: "multiplayer profile", forbidden: "Layer" }
+  { query: "multiplayer profile", forbidden: "Layer" },
+  { query: "players profile", forbidden: "Layer" },
+  { query: "layered profile", forbidden: "Layer" }
 ]) {
   const s = search(test.query, true);
   const direct = s.concepts.filter(c => c.direct).map(c => c.label);
-  pass(`Boundary-safe search: ${test.query}`, !direct.includes(test.forbidden), `direct=${direct.join(", ") || "none"}`);
+  const ok = test.required ? direct.includes(test.required) : !direct.includes(test.forbidden);
+  pass(`Boundary-safe search: ${test.query}`, ok, `direct=${direct.join(", ") || "none"}`);
   const p = predictor.predict(test.query, s.concepts, s.results, global.CSC3209_SEARCH_CONFIG);
-  pass(`Boundary-safe predictor: ${test.query}`, p?.winner?.label !== test.forbidden, `winner=${p?.winner?.label || "none"}`);
+  if (test.forbidden) pass(`Boundary-safe predictor: ${test.query}`, p?.winner?.label !== test.forbidden, `winner=${p?.winner?.label || "none"}`);
 }
 {
   const p = explain("Why is a player profile useful?");
   pass("Boundary-safe explainer: player is not Layer", p?.subject?.label !== "Layer", `state=${p?.state || "none"}; subject=${p?.subject?.label || "none"}`);
 }
-
 {
   const builder = fs.readFileSync(path.join(ROOT, "tools/build_semantic_index.py"), "utf8");
-  const boundarySafe = !builder.includes("return term in haystack") && builder.includes("BOUNDARY_WORD_CHARS") && builder.includes("left_ok") && builder.includes("right_ok");
-  pass("Semantic-index builder uses boundary matcher", boundarySafe, "builder checked statically");
+  const boundarySafe = !builder.includes("return term in haystack") && builder.includes("phrase_set") && builder.includes("term_variants");
+  pass("Semantic-index builder uses boundary/morphology matcher", boundarySafe, "builder checked statically");
 }
 
 {

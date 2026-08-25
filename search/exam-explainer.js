@@ -3,6 +3,7 @@
     const cfg = config || root.CSC3209_SEARCH_CONFIG || {};
     const concepts = cfg.concepts || [];
     const byId = cfg.byId || Object.fromEntries(concepts.map(c => [c.id, c]));
+    const boundary = cfg.boundary || {};
     const maxEvidence = options.maxEvidence || 4;
 
     function normalize(value) {
@@ -31,7 +32,7 @@
       }
       for (const concept of concepts) {
         const terms = [concept.label, ...(concept.aliases || [])].map(normalize).filter(Boolean);
-        if (terms.some(term => term.length <= 3 ? new RegExp(`(^|\\s)${escapeRegex(term)}(\\s|$)`).test(q) : q.includes(term))) {
+        if (terms.some(term => containsTerm(q, term))) {
           found.set(concept.id, concept);
         }
       }
@@ -40,6 +41,13 @@
 
     function escapeRegex(value) {
       return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    }
+
+    function containsTerm(haystack, term) {
+      if (boundary.containsTerm) return boundary.containsTerm(haystack, term);
+      if (!term) return false;
+      const escaped = escapeRegex(term).replace(/\s+/g, "\\s+");
+      return new RegExp(`(^|[^a-z0-9+#])${escaped}(s|es)?(?=$|[^a-z0-9+#])`).test(normalize(haystack));
     }
 
     function findConcept(rows, categories) {
@@ -62,8 +70,8 @@
       return rows.map(result => {
         const text = normalize([result.subtopic, result.topic, result.prompt, result.answer_outline, result.body, (result.tags || []).join(" ")].filter(Boolean).join(" "));
         let fit = Number(result._score || 0);
-        if (subjectTerms.some(t => t && text.includes(t))) fit *= 1.3;
-        if (targetTerms.some(t => t && text.includes(t))) fit *= 1.2;
+        if (subjectTerms.some(t => t && containsTerm(text, t))) fit *= 1.3;
+        if (targetTerms.some(t => t && containsTerm(text, t))) fit *= 1.2;
         return { result, fit };
       }).sort((a, b) => b.fit - a.fit).slice(0, maxEvidence).map(x => x.result);
     }
@@ -88,8 +96,8 @@
       const ranked = sentences.map((sentence, index) => {
         const n = normalize(sentence);
         let score = causal.test(n) ? 3 : 0;
-        if (subjectTerms.some(t => t && n.includes(t))) score += 2;
-        if (targetTerms.some(t => t && n.includes(t))) score += 2;
+        if (subjectTerms.some(t => t && containsTerm(n, t))) score += 2;
+        if (targetTerms.some(t => t && containsTerm(n, t))) score += 2;
         if (index < 2) score += 0.5;
         return { sentence, score, index };
       }).sort((a, b) => b.score - a.score || a.index - b.index);

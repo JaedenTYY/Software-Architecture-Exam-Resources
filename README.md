@@ -4,7 +4,9 @@ Offline study package generated from your supplied notes/lecture materials and t
 
 ## Quick start — how to run
 
-This is a static browser application. There is no backend, no database server, no API key and no `npm install` step.
+This is a static browser application. There is no backend, no database server and no API key.
+
+Runtime search remains static-site compatible. Exact and CSC3209 concept fallback search work by opening `index.html` directly. Full local vector-semantic search should be served over HTTP so the browser can fetch the local ONNX model, WASM runtime and vector index.
 
 ### Requirements
 
@@ -14,8 +16,8 @@ For normal exam/study use you only need:
 
 For development/validation you may also want:
 
-- **Node.js** to run the automated search, predictor, explanation and hardening tests;
-- **Python 3** only if you want to run a local HTTP server or rebuild generated search/reference indexes.
+- **Node.js** to install the minimal vector tooling, run automated tests and rebuild the browser embedding bundle;
+- **Python 3** to run a local HTTP server or rebuild generated search/reference indexes.
 
 ### 1. Get the latest copy
 
@@ -46,11 +48,11 @@ open index.html
 
 Or simply double-click `index.html` in Finder/File Explorer.
 
-The search engine is designed to work locally and offline.
+Exact search and CSC3209 concept fallback search work this way. Browser security normally prevents `file://` pages from fetching ONNX/model assets, so full MiniLM vector semantic search requires Option B.
 
 #### Option B — run a local static server
 
-If you prefer serving the repository over localhost:
+Recommended for full local vector-semantic search:
 
 ```sh
 python3 -m http.server 8000
@@ -59,7 +61,7 @@ python3 -m http.server 8000
 Then open:
 
 ```text
-http://localhost:8000
+http://localhost:8000/
 ```
 
 Stop the server with `Ctrl+C`.
@@ -69,10 +71,15 @@ Stop the server with `Ctrl+C`.
 Run all automated checks from the repository root:
 
 ```sh
+npm ci
+npm run build:semantic
+npm run check:vectors
+npm run build:browser
 node tools/run_search_tests.js
 node tools/run_answer_predictor_tests.js
 node tools/run_why_explainer_tests.js
 node tools/run_hardening_tests.js
+node tools/run_local_semantic_tests.js
 ```
 
 Then run JavaScript syntax checks:
@@ -91,9 +98,22 @@ All semantic search and ranking tests passed.
 All answer predictor tests passed.
 All why-explainer tests passed.
 All repository hardening tests passed.
+All local vector semantic tests passed.
 ```
 
 `node --check` normally prints nothing when the file has valid JavaScript syntax.
+
+To regenerate document embeddings after changing the question/reference corpus:
+
+```sh
+npm run build:vectors
+```
+
+To fail fast if the committed vector index is stale:
+
+```sh
+npm run check:vectors
+```
 
 ### 4. Try a few exam-style searches
 
@@ -127,6 +147,14 @@ Normal questions use the search + Predicted Exam Answer pipeline. Causal exam wo
 - **search/universal_references.js** — parsed reference-result sections from the universal answer material.
 - **Learning Materials/Past Year Exam Papers/** — January 2024, August 2024, January 2025, August 2025 and January 2026 papers plus complete model-answer companions.
 - **semantic_index.js** — generated compact fallback concept index. This is not a neural embedding index.
+- **search/local-semantic.js** — source for the browser MiniLM query-embedding/vector-index adapter.
+- **search/local-semantic.bundle.js** — generated browser bundle for `@huggingface/transformers`.
+- **search/vector_index.meta.json** and **search/vector_index.bin** — generated static int8 document/reference vector index.
+- **models/** — vendored local `all-MiniLM-L6-v2` q8 ONNX model, tokenizer and ONNX Runtime WASM assets.
+- **sw.js** — subpath-safe service worker that caches static search/model/vector assets on demand.
+- **tools/build_vector_index.mjs** — rebuilds the local MiniLM document/reference vector index.
+- **tools/check_vector_index.mjs** — validates that the committed vector index matches the current corpus hash.
+- **tools/run_local_semantic_tests.js** — real MiniLM/vector-index regression tests.
 - **tools/build_universal_references.py** — regenerates reference search sections from `universal_answers.md`.
 - **tools/run_hardening_tests.js** — cross-layer regression tests for boundary matching, top-level QA eligibility, causal routing, State evidence preservation and past-paper indexing.
 - **universal_answers.md** — reusable exam answer structures and pattern reference.
@@ -157,9 +185,9 @@ The bank is deliberately difficult. It is designed for an open-book exam where r
 4. Search past-paper wording directly when you want examiner-style cross-checking, for example `August 2025 MVC weakness` or `January 2026 Map-Reduce shuffle partition skew`. The matching past-paper/model-answer reference can appear alongside generated questions and Universal Answers.
 5. Narrow with Topic, Pattern/Subtopic, Question Type, Difficulty, Past-Paper Family, Scenario Domain or Marks.
 6. Choose a search mode:
-   - **Hybrid**: default. Combines exact keywords, BM25-style lexical scoring and CSC3209 concept matching.
-   - **Semantic**: prioritizes inferred course concepts from natural-language clues.
-   - **Exact / Keywords**: lexical-only ranking for predictable emergency lookup.
+   - **Hybrid**: default. Shows immediate lexical/CSC3209 concept results, then reranks with local MiniLM vector similarity when the model/index are ready.
+   - **Semantic**: local MiniLM vector search is the primary ranking signal, with exact-ID/exact-term safeguards and CSC3209 concept evidence retained for explainability.
+   - **Exact / Keywords**: lexical-only ranking for predictable emergency lookup. It does not initialize MiniLM.
 7. Leave **Search answers** off when testing yourself; turn it on when using the bank as a reference engine. Concept search still learns from answer outlines so it can find the right idea from answer-style clues, but the checkbox gives answer text extra lexical weight.
 8. Use the **Predicted Exam Answer** toggle to turn the prediction/explanation panel on or off. Normal search continues either way.
 9. Read the **Predicted Exam Answer** panel when it appears. It infers the likely answer category first, then derives a local consensus from matching questions and references.
@@ -175,39 +203,83 @@ The bank is deliberately difficult. It is designed for an open-book exam where r
 
 The engine is fully local and static. No exam query is sent to an external API.
 
-Ranking is:
+There are three retrieval layers:
+
+- **Lexical**: normalized tokens, field weights, light stemming, typo tolerance for short field matches and exact phrase boosts.
+- **CSC3209 ontology**: deterministic concept and related-concept matching for course-grounded explainability, predictor calibration and fallback semantic behavior.
+- **Local MiniLM vectors**: `@huggingface/transformers` runs the q8 ONNX `all-MiniLM-L6-v2` model in the browser through ONNX/WASM. Only the user's query is embedded at runtime. Document and reference embeddings are precomputed into static assets.
+
+Model/runtime details:
+
+- Model: `all-MiniLM-L6-v2`
+- Runtime: `@huggingface/transformers`
+- Browser inference: ONNX/WASM
+- Quantized model: q8
+- Embedding dimensions: 384
+- Pooling/normalization: mean pooling with normalized vectors
+- External calls at runtime: none
+
+Vector storage:
+
+- `search/vector_index.bin`: contiguous int8 matrix, one 384-byte row per document/reference.
+- `search/vector_index.meta.json`: model metadata, document ordering, dimensions, corpus hash and build timing.
+- Quantization: normalized float embeddings are stored as `round(value * 127)`, then approximated as `value / 127` during cosine scoring.
+- Current generated index: 4,187 documents/references, 384 dimensions, 1,607,808 bytes.
+
+The vector metadata stores a deterministic hash over ordered document IDs and semantic source text. If questions or references change without rebuilding vectors, `npm run check:vectors` fails with:
 
 ```text
-finalScore = lexicalScore + semanticConceptScore + metadataBoosts
+Vector index is stale.
+Run: npm run build:vectors
 ```
 
-Key weights live in `search/concepts.js`:
+Ranking formulas when vector scores are available:
 
-```js
-exactId: 120
-exactSubtopic: 90
-exactTopic: 55
-exactPhrasePrompt: 34
-exactPhraseTags: 30
-exactPhraseAnswer: 18
-lexical: 8
-semantic: 72
-conceptDirect: 42
-conceptRelated: 14
-conceptSubtopic: 34
-conceptTopic: 24
-conceptTag: 16
-conceptReferenceTitle: 18
-reference: 8
+```text
+Hybrid   = 0.45 vector + 0.35 lexical + 0.10 CSC3209 concept + 0.10 metadata/exact safeguards
+Semantic = 0.68 vector + 0.05 lexical + 0.09 CSC3209 concept + 0.18 metadata/exact safeguards
 ```
 
-The lexical layer uses normalized tokens, stop-word filtering, light stemming, typo tolerance for short field matches, field weights and OR-style matching. A result is no longer rejected just because one query token is absent. In Hybrid mode, multi-word conceptual clues dampen incidental lexical-only matches so direct CSC3209 concept matches can outrank generic wording overlap.
+The metadata/exact safeguard term includes exact IDs, exact subtopic/topic/title matches, exact phrase matches and direct-concept specificity. This is why explicit exam terms and specific sub-concepts such as `Observer`, `Peer-to-Peer`, `ATAM` and `Authentication` remain ahead of broader semantically related material.
 
-Concept aliases and exact phrase boosts use **phrase/token boundaries**, not arbitrary substring matching. This prevents false semantic matches such as `layer` inside `player` or `state` inside `statement` while still allowing complete multi-word aliases and hyphenated pattern names.
+When vector scores are not available yet, Hybrid/Semantic show the existing lexical/concept results immediately and then update after the async local query embedding finishes. Exact mode remains lexical-only and does not load MiniLM.
+
+Vector candidates are not limited to the lexical top 30. For Hybrid/Semantic, the browser scores the full filtered vector corpus, keeps the strongest semantic candidates, unions them with lexical/concept candidates, and applies the final formula. Structured filters narrow the eligible vector rows before scoring.
+
+Exact explicit terms such as `Observer`, `Peer-to-Peer` and `ATAM` retain exact metadata/concept safeguards so they outrank merely related material.
+
+Concept aliases and exact phrase boosts use **phrase/token boundaries plus simple plural morphology**, not arbitrary substring matching. This allows `Layer` and `layers`, and `State` and `states`, while preventing false matches such as `layer` inside `player`, `players` or `multiplayer`, and `state` inside `statement`. `layered` is not matched unless added explicitly as an alias.
 
 The concept layer uses the CSC3209 ontology to connect ordinary clues to formal concepts such as Availability, Failover, Layer, Pipe-and-Filter, Peer-to-Peer, Authentication and Authorization. Related concepts are weaker than direct matches, so distinctions such as Fault vs Failure, Layer vs Multi-Tier and Observer vs Publish-Subscribe are preserved.
 
 Universal answer sections and past-paper/model-answer question groups are indexed as separate **Reference** results instead of one large Markdown blob. Past-paper references retain their exact exam cycle/question in the title and point back to the companion model-answer Markdown file through their source metadata.
+
+The MiniLM model is retrieval-only. It is not used to generate predicted answers, why explanations, exam-ready justifications or confidence probabilities.
+
+Offline behavior:
+
+- After the page has been served over HTTP and model/vector assets have been cached, the service worker can serve those static assets offline.
+- Direct `file://` use still supports lexical and CSC3209 concept fallback search.
+- If the browser cannot load ONNX/WASM/model assets, the UI reports that local semantic search is unavailable and keeps the concept fallback active.
+
+Measured local asset sizes:
+
+- ONNX q8 model: 22,972,370 bytes
+- ONNX Runtime WASM: 21,596,019 bytes
+- ONNX Runtime loader module: 44,484 bytes
+- Tokenizer: 711,661 bytes
+- Vector binary: 1,607,808 bytes
+- Vector metadata: about 253 KB
+- Browser semantic bundle: about 2.1 MB
+
+Measured on this local machine with `node tools/measure_vector_performance.mjs`:
+
+- Model initialization: 80 ms
+- Warm query embedding: 2 ms
+- Full vector scoring over 4,187 rows: 3 ms
+- End-to-end warm Hybrid vector pass: 3 ms
+
+Browser first-load time depends on cache state and device/network speed because the model and WASM assets are large. Search results are still shown immediately before MiniLM is ready.
 
 ## Predicted Exam Answer
 
@@ -281,16 +353,13 @@ Recommended open-book exam workflow:
 
 ## Semantic model and offline behavior
 
-This version implements the static conceptual semantic fallback, not neural browser embeddings.
+This version implements genuine local neural retrieval while keeping the deterministic CSC3209 concept index as a fallback and explainability layer.
 
-Two approaches were evaluated:
+The browser embeds only the user's query with the vendored quantized `all-MiniLM-L6-v2` ONNX model. Document and reference embeddings are precomputed at build time and committed as the compact int8 `search/vector_index.bin` matrix. The generated `semantic_index.js` still contains concept IDs mapped to question IDs, but it is no longer presented as vector search.
 
-- Browser embeddings plus precomputed document vectors using `sentence-transformers/all-MiniLM-L6-v2`: practical model shape for semantic search, 384 dimensions, with a quantized ONNX browser model around 24 MB. A Float32 document index for about 4,100 items would be about 6 MB before compression, or smaller if quantized.
-- Lexical plus CSC3209 ontology/concept expansion: zero model download, works from `file://`, fast initial load, fully offline, and directly tuned to the exam vocabulary.
+The model, tokenizer, ONNX Runtime WASM assets and vector index are served from this repository/site. Queries are not sent to Hugging Face or any external LLM/API. If the page is opened through `file://` or the browser cannot fetch ONNX/WASM assets, the app disables vector enhancement cleanly and continues with lexical plus CSC3209 concept search.
 
-The second approach is used here to avoid making a lightweight offline exam tool depend on a first-load model download or a large uncommitted ML build pipeline. The generated `semantic_index.js` is about 401 KB and contains concept IDs mapped to question IDs, not full question objects or embedding vectors.
-
-Sources used for the embedding feasibility check:
+Upstream references:
 
 - `sentence-transformers/all-MiniLM-L6-v2` model card: https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
 - Transformers.js repository/docs: https://github.com/huggingface/transformers.js/

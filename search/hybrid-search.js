@@ -3,6 +3,7 @@
     const cfg = config || root.CSC3209_SEARCH_CONFIG;
     const concepts = cfg.concepts;
     const byId = cfg.byId || Object.fromEntries(concepts.map(c => [c.id, c]));
+    const boundary = cfg.boundary || {};
     const stop = new Set(cfg.stopWords || []);
     const weights = cfg.weights;
     const conceptLexemes = concepts.map(c => ({
@@ -220,13 +221,10 @@
     }
 
     function containsTerm(haystack, term) {
+      if (boundary.containsTerm) return boundary.containsTerm(haystack, term);
       if (!term) return false;
-      const escaped = String(term).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      // Use phrase/token boundaries for every alias length. The previous
-      // substring path caused false matches such as layer→player and
-      // state→statement. Hyphens/slashes may occur inside a phrase, but the
-      // characters immediately outside the complete phrase must be boundaries.
-      return new RegExp(`(^|[^a-z0-9+#])${escaped}(?=$|[^a-z0-9+#])`).test(haystack);
+      const escaped = String(term).replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(/\s+/g, "\\s+");
+      return new RegExp(`(^|[^a-z0-9+#])${escaped}(s|es)?(?=$|[^a-z0-9+#])`).test(normalize(haystack));
     }
 
     function getQueryData(raw) {
@@ -297,6 +295,30 @@
       }
       if (mode === "exact") return total * weights.lexical;
       return total;
+    }
+
+    function exactMetadataScore(doc, query, includeAnswers) {
+      if (!query.norm) return 0;
+      let score = 0;
+      if (doc.norm.id === query.norm) score += 1;
+      if (doc.norm.subtopic === query.norm) score += 0.95;
+      if (doc.norm.topic === query.norm) score += 0.72;
+      if (query.norm.length >= 3 && containsTerm(doc.norm.prompt, query.norm)) score += 0.55;
+      if (query.norm.length >= 3 && containsTerm(doc.norm.tags, query.norm)) score += 0.48;
+      if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(doc.norm.answer, query.norm)) score += 0.32;
+      for (const conceptId of query.directConceptIds || []) {
+        const concept = byId[conceptId];
+        if (!concept || !doc.conceptSet.has(conceptId)) continue;
+        const label = normalize(concept.label);
+        const id = normalize(conceptId);
+        let conceptFit = 0.58;
+        if (doc.norm.subtopic === label || doc.norm.subtopic === id) conceptFit = 1;
+        else if (doc.norm.topic === label || doc.norm.topic === id) conceptFit = 0.86;
+        else if (containsTerm(doc.norm.tags || "", label) || containsTerm(doc.norm.tags || "", id)) conceptFit = 0.82;
+        else if (doc.kind === "reference" && containsTerm(doc.norm.subtopic || "", label)) conceptFit = 0.78;
+        score += conceptFit;
+      }
+      return Math.min(1, score);
     }
 
     function fuzzyTokenCount(token, doc, field) {
@@ -375,10 +397,12 @@
       const includeAnswers = !!options.includeAnswers;
       const includeReferences = !!query.norm && !options.favOnly && !options.codeOnly && !options.mockMode;
       const activeDocs = includeReferences ? docs : questionDocs;
+      const vectorScores = options.vectorScores instanceof Map ? options.vectorScores : null;
       const out = [];
       for (const doc of activeDocs) {
         if (doc.kind === "question" && !passesQuestionFilters(doc.item, options)) continue;
         const lex = mode === "semantic" ? 0 : lexicalScore(doc, query, includeAnswers, mode);
+        const lexicalForVector = mode === "semantic" ? lexicalScore(doc, query, includeAnswers, "hybrid") : lex;
         const semInfo = mode === "exact" ? { score: 0, matches: [] } : semanticScore(doc, query, includeAnswers);
         let lexicalPart = lex;
         if (mode === "hybrid" && query.concepts.length && query.tokens.length > 1) {
@@ -388,25 +412,64 @@
         } else if (mode === "hybrid" && query.concepts.length && semInfo.score === 0) {
           lexicalPart = lex * 0.35;
         }
+        const vectorScore = vectorScores && mode !== "exact" ? Number(vectorScores.get(doc.id) || 0) : 0;
+        const exactScore = exactMetadataScore(doc, query, includeAnswers);
         const score = mode === "semantic" ? semInfo.score + lex * 0.12 : mode === "exact" ? lex : lexicalPart + semInfo.score;
         if (!query.tokens.length && !query.concepts.length && doc.kind === "reference") continue;
-        if (!query.tokens.length || score > 0.05) {
+        if (!query.tokens.length || score > 0.05 || vectorScore > 0) {
           out.push({
             ...doc.item,
             _resultType: doc.kind,
             _score: score,
             _lexicalScore: lex,
+            _lexicalScoreForVector: lexicalForVector,
             _semanticScore: semInfo.score,
+            _vectorScore: vectorScore,
+            _exactMetadataScore: exactScore,
             _matchedConcepts: semInfo.matches,
             _concepts: doc.concepts.slice(0, 9).map(c => byId[c.id]?.label).filter(Boolean)
           });
         }
       }
+      if (vectorScores && mode !== "exact") applyVectorRanking(out, mode);
       out.sort((a, b) => {
         if (!query.tokens.length && !query.concepts.length) return String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
         return b._score - a._score || Number(b.marks || 0) - Number(a.marks || 0) || String(a.id).localeCompare(String(b.id), undefined, { numeric: true });
       });
       return { results: out, concepts: query.concepts.slice(0, 10).map(c => ({ id: c.id, label: byId[c.id].label, direct: query.directConceptIds.has(c.id) })) };
+    }
+
+    function applyVectorRanking(rows, mode) {
+      const maxLex = Math.max(1, ...rows.map(r => Number(r._lexicalScoreForVector || r._lexicalScore || 0)));
+      const maxConcept = Math.max(1, ...rows.map(r => Number(r._semanticScore || 0)));
+      const formula = mode === "semantic"
+        ? { vector: 0.68, lexical: 0.05, concept: 0.09, metadata: 0.18 }
+        : { vector: 0.45, lexical: 0.35, concept: 0.10, metadata: 0.10 };
+      for (const row of rows) {
+        const vector = Math.max(0, Math.min(1, Number(row._vectorScore || 0)));
+        const lexical = Math.max(0, Math.min(1, Number(row._lexicalScoreForVector || row._lexicalScore || 0) / maxLex));
+        const concept = Math.max(0, Math.min(1, Number(row._semanticScore || 0) / maxConcept));
+        const metadata = Math.max(0, Math.min(1, Number(row._exactMetadataScore || 0)));
+        row._score = 100 * (
+          formula.vector * vector +
+          formula.lexical * lexical +
+          formula.concept * concept +
+          formula.metadata * metadata
+        );
+        row._rankingFormula = formula;
+      }
+    }
+
+    function vectorEligibleIds(options) {
+      const query = getQueryData(options.query || "");
+      const includeReferences = !!query.norm && !options.favOnly && !options.codeOnly && !options.mockMode;
+      const activeDocs = includeReferences ? docs : questionDocs;
+      const ids = [];
+      for (const doc of activeDocs) {
+        if (doc.kind === "question" && !passesQuestionFilters(doc.item, options)) continue;
+        ids.push(doc.id);
+      }
+      return ids;
     }
 
     function passesQuestionFilters(q, options) {
@@ -423,6 +486,11 @@
     }
 
     function explainResult(result) {
+      if (Number(result._vectorScore || 0) > 0) {
+        const strength = result._vectorScore >= 0.78 ? "strong" : result._vectorScore >= 0.62 ? "moderate" : "supporting";
+        const conceptsText = result._matchedConcepts?.length ? ` · Matched concepts: ${result._matchedConcepts.map(c => c.label).join(" · ")}` : "";
+        return `Local semantic similarity: ${strength}${conceptsText}`;
+      }
       if (result.referenceType === "past-paper") {
         const conceptsText = result._matchedConcepts?.length ? ` · ${result._matchedConcepts.map(c => c.label).join(" · ")}` : "";
         return `Past-paper/model-answer match${conceptsText}`;
@@ -437,6 +505,7 @@
 
     return {
       search,
+      vectorEligibleIds,
       explainResult,
       tokenize,
       normalize,

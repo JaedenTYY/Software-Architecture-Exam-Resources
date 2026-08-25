@@ -63,6 +63,7 @@
     const settings = { ...DEFAULTS, ...options };
     const concepts = cfg.concepts || [];
     const byId = cfg.byId || Object.fromEntries(concepts.map(c => [c.id, c]));
+    const boundary = cfg.boundary || {};
     const byLabel = new Map(concepts.map(c => [normalize(c.label), c]));
     const byAlias = buildAliasIndex(concepts);
 
@@ -90,11 +91,10 @@
     }
 
     function containsTerm(haystack, term) {
+      if (boundary.containsTerm) return boundary.containsTerm(haystack, term);
       if (!term) return false;
-      if (term.length <= 3) {
-        return new RegExp(`(^|\\s)${escapeRegex(term)}(\\s|$)`).test(haystack);
-      }
-      return haystack.includes(term);
+      const escaped = escapeRegex(term).replace(/\s+/g, "\\s+");
+      return new RegExp(`(^|[^a-z0-9+#])${escaped}(s|es)?(?=$|[^a-z0-9+#])`).test(normalize(haystack));
     }
 
     function escapeRegex(value) {

@@ -82,9 +82,13 @@ const tests = [
 ];
 
 const boundaryTests = [
+  { query: "layers add boundaries", requiredDirect: ["Layer"] },
+  { query: "states change behavior", requiredDirect: ["State"] },
   { query: "player profile statistics", forbiddenDirect: ["Layer"] },
   { query: "statement object text", forbiddenDirect: ["State"] },
-  { query: "multiplayer profile", forbiddenDirect: ["Layer"] }
+  { query: "multiplayer profile", forbiddenDirect: ["Layer"] },
+  { query: "players profile", forbiddenDirect: ["Layer"] },
+  { query: "layered profile", forbiddenDirect: ["Layer"] }
 ];
 
 function haystackFor(result) {
@@ -152,12 +156,14 @@ for (const test of tests) {
 for (const test of boundaryTests) {
   const { concepts } = engine.search({ query: test.query, mode: "hybrid", includeAnswers: true });
   const direct = new Set(concepts.filter(c => c.direct).map(c => c.label));
-  const bad = test.forbiddenDirect.filter(label => direct.has(label));
-  const ok = bad.length === 0;
+  const bad = (test.forbiddenDirect || []).filter(label => direct.has(label));
+  const missing = (test.requiredDirect || []).filter(label => !direct.has(label));
+  const ok = bad.length === 0 && missing.length === 0;
   if (!ok) failures += 1;
   console.log(`\n${ok ? "PASS" : "FAIL"} boundary: ${test.query}`);
   console.log(`Direct concepts: ${[...direct].join(" · ") || "(none)"}`);
   if (!ok) console.log(`  false substring concepts: ${bad.join(" · ")}`);
+  if (!ok) console.log(`  missing plural concepts: ${missing.join(" · ")}`);
 }
 
 const info = engine.inspect();
