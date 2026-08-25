@@ -1,8 +1,8 @@
 # Source / Scope Manifest
 
-The generated material is derived from the course materials supplied in the exam ZIP and the three past-year papers supplied in this conversation.
+The generated material is derived from the CSC3209 course materials supplied in the exam resource pack and the five past-year papers/model-answer companions maintained in this repository.
 
-## Lecture scope present in the ZIP
+## Lecture scope present in the course materials
 - Lecture 1 — What is Software Architecture?
 - Lecture 2 — Why Is Software Architecture Important?
 - Lecture 3 — The Many Contexts of Software Architecture
@@ -18,11 +18,19 @@ The generated material is derived from the course materials supplied in the exam
 - Lecture 13 — Design Patterns (Introduction, Creational, Structural, Behavioral)
 
 ## Existing note baseline
-The ZIP also contains the existing CSC3209 open-book notes and an Obsidian-style `SWA/` note tree. The question engine does **not** assume those notes are complete; lecture decks were used to extend perspectives that were missing or thin in the notes, particularly Lectures 9–13.
+The resource pack also contains the existing CSC3209 open-book notes and an Obsidian-style `SWA/` note tree. The question engine does **not** assume those notes are complete; lecture material was used to extend perspectives that were missing or thin, particularly Lectures 9–13.
 
-## Supplied past papers used for question grammar
+## Past papers used for exam grammar and searchable cross-checking
 - January 2024
 - August 2024
 - January 2025
+- August 2025
+- January 2026
 
-The engine does not claim to predict the exact final paper. It generalizes the recurring assessment forms and deliberately creates harder variations.
+Repository-readable transcriptions and course-grounded model-answer companions are stored under:
+
+`Learning Materials/Past Year Exam Papers/`
+
+Each model-answer `## Question N` section is converted into a searchable past-paper reference by `tools/build_past_paper_references.py`. The generated data lives in `search/past_paper_references.js`; the Markdown answer files remain the source of truth.
+
+The engine does not claim to predict the exact final paper. It generalizes recurring assessment forms, indexes the supplied historical papers for cross-checking, and deliberately creates harder transfer variations.
