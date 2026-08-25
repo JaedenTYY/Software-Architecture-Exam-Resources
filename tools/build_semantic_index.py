@@ -12,7 +12,6 @@ from __future__ import annotations
 import json
 import re
 import subprocess
-from functools import lru_cache
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +21,7 @@ QUESTION_FILES = [
     ROOT / "expansion" / "questions_code.json",
 ]
 OUT = ROOT / "semantic_index.js"
+BOUNDARY_WORD_CHARS = frozenset("abcdefghijklmnopqrstuvwxyz0123456789+#")
 
 
 def normalize(value: object) -> str:
@@ -31,14 +31,19 @@ def normalize(value: object) -> str:
     return re.sub(r"\s+", " ", text).strip()
 
 
-@lru_cache(maxsize=None)
-def term_pattern(term: str) -> re.Pattern[str]:
-    return re.compile(rf"(^|[^a-z0-9+#]){re.escape(term)}(?=$|[^a-z0-9+#])")
-
-
 def contains_term(haystack: str, term: str) -> bool:
     """Match a complete token/phrase, never a substring inside another word."""
-    return bool(term and term_pattern(term).search(haystack))
+    if not term:
+        return False
+    start = haystack.find(term)
+    while start >= 0:
+        end = start + len(term)
+        left_ok = start == 0 or haystack[start - 1] not in BOUNDARY_WORD_CHARS
+        right_ok = end == len(haystack) or haystack[end] not in BOUNDARY_WORD_CHARS
+        if left_ok and right_ok:
+            return True
+        start = haystack.find(term, start + 1)
+    return False
 
 
 def load_concepts() -> list[dict]:
@@ -64,6 +69,20 @@ def load_questions() -> list[dict]:
     return rows
 
 
+def prepare_concepts(concepts: list[dict]) -> list[dict]:
+    prepared = []
+    for concept in concepts:
+        terms = []
+        seen = set()
+        for raw in [concept["label"], *concept.get("aliases", [])]:
+            term = normalize(raw)
+            if len(term) > 1 and term not in seen:
+                seen.add(term)
+                terms.append(term)
+        prepared.append({**concept, "_label": normalize(concept["label"]), "_terms": terms})
+    return prepared
+
+
 def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
     haystack = normalize(text)
     found: list[tuple[str, float]] = []
@@ -72,16 +91,15 @@ def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
     tags = {normalize(t) for t in row.get("tags", [])}
     for concept in concepts:
         score = 0.0
-        label = normalize(concept["label"])
+        label = concept["_label"]
         if subtopic == label:
             score += 5.0
         if topic == label:
             score += 3.0
         if label in tags or concept["id"] in tags:
             score += 2.0
-        for alias in [concept["label"], *concept.get("aliases", [])]:
-            term = normalize(alias)
-            if len(term) > 1 and contains_term(haystack, term):
+        for term in concept["_terms"]:
+            if contains_term(haystack, term):
                 score += 2.0 + min(2.0, len(term.split()) * 0.25)
                 break
         if score > 0:
@@ -91,7 +109,7 @@ def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
 
 
 def main() -> None:
-    concepts = load_concepts()
+    concepts = prepare_concepts(load_concepts())
     questions = load_questions()
     documents = []
     for q in questions:
