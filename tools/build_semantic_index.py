@@ -101,7 +101,16 @@ def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
     subtopic = normalize(row.get("subtopic"))
     topic = normalize(row.get("topic"))
     tags = {normalize(t) for t in row.get("tags", [])}
+    architecture_erosion = subtopic in {"architecture erosion", "architecture drift"}
+
     for concept in concepts:
+        # Architecture erosion is a conformance problem: implemented dependency
+        # structure has drifted from the documented architecture. It should not
+        # be indexed as generic Architecture-Informed Testing merely because the
+        # surrounding answer discusses testing as a possible detection activity.
+        if architecture_erosion and concept["id"] == "architecture-testing":
+            continue
+
         score = 0.0
         label = concept["_label"]
         if subtopic == label:
@@ -110,6 +119,8 @@ def infer_concepts(text: str, row: dict, concepts: list[dict]) -> list[str]:
             score += 3.0
         if label in tags or concept["id"] in tags:
             score += 2.0
+        if architecture_erosion and concept["id"] == "implementation-conformance":
+            score += 5.0
         for term in concept["_terms"]:
             if contains_term(haystack, term):
                 score += 2.0 + min(2.0, len(term.split()) * 0.25)
