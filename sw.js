@@ -1,4 +1,4 @@
-const CACHE = "csc3209-static-vectors-v1";
+const CACHE = "csc3209-static-vectors-v2";
 
 self.addEventListener("install", event => {
   self.skipWaiting();
@@ -28,6 +28,14 @@ function shouldCache(pathname) {
     || pathname.startsWith("expansion/");
 }
 
+function cacheFirst(pathname) {
+  // The local model/runtime is versioned by repository contents and expensive
+  // to refetch. Search code and generated indexes, however, must prefer the
+  // newest deployed version so a previous service worker cannot keep an old
+  // search engine alive after an update.
+  return pathname.startsWith("models/");
+}
+
 self.addEventListener("fetch", event => {
   const req = event.request;
   if (req.method !== "GET") return;
@@ -45,7 +53,17 @@ self.addEventListener("fetch", event => {
           return response;
         })
         .catch(() => cached);
-      return cached || network;
+
+      if (cacheFirst(rel)) return cached || network;
+
+      // Network-first for search code/indexes. Offline use still falls back to
+      // the last good cached copy, while normal online/deployed use receives
+      // current ranking and performance fixes immediately.
+      try {
+        return await network;
+      } catch (_) {
+        return cached;
+      }
     })
   );
 });
