@@ -23,6 +23,13 @@ QUESTION_FILES = [
 OUT = ROOT / "semantic_index.js"
 BOUNDARY_WORD_CHARS = frozenset("abcdefghijklmnopqrstuvwxyz0123456789+#")
 
+# Course/generator labels that are deliberately narrower than the public
+# ontology wording. Keeping these build-time aliases here makes regeneration
+# deterministic without broadening ordinary query aliases unnecessarily.
+BUILD_ALIASES = {
+    "implementation-conformance": ["architecture erosion", "architecture drift"],
+}
+
 
 def normalize(value: object) -> str:
     text = str(value or "").lower()
@@ -74,7 +81,12 @@ def prepare_concepts(concepts: list[dict]) -> list[dict]:
     for concept in concepts:
         terms = []
         seen = set()
-        for raw in [concept["label"], *concept.get("aliases", [])]:
+        raw_terms = [
+            concept["label"],
+            *concept.get("aliases", []),
+            *BUILD_ALIASES.get(concept["id"], []),
+        ]
+        for raw in raw_terms:
             term = normalize(raw)
             if len(term) > 1 and term not in seen:
                 seen.add(term)
