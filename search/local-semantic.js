@@ -3,7 +3,9 @@ import { env, pipeline } from "@huggingface/transformers";
 const MODEL_ID = "all-MiniLM-L6-v2";
 const MODEL_DTYPE = "q8";
 const DIMENSIONS = 384;
-const TOP_VECTOR_CANDIDATES = 800;
+const MAX_VECTOR_CANDIDATES = 200;
+const MIN_VECTOR_SIMILARITY = 0.30;
+const MAX_SIMILARITY_GAP = 0.18;
 
 function createLocalSemanticSearch() {
   const listeners = new Set();
@@ -113,7 +115,7 @@ function createLocalSemanticSearch() {
 
   function scoreRows(queryVector, index, eligibleIds) {
     const t0 = performance.now();
-    const eligible = eligibleIds && eligibleIds.length ? eligibleIds : (index.meta.documents || []).map(d => d.id);
+    const eligible = Array.isArray(eligibleIds) ? eligibleIds : (index.meta.documents || []).map(d => d.id);
     const scored = [];
     for (const id of eligible) {
       const row = index.idToRow.get(id);
@@ -124,18 +126,20 @@ function createLocalSemanticSearch() {
       scored.push([id, dot]);
     }
     scored.sort((a, b) => b[1] - a[1]);
-    const top = scored.slice(0, TOP_VECTOR_CANDIDATES);
-    const max = Math.max(0.0001, top[0]?.[1] || 0.0001);
+    const best = scored[0]?.[1] || 0;
+    const cutoff = Math.max(MIN_VECTOR_SIMILARITY, best - MAX_SIMILARITY_GAP);
     const scores = new Map();
-    for (const [id, score] of top) {
-      if (score <= 0) continue;
-      scores.set(id, Math.max(0, Math.min(1, score / max)));
+    for (const [id, score] of scored) {
+      if (scores.size >= MAX_VECTOR_CANDIDATES || score < cutoff) break;
+      scores.set(id, Math.max(0, Math.min(1, score)));
     }
     const scoringMs = performance.now() - t0;
     lastMetrics = {
       ...(lastMetrics || {}),
       vectorScoringMs: Math.round(scoringMs),
-      vectorCandidates: top.length,
+      vectorCandidates: scores.size,
+      bestVectorSimilarity: Number(best.toFixed(4)),
+      vectorSimilarityCutoff: Number(cutoff.toFixed(4)),
       eligibleDocuments: eligible.length
     };
     return scores;

@@ -16771,8 +16771,8 @@
     "vectors": "vector_index.bin"
   },
   "timingsMs": {
-    "modelLoad": 125,
-    "documentEmbedding": 50270
+    "modelLoad": 119,
+    "documentEmbedding": 51130
   },
-  "generatedAt": "2026-08-26T03:11:17.817Z"
+  "generatedAt": "2026-08-26T05:14:09.330Z"
 }

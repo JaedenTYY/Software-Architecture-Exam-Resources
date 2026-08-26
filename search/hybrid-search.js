@@ -34,6 +34,16 @@
     };
     const ANSWER_WEIGHT = 2.4;
     const REFERENCE_ANSWER_WEIGHT = 2.4;
+    const MIN_MEANINGFUL_VECTOR_SCORE = 0.30;
+    const TOPIC_QUERY_ALIASES = new Map([
+      ["architectural style", "architectural patterns"],
+      ["architectural styles", "architectural patterns"],
+      ["architecture pattern", "architectural patterns"],
+      ["architecture patterns", "architectural patterns"],
+      ["design pattern", "design patterns"],
+      ["quality attribute", "quality attributes"],
+      ["architecture docs", "architecture documentation"]
+    ]);
 
     const basePostings = new Map();
     const answerPostings = new Map();
@@ -44,6 +54,8 @@
     const questionDocs = [];
     const referenceDocs = [];
     const docById = new Map();
+    const topicPostings = new Map();
+    const knownTopicNorms = new Set();
     let answerIndexReady = false;
     let lastQueryKey = "";
     let lastQueryData = null;
@@ -138,7 +150,7 @@
             if (!hits) continue;
             best = Math.max(best, hits / Math.max(2, aliasTokens.length));
           }
-          if (best >= 0.65) {
+          if (best >= 0.8) {
             strength = best * 1.4;
             reason = "term overlap";
           }
@@ -241,6 +253,10 @@
       docs.push(doc);
       questionDocs.push(doc);
       docById.set(doc.id, doc);
+      knownTopicNorms.add(doc.norm.topic);
+      let topicPosting = topicPostings.get(doc.norm.topic);
+      if (!topicPosting) topicPostings.set(doc.norm.topic, topicPosting = new Set());
+      topicPosting.add(doc.index);
       for (const [field, fieldWeight] of Object.entries(BASE_FIELD_WEIGHTS)) {
         const value = field === "tags" ? tags : q[field];
         addFieldToPostings(basePostings, value, fieldWeight, doc.index);
@@ -355,6 +371,10 @@
       if (key === lastQueryKey && lastQueryData) return lastQueryData;
       const tokens = tokenize(raw);
       const conceptsFound = inferConcepts(raw);
+      const topicKey = TOPIC_QUERY_ALIASES.get(key) || key;
+      const topicIntents = new Set(knownTopicNorms.has(topicKey)
+        ? [...knownTopicNorms].filter(topic => topic === topicKey || topic.startsWith(`${topicKey} `))
+        : []);
       const expanded = [];
       for (const c of conceptsFound.slice(0, 10)) {
         const concept = byId[c.id];
@@ -368,7 +388,8 @@
         norm: key,
         tokens,
         concepts: mergeConceptLists(expanded),
-        directConceptIds: new Set(conceptsFound.map(c => c.id))
+        directConceptIds: new Set(conceptsFound.map(c => c.id)),
+        topicIntents
       };
       lastQueryKey = key;
       lastQueryData = queryData;
@@ -420,7 +441,7 @@
       let total = 0;
       if (doc.norm.id === query.norm) total += weights.exactId;
       if (doc.norm.subtopic === query.norm) total += weights.exactSubtopic;
-      if (doc.norm.topic === query.norm) total += weights.exactTopic;
+      if (query.topicIntents.has(doc.norm.topic)) total += weights.exactTopic;
       if (query.norm.length >= 3 && containsTerm(doc.norm.prompt, query.norm)) total += weights.exactPhrasePrompt;
       if (query.norm.length >= 3 && containsTerm(doc.norm.tags, query.norm)) total += weights.exactPhraseTags;
       if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(getAnswerNorm(doc), query.norm)) {
@@ -443,7 +464,7 @@
       let score = 0;
       if (doc.norm.id === query.norm) score += 1;
       if (doc.norm.subtopic === query.norm) score += 0.95;
-      if (doc.norm.topic === query.norm) score += 0.72;
+      if (query.topicIntents.has(doc.norm.topic)) score += 0.92;
       if (query.norm.length >= 3 && containsTerm(doc.norm.prompt, query.norm)) score += 0.55;
       if (query.norm.length >= 3 && containsTerm(doc.norm.tags, query.norm)) score += 0.48;
       if ((includeAnswers || doc.kind === "reference") && query.norm.length >= 3 && containsTerm(getAnswerNorm(doc), query.norm)) score += 0.32;
@@ -549,6 +570,7 @@
       const includeAnswers = !!options.includeAnswers;
       const includeReferences = !!query.norm && !options.favOnly && !options.codeOnly && !options.mockMode && !hasStructuredFilters(options);
       const vectorScores = options.vectorScores instanceof Map ? options.vectorScores : null;
+      const hasVectorScores = !!vectorScores?.size;
 
       if (!query.tokens.length && !query.concepts.length) {
         const rows = [];
@@ -562,8 +584,11 @@
 
       const lexicalStates = collectLexicalCandidates(query, includeAnswers);
       const candidateIndices = new Set(lexicalStates.keys());
+      for (const topic of query.topicIntents) {
+        for (const docIndex of topicPostings.get(topic) || []) candidateIndices.add(docIndex);
+      }
       if (mode !== "exact") addConceptCandidates(candidateIndices, query);
-      if (vectorScores && mode !== "exact") {
+      if (hasVectorScores && mode !== "exact") {
         for (const id of vectorScores.keys()) {
           const doc = docById.get(id);
           if (doc) candidateIndices.add(doc.index);
@@ -606,10 +631,10 @@
         });
       }
 
-      if (vectorScores && mode !== "exact") applyVectorRanking(out, mode);
+      if (hasVectorScores && mode !== "exact") applyVectorRanking(out, mode);
       out.sort((a, b) => b._score - a._score || Number(b.marks || 0) - Number(a.marks || 0) || String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
       const candidateCount = out.length;
-      const meaningful = applyMeaningfulFloor(out, query, mode, !!vectorScores);
+      const meaningful = applyMeaningfulFloor(out, query, mode, hasVectorScores);
       diversifyResults(meaningful);
       return {
         results: meaningful,
@@ -624,7 +649,7 @@
       const maxScore = Math.max(0.0001, ...rows.map(row => Number(row._score || 0)));
       const maxLexical = Math.max(0.0001, ...rows.map(row => Number(row._lexicalScoreForVector || row._lexicalScore || 0)));
       const maxSemantic = Math.max(0.0001, ...rows.map(row => Number(row._semanticScore || 0)));
-      const minimumCoverage = query.tokens.length <= 2 ? 0.5 : Math.max(0.28, 2 / query.tokens.length);
+      const minimumCoverage = query.tokens.length <= 2 ? 1 : Math.max(0.4, 2 / query.tokens.length);
       return rows.filter(row => {
         const score = Number(row._score || 0);
         const lexical = Number(row._lexicalScoreForVector || row._lexicalScore || 0);
@@ -635,9 +660,9 @@
         const lexicalCoverage = Number(row._lexicalCoverage || 0);
         if (row.id && normalize(row.id) === query.norm) return true;
         if (exactMetadata >= 0.48) return true;
-        if (hasVectors && vector >= 0.48) return true;
+        if (hasVectors && vector >= MIN_MEANINGFUL_VECTOR_SCORE) return true;
         if (directConcept && semantic >= maxSemantic * 0.18) return true;
-        if (lexicalCoverage >= minimumCoverage && lexical >= maxLexical * 0.045) return true;
+        if (lexicalCoverage >= minimumCoverage && lexical >= maxLexical * 0.08) return true;
         if (row._resultType === "reference" && (directConcept || lexicalCoverage >= minimumCoverage) && score >= maxScore * 0.025) return true;
         return mode === "exact" && lexicalCoverage >= minimumCoverage && score >= maxScore * 0.03;
       });
@@ -700,7 +725,7 @@
 
     function explainResult(result) {
       if (Number(result._vectorScore || 0) > 0) {
-        const strength = result._vectorScore >= 0.78 ? "strong" : result._vectorScore >= 0.62 ? "moderate" : "supporting";
+        const strength = result._vectorScore >= 0.55 ? "strong" : result._vectorScore >= 0.42 ? "moderate" : "supporting";
         const conceptsText = result._matchedConcepts?.length ? ` · Matched concepts: ${result._matchedConcepts.map(c => c.label).join(" · ")}` : "";
         return `Local semantic similarity: ${strength}${conceptsText}`;
       }

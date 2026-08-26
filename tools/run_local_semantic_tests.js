@@ -14,7 +14,9 @@ require(path.join(ROOT, "search/hybrid-search.js"));
 require(path.join(ROOT, "search/predictor-calibration.js"));
 
 const DIMENSIONS = 384;
-const TOP_VECTOR_CANDIDATES = 800;
+const MAX_VECTOR_CANDIDATES = 200;
+const MIN_VECTOR_SIMILARITY = 0.30;
+const MAX_SIMILARITY_GAP = 0.18;
 
 const mergeBank = (arr, bank) => (arr || []).map(o => ({ ...o, bank: o.bank || bank }));
 const questions = [
@@ -83,9 +85,14 @@ async function main() {
       scored.push([id, dot]);
     }
     scored.sort((a, b) => b[1] - a[1]);
-    const top = scored.slice(0, TOP_VECTOR_CANDIDATES);
-    const max = Math.max(0.0001, top[0]?.[1] || 0.0001);
-    return new Map(top.filter(([, score]) => score > 0).map(([id, score]) => [id, score / max]));
+    const best = scored[0]?.[1] || 0;
+    const cutoff = Math.max(MIN_VECTOR_SIMILARITY, best - MAX_SIMILARITY_GAP);
+    const scores = new Map();
+    for (const [id, score] of scored) {
+      if (scores.size >= MAX_VECTOR_CANDIDATES || score < cutoff) break;
+      scores.set(id, score);
+    }
+    return scores;
   }
 
   const tests = [
@@ -96,7 +103,13 @@ async function main() {
     { query: "verify who a user actually is", expected: ["authentication"], maxRank: 3 },
     { query: "Observer", expected: ["observer"], maxRank: 1, mode: "semantic" },
     { query: "Peer-to-Peer", expected: ["peer-to-peer"], maxRank: 1, mode: "semantic" },
-    { query: "ATAM", expected: ["atam"], maxRank: 1, mode: "semantic" }
+    { query: "ATAM", expected: ["atam"], maxRank: 1, mode: "semantic" },
+    { query: "architectural styles", expected: ["architectural patterns", "layer", "client-server", "pipe-and-filter"], maxRank: 3, mode: "semantic" },
+    { query: "Design Patterns", expected: ["design patterns", "observer", "state", "facade", "singleton"], maxRank: 1, mode: "semantic", maxResults: 1000 },
+    { query: "Architecture Documentation", expected: ["architecture documentation", "view documentation", "notation"], maxRank: 1, mode: "semantic", maxResults: 320 },
+    { query: "scalability", expected: ["performance", "availability", "multi-tier", "client-server"], maxRank: 5, mode: "semantic", maxResults: 200 },
+    { query: "microservices", expected: ["service-oriented architecture", "client-server", "broker"], maxRank: 5, mode: "semantic", maxResults: 200 },
+    { query: "modularity", expected: ["module", "layer", "decomposition", "modifiability"], maxRank: 5, mode: "semantic", maxResults: 200 }
   ];
 
   let failures = 0;
@@ -108,10 +121,14 @@ async function main() {
     const search = engine.search({ ...options, vectorScores });
     const rank = rankFor(search.results, test.expected);
     const topVector = Number(search.results[0]?._vectorScore || 0);
-    const ok = rank <= test.maxRank && topVector > 0;
+    const maxVector = Math.max(0, ...search.results.map(result => Number(result._vectorScore || 0)));
+    const countOk = test.maxResults == null || search.results.length <= test.maxResults;
+    const vectorOk = vectorScores.size === 0 || maxVector >= MIN_VECTOR_SIMILARITY;
+    const ok = rank <= test.maxRank && vectorOk && countOk;
     if (!ok) failures += 1;
     console.log(`\n${ok ? "PASS" : "FAIL"} local semantic: ${test.query}`);
     console.log(`Expected rank <= ${test.maxRank}; actual rank ${Number.isFinite(rank) ? rank : "not found"}; top vector score ${topVector.toFixed(3)}`);
+    if (!countOk) console.log(`Expected at most ${test.maxResults} results; actual ${search.results.length}`);
     for (const result of search.results.slice(0, 5)) {
       console.log(`- ${result.id} ${result.subtopic || result.title || result.topic} | vector=${Number(result._vectorScore || 0).toFixed(3)} score=${Number(result._score || 0).toFixed(1)}`);
     }

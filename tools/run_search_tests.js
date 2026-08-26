@@ -91,6 +91,14 @@ const boundaryTests = [
   { query: "layered profile", forbiddenDirect: ["Layer"] }
 ];
 
+const topicIntentTests = [
+  { query: "Architectural Patterns", topics: ["Architectural Patterns", "Architectural Patterns (Depth)"], phrases: ["architectural pattern"], minTop10Precision: 0.9 },
+  { query: "architectural styles", topics: ["Architectural Patterns", "Architectural Patterns (Depth)"], phrases: ["architectural pattern"], minTop10Precision: 0.9 },
+  { query: "Design Patterns", topics: ["Design Patterns", "Design Patterns (Code)"], phrases: ["design pattern"], minTop10Precision: 0.9 },
+  { query: "Architecture Documentation", topics: ["Architecture Documentation", "Architecture Documentation (Depth)"], phrases: ["architecture documentation", "architectural documentation"], minTop10Precision: 0.9, maxResults: 180 },
+  { query: "Structures and Views", topics: ["Structures and Views", "Structures and Views (Depth)"], phrases: ["structures and views"], minTop10Precision: 0.9, maxResults: 80 }
+];
+
 function haystackFor(result) {
   return [
     result.title,
@@ -165,6 +173,28 @@ for (const test of boundaryTests) {
   if (!ok) console.log(`  false substring concepts: ${bad.join(" · ")}`);
   if (!ok) console.log(`  missing plural concepts: ${missing.join(" · ")}`);
 }
+
+for (const test of topicIntentTests) {
+  const { results } = engine.search({ query: test.query, mode: "semantic", includeAnswers: false });
+  const allowed = new Set(test.topics);
+  const top = results.slice(0, 10);
+  const precision = top.length ? top.filter(result => {
+    if (allowed.has(result.topic)) return true;
+    const text = [result.title, result.subtopic, result.prompt].filter(Boolean).join(" ").toLowerCase();
+    return test.phrases.some(phrase => text.includes(phrase));
+  }).length / top.length : 0;
+  const countOk = test.maxResults == null || results.length <= test.maxResults;
+  const ok = precision >= test.minTop10Precision && countOk;
+  if (!ok) failures += 1;
+  console.log(`\n${ok ? "PASS" : "FAIL"} topic intent: ${test.query}`);
+  console.log(`Top-10 topic precision: ${(precision * 100).toFixed(0)}%; results: ${results.length}`);
+  if (!countOk) console.log(`  expected at most ${test.maxResults} results`);
+}
+
+const qualityTopic = engine.search({ query: "Quality Attributes", mode: "semantic", includeAnswers: false });
+const qualityHasFalseTradeoff = qualityTopic.concepts.some(c => c.direct && c.label === "Trade-off Point");
+if (qualityHasFalseTradeoff) failures += 1;
+console.log(`\n${qualityHasFalseTradeoff ? "FAIL" : "PASS"} concept precision: Quality Attributes does not imply Trade-off Point`);
 
 const info = engine.inspect();
 const pastPaperCount = (global.UNIVERSAL_REFERENCES || []).filter(r => r.referenceType === "past-paper").length;

@@ -321,6 +321,8 @@ When vector scores are not available yet, Hybrid/Semantic show the existing lexi
 
 Vector candidates are not limited to the lexical top 30. For Hybrid/Semantic, the browser scores the full filtered vector corpus, keeps the strongest semantic candidates, unions them with lexical/concept candidates, and applies the final formula. Structured filters narrow the eligible vector rows before scoring.
 
+Vector relevance uses raw cosine similarity rather than a score divided by the best result for each query. Candidates must reach `0.30` cosine similarity, remain within `0.18` of the best result, and fit within the strongest 200 rows. This absolute gate prevents a weak query from manufacturing hundreds of “meaningful” results merely because one weak row is slightly better than the rest.
+
 Exact explicit terms such as `Observer`, `Peer-to-Peer` and `ATAM` retain exact metadata/concept safeguards so they outrank merely related material.
 
 Concept aliases and exact phrase boosts use **phrase/token boundaries plus simple plural morphology**, not arbitrary substring matching. This allows `Layer` and `layers`, and `State` and `states`, while preventing false matches such as `layer` inside `player`, `players` or `multiplayer`, and `state` inside `statement`. `layered` is not matched unless added explicitly as an alias.

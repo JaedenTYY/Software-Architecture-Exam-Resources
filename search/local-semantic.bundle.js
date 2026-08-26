@@ -47961,7 +47961,9 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
   var MODEL_ID = "all-MiniLM-L6-v2";
   var MODEL_DTYPE = "q8";
   var DIMENSIONS = 384;
-  var TOP_VECTOR_CANDIDATES = 800;
+  var MAX_VECTOR_CANDIDATES = 200;
+  var MIN_VECTOR_SIMILARITY = 0.3;
+  var MAX_SIMILARITY_GAP = 0.18;
   function createLocalSemanticSearch() {
     const listeners = /* @__PURE__ */ new Set();
     const queryCache = /* @__PURE__ */ new Map();
@@ -48059,7 +48061,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
     }
     function scoreRows(queryVector, index, eligibleIds) {
       const t0 = performance.now();
-      const eligible = eligibleIds && eligibleIds.length ? eligibleIds : (index.meta.documents || []).map((d) => d.id);
+      const eligible = Array.isArray(eligibleIds) ? eligibleIds : (index.meta.documents || []).map((d) => d.id);
       const scored = [];
       for (const id2 of eligible) {
         const row = index.idToRow.get(id2);
@@ -48070,18 +48072,20 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         scored.push([id2, dot]);
       }
       scored.sort((a, b) => b[1] - a[1]);
-      const top = scored.slice(0, TOP_VECTOR_CANDIDATES);
-      const max = Math.max(1e-4, top[0]?.[1] || 1e-4);
+      const best = scored[0]?.[1] || 0;
+      const cutoff = Math.max(MIN_VECTOR_SIMILARITY, best - MAX_SIMILARITY_GAP);
       const scores = /* @__PURE__ */ new Map();
-      for (const [id2, score2] of top) {
-        if (score2 <= 0) continue;
-        scores.set(id2, Math.max(0, Math.min(1, score2 / max)));
+      for (const [id2, score2] of scored) {
+        if (scores.size >= MAX_VECTOR_CANDIDATES || score2 < cutoff) break;
+        scores.set(id2, Math.max(0, Math.min(1, score2)));
       }
       const scoringMs = performance.now() - t0;
       lastMetrics = {
         ...lastMetrics || {},
         vectorScoringMs: Math.round(scoringMs),
-        vectorCandidates: top.length,
+        vectorCandidates: scores.size,
+        bestVectorSimilarity: Number(best.toFixed(4)),
+        vectorSimilarityCutoff: Number(cutoff.toFixed(4)),
         eligibleDocuments: eligible.length
       };
       return scores;

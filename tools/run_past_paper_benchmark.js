@@ -102,6 +102,9 @@ function summarize(rows) {
 async function createVectorScorer() {
   const [{ env, pipeline }, corpus] = await Promise.all([import("@huggingface/transformers"), import("./vector_corpus.mjs")]);
   const dimensions = 384;
+  const maxVectorCandidates = 200;
+  const minVectorSimilarity = 0.30;
+  const maxSimilarityGap = 0.18;
   const meta = JSON.parse(fs.readFileSync(path.join(ROOT, "search/vector_index.meta.json"), "utf8"));
   const docs = corpus.buildVectorDocuments();
   if (meta.corpusHash !== corpus.corpusHashForDocuments(docs)) throw new Error("Vector index is stale; run npm run build:vectors before vector benchmarking.");
@@ -128,9 +131,13 @@ async function createVectorScorer() {
       scored.push([id, dot]);
     }
     scored.sort((a, b) => b[1] - a[1]);
-    const top = scored.slice(0, 800);
-    const max = Math.max(0.0001, top[0]?.[1] || 0.0001);
-    const scores = new Map(top.filter(([, score]) => score > 0).map(([id, score]) => [id, score / max]));
+    const best = scored[0]?.[1] || 0;
+    const cutoff = Math.max(minVectorSimilarity, best - maxSimilarityGap);
+    const scores = new Map();
+    for (const [id, score] of scored) {
+      if (scores.size >= maxVectorCandidates || score < cutoff) break;
+      scores.set(id, score);
+    }
     cache.set(cacheKey, scores);
     return scores;
   };
