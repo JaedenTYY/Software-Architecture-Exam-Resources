@@ -1,5 +1,5 @@
 self.CSC3209_OFFLINE_MANIFEST = {
-  "version": "0cbfbe71f8329d52",
+  "version": "6d22bff92cdd8ea2",
   "critical": [
     "./",
     "index.html",

@@ -113,6 +113,7 @@ def parse_file(path: Path, concepts: list[dict]) -> list[dict]:
                 "questionNumber": question_no,
                 "title": f"Past Paper + Model Answer — {cycle} Q{question_no}: {question_title}",
                 "body": body,
+                "displayBody": section,
                 "source": str(path.relative_to(ROOT)).replace("\\", "/"),
                 "concepts": infer_concepts(semantic_text, concepts),
             }

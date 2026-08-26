@@ -18,10 +18,10 @@
   }
 }
 *{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,color-mix(in srgb,var(--soft) 34%,var(--bg)) 0,var(--bg) 280px);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 a{color:var(--accent)}
-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%, transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
-.wrap{max-width:1500px;margin:auto;padding:16px 24px}
+header{position:relative;background:color-mix(in srgb,var(--panel) 55%,var(--bg));border-bottom:1px solid var(--line)}
+.wrap{max-width:1360px;margin:auto;padding:16px 24px}
 .topline{display:flex;gap:18px;align-items:flex-start;justify-content:space-between}
 h1{font-size:23px;line-height:1.15;margin:0 0 5px;font-weight:760}
 .sub{color:var(--muted);font-size:13px}
@@ -74,10 +74,10 @@ button.ghost{background:transparent;box-shadow:none}
 .mechanism-chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px}
 .mechanism-step{padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--panel2);font-size:13px}
 .mechanism-arrow{color:var(--muted);font-weight:700}
-main{max-width:1500px;margin:auto;padding:18px 24px 50px}
+main{max-width:1360px;margin:auto;padding:18px 24px 50px}
 .summarybar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;color:var(--muted)}
 #results{display:grid;gap:13px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow2);padding:18px 20px}
 .card:hover{border-color:color-mix(in srgb,var(--accent) 30%,var(--line))}
 .meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
 .chip{font-size:11px;padding:3px 7px;border-radius:999px;background:var(--soft);color:var(--accent2);border:1px solid color-mix(in srgb,var(--accent) 20%,var(--line))}
@@ -85,20 +85,47 @@ main{max-width:1500px;margin:auto;padding:18px 24px 50px}
 .chip.diff-Hard{color:var(--ok)}
 .qhead{display:flex;gap:10px;align-items:flex-start}
 .qid{font:700 12px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent2);padding-top:3px;min-width:62px}
-.prompt{font-size:16px;white-space:pre-wrap;flex:1}
+.prompt{font-size:16px;line-height:1.62;white-space:pre-wrap;flex:1;max-width:105ch}
 .card-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
 .small{font-size:12px;padding:6px 9px}
-.answer{display:none;margin-top:13px;padding:14px;border-radius:var(--radius);background:color-mix(in srgb,var(--soft) 70%,var(--panel));border:1px solid var(--line);white-space:pre-wrap}
+.answer{display:none;margin-top:14px;border-radius:var(--radius);background:color-mix(in srgb,var(--panel2) 72%,var(--panel));border:1px solid var(--line);overflow:hidden}
 .answer.open{display:block}
-.answer strong{color:var(--accent2)}
-.trap{margin-top:9px;color:var(--danger);font-size:13px}
-.source{margin-top:9px;color:var(--muted);font-size:11px}
+.answer-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--soft) 55%,var(--panel));font-size:12px;font-weight:750;text-transform:uppercase;color:var(--accent2)}
+.answer-body{padding:18px 20px}
+.rich-text{max-width:102ch;line-height:1.68}
+.rich-text>*:first-child{margin-top:0}
+.rich-text>*:last-child{margin-bottom:0}
+.rich-text h3{font-size:17px;line-height:1.35;margin:25px 0 10px;padding-top:2px;color:var(--text)}
+.rich-text h4{font-size:14px;line-height:1.4;margin:20px 0 8px;color:var(--accent2)}
+.rich-text p{margin:9px 0}
+.rich-text strong{color:var(--accent2)}
+.rich-text code{font:12.5px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:color-mix(in srgb,var(--line) 45%,transparent);padding:1px 4px;border-radius:4px}
+.rich-text ul,.rich-text ol{margin:10px 0;padding-left:22px}
+.rich-text li{margin:7px 0;padding-left:3px}
+.answer-summary{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid color-mix(in srgb,var(--line) 65%,transparent)}
+.answer-summary strong{font-size:12px;text-transform:uppercase}
+.scenario-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:12px 0 20px;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.scenario-grid>div{display:grid;grid-template-columns:112px minmax(0,1fr);gap:10px;padding:10px 12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.scenario-grid dt{font-size:11px;font-weight:750;text-transform:uppercase;color:var(--muted)}
+.scenario-grid dd{margin:0}
+.utility-list{margin:12px 0 20px;border-top:1px solid var(--line)}
+.utility-item{padding:13px 0;border-bottom:1px solid var(--line)}
+.utility-path{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:6px;color:var(--muted);font-size:12px}
+.utility-path span:not(:last-child)::after{content:"/";margin-left:5px;color:color-mix(in srgb,var(--muted) 60%,transparent)}
+.utility-priority{display:inline-block;margin-left:5px;padding:2px 6px;border:1px solid color-mix(in srgb,var(--warn) 45%,var(--line));border-radius:5px;color:var(--warn);font-size:11px;font-weight:750}
+.utility-scenario{line-height:1.62}
+.table-scroll{overflow-x:auto;margin:12px 0 20px;border:1px solid var(--line);border-radius:6px}
+.rich-table{width:100%;min-width:620px;border-collapse:collapse;background:var(--panel)}
+.rich-table th,.rich-table td{text-align:left;vertical-align:top;padding:9px 11px;border-bottom:1px solid var(--line)}
+.rich-table th{font-size:11px;text-transform:uppercase;color:var(--muted);background:var(--panel2)}
+.rich-table tr:last-child td{border-bottom:0}
+.trap{margin:18px 20px 0;padding:11px 12px;border-left:3px solid var(--danger);background:color-mix(in srgb,var(--danger) 7%,var(--panel));color:var(--danger);font-size:13px}
+.source{padding:12px 20px 15px;color:var(--muted);font-size:11px;overflow-wrap:anywhere}
 .ref-card .prompt{font-weight:650}
-.ref-body{margin-top:10px;color:var(--text);white-space:pre-wrap}
+.ref-preview{margin:10px 0 0;color:var(--muted);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;max-width:110ch}
 .answer pre{white-space:pre;overflow-x:auto;background:#0d1117;color:#e6edf3;padding:13px;border-radius:var(--radius);margin:12px 0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.55;border:1px solid #263041}
 .answer pre code{font-family:inherit;background:none;color:inherit;padding:0}
 .codehdr{margin-top:12px;font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
-.tbl{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}
 .chip.bank-orig{color:var(--muted)}
 .chip.bank-adv{color:#a970e0;border-color:color-mix(in srgb,#a970e0 40%,var(--line));background:color-mix(in srgb,#a970e0 12%,transparent)}
 .chip.bank-code{color:#12a37c;border-color:color-mix(in srgb,#12a37c 40%,var(--line));background:color-mix(in srgb,#12a37c 12%,transparent)}
@@ -118,7 +145,7 @@ kbd{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;border:1px solid var(-
 mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
 .footer{margin-top:35px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
 @media(max-width:950px){.toolbar{grid-template-columns:1fr 1fr}.toolbar2{grid-template-columns:1fr 1fr}.topline{display:block}.stats{justify-content:flex-start;margin-top:10px}.refgrid,.prediction-grid{grid-template-columns:1fr}}
-@media(max-width:600px){.wrap,main{padding-left:12px;padding-right:12px}.toolbar,.toolbar2{grid-template-columns:1fr}.toggle{margin-left:0}.summarybar{align-items:flex-start;flex-direction:column}.mechanism-chain{display:grid;grid-template-columns:1fr}.mechanism-arrow{transform:rotate(90deg);justify-self:center}}
+@media(max-width:600px){header{position:relative}.wrap,main{padding-left:12px;padding-right:12px}.toolbar,.toolbar2{grid-template-columns:1fr}.toggle{margin-left:0}.summarybar{align-items:flex-start;flex-direction:column}.card{padding:15px 14px}.qhead{display:grid;grid-template-columns:1fr auto;gap:5px 8px}.qid{grid-column:1;min-width:0}.qhead .star{grid-column:2;grid-row:1}.prompt{grid-column:1/-1}.answer-body{padding:15px 13px}.scenario-grid{grid-template-columns:1fr}.scenario-grid>div{grid-template-columns:92px minmax(0,1fr)}.answer-summary{grid-template-columns:68px minmax(0,1fr)}.mechanism-chain{display:grid;grid-template-columns:1fr}.mechanism-arrow{transform:rotate(90deg);justify-self:center}}
 @media print{header,.actions,.card-actions,.pager,.refbox,.footer{display:none!important}body{background:white;color:black}.card{box-shadow:none;break-inside:avoid}.answer{display:block;background:white}}
 </style>
 </head>
@@ -227,9 +254,80 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   function hidePrediction(){els.predictionPanel.className="prediction";els.predictionPanel.innerHTML="";}
   function renderPrediction(search){const query=els.search.value.trim();if(!els.predictionToggle.checked||!query||mockMode||closedPredictionQuery===query){hidePrediction();return;}const prediction=examExplainer.isWhyQuery(query)?examExplainer.explain(query,search.concepts,search.results):answerPredictor.predict(query,search.concepts,search.results,window.CSC3209_SEARCH_CONFIG);if(!prediction?.shown){hidePrediction();return;}const state=prediction.state||"answer",isWhy=prediction.answerMode==="why",alternatives=prediction.alternatives||[];const alt=alternatives.length?alternatives.map(c=>`<span class="chip">${escapeHtml(c.label)} · ${c.percent}%</span>`).join(""):`<span class="prediction-muted">No close compatible alternative.</span>`;const related=(prediction.related||[]).slice(0,5).map(group=>`<div class="prediction-section"><h3>${escapeHtml(group.label)}</h3><div class="prediction-list">${group.concepts.map(c=>`<span class="chip">${escapeHtml(c.label)}</span>`).join("")}</div></div>`).join("");const evidence=(prediction.evidence||[]).map(e=>`<button class="small" data-action="evidence" data-evidence-id="${escapeHtml(e.id)}"><b>${escapeHtml(e.id)}</b> · ${escapeHtml(e.title)}<br><span class="prediction-muted">${escapeHtml(e.snippet||"Strong local match")}</span></button>`).join("");const possibilities=(prediction.possibilities||[]).map((p,i)=>`<div class="prediction-possibility"><b>Possible interpretation ${i+1}: ${escapeHtml(p.label)}</b><p>${escapeHtml(p.condition||"")}</p><p class="prediction-muted">${escapeHtml(p.mechanism||"")}</p></div>`).join("");const missing=(prediction.missingInformation||[]).length?`<div class="prediction-section"><h3>Missing architectural information</h3>${prediction.missingInformation.map(x=>`<p>${escapeHtml(x)}</p>`).join("")}</div>`:"";const distinction=(prediction.examDistinction||[]).length?`<div class="prediction-section"><h3>Exam distinction</h3>${prediction.examDistinction.map(x=>`<p>${escapeHtml(x)}</p>`).join("")}</div>`:"";const examReady=(prediction.examReady||[]).length?`<div class="prediction-section"><h3>Exam-ready justification</h3>${prediction.examReady.map(x=>`<p>${escapeHtml(x)}</p>`).join("")}</div>`:"";const whyNot=(prediction.whyNot||[]).length?`<div class="prediction-section"><h3>Why not the alternatives?</h3>${prediction.whyNot.map(x=>`<p><b>${escapeHtml(x.label)}</b> ${escapeHtml(x.reason)}</p>`).join("")}</div>`:"";const ambiguity=prediction.ambiguity?.isAmbiguous?`<div class="prediction-section"><h3>Ambiguity</h3>${prediction.ambiguity.notes.map(n=>`<p>${escapeHtml(n)}</p>`).join("")}</div>`:"";const mechanismChain=(prediction.mechanismChain||[]).length?`<div class="prediction-section"><h3>Causal mechanism</h3><div class="mechanism-chain">${prediction.mechanismChain.map((step,i)=>`${i?'<span class="mechanism-arrow">→</span>':''}<span class="mechanism-step">${escapeHtml(step)}</span>`).join("")}</div></div>`:"";const title=state==="ambiguous"?`<div class="prediction-title warn">Requirement is ambiguous</div>`:state==="insufficient-information"?`<div class="prediction-title muted">Insufficient information</div>`:state==="no-evidence"?`<div class="prediction-title muted">No strong local evidence</div>`:isWhy?`<div class="prediction-title">${escapeHtml(prediction.explanationTitle||prediction.winner?.label||"Why this happens")}</div>`:`<div class="prediction-title">${escapeHtml(prediction.winner.label)}</div>`;const metrics=state==="answer"?(isWhy?`<div><span class="chip">Causal explanation</span> <span class="chip">Grounded locally</span> <span class="chip">Confidence: ${escapeHtml(prediction.confidence?.level||"Medium")}</span></div>`:`<div><span class="chip">${prediction.winner.percent}% weighted evidence</span> <span class="chip">Confidence: ${escapeHtml(prediction.confidence.level)}</span> <span class="chip">${prediction.independentEvidenceGroups} independent evidence groups</span></div>`):`<div><span class="chip">${escapeHtml(prediction.stateLabel||"Prediction state")}</span>${prediction.matchingResults?` <span class="chip">${prediction.matchingResults} matching results considered</span>`:""}</div>`;els.predictionPanel.className=`prediction open${predictionCollapsed?" collapsed":""}`;els.predictionPanel.innerHTML=`<div class="prediction-head"><div><h2>${isWhy?"Why / Explanation":"Predicted Exam Answer"}</h2><div class="prediction-muted">Intent: ${escapeHtml(prediction.intent.label)}${prediction.subject?` · Subject: ${escapeHtml(prediction.subject.label)}`:""}${prediction.target?` · Effect: ${escapeHtml(prediction.target.label)}`:""}</div>${title}${metrics}</div><div class="prediction-actions"><button class="small" data-action="predict-toggle">${predictionCollapsed?"Show details":"Hide details"}</button><button class="small" data-action="predict-close" aria-label="Close predicted answer">Close</button></div></div><div class="prediction-body"><div class="prediction-grid"><div><div class="prediction-section"><h3>${isWhy?"Direct answer":"Why it fits"}</h3>${(prediction.why||[]).map(line=>`<p>${escapeHtml(line)}</p>`).join("")}</div>${mechanismChain}${possibilities}${state==="answer"&&!isWhy?`<div class="prediction-section"><h3>Alternatives</h3><div class="prediction-list">${alt}</div></div>`:""}${ambiguity}${missing}${distinction}${examReady}${whyNot}${related}</div><div>${evidence?`<div class="prediction-section"><h3>Supporting evidence / cross-check</h3><div class="prediction-evidence">${evidence}</div></div>`:""}<p class="prediction-muted">${isWhy?"Why answers are deterministic, course-grounded causal explanations; evidence is extracted from the local question bank and Universal Answers.":"Percentages are weighted evidence share, not probabilities. The predictor is deterministic and local."}</p></div></div></div>`;}
   function schedulePrediction(search){if(predictionTimer){clearTimeout(predictionTimer);predictionTimer=null;}const query=els.search.value.trim(),revision=searchRevision;if(!els.predictionToggle.checked||!query||mockMode){hidePrediction();return;}predictionTimer=setTimeout(()=>{if(revision!==searchRevision||query!==els.search.value.trim())return;renderPrediction(search);},240);}
-  function fmtAnswer(text){return escapeHtml(text).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/(^|\n)(\|.*\|)/g,"$1<span class=\"tbl\">$2</span>");}
-  function renderCard(q){if(q._resultType==="reference")return renderReferenceCard(q);const star=favorites.has(q.id)?"★":"☆",bankCls=q.bank==="Advanced Depth"?"bank-adv":q.bank==="Code Implementation"?"bank-code":"bank-orig",explain=searchEngine.explainResult(q),score=q._score?`<span class="scorepill">score ${Math.round(q._score)}</span>`:"";return `<article class="card" data-id="${escapeHtml(q.id)}"><div class="meta"><span class="chip ${bankCls}">${escapeHtml(q.bank)}</span>${q.code_answer?`<span class="chip bank-code">code</span>`:""}<span class="chip diff-${escapeHtml(q.difficulty)}">${escapeHtml(q.difficulty)}</span><span class="chip">${escapeHtml(q.topic)}</span><span class="chip">${escapeHtml(q.subtopic)}</span><span class="chip">${escapeHtml(q.type)}</span><span class="chip">${escapeHtml(q.family)}</span><span class="chip">${escapeHtml(q.marks)} marks</span>${q.scenario?`<span class="chip">${escapeHtml(q.scenario)}</span>`:""}</div><div class="qhead"><div class="qid">${escapeHtml(q.id)}</div><div class="prompt">${highlight(q.prompt)}</div><button class="star ${favorites.has(q.id)?"on":""}" data-action="star" title="Favourite">${star}</button></div>${explain?`<div class="matchline">${escapeHtml(explain)} ${score}</div>`:""}<div class="card-actions"><button class="small" data-action="answer">Reveal answer</button><button class="small" data-action="copyq">Copy question</button><button class="small" data-action="copya">Copy answer</button></div><div class="answer"><strong>Answer framework / marking outline</strong>\n\n${fmtAnswer(q.answer_outline)}${q.code_answer?`<div class="codehdr">${escapeHtml((q.language||"java").toUpperCase())} — full answer code</div><pre><code>${escapeHtml(q.code_answer)}</code></pre>`:""}${q.exam_trap?`\n<div class="trap"><b>Exam trap:</b> ${escapeHtml(q.exam_trap)}</div>`:""}<div class="source">Grounding: ${escapeHtml(q.source)}</div></div></article>`;}
-  function renderReferenceCard(ref){const explain=searchEngine.explainResult(ref),concepts=(ref._matchedConcepts||[]).map(c=>`<span class="chip">${escapeHtml(c.label)}</span>`).join("");return `<article class="card ref-card" data-id="${escapeHtml(ref.id)}"><div class="meta"><span class="chip">Reference</span><span class="chip">${escapeHtml(ref.source||"universal_answers.md")}</span>${concepts}</div><div class="qhead"><div class="qid">${escapeHtml(ref.id)}</div><div class="prompt">${highlight(ref.title)}</div></div>${explain?`<div class="matchline">${escapeHtml(explain)} <span class="scorepill">score ${Math.round(ref._score||0)}</span></div>`:""}<div class="ref-body">${highlight(ref.body)}</div><div class="card-actions"><button class="small" data-action="copyref">Copy reference</button></div></article>`;}
+  function formatInline(text){return escapeHtml(text).replace(/`([^`]+)`/g,"<code>$1</code>").replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\*([^*]+)\*/g,"<em>$1</em>");}
+  function parseTableRow(line){return line.trim().replace(/^\||\|$/g,"").split("|").map(cell=>cell.trim());}
+  function renderScenario(line){
+    const content=line.replace(/^Formal:\s*/i,"");
+    const labels=["Source","Stimulus","Environment","Artifact","Response","Response Measure"];
+    const matcher=new RegExp(`(?:^|;\\s*)(${labels.join("|")}):\\s*(.*?)(?=;\\s*(?:${labels.join("|")}):|$)`,"gi");
+    const fields=[];let match;
+    while((match=matcher.exec(content)))fields.push([match[1],match[2]]);
+    if(fields.length<4)return null;
+    return `<dl class="scenario-grid">${fields.map(([label,value])=>`<div><dt>${escapeHtml(label)}</dt><dd>${formatInline(value)}</dd></div>`).join("")}</dl>`;
+  }
+  function renderUtilityItem(line){
+    const item=line.replace(/^[-*]\s+/,"").trim();
+    const priority=item.match(/\[([HML]),\s*([HML])\]\s*$/i);
+    const withoutPriority=priority?item.slice(0,priority.index).trim():item;
+    const parts=withoutPriority.split(/\s+(?:->|→)\s+/);
+    const scenario=parts.pop()||withoutPriority;
+    return `<div class="utility-item"><div class="utility-path">${parts.map(part=>`<span>${formatInline(part)}</span>`).join("")}${priority?`<b class="utility-priority">${priority[1].toUpperCase()},${priority[2].toUpperCase()}</b>`:""}</div><div class="utility-scenario">${formatInline(scenario)}</div></div>`;
+  }
+  function formatRichText(text){
+    const lines=String(text||"").replace(/\r\n?/g,"\n").split("\n");
+    const html=[];
+    for(let i=0;i<lines.length;){
+      const line=lines[i].trim();
+      if(!line){i+=1;continue;}
+      if(/^```/.test(line)){
+        const code=[];i+=1;
+        while(i<lines.length&&!/^```/.test(lines[i].trim())){code.push(lines[i]);i+=1;}
+        if(i<lines.length)i+=1;
+        html.push(`<pre><code>${escapeHtml(code.join("\n"))}</code></pre>`);continue;
+      }
+      if(/^\|/.test(line)&&i+1<lines.length&&/^\|?\s*:?-{3,}/.test(lines[i+1].trim())){
+        const headers=parseTableRow(line);i+=2;const rows=[];
+        while(i<lines.length&&/^\|/.test(lines[i].trim())){rows.push(parseTableRow(lines[i]));i+=1;}
+        html.push(`<div class="table-scroll"><table class="rich-table"><thead><tr>${headers.map(cell=>`<th>${formatInline(cell)}</th>`).join("")}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(cell=>`<td>${formatInline(cell)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);continue;
+      }
+      const heading=line.match(/^#{1,6}\s+(.+)$/);
+      if(heading){const level=/^#{1,3}\s/.test(line)?"h3":"h4";html.push(`<${level}>${formatInline(heading[1])}</${level}>`);i+=1;continue;}
+      const boldHeading=line.match(/^\*\*([^*]+)\*\*$/);
+      if(boldHeading){const level=/^Part\b/i.test(boldHeading[1])?"h3":"h4";html.push(`<${level}>${formatInline(boldHeading[1])}</${level}>`);i+=1;continue;}
+      if(/^[-*_]{3,}$/.test(line)){i+=1;continue;}
+      if(/^[-*]\s+Utility\s+(?:->|→)/i.test(line)){
+        const items=[];
+        while(i<lines.length&&/^[-*]\s+Utility\s+(?:->|→)/i.test(lines[i].trim())){items.push(renderUtilityItem(lines[i].trim()));i+=1;}
+        html.push(`<div class="utility-list">${items.join("")}</div>`);continue;
+      }
+      if(/^[-*]\s+/.test(line)){
+        const items=[];
+        while(i<lines.length&&/^[-*]\s+/.test(lines[i].trim())){items.push(`<li>${formatInline(lines[i].trim().replace(/^[-*]\s+/,""))}</li>`);i+=1;}
+        html.push(`<ul>${items.join("")}</ul>`);continue;
+      }
+      if(/^\d+[.)]\s+/.test(line)){
+        const items=[];
+        while(i<lines.length&&/^\d+[.)]\s+/.test(lines[i].trim())){items.push(`<li>${formatInline(lines[i].trim().replace(/^\d+[.)]\s+/,""))}</li>`);i+=1;}
+        html.push(`<ol>${items.join("")}</ol>`);continue;
+      }
+      const scenario=renderScenario(line);
+      if(scenario){html.push(scenario);i+=1;continue;}
+      const summary=line.match(/^(Informal|Example|Answer|Why it fits):\s*(.+)$/i);
+      if(summary){html.push(`<p class="answer-summary"><strong>${escapeHtml(summary[1])}</strong><span>${formatInline(summary[2])}</span></p>`);i+=1;continue;}
+      if(/^>\s*/.test(line)){html.push(`<blockquote>${formatInline(line.replace(/^>\s*/,""))}</blockquote>`);i+=1;continue;}
+      html.push(`<p>${formatInline(line)}</p>`);i+=1;
+    }
+    return html.join("");
+  }
+  function renderCard(q){
+    if(q._resultType==="reference")return renderReferenceCard(q);
+    const star=favorites.has(q.id)?"★":"☆",bankCls=q.bank==="Advanced Depth"?"bank-adv":q.bank==="Code Implementation"?"bank-code":"bank-orig",explain=searchEngine.explainResult(q),score=q._score?`<span class="scorepill">score ${Math.round(q._score)}</span>`:"";
+    return `<article class="card" data-id="${escapeHtml(q.id)}"><div class="meta"><span class="chip ${bankCls}">${escapeHtml(q.bank)}</span>${q.code_answer?`<span class="chip bank-code">code</span>`:""}<span class="chip diff-${escapeHtml(q.difficulty)}">${escapeHtml(q.difficulty)}</span><span class="chip">${escapeHtml(q.topic)}</span><span class="chip">${escapeHtml(q.subtopic)}</span><span class="chip">${escapeHtml(q.type)}</span><span class="chip">${escapeHtml(q.family)}</span><span class="chip">${escapeHtml(q.marks)} marks</span>${q.scenario?`<span class="chip">${escapeHtml(q.scenario)}</span>`:""}</div><div class="qhead"><div class="qid">${escapeHtml(q.id)}</div><div class="prompt">${highlight(q.prompt)}</div><button class="star ${favorites.has(q.id)?"on":""}" data-action="star" title="Favourite">${star}</button></div>${explain?`<div class="matchline">${escapeHtml(explain)} ${score}</div>`:""}<div class="card-actions"><button class="small primary" data-action="answer">Reveal answer</button><button class="small" data-action="copyq">Copy question</button><button class="small" data-action="copya">Copy answer</button></div><div class="answer"><div class="answer-head"><span>Example answer</span><span>${escapeHtml(q.marks)} marks</span></div><div class="answer-body"><div class="rich-text">${formatRichText(q.answer_outline)}</div>${q.code_answer?`<div class="codehdr">${escapeHtml((q.language||"java").toUpperCase())} — full answer code</div><pre><code>${escapeHtml(q.code_answer)}</code></pre>`:""}</div>${q.exam_trap?`<div class="trap"><b>Exam trap:</b> ${escapeHtml(q.exam_trap)}</div>`:""}<div class="source">Grounding: ${escapeHtml(q.source)}</div></div></article>`;
+  }
+  function renderReferenceCard(ref){
+    const explain=searchEngine.explainResult(ref),concepts=(ref._matchedConcepts||[]).map(c=>`<span class="chip">${escapeHtml(c.label)}</span>`).join(""),preview=String(ref.body||"").slice(0,360);
+    return `<article class="card ref-card" data-id="${escapeHtml(ref.id)}"><div class="meta"><span class="chip bank-adv">Past paper</span>${ref.examCycle?`<span class="chip">${escapeHtml(ref.examCycle)}</span>`:""}${concepts}</div><div class="qhead"><div class="qid">${escapeHtml(ref.id)}</div><div class="prompt">${highlight(ref.title)}</div></div>${explain?`<div class="matchline">${escapeHtml(explain)} <span class="scorepill">score ${Math.round(ref._score||0)}</span></div>`:""}<div class="ref-preview">${highlight(preview)}${String(ref.body||"").length>preview.length?"…":""}</div><div class="card-actions"><button class="small primary" data-action="refanswer">Read model answer</button><button class="small" data-action="copyref">Copy reference</button></div><div class="answer"><div class="answer-head"><span>Repository model answer</span><span>${escapeHtml(ref.examCycle||"Reference")}</span></div><div class="answer-body"><div class="rich-text">${formatRichText(ref.displayBody||ref.body)}</div></div><div class="source">Source: ${escapeHtml(ref.source||"universal_answers.md")}</div></div></article>`;
+  }
   function renderResults(arr){lastResults=arr;schedulePrediction(lastSearch);const total=arr.length,candidates=Number(lastSearch?.candidateCount||total),pages=Math.max(1,Math.ceil(total/PAGE_SIZE));if(page>pages)page=pages;const start=(page-1)*PAGE_SIZE,shown=arr.slice(start,start+PAGE_SIZE),candidateNote=candidates>total?` · ${candidates.toLocaleString()} candidates scored`:"";els.count.textContent=`${total.toLocaleString()} meaningful result${total===1?"":"s"}${candidateNote}${mockMode?" · mock exam mode":favOnly?" · favourites":""}`;els.results.innerHTML=shown.length?shown.map(renderCard).join(""):`<div class="empty">No meaningful matches. Broaden the query or reset filters.</div>`;renderPager(pages);}
   function render(){const revision=++searchRevision;if(vectorTimer){clearTimeout(vectorTimer);vectorTimer=null;}if(predictionTimer){clearTimeout(predictionTimer);predictionTimer=null;}const arr=getFiltered();renderResults(arr);scheduleVectorEnhancement(revision);}
   function scheduleVectorEnhancement(revision){const query=els.search.value.trim(),mode=els.searchMode.value;if(!query||mode==="exact"||mockMode){if(mode==="exact")els.semanticStatus.textContent="Fast exact search ready";return;}const options=searchOptions();vectorTimer=setTimeout(async()=>{try{const semanticEngine=await ensureLocalSemantic();if(revision!==searchRevision||query!==els.search.value.trim()||mode!==els.searchMode.value)return;const eligibleIds=searchEngine.vectorEligibleIds(options);const semantic=await semanticEngine.score(query,eligibleIds);if(revision!==searchRevision||query!==els.search.value.trim()||mode!==els.searchMode.value)return;const enhanced=searchEngine.search(searchOptions({vectorScores:semantic.vectorScores}));lastSearch=enhanced;renderConceptSuggestions(enhanced.concepts);renderResults(enhanced.results);}catch(e){if(revision===searchRevision&&mode!=="exact")els.semanticStatus.textContent="Local semantic unavailable — fast concept fallback active";}},420);}
@@ -248,7 +346,7 @@ mark{background:#ffe48a;color:#1a1a1a;padding:0 1px}
   $("refsBtn").onclick=()=>{$("refs").classList.toggle("open");};$("favBtn").onclick=()=>{clearMode();favOnly=!favOnly;$("favBtn").textContent=favOnly?"Show All":"Show Favourites";page=1;render();};
   $("resetBtn").onclick=()=>{[els.search,els.bank,els.topic,els.subtopic,els.qtype,els.difficulty,els.family,els.scenario,els.marks].forEach(e=>e.value="");els.searchAnswers.checked=false;els.searchMode.value="hybrid";localStorage.setItem("csc3209-search-mode","hybrid");favOnly=false;codeOnly=false;closedPredictionQuery="";predictionCollapsed=false;clearMode();renderConceptSuggestions([]);$("favBtn").textContent="Show Favourites";$("codeBtn").textContent="Coding Questions Only";$("codeBtn").classList.remove("primary");page=1;render();history.replaceState(null,"",location.pathname);};
   function copy(text){if(navigator.clipboard?.writeText)return navigator.clipboard.writeText(text);const ta=document.createElement("textarea");ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();}
-  els.results.addEventListener("click",e=>{const btn=e.target.closest("button");if(!btn)return;const card=btn.closest(".card"),id=card?.dataset.id;if(btn.dataset.action==="copyref"){const ref=(window.UNIVERSAL_REFERENCES||[]).find(x=>x.id===id);if(!ref)return;copy(`${ref.title}\n\n${ref.body}\n\nSource: ${ref.source}`);btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy reference",900);return;}const q=Q.find(x=>x.id===id);if(!q)return;if(btn.dataset.action==="answer"){const ans=card.querySelector(".answer");ans.classList.toggle("open");btn.textContent=ans.classList.contains("open")?"Hide answer":"Reveal answer";}else if(btn.dataset.action==="star"){favorites.has(id)?favorites.delete(id):favorites.add(id);localStorage.setItem("csc3209-favs",JSON.stringify([...favorites]));updateFavStat();render();}else if(btn.dataset.action==="copyq"){copy(`${q.id} — ${q.prompt}`);btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy question",900);}else if(btn.dataset.action==="copya"){copy(`${q.id} — Answer\n${q.answer_outline}${q.code_answer?"\n\n--- CODE ---\n"+q.code_answer:""}\n\nExam trap: ${q.exam_trap||"None"}`);btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy answer",900);}});
+  els.results.addEventListener("click",e=>{const btn=e.target.closest("button");if(!btn)return;const card=btn.closest(".card"),id=card?.dataset.id;if(btn.dataset.action==="copyref"){const ref=(window.UNIVERSAL_REFERENCES||[]).find(x=>x.id===id);if(!ref)return;copy(`${ref.title}\n\n${ref.body}\n\nSource: ${ref.source}`);btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy reference",900);return;}if(btn.dataset.action==="refanswer"){const ans=card.querySelector(".answer");ans.classList.toggle("open");btn.textContent=ans.classList.contains("open")?"Hide model answer":"Read model answer";return;}const q=Q.find(x=>x.id===id);if(!q)return;if(btn.dataset.action==="answer"){const ans=card.querySelector(".answer");ans.classList.toggle("open");btn.textContent=ans.classList.contains("open")?"Hide answer":"Reveal answer";}else if(btn.dataset.action==="star"){favorites.has(id)?favorites.delete(id):favorites.add(id);localStorage.setItem("csc3209-favs",JSON.stringify([...favorites]));updateFavStat();render();}else if(btn.dataset.action==="copyq"){copy(`${q.id} — ${q.prompt}`);btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy question",900);}else if(btn.dataset.action==="copya"){copy(`${q.id} — Answer\n${q.answer_outline}${q.code_answer?"\n\n--- CODE ---\n"+q.code_answer:""}\n\nExam trap: ${q.exam_trap||"None"}`);btn.textContent="Copied";setTimeout(()=>btn.textContent="Copy answer",900);}});
   function updateFavStat(){$("favStat").textContent=`${favorites.size} favourite${favorites.size===1?"":"s"}`;}
   $("exportBtn").onclick=()=>{const arr=getFiltered(),text=arr.map(q=>{if(q._resultType==="reference")return `${q.id}\tReference\tUniversal Answer Reference\t${q.title}\t\t\t${q.title.replace(/\n/g," ")}\t${q.body.replace(/\n/g," ")}\t`;return `${q.id}\t${q.bank}\t${q.topic}\t${q.subtopic}\t${q.difficulty}\t${q.marks}\t${q.prompt.replace(/\n/g," ")}\t${q.answer_outline.replace(/\n/g," ")}\t${(q.code_answer||"").replace(/\n/g," ")}`;}).join("\n"),blob=new Blob(["ID\tBank/Type\tTopic\tSubtopic/Title\tDifficulty\tMarks\tQuestion/Title\tAnswer/Reference\tCode\n"+text],{type:"text/tab-separated-values;charset=utf-8"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="CSC3209_filtered_questions.tsv";a.click();URL.revokeObjectURL(a.href);};
   function updateURL(){const p=new URLSearchParams();if(els.search.value)p.set("q",els.search.value);if(els.searchMode.value&&els.searchMode.value!=="hybrid")p.set("mode",els.searchMode.value);if(els.searchAnswers.checked)p.set("answers","1");[["bank","bank"],["topic","topic"],["subtopic","subtopic"],["type","qtype"],["difficulty","difficulty"],["family","family"],["scenario","scenario"],["marks","marks"]].forEach(([k,id])=>{if($(id).value)p.set(k,$(id).value)});const s=p.toString();history.replaceState(null,"",s?`?${s}`:location.pathname);}

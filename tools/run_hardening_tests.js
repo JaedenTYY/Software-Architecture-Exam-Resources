@@ -160,6 +160,13 @@ const pastPaperCount = (global.UNIVERSAL_REFERENCES || []).filter(r => r.referen
 pass("All past-paper question groups loaded", pastPaperCount >= 21, `count=${pastPaperCount}`);
 pass("Past-paper data is separated from predictor calibration", Array.isArray(global.PAST_PAPER_REFERENCES) && global.PAST_PAPER_REFERENCES.length >= 21, `generated=${global.PAST_PAPER_REFERENCES?.length || 0}`);
 pass("Past-paper generator exists", fs.existsSync(path.join(ROOT, "tools/build_past_paper_references.py")), "tools/build_past_paper_references.py");
+{
+  const refs = global.PAST_PAPER_REFERENCES || [];
+  const hpc = refs.find(ref => ref.id === "PY-2026-01-Q1");
+  const allStructured = refs.every(ref => typeof ref.displayBody === "string" && ref.displayBody.trim().length > 0);
+  const hpcStructured = /####\s+HPC1\s+[—-]\s+Performance/.test(hpc?.displayBody || "") && /\|\s*Part\s*\|\s*Answer\s*\|/.test(hpc?.displayBody || "");
+  pass("Past-paper display structure is retained", allStructured && hpcStructured, `structured=${refs.filter(ref => ref.displayBody).length}/${refs.length}`);
+}
 
 {
   const s = search("availability", true, { bank: "Code Implementation", difficulty: "Brutal" });
