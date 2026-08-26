@@ -377,7 +377,7 @@ function renderTsv(questions) {
   for (const question of questions) {
     lines.push(fields.map(field => tsvCell(field === "tags" ? (question.tags || []).join(", ") : question[field])).join("\t"));
   }
-  return `${lines.join("\r\n")}\r\n`;
+  return `${lines.join("\n")}\n`;
 }
 
 function updateReadableFile(file, beforeQuestions, afterQuestions) {
