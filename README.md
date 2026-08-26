@@ -59,13 +59,13 @@ npm run dev
 Open:
 
 ```text
-http://localhost:3000/
+http://localhost:8000/
 ```
 
 The dev server also exposes a GitHub Pages-style subpath for path-safety testing:
 
 ```text
-http://localhost:3000/Software-Architecture-Exam-Resources/
+http://localhost:8000/Software-Architecture-Exam-Resources/
 ```
 
 For the normal production/static check:
@@ -192,7 +192,7 @@ Normal questions use the search + Predicted Exam Answer pipeline. Causal exam wo
 - **search/local-semantic.bundle.js** — generated browser bundle for `@huggingface/transformers`.
 - **search/vector_index.meta.json** and **search/vector_index.bin** — generated static int8 document/reference vector index.
 - **models/** — vendored local `all-MiniLM-L6-v2` q8 ONNX model, tokenizer and ONNX Runtime WASM assets.
-- **sw.js** — subpath-safe service worker that caches static search/model/vector assets on demand.
+- **sw.js** and **search/offline-manifest.js** — content-versioned offline exam pack for the application shell, question banks, search/predictor code, references and optional local-vector assets.
 - **tools/build_vector_index.mjs** — rebuilds the local MiniLM document/reference vector index.
 - **tools/check_vector_index.mjs** — validates that the committed vector index matches the current corpus hash.
 - **tools/run_local_semantic_tests.js** — real MiniLM/vector-index regression tests.
@@ -217,6 +217,40 @@ Difficulty:
 - Brutal: 1,293
 
 The bank is deliberately difficult. It is designed for an open-book exam where recognizing terminology is not enough; questions require pattern selection, scenario mapping, mechanism-based justification, trade-off reasoning and quality-attribute precision.
+
+## Reliability and validation
+
+The repository treats wrong confidence as more harmful than an explicit ambiguity or abstention. Validation enforces the exact 3,888 Original, 171 Advanced Depth and 72 Code Implementation counts; meaningful `answer_outline` coverage; a `code_answer` for every coding question; unique IDs; and complete Quality Attribute coverage (672 Original + 25 Advanced = 697).
+
+Answers must perform the requested work rather than only describe how to answer. In particular, all 672 Original Quality Attribute questions now include scenario-specific worked observations or complete six-part examples, and all 32 Utility Tree construction questions include four concrete rated leaves plus a justified first architectural driver. The generated-content audit rejects known delegation phrases and incomplete QA/Utility Tree templates.
+
+Corpus correctness uses the seven CSC3209 top-level Quality Attributes only: Availability, Interoperability, Modifiability, Performance, Security, Testability and Usability. Details and mechanisms such as Latency, Throughput, Fault, Recovery, scalability and centralized control remain searchable, but cannot be presented as alternative top-level QA categories. The original bank has no surviving generator in repository history, so `questions.json` is the canonical source and `tools/apply_corpus_corrections.js` is the idempotent source-policy/regeneration step. Expansion banks are regenerated from their Python generators in a temporary directory and byte-compared with committed outputs.
+
+The real-paper benchmark contains 35 independently maintained requirements from January 2024, August 2024, January 2025, August 2025 and January 2026. Each is evaluated in full-context and isolated-requirement form (70 predictor evaluations). Expected answers come from this repository's model-answer Markdown files; they are not represented as official university marking schemes. Benchmark records remain separate from ontology aliases and predictor calibration rules.
+
+Confidence is a deterministic support label, not a probability. High requires clear intent, strong query/mechanism alignment, a meaningful winner margin, source/template-damped support and no unresolved tie. Exact ties, near ties without a decisive architectural distinction, and conflicting mechanism clues return `ambiguous`; clearly unrelated queries return `no-evidence`. Generated scenario variants share evidence groups, and Original generated evidence receives less trust than source-grounded Advanced and past-paper/reference evidence.
+
+Search results apply a deterministic relevance floor and template-family diversification. The UI reports meaningful results separately from all internally scored candidates; no questions are deleted. Exact IDs, direct concepts, natural-language mechanism matches, relevant references and local-vector matches have explicit safeguards.
+
+Run the reliability suites directly:
+
+```sh
+node tools/run_answer_completeness_tests.js
+node tools/run_corpus_correctness_tests.js
+node tools/run_generated_question_quality_tests.js
+node tools/run_search_tests.js
+node tools/run_answer_predictor_tests.js
+node tools/run_why_explainer_tests.js
+node tools/run_hardening_tests.js
+node tools/run_result_diversity_tests.js
+node tools/run_local_semantic_tests.js
+node tools/run_past_paper_benchmark.js
+node tools/run_offline_smoke_tests.js
+```
+
+Use `npm run verify` for the ordered suite. Use `npm run benchmark:modes` for the slower Exact/Hybrid/Semantic comparison with the committed local MiniLM vector index. The generated-content audit currently reports three known source-material warnings: Lectures 9, 11 and 12 are cited by the question bank but their PDFs are not supplied in this repository.
+
+Dependency audit status (26 August 2026): `esbuild` was upgraded to 0.28.2, removing its moderate development-server advisory. `npm audit` still reports the high-severity `sharp <0.35.0` advisory through `@huggingface/transformers`; no patched Transformers dependency path is currently available. `sharp` is an optional Node image-processing dependency and is not included in the static browser/offline bundle. The mitigation is to build only from trusted local corpus/model inputs, avoid exposing Node tooling as a service, and upgrade when Transformers supports a patched `sharp` release.
 
 ## How to use the search engine
 
@@ -299,7 +333,9 @@ The MiniLM model is retrieval-only. It is not used to generate predicted answers
 
 Offline behavior:
 
-- After the page has been served over HTTP and model/vector assets have been cached, the service worker can serve those static assets offline.
+- On the first successful HTTP load, the service worker atomically prepares the application shell, all question banks, ontology/search/predictor code and reference data. It also caches the local model/vector pack where browser quota permits.
+- Mutable corpus, index and predictor assets use network-first refresh with fallback to the last complete exam pack. A content-derived cache version and upgrade cleanup prevent old question/search assets from persisting indefinitely after a deployment.
+- Navigation requests fall back to cached `index.html`, so a prepared exam pack can reload and use answers, filters, Exact search, concept search and prediction without connectivity. Local vector search remains available when the optional model/vector pack was cached successfully.
 - Direct `file://` use still supports lexical and CSC3209 concept fallback search.
 - If the browser cannot load ONNX/WASM/model assets, the UI reports that local semantic search is unavailable and keeps the concept fallback active.
 
@@ -353,7 +389,7 @@ The **Predicted Exam Answer** toggle is stored in `localStorage` under `csc3209-
 
 Weighted evidence percentage is the winner's share of compatible local evidence, not a probability that the answer is correct. Stronger ranked results contribute more than weak results, and repeated generated variants are dampened by evidence-group clustering so near-duplicate questions do not create fake certainty.
 
-Confidence combines winner dominance, margin over the runner-up, independent evidence groups, intent confidence and direct query alignment. Low confidence is still useful: it means the engine found a plausible answer but the evidence is narrow, close, mostly corpus-derived, or the query is underspecified.
+Confidence combines winner dominance, margin over the runner-up, independent trustworthy evidence groups, intent confidence and direct query alignment. High is gated: a large generated-corpus consensus cannot compensate for weak query alignment or an unresolved tie. Low confidence is still useful: it means the engine found a plausible answer but the evidence is narrow, close, mostly corpus-derived, or the query is underspecified.
 
 The State-vs-Observer calibration is deliberately conservative. An explicit `behavior changes with internal state instead of conditionals` mechanism can break a close Observer/State tie, but the calibration preserves the original evidence text and does not manufacture High confidence merely because the rule fired.
 

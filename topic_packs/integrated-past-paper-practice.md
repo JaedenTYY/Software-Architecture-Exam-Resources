@@ -19,8 +19,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -47,9 +47,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -75,9 +75,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -103,7 +103,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -131,8 +131,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -159,9 +159,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -187,9 +187,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -215,7 +215,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -243,8 +243,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -271,9 +271,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -299,9 +299,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -327,7 +327,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -355,8 +355,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -383,9 +383,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -411,9 +411,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -439,7 +439,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -467,8 +467,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -495,9 +495,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -523,9 +523,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -551,7 +551,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -579,8 +579,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -607,9 +607,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -635,9 +635,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -663,7 +663,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -691,8 +691,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -719,9 +719,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -747,9 +747,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -775,7 +775,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -803,8 +803,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -831,9 +831,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -859,9 +859,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -887,7 +887,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -915,8 +915,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -943,9 +943,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -971,9 +971,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -999,7 +999,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1027,8 +1027,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1055,9 +1055,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1083,9 +1083,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1111,7 +1111,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1139,8 +1139,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1167,9 +1167,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1195,9 +1195,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1223,7 +1223,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1251,8 +1251,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1279,9 +1279,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1307,9 +1307,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1335,7 +1335,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1363,8 +1363,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1391,9 +1391,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1419,9 +1419,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1447,7 +1447,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1475,8 +1475,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1503,9 +1503,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1531,9 +1531,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1559,7 +1559,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1587,8 +1587,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1615,9 +1615,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1643,9 +1643,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1671,7 +1671,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1699,8 +1699,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1727,9 +1727,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1755,9 +1755,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1783,7 +1783,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1811,8 +1811,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1839,9 +1839,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1867,9 +1867,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1895,7 +1895,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -1923,8 +1923,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -1951,9 +1951,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -1979,9 +1979,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2007,7 +2007,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2035,8 +2035,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2063,9 +2063,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2091,9 +2091,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2119,7 +2119,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2147,8 +2147,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2175,9 +2175,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2203,9 +2203,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2231,7 +2231,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2259,8 +2259,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2287,9 +2287,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2315,9 +2315,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2343,7 +2343,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2371,8 +2371,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2399,9 +2399,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2427,9 +2427,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2455,7 +2455,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2483,8 +2483,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2511,9 +2511,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2539,9 +2539,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2567,7 +2567,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2595,8 +2595,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2623,9 +2623,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2651,9 +2651,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2679,7 +2679,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2707,8 +2707,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2735,9 +2735,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2763,9 +2763,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2791,7 +2791,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2819,8 +2819,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2847,9 +2847,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2875,9 +2875,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2903,7 +2903,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -2931,8 +2931,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -2959,9 +2959,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -2987,9 +2987,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3015,7 +3015,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -3043,8 +3043,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -3071,9 +3071,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3099,9 +3099,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3127,7 +3127,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -3155,8 +3155,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -3183,9 +3183,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3211,9 +3211,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3239,7 +3239,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -3267,8 +3267,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -3295,9 +3295,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3323,9 +3323,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3351,7 +3351,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -3379,8 +3379,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -3407,9 +3407,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3435,9 +3435,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3463,7 +3463,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -3491,8 +3491,8 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Complexity.
-R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
+R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
@@ -3519,9 +3519,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3547,9 +3547,9 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
-R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Centralized control vs Performance.
+R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
 
 
@@ -3575,7 +3575,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 
 <details><summary>Answer framework / marking outline</summary>
 
-R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance/Latency.
+R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
@@ -3749,7 +3749,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Complexity because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Performance. Frequent Model changes can trigger many View refreshes or notifications, adding update overhead and latency.
 
 
 
@@ -3813,7 +3813,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance/Latency because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance (latency) because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 
 
 
@@ -3877,7 +3877,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Centralized control because centralizes service provision so many distributed clients can request the same managed resource or functionality. Threatened candidate: Performance because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Modifiability because common services are factored into one location or a small number of locations, localizing changes shared by many clients. Threatened candidate: Performance because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 
 
 
@@ -4069,7 +4069,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance/Latency because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance (latency) because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 
 
 
@@ -4193,11 +4193,11 @@ Smart Traffic Platform - Map-Reduce Deep Dive
 a) Describe one concrete feature of the Smart Traffic Platform that could benefit from **Map-Reduce**. [2]
 b) Describe the pattern elements and relations/connectors in your scenario. [4]
 c) Describe one quality attribute the pattern may enhance and explain the mechanism. [2]
-d) Describe a different quality attribute that may be threatened and explain the mechanism. [2]
+d) Describe a source-grounded weakness or condition under which the performance benefit may be lost, and explain the mechanism. [2]
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance/Throughput because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks. Threatened candidate: Complexity because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput. Weakness candidate: Performance can degrade when framework overhead dominates a small workload or partition skew leaves one worker as the straggler.
 
 
 
@@ -4257,11 +4257,11 @@ Ride-Hailing Platform - Multi-Tier Deep Dive
 a) Describe one concrete feature of the Ride-Hailing Platform that could benefit from **Multi-Tier**. [2]
 b) Describe the pattern elements and relations/connectors in your scenario. [4]
 c) Describe one quality attribute the pattern may enhance and explain the mechanism. [2]
-d) Describe a different quality attribute that may be threatened and explain the mechanism. [2]
+d) Describe a source-grounded weakness of the pattern and explain its cause. [2]
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **runtime components are grouped into tiers and deployed/scaled/securitized separately**. Elements: Tier (logical grouping of runtime components); relation/connector: communicates-with relation, allocated-to relation. Enhanced candidate: Security because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies. Threatened candidate: Complexity because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Construct a scenario matching this pattern clue: **runtime components are grouped into tiers and deployed/scaled/securitized separately**. Elements: Tier (logical grouping of runtime components); relation/connector: communicates-with relation, allocated-to relation. Enhanced candidate: Security because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies. Weakness candidate: substantial cost and complexity because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 
 
 
@@ -4453,7 +4453,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Complexity because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Performance. Frequent Model changes can trigger many View refreshes or notifications, adding update overhead and latency.
 
 
 
@@ -4517,7 +4517,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance/Latency because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance (latency) because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 
 
 
@@ -4581,7 +4581,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Centralized control because centralizes service provision so many distributed clients can request the same managed resource or functionality. Threatened candidate: Performance because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Modifiability because common services are factored into one location or a small number of locations, localizing changes shared by many clients. Threatened candidate: Performance because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 
 
 
@@ -4773,7 +4773,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance/Latency because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance (latency) because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 
 
 
@@ -4897,11 +4897,11 @@ Cybersecurity Monitoring Platform - Map-Reduce Deep Dive
 a) Describe one concrete feature of the Cybersecurity Monitoring Platform that could benefit from **Map-Reduce**. [2]
 b) Describe the pattern elements and relations/connectors in your scenario. [4]
 c) Describe one quality attribute the pattern may enhance and explain the mechanism. [2]
-d) Describe a different quality attribute that may be threatened and explain the mechanism. [2]
+d) Describe a source-grounded weakness or condition under which the performance benefit may be lost, and explain the mechanism. [2]
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance/Throughput because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks. Threatened candidate: Complexity because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput. Weakness candidate: Performance can degrade when framework overhead dominates a small workload or partition skew leaves one worker as the straggler.
 
 
 
@@ -4961,11 +4961,11 @@ Warehouse Management System - Multi-Tier Deep Dive
 a) Describe one concrete feature of the Warehouse Management System that could benefit from **Multi-Tier**. [2]
 b) Describe the pattern elements and relations/connectors in your scenario. [4]
 c) Describe one quality attribute the pattern may enhance and explain the mechanism. [2]
-d) Describe a different quality attribute that may be threatened and explain the mechanism. [2]
+d) Describe a source-grounded weakness of the pattern and explain its cause. [2]
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **runtime components are grouped into tiers and deployed/scaled/securitized separately**. Elements: Tier (logical grouping of runtime components); relation/connector: communicates-with relation, allocated-to relation. Enhanced candidate: Security because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies. Threatened candidate: Complexity because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Construct a scenario matching this pattern clue: **runtime components are grouped into tiers and deployed/scaled/securitized separately**. Elements: Tier (logical grouping of runtime components); relation/connector: communicates-with relation, allocated-to relation. Enhanced candidate: Security because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies. Weakness candidate: substantial cost and complexity because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 
 
 
@@ -5157,7 +5157,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Complexity because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Performance. Frequent Model changes can trigger many View refreshes or notifications, adding update overhead and latency.
 
 
 
@@ -5221,7 +5221,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance/Latency because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance (latency) because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 
 
 
@@ -5285,7 +5285,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Centralized control because centralizes service provision so many distributed clients can request the same managed resource or functionality. Threatened candidate: Performance because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Modifiability because common services are factored into one location or a small number of locations, localizing changes shared by many clients. Threatened candidate: Performance because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 
 
 
@@ -5477,7 +5477,7 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance/Latency because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance (latency) because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 
 
 
@@ -5601,11 +5601,11 @@ Supply Chain Platform - Map-Reduce Deep Dive
 a) Describe one concrete feature of the Supply Chain Platform that could benefit from **Map-Reduce**. [2]
 b) Describe the pattern elements and relations/connectors in your scenario. [4]
 c) Describe one quality attribute the pattern may enhance and explain the mechanism. [2]
-d) Describe a different quality attribute that may be threatened and explain the mechanism. [2]
+d) Describe a source-grounded weakness or condition under which the performance benefit may be lost, and explain the mechanism. [2]
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance/Throughput because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks. Threatened candidate: Complexity because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput. Weakness candidate: Performance can degrade when framework overhead dominates a small workload or partition skew leaves one worker as the straggler.
 
 
 

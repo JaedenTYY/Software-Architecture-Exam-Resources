@@ -31,22 +31,22 @@
       aliases: ["availability","available","uptime","readiness to provide service","service remains available","continues working","continue operating","still works","users continue normally","service restored","recovery from faults","server crashes","component crashes","backend dies","keep service usable","service usable when backend dies","unreachable component","fault tolerance","adding more servers does not guarantee","more servers does not automatically guarantee"],
       related: ["fault","failure","failover","redundancy","single-point-of-failure","health-check","recovery"]
     },
-    { id: "fault", label: "Fault", category: "quality", aliases: ["fault","internal fault","defect","bug","component crash","server crash","hardware fault","software fault","fault occurs"], related: ["failure","availability","recovery"] },
-    { id: "failure", label: "Failure", category: "quality", aliases: ["failure","externally visible failure","users cannot use","service interruption","service outage","observable service failure","required service not delivered","server alive but users cannot use"], related: ["fault","availability","end-to-end-availability"] },
-    { id: "end-to-end-availability", label: "End-to-End Availability", category: "quality", aliases: ["end to end availability","alive but unusable","server is alive but users still cannot use","dependency unavailable","whole service unavailable"], related: ["availability","failure","single-point-of-failure"] },
+    { id: "fault", label: "Fault", category: "quality-detail", answerEligibleAsQualityAttribute: false, aliases: ["fault","internal fault","defect","bug","component crash","server crash","hardware fault","software fault","fault occurs"], related: ["failure","availability","recovery"] },
+    { id: "failure", label: "Failure", category: "quality-detail", answerEligibleAsQualityAttribute: false, aliases: ["failure","externally visible failure","users cannot use","service interruption","service outage","observable service failure","required service not delivered","server alive but users cannot use"], related: ["fault","availability","end-to-end-availability"] },
+    { id: "end-to-end-availability", label: "End-to-End Availability", category: "quality-detail", answerEligibleAsQualityAttribute: false, aliases: ["end to end availability","alive but unusable","server is alive but users still cannot use","dependency unavailable","whole service unavailable"], related: ["availability","failure","single-point-of-failure"] },
     { id: "failover", label: "Failover", category: "tactic", aliases: ["failover","fail over","switch to backup","backup takes over","standby server","hot standby","automatic recovery","continue normally after crash"], related: ["availability","redundancy","recovery"] },
     { id: "redundancy", label: "Redundancy", category: "tactic", aliases: ["redundancy","redundant","replication","replica","backup server","more than one server","duplicate component","spare component","alternative instance","multiple instances","adding more servers","more servers"], related: ["availability","failover","single-point-of-failure"] },
     { id: "single-point-of-failure", label: "Single Point of Failure", category: "risk", aliases: ["single point of failure","spof","one database crashing affects all","shared dependency","central dependency","one component brings down all","common dependency","failure coupling","shared bottleneck","does not automatically guarantee"], related: ["availability","shared-data","client-server","redundancy"] },
     { id: "health-check", label: "Health Check", category: "tactic", aliases: ["health check","heartbeat","ping echo","detect crash","detect fault","liveness check","monitor server"], related: ["availability","failover","recovery"] },
-    { id: "recovery", label: "Recovery", category: "quality", aliases: ["recovery","restore service","recover service","repair fault","restart component","recover from crash"], related: ["availability","failover"] },
+    { id: "recovery", label: "Recovery", category: "quality-detail", answerEligibleAsQualityAttribute: false, aliases: ["recovery","restore service","recover service","repair fault","restart component","recover from crash"], related: ["availability","failover"] },
 
     {
       id: "performance", label: "Performance", category: "quality",
       aliases: ["performance","response time","latency","throughput","processing time","bottleneck","peak load","concurrent users","responsiveness","speed","how quickly system responds","under 2 seconds","requests in under","95 percent requests","response measure"],
       related: ["quality-attribute-scenario","response-measure","throughput","latency"]
     },
-    { id: "latency", label: "Latency", category: "quality", aliases: ["latency","delay","response time","time to respond","under 2 seconds"], related: ["performance","response-measure"] },
-    { id: "throughput", label: "Throughput", category: "quality", aliases: ["throughput","requests per second","items per second","processing rate","increase throughput"], related: ["performance","pipe-and-filter"] },
+    { id: "latency", label: "Latency", category: "quality-detail", answerEligibleAsQualityAttribute: false, aliases: ["latency","delay","response time","time to respond","under 2 seconds"], related: ["performance","response-measure"] },
+    { id: "throughput", label: "Throughput", category: "quality-detail", answerEligibleAsQualityAttribute: false, aliases: ["throughput","requests per second","items per second","processing rate","increase throughput"], related: ["performance","pipe-and-filter"] },
     {
       id: "modifiability", label: "Modifiability", category: "quality",
       aliases: ["modifiability","maintainability","changeability","easy to change","change one part without affecting others","change without breaking others","local change","localize changes","ripple effect","independent evolution","low coupling","separation of concerns","replaceable","changes isolated"],
@@ -163,5 +163,6 @@
 
   const boundary = { normalize: normalizeTerm, containsTerm, termVariants };
   const byId = Object.fromEntries(concepts.map(c => [c.id, c]));
-  window.CSC3209_SEARCH_CONFIG = { weights, stopWords, concepts, byId, boundary };
+  const topLevelQualityIds = ["availability","interoperability","modifiability","performance","security","testability","usability"];
+  window.CSC3209_SEARCH_CONFIG = { weights, stopWords, concepts, byId, boundary, topLevelQualityIds };
 })();

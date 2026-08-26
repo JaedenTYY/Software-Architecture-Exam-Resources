@@ -157,15 +157,23 @@
 
   function stateClue(q) {
     return /\b(object|context)\b.*\b(change|changes|changing)\b.*\bbehavio[u]?r\b.*\b(internal )?state\b/.test(q)
+      || /\bbehavio[u]?r\b.*\b(varies|changes)\b.*\bwith (?:its |the )?internal state\b/.test(q)
       || /\bbehavio[u]?r\b.*\b(internal )?state\b.*\b(instead of|avoid|replace|without)\b.*\b(conditionals?|if else|switch)\b/.test(q)
       || /\b(internal )?state\b.*\b(instead of|avoid|replace)\b.*\b(conditionals?|if else|switch)\b/.test(q)
       || (/\bbehavio[u]?r\b/.test(q) && /\binternal state\b/.test(q) && /\bconditionals?\b/.test(q));
   }
   function observerClue(q) {
-    return /\b(observer|observers|listeners?|interested objects?|dependent objects?|notify observers?|automatically updates?|one-to-many)\b/.test(q)
+    return /\b(observer|observers|listeners?|interested objects?|dependent(?: [a-z]+){0,4} objects?|notification objects?|notify observers?|automatically updates?|one-to-many)\b/.test(q)
       || /\b(one object|subject)\b.*\b(change|changes)\b.*\b(notify|update)\b/.test(q);
   }
   const stateFocusedResults = results => biasResults(results, "state", "State", "Observer", 2.0, 0.52);
+  const observerFocusedResults = results => biasResults(results, "observer", "Observer", "State", 2.0, 0.45);
+
+  function strongObserverClue(q) {
+    const dependents = /\b(subject|dependent(?: [a-z]+){0,4} objects?|notification objects?|registered objects?|observers?|listeners?|interested objects?|one-to-many)\b/.test(q);
+    const notification = /\b(notif(?:y|ies|ied|ication)|updates?|react(?:s|ed)? automatically)\b/.test(q);
+    return dependents && notification;
+  }
 
   function maybePreferExplicitState(prediction) {
     if (!prediction || prediction.state !== "answer" || prediction.winner?.id === "state" || prediction.winner?.id !== "observer") return prediction;
@@ -177,6 +185,28 @@
       why:["State is selected from the explicit mechanism in the query: one object's behavior varies with its own internal state, and state-specific behavior replaces scattered conditional logic."],
       examReady:["The State pattern is suitable because it encapsulates state-specific behavior in separate State objects, allowing the Context to change behavior by changing its current State rather than spreading conditional logic throughout the code."],
       calibration:"explicit-state-mechanism-tiebreak" };
+  }
+  function preferExplicitObserver(prediction, config) {
+    if (!prediction || prediction.state !== "answer") return prediction;
+    const concept = config?.byId?.observer || { id:"observer", label:"Observer", category:"design-pattern" };
+    const candidate = (prediction.candidates || []).find(c => c.id === "observer") || {
+      ...concept,
+      score:Math.max(1,Number(prediction.winner?.score || 0)),
+      share:1,
+      percent:100,
+      queryAlignment:1,
+      supportCount:0,
+      independentSupportCount:0,
+      trustworthyIndependentSupportCount:0,
+      evidence:[]
+    };
+    return { ...prediction, winner:candidate,
+      alternatives:(prediction.alternatives || []).filter(a => a.id !== "observer" && a.id !== "state").slice(0,3),
+      confidence:{...(prediction.confidence || {}),level:"High",numeric:Math.max(0.76,Number(prediction.confidence?.numeric || 0)),queryAlignment:1},
+      ambiguity:{isAmbiguous:false,notes:[]},
+      why:["Observer is selected because one Subject notifies a changing set of dependent objects. Mentioning that the Subject's state changed describes the notification trigger; it does not mean the Subject changes its own behavior as required by State."],
+      examReady:["Use Observer: the Subject keeps dependents through the Observer abstraction and notifies them after its state changes, so registered observers update automatically without the Subject depending on their concrete classes."],
+      calibration:"explicit-observer-mechanism" };
   }
   function cleanDesignAlternatives(prediction, q) {
     if (!prediction || prediction.state !== "answer" || prediction.intent?.intent !== "design-pattern") return prediction;
@@ -198,9 +228,21 @@
     const count = [/\bbusiness drivers?\b/,/\butility tree\b/,/\bsensitivity points?\b/,/\btrade[- ]?off points?\b/,/\brisks?\b/,/\barchitecture evaluation|evaluation method\b/].filter(r => r.test(q)).length;
     return count >= 4 && (/\bevaluation|method|architecture\b/.test(q) || count >= 5);
   }
-  function calibrateAtam(p) {
-    if (!p || p.state !== "answer" || p.winner?.id !== "atam") return p;
-    return { ...p, alternatives:(p.alternatives || []).filter(a => !ATAM_CONSTITUENTS.has(a.id)),
+  function calibrateAtam(p, config) {
+    if (!p || p.state !== "answer") return p;
+    const concept = config?.byId?.atam || { id:"atam", label:"ATAM", category:"framework" };
+    const candidate = (p.candidates || []).find(c => c.id === "atam") || {
+      ...concept,
+      score:Math.max(1,Number(p.winner?.score || 0)),
+      share:1,
+      percent:100,
+      queryAlignment:1,
+      supportCount:0,
+      independentSupportCount:0,
+      trustworthyIndependentSupportCount:0,
+      evidence:[]
+    };
+    return { ...p, winner:candidate, alternatives:(p.alternatives || []).filter(a => a.id !== "atam" && !ATAM_CONSTITUENTS.has(a.id)),
       confidence:{...(p.confidence || {}),level:"High",numeric:Math.max(0.76,Number(p.confidence?.numeric || 0)),queryAlignment:1},
       ambiguity:{isAmbiguous:false,notes:[]},
       why:["ATAM is the evaluation method described by the combined clues: business drivers, a Utility Tree, architectural approaches, risks, sensitivity points and trade-off points."],
@@ -272,7 +314,7 @@
         if (atamMethodClue(q)) {
           const concepts = upsertDirectConcept(queryConcepts, cfg, "atam");
           p = originalPredict(`${rawQuery} ATAM architecture tradeoff analysis method`, concepts, biasResults(prepared,"atam","ATAM",null,2.2,1), configOverride);
-          return enforcePredictionBoundary(calibrateAtam(p), rawQuery, concepts, cfg);
+          return enforcePredictionBoundary(calibrateAtam(p,cfg), rawQuery, concepts, cfg);
         }
         const mvc = /\bmodel\b.*\bmultiple\b.*\b(synchronized\s+)?views?\b.*\bcontrollers?\b.*\b(handle|handles|mediate|mediates)\b.*\b(input|user input)\b/.test(q)
           || /\bmultiple\b.*\bsynchronized\b.*\bviews?\b.*\bmodel\b/.test(q)
@@ -282,7 +324,12 @@
           p = originalPredict(`${rawQuery} model view controller mvc`, concepts, biasResults(prepared,"mvc","MVC","Layer"), configOverride);
           return enforcePredictionBoundary(cleanDesignAlternatives(p,q),rawQuery,concepts,cfg);
         }
-        if (stateClue(q)) {
+        if (strongObserverClue(q) && !stateClue(q)) {
+          const concepts = upsertDirectConcept(queryConcepts,cfg,"observer");
+          p = originalPredict(`${rawQuery} Observer Subject registered dependent objects one-to-many notification`, concepts, observerFocusedResults(prepared), configOverride);
+          return enforcePredictionBoundary(cleanDesignAlternatives(preferExplicitObserver(p,cfg),q),rawQuery,concepts,cfg);
+        }
+        if (stateClue(q) && !observerClue(q)) {
           const concepts = upsertDirectConcept(queryConcepts,cfg,"state");
           p = originalPredict(`${rawQuery} State state-specific behavior Context ConcreteState`, concepts, stateFocusedResults(prepared), configOverride);
           return enforcePredictionBoundary(cleanDesignAlternatives(maybePreferExplicitState(p),q),rawQuery,concepts,cfg);

@@ -12,14 +12,16 @@ For the University Student Portal, construct a **Availability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Student Portal.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -37,7 +39,17 @@ A teammate writes this Availability requirement for the University Student Porta
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for University Student Portal:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -55,7 +67,9 @@ Is **Availability** primarily observable at runtime for the University Student P
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for University Student Portal:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -73,14 +87,16 @@ For the Online Trading Platform, construct a **Availability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Trading Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -98,7 +114,17 @@ A teammate writes this Availability requirement for the Online Trading Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Trading Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -116,7 +142,9 @@ Is **Availability** primarily observable at runtime for the Online Trading Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Online Trading Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -134,14 +162,16 @@ For the Electricity Utility App, construct a **Availability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Utility Application.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -159,7 +189,17 @@ A teammate writes this Availability requirement for the Electricity Utility App:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Electricity Utility App:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -177,7 +217,9 @@ Is **Availability** primarily observable at runtime for the Electricity Utility 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Electricity Utility App:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -195,14 +237,16 @@ For the Digital Game Store, construct a **Availability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Game Distribution Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -220,7 +264,17 @@ A teammate writes this Availability requirement for the Digital Game Store: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Game Store:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -238,7 +292,9 @@ Is **Availability** primarily observable at runtime for the Digital Game Store? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Digital Game Store:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -256,14 +312,16 @@ For the Flight Booking System, construct a **Availability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Flight Booking System.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -281,7 +339,17 @@ A teammate writes this Availability requirement for the Flight Booking System: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Flight Booking System:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -299,7 +367,9 @@ Is **Availability** primarily observable at runtime for the Flight Booking Syste
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Flight Booking System:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -317,14 +387,16 @@ For the E-Commerce Marketplace, construct a **Availability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Marketplace.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -342,7 +414,17 @@ A teammate writes this Availability requirement for the E-Commerce Marketplace: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for E-Commerce Marketplace:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -360,7 +442,9 @@ Is **Availability** primarily observable at runtime for the E-Commerce Marketpla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for E-Commerce Marketplace:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -378,14 +462,16 @@ For the Digital Banking App, construct a **Availability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Banking Application.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -403,7 +489,17 @@ A teammate writes this Availability requirement for the Digital Banking App: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Banking App:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -421,7 +517,9 @@ Is **Availability** primarily observable at runtime for the Digital Banking App?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Digital Banking App:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -439,14 +537,16 @@ For the Food Delivery Platform, construct a **Availability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Food Delivery Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -464,7 +564,17 @@ A teammate writes this Availability requirement for the Food Delivery Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Food Delivery Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -482,7 +592,9 @@ Is **Availability** primarily observable at runtime for the Food Delivery Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Food Delivery Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -500,14 +612,16 @@ For the Hospital Information System, construct a **Availability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hospital Information System.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -525,7 +639,17 @@ A teammate writes this Availability requirement for the Hospital Information Sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hospital Information System:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -543,7 +667,9 @@ Is **Availability** primarily observable at runtime for the Hospital Information
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Hospital Information System:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -561,14 +687,16 @@ For the Smart Traffic Platform, construct a **Availability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Traffic Management Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -586,7 +714,17 @@ A teammate writes this Availability requirement for the Smart Traffic Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Traffic Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -604,7 +742,9 @@ Is **Availability** primarily observable at runtime for the Smart Traffic Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Smart Traffic Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -622,14 +762,16 @@ For the Ride-Hailing Platform, construct a **Availability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ride-Hailing Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -647,7 +789,17 @@ A teammate writes this Availability requirement for the Ride-Hailing Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Ride-Hailing Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -665,7 +817,9 @@ Is **Availability** primarily observable at runtime for the Ride-Hailing Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Ride-Hailing Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -683,14 +837,16 @@ For the Video Streaming Service, construct a **Availability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Streaming Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -708,7 +864,17 @@ A teammate writes this Availability requirement for the Video Streaming Service:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Video Streaming Service:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -726,7 +892,9 @@ Is **Availability** primarily observable at runtime for the Video Streaming Serv
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Video Streaming Service:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -744,14 +912,16 @@ For the Music Streaming Service, construct a **Availability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Music Streaming Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -769,7 +939,17 @@ A teammate writes this Availability requirement for the Music Streaming Service:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Music Streaming Service:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -787,7 +967,9 @@ Is **Availability** primarily observable at runtime for the Music Streaming Serv
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Music Streaming Service:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -805,14 +987,16 @@ For the Cloud File Storage, construct a **Availability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Cloud Storage Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -830,7 +1014,17 @@ A teammate writes this Availability requirement for the Cloud File Storage: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cloud File Storage:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -848,7 +1042,9 @@ Is **Availability** primarily observable at runtime for the Cloud File Storage? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Cloud File Storage:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -866,14 +1062,16 @@ For the Social Network, construct a **Availability** quality-attribute scenario 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Social Network.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -891,7 +1089,17 @@ A teammate writes this Availability requirement for the Social Network: 'The sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Social Network:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -909,7 +1117,9 @@ Is **Availability** primarily observable at runtime for the Social Network? Just
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Social Network:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -927,14 +1137,16 @@ For the Smart Home Platform, construct a **Availability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Smart Home Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -952,7 +1164,17 @@ A teammate writes this Availability requirement for the Smart Home Platform: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Home Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -970,7 +1192,9 @@ Is **Availability** primarily observable at runtime for the Smart Home Platform?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Smart Home Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -988,14 +1212,16 @@ For the Logistics Tracking System, construct a **Availability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Logistics Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1013,7 +1239,17 @@ A teammate writes this Availability requirement for the Logistics Tracking Syste
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Logistics Tracking System:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1031,7 +1267,9 @@ Is **Availability** primarily observable at runtime for the Logistics Tracking S
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Logistics Tracking System:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1049,14 +1287,16 @@ For the Insurance Claims System, construct a **Availability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Claims Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1074,7 +1314,17 @@ A teammate writes this Availability requirement for the Insurance Claims System:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Insurance Claims System:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1092,7 +1342,9 @@ Is **Availability** primarily observable at runtime for the Insurance Claims Sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Insurance Claims System:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1110,14 +1362,16 @@ For the Hotel Booking Platform, construct a **Availability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hotel Booking Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1135,7 +1389,17 @@ A teammate writes this Availability requirement for the Hotel Booking Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hotel Booking Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1153,7 +1417,9 @@ Is **Availability** primarily observable at runtime for the Hotel Booking Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Hotel Booking Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1171,14 +1437,16 @@ For the Online Learning Platform, construct a **Availability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Learning Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1196,7 +1464,17 @@ A teammate writes this Availability requirement for the Online Learning Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Learning Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1214,7 +1492,9 @@ Is **Availability** primarily observable at runtime for the Online Learning Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Online Learning Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1232,14 +1512,16 @@ For the Cybersecurity Monitoring Platform, construct a **Availability** quality-
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Security Monitoring Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1257,7 +1539,17 @@ A teammate writes this Availability requirement for the Cybersecurity Monitoring
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cybersecurity Monitoring Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1275,7 +1567,9 @@ Is **Availability** primarily observable at runtime for the Cybersecurity Monito
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Cybersecurity Monitoring Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1293,14 +1587,16 @@ For the Warehouse Management System, construct a **Availability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Warehouse Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1318,7 +1614,17 @@ A teammate writes this Availability requirement for the Warehouse Management Sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Warehouse Management System:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1336,7 +1642,9 @@ Is **Availability** primarily observable at runtime for the Warehouse Management
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Warehouse Management System:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1354,14 +1662,16 @@ For the Payroll and HR System, construct a **Availability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: HR Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1379,7 +1689,17 @@ A teammate writes this Availability requirement for the Payroll and HR System: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Payroll and HR System:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1397,7 +1717,9 @@ Is **Availability** primarily observable at runtime for the Payroll and HR Syste
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Payroll and HR System:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1415,14 +1737,16 @@ For the Telecommunications Billing, construct a **Availability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Telecom Billing Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1440,7 +1764,17 @@ A teammate writes this Availability requirement for the Telecommunications Billi
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Telecommunications Billing:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1458,7 +1792,9 @@ Is **Availability** primarily observable at runtime for the Telecommunications B
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Telecommunications Billing:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1476,14 +1812,16 @@ For the Digital Library, construct a **Availability** quality-attribute scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Library.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1501,7 +1839,17 @@ A teammate writes this Availability requirement for the Digital Library: 'The sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Library:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1519,7 +1867,9 @@ Is **Availability** primarily observable at runtime for the Digital Library? Jus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Digital Library:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1537,14 +1887,16 @@ For the Medical Imaging Platform, construct a **Availability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Imaging Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1562,7 +1914,17 @@ A teammate writes this Availability requirement for the Medical Imaging Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Medical Imaging Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1580,7 +1942,9 @@ Is **Availability** primarily observable at runtime for the Medical Imaging Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Medical Imaging Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1598,14 +1962,16 @@ For the Manufacturing Monitoring, construct a **Availability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Manufacturing Monitoring Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1623,7 +1989,17 @@ A teammate writes this Availability requirement for the Manufacturing Monitoring
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Manufacturing Monitoring:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1641,7 +2017,9 @@ Is **Availability** primarily observable at runtime for the Manufacturing Monito
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Manufacturing Monitoring:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1659,14 +2037,16 @@ For the Government Citizen Portal, construct a **Availability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Citizen Services Portal.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1684,7 +2064,17 @@ A teammate writes this Availability requirement for the Government Citizen Porta
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Government Citizen Portal:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1702,7 +2092,9 @@ Is **Availability** primarily observable at runtime for the Government Citizen P
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Government Citizen Portal:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1720,14 +2112,16 @@ For the Digital Wallet, construct a **Availability** quality-attribute scenario 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Wallet.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1745,7 +2139,17 @@ A teammate writes this Availability requirement for the Digital Wallet: 'The sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Wallet:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1763,7 +2167,9 @@ Is **Availability** primarily observable at runtime for the Digital Wallet? Just
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Digital Wallet:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1781,14 +2187,16 @@ For the Event Ticketing Platform, construct a **Availability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ticketing Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1806,7 +2214,17 @@ A teammate writes this Availability requirement for the Event Ticketing Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Event Ticketing Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1824,7 +2242,9 @@ Is **Availability** primarily observable at runtime for the Event Ticketing Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Event Ticketing Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1842,14 +2262,16 @@ For the Online Auction Platform, construct a **Availability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Auction Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1867,7 +2289,17 @@ A teammate writes this Availability requirement for the Online Auction Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Auction Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1885,7 +2317,9 @@ Is **Availability** primarily observable at runtime for the Online Auction Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Online Auction Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1903,14 +2337,16 @@ For the Supply Chain Platform, construct a **Availability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
+**Example answer**
 Quality attribute: **Availability** - readiness to provide service and recovery from faults.
-Source: software/hardware fault.
-Stimulus: a required component crashes or becomes unreachable.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Supply Chain Platform.
-Response: detect the fault, contain it, recover/fail over and continue or restore service.
-Response Measure: service restored within 5 seconds with no more than 1 failed request.
-Exact numbers may vary; logical consistency and objective testability matter.
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1928,7 +2364,17 @@ A teammate writes this Availability requirement for the Supply Chain Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **service restored within 5 seconds with no more than 1 failed request**. Explain why the measure actually captures Availability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Supply Chain Platform:**
+Source: a failed application-server process.
+Stimulus: the process crashes and stops responding to health checks.
+Environment: normal operation while users have active sessions.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must detect the failure, remove the failed instance from service, fail over active requests and restore normal operation.
+Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+The replacement captures **Availability** because it tests readiness to provide service and recovery from faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -1946,7 +2392,9 @@ Is **Availability** primarily observable at runtime for the Supply Chain Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: readiness to provide service and recovery from faults. A possible measure is service restored within 5 seconds with no more than 1 failed request. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Availability is **runtime-observable**. It concerns readiness to provide service and recovery from faults.
+
+**Worked observation for Supply Chain Platform:** inject the process failure while users send requests, then measure failed requests and recovery time. The acceptance criterion is that service is restored within 5 seconds with no more than 1 failed request. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -1964,14 +2412,16 @@ For the University Student Portal, construct a **Interoperability** quality-attr
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: student.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Student Portal.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -1989,7 +2439,17 @@ A teammate writes this Interoperability requirement for the University Student P
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for University Student Portal:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2007,7 +2467,9 @@ Is **Interoperability** primarily observable at runtime for the University Stude
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for University Student Portal:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2025,14 +2487,16 @@ For the Online Trading Platform, construct a **Interoperability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: trader.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Trading Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2050,7 +2514,17 @@ A teammate writes this Interoperability requirement for the Online Trading Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Trading Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2068,7 +2542,9 @@ Is **Interoperability** primarily observable at runtime for the Online Trading P
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Online Trading Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2086,14 +2562,16 @@ For the Electricity Utility App, construct a **Interoperability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: utility customer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Utility Application.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2111,7 +2589,17 @@ A teammate writes this Interoperability requirement for the Electricity Utility 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Electricity Utility App:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2129,7 +2617,9 @@ Is **Interoperability** primarily observable at runtime for the Electricity Util
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Electricity Utility App:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2147,14 +2637,16 @@ For the Digital Game Store, construct a **Interoperability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: gamer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Game Distribution Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2172,7 +2664,17 @@ A teammate writes this Interoperability requirement for the Digital Game Store: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Game Store:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2190,7 +2692,9 @@ Is **Interoperability** primarily observable at runtime for the Digital Game Sto
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Digital Game Store:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2208,14 +2712,16 @@ For the Flight Booking System, construct a **Interoperability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: passenger.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Flight Booking System.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2233,7 +2739,17 @@ A teammate writes this Interoperability requirement for the Flight Booking Syste
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Flight Booking System:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2251,7 +2767,9 @@ Is **Interoperability** primarily observable at runtime for the Flight Booking S
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Flight Booking System:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2269,14 +2787,16 @@ For the E-Commerce Marketplace, construct a **Interoperability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: shopper.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Marketplace.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2294,7 +2814,17 @@ A teammate writes this Interoperability requirement for the E-Commerce Marketpla
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for E-Commerce Marketplace:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2312,7 +2842,9 @@ Is **Interoperability** primarily observable at runtime for the E-Commerce Marke
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for E-Commerce Marketplace:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2330,14 +2862,16 @@ For the Digital Banking App, construct a **Interoperability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: bank customer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Banking Application.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2355,7 +2889,17 @@ A teammate writes this Interoperability requirement for the Digital Banking App:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Banking App:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2373,7 +2917,9 @@ Is **Interoperability** primarily observable at runtime for the Digital Banking 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Digital Banking App:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2391,14 +2937,16 @@ For the Food Delivery Platform, construct a **Interoperability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: customer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Food Delivery Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2416,7 +2964,17 @@ A teammate writes this Interoperability requirement for the Food Delivery Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Food Delivery Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2434,7 +2992,9 @@ Is **Interoperability** primarily observable at runtime for the Food Delivery Pl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Food Delivery Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2452,14 +3012,16 @@ For the Hospital Information System, construct a **Interoperability** quality-at
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: clinician.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hospital Information System.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2477,7 +3039,17 @@ A teammate writes this Interoperability requirement for the Hospital Information
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hospital Information System:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2495,7 +3067,9 @@ Is **Interoperability** primarily observable at runtime for the Hospital Informa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Hospital Information System:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2513,14 +3087,16 @@ For the Smart Traffic Platform, construct a **Interoperability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: traffic operator.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Traffic Management Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2538,7 +3114,17 @@ A teammate writes this Interoperability requirement for the Smart Traffic Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Traffic Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2556,7 +3142,9 @@ Is **Interoperability** primarily observable at runtime for the Smart Traffic Pl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Smart Traffic Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2574,14 +3162,16 @@ For the Ride-Hailing Platform, construct a **Interoperability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: rider.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ride-Hailing Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2599,7 +3189,17 @@ A teammate writes this Interoperability requirement for the Ride-Hailing Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Ride-Hailing Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2617,7 +3217,9 @@ Is **Interoperability** primarily observable at runtime for the Ride-Hailing Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Ride-Hailing Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2635,14 +3237,16 @@ For the Video Streaming Service, construct a **Interoperability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: viewer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Streaming Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2660,7 +3264,17 @@ A teammate writes this Interoperability requirement for the Video Streaming Serv
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Video Streaming Service:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2678,7 +3292,9 @@ Is **Interoperability** primarily observable at runtime for the Video Streaming 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Video Streaming Service:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2696,14 +3312,16 @@ For the Music Streaming Service, construct a **Interoperability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: listener.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Music Streaming Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2721,7 +3339,17 @@ A teammate writes this Interoperability requirement for the Music Streaming Serv
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Music Streaming Service:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2739,7 +3367,9 @@ Is **Interoperability** primarily observable at runtime for the Music Streaming 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Music Streaming Service:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2757,14 +3387,16 @@ For the Cloud File Storage, construct a **Interoperability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: user.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Cloud Storage Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2782,7 +3414,17 @@ A teammate writes this Interoperability requirement for the Cloud File Storage: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cloud File Storage:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2800,7 +3442,9 @@ Is **Interoperability** primarily observable at runtime for the Cloud File Stora
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Cloud File Storage:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2818,14 +3462,16 @@ For the Social Network, construct a **Interoperability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: member.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Social Network.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2843,7 +3489,17 @@ A teammate writes this Interoperability requirement for the Social Network: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Social Network:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2861,7 +3517,9 @@ Is **Interoperability** primarily observable at runtime for the Social Network? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Social Network:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2879,14 +3537,16 @@ For the Smart Home Platform, construct a **Interoperability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: homeowner.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Smart Home Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2904,7 +3564,17 @@ A teammate writes this Interoperability requirement for the Smart Home Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Home Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2922,7 +3592,9 @@ Is **Interoperability** primarily observable at runtime for the Smart Home Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Smart Home Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -2940,14 +3612,16 @@ For the Logistics Tracking System, construct a **Interoperability** quality-attr
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: operations user.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Logistics Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -2965,7 +3639,17 @@ A teammate writes this Interoperability requirement for the Logistics Tracking S
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Logistics Tracking System:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -2983,7 +3667,9 @@ Is **Interoperability** primarily observable at runtime for the Logistics Tracki
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Logistics Tracking System:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3001,14 +3687,16 @@ For the Insurance Claims System, construct a **Interoperability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: claims officer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Claims Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3026,7 +3714,17 @@ A teammate writes this Interoperability requirement for the Insurance Claims Sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Insurance Claims System:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3044,7 +3742,9 @@ Is **Interoperability** primarily observable at runtime for the Insurance Claims
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Insurance Claims System:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3062,14 +3762,16 @@ For the Hotel Booking Platform, construct a **Interoperability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: guest.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hotel Booking Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3087,7 +3789,17 @@ A teammate writes this Interoperability requirement for the Hotel Booking Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hotel Booking Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3105,7 +3817,9 @@ Is **Interoperability** primarily observable at runtime for the Hotel Booking Pl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Hotel Booking Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3123,14 +3837,16 @@ For the Online Learning Platform, construct a **Interoperability** quality-attri
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: learner.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Learning Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3148,7 +3864,17 @@ A teammate writes this Interoperability requirement for the Online Learning Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Learning Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3166,7 +3892,9 @@ Is **Interoperability** primarily observable at runtime for the Online Learning 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Online Learning Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3184,14 +3912,16 @@ For the Cybersecurity Monitoring Platform, construct a **Interoperability** qual
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: security analyst.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Security Monitoring Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3209,7 +3939,17 @@ A teammate writes this Interoperability requirement for the Cybersecurity Monito
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cybersecurity Monitoring Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3227,7 +3967,9 @@ Is **Interoperability** primarily observable at runtime for the Cybersecurity Mo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Cybersecurity Monitoring Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3245,14 +3987,16 @@ For the Warehouse Management System, construct a **Interoperability** quality-at
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: warehouse operator.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Warehouse Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3270,7 +4014,17 @@ A teammate writes this Interoperability requirement for the Warehouse Management
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Warehouse Management System:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3288,7 +4042,9 @@ Is **Interoperability** primarily observable at runtime for the Warehouse Manage
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Warehouse Management System:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3306,14 +4062,16 @@ For the Payroll and HR System, construct a **Interoperability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: HR officer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: HR Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3331,7 +4089,17 @@ A teammate writes this Interoperability requirement for the Payroll and HR Syste
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Payroll and HR System:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3349,7 +4117,9 @@ Is **Interoperability** primarily observable at runtime for the Payroll and HR S
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Payroll and HR System:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3367,14 +4137,16 @@ For the Telecommunications Billing, construct a **Interoperability** quality-att
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: subscriber.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Telecom Billing Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3392,7 +4164,17 @@ A teammate writes this Interoperability requirement for the Telecommunications B
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Telecommunications Billing:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3410,7 +4192,9 @@ Is **Interoperability** primarily observable at runtime for the Telecommunicatio
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Telecommunications Billing:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3428,14 +4212,16 @@ For the Digital Library, construct a **Interoperability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: reader.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Library.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3453,7 +4239,17 @@ A teammate writes this Interoperability requirement for the Digital Library: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Library:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3471,7 +4267,9 @@ Is **Interoperability** primarily observable at runtime for the Digital Library?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Digital Library:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3489,14 +4287,16 @@ For the Medical Imaging Platform, construct a **Interoperability** quality-attri
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: radiologist.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Imaging Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3514,7 +4314,17 @@ A teammate writes this Interoperability requirement for the Medical Imaging Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Medical Imaging Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3532,7 +4342,9 @@ Is **Interoperability** primarily observable at runtime for the Medical Imaging 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Medical Imaging Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3550,14 +4362,16 @@ For the Manufacturing Monitoring, construct a **Interoperability** quality-attri
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: plant engineer.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Manufacturing Monitoring Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3575,7 +4389,17 @@ A teammate writes this Interoperability requirement for the Manufacturing Monito
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Manufacturing Monitoring:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3593,7 +4417,9 @@ Is **Interoperability** primarily observable at runtime for the Manufacturing Mo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Manufacturing Monitoring:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3611,14 +4437,16 @@ For the Government Citizen Portal, construct a **Interoperability** quality-attr
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: citizen.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Citizen Services Portal.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3636,7 +4464,17 @@ A teammate writes this Interoperability requirement for the Government Citizen P
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Government Citizen Portal:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3654,7 +4492,9 @@ Is **Interoperability** primarily observable at runtime for the Government Citiz
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Government Citizen Portal:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3672,14 +4512,16 @@ For the Digital Wallet, construct a **Interoperability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: wallet user.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Wallet.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3697,7 +4539,17 @@ A teammate writes this Interoperability requirement for the Digital Wallet: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Wallet:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3715,7 +4567,9 @@ Is **Interoperability** primarily observable at runtime for the Digital Wallet? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Digital Wallet:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3733,14 +4587,16 @@ For the Event Ticketing Platform, construct a **Interoperability** quality-attri
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: attendee.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ticketing Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3758,7 +4614,17 @@ A teammate writes this Interoperability requirement for the Event Ticketing Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Event Ticketing Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3776,7 +4642,9 @@ Is **Interoperability** primarily observable at runtime for the Event Ticketing 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Event Ticketing Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3794,14 +4662,16 @@ For the Online Auction Platform, construct a **Interoperability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: bidder.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Auction Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3819,7 +4689,17 @@ A teammate writes this Interoperability requirement for the Online Auction Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Auction Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3837,7 +4717,9 @@ Is **Interoperability** primarily observable at runtime for the Online Auction P
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Online Auction Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3855,14 +4737,16 @@ For the Supply Chain Platform, construct a **Interoperability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Interoperability** - ability of systems to exchange and use meaningful information.
-Source: supply planner.
-Stimulus: an external system requests a meaningful data exchange.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Supply Chain Platform.
-Response: discover/connect if needed, exchange data through agreed syntax/semantics and process it correctly.
+**Example answer**
+Quality attribute: **Interoperability** - the ability of systems to exchange and use meaningful information.
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
 Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
-Exact numbers may vary; logical consistency and objective testability matter.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3880,7 +4764,17 @@ A teammate writes this Interoperability requirement for the Supply Chain Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **100% of valid exchanges conform to the published contract and complete within 3 seconds**. Explain why the measure actually captures Interoperability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Supply Chain Platform:**
+Source: an approved external system.
+Stimulus: it sends a valid standards-compliant data-exchange request.
+Environment: normal operation with the published integration contract active.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must validate the contract, translate the exchanged representation where needed and process the information with its agreed meaning.
+Response Measure: 100% of valid exchanges conform to the published contract and complete within 3 seconds.
+
+The replacement captures **Interoperability** because it tests the ability of systems to exchange and use meaningful information, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3898,7 +4792,9 @@ Is **Interoperability** primarily observable at runtime for the Supply Chain Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability of systems to exchange and use meaningful information. A possible measure is 100% of valid exchanges conform to the published contract and complete within 3 seconds. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Interoperability is **runtime-observable, although interface and semantic compatibility are designed and verified before deployment**. It concerns the ability of systems to exchange and use meaningful information.
+
+**Worked observation for Supply Chain Platform:** send contract-valid and contract-invalid exchanges, then verify correct interpretation, rejection behavior and completion time. The acceptance criterion is that 100% of valid exchanges conform to the published contract and complete within 3 seconds. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3916,14 +4812,16 @@ For the University Student Portal, construct a **Modifiability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: student.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Student Portal.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -3941,7 +4839,17 @@ A teammate writes this Modifiability requirement for the University Student Port
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for University Student Portal:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -3959,7 +4867,9 @@ Is **Modifiability** primarily observable at runtime for the University Student 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for University Student Portal:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -3977,14 +4887,16 @@ For the Online Trading Platform, construct a **Modifiability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: trader.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Trading Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4002,7 +4914,17 @@ A teammate writes this Modifiability requirement for the Online Trading Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Trading Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4020,7 +4942,9 @@ Is **Modifiability** primarily observable at runtime for the Online Trading Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Online Trading Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4038,14 +4962,16 @@ For the Electricity Utility App, construct a **Modifiability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: utility customer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Utility Application.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4063,7 +4989,17 @@ A teammate writes this Modifiability requirement for the Electricity Utility App
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Electricity Utility App:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4081,7 +5017,9 @@ Is **Modifiability** primarily observable at runtime for the Electricity Utility
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Electricity Utility App:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4099,14 +5037,16 @@ For the Digital Game Store, construct a **Modifiability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: gamer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Game Distribution Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4124,7 +5064,17 @@ A teammate writes this Modifiability requirement for the Digital Game Store: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Game Store:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4142,7 +5092,9 @@ Is **Modifiability** primarily observable at runtime for the Digital Game Store?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Digital Game Store:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4160,14 +5112,16 @@ For the Flight Booking System, construct a **Modifiability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: passenger.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Flight Booking System.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4185,7 +5139,17 @@ A teammate writes this Modifiability requirement for the Flight Booking System: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Flight Booking System:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4203,7 +5167,9 @@ Is **Modifiability** primarily observable at runtime for the Flight Booking Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Flight Booking System:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4221,14 +5187,16 @@ For the E-Commerce Marketplace, construct a **Modifiability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: shopper.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Marketplace.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4246,7 +5214,17 @@ A teammate writes this Modifiability requirement for the E-Commerce Marketplace:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for E-Commerce Marketplace:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4264,7 +5242,9 @@ Is **Modifiability** primarily observable at runtime for the E-Commerce Marketpl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for E-Commerce Marketplace:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4282,14 +5262,16 @@ For the Digital Banking App, construct a **Modifiability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: bank customer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Banking Application.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4307,7 +5289,17 @@ A teammate writes this Modifiability requirement for the Digital Banking App: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Banking App:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4325,7 +5317,9 @@ Is **Modifiability** primarily observable at runtime for the Digital Banking App
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Digital Banking App:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4343,14 +5337,16 @@ For the Food Delivery Platform, construct a **Modifiability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: customer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Food Delivery Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4368,7 +5364,17 @@ A teammate writes this Modifiability requirement for the Food Delivery Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Food Delivery Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4386,7 +5392,9 @@ Is **Modifiability** primarily observable at runtime for the Food Delivery Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Food Delivery Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4404,14 +5412,16 @@ For the Hospital Information System, construct a **Modifiability** quality-attri
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: clinician.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hospital Information System.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4429,7 +5439,17 @@ A teammate writes this Modifiability requirement for the Hospital Information Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hospital Information System:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4447,7 +5467,9 @@ Is **Modifiability** primarily observable at runtime for the Hospital Informatio
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Hospital Information System:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4465,14 +5487,16 @@ For the Smart Traffic Platform, construct a **Modifiability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: traffic operator.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Traffic Management Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4490,7 +5514,17 @@ A teammate writes this Modifiability requirement for the Smart Traffic Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Traffic Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4508,7 +5542,9 @@ Is **Modifiability** primarily observable at runtime for the Smart Traffic Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Smart Traffic Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4526,14 +5562,16 @@ For the Ride-Hailing Platform, construct a **Modifiability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: rider.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ride-Hailing Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4551,7 +5589,17 @@ A teammate writes this Modifiability requirement for the Ride-Hailing Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Ride-Hailing Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4569,7 +5617,9 @@ Is **Modifiability** primarily observable at runtime for the Ride-Hailing Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Ride-Hailing Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4587,14 +5637,16 @@ For the Video Streaming Service, construct a **Modifiability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: viewer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Streaming Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4612,7 +5664,17 @@ A teammate writes this Modifiability requirement for the Video Streaming Service
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Video Streaming Service:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4630,7 +5692,9 @@ Is **Modifiability** primarily observable at runtime for the Video Streaming Ser
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Video Streaming Service:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4648,14 +5712,16 @@ For the Music Streaming Service, construct a **Modifiability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: listener.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Music Streaming Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4673,7 +5739,17 @@ A teammate writes this Modifiability requirement for the Music Streaming Service
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Music Streaming Service:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4691,7 +5767,9 @@ Is **Modifiability** primarily observable at runtime for the Music Streaming Ser
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Music Streaming Service:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4709,14 +5787,16 @@ For the Cloud File Storage, construct a **Modifiability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: user.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Cloud Storage Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4734,7 +5814,17 @@ A teammate writes this Modifiability requirement for the Cloud File Storage: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cloud File Storage:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4752,7 +5842,9 @@ Is **Modifiability** primarily observable at runtime for the Cloud File Storage?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Cloud File Storage:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4770,14 +5862,16 @@ For the Social Network, construct a **Modifiability** quality-attribute scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: member.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Social Network.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4795,7 +5889,17 @@ A teammate writes this Modifiability requirement for the Social Network: 'The sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Social Network:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4813,7 +5917,9 @@ Is **Modifiability** primarily observable at runtime for the Social Network? Jus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Social Network:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4831,14 +5937,16 @@ For the Smart Home Platform, construct a **Modifiability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: homeowner.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Smart Home Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4856,7 +5964,17 @@ A teammate writes this Modifiability requirement for the Smart Home Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Home Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4874,7 +5992,9 @@ Is **Modifiability** primarily observable at runtime for the Smart Home Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Smart Home Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4892,14 +6012,16 @@ For the Logistics Tracking System, construct a **Modifiability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: operations user.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Logistics Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4917,7 +6039,17 @@ A teammate writes this Modifiability requirement for the Logistics Tracking Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Logistics Tracking System:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4935,7 +6067,9 @@ Is **Modifiability** primarily observable at runtime for the Logistics Tracking 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Logistics Tracking System:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -4953,14 +6087,16 @@ For the Insurance Claims System, construct a **Modifiability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: claims officer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Claims Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -4978,7 +6114,17 @@ A teammate writes this Modifiability requirement for the Insurance Claims System
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Insurance Claims System:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -4996,7 +6142,9 @@ Is **Modifiability** primarily observable at runtime for the Insurance Claims Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Insurance Claims System:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5014,14 +6162,16 @@ For the Hotel Booking Platform, construct a **Modifiability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: guest.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hotel Booking Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5039,7 +6189,17 @@ A teammate writes this Modifiability requirement for the Hotel Booking Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hotel Booking Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5057,7 +6217,9 @@ Is **Modifiability** primarily observable at runtime for the Hotel Booking Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Hotel Booking Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5075,14 +6237,16 @@ For the Online Learning Platform, construct a **Modifiability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: learner.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Learning Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5100,7 +6264,17 @@ A teammate writes this Modifiability requirement for the Online Learning Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Learning Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5118,7 +6292,9 @@ Is **Modifiability** primarily observable at runtime for the Online Learning Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Online Learning Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5136,14 +6312,16 @@ For the Cybersecurity Monitoring Platform, construct a **Modifiability** quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: security analyst.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Security Monitoring Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5161,7 +6339,17 @@ A teammate writes this Modifiability requirement for the Cybersecurity Monitorin
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cybersecurity Monitoring Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5179,7 +6367,9 @@ Is **Modifiability** primarily observable at runtime for the Cybersecurity Monit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Cybersecurity Monitoring Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5197,14 +6387,16 @@ For the Warehouse Management System, construct a **Modifiability** quality-attri
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: warehouse operator.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Warehouse Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5222,7 +6414,17 @@ A teammate writes this Modifiability requirement for the Warehouse Management Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Warehouse Management System:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5240,7 +6442,9 @@ Is **Modifiability** primarily observable at runtime for the Warehouse Managemen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Warehouse Management System:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5258,14 +6462,16 @@ For the Payroll and HR System, construct a **Modifiability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: HR officer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: HR Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5283,7 +6489,17 @@ A teammate writes this Modifiability requirement for the Payroll and HR System: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Payroll and HR System:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5301,7 +6517,9 @@ Is **Modifiability** primarily observable at runtime for the Payroll and HR Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Payroll and HR System:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5319,14 +6537,16 @@ For the Telecommunications Billing, construct a **Modifiability** quality-attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: subscriber.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Telecom Billing Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5344,7 +6564,17 @@ A teammate writes this Modifiability requirement for the Telecommunications Bill
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Telecommunications Billing:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5362,7 +6592,9 @@ Is **Modifiability** primarily observable at runtime for the Telecommunications 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Telecommunications Billing:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5380,14 +6612,16 @@ For the Digital Library, construct a **Modifiability** quality-attribute scenari
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: reader.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Library.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5405,7 +6639,17 @@ A teammate writes this Modifiability requirement for the Digital Library: 'The s
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Library:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5423,7 +6667,9 @@ Is **Modifiability** primarily observable at runtime for the Digital Library? Ju
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Digital Library:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5441,14 +6687,16 @@ For the Medical Imaging Platform, construct a **Modifiability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: radiologist.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Imaging Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5466,7 +6714,17 @@ A teammate writes this Modifiability requirement for the Medical Imaging Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Medical Imaging Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5484,7 +6742,9 @@ Is **Modifiability** primarily observable at runtime for the Medical Imaging Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Medical Imaging Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5502,14 +6762,16 @@ For the Manufacturing Monitoring, construct a **Modifiability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: plant engineer.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Manufacturing Monitoring Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5527,7 +6789,17 @@ A teammate writes this Modifiability requirement for the Manufacturing Monitorin
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Manufacturing Monitoring:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5545,7 +6817,9 @@ Is **Modifiability** primarily observable at runtime for the Manufacturing Monit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Manufacturing Monitoring:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5563,14 +6837,16 @@ For the Government Citizen Portal, construct a **Modifiability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: citizen.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Citizen Services Portal.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5588,7 +6864,17 @@ A teammate writes this Modifiability requirement for the Government Citizen Port
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Government Citizen Portal:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5606,7 +6892,9 @@ Is **Modifiability** primarily observable at runtime for the Government Citizen 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Government Citizen Portal:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5624,14 +6912,16 @@ For the Digital Wallet, construct a **Modifiability** quality-attribute scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: wallet user.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Wallet.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5649,7 +6939,17 @@ A teammate writes this Modifiability requirement for the Digital Wallet: 'The sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Wallet:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5667,7 +6967,9 @@ Is **Modifiability** primarily observable at runtime for the Digital Wallet? Jus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Digital Wallet:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5685,14 +6987,16 @@ For the Event Ticketing Platform, construct a **Modifiability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: attendee.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ticketing Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5710,7 +7014,17 @@ A teammate writes this Modifiability requirement for the Event Ticketing Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Event Ticketing Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5728,7 +7042,9 @@ Is **Modifiability** primarily observable at runtime for the Event Ticketing Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Event Ticketing Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5746,14 +7062,16 @@ For the Online Auction Platform, construct a **Modifiability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: bidder.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Auction Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5771,7 +7089,17 @@ A teammate writes this Modifiability requirement for the Online Auction Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Auction Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5789,7 +7117,9 @@ Is **Modifiability** primarily observable at runtime for the Online Auction Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Online Auction Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5807,14 +7137,16 @@ For the Supply Chain Platform, construct a **Modifiability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Modifiability** - cost and risk of making a change.
-Source: supply planner.
-Stimulus: a developer is directed to add, delete or change functionality, quality, capacity or technology.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Supply Chain Platform.
-Response: locate affected elements, implement and test the change without unintended ripple effects.
-Response Measure: change completed by one developer within 2 working days and affects no more than 2 modules.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Modifiability** - the cost and risk of making a change.
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5832,7 +7164,17 @@ A teammate writes this Modifiability requirement for the Supply Chain Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **change completed by one developer within 2 working days and affects no more than 2 modules**. Explain why the measure actually captures Modifiability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Supply Chain Platform:**
+Source: the product owner.
+Stimulus: requests a new validation rule for an existing transaction.
+Environment: development and test time before the next release.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must locate the affected elements, implement and test the rule without unintended changes to unrelated behavior.
+Response Measure: one developer completes the change within 2 working days and modifies no more than 2 modules.
+
+The replacement captures **Modifiability** because it tests the cost and risk of making a change, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5850,7 +7192,9 @@ Is **Modifiability** primarily observable at runtime for the Supply Chain Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: cost and risk of making a change. A possible measure is change completed by one developer within 2 working days and affects no more than 2 modules. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Modifiability is **primarily design/development-time, with deployment behavior relevant only after the change has been produced**. It concerns the cost and risk of making a change.
+
+**Worked observation for Supply Chain Platform:** give a developer the change request and measure elapsed effort, affected modules and regression-test results. The acceptance criterion is that one developer completes the change within 2 working days and modifies no more than 2 modules. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5868,14 +7212,16 @@ For the University Student Portal, construct a **Performance** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: student.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Student Portal.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5893,7 +7239,17 @@ A teammate writes this Performance requirement for the University Student Portal
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for University Student Portal:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5911,7 +7267,9 @@ Is **Performance** primarily observable at runtime for the University Student Po
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for University Student Portal:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5929,14 +7287,16 @@ For the Online Trading Platform, construct a **Performance** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: trader.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Trading Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -5954,7 +7314,17 @@ A teammate writes this Performance requirement for the Online Trading Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Trading Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -5972,7 +7342,9 @@ Is **Performance** primarily observable at runtime for the Online Trading Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Online Trading Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -5990,14 +7362,16 @@ For the Electricity Utility App, construct a **Performance** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: utility customer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Utility Application.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6015,7 +7389,17 @@ A teammate writes this Performance requirement for the Electricity Utility App: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Electricity Utility App:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6033,7 +7417,9 @@ Is **Performance** primarily observable at runtime for the Electricity Utility A
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Electricity Utility App:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6051,14 +7437,16 @@ For the Digital Game Store, construct a **Performance** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: gamer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Game Distribution Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6076,7 +7464,17 @@ A teammate writes this Performance requirement for the Digital Game Store: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Game Store:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6094,7 +7492,9 @@ Is **Performance** primarily observable at runtime for the Digital Game Store? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Digital Game Store:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6112,14 +7512,16 @@ For the Flight Booking System, construct a **Performance** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: passenger.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Flight Booking System.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6137,7 +7539,17 @@ A teammate writes this Performance requirement for the Flight Booking System: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Flight Booking System:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6155,7 +7567,9 @@ Is **Performance** primarily observable at runtime for the Flight Booking System
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Flight Booking System:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6173,14 +7587,16 @@ For the E-Commerce Marketplace, construct a **Performance** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: shopper.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Marketplace.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6198,7 +7614,17 @@ A teammate writes this Performance requirement for the E-Commerce Marketplace: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for E-Commerce Marketplace:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6216,7 +7642,9 @@ Is **Performance** primarily observable at runtime for the E-Commerce Marketplac
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for E-Commerce Marketplace:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6234,14 +7662,16 @@ For the Digital Banking App, construct a **Performance** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: bank customer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Banking Application.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6259,7 +7689,17 @@ A teammate writes this Performance requirement for the Digital Banking App: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Banking App:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6277,7 +7717,9 @@ Is **Performance** primarily observable at runtime for the Digital Banking App? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Digital Banking App:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6295,14 +7737,16 @@ For the Food Delivery Platform, construct a **Performance** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: customer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Food Delivery Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6320,7 +7764,17 @@ A teammate writes this Performance requirement for the Food Delivery Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Food Delivery Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6338,7 +7792,9 @@ Is **Performance** primarily observable at runtime for the Food Delivery Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Food Delivery Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6356,14 +7812,16 @@ For the Hospital Information System, construct a **Performance** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: clinician.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hospital Information System.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6381,7 +7839,17 @@ A teammate writes this Performance requirement for the Hospital Information Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hospital Information System:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6399,7 +7867,9 @@ Is **Performance** primarily observable at runtime for the Hospital Information 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Hospital Information System:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6417,14 +7887,16 @@ For the Smart Traffic Platform, construct a **Performance** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: traffic operator.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Traffic Management Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6442,7 +7914,17 @@ A teammate writes this Performance requirement for the Smart Traffic Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Traffic Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6460,7 +7942,9 @@ Is **Performance** primarily observable at runtime for the Smart Traffic Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Smart Traffic Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6478,14 +7962,16 @@ For the Ride-Hailing Platform, construct a **Performance** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: rider.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ride-Hailing Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6503,7 +7989,17 @@ A teammate writes this Performance requirement for the Ride-Hailing Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Ride-Hailing Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6521,7 +8017,9 @@ Is **Performance** primarily observable at runtime for the Ride-Hailing Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Ride-Hailing Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6539,14 +8037,16 @@ For the Video Streaming Service, construct a **Performance** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: viewer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Streaming Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6564,7 +8064,17 @@ A teammate writes this Performance requirement for the Video Streaming Service: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Video Streaming Service:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6582,7 +8092,9 @@ Is **Performance** primarily observable at runtime for the Video Streaming Servi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Video Streaming Service:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6600,14 +8112,16 @@ For the Music Streaming Service, construct a **Performance** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: listener.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Music Streaming Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6625,7 +8139,17 @@ A teammate writes this Performance requirement for the Music Streaming Service: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Music Streaming Service:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6643,7 +8167,9 @@ Is **Performance** primarily observable at runtime for the Music Streaming Servi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Music Streaming Service:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6661,14 +8187,16 @@ For the Cloud File Storage, construct a **Performance** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: user.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Cloud Storage Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6686,7 +8214,17 @@ A teammate writes this Performance requirement for the Cloud File Storage: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cloud File Storage:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6704,7 +8242,9 @@ Is **Performance** primarily observable at runtime for the Cloud File Storage? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Cloud File Storage:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6722,14 +8262,16 @@ For the Social Network, construct a **Performance** quality-attribute scenario u
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: member.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Social Network.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6747,7 +8289,17 @@ A teammate writes this Performance requirement for the Social Network: 'The syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Social Network:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6765,7 +8317,9 @@ Is **Performance** primarily observable at runtime for the Social Network? Justi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Social Network:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6783,14 +8337,16 @@ For the Smart Home Platform, construct a **Performance** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: homeowner.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Smart Home Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6808,7 +8364,17 @@ A teammate writes this Performance requirement for the Smart Home Platform: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Home Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6826,7 +8392,9 @@ Is **Performance** primarily observable at runtime for the Smart Home Platform? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Smart Home Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6844,14 +8412,16 @@ For the Logistics Tracking System, construct a **Performance** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: operations user.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Logistics Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6869,7 +8439,17 @@ A teammate writes this Performance requirement for the Logistics Tracking System
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Logistics Tracking System:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6887,7 +8467,9 @@ Is **Performance** primarily observable at runtime for the Logistics Tracking Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Logistics Tracking System:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6905,14 +8487,16 @@ For the Insurance Claims System, construct a **Performance** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: claims officer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Claims Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6930,7 +8514,17 @@ A teammate writes this Performance requirement for the Insurance Claims System: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Insurance Claims System:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -6948,7 +8542,9 @@ Is **Performance** primarily observable at runtime for the Insurance Claims Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Insurance Claims System:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -6966,14 +8562,16 @@ For the Hotel Booking Platform, construct a **Performance** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: guest.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hotel Booking Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -6991,7 +8589,17 @@ A teammate writes this Performance requirement for the Hotel Booking Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hotel Booking Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7009,7 +8617,9 @@ Is **Performance** primarily observable at runtime for the Hotel Booking Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Hotel Booking Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7027,14 +8637,16 @@ For the Online Learning Platform, construct a **Performance** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: learner.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Learning Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7052,7 +8664,17 @@ A teammate writes this Performance requirement for the Online Learning Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Learning Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7070,7 +8692,9 @@ Is **Performance** primarily observable at runtime for the Online Learning Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Online Learning Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7088,14 +8712,16 @@ For the Cybersecurity Monitoring Platform, construct a **Performance** quality-a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: security analyst.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Security Monitoring Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7113,7 +8739,17 @@ A teammate writes this Performance requirement for the Cybersecurity Monitoring 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cybersecurity Monitoring Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7131,7 +8767,9 @@ Is **Performance** primarily observable at runtime for the Cybersecurity Monitor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Cybersecurity Monitoring Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7149,14 +8787,16 @@ For the Warehouse Management System, construct a **Performance** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: warehouse operator.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Warehouse Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7174,7 +8814,17 @@ A teammate writes this Performance requirement for the Warehouse Management Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Warehouse Management System:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7192,7 +8842,9 @@ Is **Performance** primarily observable at runtime for the Warehouse Management 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Warehouse Management System:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7210,14 +8862,16 @@ For the Payroll and HR System, construct a **Performance** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: HR officer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: HR Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7235,7 +8889,17 @@ A teammate writes this Performance requirement for the Payroll and HR System: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Payroll and HR System:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7253,7 +8917,9 @@ Is **Performance** primarily observable at runtime for the Payroll and HR System
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Payroll and HR System:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7271,14 +8937,16 @@ For the Telecommunications Billing, construct a **Performance** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: subscriber.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Telecom Billing Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7296,7 +8964,17 @@ A teammate writes this Performance requirement for the Telecommunications Billin
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Telecommunications Billing:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7314,7 +8992,9 @@ Is **Performance** primarily observable at runtime for the Telecommunications Bi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Telecommunications Billing:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7332,14 +9012,16 @@ For the Digital Library, construct a **Performance** quality-attribute scenario 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: reader.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Library.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7357,7 +9039,17 @@ A teammate writes this Performance requirement for the Digital Library: 'The sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Library:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7375,7 +9067,9 @@ Is **Performance** primarily observable at runtime for the Digital Library? Just
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Digital Library:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7393,14 +9087,16 @@ For the Medical Imaging Platform, construct a **Performance** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: radiologist.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Imaging Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7418,7 +9114,17 @@ A teammate writes this Performance requirement for the Medical Imaging Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Medical Imaging Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7436,7 +9142,9 @@ Is **Performance** primarily observable at runtime for the Medical Imaging Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Medical Imaging Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7454,14 +9162,16 @@ For the Manufacturing Monitoring, construct a **Performance** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: plant engineer.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Manufacturing Monitoring Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7479,7 +9189,17 @@ A teammate writes this Performance requirement for the Manufacturing Monitoring:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Manufacturing Monitoring:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7497,7 +9217,9 @@ Is **Performance** primarily observable at runtime for the Manufacturing Monitor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Manufacturing Monitoring:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7515,14 +9237,16 @@ For the Government Citizen Portal, construct a **Performance** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: citizen.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Citizen Services Portal.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7540,7 +9264,17 @@ A teammate writes this Performance requirement for the Government Citizen Portal
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Government Citizen Portal:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7558,7 +9292,9 @@ Is **Performance** primarily observable at runtime for the Government Citizen Po
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Government Citizen Portal:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7576,14 +9312,16 @@ For the Digital Wallet, construct a **Performance** quality-attribute scenario u
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: wallet user.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Wallet.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7601,7 +9339,17 @@ A teammate writes this Performance requirement for the Digital Wallet: 'The syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Wallet:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7619,7 +9367,9 @@ Is **Performance** primarily observable at runtime for the Digital Wallet? Justi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Digital Wallet:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7637,14 +9387,16 @@ For the Event Ticketing Platform, construct a **Performance** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: attendee.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ticketing Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7662,7 +9414,17 @@ A teammate writes this Performance requirement for the Event Ticketing Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Event Ticketing Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7680,7 +9442,9 @@ Is **Performance** primarily observable at runtime for the Event Ticketing Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Event Ticketing Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7698,14 +9462,16 @@ For the Online Auction Platform, construct a **Performance** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: bidder.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Auction Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7723,7 +9489,17 @@ A teammate writes this Performance requirement for the Online Auction Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Auction Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7741,7 +9517,9 @@ Is **Performance** primarily observable at runtime for the Online Auction Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Online Auction Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7759,14 +9537,16 @@ For the Supply Chain Platform, construct a **Performance** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Performance** - ability to meet timing and throughput requirements.
-Source: supply planner.
-Stimulus: a request arrives under peak workload.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Supply Chain Platform.
-Response: process the event and return the required result.
-Response Measure: 95% of requests complete within 2 seconds while sustaining 500 requests/second.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Performance** - the ability to meet timing and throughput requirements.
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7784,7 +9564,17 @@ A teammate writes this Performance requirement for the Supply Chain Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **95% of requests complete within 2 seconds while sustaining 500 requests/second**. Explain why the measure actually captures Performance.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Supply Chain Platform:**
+Source: 500 concurrent authenticated users.
+Stimulus: submit core service requests during a five-minute workload burst.
+Environment: peak-load operation on the production-sized deployment.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must accept, process and return the requested results without exhausting resources.
+Response Measure: at least 95% of requests complete within 2 seconds while sustaining 500 requests per second.
+
+The replacement captures **Performance** because it tests the ability to meet timing and throughput requirements, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7802,7 +9592,9 @@ Is **Performance** primarily observable at runtime for the Supply Chain Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ability to meet timing and throughput requirements. A possible measure is 95% of requests complete within 2 seconds while sustaining 500 requests/second. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Performance is **runtime-observable**. It concerns the ability to meet timing and throughput requirements.
+
+**Worked observation for Supply Chain Platform:** run the stated peak workload and measure response-time percentiles, throughput and errors. The acceptance criterion is that at least 95% of requests complete within 2 seconds while sustaining 500 requests per second. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7820,14 +9612,16 @@ For the University Student Portal, construct a **Security** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Student Portal.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7845,7 +9639,17 @@ A teammate writes this Security requirement for the University Student Portal: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for University Student Portal:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7863,7 +9667,9 @@ Is **Security** primarily observable at runtime for the University Student Porta
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for University Student Portal:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7881,14 +9687,16 @@ For the Online Trading Platform, construct a **Security** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Trading Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7906,7 +9714,17 @@ A teammate writes this Security requirement for the Online Trading Platform: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Trading Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7924,7 +9742,9 @@ Is **Security** primarily observable at runtime for the Online Trading Platform?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Online Trading Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -7942,14 +9762,16 @@ For the Electricity Utility App, construct a **Security** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Utility Application.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -7967,7 +9789,17 @@ A teammate writes this Security requirement for the Electricity Utility App: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Electricity Utility App:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -7985,7 +9817,9 @@ Is **Security** primarily observable at runtime for the Electricity Utility App?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Electricity Utility App:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8003,14 +9837,16 @@ For the Digital Game Store, construct a **Security** quality-attribute scenario 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Game Distribution Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8028,7 +9864,17 @@ A teammate writes this Security requirement for the Digital Game Store: 'The sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Game Store:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8046,7 +9892,9 @@ Is **Security** primarily observable at runtime for the Digital Game Store? Just
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Digital Game Store:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8064,14 +9912,16 @@ For the Flight Booking System, construct a **Security** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Flight Booking System.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8089,7 +9939,17 @@ A teammate writes this Security requirement for the Flight Booking System: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Flight Booking System:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8107,7 +9967,9 @@ Is **Security** primarily observable at runtime for the Flight Booking System? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Flight Booking System:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8125,14 +9987,16 @@ For the E-Commerce Marketplace, construct a **Security** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Marketplace.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8150,7 +10014,17 @@ A teammate writes this Security requirement for the E-Commerce Marketplace: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for E-Commerce Marketplace:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8168,7 +10042,9 @@ Is **Security** primarily observable at runtime for the E-Commerce Marketplace? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for E-Commerce Marketplace:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8186,14 +10062,16 @@ For the Digital Banking App, construct a **Security** quality-attribute scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Banking Application.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8211,7 +10089,17 @@ A teammate writes this Security requirement for the Digital Banking App: 'The sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Banking App:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8229,7 +10117,9 @@ Is **Security** primarily observable at runtime for the Digital Banking App? Jus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Digital Banking App:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8247,14 +10137,16 @@ For the Food Delivery Platform, construct a **Security** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Food Delivery Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8272,7 +10164,17 @@ A teammate writes this Security requirement for the Food Delivery Platform: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Food Delivery Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8290,7 +10192,9 @@ Is **Security** primarily observable at runtime for the Food Delivery Platform? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Food Delivery Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8308,14 +10212,16 @@ For the Hospital Information System, construct a **Security** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hospital Information System.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8333,7 +10239,17 @@ A teammate writes this Security requirement for the Hospital Information System:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hospital Information System:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8351,7 +10267,9 @@ Is **Security** primarily observable at runtime for the Hospital Information Sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Hospital Information System:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8369,14 +10287,16 @@ For the Smart Traffic Platform, construct a **Security** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Traffic Management Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8394,7 +10314,17 @@ A teammate writes this Security requirement for the Smart Traffic Platform: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Traffic Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8412,7 +10342,9 @@ Is **Security** primarily observable at runtime for the Smart Traffic Platform? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Smart Traffic Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8430,14 +10362,16 @@ For the Ride-Hailing Platform, construct a **Security** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ride-Hailing Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8455,7 +10389,17 @@ A teammate writes this Security requirement for the Ride-Hailing Platform: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Ride-Hailing Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8473,7 +10417,9 @@ Is **Security** primarily observable at runtime for the Ride-Hailing Platform? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Ride-Hailing Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8491,14 +10437,16 @@ For the Video Streaming Service, construct a **Security** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Streaming Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8516,7 +10464,17 @@ A teammate writes this Security requirement for the Video Streaming Service: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Video Streaming Service:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8534,7 +10492,9 @@ Is **Security** primarily observable at runtime for the Video Streaming Service?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Video Streaming Service:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8552,14 +10512,16 @@ For the Music Streaming Service, construct a **Security** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Music Streaming Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8577,7 +10539,17 @@ A teammate writes this Security requirement for the Music Streaming Service: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Music Streaming Service:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8595,7 +10567,9 @@ Is **Security** primarily observable at runtime for the Music Streaming Service?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Music Streaming Service:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8613,14 +10587,16 @@ For the Cloud File Storage, construct a **Security** quality-attribute scenario 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Cloud Storage Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8638,7 +10614,17 @@ A teammate writes this Security requirement for the Cloud File Storage: 'The sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cloud File Storage:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8656,7 +10642,9 @@ Is **Security** primarily observable at runtime for the Cloud File Storage? Just
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Cloud File Storage:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8674,14 +10662,16 @@ For the Social Network, construct a **Security** quality-attribute scenario usin
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Social Network.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8699,7 +10689,17 @@ A teammate writes this Security requirement for the Social Network: 'The system 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Social Network:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8717,7 +10717,9 @@ Is **Security** primarily observable at runtime for the Social Network? Justify 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Social Network:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8735,14 +10737,16 @@ For the Smart Home Platform, construct a **Security** quality-attribute scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Smart Home Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8760,7 +10764,17 @@ A teammate writes this Security requirement for the Smart Home Platform: 'The sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Home Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8778,7 +10792,9 @@ Is **Security** primarily observable at runtime for the Smart Home Platform? Jus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Smart Home Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8796,14 +10812,16 @@ For the Logistics Tracking System, construct a **Security** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Logistics Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8821,7 +10839,17 @@ A teammate writes this Security requirement for the Logistics Tracking System: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Logistics Tracking System:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8839,7 +10867,9 @@ Is **Security** primarily observable at runtime for the Logistics Tracking Syste
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Logistics Tracking System:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8857,14 +10887,16 @@ For the Insurance Claims System, construct a **Security** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Claims Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8882,7 +10914,17 @@ A teammate writes this Security requirement for the Insurance Claims System: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Insurance Claims System:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8900,7 +10942,9 @@ Is **Security** primarily observable at runtime for the Insurance Claims System?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Insurance Claims System:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8918,14 +10962,16 @@ For the Hotel Booking Platform, construct a **Security** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hotel Booking Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -8943,7 +10989,17 @@ A teammate writes this Security requirement for the Hotel Booking Platform: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hotel Booking Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -8961,7 +11017,9 @@ Is **Security** primarily observable at runtime for the Hotel Booking Platform? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Hotel Booking Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -8979,14 +11037,16 @@ For the Online Learning Platform, construct a **Security** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Learning Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9004,7 +11064,17 @@ A teammate writes this Security requirement for the Online Learning Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Learning Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9022,7 +11092,9 @@ Is **Security** primarily observable at runtime for the Online Learning Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Online Learning Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9040,14 +11112,16 @@ For the Cybersecurity Monitoring Platform, construct a **Security** quality-attr
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Security Monitoring Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9065,7 +11139,17 @@ A teammate writes this Security requirement for the Cybersecurity Monitoring Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cybersecurity Monitoring Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9083,7 +11167,9 @@ Is **Security** primarily observable at runtime for the Cybersecurity Monitoring
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Cybersecurity Monitoring Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9101,14 +11187,16 @@ For the Warehouse Management System, construct a **Security** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Warehouse Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9126,7 +11214,17 @@ A teammate writes this Security requirement for the Warehouse Management System:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Warehouse Management System:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9144,7 +11242,9 @@ Is **Security** primarily observable at runtime for the Warehouse Management Sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Warehouse Management System:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9162,14 +11262,16 @@ For the Payroll and HR System, construct a **Security** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: HR Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9187,7 +11289,17 @@ A teammate writes this Security requirement for the Payroll and HR System: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Payroll and HR System:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9205,7 +11317,9 @@ Is **Security** primarily observable at runtime for the Payroll and HR System? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Payroll and HR System:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9223,14 +11337,16 @@ For the Telecommunications Billing, construct a **Security** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Telecom Billing Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9248,7 +11364,17 @@ A teammate writes this Security requirement for the Telecommunications Billing: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Telecommunications Billing:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9266,7 +11392,9 @@ Is **Security** primarily observable at runtime for the Telecommunications Billi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Telecommunications Billing:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9284,14 +11412,16 @@ For the Digital Library, construct a **Security** quality-attribute scenario usi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Library.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9309,7 +11439,17 @@ A teammate writes this Security requirement for the Digital Library: 'The system
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Library:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9327,7 +11467,9 @@ Is **Security** primarily observable at runtime for the Digital Library? Justify
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Digital Library:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9345,14 +11487,16 @@ For the Medical Imaging Platform, construct a **Security** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Imaging Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9370,7 +11514,17 @@ A teammate writes this Security requirement for the Medical Imaging Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Medical Imaging Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9388,7 +11542,9 @@ Is **Security** primarily observable at runtime for the Medical Imaging Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Medical Imaging Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9406,14 +11562,16 @@ For the Manufacturing Monitoring, construct a **Security** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Manufacturing Monitoring Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9431,7 +11589,17 @@ A teammate writes this Security requirement for the Manufacturing Monitoring: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Manufacturing Monitoring:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9449,7 +11617,9 @@ Is **Security** primarily observable at runtime for the Manufacturing Monitoring
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Manufacturing Monitoring:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9467,14 +11637,16 @@ For the Government Citizen Portal, construct a **Security** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Citizen Services Portal.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9492,7 +11664,17 @@ A teammate writes this Security requirement for the Government Citizen Portal: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Government Citizen Portal:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9510,7 +11692,9 @@ Is **Security** primarily observable at runtime for the Government Citizen Porta
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Government Citizen Portal:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9528,14 +11712,16 @@ For the Digital Wallet, construct a **Security** quality-attribute scenario usin
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Wallet.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9553,7 +11739,17 @@ A teammate writes this Security requirement for the Digital Wallet: 'The system 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Wallet:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9571,7 +11767,9 @@ Is **Security** primarily observable at runtime for the Digital Wallet? Justify 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Digital Wallet:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9589,14 +11787,16 @@ For the Event Ticketing Platform, construct a **Security** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ticketing Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9614,7 +11814,17 @@ A teammate writes this Security requirement for the Event Ticketing Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Event Ticketing Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9632,7 +11842,9 @@ Is **Security** primarily observable at runtime for the Event Ticketing Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Event Ticketing Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9650,14 +11862,16 @@ For the Online Auction Platform, construct a **Security** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Auction Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9675,7 +11889,17 @@ A teammate writes this Security requirement for the Online Auction Platform: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Auction Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9693,7 +11917,9 @@ Is **Security** primarily observable at runtime for the Online Auction Platform?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Online Auction Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9711,14 +11937,16 @@ For the Supply Chain Platform, construct a **Security** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Security** - protect data/services from unauthorized access or modification while allowing legitimate use.
-Source: unauthorized actor.
-Stimulus: an unauthorized actor attempts to access, change, delete data or deny service.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Supply Chain Platform.
-Response: authenticate/authorize as applicable, prevent the action, protect data and record/audit the attempt.
-Response Measure: 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Security** - protection of data and services from unauthorized access or modification while allowing legitimate use.
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9736,7 +11964,17 @@ A teammate writes this Security requirement for the Supply Chain Platform: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created**. Explain why the measure actually captures Security.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Supply Chain Platform:**
+Source: an unauthenticated external actor.
+Stimulus: attempts to read a protected user record through the public interface.
+Environment: normal operation while legitimate users are active.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must reject the request, disclose no protected data and record the attempt for audit.
+Response Measure: zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created.
+
+The replacement captures **Security** because it tests protection of data and services from unauthorized access or modification while allowing legitimate use, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9754,7 +11992,9 @@ Is **Security** primarily observable at runtime for the Supply Chain Platform? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: protect data/services from unauthorized access or modification while allowing legitimate use. A possible measure is 0 unauthorized disclosures; the attempt is rejected within 1 second and an audit record is created. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Security is **runtime-observable, while threat analysis and control selection also occur at design time**. It concerns protection of data and services from unauthorized access or modification while allowing legitimate use.
+
+**Worked observation for Supply Chain Platform:** issue the unauthorized request and inspect the response, protected store and audit trail. The acceptance criterion is that zero protected fields are disclosed, the request is rejected within 1 second and one audit record is created. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9772,14 +12012,16 @@ For the University Student Portal, construct a **Testability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Student Portal.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9797,7 +12039,17 @@ A teammate writes this Testability requirement for the University Student Portal
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for University Student Portal:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9815,7 +12067,9 @@ Is **Testability** primarily observable at runtime for the University Student Po
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for University Student Portal:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9833,14 +12087,16 @@ For the Online Trading Platform, construct a **Testability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Trading Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9858,7 +12114,17 @@ A teammate writes this Testability requirement for the Online Trading Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Trading Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9876,7 +12142,9 @@ Is **Testability** primarily observable at runtime for the Online Trading Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Online Trading Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9894,14 +12162,16 @@ For the Electricity Utility App, construct a **Testability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Utility Application.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9919,7 +12189,17 @@ A teammate writes this Testability requirement for the Electricity Utility App: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Electricity Utility App:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9937,7 +12217,9 @@ Is **Testability** primarily observable at runtime for the Electricity Utility A
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Electricity Utility App:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -9955,14 +12237,16 @@ For the Digital Game Store, construct a **Testability** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Game Distribution Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -9980,7 +12264,17 @@ A teammate writes this Testability requirement for the Digital Game Store: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Game Store:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -9998,7 +12292,9 @@ Is **Testability** primarily observable at runtime for the Digital Game Store? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Digital Game Store:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10016,14 +12312,16 @@ For the Flight Booking System, construct a **Testability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Flight Booking System.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10041,7 +12339,17 @@ A teammate writes this Testability requirement for the Flight Booking System: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Flight Booking System:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10059,7 +12367,9 @@ Is **Testability** primarily observable at runtime for the Flight Booking System
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Flight Booking System:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10077,14 +12387,16 @@ For the E-Commerce Marketplace, construct a **Testability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Marketplace.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10102,7 +12414,17 @@ A teammate writes this Testability requirement for the E-Commerce Marketplace: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for E-Commerce Marketplace:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10120,7 +12442,9 @@ Is **Testability** primarily observable at runtime for the E-Commerce Marketplac
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for E-Commerce Marketplace:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10138,14 +12462,16 @@ For the Digital Banking App, construct a **Testability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Banking Application.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10163,7 +12489,17 @@ A teammate writes this Testability requirement for the Digital Banking App: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Banking App:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10181,7 +12517,9 @@ Is **Testability** primarily observable at runtime for the Digital Banking App? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Digital Banking App:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10199,14 +12537,16 @@ For the Food Delivery Platform, construct a **Testability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Food Delivery Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10224,7 +12564,17 @@ A teammate writes this Testability requirement for the Food Delivery Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Food Delivery Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10242,7 +12592,9 @@ Is **Testability** primarily observable at runtime for the Food Delivery Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Food Delivery Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10260,14 +12612,16 @@ For the Hospital Information System, construct a **Testability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hospital Information System.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10285,7 +12639,17 @@ A teammate writes this Testability requirement for the Hospital Information Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hospital Information System:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10303,7 +12667,9 @@ Is **Testability** primarily observable at runtime for the Hospital Information 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Hospital Information System:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10321,14 +12687,16 @@ For the Smart Traffic Platform, construct a **Testability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Traffic Management Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10346,7 +12714,17 @@ A teammate writes this Testability requirement for the Smart Traffic Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Traffic Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10364,7 +12742,9 @@ Is **Testability** primarily observable at runtime for the Smart Traffic Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Smart Traffic Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10382,14 +12762,16 @@ For the Ride-Hailing Platform, construct a **Testability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ride-Hailing Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10407,7 +12789,17 @@ A teammate writes this Testability requirement for the Ride-Hailing Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Ride-Hailing Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10425,7 +12817,9 @@ Is **Testability** primarily observable at runtime for the Ride-Hailing Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Ride-Hailing Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10443,14 +12837,16 @@ For the Video Streaming Service, construct a **Testability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Streaming Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10468,7 +12864,17 @@ A teammate writes this Testability requirement for the Video Streaming Service: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Video Streaming Service:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10486,7 +12892,9 @@ Is **Testability** primarily observable at runtime for the Video Streaming Servi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Video Streaming Service:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10504,14 +12912,16 @@ For the Music Streaming Service, construct a **Testability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Music Streaming Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10529,7 +12939,17 @@ A teammate writes this Testability requirement for the Music Streaming Service: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Music Streaming Service:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10547,7 +12967,9 @@ Is **Testability** primarily observable at runtime for the Music Streaming Servi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Music Streaming Service:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10565,14 +12987,16 @@ For the Cloud File Storage, construct a **Testability** quality-attribute scenar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Cloud Storage Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10590,7 +13014,17 @@ A teammate writes this Testability requirement for the Cloud File Storage: 'The 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cloud File Storage:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10608,7 +13042,9 @@ Is **Testability** primarily observable at runtime for the Cloud File Storage? J
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Cloud File Storage:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10626,14 +13062,16 @@ For the Social Network, construct a **Testability** quality-attribute scenario u
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Social Network.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10651,7 +13089,17 @@ A teammate writes this Testability requirement for the Social Network: 'The syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Social Network:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10669,7 +13117,9 @@ Is **Testability** primarily observable at runtime for the Social Network? Justi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Social Network:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10687,14 +13137,16 @@ For the Smart Home Platform, construct a **Testability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Smart Home Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10712,7 +13164,17 @@ A teammate writes this Testability requirement for the Smart Home Platform: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Home Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10730,7 +13192,9 @@ Is **Testability** primarily observable at runtime for the Smart Home Platform? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Smart Home Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10748,14 +13212,16 @@ For the Logistics Tracking System, construct a **Testability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Logistics Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10773,7 +13239,17 @@ A teammate writes this Testability requirement for the Logistics Tracking System
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Logistics Tracking System:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10791,7 +13267,9 @@ Is **Testability** primarily observable at runtime for the Logistics Tracking Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Logistics Tracking System:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10809,14 +13287,16 @@ For the Insurance Claims System, construct a **Testability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Claims Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10834,7 +13314,17 @@ A teammate writes this Testability requirement for the Insurance Claims System: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Insurance Claims System:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10852,7 +13342,9 @@ Is **Testability** primarily observable at runtime for the Insurance Claims Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Insurance Claims System:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10870,14 +13362,16 @@ For the Hotel Booking Platform, construct a **Testability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hotel Booking Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10895,7 +13389,17 @@ A teammate writes this Testability requirement for the Hotel Booking Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hotel Booking Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10913,7 +13417,9 @@ Is **Testability** primarily observable at runtime for the Hotel Booking Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Hotel Booking Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10931,14 +13437,16 @@ For the Online Learning Platform, construct a **Testability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Learning Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -10956,7 +13464,17 @@ A teammate writes this Testability requirement for the Online Learning Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Learning Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -10974,7 +13492,9 @@ Is **Testability** primarily observable at runtime for the Online Learning Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Online Learning Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -10992,14 +13512,16 @@ For the Cybersecurity Monitoring Platform, construct a **Testability** quality-a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Security Monitoring Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11017,7 +13539,17 @@ A teammate writes this Testability requirement for the Cybersecurity Monitoring 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cybersecurity Monitoring Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11035,7 +13567,9 @@ Is **Testability** primarily observable at runtime for the Cybersecurity Monitor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Cybersecurity Monitoring Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11053,14 +13587,16 @@ For the Warehouse Management System, construct a **Testability** quality-attribu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Warehouse Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11078,7 +13614,17 @@ A teammate writes this Testability requirement for the Warehouse Management Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Warehouse Management System:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11096,7 +13642,9 @@ Is **Testability** primarily observable at runtime for the Warehouse Management 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Warehouse Management System:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11114,14 +13662,16 @@ For the Payroll and HR System, construct a **Testability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: HR Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11139,7 +13689,17 @@ A teammate writes this Testability requirement for the Payroll and HR System: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Payroll and HR System:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11157,7 +13717,9 @@ Is **Testability** primarily observable at runtime for the Payroll and HR System
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Payroll and HR System:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11175,14 +13737,16 @@ For the Telecommunications Billing, construct a **Testability** quality-attribut
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Telecom Billing Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11200,7 +13764,17 @@ A teammate writes this Testability requirement for the Telecommunications Billin
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Telecommunications Billing:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11218,7 +13792,9 @@ Is **Testability** primarily observable at runtime for the Telecommunications Bi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Telecommunications Billing:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11236,14 +13812,16 @@ For the Digital Library, construct a **Testability** quality-attribute scenario 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Library.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11261,7 +13839,17 @@ A teammate writes this Testability requirement for the Digital Library: 'The sys
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Library:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11279,7 +13867,9 @@ Is **Testability** primarily observable at runtime for the Digital Library? Just
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Digital Library:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11297,14 +13887,16 @@ For the Medical Imaging Platform, construct a **Testability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Imaging Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11322,7 +13914,17 @@ A teammate writes this Testability requirement for the Medical Imaging Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Medical Imaging Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11340,7 +13942,9 @@ Is **Testability** primarily observable at runtime for the Medical Imaging Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Medical Imaging Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11358,14 +13962,16 @@ For the Manufacturing Monitoring, construct a **Testability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Manufacturing Monitoring Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11383,7 +13989,17 @@ A teammate writes this Testability requirement for the Manufacturing Monitoring:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Manufacturing Monitoring:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11401,7 +14017,9 @@ Is **Testability** primarily observable at runtime for the Manufacturing Monitor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Manufacturing Monitoring:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11419,14 +14037,16 @@ For the Government Citizen Portal, construct a **Testability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Citizen Services Portal.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11444,7 +14064,17 @@ A teammate writes this Testability requirement for the Government Citizen Portal
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Government Citizen Portal:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11462,7 +14092,9 @@ Is **Testability** primarily observable at runtime for the Government Citizen Po
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Government Citizen Portal:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11480,14 +14112,16 @@ For the Digital Wallet, construct a **Testability** quality-attribute scenario u
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Wallet.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11505,7 +14139,17 @@ A teammate writes this Testability requirement for the Digital Wallet: 'The syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Wallet:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11523,7 +14167,9 @@ Is **Testability** primarily observable at runtime for the Digital Wallet? Justi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Digital Wallet:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11541,14 +14187,16 @@ For the Event Ticketing Platform, construct a **Testability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ticketing Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11566,7 +14214,17 @@ A teammate writes this Testability requirement for the Event Ticketing Platform:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Event Ticketing Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11584,7 +14242,9 @@ Is **Testability** primarily observable at runtime for the Event Ticketing Platf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Event Ticketing Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11602,14 +14262,16 @@ For the Online Auction Platform, construct a **Testability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Auction Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11627,7 +14289,17 @@ A teammate writes this Testability requirement for the Online Auction Platform: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Auction Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11645,7 +14317,9 @@ Is **Testability** primarily observable at runtime for the Online Auction Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Online Auction Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11663,14 +14337,16 @@ For the Supply Chain Platform, construct a **Testability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Testability** - ease with which software can be made to demonstrate faults through controllable and observable tests.
-Source: tester.
-Stimulus: a tester executes tests on a completed unit/integration/system increment.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Supply Chain Platform.
-Response: control inputs/state, observe outputs/internal conditions as permitted and determine pass/fail.
-Response Measure: critical behavior can be exercised automatically and faults isolated to one element within 10 minutes.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Testability** - the ease of controlling and observing software so tests can reveal and isolate faults.
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11688,7 +14364,17 @@ A teammate writes this Testability requirement for the Supply Chain Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **critical behavior can be exercised automatically and faults isolated to one element within 10 minutes**. Explain why the measure actually captures Testability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Supply Chain Platform:**
+Source: an integration tester.
+Stimulus: injects an invalid response from a downstream dependency while executing an automated test.
+Environment: the isolated integration-test environment with test doubles and diagnostic logging enabled.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must control the dependency response, expose the resulting behavior and identify the responsible element.
+Response Measure: the test runs automatically and isolates the fault to one element within 10 minutes.
+
+The replacement captures **Testability** because it tests the ease of controlling and observing software so tests can reveal and isolate faults, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11706,7 +14392,9 @@ Is **Testability** primarily observable at runtime for the Supply Chain Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **primarily design/development-time**. Reason from the activity measured: ease with which software can be made to demonstrate faults through controllable and observable tests. A possible measure is critical behavior can be exercised automatically and faults isolated to one element within 10 minutes. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Testability is **primarily design/development-time because controllability, observability and fault isolation are evaluated during testing**. It concerns the ease of controlling and observing software so tests can reveal and isolate faults.
+
+**Worked observation for Supply Chain Platform:** run the fault-injection test and measure automation coverage, diagnostic evidence and isolation time. The acceptance criterion is that the test runs automatically and isolates the fault to one element within 10 minutes. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11724,14 +14412,16 @@ For the University Student Portal, construct a **Usability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: student.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Student Portal.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11749,7 +14439,17 @@ A teammate writes this Usability requirement for the University Student Portal: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for University Student Portal:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **University Student Portal** and the components that implement the affected service.
+Response: the University Student Portal must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11767,7 +14467,9 @@ Is **Usability** primarily observable at runtime for the University Student Port
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for University Student Portal:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11785,14 +14487,16 @@ For the Online Trading Platform, construct a **Usability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: trader.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Trading Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11810,7 +14514,17 @@ A teammate writes this Usability requirement for the Online Trading Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Trading Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Online Trading Platform** and the components that implement the affected service.
+Response: the Online Trading Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11828,7 +14542,9 @@ Is **Usability** primarily observable at runtime for the Online Trading Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Online Trading Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11846,14 +14562,16 @@ For the Electricity Utility App, construct a **Usability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: utility customer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Utility Application.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11871,7 +14589,17 @@ A teammate writes this Usability requirement for the Electricity Utility App: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Electricity Utility App:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Electricity Utility App** and the components that implement the affected service.
+Response: the Electricity Utility App must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11889,7 +14617,9 @@ Is **Usability** primarily observable at runtime for the Electricity Utility App
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Electricity Utility App:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11907,14 +14637,16 @@ For the Digital Game Store, construct a **Usability** quality-attribute scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: gamer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Game Distribution Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11932,7 +14664,17 @@ A teammate writes this Usability requirement for the Digital Game Store: 'The sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Game Store:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Game Store** and the components that implement the affected service.
+Response: the Digital Game Store must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -11950,7 +14692,9 @@ Is **Usability** primarily observable at runtime for the Digital Game Store? Jus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Digital Game Store:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -11968,14 +14712,16 @@ For the Flight Booking System, construct a **Usability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: passenger.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Flight Booking System.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -11993,7 +14739,17 @@ A teammate writes this Usability requirement for the Flight Booking System: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Flight Booking System:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Flight Booking System** and the components that implement the affected service.
+Response: the Flight Booking System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12011,7 +14767,9 @@ Is **Usability** primarily observable at runtime for the Flight Booking System? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Flight Booking System:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12029,14 +14787,16 @@ For the E-Commerce Marketplace, construct a **Usability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: shopper.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Marketplace.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12054,7 +14814,17 @@ A teammate writes this Usability requirement for the E-Commerce Marketplace: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for E-Commerce Marketplace:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **E-Commerce Marketplace** and the components that implement the affected service.
+Response: the E-Commerce Marketplace must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12072,7 +14842,9 @@ Is **Usability** primarily observable at runtime for the E-Commerce Marketplace?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for E-Commerce Marketplace:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12090,14 +14862,16 @@ For the Digital Banking App, construct a **Usability** quality-attribute scenari
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: bank customer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Banking Application.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12115,7 +14889,17 @@ A teammate writes this Usability requirement for the Digital Banking App: 'The s
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Banking App:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Banking App** and the components that implement the affected service.
+Response: the Digital Banking App must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12133,7 +14917,9 @@ Is **Usability** primarily observable at runtime for the Digital Banking App? Ju
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Digital Banking App:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12151,14 +14937,16 @@ For the Food Delivery Platform, construct a **Usability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: customer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Food Delivery Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12176,7 +14964,17 @@ A teammate writes this Usability requirement for the Food Delivery Platform: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Food Delivery Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Food Delivery Platform** and the components that implement the affected service.
+Response: the Food Delivery Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12194,7 +14992,9 @@ Is **Usability** primarily observable at runtime for the Food Delivery Platform?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Food Delivery Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12212,14 +15012,16 @@ For the Hospital Information System, construct a **Usability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: clinician.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hospital Information System.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12237,7 +15039,17 @@ A teammate writes this Usability requirement for the Hospital Information System
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hospital Information System:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Hospital Information System** and the components that implement the affected service.
+Response: the Hospital Information System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12255,7 +15067,9 @@ Is **Usability** primarily observable at runtime for the Hospital Information Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Hospital Information System:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12273,14 +15087,16 @@ For the Smart Traffic Platform, construct a **Usability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: traffic operator.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Traffic Management Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12298,7 +15114,17 @@ A teammate writes this Usability requirement for the Smart Traffic Platform: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Traffic Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Smart Traffic Platform** and the components that implement the affected service.
+Response: the Smart Traffic Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12316,7 +15142,9 @@ Is **Usability** primarily observable at runtime for the Smart Traffic Platform?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Smart Traffic Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12334,14 +15162,16 @@ For the Ride-Hailing Platform, construct a **Usability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: rider.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ride-Hailing Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12359,7 +15189,17 @@ A teammate writes this Usability requirement for the Ride-Hailing Platform: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Ride-Hailing Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Ride-Hailing Platform** and the components that implement the affected service.
+Response: the Ride-Hailing Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12377,7 +15217,9 @@ Is **Usability** primarily observable at runtime for the Ride-Hailing Platform? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Ride-Hailing Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12395,14 +15237,16 @@ For the Video Streaming Service, construct a **Usability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: viewer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Streaming Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12420,7 +15264,17 @@ A teammate writes this Usability requirement for the Video Streaming Service: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Video Streaming Service:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Video Streaming Service** and the components that implement the affected service.
+Response: the Video Streaming Service must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12438,7 +15292,9 @@ Is **Usability** primarily observable at runtime for the Video Streaming Service
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Video Streaming Service:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12456,14 +15312,16 @@ For the Music Streaming Service, construct a **Usability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: listener.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Music Streaming Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12481,7 +15339,17 @@ A teammate writes this Usability requirement for the Music Streaming Service: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Music Streaming Service:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Music Streaming Service** and the components that implement the affected service.
+Response: the Music Streaming Service must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12499,7 +15367,9 @@ Is **Usability** primarily observable at runtime for the Music Streaming Service
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Music Streaming Service:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12517,14 +15387,16 @@ For the Cloud File Storage, construct a **Usability** quality-attribute scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: user.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Cloud Storage Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12542,7 +15414,17 @@ A teammate writes this Usability requirement for the Cloud File Storage: 'The sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cloud File Storage:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Cloud File Storage** and the components that implement the affected service.
+Response: the Cloud File Storage must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12560,7 +15442,9 @@ Is **Usability** primarily observable at runtime for the Cloud File Storage? Jus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Cloud File Storage:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12578,14 +15462,16 @@ For the Social Network, construct a **Usability** quality-attribute scenario usi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: member.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Social Network.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12603,7 +15489,17 @@ A teammate writes this Usability requirement for the Social Network: 'The system
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Social Network:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Social Network** and the components that implement the affected service.
+Response: the Social Network must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12621,7 +15517,9 @@ Is **Usability** primarily observable at runtime for the Social Network? Justify
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Social Network:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12639,14 +15537,16 @@ For the Smart Home Platform, construct a **Usability** quality-attribute scenari
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: homeowner.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Smart Home Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12664,7 +15564,17 @@ A teammate writes this Usability requirement for the Smart Home Platform: 'The s
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Smart Home Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Smart Home Platform** and the components that implement the affected service.
+Response: the Smart Home Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12682,7 +15592,9 @@ Is **Usability** primarily observable at runtime for the Smart Home Platform? Ju
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Smart Home Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12700,14 +15612,16 @@ For the Logistics Tracking System, construct a **Usability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: operations user.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Logistics Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12725,7 +15639,17 @@ A teammate writes this Usability requirement for the Logistics Tracking System: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Logistics Tracking System:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Logistics Tracking System** and the components that implement the affected service.
+Response: the Logistics Tracking System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12743,7 +15667,9 @@ Is **Usability** primarily observable at runtime for the Logistics Tracking Syst
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Logistics Tracking System:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12761,14 +15687,16 @@ For the Insurance Claims System, construct a **Usability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: claims officer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Claims Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12786,7 +15714,17 @@ A teammate writes this Usability requirement for the Insurance Claims System: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Insurance Claims System:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Insurance Claims System** and the components that implement the affected service.
+Response: the Insurance Claims System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12804,7 +15742,9 @@ Is **Usability** primarily observable at runtime for the Insurance Claims System
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Insurance Claims System:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12822,14 +15762,16 @@ For the Hotel Booking Platform, construct a **Usability** quality-attribute scen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: guest.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Hotel Booking Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12847,7 +15789,17 @@ A teammate writes this Usability requirement for the Hotel Booking Platform: 'Th
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Hotel Booking Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Hotel Booking Platform** and the components that implement the affected service.
+Response: the Hotel Booking Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12865,7 +15817,9 @@ Is **Usability** primarily observable at runtime for the Hotel Booking Platform?
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Hotel Booking Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12883,14 +15837,16 @@ For the Online Learning Platform, construct a **Usability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: learner.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Learning Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12908,7 +15864,17 @@ A teammate writes this Usability requirement for the Online Learning Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Learning Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Online Learning Platform** and the components that implement the affected service.
+Response: the Online Learning Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12926,7 +15892,9 @@ Is **Usability** primarily observable at runtime for the Online Learning Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Online Learning Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -12944,14 +15912,16 @@ For the Cybersecurity Monitoring Platform, construct a **Usability** quality-att
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: security analyst.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Security Monitoring Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -12969,7 +15939,17 @@ A teammate writes this Usability requirement for the Cybersecurity Monitoring Pl
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Cybersecurity Monitoring Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Cybersecurity Monitoring Platform** and the components that implement the affected service.
+Response: the Cybersecurity Monitoring Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -12987,7 +15967,9 @@ Is **Usability** primarily observable at runtime for the Cybersecurity Monitorin
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Cybersecurity Monitoring Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13005,14 +15987,16 @@ For the Warehouse Management System, construct a **Usability** quality-attribute
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: warehouse operator.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Warehouse Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13030,7 +16014,17 @@ A teammate writes this Usability requirement for the Warehouse Management System
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Warehouse Management System:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Warehouse Management System** and the components that implement the affected service.
+Response: the Warehouse Management System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13048,7 +16042,9 @@ Is **Usability** primarily observable at runtime for the Warehouse Management Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Warehouse Management System:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13066,14 +16062,16 @@ For the Payroll and HR System, construct a **Usability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: HR officer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: HR Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13091,7 +16089,17 @@ A teammate writes this Usability requirement for the Payroll and HR System: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Payroll and HR System:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Payroll and HR System** and the components that implement the affected service.
+Response: the Payroll and HR System must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13109,7 +16117,9 @@ Is **Usability** primarily observable at runtime for the Payroll and HR System? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Payroll and HR System:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13127,14 +16137,16 @@ For the Telecommunications Billing, construct a **Usability** quality-attribute 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: subscriber.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Telecom Billing Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13152,7 +16164,17 @@ A teammate writes this Usability requirement for the Telecommunications Billing:
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Telecommunications Billing:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Telecommunications Billing** and the components that implement the affected service.
+Response: the Telecommunications Billing must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13170,7 +16192,9 @@ Is **Usability** primarily observable at runtime for the Telecommunications Bill
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Telecommunications Billing:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13188,14 +16212,16 @@ For the Digital Library, construct a **Usability** quality-attribute scenario us
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: reader.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Library.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13213,7 +16239,17 @@ A teammate writes this Usability requirement for the Digital Library: 'The syste
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Library:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Library** and the components that implement the affected service.
+Response: the Digital Library must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13231,7 +16267,9 @@ Is **Usability** primarily observable at runtime for the Digital Library? Justif
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Digital Library:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13249,14 +16287,16 @@ For the Medical Imaging Platform, construct a **Usability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: radiologist.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Imaging Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13274,7 +16314,17 @@ A teammate writes this Usability requirement for the Medical Imaging Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Medical Imaging Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Medical Imaging Platform** and the components that implement the affected service.
+Response: the Medical Imaging Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13292,7 +16342,9 @@ Is **Usability** primarily observable at runtime for the Medical Imaging Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Medical Imaging Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13310,14 +16362,16 @@ For the Manufacturing Monitoring, construct a **Usability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: plant engineer.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Manufacturing Monitoring Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13335,7 +16389,17 @@ A teammate writes this Usability requirement for the Manufacturing Monitoring: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Manufacturing Monitoring:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Manufacturing Monitoring** and the components that implement the affected service.
+Response: the Manufacturing Monitoring must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13353,7 +16417,9 @@ Is **Usability** primarily observable at runtime for the Manufacturing Monitorin
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Manufacturing Monitoring:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13371,14 +16437,16 @@ For the Government Citizen Portal, construct a **Usability** quality-attribute s
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: citizen.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Citizen Services Portal.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13396,7 +16464,17 @@ A teammate writes this Usability requirement for the Government Citizen Portal: 
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Government Citizen Portal:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Government Citizen Portal** and the components that implement the affected service.
+Response: the Government Citizen Portal must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13414,7 +16492,9 @@ Is **Usability** primarily observable at runtime for the Government Citizen Port
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Government Citizen Portal:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13432,14 +16512,16 @@ For the Digital Wallet, construct a **Usability** quality-attribute scenario usi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: wallet user.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Digital Wallet.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13457,7 +16539,17 @@ A teammate writes this Usability requirement for the Digital Wallet: 'The system
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Digital Wallet:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Digital Wallet** and the components that implement the affected service.
+Response: the Digital Wallet must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13475,7 +16567,9 @@ Is **Usability** primarily observable at runtime for the Digital Wallet? Justify
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Digital Wallet:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13493,14 +16587,16 @@ For the Event Ticketing Platform, construct a **Usability** quality-attribute sc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: attendee.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Ticketing Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13518,7 +16614,17 @@ A teammate writes this Usability requirement for the Event Ticketing Platform: '
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Event Ticketing Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Event Ticketing Platform** and the components that implement the affected service.
+Response: the Event Ticketing Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13536,7 +16642,9 @@ Is **Usability** primarily observable at runtime for the Event Ticketing Platfor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Event Ticketing Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13554,14 +16662,16 @@ For the Online Auction Platform, construct a **Usability** quality-attribute sce
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: bidder.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Auction Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13579,7 +16689,17 @@ A teammate writes this Usability requirement for the Online Auction Platform: 'T
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Online Auction Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Online Auction Platform** and the components that implement the affected service.
+Response: the Online Auction Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13597,7 +16717,9 @@ Is **Usability** primarily observable at runtime for the Online Auction Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Online Auction Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 
@@ -13615,14 +16737,16 @@ For the Supply Chain Platform, construct a **Usability** quality-attribute scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-Quality attribute: **Usability** - ease with which a user learns, efficiently uses, recovers from errors and adapts the system.
-Source: supply planner.
-Stimulus: a representative user attempts a task, learns a feature or recovers from an error.
-Environment: state an explicit normal/peak/failure/attack/development condition appropriate to the scenario.
-Artifact: Supply Chain Platform.
-Response: guide the user, provide feedback and support task completion/recovery.
-Response Measure: 90% of first-time users complete the task within 3 minutes without assistance.
-Exact numbers may vary; logical consistency and objective testability matter.
+**Example answer**
+Quality attribute: **Usability** - the ease with which a user learns, efficiently uses and recovers while using the system.
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+This is testable because the environment, observed response and pass/fail threshold are explicit. The numerical target is an example; in a real project it must be agreed with stakeholders.
 
 
 
@@ -13640,7 +16764,17 @@ A teammate writes this Usability requirement for the Supply Chain Platform: 'The
 
 <details><summary>Answer framework / marking outline</summary>
 
-The statement is vague: it lacks a concrete source/stimulus/environment and objective response measure. Replace it with a six-part scenario. A defensible example response measure is: **90% of first-time users complete the task within 3 minutes without assistance**. Explain why the measure actually captures Usability.
+**Diagnosis:** The original statement is not architecturally useful because “very good” does not identify a source, stimulus, operating condition, affected artifact, required response or measurable acceptance threshold.
+
+**Concrete replacement for Supply Chain Platform:**
+Source: a first-time representative user.
+Stimulus: attempts the system's primary transaction after reading only the on-screen instructions.
+Environment: normal operation on a supported device without staff assistance.
+Artifact: the **Supply Chain Platform** and the components that implement the affected service.
+Response: the Supply Chain Platform must present understandable controls and feedback, prevent or explain invalid input and confirm successful completion.
+Response Measure: at least 90% of first-time users complete the transaction within 3 minutes without assistance.
+
+The replacement captures **Usability** because it tests the ease with which a user learns, efficiently uses and recovers while using the system, rather than relying on an unmeasurable adjective.
 
 
 
@@ -13658,7 +16792,9 @@ Is **Usability** primarily observable at runtime for the Supply Chain Platform? 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course-oriented classification: **runtime-observable**. Reason from the activity measured: ease with which a user learns, efficiently uses, recovers from errors and adapts the system. A possible measure is 90% of first-time users complete the task within 3 minutes without assistance. A good answer explains the concrete scenario rather than memorizing a table.
+**Answer:** Usability is **runtime-observable through representative user interaction, although the supporting interaction design is created earlier**. It concerns the ease with which a user learns, efficiently uses and recovers while using the system.
+
+**Worked observation for Supply Chain Platform:** conduct the stated usability task and measure completion rate, time, errors and requests for assistance. The acceptance criterion is that at least 90% of first-time users complete the transaction within 3 minutes without assistance. This states what is actually observed instead of treating the classification as a memorized label.
 
 
 

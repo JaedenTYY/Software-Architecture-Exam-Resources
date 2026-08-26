@@ -8,16 +8,19 @@
     "build:vectors": "node tools/build_vector_index.mjs",
     "check:vectors": "node tools/check_vector_index.mjs",
     "build:browser": "esbuild search/local-semantic.js --bundle --format=iife --global-name=CSC3209LocalSemanticBundle --outfile=search/local-semantic.bundle.js",
-    "index": "npm run build:references && npm run build:semantic && npm run build:vectors && npm run build:browser",
-    "build": "npm run build:references && npm run build:semantic && npm run check:vectors && npm run build:browser",
-    "dev": "node tools/serve_static.mjs 3000",
-    "serve": "node tools/serve_static.mjs 3000",
-    "verify": "npm run build:references && npm run build:semantic && npm run check:vectors && npm run build:browser && node tools/run_search_tests.js && node tools/run_answer_predictor_tests.js && node tools/run_why_explainer_tests.js && node tools/run_hardening_tests.js && node tools/run_local_semantic_tests.js"
+    "build:offline": "node tools/build_offline_manifest.js",
+    "index": "npm run build:references && npm run build:semantic && npm run build:vectors && npm run build:browser && npm run build:offline",
+    "build": "npm run build:references && npm run build:semantic && npm run check:vectors && npm run build:browser && npm run build:offline",
+    "dev": "node tools/serve_static.mjs 8000",
+    "serve": "node tools/serve_static.mjs 8000",
+    "benchmark": "node tools/run_past_paper_benchmark.js",
+    "benchmark:modes": "node tools/run_past_paper_benchmark.js --all-modes --vectors --no-enforce",
+    "verify": "npm run build && node tools/run_answer_completeness_tests.js && node tools/run_corpus_correctness_tests.js && node tools/run_generated_question_quality_tests.js && node tools/run_search_tests.js && node tools/run_answer_predictor_tests.js && node tools/run_why_explainer_tests.js && node tools/run_hardening_tests.js && node tools/run_result_diversity_tests.js && node tools/run_local_semantic_tests.js && node tools/run_past_paper_benchmark.js && node tools/run_offline_smoke_tests.js"
   },
   "dependencies": {
     "@huggingface/transformers": "^3.3.1"
   },
   "devDependencies": {
-    "esbuild": "^0.24.2"
+    "esbuild": "^0.28.2"
   }
 }

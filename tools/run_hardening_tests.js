@@ -74,6 +74,35 @@ for (const test of [
     `subject=${p?.subject?.label || "none"}, target=${p?.target?.label || "none"}`);
 }
 
+for (const query of [
+  "Who won the football match?",
+  "Best restaurant nearby",
+  "Calculate 15 percent of 200",
+  "Write me a birthday message",
+  "player profile statistics",
+  "multiplayer profile"
+]) {
+  const p = predict(query);
+  pass(`Out-of-domain query abstains: ${query}`, p.state === "no-evidence" && !p.winner && p.confidence?.level !== "High", `state=${p.state}; winner=${p.winner?.label || "none"}; confidence=${p.confidence?.level || "none"}`);
+}
+
+const tieEvidence = (observerScore, stateScore) => [
+  { id:"TIE-OBSERVER", bank:"Advanced Depth", family:"Tie fixture", topic:"Design Patterns", subtopic:"Observer", type:"Candidate A", prompt:"registered dependent objects", answer_outline:"Observer notifies registered dependent objects.", tags:["Observer"], _resultType:"question", _score:observerScore, _concepts:["Observer"], _matchedConcepts:[] },
+  { id:"TIE-STATE", bank:"Advanced Depth", family:"Tie fixture", topic:"Design Patterns", subtopic:"State", type:"Candidate B", prompt:"state-specific behavior", answer_outline:"State encapsulates state-specific behavior.", tags:["State"], _resultType:"question", _score:stateScore, _concepts:["State"], _matchedConcepts:[] }
+];
+const tiePredictor = global.createAnswerPredictor(global.CSC3209_SEARCH_CONFIG, { minCandidateScore: 0.1 });
+for (const test of [
+  { name:"Exact tie", observer:100, state:100 },
+  { name:"Near tie", observer:100, state:99 }
+]) {
+  const p = tiePredictor.predict("Which design pattern applies?", [], tieEvidence(test.observer, test.state), global.CSC3209_SEARCH_CONFIG);
+  pass(`${test.name} does not use sort order as an answer`, p.state === "ambiguous" && !p.winner, `state=${p.state}; winner=${p.winner?.label || "none"}`);
+}
+{
+  const p = predictor.predict("A Subject notifies dependent objects, while behavior also varies with internal state. Which design pattern?", [], tieEvidence(100, 100), global.CSC3209_SEARCH_CONFIG);
+  pass("Conflicting mechanism clues remain ambiguous", p.state === "ambiguous" && !p.winner, `state=${p.state}; winner=${p.winner?.label || "none"}`);
+}
+
 {
   const p = predict("Which pattern lets an object change behavior when its internal state changes instead of spreading conditionals?");
   const hasEvidence = (p.winner?.evidence || []).some(e => String(e.snippet || "").trim());

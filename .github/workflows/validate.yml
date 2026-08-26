@@ -31,16 +31,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Rebuild generated reference data
+      - name: Regenerate deterministic corpus and reference data
         run: |
+          node tools/apply_corpus_corrections.js
           python3 tools/build_universal_references.py
           python3 tools/build_past_paper_references.py
 
       - name: Rebuild semantic concept index
         run: npm run build:semantic
-
-      - name: Check generated deterministic assets are committed
-        run: git diff --exit-code search/universal_references.js search/past_paper_references.js semantic_index.js
 
       - name: Check vector index freshness
         run: npm run check:vectors
@@ -48,8 +46,11 @@ jobs:
       - name: Build browser semantic bundle
         run: npm run build:browser
 
-      - name: Check browser semantic bundle is committed
-        run: git diff --exit-code search/local-semantic.bundle.js
+      - name: Rebuild offline cache manifest
+        run: npm run build:offline
+
+      - name: Check generated deterministic assets are committed
+        run: git diff --exit-code questions.json questions.js questions.tsv ALL_QUESTIONS.md topic_packs expansion/questions_advanced.json expansion/questions_advanced.js expansion/questions_code.json expansion/questions_code.js search/universal_references.js search/past_paper_references.js semantic_index.js search/local-semantic.bundle.js search/offline-manifest.js
 
       - name: JavaScript syntax checks
         run: |
@@ -64,9 +65,22 @@ jobs:
           node --check tools/run_hardening_tests.js
           node --check tools/run_local_semantic_tests.js
           node --check tools/run_answer_completeness_tests.js
+          node --check tools/run_corpus_correctness_tests.js
+          node --check tools/run_generated_question_quality_tests.js
+          node --check tools/run_result_diversity_tests.js
+          node --check tools/run_past_paper_benchmark.js
+          node --check tools/run_offline_smoke_tests.js
+          node --check tools/build_offline_manifest.js
+          node --check sw.js
 
-      - name: Question-bank answer completeness audit
+      - name: Answer completeness
         run: node tools/run_answer_completeness_tests.js
+
+      - name: Corpus correctness and generator reproducibility
+        run: node tools/run_corpus_correctness_tests.js
+
+      - name: Generated question quality
+        run: node tools/run_generated_question_quality_tests.js
 
       - name: Semantic search and ranking tests
         run: node tools/run_search_tests.js
@@ -80,5 +94,14 @@ jobs:
       - name: Repository hardening tests
         run: node tools/run_hardening_tests.js
 
+      - name: Result diversity and relevance floor
+        run: node tools/run_result_diversity_tests.js
+
       - name: Local vector semantic tests
         run: node tools/run_local_semantic_tests.js
+
+      - name: Real past-paper benchmark
+        run: node tools/run_past_paper_benchmark.js
+
+      - name: Offline preparation and upgrade smoke tests
+        run: node tools/run_offline_smoke_tests.js

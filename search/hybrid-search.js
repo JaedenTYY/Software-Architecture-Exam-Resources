@@ -554,10 +554,10 @@
         const rows = [];
         for (const doc of questionDocs) {
           if (!passesQuestionFilters(doc.item, options)) continue;
-          rows.push({ ...doc.item, _resultType: "question", _score: 1, _lexicalScore: 1, _semanticScore: 0, _vectorScore: 0, _exactMetadataScore: 0, _matchedConcepts: [], _concepts: doc.concepts.slice(0, 9).map(c => byId[c.id]?.label).filter(Boolean) });
+          rows.push({ ...doc.item, _resultType: "question", _score: 1, _rawScore: 1, _lexicalScore: 1, _lexicalCoverage: 1, _semanticScore: 0, _vectorScore: 0, _exactMetadataScore: 0, _matchedConcepts: [], _concepts: doc.concepts.slice(0, 9).map(c => byId[c.id]?.label).filter(Boolean) });
         }
         rows.sort((a, b) => String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
-        return { results: rows, concepts: [] };
+        return { results: rows, concepts: [], candidateCount: rows.length, meaningfulCount: rows.length };
       }
 
       const lexicalStates = collectLexicalCandidates(query, includeAnswers);
@@ -596,6 +596,7 @@
           _resultType: doc.kind,
           _score: score,
           _lexicalScore: lex,
+          _lexicalCoverage: lexicalState.matched / Math.max(1, query.tokens.length),
           _lexicalScoreForVector: lexicalForVector,
           _semanticScore: semInfo.score,
           _vectorScore: vectorScore,
@@ -607,10 +608,62 @@
 
       if (vectorScores && mode !== "exact") applyVectorRanking(out, mode);
       out.sort((a, b) => b._score - a._score || Number(b.marks || 0) - Number(a.marks || 0) || String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
+      const candidateCount = out.length;
+      const meaningful = applyMeaningfulFloor(out, query, mode, !!vectorScores);
+      diversifyResults(meaningful);
       return {
-        results: out,
+        results: meaningful,
+        candidateCount,
+        meaningfulCount: meaningful.length,
         concepts: query.concepts.slice(0, 10).map(c => ({ id: c.id, label: byId[c.id].label, direct: query.directConceptIds.has(c.id) }))
       };
+    }
+
+    function applyMeaningfulFloor(rows, query, mode, hasVectors) {
+      if (!rows.length) return rows;
+      const maxScore = Math.max(0.0001, ...rows.map(row => Number(row._score || 0)));
+      const maxLexical = Math.max(0.0001, ...rows.map(row => Number(row._lexicalScoreForVector || row._lexicalScore || 0)));
+      const maxSemantic = Math.max(0.0001, ...rows.map(row => Number(row._semanticScore || 0)));
+      const minimumCoverage = query.tokens.length <= 2 ? 0.5 : Math.max(0.28, 2 / query.tokens.length);
+      return rows.filter(row => {
+        const score = Number(row._score || 0);
+        const lexical = Number(row._lexicalScoreForVector || row._lexicalScore || 0);
+        const semantic = Number(row._semanticScore || 0);
+        const vector = Number(row._vectorScore || 0);
+        const exactMetadata = Number(row._exactMetadataScore || 0);
+        const directConcept = (row._matchedConcepts || []).some(match => match.kind === "direct" && query.directConceptIds.has(match.id));
+        const lexicalCoverage = Number(row._lexicalCoverage || 0);
+        if (row.id && normalize(row.id) === query.norm) return true;
+        if (exactMetadata >= 0.48) return true;
+        if (hasVectors && vector >= 0.48) return true;
+        if (directConcept && semantic >= maxSemantic * 0.18) return true;
+        if (lexicalCoverage >= minimumCoverage && lexical >= maxLexical * 0.045) return true;
+        if (row._resultType === "reference" && (directConcept || lexicalCoverage >= minimumCoverage) && score >= maxScore * 0.025) return true;
+        return mode === "exact" && lexicalCoverage >= minimumCoverage && score >= maxScore * 0.03;
+      });
+    }
+
+    function duplicateGroupKey(row) {
+      if (row._resultType === "reference") return `reference|${row.source || row.id}`;
+      return [row.bank || "", row.family || "", row.topic || "", row.subtopic || "", row.type || ""].map(normalize).join("|");
+    }
+
+    function diversifyResults(rows) {
+      const seen = new Map();
+      for (let index = 0; index < rows.length; index += 1) {
+        const row = rows[index];
+        const group = duplicateGroupKey(row);
+        const occurrence = seen.get(group) || 0;
+        seen.set(group, occurrence + 1);
+        const penalty = occurrence === 0 ? 1 : 1 / (1 + occurrence * 0.62);
+        row._rawScore = Number(row._score || 0);
+        row._diversityPenalty = penalty;
+        row._duplicateGroup = group;
+        row._score = row._rawScore * penalty;
+        row._rawRank = index + 1;
+      }
+      rows.sort((a, b) => b._score - a._score || a._rawRank - b._rawRank || String(a.id).localeCompare(String(b.id), undefined, { numeric: true }));
+      return rows;
     }
 
     function applyVectorRanking(rows, mode) {

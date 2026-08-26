@@ -2391,7 +2391,7 @@ var CSC3209LocalSemanticBundle = (() => {
         return l;
       }, gn = {}, bn = {}, Sc = {};
       function it(s, l, h = {}) {
-        return function(y, w, A = {}) {
+        return (function(y, w, A = {}) {
           var B = w.name;
           if (!y) throw new pt(`type "${B}" must have a positive integer typeid pointer`);
           if (bn.hasOwnProperty(y)) {
@@ -2399,7 +2399,7 @@ var CSC3209LocalSemanticBundle = (() => {
             throw new pt(`Cannot register type '${B}' twice`);
           }
           bn[y] = w, delete Sc[y], gn.hasOwnProperty(y) && (w = gn[y], delete gn[y], w.forEach((R) => R()));
-        }(s, l, h);
+        })(s, l, h);
       }
       var si = (s, l, h) => {
         switch (l) {
@@ -2646,7 +2646,7 @@ var CSC3209LocalSemanticBundle = (() => {
         }
       }, ft = 0, Ze = null, li = 0, ar = [], ci = {}, pi = {}, Qc = 0, Sn = null, Yc = [];
       function mi(s) {
-        return function(l) {
+        return (function(l) {
           if (!te) {
             if (ft === 0) {
               var h = false, y = false;
@@ -2654,10 +2654,10 @@ var CSC3209LocalSemanticBundle = (() => {
                 if (!te && (li = w, h = true, y)) {
                   ft = 2, ir(() => Gi(Ze)), typeof MainLoop < "u" && MainLoop.Pb && MainLoop.resume(), w = false;
                   try {
-                    var A = function() {
+                    var A = (function() {
                       var G = C()[Ze + 8 >>> 2 >>> 0];
                       return G = Y[pi[G]], --lt, G();
-                    }();
+                    })();
                   } catch (G) {
                     A = G, w = true;
                   }
@@ -2668,16 +2668,16 @@ var CSC3209LocalSemanticBundle = (() => {
                   }
                   if (w && !B) throw A;
                 }
-              }), y = true, h || (ft = 1, Ze = function() {
+              }), y = true, h || (ft = 1, Ze = (function() {
                 var w = pr(65548), A = w + 12;
                 V()[w >>> 2 >>> 0] = A, V()[w + 4 >>> 2 >>> 0] = A + 65536, A = ar[0];
                 var B = ci[A];
                 return B === void 0 && (B = Qc++, ci[A] = B, pi[B] = A), A = B, C()[w + 8 >>> 2 >>> 0] = A, w;
-              }(), typeof MainLoop < "u" && MainLoop.Pb && MainLoop.pause(), ir(() => Wi(Ze)));
+              })(), typeof MainLoop < "u" && MainLoop.Pb && MainLoop.pause(), ir(() => Wi(Ze)));
             } else ft === 2 ? (ft = 0, ir(Hi), Qe(Ze), Ze = null, Yc.forEach(vn)) : dt(`invalid state: ${ft}`);
             return li;
           }
-        }((l) => {
+        })((l) => {
           s().then(l);
         });
       }
@@ -2720,13 +2720,13 @@ var CSC3209LocalSemanticBundle = (() => {
         return w += `  var rv = ${h === 1 ? "new func" : "func.call"}(${B.join(", ")});
 `, y.Tb || (R.push("emval_returnValue"), G.push(di), w += `  return emval_returnValue(retType, destructorsRef, rv);
 `), R.push(w + `};
-`), s = function(ae) {
+`), s = (function(ae) {
           var le = Function;
           if (!(le instanceof Function)) throw new TypeError(`new_ called with constructor type ${typeof le} which is not a function`);
           var _e = hi(le.name || "unknownFunctionName", function() {
           });
           return _e.prototype = le.prototype, _e = new _e(), (ae = le.apply(_e, ae)) instanceof Object ? ae : _e;
-        }(R)(...G), h = `methodCaller<(${l.map((ae) => ae.name).join(", ")}) => ${y.name}>`, np(hi(h, s));
+        })(R)(...G), h = `methodCaller<(${l.map((ae) => ae.name).join(", ")}) => ${y.name}>`, np(hi(h, s));
       }
       function ap(s) {
         return s = ur(s >>> 0), Ve(n[s]);
@@ -2936,14 +2936,14 @@ var CSC3209LocalSemanticBundle = (() => {
         }
         return V()[y >>> 2 >>> 0] = w, 0;
       }
-      u || function() {
+      u || (function() {
         for (var s = n.numThreads - 1; s--; ) Wo();
         mn.unshift(() => {
-          Pt++, function(l) {
+          Pt++, (function(l) {
             u ? l() : Promise.all(ct.map(Vo)).then(l);
-          }(() => zo());
+          })(() => zo());
         });
-      }();
+      })();
       for (var Pi = Array(256), lr = 0; 256 > lr; ++lr) Pi[lr] = String.fromCharCode(lr);
       ai = Pi, pt = n.BindingError = class extends Error {
         constructor(s) {
@@ -2957,7 +2957,7 @@ var CSC3209LocalSemanticBundle = (() => {
       var Y, Mp = [fn, Mo, Lo, qo, jo, Zo, Qo, Yo, Xo, Jo, ei, ti, ri, ni, oi, ii, _i, wi, vi, Ti, Ii, Ci, Ai, Ei, ki];
       (async function() {
         function s(y, w) {
-          return Y = y.exports, Y = function() {
+          return Y = y.exports, Y = (function() {
             var A = Y, B = {};
             for (let [R, G] of Object.entries(A)) B[R] = typeof G == "function" ? (...K) => {
               ar.push(R);
@@ -2968,10 +2968,10 @@ var CSC3209LocalSemanticBundle = (() => {
               }
             } : G;
             return B;
-          }(), Y = function() {
+          })(), Y = (function() {
             var A = Y, B = (G) => (K) => G(K) >>> 0, R = (G) => () => G() >>> 0;
             return (A = Object.assign({}, A)).Da = B(A.Da), A.fb = R(A.fb), A.hb = B(A.hb), A.tb = B(A.tb), A.ub = R(A.ub), A.__cxa_get_exception_ptr = B(A.__cxa_get_exception_ptr), A;
-          }(), Ro.push(Y.ib), E = w, zo(), Y;
+          })(), Ro.push(Y.ib), E = w, zo(), Y;
         }
         Pt++;
         var l = Oo();
@@ -2988,7 +2988,7 @@ var CSC3209LocalSemanticBundle = (() => {
         });
         kt ??= n.locateFile ? n.locateFile ? n.locateFile("ort-wasm-simd-threaded.jsep.wasm", _) : _ + "ort-wasm-simd-threaded.jsep.wasm" : new URL("ort-wasm-simd-threaded.jsep.wasm", import_meta.url).href;
         try {
-          var h = await async function(y) {
+          var h = await (async function(y) {
             var w = kt;
             if (!j && typeof WebAssembly.instantiateStreaming == "function" && !X(w)) try {
               var A = fetch(w, { credentials: "same-origin" });
@@ -2996,9 +2996,9 @@ var CSC3209LocalSemanticBundle = (() => {
             } catch (B) {
               x(`wasm streaming compile failed: ${B}`), x("falling back to ArrayBuffer instantiation");
             }
-            return async function(B, R) {
+            return (async function(B, R) {
               try {
-                var G = await async function(K) {
+                var G = await (async function(K) {
                   if (!j) try {
                     var ae = await m(K);
                     return new Uint8Array(ae);
@@ -3010,13 +3010,13 @@ var CSC3209LocalSemanticBundle = (() => {
                     K = f(K);
                   }
                   return K;
-                }(B);
+                })(B);
                 return await WebAssembly.instantiate(G, R);
               } catch (K) {
                 x(`failed to asynchronously prepare wasm: ${K}`), dt(K);
               }
-            }(w, y);
-          }(l);
+            })(w, y);
+          })(l);
           return s(h.instance, h.module);
         } catch (y) {
           return r(y), Promise.reject(y);
@@ -3072,14 +3072,14 @@ var CSC3209LocalSemanticBundle = (() => {
           default:
             dt(`invalid type for getValue: ${l}`);
         }
-      }, n.UTF8ToString = Te, n.stringToUTF8 = zt, n.lengthBytesUTF8 = Ko, function s() {
+      }, n.UTF8ToString = Te, n.stringToUTF8 = zt, n.lengthBytesUTF8 = Ko, (function s() {
         if (0 < Pt) Lt = s;
         else if (u) t(n), _t();
         else {
           for (; 0 < mn.length; ) mn.shift()(n);
           0 < Pt ? Lt = s : (n.calledRun = true, te || (_t(), t(n)));
         }
-      }(), n.PTR_SIZE = 4, o;
+      })(), n.PTR_SIZE = 4, o;
     }), Fp = Sa, qp = globalThis.self?.name?.startsWith("em-pthread");
     qp && Sa();
   });
@@ -11225,9 +11225,9 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** external "onnxruntime-common" ***!
         \*************************************/
       /***/
-      (module) => {
+      ((module) => {
         module.exports = esm_exports;
-      }
+      })
     ),
     /***/
     "onnxruntime-web": (
@@ -11235,9 +11235,9 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** external "onnxruntime-web" ***!
         \**********************************/
       /***/
-      (module) => {
+      ((module) => {
         module.exports = ort_bundle_min_exports;
-      }
+      })
     ),
     /***/
     "?2ce3": (
@@ -11245,8 +11245,8 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** onnxruntime-node (ignored) ***!
         \**********************************/
       /***/
-      () => {
-      }
+      (() => {
+      })
     ),
     /***/
     "?7992": (
@@ -11254,8 +11254,8 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** node:fs (ignored) ***!
         \*************************/
       /***/
-      () => {
-      }
+      (() => {
+      })
     ),
     /***/
     "?5af5": (
@@ -11263,8 +11263,8 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** node:path (ignored) ***!
         \***************************/
       /***/
-      () => {
-      }
+      (() => {
+      })
     ),
     /***/
     "?2b25": (
@@ -11272,8 +11272,8 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** sharp (ignored) ***!
         \***********************/
       /***/
-      () => {
-      }
+      (() => {
+      })
     ),
     /***/
     "?db59": (
@@ -11281,8 +11281,8 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** node:fs (ignored) ***!
         \*************************/
       /***/
-      () => {
-      }
+      (() => {
+      })
     ),
     /***/
     "?383f": (
@@ -11290,8 +11290,8 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** node:path (ignored) ***!
         \***************************/
       /***/
-      () => {
-      }
+      (() => {
+      })
     ),
     /***/
     "?fa4b": (
@@ -11299,8 +11299,8 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** node:url (ignored) ***!
         \**************************/
       /***/
-      () => {
-      }
+      (() => {
+      })
     ),
     /***/
     "./node_modules/@huggingface/jinja/dist/index.js": (
@@ -11308,7 +11308,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./node_modules/@huggingface/jinja/dist/index.js ***!
         \*******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -14079,7 +14079,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return format(this.parsed, options?.indent || "	");
           }
         };
-      }
+      })
     ),
     /***/
     "./src/backends/onnx.js": (
@@ -14087,7 +14087,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/backends/onnx.js ***!
         \******************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         var onnxruntime_node__WEBPACK_IMPORTED_MODULE_1___namespace_cache;
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
@@ -14166,7 +14166,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         const supportedDevices = [];
         let defaultDevices;
         let ONNX;
-        const ORT_SYMBOL = Symbol.for("onnxruntime");
+        const ORT_SYMBOL = /* @__PURE__ */ Symbol.for("onnxruntime");
         if (ORT_SYMBOL in globalThis) {
           ONNX = globalThis[ORT_SYMBOL];
         } else if (_env_js__WEBPACK_IMPORTED_MODULE_0__.apis.IS_NODE_ENV) {
@@ -14250,7 +14250,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
           return ONNX_ENV?.wasm?.proxy;
         }
         _env_js__WEBPACK_IMPORTED_MODULE_0__.env.backends.onnx = ONNX_ENV;
-      }
+      })
     ),
     /***/
     "./src/base/feature_extraction_utils.js": (
@@ -14258,7 +14258,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/base/feature_extraction_utils.js ***!
         \**********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -14322,7 +14322,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             );
           }
         }
-      }
+      })
     ),
     /***/
     "./src/base/image_processors_utils.js": (
@@ -14330,7 +14330,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/base/image_processors_utils.js ***!
         \********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -15055,7 +15055,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return new this(preprocessorConfig);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/base/processing_utils.js": (
@@ -15063,7 +15063,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/base/processing_utils.js ***!
         \**************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -15203,7 +15203,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return new this(config, components, chat_template);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/configs.js": (
@@ -15211,7 +15211,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/configs.js ***!
         \************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -15566,7 +15566,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return PretrainedConfig.from_pretrained(...args);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/env.js": (
@@ -15574,7 +15574,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/env.js ***!
         \********************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -15672,7 +15672,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         function isEmpty(obj) {
           return Object.keys(obj).length === 0;
         }
-      }
+      })
     ),
     /***/
     "./src/generation/configuration_utils.js": (
@@ -15680,7 +15680,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/generation/configuration_utils.js ***!
         \***********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -16025,7 +16025,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             Object.assign(this, (0, _utils_core_js__WEBPACK_IMPORTED_MODULE_0__.pick)(config, Object.getOwnPropertyNames(this)));
           }
         }
-      }
+      })
     ),
     /***/
     "./src/generation/logits_process.js": (
@@ -16033,7 +16033,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/generation/logits_process.js ***!
         \******************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -16689,7 +16689,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             this.filter_value = filter_value;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/generation/logits_sampler.js": (
@@ -16697,7 +16697,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/generation/logits_sampler.js ***!
         \******************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -16872,7 +16872,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             });
           }
         }
-      }
+      })
     ),
     /***/
     "./src/generation/stopping_criteria.js": (
@@ -16880,7 +16880,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/generation/stopping_criteria.js ***!
         \*********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -17027,7 +17027,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return new Array(input_ids.length).fill(this.interrupted);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/generation/streamers.js": (
@@ -17035,7 +17035,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/generation/streamers.js ***!
         \*************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -17241,7 +17241,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             this.on_finalize?.();
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models.js": (
@@ -17249,7 +17249,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models.js ***!
         \***********************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -25944,7 +25944,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             this.spectrogram = spectrogram;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/audio_spectrogram_transformer/feature_extraction_audio_spectrogram_transformer.js": (
@@ -25952,7 +25952,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/audio_spectrogram_transformer/feature_extraction_audio_spectrogram_transformer.js ***!
         \******************************************************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26053,7 +26053,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/auto/feature_extraction_auto.js": (
@@ -26061,7 +26061,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/auto/feature_extraction_auto.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26099,7 +26099,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return new feature_extractor_class(preprocessorConfig);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/auto/image_processing_auto.js": (
@@ -26107,7 +26107,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/auto/image_processing_auto.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26148,7 +26148,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return new image_processor_class(preprocessorConfig);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/auto/processing_auto.js": (
@@ -26156,7 +26156,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/auto/processing_auto.js ***!
         \********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26225,7 +26225,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             return new _base_processing_utils_js__WEBPACK_IMPORTED_MODULE_2__.Processor(config, components, null);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/beit/image_processing_beit.js": (
@@ -26233,7 +26233,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/beit/image_processing_beit.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26249,7 +26249,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         );
         class BeitFeatureExtractor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/bit/image_processing_bit.js": (
@@ -26257,7 +26257,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/bit/image_processing_bit.js ***!
         \************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26273,7 +26273,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         );
         class BitImageProcessor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/chinese_clip/image_processing_chinese_clip.js": (
@@ -26281,7 +26281,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/chinese_clip/image_processing_chinese_clip.js ***!
         \******************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26297,7 +26297,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         );
         class ChineseCLIPFeatureExtractor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/clap/feature_extraction_clap.js": (
@@ -26305,7 +26305,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/clap/feature_extraction_clap.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26475,7 +26475,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/clip/image_processing_clip.js": (
@@ -26483,7 +26483,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/clip/image_processing_clip.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26506,7 +26506,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         }
         class CLIPFeatureExtractor extends CLIPImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/convnext/image_processing_convnext.js": (
@@ -26514,7 +26514,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/convnext/image_processing_convnext.js ***!
         \**********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26562,7 +26562,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         }
         class ConvNextFeatureExtractor extends ConvNextImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/dac/feature_extraction_dac.js": (
@@ -26570,7 +26570,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/dac/feature_extraction_dac.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26586,7 +26586,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         );
         class DacFeatureExtractor extends _encodec_feature_extraction_encodec_js__WEBPACK_IMPORTED_MODULE_0__.EncodecFeatureExtractor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/deit/image_processing_deit.js": (
@@ -26594,7 +26594,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/deit/image_processing_deit.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26617,7 +26617,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         }
         class DeiTFeatureExtractor extends DeiTImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/detr/image_processing_detr.js": (
@@ -26625,7 +26625,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/detr/image_processing_detr.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26676,7 +26676,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         }
         class DetrFeatureExtractor extends DetrImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/dinov3_vit/image_processing_dinov3_vit.js": (
@@ -26684,7 +26684,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/dinov3_vit/image_processing_dinov3_vit.js ***!
         \**************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26700,7 +26700,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         );
         class DINOv3ViTImageProcessor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/donut/image_processing_donut.js": (
@@ -26708,7 +26708,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/donut/image_processing_donut.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26750,7 +26750,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         }
         class DonutFeatureExtractor extends DonutImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/dpt/image_processing_dpt.js": (
@@ -26758,7 +26758,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/dpt/image_processing_dpt.js ***!
         \************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26781,7 +26781,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         }
         class DPTFeatureExtractor extends DPTImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/efficientnet/image_processing_efficientnet.js": (
@@ -26789,7 +26789,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/efficientnet/image_processing_efficientnet.js ***!
         \******************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26812,7 +26812,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             }
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/encodec/feature_extraction_encodec.js": (
@@ -26820,7 +26820,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/encodec/feature_extraction_encodec.js ***!
         \**********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -26866,7 +26866,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/feature_extractors.js": (
@@ -26874,7 +26874,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/feature_extractors.js ***!
         \******************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27014,7 +27014,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
           /*! ../base/image_processors_utils.js */
           "./src/base/image_processors_utils.js"
         );
-      }
+      })
     ),
     /***/
     "./src/models/florence2/processing_florence2.js": (
@@ -27022,7 +27022,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/florence2/processing_florence2.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27145,7 +27145,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/gemma3n/feature_extraction_gemma3n.js": (
@@ -27153,7 +27153,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/gemma3n/feature_extraction_gemma3n.js ***!
         \**********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27275,7 +27275,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/gemma3n/processing_gemma3n.js": (
@@ -27283,7 +27283,7 @@ ${u}`, c = n.createShaderModule({ code: d, label: t.name });
         !*** ./src/models/gemma3n/processing_gemma3n.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27387,7 +27387,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/glpn/image_processing_glpn.js": (
@@ -27395,7 +27395,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
         !*** ./src/models/glpn/image_processing_glpn.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27411,7 +27411,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
         );
         class GLPNFeatureExtractor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/grounding_dino/image_processing_grounding_dino.js": (
@@ -27419,7 +27419,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
         !*** ./src/models/grounding_dino/image_processing_grounding_dino.js ***!
         \**********************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27451,7 +27451,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
             return { ...result, pixel_mask };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/grounding_dino/processing_grounding_dino.js": (
@@ -27459,7 +27459,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
         !*** ./src/models/grounding_dino/processing_grounding_dino.js ***!
         \****************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27555,7 +27555,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
             return results;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/idefics3/image_processing_idefics3.js": (
@@ -27563,7 +27563,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
         !*** ./src/models/idefics3/image_processing_idefics3.js ***!
         \**********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27750,7 +27750,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
             return { frames, num_splits_h, num_splits_w };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/idefics3/processing_idefics3.js": (
@@ -27758,7 +27758,7 @@ ${boi_token}${image_tokens_expanded}${eoi_token}
         !*** ./src/models/idefics3/processing_idefics3.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -27880,7 +27880,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/image_processors.js": (
@@ -27888,7 +27888,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/image_processors.js ***!
         \****************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28360,7 +28360,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           /*! ./yolos/image_processing_yolos.js */
           "./src/models/yolos/image_processing_yolos.js"
         );
-      }
+      })
     ),
     /***/
     "./src/models/janus/image_processing_janus.js": (
@@ -28368,7 +28368,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/janus/image_processing_janus.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28402,7 +28402,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             });
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/janus/processing_janus.js": (
@@ -28410,7 +28410,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/janus/processing_janus.js ***!
         \**********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28549,7 +28549,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return final;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/jina_clip/image_processing_jina_clip.js": (
@@ -28557,7 +28557,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/jina_clip/image_processing_jina_clip.js ***!
         \************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28586,7 +28586,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             });
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/jina_clip/processing_jina_clip.js": (
@@ -28594,7 +28594,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/jina_clip/processing_jina_clip.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28631,7 +28631,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/llava/processing_llava.js": (
@@ -28639,7 +28639,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/llava/processing_llava.js ***!
         \**********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28692,7 +28692,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/llava_onevision/image_processing_llava_onevision.js": (
@@ -28700,7 +28700,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/llava_onevision/image_processing_llava_onevision.js ***!
         \************************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28716,7 +28716,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class LlavaOnevisionImageProcessor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/mask2former/image_processing_mask2former.js": (
@@ -28724,7 +28724,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/mask2former/image_processing_mask2former.js ***!
         \****************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28740,7 +28740,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class Mask2FormerImageProcessor extends _maskformer_image_processing_maskformer_js__WEBPACK_IMPORTED_MODULE_0__.MaskFormerImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/maskformer/image_processing_maskformer.js": (
@@ -28748,7 +28748,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/maskformer/image_processing_maskformer.js ***!
         \**************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28779,7 +28779,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class MaskFormerFeatureExtractor extends MaskFormerImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/mgp_str/processing_mgp_str.js": (
@@ -28787,7 +28787,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/mgp_str/processing_mgp_str.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28950,7 +28950,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return result;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/mobilenet_v1/image_processing_mobilenet_v1.js": (
@@ -28958,7 +28958,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/mobilenet_v1/image_processing_mobilenet_v1.js ***!
         \******************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -28981,7 +28981,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class MobileNetV1FeatureExtractor extends MobileNetV1ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/mobilenet_v2/image_processing_mobilenet_v2.js": (
@@ -28989,7 +28989,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/mobilenet_v2/image_processing_mobilenet_v2.js ***!
         \******************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29012,7 +29012,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class MobileNetV2FeatureExtractor extends MobileNetV2ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/mobilenet_v3/image_processing_mobilenet_v3.js": (
@@ -29020,7 +29020,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/mobilenet_v3/image_processing_mobilenet_v3.js ***!
         \******************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29043,7 +29043,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class MobileNetV3FeatureExtractor extends MobileNetV3ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/mobilenet_v4/image_processing_mobilenet_v4.js": (
@@ -29051,7 +29051,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/mobilenet_v4/image_processing_mobilenet_v4.js ***!
         \******************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29074,7 +29074,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class MobileNetV4FeatureExtractor extends MobileNetV4ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/mobilevit/image_processing_mobilevit.js": (
@@ -29082,7 +29082,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/mobilevit/image_processing_mobilevit.js ***!
         \************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29105,7 +29105,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class MobileViTFeatureExtractor extends MobileViTImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/moonshine/feature_extraction_moonshine.js": (
@@ -29113,7 +29113,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/moonshine/feature_extraction_moonshine.js ***!
         \**************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29153,7 +29153,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/moonshine/processing_moonshine.js": (
@@ -29161,7 +29161,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/moonshine/processing_moonshine.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29195,7 +29195,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return await this.feature_extractor(audio);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/nougat/image_processing_nougat.js": (
@@ -29203,7 +29203,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/nougat/image_processing_nougat.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29219,7 +29219,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class NougatImageProcessor extends _donut_image_processing_donut_js__WEBPACK_IMPORTED_MODULE_0__.DonutImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/owlv2/image_processing_owlv2.js": (
@@ -29227,7 +29227,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/owlv2/image_processing_owlv2.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29243,7 +29243,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class Owlv2ImageProcessor extends _owlvit_image_processing_owlvit_js__WEBPACK_IMPORTED_MODULE_0__.OwlViTImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/owlvit/image_processing_owlvit.js": (
@@ -29251,7 +29251,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/owlvit/image_processing_owlvit.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29278,7 +29278,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class OwlViTFeatureExtractor extends OwlViTImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/owlvit/processing_owlvit.js": (
@@ -29286,7 +29286,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/owlvit/processing_owlvit.js ***!
         \************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29312,7 +29312,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           static tokenizer_class = _tokenizers_js__WEBPACK_IMPORTED_MODULE_2__.AutoTokenizer;
           static image_processor_class = _auto_image_processing_auto_js__WEBPACK_IMPORTED_MODULE_1__.AutoImageProcessor;
         }
-      }
+      })
     ),
     /***/
     "./src/models/paligemma/processing_paligemma.js": (
@@ -29320,7 +29320,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/paligemma/processing_paligemma.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29402,7 +29402,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/parakeet/feature_extraction_parakeet.js": (
@@ -29410,7 +29410,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/parakeet/feature_extraction_parakeet.js ***!
         \************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29539,7 +29539,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/phi3_v/image_processing_phi3_v.js": (
@@ -29547,7 +29547,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/phi3_v/image_processing_phi3_v.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29683,7 +29683,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return { pixel_values, original_sizes, reshaped_input_sizes, image_sizes, num_img_tokens };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/phi3_v/processing_phi3_v.js": (
@@ -29691,7 +29691,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/phi3_v/processing_phi3_v.js ***!
         \************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29754,7 +29754,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/pixtral/image_processing_pixtral.js": (
@@ -29762,7 +29762,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/pixtral/image_processing_pixtral.js ***!
         \********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29801,7 +29801,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return [num_width_tokens * real_patch_size, num_height_tokens * real_patch_size];
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/pixtral/processing_pixtral.js": (
@@ -29809,7 +29809,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/pixtral/processing_pixtral.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -29866,7 +29866,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/processors.js": (
@@ -29874,7 +29874,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/processors.js ***!
         \**********************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30100,7 +30100,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           /*! ./whisper/processing_whisper.js */
           "./src/models/whisper/processing_whisper.js"
         );
-      }
+      })
     ),
     /***/
     "./src/models/pvt/image_processing_pvt.js": (
@@ -30108,7 +30108,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/pvt/image_processing_pvt.js ***!
         \************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30124,7 +30124,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class PvtImageProcessor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/pyannote/feature_extraction_pyannote.js": (
@@ -30132,7 +30132,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/pyannote/feature_extraction_pyannote.js ***!
         \************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30223,7 +30223,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return results;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/pyannote/processing_pyannote.js": (
@@ -30231,7 +30231,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/pyannote/processing_pyannote.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30270,7 +30270,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return this.feature_extractor.config.sampling_rate;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/qwen2_vl/image_processing_qwen2_vl.js": (
@@ -30278,7 +30278,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/qwen2_vl/image_processing_qwen2_vl.js ***!
         \**********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30331,7 +30331,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/qwen2_vl/processing_qwen2_vl.js": (
@@ -30339,7 +30339,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/qwen2_vl/processing_qwen2_vl.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30404,7 +30404,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/rt_detr/image_processing_rt_detr.js": (
@@ -30412,7 +30412,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/rt_detr/image_processing_rt_detr.js ***!
         \********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30432,7 +30432,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return (0, _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.post_process_object_detection)(...args);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/sam/image_processing_sam.js": (
@@ -30440,7 +30440,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/sam/image_processing_sam.js ***!
         \************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30647,7 +30647,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           } = {}) {
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/sam/processing_sam.js": (
@@ -30655,7 +30655,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/sam/processing_sam.js ***!
         \******************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30685,7 +30685,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return this.image_processor.reshape_input_points(...args);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/sam2/image_processing_sam2.js": (
@@ -30693,7 +30693,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/sam2/image_processing_sam2.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30707,7 +30707,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           /*! ../sam/image_processing_sam.js */
           "./src/models/sam/image_processing_sam.js"
         );
-      }
+      })
     ),
     /***/
     "./src/models/sam2/processing_sam2.js": (
@@ -30715,7 +30715,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/sam2/processing_sam2.js ***!
         \********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30738,7 +30738,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class Sam2VideoProcessor extends Sam2Processor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/sam3/image_processing_sam3.js": (
@@ -30746,7 +30746,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/sam3/image_processing_sam3.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30760,7 +30760,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           /*! ../sam2/image_processing_sam2.js */
           "./src/models/sam2/image_processing_sam2.js"
         );
-      }
+      })
     ),
     /***/
     "./src/models/seamless_m4t/feature_extraction_seamless_m4t.js": (
@@ -30768,7 +30768,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/seamless_m4t/feature_extraction_seamless_m4t.js ***!
         \********************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30947,7 +30947,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return result;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/segformer/image_processing_segformer.js": (
@@ -30955,7 +30955,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/segformer/image_processing_segformer.js ***!
         \************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -30982,7 +30982,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class SegformerFeatureExtractor extends SegformerImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/siglip/image_processing_siglip.js": (
@@ -30990,7 +30990,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/siglip/image_processing_siglip.js ***!
         \******************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31006,7 +31006,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class SiglipImageProcessor extends _base_image_processors_utils_js__WEBPACK_IMPORTED_MODULE_0__.ImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/smolvlm/image_processing_smolvlm.js": (
@@ -31014,7 +31014,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/smolvlm/image_processing_smolvlm.js ***!
         \********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31028,7 +31028,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           /*! ../idefics3/image_processing_idefics3.js */
           "./src/models/idefics3/image_processing_idefics3.js"
         );
-      }
+      })
     ),
     /***/
     "./src/models/smolvlm/processing_smolvlm.js": (
@@ -31036,7 +31036,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/smolvlm/processing_smolvlm.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31050,7 +31050,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           /*! ../idefics3/processing_idefics3.js */
           "./src/models/idefics3/processing_idefics3.js"
         );
-      }
+      })
     ),
     /***/
     "./src/models/snac/feature_extraction_snac.js": (
@@ -31058,7 +31058,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/snac/feature_extraction_snac.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31074,7 +31074,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class SnacFeatureExtractor extends _dac_feature_extraction_dac_js__WEBPACK_IMPORTED_MODULE_0__.DacFeatureExtractor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/speecht5/feature_extraction_speecht5.js": (
@@ -31082,7 +31082,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/speecht5/feature_extraction_speecht5.js ***!
         \************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31098,7 +31098,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         );
         class SpeechT5FeatureExtractor extends _base_feature_extraction_utils_js__WEBPACK_IMPORTED_MODULE_0__.FeatureExtractor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/speecht5/processing_speecht5.js": (
@@ -31106,7 +31106,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/speecht5/processing_speecht5.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31140,7 +31140,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return await this.feature_extractor(input);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/swin2sr/image_processing_swin2sr.js": (
@@ -31148,7 +31148,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/swin2sr/image_processing_swin2sr.js ***!
         \********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31179,7 +31179,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             });
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/ultravox/processing_ultravox.js": (
@@ -31187,7 +31187,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/ultravox/processing_ultravox.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31248,7 +31248,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/vit/image_processing_vit.js": (
@@ -31256,7 +31256,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/vit/image_processing_vit.js ***!
         \************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31279,7 +31279,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class ViTFeatureExtractor extends ViTImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/models/vitmatte/image_processing_vitmatte.js": (
@@ -31287,7 +31287,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/vitmatte/image_processing_vitmatte.js ***!
         \**********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31339,7 +31339,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/vitpose/image_processing_vitpose.js": (
@@ -31347,7 +31347,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/vitpose/image_processing_vitpose.js ***!
         \********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31432,7 +31432,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return results;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/voxtral/processing_voxtral.js": (
@@ -31440,7 +31440,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/voxtral/processing_voxtral.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31529,7 +31529,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/wav2vec2/feature_extraction_wav2vec2.js": (
@@ -31537,7 +31537,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/wav2vec2/feature_extraction_wav2vec2.js ***!
         \************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31587,7 +31587,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/wav2vec2/processing_wav2vec2.js": (
@@ -31595,7 +31595,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/wav2vec2/processing_wav2vec2.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31629,7 +31629,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return await this.feature_extractor(audio);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/wav2vec2_with_lm/processing_wav2vec2_with_lm.js": (
@@ -31637,7 +31637,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/wav2vec2_with_lm/processing_wav2vec2_with_lm.js ***!
         \********************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31671,7 +31671,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return await this.feature_extractor(audio);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/wespeaker/feature_extraction_wespeaker.js": (
@@ -31679,7 +31679,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/wespeaker/feature_extraction_wespeaker.js ***!
         \**************************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31793,7 +31793,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/whisper/common_whisper.js": (
@@ -31801,7 +31801,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/whisper/common_whisper.js ***!
         \**********************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -31957,7 +31957,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           }
           return language_code;
         }
-      }
+      })
     ),
     /***/
     "./src/models/whisper/feature_extraction_whisper.js": (
@@ -31965,7 +31965,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/whisper/feature_extraction_whisper.js ***!
         \**********************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -32076,7 +32076,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             };
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/whisper/generation_whisper.js": (
@@ -32084,7 +32084,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/whisper/generation_whisper.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -32169,7 +32169,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
            */
           max_initial_timestamp_index = 1;
         }
-      }
+      })
     ),
     /***/
     "./src/models/whisper/processing_whisper.js": (
@@ -32177,7 +32177,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/whisper/processing_whisper.js ***!
         \**************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -32211,7 +32211,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return await this.feature_extractor(audio);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/models/yolos/image_processing_yolos.js": (
@@ -32219,7 +32219,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/models/yolos/image_processing_yolos.js ***!
         \****************************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -32246,7 +32246,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         }
         class YolosFeatureExtractor extends YolosImageProcessor {
         }
-      }
+      })
     ),
     /***/
     "./src/ops/registry.js": (
@@ -32254,7 +32254,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/ops/registry.js ***!
         \*****************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -32279,7 +32279,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           );
           return (
             /** @type {any} */
-            async (inputs) => {
+            (async (inputs) => {
               const proxied = (0, _backends_onnx_js__WEBPACK_IMPORTED_MODULE_0__.isONNXProxy)();
               const ortFeed = Object.fromEntries(Object.entries(inputs).map(([k2, v]) => [k2, (proxied ? v.clone() : v).ort_tensor]));
               const outputs = await (0, _backends_onnx_js__WEBPACK_IMPORTED_MODULE_0__.runInferenceSession)(session, ortFeed);
@@ -32291,7 +32291,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
                   names
                 ]);
               }
-            }
+            })
           );
         };
         class TensorOpRegistry {
@@ -32385,7 +32385,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return this._slice;
           }
         }
-      }
+      })
     ),
     /***/
     "./src/pipelines.js": (
@@ -32393,7 +32393,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/pipelines.js ***!
         \**************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -34362,7 +34362,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           }
           return result;
         }
-      }
+      })
     ),
     /***/
     "./src/tokenizers.js": (
@@ -34370,7 +34370,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/tokenizers.js ***!
         \***************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -37793,7 +37793,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             return new cls(tokenizerJSON, tokenizerConfig);
           }
         }
-      }
+      })
     ),
     /***/
     "./src/utils/audio.js": (
@@ -37801,7 +37801,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/audio.js ***!
         \****************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -38320,7 +38320,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             await fn(path, this.toBlob());
           }
         }
-      }
+      })
     ),
     /***/
     "./src/utils/constants.js": (
@@ -38328,7 +38328,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/constants.js ***!
         \********************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -38375,7 +38375,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         const PROCESSOR_NAME = "processor_config.json";
         const CHAT_TEMPLATE_NAME = "chat_template.jinja";
         const GENERATION_CONFIG_NAME = "generation_config.json";
-      }
+      })
     ),
     /***/
     "./src/utils/core.js": (
@@ -38383,7 +38383,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/core.js ***!
         \***************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -38541,7 +38541,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           }
           return count2;
         }
-      }
+      })
     ),
     /***/
     "./src/utils/data-structures.js": (
@@ -38549,7 +38549,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/data-structures.js ***!
         \**************************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -39057,7 +39057,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             this.cache.clear();
           }
         }
-      }
+      })
     ),
     /***/
     "./src/utils/devices.js": (
@@ -39065,7 +39065,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/devices.js ***!
         \******************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -39099,7 +39099,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           "webnn-cpu": "webnn-cpu"
           // WebNN CPU
         });
-      }
+      })
     ),
     /***/
     "./src/utils/dtypes.js": (
@@ -39107,7 +39107,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/dtypes.js ***!
         \*****************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -39140,7 +39140,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           /*! ./devices.js */
           "./src/utils/devices.js"
         );
-        const isWebGpuFp16Supported = /* @__PURE__ */ function() {
+        const isWebGpuFp16Supported = /* @__PURE__ */ (function() {
           let cachedResult;
           return async function() {
             if (cachedResult === void 0) {
@@ -39157,7 +39157,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             }
             return cachedResult;
           };
-        }();
+        })();
         const DATA_TYPES = Object.freeze({
           auto: "auto",
           // Auto-detect based on environment
@@ -39185,7 +39185,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           [DATA_TYPES.q4f16]: "_q4f16",
           [DATA_TYPES.bnb4]: "_bnb4"
         });
-      }
+      })
     ),
     /***/
     "./src/utils/generic.js": (
@@ -39193,7 +39193,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/generic.js ***!
         \******************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -39227,7 +39227,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
             }
           }
         );
-      }
+      })
     ),
     /***/
     "./src/utils/hub.js": (
@@ -39235,7 +39235,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/hub.js ***!
         \**************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -39772,7 +39772,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           });
           return parts.join("/");
         }
-      }
+      })
     ),
     /***/
     "./src/utils/image.js": (
@@ -39780,7 +39780,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/image.js ***!
         \****************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -40459,7 +40459,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           }
         }
         const load_image = RawImage.read.bind(RawImage);
-      }
+      })
     ),
     /***/
     "./src/utils/maths.js": (
@@ -40467,7 +40467,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/maths.js ***!
         \****************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -41279,7 +41279,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           time_indices.reverse();
           return [text_indices, time_indices];
         }
-      }
+      })
     ),
     /***/
     "./src/utils/tensor.js": (
@@ -41287,7 +41287,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/tensor.js ***!
         \*****************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -42534,7 +42534,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           ;
           return new Tensor3(dtype, outputData, [tensor.dims[0], tensor.dims[1] / 8]);
         }
-      }
+      })
     ),
     /***/
     "./src/utils/video.js": (
@@ -42542,7 +42542,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
         !*** ./src/utils/video.js ***!
         \****************************/
       /***/
-      (__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
+      ((__unused_webpack___webpack_module__, __webpack_exports__2, __webpack_require__2) => {
         __webpack_require__2.r(__webpack_exports__2);
         __webpack_require__2.d(__webpack_exports__2, {
           /* harmony export */
@@ -42661,7 +42661,7 @@ ${fake_token_around_image}${global_img_token}` + image_token.repeat(image_seq_le
           video.remove();
           return new RawVideo(frames, duration);
         }
-      }
+      })
     )
     /******/
   };

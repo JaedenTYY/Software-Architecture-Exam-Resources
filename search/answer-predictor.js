@@ -9,7 +9,10 @@
     weakConfidenceCutoff: 0.28,
     groupDamping: 1.35,
     weakMechanismAlignment: 0.12,
-    minArchitecturalMechanism: 0.34
+    minArchitecturalMechanism: 0.34,
+    nearTieMargin: 0.08,
+    exactTieMargin: 0.005,
+    minHighConfidenceGroups: 1
   };
 
   const PREDICTION_STATE = {
@@ -136,7 +139,7 @@
       if (has(/\b(source stimulus environment|response measure|utility tree|business value architecture impact|business value architectural impact|asr|qaw|palm|add|atam|architecture tradeoff analysis|architecture trade-off analysis|sensitivity point|trade[- ]off point)\b/)) {
         intent = "framework"; confidence = Math.max(confidence, 0.88); reasons.push("query uses framework/evaluation vocabulary");
       }
-      if (has(/\b(informal notation|semiformal notation|semi-formal notation|formal notation|architecture documentation|documenting software architecture|view documentation|element catalog|variability guide|cross[- ]view mapping|primary presentation)\b/)) {
+      if (has(/\b(informal notation|semiformal notation|semi-formal notation|formal notation|architectural documentation|architecture documentation|documenting software architecture|view documentation|element catalog|variability guide|cross[- ]view mapping|primary presentation)\b/)) {
         intent = "documentation"; confidence = Math.max(confidence, 0.88); reasons.push("query asks about architecture documentation/notation");
       }
       if (has(/\b(implementation conformance|architecture code conformance|architecture-code conformance|unit test|integration test|system test|acceptance test|regression test|black[- ]box|white[- ]box|gray[- ]box|grey[- ]box|risk[- ]based testing|testing priorit)\b/)) {
@@ -258,11 +261,17 @@
       };
       const has = pattern => pattern.test(q);
 
-      if (has(/\b(client|user|browser|app)\s+(actively\s+)?(requests?|asks?|fetches?|retrieves?|checks?|polls?)\b/) || has(/\b(requests?|fetches?|retrieves?|checks?|polls?)\s+.*\b(server|centralized service)\b/)) {
+      if (has(/\b(clients?|users?|browsers?|apps?)\s+(actively\s+)?(requests?|asks?|fetches?|retrieves?|checks?|polls?|store|stores)\b/) || has(/\b(requests?|fetches?|retrieves?|checks?|polls?)\s+.*\b(server|centralized service)\b/)) {
         add("client-server", 0.78, "client/user initiates a request", "An asymmetric client initiates request/reply interaction with a server that provides the service.", "Use when clients actively request or poll for the information.", "Client-Server = request/reply initiated by the client.");
+      }
+      if (has(/\bdistributed clients?\b/) && has(/\b(request|requests|retrieve|retrieves|store|stores|access)\b/) && has(/\b(centrally managed|centralized|authoritative)\b/)) {
+        add("client-server", 0.92, "distributed clients request centrally managed state", "An asymmetric client initiates request/reply interaction with a server that provides the service.", "Use when distributed clients request centrally managed records or services.", "Client-Server = distributed requesters accessing a centralized provider.");
       }
       if (has(/\b(server|centralized server|central service)\b/) && has(/\b(request|reply|response|fetch|retrieve|provide)\b/)) {
         add("client-server", 0.42, "central server provides requested information", "An asymmetric client initiates request/reply interaction with a server that provides the service.", "Use when clients actively request or poll for the information.", "Client-Server = request/reply initiated by the client.");
+      }
+      if (has(/\b(authoritative|centrally managed|online)\b/) && has(/\b(profile|account|record|progress|achievement|data)\b/) && has(/\b(store|check|retrieve|access|track)\b/) && has(/\b(devices?|pcs?|internet|online)\b/)) {
+        add("client-server", 0.82, "distributed clients access authoritative online state", "An asymmetric client initiates request/reply interaction with a server that provides the service.", "Use when distributed clients access centrally managed records or services.", "Client-Server = distributed requesters accessing a centralized provider.");
       }
       if (has(/\b(polling|polls?|check(s|ing)? every|every \d+|every thirty|every 30|fixed interval|periodically requests?|scheduled request|client refreshes)\b/)) {
         add("client-server", 0.72, "polling or scheduled request", "An asymmetric client initiates request/reply interaction with a server that provides the service.", "Use when clients actively request or poll for the information.", "Client-Server = request/reply initiated by the client.");
@@ -274,15 +283,22 @@
       if (has(/\b(push(ed|es)?|automatically receive|automatically notify|notify subscribers|notify listeners|interested subscribers|interested users|receive an update whenever|receive updates? when .* changes?|whenever .* changes?|information changes?|when new information .* available|new information becomes available)\b/)) {
         add("publish-subscribe", 0.86, "push or change-triggered update", "Publishers emit events and interested subscribers receive them without directly requesting each update.", "Use when information is pushed to subscribers when an event or change occurs.", "Publish-Subscribe = event-driven dissemination to subscribers.");
       }
+      if (has(/\b(notif(?:y|ies|ied)|alert(?:s|ed)?)\b/) && has(/\b(whenever|when)\b/) && has(/\b(available|matches?|reaches?|crosses?|changes?|exceeds?)\b/)) {
+        add("publish-subscribe", 0.9, "change-triggered notification", "Publishers emit events and interested subscribers receive them without directly requesting each update.", "Use when information is pushed to subscribers when an event or change occurs.", "Publish-Subscribe = event-driven dissemination to subscribers.");
+      }
       if (has(/\bnotifications?|updates?\b/) && has(/\b(distribut\w*|broadcast|inform|many|multiple|interested|listeners?)\b/)) {
         add("publish-subscribe", 0.62, "one update distributed to many interested receivers", "Publishers emit events and interested subscribers receive them without directly requesting each update.", "Use when information is pushed to subscribers when an event or change occurs.", "Publish-Subscribe = event-driven dissemination to subscribers.");
       }
 
-      if (has(/\b(soa|service oriented architecture|service-oriented architecture|service provider|service consumer|service registry|service discovery|published (service )?(interface|contract)s?|independently provided .* services?|heterogeneous .* services?|network interfaces?|interoperability)\b/)) {
+      if (has(/\b(soa|service oriented architecture|service-oriented architecture|service provider|service consumer|service registry|service discovery|published (service |network )?(interface|contract|api)s?|independently provided .* services?|heterogeneous .* services?|network interfaces?|interoperability)\b/)) {
         add("soa", 0.95, "independent network services with published interfaces", "Computation is achieved through cooperating independently provided and consumed network services with published interfaces.", "Use when the problem is about service provider/consumer interoperability or discoverable network services.", "SOA requires independently provided/consumed services and published interfaces, not merely periodic retrieval.");
       }
+      if (has(/\b(independently (?:managed|offered|provided)|external)\b/) && has(/\b(payment|banking|credit card|identity|shipping|recommendation|maps?|capabilit(?:y|ies)|services?)\b/) && has(/\b(integrat|consume|use|using|through|via|published|api)\w*\b/)) {
+        add("soa", 0.82, "independently managed external services", "Computation is achieved through cooperating independently provided and consumed network services with published interfaces.", "Use when independently managed external services must be integrated through stable service contracts.", "SOA is distinguished by independently managed service providers and published interfaces/contracts.");
+      }
 
-      if (has(/\b(peer[- ]?to[- ]?peer|p2p|equal peers|decentralized|both request and provide|request and provide|share (their|own) resources|peer discovery|network node .* both request .* provide)\b/)) {
+      if (has(/\b(peer[- ]?to[- ]?peer|p2p|equal peers|decentralized|both request and provide|request and provide|share (their|own) resources|peer discovery|network node .* both request .* provide)\b/)
+        || (has(/\b(participants?|nodes?|machines?|entities?)\b/) && has(/\brequests?\b.*\bprovides?\b/) && has(/\b(equal|own resources?|to others)\b/))) {
         add("peer-to-peer", 0.9, "equal peers request and provide resources", "Peers have symmetric roles and can both request and provide resources.", "Use when nodes are peers rather than fixed clients and servers.", "Peer-to-Peer requires peers to both request and provide resources.");
       }
       if (has(/\b(pipe[- ]and[- ]filter|pipeline|successive( independent)? transformations?|several independent stages|multiple transformations?|stream|filters?|transforming .* forwarding|transform(ed|s)? .* stages?)\b/)) {
@@ -297,7 +313,9 @@
       if (has(/\b(broker|intermediary|client proxy|server proxy|location transparency|forward requests?|dynamic binding)\b/)) {
         add("broker", 0.86, "intermediary broker forwards requests", "A broker mediates interaction and provides location transparency between clients and servers.", "Use when an intermediary hides service location or forwards calls.", "Broker requires an intermediary/proxy mechanism.");
       }
-      if (has(/\b(model[- ]view[- ]controller|model view controller|\bmvc\b|multiple (synchronized )?views? .* same model|same (application )?(data|model) .* multiple views?|controller handles? (user )?input|view displays? .* model|separate model .* view .* controller)\b/)) {
+      if (has(/\b(model[- ]view[- ]controller|model view (?:and )?controller|\bmvc\b|multiple (synchronized )?views? .* same model|same (application )?(data|model) .* multiple views?|controller handles? (user )?input|view displays? .* model|separate model .* view .* controller)\b/)
+        || (has(/\bmodel\b/) && has(/\bviews?\b/) && has(/\bcontrollers?\b/) && has(/\b(user input|ui|application (?:logic|functionality)|presentation)\b/))
+        || (has(/\b(line charts?|bar charts?|multiple .* views?|user[- ]interface views?)\b/) && has(/\buser input\b/) && has(/\b(core )?application (?:logic|functionality)\b/) && has(/\bseparate\b/))) {
         add("mvc", 0.92, "model, view and controller responsibilities", "The Model holds application state/functionality, Views present it, and Controllers mediate user input so presentation can vary independently.", "Use when the requirement is about multiple or changeable UI representations over the same model with separated input handling.", "MVC = Model/View/Controller presentation separation, not general Layer decomposition.");
       }
       if (has(/\b(map[- ]reduce|map tasks?|reduce tasks?|shuffle[ /-]?sort|key[ /-]?value|partition(ed|ing)? .* (large|huge|massive) .* data|large data ?set|large dataset|massive .* batch|parallel batch processing)\b/)) {
@@ -314,13 +332,81 @@
       const pollingStrong = (mechanisms.get("client-server")?.score || 0) >= 0.7;
       const pushStrong = (mechanisms.get("publish-subscribe")?.score || 0) >= 0.7;
       const periodicAmbiguous = hasPeriodic && asksForInfo && !pollingStrong && !pushStrong;
+      const chatAmbiguous = has(/\b(chat|communicate|message)\b/) && has(/\b(each other|among (?:themselves|each other)|one another)\b/)
+        && !has(/\b(peer[- ]?to[- ]?peer|equal peers|both request and provide|central(?:ized)? server|client server|request reply)\b/);
 
       return {
         mechanisms,
         periodicAmbiguous,
+        chatAmbiguous,
         strongest: [...mechanisms.values()].sort((a, b) => b.score - a.score),
         hasAny: mechanisms.size > 0
       };
+    }
+
+    function analyzeQualityMechanisms(raw) {
+      const q = normalize(raw);
+      const scores = new Map();
+      const add = (id, score, clue) => {
+        if (!byId[id]) return;
+        const previous = scores.get(id) || { score: 0, clues: [] };
+        previous.score = Math.max(previous.score, score);
+        if (clue && !previous.clues.includes(clue)) previous.clues.push(clue);
+        scores.set(id, previous);
+      };
+      const has = pattern => pattern.test(q);
+
+      if (has(/\b(crash(?:es|ed)?|fault|fails?|failed|failure|unavailable|outage)\b/) && has(/\b(redirect|failover|backup|replica|recover|restore|continue|continues|still (?:works|runs|available)|healthy instance|service remains)\b/)) {
+        add("availability", 1, "a fault is masked or service is restored");
+      } else if (has(/\b(uptime|availability|service remains available|continue operating|survive .* failure)\b/)) {
+        add("availability", 0.94, "service readiness or continuity");
+      }
+      if (has(/\b(response time|latency|throughput|requests? per second|transactions? per second|processing time|peak load|concurrent users?|deadline|jitter)\b/)
+        || has(/\b\d+(?:\.\d+)?\s*(?:percent|%)\b.*\b(requests?|searches?|transactions?|operations?)\b.*\b(?:under|within|in)\b.*\b(seconds?|milliseconds?|ms)\b/)
+        || has(/\b(requests?|searches?|transactions?|operations?)\b.*\b(?:complete|finish|respond)\b.*\b(?:under|within|in)\b.*\b(seconds?|milliseconds?|ms)\b/)) {
+        add("performance", 0.98, "a timed response or processing-rate measure");
+      }
+      if (has(/\b(changes?|modifications?|new feature|replace|upgrade)\b/) && has(/\b(few modules?|one module|localized?|localised?|without affecting|minimal impact|ripple|independent(?:ly)?|small number)\b/)
+        || has(/\b(modifiability|maintainability|easy to change|isolate changes?)\b/)) {
+        add("modifiability", 0.97, "change cost and ripple effects are constrained");
+      }
+      if (has(/\b(integrat|exchange|communicat)\w*\b/) && has(/\b(independently (?:developed|managed|provided)|external systems?|heterogeneous|different technolog|meaningful information|standards?|published (?:interfaces?|contracts?))\b/)
+        || has(/\binteroperability\b/)) {
+        add("interoperability", 0.98, "independent systems exchange meaningful information");
+      }
+      if (has(/\b(only permitted|only authorized|only authorised|unauthorized|unauthorised|protected operations?|access control|confidentiality|integrity|attack|security)\b/)) {
+        add("security", 0.97, "access or information is protected from unauthorized action");
+      }
+      if (has(/\b(testability|during testing|isolate (?:a )?(?:fault|defect)|control .* test|observe .* test|automated tests?|test harness|easy to test)\b/)) {
+        add("testability", 0.96, "tests can control, observe, or isolate behavior");
+      }
+      if (has(/\b(usability|user can complete|users? can complete|learn(?:ability)?|without assistance|appropriate interaction|user feedback|ease of use|efficiently use)\b/)) {
+        add("usability", 0.96, "a user can learn, interact with, or complete a task");
+      }
+      return { scores, hasAny: scores.size > 0, strongest: [...scores.entries()].sort((a, b) => b[1].score - a[1].score) };
+    }
+
+    function analyzeDesignMechanisms(raw) {
+      const q = normalize(raw);
+      const scores = new Map();
+      const add = (id, score, clue) => scores.set(id, { score: Math.max(score, scores.get(id)?.score || 0), clues: [clue] });
+      const has = pattern => pattern.test(q);
+      if (has(/\b(subject|one object|dependent objects?)\b/) && has(/\b(notif(?:y|ies|ied)|updates?|react(?:s|ed)? automatically)\b/) && has(/\b(observers?|listeners?|registered|dependent objects?|interested objects?|variable set|one-to-many)\b/)) add("observer", 1, "a Subject notifies registered dependent objects");
+      if (has(/\bbehavio[u]?r\b/) && has(/\b(internal )?state\b/) && has(/\b(changes?|varies|state-specific|conditionals?|if else|switch)\b/)) add("state", 1, "behavior varies with the object's internal state");
+      if (has(/\b(one|single|exactly one|controlled) instance\b/) && has(/\b(global access|access point|private constructor|controlled instance)\b/)) add("singleton", 1, "one controlled instance and a global access point");
+      if (has(/\b(leaf|individual)\b/) && has(/\b(composite|recursive groups?|tree|part whole)\b/) && has(/\b(uniform|same interface|treated? .* same)\b/)) add("composite", 1, "leaf and recursive groups are treated uniformly");
+      if (has(/\b(simple|unified|single) interface\b/) && has(/\b(complex subsystem|subsystem complexity|many subsystem)\b/)) add("facade", 1, "a simple interface fronts a complex subsystem");
+      if (has(/\b(subclass|creator)\b/) && has(/\b(decides?|selects?|creates?|instantiate)\b/) && has(/\b(concrete product|which product|object creation)\b/)) add("factory-method", 1, "a subclass decides the concrete product");
+      return { scores, hasAny: scores.size > 0, strongest: [...scores.entries()].sort((a, b) => b[1].score - a[1].score) };
+    }
+
+    function isInDomain(raw, intent, queryConceptRows, architecture, quality, design) {
+      if (queryConceptRows.some(row => row.direct)) return true;
+      if (architecture.hasAny || architecture.periodicAmbiguous || architecture.chatAmbiguous || quality.hasAny || design.hasAny) return true;
+      if (intent.intent !== "general" && intent.confidence >= 0.7) return true;
+      const q = normalize(raw);
+      return /\b(which|what|best)\s+patterns?\b/.test(q)
+        || /\b(software architecture|architectural|quality attribute|design pattern|module structure|component and connector|allocation structure|atam|qaw|palm|utility tree|view documentation|implementation conformance)\b/.test(q);
     }
 
     function predict(rawQuery, queryConcepts, rankedResults, configOverride) {
@@ -335,6 +421,12 @@
       const subject = extractSubject(queryConceptRows, intent);
       const cats = compatibleCategories(intent.intent);
       const architecture = analyzeArchitecturalMechanisms(raw);
+      const quality = analyzeQualityMechanisms(raw);
+      const design = analyzeDesignMechanisms(raw);
+      const grounding = { architecture, quality, design };
+      if (!isInDomain(raw, intent, queryConceptRows, architecture, quality, design)) {
+        return noEvidencePrediction(intent, subject, "out-of-domain-query");
+      }
       const evidenceRows = selectEvidence(rankedResults || []);
       if (!evidenceRows.length) {
         return noEvidencePrediction(intent, subject);
@@ -342,6 +434,9 @@
 
       if ((intent.intent === "architectural-pattern" || intent.intent === "general") && architecture.periodicAmbiguous) {
         return buildPeriodicAmbiguity(raw, intent, evidenceRows);
+      }
+      if ((intent.intent === "architectural-pattern" || intent.intent === "general") && architecture.chatAmbiguous) {
+        return buildArchitecturalAmbiguity(intent, evidenceRows, ["peer-to-peer", "client-server"], "The requirement says participants communicate with each other but does not establish whether they are equal peers or clients of a central chat service.", ["Do participants connect directly as equal peers, or through a central server?"]);
       }
 
       const genericPatternQuery = /\b(which|what|best)\s+patterns?\b/.test(normalize(raw));
@@ -360,7 +455,7 @@
         ]);
       }
 
-      const candidates = aggregateCandidates(evidenceRows, cats, intent, subject, queryConcepts, architecture, raw);
+      const candidates = aggregateCandidates(evidenceRows, cats, intent, subject, queryConcepts, grounding, raw);
       if (!candidates.length) {
         return {
           shown: true,
@@ -405,6 +500,10 @@
         };
       }
 
+      if (ambiguity.isAmbiguous) {
+        return buildCandidateAmbiguity(intent, subject, candidates, evidenceRows, ambiguity);
+      }
+
       return {
         shown: true,
         state: PREDICTION_STATE.ANSWER,
@@ -436,7 +535,7 @@
         .slice(0, settings.maxEvidenceResults);
     }
 
-    function aggregateCandidates(results, categories, intent, subject, queryConcepts, architecture, rawQuery) {
+    function aggregateCandidates(results, categories, intent, subject, queryConcepts, grounding, rawQuery) {
       const candidates = new Map();
       const maxScore = Math.max(1, ...results.map(r => Number(r._score || 0)));
       const groupSeen = new Map();
@@ -460,8 +559,9 @@
           let evidenceWeight = row.strength * resultRelevance * duplicateDamping * subjectMultiplier;
           evidenceWeight *= polarityMultiplier(result, concept, intent);
           evidenceWeight *= intentCategoryMultiplier(concept, intent, queryConcepts);
-          evidenceWeight *= mechanismAlignmentMultiplier(concept, intent, architecture);
+          evidenceWeight *= mechanismAlignmentMultiplier(concept, intent, grounding);
           evidenceWeight *= answerRoleMultiplier(concept, intent, rawQuery);
+          evidenceWeight *= evidenceTrustMultiplier(result);
           if (evidenceWeight <= 0.01) continue;
 
           const current = candidates.get(concept.id) || {
@@ -471,19 +571,21 @@
             score: 0,
             supportCount: 0,
             evidenceGroups: new Set(),
+            trustworthyEvidenceGroups: new Set(),
             evidence: [],
-            queryAlignment: queryAlignment(rawQuery, concept, intent, architecture)
+            queryAlignment: queryAlignment(rawQuery, concept, intent, grounding)
           };
           current.score += evidenceWeight;
           current.supportCount += 1;
           current.evidenceGroups.add(groupKey);
+          if (evidenceTrustMultiplier(result) >= 0.7) current.trustworthyEvidenceGroups.add(groupKey);
           addEvidence(current, result, evidenceWeight, concept);
           candidates.set(concept.id, current);
         }
       }
 
       return [...candidates.values()]
-        .map(c => ({ ...c, independentSupportCount: c.evidenceGroups.size }))
+        .map(c => ({ ...c, independentSupportCount: c.evidenceGroups.size, trustworthySupportCount: c.trustworthyEvidenceGroups.size }))
         .filter(c => c.score >= settings.minCandidateScore);
     }
 
@@ -531,15 +633,21 @@
     }
 
     function evidenceGroupKey(result) {
-      if (result._resultType === "reference") return `ref:${result.id}`;
+      if (result._resultType === "reference") return `ref:${result.source || result.id}`;
       return [
         result.bank || "",
         result.family || "",
         result.topic || "",
         result.subtopic || "",
-        result.type || "",
-        result.scenario || ""
+        result.type || ""
       ].join("|");
+    }
+
+    function evidenceTrustMultiplier(result) {
+      if (result._resultType === "reference") return result.referenceType === "past-paper" ? 1.25 : 1.05;
+      if (result.bank === "Advanced Depth") return 1.12;
+      if (result.bank === "Code Implementation") return 1.02;
+      return 0.72;
     }
 
     function subjectEvidenceMultiplier(result, rows, subject) {
@@ -577,9 +685,12 @@
       return 1;
     }
 
-    function mechanismAlignmentMultiplier(concept, intent, architecture) {
-      if (intent.intent !== "architectural-pattern") return 1;
-      const alignment = architecture?.mechanisms?.get(concept.id)?.score || 0;
+    function mechanismAlignmentMultiplier(concept, intent, grounding) {
+      let alignment = 0;
+      if (intent.intent === "architectural-pattern") alignment = grounding?.architecture?.mechanisms?.get(concept.id)?.score || 0;
+      else if (["quality", "quality-enhanced", "quality-threatened"].includes(intent.intent)) alignment = grounding?.quality?.scores?.get(concept.id)?.score || 0;
+      else if (intent.intent === "design-pattern") alignment = grounding?.design?.scores?.get(concept.id)?.score || 0;
+      else return 1;
       if (alignment >= settings.minArchitecturalMechanism) return 0.45 + alignment;
       return settings.weakMechanismAlignment;
     }
@@ -594,17 +705,29 @@
       return 1;
     }
 
-    function queryAlignment(raw, concept, intent, architecture) {
+    function queryAlignment(raw, concept, intent, grounding) {
       const q = normalize(raw);
       if (!concept) return 0;
       if (intent.intent === "architectural-pattern") {
-        const mechanismScore = architecture?.mechanisms?.get(concept.id)?.score || 0;
+        const mechanismScore = grounding?.architecture?.mechanisms?.get(concept.id)?.score || 0;
         if (mechanismScore >= 0.75) return 1;
         if (mechanismScore >= settings.minArchitecturalMechanism) return 0.72;
         return 0.12;
       }
+      if (["quality", "quality-enhanced", "quality-threatened"].includes(intent.intent)) {
+        const qualityScore = grounding?.quality?.scores?.get(concept.id)?.score || 0;
+        if (qualityScore >= 0.85) return 1;
+        if (qualityScore >= 0.5) return 0.72;
+      }
+      if (intent.intent === "design-pattern") {
+        const designScore = grounding?.design?.scores?.get(concept.id)?.score || 0;
+        if (designScore >= 0.85) return 1;
+        if (designScore >= 0.5) return 0.72;
+        if (concept.id === "state" && !/\bbehavio[u]?r\b.*\b(internal )?state\b|\b(internal )?state\b.*\bbehavio[u]?r\b/.test(q)) return 0.12;
+        if (concept.id === "observer" && !/\b(notif(?:y|ies|ied)|updates?)\b/.test(q)) return 0.12;
+      }
       if (concept.category === "architectural-pattern") {
-        const mechanismScore = architecture?.mechanisms?.get(concept.id)?.score || 0;
+        const mechanismScore = grounding?.architecture?.mechanisms?.get(concept.id)?.score || 0;
         if (mechanismScore >= 0.75) return 1;
         if (mechanismScore >= settings.minArchitecturalMechanism) return 0.72;
       }
@@ -670,10 +793,15 @@
       const dominance = total ? winner.score / total : 0;
       const runnerScore = runner ? runner.score : 0;
       const margin = (winner.score - runnerScore) / Math.max(winner.score, 1);
-      const evidenceStrength = Math.min(1, winner.independentSupportCount / 10);
+      const evidenceStrength = Math.min(1, (winner.trustworthySupportCount || 0) / 4);
       const alignment = winner.queryAlignment || 0;
-      const numeric = clamp(0.3 * dominance + 0.2 * margin + 0.15 * evidenceStrength + 0.15 * intent.confidence + 0.2 * alignment, 0, 1);
-      const level = numeric >= 0.62 ? "High" : numeric >= 0.46 ? "Medium" : "Low";
+      const numeric = clamp(0.18 * dominance + 0.18 * margin + 0.12 * evidenceStrength + 0.18 * intent.confidence + 0.34 * alignment, 0, 1);
+      const highEligible = numeric >= 0.64
+        && alignment >= 0.85
+        && intent.confidence >= 0.7
+        && margin >= 0.14
+        && (winner.trustworthySupportCount || 0) >= settings.minHighConfidenceGroups;
+      const level = highEligible ? "High" : numeric >= 0.46 ? "Medium" : "Low";
       return {
         level,
         numeric,
@@ -681,21 +809,26 @@
         margin,
         evidenceStrength,
         intentConfidence: intent.confidence,
-        queryAlignment: alignment
+        queryAlignment: alignment,
+        highCriteriaMet: highEligible,
+        trustworthyEvidenceGroups: winner.trustworthySupportCount || 0
       };
     }
 
     function detectAmbiguity(raw, winner, runner, confidence, intent) {
       const q = normalize(raw);
-      const directWinner = winner.queryAlignment >= 0.9 && intent.confidence >= 0.84;
-      const close = !!runner && !directWinner && (winner.score - runner.score) / Math.max(winner.score, 1) < settings.ambiguityMargin;
-      const underspecified = /\b(periodically|information|updates?|notify|notification|get information|best|suitable)\b/.test(q) && !/\b(event|change|changed|push|poll|request|client|server|subscriber|publisher)\b/.test(q);
+      const relativeGap = runner ? (winner.score - runner.score) / Math.max(winner.score, 1) : 1;
+      const decisiveAlignment = winner.queryAlignment >= 0.9 && (runner?.queryAlignment || 0) <= 0.6;
+      const exactTie = !!runner && relativeGap <= settings.exactTieMargin;
+      const close = !!runner && !decisiveAlignment && relativeGap < settings.nearTieMargin;
+      const underspecified = /\b(periodically|information|updates?|notify|notification|get information|best|suitable)\b/.test(q) && !/\b(event|change|changes|changed|push|poll|request|client|server|subscriber|publisher)\b/.test(q);
       const low = confidence.level === "Low" && (close || underspecified);
       const notes = [];
-      if (close) notes.push("Top compatible candidates have close weighted support.");
+      if (exactTie) notes.push("Top compatible candidates are tied after category, mechanism and evidence checks.");
+      else if (close) notes.push("Top compatible candidates remain materially close after category, mechanism and evidence checks.");
       if (underspecified && confidence.level !== "High") notes.push("The query leaves the interaction mechanism underspecified.");
       if (/\bperiodically\b/.test(q)) notes.push("If updates are pushed when information changes, Publish-Subscribe fits; if clients actively request on an interval, Client-Server polling may fit.");
-      return { isAmbiguous: close || low || (underspecified && confidence.level !== "High"), notes };
+      return { isAmbiguous: exactTie || close || (!!runner && low) || (!!runner && underspecified && confidence.level !== "High"), notes, relativeGap };
     }
 
     function relatedConceptGroups(results, excludedIds) {
@@ -782,12 +915,12 @@
       return rows.slice(0, 3);
     }
 
-    function noEvidencePrediction(intent, subject) {
+    function noEvidencePrediction(intent, subject, reason = "weak-search-evidence") {
       return {
         shown: true,
         state: PREDICTION_STATE.NO_EVIDENCE,
         stateLabel: STATE_LABELS[PREDICTION_STATE.NO_EVIDENCE],
-        reason: "weak-search-evidence",
+        reason,
         intent,
         subject: subject ? publicConcept(subject) : null,
         why: ["The local question bank and references did not provide enough matching evidence to predict an answer."],
@@ -805,6 +938,57 @@
         subject: subject ? publicConcept(subject) : null,
         why: [message],
         missingInformation: missingInformation || []
+      };
+    }
+
+    function buildCandidateAmbiguity(intent, subject, candidates, evidenceRows, ambiguity) {
+      const top = candidates.slice(0, 3);
+      return {
+        shown: true,
+        state: PREDICTION_STATE.AMBIGUOUS,
+        stateLabel: STATE_LABELS[PREDICTION_STATE.AMBIGUOUS],
+        title: "Predicted Exam Answer",
+        intent,
+        subject: subject ? publicConcept(subject) : null,
+        winner: null,
+        alternatives: top.map(publicCandidate),
+        candidates: top.map(publicCandidate),
+        possibilities: top.map(candidate => ({ concept: publicConcept(byId[candidate.id]), label: candidate.label, condition: "Additional query-grounded mechanism evidence is required to distinguish this candidate." })),
+        missingInformation: ["Add the mechanism or condition that distinguishes the tied candidates."],
+        why: ambiguity.notes,
+        evidence: top.flatMap(candidate => candidate.evidence.slice(0, 1)).slice(0, settings.maxEvidencePerCandidate),
+        matchingResults: evidenceRows.length,
+        independentEvidenceGroups: Math.max(0, ...top.map(candidate => candidate.independentSupportCount || 0)),
+        ambiguity,
+        confidence: null
+      };
+    }
+
+    function buildArchitecturalAmbiguity(intent, evidenceRows, conceptIds, message, missingInformation) {
+      const possibilities = conceptIds.map(id => ({
+        concept: publicConcept(byId[id]),
+        label: byId[id]?.label || id,
+        condition: id === "peer-to-peer" ? "Use this if participants communicate directly as equal peers." : "Use this if participants communicate through a central service provider."
+      }));
+      const evidence = conceptIds.flatMap(id => evidenceForConcept(evidenceRows, id, true).slice(0, 1));
+      return {
+        shown: true,
+        state: PREDICTION_STATE.AMBIGUOUS,
+        stateLabel: STATE_LABELS[PREDICTION_STATE.AMBIGUOUS],
+        title: "Predicted Exam Answer",
+        intent,
+        subject: null,
+        winner: null,
+        alternatives: [],
+        candidates: [],
+        possibilities,
+        missingInformation,
+        why: [message],
+        evidence,
+        matchingResults: evidenceRows.length,
+        independentEvidenceGroups: new Set(evidence.map(item => item.groupKey || item.id)).size,
+        ambiguity: { isAmbiguous: true, notes: [message] },
+        confidence: null
       };
     }
 
@@ -905,6 +1089,7 @@
         queryAlignment: candidate.queryAlignment || 0,
         supportCount: candidate.supportCount,
         independentSupportCount: candidate.independentSupportCount,
+        trustworthySupportCount: candidate.trustworthySupportCount || 0,
         evidence: (candidate.evidence || []).slice(0, settings.maxEvidencePerCandidate)
       };
     }

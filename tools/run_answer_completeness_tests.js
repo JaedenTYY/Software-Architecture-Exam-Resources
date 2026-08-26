@@ -1,18 +1,15 @@
 #!/usr/bin/env node
+const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-global.window = global;
-require(path.join(ROOT, "questions.js"));
-require(path.join(ROOT, "expansion/questions_advanced.js"));
-require(path.join(ROOT, "expansion/questions_code.js"));
-
-const banks = [
-  { name: "Original", rows: global.QUESTIONS || [], expected: 3888 },
-  { name: "Advanced Depth", rows: global.QUESTIONS_ADVANCED || [], expected: 171 },
-  { name: "Code Implementation", rows: global.QUESTIONS_CODE || [], expected: 72 }
+const BANKS = [
+  { name: "Original", file: "questions.json", expected: 3888 },
+  { name: "Advanced Depth", file: "expansion/questions_advanced.json", expected: 171 },
+  { name: "Code Implementation", file: "expansion/questions_code.json", expected: 72, code: true }
 ];
-
+const EXPECTED_TOTAL = 4131;
+const EXPECTED_QA_COUNTS = { Original: 672, "Advanced Depth": 25 };
 const TOP_LEVEL_QUALITY_ATTRIBUTES = [
   "Availability",
   "Interoperability",
@@ -23,134 +20,81 @@ const TOP_LEVEL_QUALITY_ATTRIBUTES = [
   "Usability"
 ];
 
-const EXPECTED_QUALITY_TOPIC_COUNTS = {
-  Original: 672,
-  "Advanced Depth": 25
-};
-
-function text(value) {
-  return typeof value === "string" ? value.trim() : "";
-}
-
-function isMissingAnswer(question) {
-  const answer = text(question.answer_outline);
-  if (!answer) return true;
-  if (answer.length < 10) return true;
-  return /^(?:n\/?a|none|tbd|todo|pending|answer unavailable|not available|coming soon|placeholder)\.?$/i.test(answer);
-}
-
-function isQualityQuestion(question) {
-  return /quality\s+attributes?/i.test(text(question.topic));
-}
-
-function searchableQuestionText(question) {
-  return [
-    question.topic,
-    question.subtopic,
-    question.type,
-    question.family,
-    question.scenario,
-    question.prompt,
-    question.answer_outline,
-    ...(question.tags || [])
-  ].map(text).join(" ").toLowerCase();
-}
-
-let failed = false;
+const failures = [];
 const all = [];
+const normalized = value => String(value || "").replace(/\s+/g, " ").trim();
+const meaningful = value => {
+  const text = normalized(value);
+  return text.length >= 30 && !/^(todo|tbd|placeholder|answer unavailable|n\/?a|none|pending|not available|coming soon)\b/i.test(text);
+};
+const searchableText = question => [
+  question.topic,
+  question.subtopic,
+  question.type,
+  question.family,
+  question.scenario,
+  question.prompt,
+  question.answer_outline,
+  ...(question.tags || [])
+].map(normalized).join(" ").toLowerCase();
 
-console.log("Answer completeness audit\n");
-
-for (const bank of banks) {
-  if (bank.rows.length !== bank.expected) {
-    failed = true;
-    console.error(`[FAIL] ${bank.name}: expected ${bank.expected} questions, found ${bank.rows.length}.`);
-  } else {
-    console.log(`[PASS] ${bank.name}: ${bank.rows.length}/${bank.expected} questions loaded.`);
+for (const bank of BANKS) {
+  const rows = JSON.parse(fs.readFileSync(path.join(ROOT, bank.file), "utf8"));
+  if (!Array.isArray(rows)) {
+    failures.push(`${bank.file}: expected a JSON array`);
+    continue;
   }
-
-  for (const q of bank.rows) all.push({ ...q, _bankName: bank.name });
-
-  const missing = bank.rows.filter(isMissingAnswer);
-  if (missing.length) {
-    failed = true;
-    console.error(`[FAIL] ${bank.name}: ${missing.length} question(s) have a missing/placeholder answer_outline.`);
-    for (const q of missing.slice(0, 100)) console.error(`  - ${q.id}: ${q.topic} / ${q.subtopic} / ${q.type}`);
-    if (missing.length > 100) console.error(`  ... ${missing.length - 100} more`);
-  } else {
-    console.log(`[PASS] ${bank.name}: every question has a non-empty answer_outline.`);
-  }
-
-  if (bank.name === "Code Implementation") {
-    const missingCode = bank.rows.filter(q => !text(q.code_answer));
-    if (missingCode.length) {
-      failed = true;
-      console.error(`[FAIL] ${bank.name}: ${missingCode.length} question(s) have no code_answer.`);
-      for (const q of missingCode.slice(0, 100)) console.error(`  - ${q.id}: ${q.subtopic} / ${q.type}`);
-    } else {
-      console.log(`[PASS] ${bank.name}: every coding question has a code_answer.`);
-    }
+  if (rows.length !== bank.expected) failures.push(`${bank.name}: expected ${bank.expected} questions, found ${rows.length}`);
+  for (const question of rows) {
+    all.push({ ...question, _bank: bank.name });
+    if (!meaningful(question.prompt)) failures.push(`${question.id}: empty or placeholder prompt`);
+    if (!meaningful(question.answer_outline)) failures.push(`${question.id}: empty or placeholder answer_outline`);
+    if (bank.code && !meaningful(question.code_answer)) failures.push(`${question.id}: coding question has no meaningful code_answer`);
   }
 }
 
 const ids = new Set();
-const duplicateIds = [];
-for (const q of all) {
-  if (!text(q.id)) {
-    failed = true;
-    console.error(`[FAIL] Question without an ID in ${q._bankName}.`);
-    continue;
-  }
-  if (ids.has(q.id)) duplicateIds.push(q.id);
-  ids.add(q.id);
-}
-if (duplicateIds.length) {
-  failed = true;
-  console.error(`[FAIL] Duplicate question IDs: ${[...new Set(duplicateIds)].join(", ")}`);
-} else {
-  console.log(`[PASS] IDs are unique across all ${all.length} questions.`);
+for (const question of all) {
+  if (!normalized(question.id)) failures.push(`${question._bank}: question without an ID`);
+  else if (ids.has(question.id)) failures.push(`${question.id}: duplicate ID`);
+  else ids.add(question.id);
 }
 
-const qualityRows = all.filter(isQualityQuestion);
-console.log(`\nQuality Attribute audit: ${qualityRows.length} question(s)`);
-
-for (const [bankName, expected] of Object.entries(EXPECTED_QUALITY_TOPIC_COUNTS)) {
-  const count = qualityRows.filter(q => q._bankName === bankName).length;
-  if (count !== expected) {
-    failed = true;
-    console.error(`[FAIL] ${bankName} Quality Attributes topic: expected ${expected}, found ${count}.`);
-  } else {
-    console.log(`[PASS] ${bankName} Quality Attributes topic: ${count}/${expected} questions loaded.`);
-  }
+const qualityRows = all.filter(question => question.topic === "Quality Attributes");
+for (const [bank, expected] of Object.entries(EXPECTED_QA_COUNTS)) {
+  const count = qualityRows.filter(question => question._bank === bank).length;
+  if (count !== expected) failures.push(`${bank} Quality Attributes: expected ${expected}, found ${count}`);
 }
-
-const missingQualityAnswers = qualityRows.filter(isMissingAnswer);
-if (missingQualityAnswers.length) {
-  failed = true;
-  console.error(`[FAIL] Quality Attributes: ${missingQualityAnswers.length} answer(s) unavailable.`);
-  for (const q of missingQualityAnswers) console.error(`  - ${q.id} [${q._bankName}] ${q.subtopic} / ${q.type}`);
-} else {
-  console.log(`[PASS] Quality Attributes: every one of the ${qualityRows.length} questions has an answer_outline.`);
+for (const question of qualityRows) {
+  if (!meaningful(question.answer_outline)) failures.push(`${question.id}: Quality Attribute question lacks a meaningful answer`);
 }
-
-for (const qa of TOP_LEVEL_QUALITY_ATTRIBUTES) {
-  const needle = qa.toLowerCase();
-  const matches = qualityRows.filter(q => searchableQuestionText(q).includes(needle));
-  if (!matches.length) {
-    failed = true;
-    console.error(`[FAIL] No Quality Attribute question/evidence found for ${qa}.`);
-  } else {
-    console.log(`[PASS] ${qa}: ${matches.length} Quality Attribute question(s) contain grounded answer/search evidence.`);
-  }
+for (const attribute of TOP_LEVEL_QUALITY_ATTRIBUTES) {
+  const matches = qualityRows.filter(question => searchableText(question).includes(attribute.toLowerCase()));
+  if (!matches.length) failures.push(`No Quality Attribute question/evidence found for ${attribute}`);
 }
+if (all.length !== EXPECTED_TOTAL) failures.push(`Total: expected ${EXPECTED_TOTAL}, found ${all.length}`);
 
-const totalMissing = all.filter(isMissingAnswer);
-console.log(`\nRepository answer coverage: ${all.length - totalMissing.length}/${all.length} (${((all.length - totalMissing.length) / Math.max(1, all.length) * 100).toFixed(2)}%)`);
-console.log(`Quality Attribute answer coverage: ${qualityRows.length - missingQualityAnswers.length}/${qualityRows.length} (${((qualityRows.length - missingQualityAnswers.length) / Math.max(1, qualityRows.length) * 100).toFixed(2)}%)`);
-
-if (failed) {
-  console.error("\nAnswer completeness audit FAILED.");
+if (failures.length) {
+  console.error(JSON.stringify({ ok: false, failures }, null, 2));
   process.exit(1);
 }
 
-console.log("\nAll question-bank answer completeness checks passed.");
+console.log(JSON.stringify({
+  ok: true,
+  counts: {
+    original: BANKS[0].expected,
+    advanced: BANKS[1].expected,
+    code: BANKS[2].expected,
+    total: all.length,
+    qualityAttributesOriginal: EXPECTED_QA_COUNTS.Original,
+    qualityAttributesAdvanced: EXPECTED_QA_COUNTS["Advanced Depth"],
+    qualityAttributesTotal: qualityRows.length
+  },
+  checks: [
+    "meaningful prompt and answer_outline",
+    "code_answer for coding questions",
+    "unique IDs",
+    "all Quality Attribute questions answered",
+    "all seven top-level Quality Attributes represented"
+  ]
+}, null, 2));

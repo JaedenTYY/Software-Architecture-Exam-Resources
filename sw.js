@@ -1,15 +1,26 @@
-const CACHE = "csc3209-static-vectors-v3";
+importScripts("./search/offline-manifest.js");
+
+const manifest = self.CSC3209_OFFLINE_MANIFEST;
+const CACHE_PREFIX = "csc3209-exam-";
+const CACHE = `${CACHE_PREFIX}${manifest.version}`;
+const criticalPaths = new Set(manifest.critical.map(path => path.replace(/^\.\//, "")));
+const optionalPaths = new Set(manifest.optional.map(path => path.replace(/^\.\//, "")));
 
 self.addEventListener("install", event => {
-  self.skipWaiting();
-  event.waitUntil(caches.open(CACHE));
+  event.waitUntil((async () => {
+    const cache = await caches.open(CACHE);
+    await cache.addAll(manifest.critical);
+    await Promise.allSettled(manifest.optional.map(asset => cache.add(asset)));
+    await self.skipWaiting();
+  })());
 });
 
 self.addEventListener("activate", event => {
-  event.waitUntil(
-    caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))
-  );
-  self.clients.claim();
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    await Promise.all(keys.filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE).map(key => caches.delete(key)));
+    await self.clients.claim();
+  })());
 });
 
 function relativePath(url) {
@@ -18,52 +29,43 @@ function relativePath(url) {
   return url.pathname.slice(scopePath.length).replace(/^\/+/, "");
 }
 
-function shouldCache(pathname) {
-  return pathname.startsWith("models/")
-    || pathname === "search/vector_index.meta.json"
-    || pathname === "search/vector_index.bin"
-    || pathname.startsWith("search/")
-    || pathname === "semantic_index.js"
-    || pathname === "questions.js"
-    || pathname.startsWith("expansion/");
+async function networkFirst(request, fallbackRequest = request) {
+  const cache = await caches.open(CACHE);
+  try {
+    const response = await fetch(request);
+    if (response?.ok) await cache.put(request, response.clone());
+    return response;
+  } catch (error) {
+    const cached = await cache.match(fallbackRequest) || await cache.match(request);
+    if (cached) return cached;
+    throw error;
+  }
 }
 
-function cacheFirst(pathname) {
-  // The local model/runtime is versioned by repository contents and expensive
-  // to refetch. Search code and generated indexes, however, must prefer the
-  // newest deployed version so a previous service worker cannot keep an old
-  // search engine or question bank alive after an update.
-  return pathname.startsWith("models/");
+async function cacheFirst(request) {
+  const cache = await caches.open(CACHE);
+  const cached = await cache.match(request);
+  if (cached) return cached;
+  const response = await fetch(request);
+  if (response?.ok) await cache.put(request, response.clone());
+  return response;
 }
 
 self.addEventListener("fetch", event => {
-  const req = event.request;
-  if (req.method !== "GET") return;
-  const url = new URL(req.url);
+  const request = event.request;
+  if (request.method !== "GET") return;
+  const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
-  const rel = relativePath(url);
-  if (!rel || !shouldCache(rel)) return;
+  const relative = relativePath(url);
+  if (relative == null) return;
 
-  event.respondWith(
-    caches.open(CACHE).then(async cache => {
-      const cached = await cache.match(req);
-      const network = fetch(req)
-        .then(response => {
-          if (response && response.ok) cache.put(req, response.clone());
-          return response;
-        })
-        .catch(() => cached);
-
-      if (cacheFirst(rel)) return cached || network;
-
-      // Network-first for search code/indexes/question banks. Offline use still
-      // falls back to the last good cached copy, while online/deployed use gets
-      // the current answer data and ranking logic immediately.
-      try {
-        return await network;
-      } catch (_) {
-        return cached;
-      }
-    })
-  );
+  if (request.mode === "navigate") {
+    event.respondWith(networkFirst(request, new Request(new URL("./index.html", self.registration.scope))));
+    return;
+  }
+  if (criticalPaths.has(relative)) {
+    event.respondWith(networkFirst(request));
+    return;
+  }
+  if (optionalPaths.has(relative)) event.respondWith(cacheFirst(request));
 });

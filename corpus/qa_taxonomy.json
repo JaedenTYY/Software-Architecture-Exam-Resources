@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "course": "CSC3209 Software Architecture and Design Patterns",
+  "top_level_quality_attributes": [
+    "Availability",
+    "Interoperability",
+    "Modifiability",
+    "Performance",
+    "Security",
+    "Testability",
+    "Usability"
+  ],
+  "non_top_level_terms": {
+    "centralized control": "architectural mechanism or structural property",
+    "scalability": "quality concern outside the seven-category exam answer set",
+    "flexibility": "broad quality/property; use the course category justified by the scenario",
+    "maintainability": "related term; use Modifiability for the course top-level category",
+    "reliability": "broad quality/property; do not substitute it for Availability without a service-continuity scenario",
+    "fault tolerance": "availability concern or mechanism",
+    "throughput": "Performance response measure/detail",
+    "latency": "Performance response measure/detail",
+    "consistency": "data/coordination property, not one of the seven top-level categories",
+    "complexity": "cost or weakness, not one of the seven top-level categories",
+    "reuse": "architectural benefit, not one of the seven top-level categories"
+  },
+  "source_notes": [
+    {
+      "source": "Learning Materials/Lecture4_ArchitecturalPatterns_7_CCPatterns_Client-Server.pdf",
+      "claim": "Client-Server factors common services into one or a small number of locations to promote Modifiability and reuse; centralized control is the mechanism, not a top-level QA. Availability additionally depends on distributing resources across physical servers."
+    },
+    {
+      "source": "Learning Materials/Lecture4_ArchitecturalPatterns_12_AllocationPatterns_Map-Reduce.pdf",
+      "claim": "Map-Reduce parallelism targets Performance; framework overhead and partition imbalance can erase that Performance benefit."
+    },
+    {
+      "source": "Learning Materials/Lecture4_ArchitecturalPatterns_13_AllocationPatterns_Multi-Tier.pdf",
+      "claim": "Multi-Tier can support Security, Performance, Availability and Modifiability; its stated weakness is cost and complexity, which must be labelled as a weakness rather than a top-level QA."
+    }
+  ]
+}

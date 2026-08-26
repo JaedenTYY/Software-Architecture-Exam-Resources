@@ -1,0 +1,1973 @@
+{
+  "schemaVersion": 1,
+  "benchmarkCases": 35,
+  "papers": [
+    "January 2024",
+    "August 2024",
+    "January 2025",
+    "August 2025",
+    "January 2026"
+  ],
+  "forms": [
+    "full_context",
+    "isolated_requirement"
+  ],
+  "predictorMode": "hybrid",
+  "vectorSearchEnabled": true,
+  "metrics": {
+    "cases": 70,
+    "winnerAccuracy": 1,
+    "fullContextAccuracy": 1,
+    "isolatedAccuracy": 1,
+    "highConfidenceAccuracy": 1,
+    "mediumConfidenceAccuracy": 1,
+    "abstentionRate": 0.02857142857142857,
+    "falseAbstentionRate": 0,
+    "ambiguityCorrectness": 1,
+    "noEvidenceCorrectness": null,
+    "highConfidenceWrong": 0,
+    "top1RetrievalAccuracy": 0.9714285714285714,
+    "top5RetrievalCoverage": 1,
+    "relevantReferenceTop10": 0.7285714285714285,
+    "meanSearchMs": 278.4021386999999
+  },
+  "modeComparison": {
+    "exact": {
+      "top1": 0.7571428571428571,
+      "top5": 0.9714285714285714,
+      "referenceTop10": 0.8142857142857143,
+      "meanSearchMs": 231.31057024285832
+    },
+    "hybrid": {
+      "top1": 0.9714285714285714,
+      "top5": 1,
+      "referenceTop10": 0.7285714285714285,
+      "meanSearchMs": 278.4021386999999
+    },
+    "semantic": {
+      "top1": 0.9428571428571428,
+      "top5": 1,
+      "referenceTop10": 0.5714285714285714,
+      "meanSearchMs": 275.7100101285711
+    }
+  },
+  "failures": [],
+  "results": [
+    {
+      "id": "JAN24-Q1-R1",
+      "paper": "January 2024",
+      "question": "Q1(a), first requirement",
+      "form": "full_context",
+      "query": "Video game digital distribution services have gamers and publishers. Gamers want to be notified whenever a new game is available that matches the gamers' preference. Present a suitable architectural pattern with detailed justification.",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9688912523708428,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 278.593625,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Architectural/system-level event distribution; Observer is requested separately at implementation level in Q4."
+    },
+    {
+      "id": "JAN24-Q1-R1",
+      "paper": "January 2024",
+      "question": "Q1(a), first requirement",
+      "form": "isolated_requirement",
+      "query": "Gamers want to be notified whenever a new game is available that matches their preference. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9575577960699464,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 227.73525000000018,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Architectural/system-level event distribution; Observer is requested separately at implementation level in Q4."
+    },
+    {
+      "id": "JAN24-Q1-R2",
+      "paper": "January 2024",
+      "question": "Q1(a), second requirement",
+      "form": "full_context",
+      "query": "In a video game digital distribution system, gamers can communicate and chat among each other. Present a suitable architectural pattern with detailed justification.",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "ambiguous",
+      "state": "ambiguous",
+      "acceptedAnswers": [
+        "Peer-to-Peer",
+        "Client-Server"
+      ],
+      "mustNotAnswer": [],
+      "winner": null,
+      "confidence": null,
+      "confidenceScore": null,
+      "correctWinner": false,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 183.2311249999998,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "The repository model answer prefers P2P only under a direct/equal-peer interpretation and explicitly says centralized Client-Server chat is also possible. The paper does not state the decisive interaction mechanism."
+    },
+    {
+      "id": "JAN24-Q1-R2",
+      "paper": "January 2024",
+      "question": "Q1(a), second requirement",
+      "form": "isolated_requirement",
+      "query": "Gamers can communicate and chat among each other. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "ambiguous",
+      "state": "ambiguous",
+      "acceptedAnswers": [
+        "Peer-to-Peer",
+        "Client-Server"
+      ],
+      "mustNotAnswer": [],
+      "winner": null,
+      "confidence": null,
+      "confidenceScore": null,
+      "correctWinner": false,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 169.77812500000027,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "The repository model answer prefers P2P only under a direct/equal-peer interpretation and explicitly says centralized Client-Server chat is also possible. The paper does not state the decisive interaction mechanism."
+    },
+    {
+      "id": "JAN24-Q1-R3",
+      "paper": "January 2024",
+      "question": "Q1(a), third requirement",
+      "form": "full_context",
+      "query": "A video game store must allow gamers to store and check gaming progress and achievements through an online profile even if they change the PC they use. Present a suitable architectural pattern with detailed justification.",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.9517133379012954,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 237.1085409999996,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Distributed clients request centrally managed profile state."
+    },
+    {
+      "id": "JAN24-Q1-R3",
+      "paper": "January 2024",
+      "question": "Q1(a), third requirement",
+      "form": "isolated_requirement",
+      "query": "Store and retrieve a gamer's authoritative online progress from different PCs. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.9687023630409854,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 5,
+      "searchMs": 186.98325000000023,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Distributed clients request centrally managed profile state."
+    },
+    {
+      "id": "JAN24-Q2-G1",
+      "paper": "January 2024",
+      "question": "Q2(a), gamer scenario G1",
+      "form": "full_context",
+      "query": "During peak usage, a gamer submits a game-search request. The catalogue returns matching games, and 95 percent of searches must complete within 2 seconds. What top-level quality attribute does this scenario specify?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Performance"
+      ],
+      "mustNotAnswer": [
+        "Latency",
+        "Throughput"
+      ],
+      "winner": "Performance",
+      "confidence": "High",
+      "confidenceScore": 0.9668431370201502,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 543.5719999999992,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Latency is a response measure/detail under Performance."
+    },
+    {
+      "id": "JAN24-Q2-G1",
+      "paper": "January 2024",
+      "question": "Q2(a), gamer scenario G1",
+      "form": "isolated_requirement",
+      "query": "95 percent of game searches complete within 2 seconds. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Performance"
+      ],
+      "mustNotAnswer": [
+        "Latency",
+        "Throughput"
+      ],
+      "winner": "Performance",
+      "confidence": "High",
+      "confidenceScore": 0.9683936541966547,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 39,
+      "searchMs": 390.78200000000106,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Latency is a response measure/detail under Performance."
+    },
+    {
+      "id": "JAN24-Q2-G2",
+      "paper": "January 2024",
+      "question": "Q2(a), gamer scenario G2",
+      "form": "full_context",
+      "query": "While a gamer is viewing the store, one application server instance crashes. Traffic is redirected to a healthy instance within 5 seconds and the session continues. What top-level quality attribute is addressed?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Fault",
+        "Failure",
+        "Recovery"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.8918779898381408,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 337.1663750000007,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Fault, failover and recovery are details/mechanisms; Availability is the course category."
+    },
+    {
+      "id": "JAN24-Q2-G2",
+      "paper": "January 2024",
+      "question": "Q2(a), gamer scenario G2",
+      "form": "isolated_requirement",
+      "query": "One instance crashes, traffic redirects, and service continues. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Fault",
+        "Failure",
+        "Recovery"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.8820700306212608,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 32,
+      "searchMs": 217.1122919999998,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "Fault, failover and recovery are details/mechanisms; Availability is the course category."
+    },
+    {
+      "id": "JAN24-Q3-SOA",
+      "paper": "January 2024",
+      "question": "Q3(a)",
+      "form": "full_context",
+      "query": "The game platform must consume independently managed payment, identity or recommendation services over a network through published interfaces without depending on provider internals. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Broker",
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9464041412198596,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 5,
+      "searchMs": 270.4779579999995,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "The decisive issue is independently managed service providers and published contracts."
+    },
+    {
+      "id": "JAN24-Q3-SOA",
+      "paper": "January 2024",
+      "question": "Q3(a)",
+      "form": "isolated_requirement",
+      "query": "Independent network services cooperate through published service contracts. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Broker",
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9783667471130013,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 7,
+      "searchMs": 215.6604580000003,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "The decisive issue is independently managed service providers and published contracts."
+    },
+    {
+      "id": "JAN24-Q4-B",
+      "paper": "January 2024",
+      "question": "Q4(b)",
+      "form": "full_context",
+      "query": "At implementation level, a game catalogue Subject must automatically notify a variable set of registered dependent notification objects when a matching new game is added. Which design pattern should be used?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9780074678384696,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 3,
+      "searchMs": 300.1057919999985,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "The paper explicitly asks for an implementation-level design pattern."
+    },
+    {
+      "id": "JAN24-Q4-B",
+      "paper": "January 2024",
+      "question": "Q4(b)",
+      "form": "isolated_requirement",
+      "query": "A Subject automatically updates registered dependent objects when its state changes. Which design pattern?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9656788410806245,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 5,
+      "searchMs": 216.22429199999897,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2024_Answers.md",
+      "notes": "The paper explicitly asks for an implementation-level design pattern."
+    },
+    {
+      "id": "AUG24-Q1-R1",
+      "paper": "August 2024",
+      "question": "Q1(a), first requirement",
+      "form": "full_context",
+      "query": "A utilities management application must notify users whenever electricity consumption exceeds a specific threshold. Present a suitable architectural pattern with detailed justification.",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.971869822559319,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 2,
+      "searchMs": 205.46099999999933,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Architectural/system-level event distribution."
+    },
+    {
+      "id": "AUG24-Q1-R1",
+      "paper": "August 2024",
+      "question": "Q1(a), first requirement",
+      "form": "isolated_requirement",
+      "query": "Notify interested users when electricity consumption crosses a threshold. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9636902018612825,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 6,
+      "searchMs": 195.4188749999994,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Architectural/system-level event distribution."
+    },
+    {
+      "id": "AUG24-Q1-R2",
+      "paper": "August 2024",
+      "question": "Q1(a), second requirement",
+      "form": "full_context",
+      "query": "Users of a utilities application can pay bills through independently offered online banking and credit-card payment services. Present a suitable architectural pattern with detailed justification.",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9465534662881103,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 2,
+      "searchMs": 205.13145799999984,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "External service-provider interoperability is decisive."
+    },
+    {
+      "id": "AUG24-Q1-R2",
+      "paper": "August 2024",
+      "question": "Q1(a), second requirement",
+      "form": "isolated_requirement",
+      "query": "Integrate independently managed online banking services through published network interfaces. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9597816176172558,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 54,
+      "searchMs": 191.01929100000052,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "External service-provider interoperability is decisive."
+    },
+    {
+      "id": "AUG24-Q1-R3",
+      "paper": "August 2024",
+      "question": "Q1(a), third requirement",
+      "form": "full_context",
+      "query": "A utilities app must allow users to store and track electricity usage and bill payments online via the Internet. Distributed clients request centrally managed account records. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.9780950201544742,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 4,
+      "searchMs": 338.64816599999904,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Client-initiated access to an authoritative online service."
+    },
+    {
+      "id": "AUG24-Q1-R3",
+      "paper": "August 2024",
+      "question": "Q1(a), third requirement",
+      "form": "isolated_requirement",
+      "query": "Clients store and retrieve centrally managed utility records through request/reply over the Internet. Which pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.9704191989637112,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 3,
+      "searchMs": 239.0414579999997,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Client-initiated access to an authoritative online service."
+    },
+    {
+      "id": "AUG24-Q2-U2",
+      "paper": "August 2024",
+      "question": "Q2(a), scenario U2",
+      "form": "full_context",
+      "query": "Under peak monthly-billing load, a utility customer requests usage history and 95 percent of requests must complete within 2 seconds. What top-level quality attribute is specified?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Performance"
+      ],
+      "mustNotAnswer": [
+        "Latency",
+        "Throughput"
+      ],
+      "winner": "Performance",
+      "confidence": "High",
+      "confidenceScore": 0.9639846622099151,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 495.93562499999825,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Response time is a Performance measure."
+    },
+    {
+      "id": "AUG24-Q2-U2",
+      "paper": "August 2024",
+      "question": "Q2(a), scenario U2",
+      "form": "isolated_requirement",
+      "query": "95 percent of usage-history requests finish within 2 seconds. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Performance"
+      ],
+      "mustNotAnswer": [
+        "Latency",
+        "Throughput"
+      ],
+      "winner": "Performance",
+      "confidence": "High",
+      "confidenceScore": 0.9628878613547132,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 115,
+      "searchMs": 377.61920800000007,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Response time is a Performance measure."
+    },
+    {
+      "id": "AUG24-Q3-P2P",
+      "paper": "August 2024",
+      "question": "Q3(a)",
+      "form": "full_context",
+      "query": "User devices or smart-energy gateways share anonymized local outage information. Each participant can initiate a request and provide its own locally observed information to others. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Peer-to-Peer"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Peer-to-Peer",
+      "confidence": "High",
+      "confidenceScore": 0.9641248808730642,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 316.1442080000015,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Symmetric request/provide roles are explicit."
+    },
+    {
+      "id": "AUG24-Q3-P2P",
+      "paper": "August 2024",
+      "question": "Q3(a)",
+      "form": "isolated_requirement",
+      "query": "Each distributed participant requests information and provides its own resources as an equal. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Peer-to-Peer"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Peer-to-Peer",
+      "confidence": "High",
+      "confidenceScore": 0.9699431366391591,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 7,
+      "searchMs": 288.77300000000105,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Symmetric request/provide roles are explicit."
+    },
+    {
+      "id": "AUG24-Q3-C",
+      "paper": "August 2024",
+      "question": "Q3(c)",
+      "form": "full_context",
+      "query": "Several peers hold overlapping outage information. If one peer leaves or fails, a request can be redirected to another peer and useful service continues. Which top-level quality attribute may be enhanced?",
+      "expectedIntent": "quality-enhanced",
+      "inferredIntent": "quality-enhanced",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Scalability",
+        "Fault Tolerance"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.982,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 371.8169999999991,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Availability is the valid top-level course answer; overlapping resources are the precondition."
+    },
+    {
+      "id": "AUG24-Q3-C",
+      "paper": "August 2024",
+      "question": "Q3(c)",
+      "form": "isolated_requirement",
+      "query": "Another peer can continue providing an overlapping resource after one peer fails. Which top-level quality attribute?",
+      "expectedIntent": "quality-enhanced",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Scalability",
+        "Fault Tolerance"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.9263174073304776,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 2,
+      "referenceRank": 2,
+      "searchMs": 221.4561250000006,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Availability is the valid top-level course answer; overlapping resources are the precondition."
+    },
+    {
+      "id": "AUG24-Q4-C",
+      "paper": "August 2024",
+      "question": "Q4(c)",
+      "form": "full_context",
+      "query": "At implementation level, an electricity-consumption Subject must notify registered UI and notification objects when its state crosses a configured threshold. Which design pattern fits?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9514942327388762,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 315.56012499999997,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Implementation-level one-to-many object notification."
+    },
+    {
+      "id": "AUG24-Q4-C",
+      "paper": "August 2024",
+      "question": "Q4(c)",
+      "form": "isolated_requirement",
+      "query": "One object changes state and automatically notifies a variable set of dependent objects. Which design pattern?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9643517019545644,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 266.66416599999866,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2024_Answers.md",
+      "notes": "Implementation-level one-to-many object notification."
+    },
+    {
+      "id": "JAN25-Q1-R1",
+      "paper": "January 2025",
+      "question": "Q1(a), first requirement",
+      "form": "full_context",
+      "query": "An online trading platform displays the same real-time stock-price data through line charts, bar charts and other user-interface views. User input such as zooming must be handled while core application logic remains separate. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "MVC"
+      ],
+      "mustNotAnswer": [
+        "Layer",
+        "Observer"
+      ],
+      "winner": "MVC",
+      "confidence": "High",
+      "confidenceScore": 0.9658577364892913,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 334.3829579999983,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Model/View/Controller roles are explicit."
+    },
+    {
+      "id": "JAN25-Q1-R1",
+      "paper": "January 2025",
+      "question": "Q1(a), first requirement",
+      "form": "isolated_requirement",
+      "query": "Multiple synchronized Views show the same Model while Controllers handle user input. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "MVC"
+      ],
+      "mustNotAnswer": [
+        "Layer",
+        "Observer"
+      ],
+      "winner": "MVC",
+      "confidence": "High",
+      "confidenceScore": 0.980583583077191,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 5,
+      "searchMs": 225.43495800000164,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Model/View/Controller roles are explicit."
+    },
+    {
+      "id": "JAN25-Q1-R2",
+      "paper": "January 2025",
+      "question": "Q1(a), second requirement",
+      "form": "full_context",
+      "query": "Users of an online trading platform want to be notified whenever a watched stock price reaches a specific target value so they can buy or sell. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9754017976690985,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 266.4881249999962,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "System-level event notification."
+    },
+    {
+      "id": "JAN25-Q1-R2",
+      "paper": "January 2025",
+      "question": "Q1(a), second requirement",
+      "form": "isolated_requirement",
+      "query": "Push an event to interested users whenever a watched stock reaches a target. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9795118852266476,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 9,
+      "searchMs": 199.0060420000009,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "System-level event notification."
+    },
+    {
+      "id": "JAN25-Q1-R3",
+      "paper": "January 2025",
+      "question": "Q1(a), third requirement",
+      "form": "full_context",
+      "query": "An online trading platform lets users buy stock through independently managed PayPal, banking and credit-card payment services. Which architectural pattern addresses this integration requirement?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9251536794837036,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 91,
+      "searchMs": 255.75391700000182,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "External provider interoperability."
+    },
+    {
+      "id": "JAN25-Q1-R3",
+      "paper": "January 2025",
+      "question": "Q1(a), third requirement",
+      "form": "isolated_requirement",
+      "query": "Consume external payment services through published contracts despite independent technologies. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9781874403210171,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 54,
+      "searchMs": 238.19891700000153,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "External provider interoperability."
+    },
+    {
+      "id": "JAN25-Q2-T2",
+      "paper": "January 2025",
+      "question": "Q2(a), scenario T2",
+      "form": "full_context",
+      "query": "An application-server instance fails during trading. Traffic is redirected to a healthy instance within 5 seconds and service continues with no more than one failed request. What top-level quality attribute is addressed?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Recovery",
+        "Failure"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.918294161115335,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 2,
+      "referenceRank": 12,
+      "searchMs": 343.3654999999999,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Service continuity under fault."
+    },
+    {
+      "id": "JAN25-Q2-T2",
+      "paper": "January 2025",
+      "question": "Q2(a), scenario T2",
+      "form": "isolated_requirement",
+      "query": "A server fails, traffic redirects, and trading service continues. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Recovery",
+        "Failure"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.8804902682320683,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 209,
+      "searchMs": 234.0318749999933,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Service continuity under fault."
+    },
+    {
+      "id": "JAN25-Q2-T3",
+      "paper": "January 2025",
+      "question": "Q2(a), scenario T3",
+      "form": "full_context",
+      "query": "An unauthorized attacker attempts a protected trading operation. The system rejects the operation and records an audit event; all unauthorized operations must be rejected and logged. What top-level quality attribute is addressed?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Security"
+      ],
+      "mustNotAnswer": [
+        "Authorization",
+        "Authentication"
+      ],
+      "winner": "Security",
+      "confidence": "High",
+      "confidenceScore": 0.9518062694284519,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 47,
+      "searchMs": 343.09679199999664,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Authorization is a Security concept, not the top-level QA answer."
+    },
+    {
+      "id": "JAN25-Q2-T3",
+      "paper": "January 2025",
+      "question": "Q2(a), scenario T3",
+      "form": "isolated_requirement",
+      "query": "Reject and log every unauthorized trading operation. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Security"
+      ],
+      "mustNotAnswer": [
+        "Authorization",
+        "Authentication"
+      ],
+      "winner": "Security",
+      "confidence": "High",
+      "confidenceScore": 0.9343309899727923,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 260,
+      "searchMs": 218.5102079999997,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Authorization is a Security concept, not the top-level QA answer."
+    },
+    {
+      "id": "JAN25-Q3",
+      "paper": "January 2025",
+      "question": "Q3",
+      "form": "full_context",
+      "query": "A financial-data stream is transformed successively by independent Parse, Validate, Normalize and Enrich stages. Each stage consumes data, transforms it and forwards output through a connector. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Pipe-and-Filter"
+      ],
+      "mustNotAnswer": [
+        "Map-Reduce"
+      ],
+      "winner": "Pipe-and-Filter",
+      "confidence": "High",
+      "confidenceScore": 0.9815990533180834,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 414.877708,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Staged stream transformation, not partitioned batch processing."
+    },
+    {
+      "id": "JAN25-Q3",
+      "paper": "January 2025",
+      "question": "Q3",
+      "form": "isolated_requirement",
+      "query": "Successive independent transformations of a data stream through filters and pipes. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Pipe-and-Filter"
+      ],
+      "mustNotAnswer": [
+        "Map-Reduce"
+      ],
+      "winner": "Pipe-and-Filter",
+      "confidence": "High",
+      "confidenceScore": 0.9832760684205557,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 5,
+      "searchMs": 195.1573750000025,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Staged stream transformation, not partitioned batch processing."
+    },
+    {
+      "id": "JAN25-Q4-C",
+      "paper": "January 2025",
+      "question": "Q4(c)",
+      "form": "full_context",
+      "query": "At implementation level, airline-promotion objects must notify dependent UI or notification objects automatically when a relevant promotion is added or changes state. Which design pattern fits?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9659264798864176,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 6,
+      "searchMs": 362.2218750000029,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Implementation-level one-to-many notification."
+    },
+    {
+      "id": "JAN25-Q4-C",
+      "paper": "January 2025",
+      "question": "Q4(c)",
+      "form": "isolated_requirement",
+      "query": "Dependent objects react automatically when a Subject's promotion state changes. Which design pattern?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9671117100085429,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 30,
+      "searchMs": 219.76050000000396,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2025_Answers.md",
+      "notes": "Implementation-level one-to-many notification."
+    },
+    {
+      "id": "AUG25-Q1-R1",
+      "paper": "August 2025",
+      "question": "Q1(a), first requirement",
+      "form": "full_context",
+      "query": "A healthcare insurance system shows a panel clinic location using an independently managed Google Maps capability inside the system through its published network API. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Broker",
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9515695574625014,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 247.95691700000316,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "External provider integration/interoperability."
+    },
+    {
+      "id": "AUG25-Q1-R1",
+      "paper": "August 2025",
+      "question": "Q1(a), first requirement",
+      "form": "isolated_requirement",
+      "query": "Consume an external mapping provider through a published network interface. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Broker",
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9578667551163706,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 5,
+      "searchMs": 201.1679159999985,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "External provider integration/interoperability."
+    },
+    {
+      "id": "AUG25-Q1-R2",
+      "paper": "August 2025",
+      "question": "Q1(a), second requirement",
+      "form": "full_context",
+      "query": "A healthcare insurance system lets web and mobile clients store and track insurance balances and claim details via the Internet. A centralized claims service maintains authoritative state and responds to requests. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.9791188993677791,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 379.45745799999713,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Asymmetric request/reply with a central service."
+    },
+    {
+      "id": "AUG25-Q1-R2",
+      "paper": "August 2025",
+      "question": "Q1(a), second requirement",
+      "form": "isolated_requirement",
+      "query": "Distributed clients request centrally managed insurance account records. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.977113955474104,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 224.71341699999903,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Asymmetric request/reply with a central service."
+    },
+    {
+      "id": "AUG25-Q1-R3",
+      "paper": "August 2025",
+      "question": "Q1(a), third requirement",
+      "form": "full_context",
+      "query": "Users of a healthcare insurance system must be notified whenever a claim is approved or a new promotion becomes available. Interested channels receive events when the claims or promotion state changes. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9829399935241561,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 387.15054200000304,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Architectural event distribution."
+    },
+    {
+      "id": "AUG25-Q1-R3",
+      "paper": "August 2025",
+      "question": "Q1(a), third requirement",
+      "form": "isolated_requirement",
+      "query": "Push notifications to changing recipients whenever a claim is approved. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9892000000000001,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 201,
+      "searchMs": 201.43516700000328,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Architectural event distribution."
+    },
+    {
+      "id": "AUG25-Q2-H1",
+      "paper": "August 2025",
+      "question": "Q2(a), scenario H1",
+      "form": "full_context",
+      "query": "A claims-service instance fails during normal operation. The insurance system redirects traffic to a healthy instance and keeps claims access available within 5 seconds. What top-level quality attribute is addressed?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Fault Tolerance",
+        "Recovery"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.9251482369106359,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 113,
+      "searchMs": 317.85050000000047,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Availability is the course category."
+    },
+    {
+      "id": "AUG25-Q2-H1",
+      "paper": "August 2025",
+      "question": "Q2(a), scenario H1",
+      "form": "isolated_requirement",
+      "query": "Claims access continues after one service instance fails. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Fault Tolerance",
+        "Recovery"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.8947851385442325,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 178,
+      "searchMs": 223.2345420000056,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Availability is the course category."
+    },
+    {
+      "id": "AUG25-Q2-H4",
+      "paper": "August 2025",
+      "question": "Q2(a), scenario H4",
+      "form": "full_context",
+      "query": "A first-time insurance user attempts to submit a claim. The interface guides the user through the task, and 90 percent must complete it within 5 minutes without assistance. What top-level quality attribute is addressed?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Usability"
+      ],
+      "mustNotAnswer": [
+        "Performance"
+      ],
+      "winner": "Usability",
+      "confidence": "High",
+      "confidenceScore": 0.9331579529856093,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 101,
+      "searchMs": 341.07795899999473,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "The measure is user task success/learnability, not system response time."
+    },
+    {
+      "id": "AUG25-Q2-H4",
+      "paper": "August 2025",
+      "question": "Q2(a), scenario H4",
+      "form": "isolated_requirement",
+      "query": "A first-time user completes a claim task quickly without assistance. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Usability"
+      ],
+      "mustNotAnswer": [
+        "Performance"
+      ],
+      "winner": "Usability",
+      "confidence": "High",
+      "confidenceScore": 0.9094875211181555,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 283,
+      "searchMs": 238.95612499999697,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "The measure is user task success/learnability, not system response time."
+    },
+    {
+      "id": "AUG25-Q3",
+      "paper": "August 2025",
+      "question": "Q3",
+      "form": "full_context",
+      "query": "An insurance claims application separates domain state and logic into a Model, presentation into multiple Views, and user-input mediation into Controllers. Views remain synchronized when the Model changes. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "MVC"
+      ],
+      "mustNotAnswer": [
+        "Layer",
+        "Observer"
+      ],
+      "winner": "MVC",
+      "confidence": "High",
+      "confidenceScore": 0.9806730147897715,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 5,
+      "searchMs": 323.9555839999957,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "The three MVC roles are explicit."
+    },
+    {
+      "id": "AUG25-Q3",
+      "paper": "August 2025",
+      "question": "Q3",
+      "form": "isolated_requirement",
+      "query": "Model, View and Controller separate UI from application functionality. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "MVC"
+      ],
+      "mustNotAnswer": [
+        "Layer",
+        "Observer"
+      ],
+      "winner": "MVC",
+      "confidence": "High",
+      "confidenceScore": 0.9788878802303869,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 3,
+      "searchMs": 218.24145800000406,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "The three MVC roles are explicit."
+    },
+    {
+      "id": "AUG25-Q5-B",
+      "paper": "August 2025",
+      "question": "Q5(b)",
+      "form": "full_context",
+      "query": "At implementation level, a claim-status Subject must notify registered notification and UI objects when a claim becomes approved. Which design pattern should be used?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9709811686107037,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 269.6366249999992,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Object-level notification."
+    },
+    {
+      "id": "AUG25-Q5-B",
+      "paper": "August 2025",
+      "question": "Q5(b)",
+      "form": "isolated_requirement",
+      "query": "A Subject notifies registered dependent objects after its state changes. Which design pattern?",
+      "expectedIntent": "design-pattern",
+      "inferredIntent": "design-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Observer"
+      ],
+      "mustNotAnswer": [
+        "Publish-Subscribe"
+      ],
+      "winner": "Observer",
+      "confidence": "High",
+      "confidenceScore": 0.9653155811295462,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 2,
+      "searchMs": 215.00291700000525,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_August_2025_Answers.md",
+      "notes": "Object-level notification."
+    },
+    {
+      "id": "JAN26-Q2-R1",
+      "paper": "January 2026",
+      "question": "Q2(a), first requirement",
+      "form": "full_context",
+      "query": "Users of an HPC platform want to be notified whenever a submitted task or workflow process has completed. The job subsystem emits a completion event to interested notification components. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "Medium",
+      "confidenceScore": 0.894,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 305.3341250000012,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "System-level completion events."
+    },
+    {
+      "id": "JAN26-Q2-R1",
+      "paper": "January 2026",
+      "question": "Q2(a), first requirement",
+      "form": "isolated_requirement",
+      "query": "Notify interested users whenever a submitted workflow completes. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Publish-Subscribe"
+      ],
+      "mustNotAnswer": [
+        "Observer"
+      ],
+      "winner": "Publish-Subscribe",
+      "confidence": "High",
+      "confidenceScore": 0.9892000000000001,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 176.24345899999753,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "System-level completion events."
+    },
+    {
+      "id": "JAN26-Q2-R2",
+      "paper": "January 2026",
+      "question": "Q2(a), second requirement",
+      "form": "full_context",
+      "query": "An HPC platform allows Internet users to store and track submitted tasks and processed data. Browser clients request status and data from a centralized job-management service that maintains authoritative records. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.9793323546277286,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 332.20404200000485,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Asymmetric request/reply."
+    },
+    {
+      "id": "JAN26-Q2-R2",
+      "paper": "January 2026",
+      "question": "Q2(a), second requirement",
+      "form": "isolated_requirement",
+      "query": "Clients request centrally managed job and processed-data records over the Internet. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Client-Server"
+      ],
+      "mustNotAnswer": [
+        "Shared-Data"
+      ],
+      "winner": "Client-Server",
+      "confidence": "High",
+      "confidenceScore": 0.9796348627439466,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 3,
+      "searchMs": 242.2890419999967,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Asymmetric request/reply."
+    },
+    {
+      "id": "JAN26-Q2-R3",
+      "paper": "January 2026",
+      "question": "Q2(a), third requirement",
+      "form": "full_context",
+      "query": "An HPC platform lets users pay fees or join plans for more computational power by consuming independently managed payment and billing capabilities through published network service interfaces. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9634926988929875,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 310.39287499999045,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "External service-provider interoperability."
+    },
+    {
+      "id": "JAN26-Q2-R3",
+      "paper": "January 2026",
+      "question": "Q2(a), third requirement",
+      "form": "isolated_requirement",
+      "query": "Integrate external payment providers through published service contracts. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Service-Oriented Architecture"
+      ],
+      "mustNotAnswer": [
+        "Client-Server"
+      ],
+      "winner": "Service-Oriented Architecture",
+      "confidence": "High",
+      "confidenceScore": 0.9794499394727669,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 52,
+      "searchMs": 226.55520800000522,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "External service-provider interoperability."
+    },
+    {
+      "id": "JAN26-Q1-HPC1",
+      "paper": "January 2026",
+      "question": "Q1(a), scenario HPC1",
+      "form": "full_context",
+      "query": "At peak platform load, an HPC user requests job status and 95 percent of interactive job-management requests must complete within 2 seconds. What top-level quality attribute is specified?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Performance"
+      ],
+      "mustNotAnswer": [
+        "Latency",
+        "Throughput"
+      ],
+      "winner": "Performance",
+      "confidence": "High",
+      "confidenceScore": 0.967723550176508,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 492.7196249999979,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Latency is the measure; Performance is the top-level category."
+    },
+    {
+      "id": "JAN26-Q1-HPC1",
+      "paper": "January 2026",
+      "question": "Q1(a), scenario HPC1",
+      "form": "isolated_requirement",
+      "query": "95 percent of job-status requests complete within 2 seconds. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Performance"
+      ],
+      "mustNotAnswer": [
+        "Latency",
+        "Throughput"
+      ],
+      "winner": "Performance",
+      "confidence": "High",
+      "confidenceScore": 0.9643065249888219,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 78,
+      "searchMs": 377.25645899999654,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Latency is the measure; Performance is the top-level category."
+    },
+    {
+      "id": "JAN26-Q1-HPC2",
+      "paper": "January 2026",
+      "question": "Q1(a), scenario HPC2",
+      "form": "full_context",
+      "query": "A compute or service node fails while HPC jobs run. The platform detects the failure, reschedules affected work to a healthy node and keeps the service accessible. What top-level quality attribute is addressed?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Recovery",
+        "Fault Tolerance"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.7908150974694603,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 353.81570799999463,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Recovery is a mechanism/detail under Availability."
+    },
+    {
+      "id": "JAN26-Q1-HPC2",
+      "paper": "January 2026",
+      "question": "Q1(a), scenario HPC2",
+      "form": "isolated_requirement",
+      "query": "A failed compute node is detected and work restarts elsewhere while service remains accessible. What top-level quality attribute?",
+      "expectedIntent": "quality",
+      "inferredIntent": "quality",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Availability"
+      ],
+      "mustNotAnswer": [
+        "Recovery",
+        "Fault Tolerance"
+      ],
+      "winner": "Availability",
+      "confidence": "High",
+      "confidenceScore": 0.9488884357631446,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 50,
+      "searchMs": 257.27004200000374,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Recovery is a mechanism/detail under Availability."
+    },
+    {
+      "id": "JAN26-Q3",
+      "paper": "January 2026",
+      "question": "Q3",
+      "form": "full_context",
+      "query": "An online retailer analyzes billions of historical transaction records. The input is partitioned across parallel Map tasks, intermediate key/value data is shuffled and sorted, and Reduce tasks calculate totals. Which architectural pattern fits?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Map-Reduce"
+      ],
+      "mustNotAnswer": [
+        "Pipe-and-Filter"
+      ],
+      "winner": "Map-Reduce",
+      "confidence": "High",
+      "confidenceScore": 0.9824628202000552,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 289.87879099999554,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Partitioned parallel batch processing."
+    },
+    {
+      "id": "JAN26-Q3",
+      "paper": "January 2026",
+      "question": "Q3",
+      "form": "isolated_requirement",
+      "query": "Large batch data is partitioned into Map tasks, shuffled/sorted and combined by Reduce tasks. Which architectural pattern?",
+      "expectedIntent": "architectural-pattern",
+      "inferredIntent": "architectural-pattern",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "Map-Reduce"
+      ],
+      "mustNotAnswer": [
+        "Pipe-and-Filter"
+      ],
+      "winner": "Map-Reduce",
+      "confidence": "High",
+      "confidenceScore": 0.9842129238207515,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 206.5604170000006,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "Partitioned parallel batch processing."
+    },
+    {
+      "id": "JAN26-Q4-C",
+      "paper": "January 2026",
+      "question": "Q4(c)",
+      "form": "full_context",
+      "query": "Architectural documentation for the Map-Reduce scenario must explain the main diagram, define the elements and relations, show the system context, and document allowed variation. What documentation concept contains these sections?",
+      "expectedIntent": "documentation",
+      "inferredIntent": "documentation",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "View Documentation"
+      ],
+      "mustNotAnswer": [
+        "Architecture Notation"
+      ],
+      "winner": "View Documentation",
+      "confidence": "Medium",
+      "confidenceScore": 0.7172340652512075,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 1,
+      "searchMs": 288.0922920000012,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "These are the core view-template sections."
+    },
+    {
+      "id": "JAN26-Q4-C",
+      "paper": "January 2026",
+      "question": "Q4(c)",
+      "form": "isolated_requirement",
+      "query": "Primary Presentation, Element Catalog, Context Diagram and Variability Guide. What architecture documentation concept?",
+      "expectedIntent": "documentation",
+      "inferredIntent": "documentation",
+      "expectedState": "answer",
+      "state": "answer",
+      "acceptedAnswers": [
+        "View Documentation"
+      ],
+      "mustNotAnswer": [
+        "Architecture Notation"
+      ],
+      "winner": "View Documentation",
+      "confidence": "High",
+      "confidenceScore": 0.9109464357252506,
+      "correctWinner": true,
+      "correctState": true,
+      "supportingRank": 1,
+      "referenceRank": 3,
+      "searchMs": 186.19295900000725,
+      "source": "Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Exam.md; Learning Materials/Past Year Exam Papers/CSC3209_January_2026_Answers.md",
+      "notes": "These are the core view-template sections."
+    }
+  ]
+}

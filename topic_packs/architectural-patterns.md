@@ -39,7 +39,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -147,7 +147,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -255,7 +255,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -363,7 +363,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -471,7 +471,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -579,7 +579,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -687,7 +687,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -795,7 +795,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -903,7 +903,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1011,7 +1011,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1119,7 +1119,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1227,7 +1227,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1335,7 +1335,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1443,7 +1443,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1551,7 +1551,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1659,7 +1659,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1767,7 +1767,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1875,7 +1875,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -1983,7 +1983,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2091,7 +2091,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2199,7 +2199,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2307,7 +2307,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2415,7 +2415,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2523,7 +2523,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2631,7 +2631,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2739,7 +2739,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2847,7 +2847,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -2955,7 +2955,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -3063,7 +3063,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -3171,7 +3171,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -3279,7 +3279,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -3387,7 +3387,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Layer**. Relevant connector/relation: **allowed-to-use relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: each software unit belongs to exactly one layer.
+Concrete mapping for **University Student Portal**: the user-interface code is the presentation layer, the scenario's application/business rules are the domain or service layer, and persistence/database adapters are the data-access layer. A user action calls downward through allowed-to-use relations from presentation to application logic and then to data access; results return upward without persistence code depending on the UI. Constraint: each software unit belongs to exactly one layer, with dependencies following the permitted layer ordering.
 
 
 
@@ -3495,7 +3495,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -3603,7 +3603,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -3711,7 +3711,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -3819,7 +3819,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -3927,7 +3927,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4035,7 +4035,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4143,7 +4143,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4251,7 +4251,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4359,7 +4359,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4467,7 +4467,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4575,7 +4575,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4683,7 +4683,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4791,7 +4791,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -4899,7 +4899,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5007,7 +5007,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5115,7 +5115,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5223,7 +5223,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5331,7 +5331,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5439,7 +5439,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5547,7 +5547,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5655,7 +5655,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5763,7 +5763,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5871,7 +5871,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -5979,7 +5979,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6087,7 +6087,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6195,7 +6195,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6303,7 +6303,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6411,7 +6411,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6519,7 +6519,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6627,7 +6627,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6735,7 +6735,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6843,7 +6843,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server, Broker, Client-side proxy, Server-side proxy**. Relevant connector/relation: **broker-mediated request/reply / attachment**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients attach only to the broker, possibly through a proxy.
+Concrete mapping for **University Student Portal**: the application that requests the distributed capability is the Client; the replaceable capability providers are Servers; the Broker locates/selects a provider and forwards request/reply traffic; client-side and server-side proxies hide location and protocol details where used. The client attaches to the Broker rather than a provider identity, allowing a different provider instance to handle a later request.
 
 
 
@@ -6930,7 +6930,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Student Portal.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -6951,7 +6951,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -6972,7 +6972,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7038,7 +7038,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Trading Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7059,7 +7059,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7080,7 +7080,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7146,7 +7146,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Utility Application.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7167,7 +7167,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7188,7 +7188,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7254,7 +7254,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Game Distribution Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7275,7 +7275,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7296,7 +7296,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7362,7 +7362,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Flight Booking System.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7383,7 +7383,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7404,7 +7404,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7470,7 +7470,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Marketplace.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7491,7 +7491,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7512,7 +7512,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7578,7 +7578,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Banking Application.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7599,7 +7599,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7620,7 +7620,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7686,7 +7686,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Food Delivery Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7707,7 +7707,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7728,7 +7728,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7794,7 +7794,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Hospital Information System.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7815,7 +7815,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7836,7 +7836,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -7902,7 +7902,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Traffic Management Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -7923,7 +7923,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -7944,7 +7944,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8010,7 +8010,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Ride-Hailing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8031,7 +8031,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8052,7 +8052,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8118,7 +8118,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Streaming Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8139,7 +8139,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8160,7 +8160,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8226,7 +8226,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Music Streaming Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8247,7 +8247,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8268,7 +8268,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8334,7 +8334,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Cloud Storage Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8355,7 +8355,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8376,7 +8376,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8442,7 +8442,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Social Network.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8463,7 +8463,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8484,7 +8484,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8550,7 +8550,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Smart Home Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8571,7 +8571,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8592,7 +8592,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8658,7 +8658,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Logistics Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8679,7 +8679,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8700,7 +8700,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8766,7 +8766,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Claims Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8787,7 +8787,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8808,7 +8808,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8874,7 +8874,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Hotel Booking Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -8895,7 +8895,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -8916,7 +8916,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -8982,7 +8982,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Learning Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9003,7 +9003,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9024,7 +9024,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9090,7 +9090,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Security Monitoring Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9111,7 +9111,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9132,7 +9132,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9198,7 +9198,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Warehouse Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9219,7 +9219,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9240,7 +9240,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9306,7 +9306,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete HR Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9327,7 +9327,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9348,7 +9348,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9414,7 +9414,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Telecom Billing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9435,7 +9435,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9456,7 +9456,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9522,7 +9522,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Digital Library.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9543,7 +9543,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9564,7 +9564,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9630,7 +9630,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Imaging Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9651,7 +9651,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9672,7 +9672,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9738,7 +9738,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Manufacturing Monitoring Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9759,7 +9759,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9780,7 +9780,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9846,7 +9846,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Citizen Services Portal.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9867,7 +9867,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9888,7 +9888,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -9954,7 +9954,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Digital Wallet.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -9975,7 +9975,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -9996,7 +9996,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10062,7 +10062,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Ticketing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10083,7 +10083,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -10104,7 +10104,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10170,7 +10170,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Auction Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10191,7 +10191,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -10212,7 +10212,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10278,7 +10278,7 @@ Best fit: **Model-View-Controller** (C&C Pattern).
 - Architectural problem: separate application data/functionality from user-interface presentation while supporting multiple synchronized views and user input.
 - Mechanism: isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
 - Map the source-grounded elements (Model, View, Controller) and relation/connector (notification/events/callbacks and method invocations) to the concrete Supply Chain Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Complexity.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance when frequent Model changes trigger many View refreshes.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10299,7 +10299,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Model, View, Controller**. Relevant connector/relation: **notification/events/callbacks and method invocations**. Explain which real component plays each role and how an interaction flows. State at least one constraint: at least one model, view and controller.
+Concrete mapping for **University Student Portal**: the authoritative scenario data and application functions form the Model; each interactive representation is a View; input handlers for user actions are Controllers. A Controller interprets input and queries or changes the Model, then affected Views read or are notified of the changed Model state so the representations remain synchronized.
 
 
 
@@ -10320,7 +10320,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized.
-Threatened: **Complexity** because the separation can be unnecessary for simple UIs and may mismatch UI toolkits that combine input/output widgets.
+Threatened: **Performance** when frequent Model changes trigger many View refreshes or notifications, adding update overhead and latency.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10386,7 +10386,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Student Portal.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10407,7 +10407,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -10428,7 +10428,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10494,7 +10494,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Trading Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10515,7 +10515,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -10536,7 +10536,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10602,7 +10602,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Utility Application.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10623,7 +10623,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -10644,7 +10644,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10710,7 +10710,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Game Distribution Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10731,7 +10731,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -10752,7 +10752,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10818,7 +10818,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Flight Booking System.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10839,7 +10839,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -10860,7 +10860,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -10926,7 +10926,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Marketplace.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -10947,7 +10947,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -10968,7 +10968,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11034,7 +11034,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Banking Application.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11055,7 +11055,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11076,7 +11076,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11142,7 +11142,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Food Delivery Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11163,7 +11163,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11184,7 +11184,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11250,7 +11250,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Hospital Information System.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11271,7 +11271,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11292,7 +11292,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11358,7 +11358,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Traffic Management Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11379,7 +11379,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11400,7 +11400,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11466,7 +11466,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Ride-Hailing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11487,7 +11487,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11508,7 +11508,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11574,7 +11574,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Streaming Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11595,7 +11595,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11616,7 +11616,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11682,7 +11682,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Music Streaming Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11703,7 +11703,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11724,7 +11724,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11790,7 +11790,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Cloud Storage Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11811,7 +11811,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11832,7 +11832,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -11898,7 +11898,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Social Network.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -11919,7 +11919,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -11940,7 +11940,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12006,7 +12006,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Smart Home Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12027,7 +12027,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12048,7 +12048,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12114,7 +12114,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Logistics Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12135,7 +12135,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12156,7 +12156,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12222,7 +12222,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Claims Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12243,7 +12243,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12264,7 +12264,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12330,7 +12330,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Hotel Booking Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12351,7 +12351,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12372,7 +12372,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12438,7 +12438,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Learning Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12459,7 +12459,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12480,7 +12480,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12546,7 +12546,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Security Monitoring Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12567,7 +12567,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12588,7 +12588,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12654,7 +12654,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Warehouse Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12675,7 +12675,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12696,7 +12696,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12762,7 +12762,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete HR Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12783,7 +12783,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12804,7 +12804,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12870,7 +12870,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Telecom Billing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12891,7 +12891,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -12912,7 +12912,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -12978,7 +12978,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Digital Library.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -12999,7 +12999,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13020,7 +13020,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13086,7 +13086,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Imaging Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13107,7 +13107,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13128,7 +13128,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13194,7 +13194,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Manufacturing Monitoring Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13215,7 +13215,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13236,7 +13236,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13302,7 +13302,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Citizen Services Portal.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13323,7 +13323,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13344,7 +13344,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13410,7 +13410,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Digital Wallet.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13431,7 +13431,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13452,7 +13452,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13518,7 +13518,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Ticketing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13539,7 +13539,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13560,7 +13560,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13626,7 +13626,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Auction Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13647,7 +13647,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13668,7 +13668,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13734,7 +13734,7 @@ Best fit: **Pipe-and-Filter** (C&C Pattern).
 - Architectural problem: perform successive transformations of a stream using independent reusable processing stages.
 - Mechanism: decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
 - Map the source-grounded elements (Filter, Pipe) and relation/connector (pipe carrying data streams between filter ports) to the concrete Supply Chain Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13755,7 +13755,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Filter, Pipe**. Relevant connector/relation: **pipe carrying data streams between filter ports**. Explain which real component plays each role and how an interaction flows. State at least one constraint: filters transform data and pipes only convey it.
+Concrete mapping for **University Student Portal**: each independent transformation required for the uploaded or streamed item is a Filter, and each Pipe carries one stage's output to the next stage's input. The item enters the first Filter, passes through the transformation sequence, and leaves as the final processed output. Filters transform data; Pipes convey it without owning transformation logic.
 
 
 
@@ -13776,7 +13776,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently.
-Threatened: **Performance/Latency** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+Threatened: **Performance (latency)** because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13842,7 +13842,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Student Portal.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13863,7 +13863,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -13883,8 +13883,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -13950,7 +13950,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Trading Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -13971,7 +13971,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -13991,8 +13991,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14058,7 +14058,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Utility Application.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14079,7 +14079,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14099,8 +14099,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14166,7 +14166,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Game Distribution Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14187,7 +14187,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14207,8 +14207,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14274,7 +14274,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Flight Booking System.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14295,7 +14295,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14315,8 +14315,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14382,7 +14382,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Marketplace.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14403,7 +14403,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14423,8 +14423,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14490,7 +14490,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Banking Application.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14511,7 +14511,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14531,8 +14531,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14598,7 +14598,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Food Delivery Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14619,7 +14619,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14639,8 +14639,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14706,7 +14706,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Hospital Information System.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14727,7 +14727,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14747,8 +14747,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14814,7 +14814,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Traffic Management Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14835,7 +14835,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14855,8 +14855,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -14922,7 +14922,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Ride-Hailing Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -14943,7 +14943,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -14963,8 +14963,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15030,7 +15030,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Streaming Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15051,7 +15051,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15071,8 +15071,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15138,7 +15138,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Music Streaming Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15159,7 +15159,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15179,8 +15179,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15246,7 +15246,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Cloud Storage Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15267,7 +15267,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15287,8 +15287,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15354,7 +15354,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Social Network.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15375,7 +15375,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15395,8 +15395,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15462,7 +15462,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Smart Home Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15483,7 +15483,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15503,8 +15503,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15570,7 +15570,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Logistics Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15591,7 +15591,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15611,8 +15611,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15678,7 +15678,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Claims Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15699,7 +15699,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15719,8 +15719,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15786,7 +15786,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Hotel Booking Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15807,7 +15807,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15827,8 +15827,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -15894,7 +15894,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Learning Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -15915,7 +15915,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -15935,8 +15935,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16002,7 +16002,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Security Monitoring Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16023,7 +16023,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16043,8 +16043,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16110,7 +16110,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Warehouse Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16131,7 +16131,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16151,8 +16151,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16218,7 +16218,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete HR Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16239,7 +16239,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16259,8 +16259,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16326,7 +16326,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Telecom Billing Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16347,7 +16347,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16367,8 +16367,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16434,7 +16434,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Digital Library.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16455,7 +16455,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16475,8 +16475,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16542,7 +16542,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Imaging Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16563,7 +16563,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16583,8 +16583,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16650,7 +16650,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Manufacturing Monitoring Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16671,7 +16671,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16691,8 +16691,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16758,7 +16758,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Citizen Services Portal.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16779,7 +16779,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16799,8 +16799,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16866,7 +16866,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Digital Wallet.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16887,7 +16887,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -16907,8 +16907,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -16974,7 +16974,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Ticketing Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -16995,7 +16995,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -17015,8 +17015,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -17082,7 +17082,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Auction Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -17103,7 +17103,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -17123,8 +17123,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -17190,7 +17190,7 @@ Best fit: **Client-Server** (C&C Pattern).
 - Architectural problem: provide shared services/resources to distributed clients through asymmetric request/reply interactions.
 - Mechanism: centralizes service provision so many distributed clients can request the same managed resource or functionality.
 - Map the source-grounded elements (Client, Server) and relation/connector (request/reply connector) to the concrete Supply Chain Platform.
-- Likely enhanced quality: Centralized control. Likely trade-off: Performance.
+- Likely enhanced quality: Modifiability because a common service can be changed in one location or a small number of locations. Likely trade-off: Performance.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -17211,7 +17211,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Client, Server**. Relevant connector/relation: **request/reply connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: clients invoke services through request/reply.
+Concrete mapping for **University Student Portal**: the web/mobile/device application used by the actor is the Client, and the centrally managed authoritative record or service is the Server. The Client sends a request over the network, the Server reads or updates the authoritative state, and a reply returns the result; clients do not become service providers merely because several devices are used.
 
 
 
@@ -17231,8 +17231,8 @@ Explain one quality attribute that the pattern may enhance and a different quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Centralized control** because centralizes service provision so many distributed clients can request the same managed resource or functionality.
-Threatened: **Performance** because a central server may become a bottleneck or single point of failure and moving functionality later can be costly.
+Enhanced: **Modifiability** because common services are factored into one location or a small number of locations, localizing changes shared by many clients.
+Threatened: **Performance** because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -17319,7 +17319,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -17427,7 +17427,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -17535,7 +17535,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -17643,7 +17643,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -17751,7 +17751,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -17859,7 +17859,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -17967,7 +17967,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18075,7 +18075,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18183,7 +18183,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18291,7 +18291,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18399,7 +18399,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18507,7 +18507,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18615,7 +18615,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18723,7 +18723,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18831,7 +18831,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -18939,7 +18939,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19047,7 +19047,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19155,7 +19155,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19263,7 +19263,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19371,7 +19371,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19479,7 +19479,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19587,7 +19587,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19695,7 +19695,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19803,7 +19803,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -19911,7 +19911,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20019,7 +20019,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20127,7 +20127,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20235,7 +20235,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20343,7 +20343,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20451,7 +20451,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20559,7 +20559,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20667,7 +20667,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Peer, optional specialized peer/supernode**. Relevant connector/relation: **peer request/reply and discovery/search**. Explain which real component plays each role and how an interaction flows. State at least one constraint: attachments can change at runtime.
+Concrete mapping for **University Student Portal**: each participating user device or node that contributes and requests the shared resource is a Peer; a discovery node or supernode is optional, not the owner of all resources. A Peer discovers another participant and directly requests/provides the resource through peer request/reply connections, while attachments may change as peers join or leave.
 
 
 
@@ -20775,7 +20775,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -20883,7 +20883,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -20991,7 +20991,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21099,7 +21099,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21207,7 +21207,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21315,7 +21315,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21423,7 +21423,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21531,7 +21531,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21639,7 +21639,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21747,7 +21747,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21855,7 +21855,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -21963,7 +21963,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22071,7 +22071,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22179,7 +22179,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22287,7 +22287,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22395,7 +22395,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22503,7 +22503,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22611,7 +22611,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22719,7 +22719,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22827,7 +22827,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -22935,7 +22935,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23043,7 +23043,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23151,7 +23151,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23259,7 +23259,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23367,7 +23367,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23475,7 +23475,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23583,7 +23583,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23691,7 +23691,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23799,7 +23799,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -23907,7 +23907,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -24015,7 +24015,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -24123,7 +24123,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server**. Relevant connector/relation: **SOAP, REST request/reply, asynchronous messaging**. Explain which real component plays each role and how an interaction flows. State at least one constraint: services expose published interfaces.
+Concrete mapping for **University Student Portal**: the scenario application is the Service Consumer, while each independently managed external capability is a Service Provider exposing a published network interface or contract. The consumer invokes that contract using REST/SOAP or messaging; an ESB, registry, or orchestration service is included only if the scenario needs routing, discovery, transformation, or workflow coordination.
 
 
 
@@ -24210,7 +24210,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Student Portal.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24231,7 +24231,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24252,7 +24252,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24297,7 +24297,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Trading Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24318,7 +24318,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24339,7 +24339,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24384,7 +24384,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Utility Application.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24405,7 +24405,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24426,7 +24426,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24471,7 +24471,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Game Distribution Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24492,7 +24492,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24513,7 +24513,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24558,7 +24558,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Flight Booking System.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24579,7 +24579,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24600,7 +24600,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24645,7 +24645,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Marketplace.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24666,7 +24666,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24687,7 +24687,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24732,7 +24732,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Banking Application.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24753,7 +24753,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24774,7 +24774,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24819,7 +24819,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Food Delivery Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24840,7 +24840,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24861,7 +24861,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24906,7 +24906,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Hospital Information System.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -24927,7 +24927,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -24948,7 +24948,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -24993,7 +24993,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Traffic Management Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25014,7 +25014,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25035,7 +25035,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25080,7 +25080,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Ride-Hailing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25101,7 +25101,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25122,7 +25122,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25167,7 +25167,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Streaming Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25188,7 +25188,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25209,7 +25209,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25254,7 +25254,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Music Streaming Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25275,7 +25275,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25296,7 +25296,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25341,7 +25341,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Cloud Storage Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25362,7 +25362,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25383,7 +25383,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25428,7 +25428,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Social Network.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25449,7 +25449,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25470,7 +25470,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25515,7 +25515,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Smart Home Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25536,7 +25536,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25557,7 +25557,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25602,7 +25602,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Logistics Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25623,7 +25623,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25644,7 +25644,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25689,7 +25689,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Claims Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25710,7 +25710,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25731,7 +25731,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25776,7 +25776,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Hotel Booking Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25797,7 +25797,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25818,7 +25818,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25863,7 +25863,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Learning Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25884,7 +25884,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25905,7 +25905,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -25950,7 +25950,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Security Monitoring Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -25971,7 +25971,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -25992,7 +25992,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26037,7 +26037,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Warehouse Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26058,7 +26058,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26079,7 +26079,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26124,7 +26124,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete HR Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26145,7 +26145,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26166,7 +26166,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26211,7 +26211,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Telecom Billing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26232,7 +26232,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26253,7 +26253,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26298,7 +26298,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Digital Library.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26319,7 +26319,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26340,7 +26340,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26385,7 +26385,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Imaging Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26406,7 +26406,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26427,7 +26427,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26472,7 +26472,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Manufacturing Monitoring Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26493,7 +26493,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26514,7 +26514,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26559,7 +26559,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Citizen Services Portal.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26580,7 +26580,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26601,7 +26601,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26646,7 +26646,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Digital Wallet.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26667,7 +26667,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26688,7 +26688,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26733,7 +26733,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Ticketing Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26754,7 +26754,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26775,7 +26775,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26820,7 +26820,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Auction Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26841,7 +26841,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26862,7 +26862,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -26907,7 +26907,7 @@ Best fit: **Publish-Subscribe** (C&C Pattern).
 - Architectural problem: distribute events from producers to an unknown or changing set of interested recipients without producers knowing recipient identities.
 - Mechanism: decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
 - Map the source-grounded elements (Publisher component, Subscriber component, event distributor / publish-subscribe connector) and relation/connector (publish-subscribe connector with announce/listen roles) to the concrete Supply Chain Platform.
-- Likely enhanced quality: Modifiability. Likely trade-off: Performance/Latency.
+- Likely enhanced quality: Modifiability. Likely trade-off: Performance (latency).
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -26928,7 +26928,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Publisher component, Subscriber component, event distributor / publish-subscribe connector**. Relevant connector/relation: **publish-subscribe connector with announce/listen roles**. Explain which real component plays each role and how an interaction flows. State at least one constraint: publish ports attach to announce roles.
+Concrete mapping for **University Student Portal**: the component that detects or produces the scenario event is the Publisher; interested users, channels, or components are Subscribers; the event distributor/channel is the publish-subscribe connector. The Publisher announces the event without naming every recipient, and the distributor delivers it to the currently registered interested Subscribers.
 
 
 
@@ -26949,7 +26949,7 @@ Explain one quality attribute that the pattern may enhance and a different quali
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Modifiability** because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness.
-Threatened: **Performance/Latency** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+Threatened: **Performance (latency)** because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -27015,7 +27015,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27123,7 +27123,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27231,7 +27231,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27339,7 +27339,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27447,7 +27447,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27555,7 +27555,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27663,7 +27663,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27771,7 +27771,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27879,7 +27879,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -27987,7 +27987,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28095,7 +28095,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28203,7 +28203,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28311,7 +28311,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28419,7 +28419,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28527,7 +28527,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28635,7 +28635,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28743,7 +28743,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28851,7 +28851,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -28959,7 +28959,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29067,7 +29067,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29175,7 +29175,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29283,7 +29283,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29391,7 +29391,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29499,7 +29499,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29607,7 +29607,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29715,7 +29715,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29823,7 +29823,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -29931,7 +29931,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -30039,7 +30039,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -30147,7 +30147,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -30255,7 +30255,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -30363,7 +30363,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Shared-data store, Data accessor**. Relevant connector/relation: **data reading/writing connector**. Explain which real component plays each role and how an interaction flows. State at least one constraint: data accessors interact through shared data store(s).
+Concrete mapping for **University Student Portal**: the authoritative repository holding the scenario's shared records is the Shared-Data Store; the independent application components that read or write those records are Data Accessors. Accessors communicate indirectly by reading/writing the repository rather than calling one another to exchange the shared state, so consistency and ownership rules must be defined at the store boundary.
 
 
 
@@ -30450,7 +30450,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Student Portal.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -30471,7 +30471,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -30481,18 +30481,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01443 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** University Student Portal  
 
 In the University Student Portal, Map-Reduce is used as described: The Student Portal must analyze multi-year learning analytics logs at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -30558,7 +30558,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Trading Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -30579,7 +30579,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -30589,18 +30589,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01448 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Online Trading Platform  
 
 In the Online Trading Platform, Map-Reduce is used as described: The Trading Platform must analyze historical market ticks at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -30666,7 +30666,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Utility Application.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -30687,7 +30687,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -30697,18 +30697,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01453 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Electricity Utility App  
 
 In the Electricity Utility App, Map-Reduce is used as described: The Utility Application must analyze national smart-meter history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -30774,7 +30774,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Game Distribution Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -30795,7 +30795,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -30805,18 +30805,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01458 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Game Store  
 
 In the Digital Game Store, Map-Reduce is used as described: The Game Distribution Platform must analyze global gameplay telemetry at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -30882,7 +30882,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Flight Booking System.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -30903,7 +30903,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -30913,18 +30913,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01463 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Flight Booking System  
 
 In the Flight Booking System, Map-Reduce is used as described: The Flight Booking System must analyze historical booking/search logs at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -30990,7 +30990,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Marketplace.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31011,7 +31011,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31021,18 +31021,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01468 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** E-Commerce Marketplace  
 
 In the E-Commerce Marketplace, Map-Reduce is used as described: The Marketplace must analyze clickstream and order history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31098,7 +31098,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Banking Application.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31119,7 +31119,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31129,18 +31129,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01473 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Banking App  
 
 In the Digital Banking App, Map-Reduce is used as described: The Banking Application must analyze multi-year transaction ledger extracts at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31206,7 +31206,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Food Delivery Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31227,7 +31227,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31237,18 +31237,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01478 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Food Delivery Platform  
 
 In the Food Delivery Platform, Map-Reduce is used as described: The Food Delivery Platform must analyze city-wide delivery history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31314,7 +31314,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Hospital Information System.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31335,7 +31335,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31345,18 +31345,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01483 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Hospital Information System  
 
 In the Hospital Information System, Map-Reduce is used as described: The Hospital Information System must analyze de-identified clinical records at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31422,7 +31422,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Traffic Management Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31443,7 +31443,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31453,18 +31453,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01488 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Smart Traffic Platform  
 
 In the Smart Traffic Platform, Map-Reduce is used as described: The Traffic Management Platform must analyze city-wide traffic sensor archive at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31530,7 +31530,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Ride-Hailing Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31551,7 +31551,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31561,18 +31561,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01493 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Ride-Hailing Platform  
 
 In the Ride-Hailing Platform, Map-Reduce is used as described: The Ride-Hailing Platform must analyze regional trip history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31638,7 +31638,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Streaming Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31659,7 +31659,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31669,18 +31669,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01498 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Video Streaming Service  
 
 In the Video Streaming Service, Map-Reduce is used as described: The Streaming Platform must analyze viewing telemetry at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31746,7 +31746,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Music Streaming Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31767,7 +31767,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31777,18 +31777,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01503 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Music Streaming Service  
 
 In the Music Streaming Service, Map-Reduce is used as described: The Music Streaming Platform must analyze listening events at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31854,7 +31854,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Cloud Storage Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31875,7 +31875,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31885,18 +31885,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01508 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Cloud File Storage  
 
 In the Cloud File Storage, Map-Reduce is used as described: The Cloud Storage Platform must analyze storage-access audit logs at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -31962,7 +31962,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Social Network.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -31983,7 +31983,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -31993,18 +31993,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01513 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Social Network  
 
 In the Social Network, Map-Reduce is used as described: The Social Network must analyze social graph/activity events at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32070,7 +32070,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Smart Home Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32091,7 +32091,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32101,18 +32101,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01518 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Smart Home Platform  
 
 In the Smart Home Platform, Map-Reduce is used as described: The Smart Home Platform must analyze long-term household sensor history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32178,7 +32178,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Logistics Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32199,7 +32199,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32209,18 +32209,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01523 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Logistics Tracking System  
 
 In the Logistics Tracking System, Map-Reduce is used as described: The Logistics Platform must analyze global shipment history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32286,7 +32286,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Claims Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32307,7 +32307,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32317,18 +32317,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01528 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Insurance Claims System  
 
 In the Insurance Claims System, Map-Reduce is used as described: The Claims Platform must analyze historical claims at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32394,7 +32394,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Hotel Booking Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32415,7 +32415,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32425,18 +32425,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01533 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Hotel Booking Platform  
 
 In the Hotel Booking Platform, Map-Reduce is used as described: The Hotel Booking Platform must analyze search and occupancy history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32502,7 +32502,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Learning Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32523,7 +32523,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32533,18 +32533,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01538 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Online Learning Platform  
 
 In the Online Learning Platform, Map-Reduce is used as described: The Learning Platform must analyze learning interaction logs at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32610,7 +32610,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Security Monitoring Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32631,7 +32631,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32641,18 +32641,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01543 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Cybersecurity Monitoring Platform  
 
 In the Cybersecurity Monitoring Platform, Map-Reduce is used as described: The Security Monitoring Platform must analyze enterprise security logs at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32718,7 +32718,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Warehouse Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32739,7 +32739,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32749,18 +32749,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01548 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Warehouse Management System  
 
 In the Warehouse Management System, Map-Reduce is used as described: The Warehouse Platform must analyze warehouse movement history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32826,7 +32826,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete HR Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32847,7 +32847,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32857,18 +32857,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01553 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Payroll and HR System  
 
 In the Payroll and HR System, Map-Reduce is used as described: The HR Platform must analyze workforce history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -32934,7 +32934,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Telecom Billing Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -32955,7 +32955,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -32965,18 +32965,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01558 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Telecommunications Billing  
 
 In the Telecommunications Billing, Map-Reduce is used as described: The Telecom Billing Platform must analyze nationwide usage records at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33042,7 +33042,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Digital Library.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33063,7 +33063,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33073,18 +33073,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01563 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Library  
 
 In the Digital Library, Map-Reduce is used as described: The Digital Library must analyze catalog/search logs at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33150,7 +33150,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Imaging Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33171,7 +33171,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33181,18 +33181,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01568 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Medical Imaging Platform  
 
 In the Medical Imaging Platform, Map-Reduce is used as described: The Imaging Platform must analyze large imaging archive at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33258,7 +33258,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Manufacturing Monitoring Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33279,7 +33279,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33289,18 +33289,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01573 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Manufacturing Monitoring  
 
 In the Manufacturing Monitoring, Map-Reduce is used as described: The Manufacturing Monitoring Platform must analyze factory sensor archive at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33366,7 +33366,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Citizen Services Portal.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33387,7 +33387,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33397,18 +33397,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01578 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Government Citizen Portal  
 
 In the Government Citizen Portal, Map-Reduce is used as described: The Citizen Services Portal must analyze cross-agency service logs at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33474,7 +33474,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Digital Wallet.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33495,7 +33495,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33505,18 +33505,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01583 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Wallet  
 
 In the Digital Wallet, Map-Reduce is used as described: The Digital Wallet must analyze wallet transaction history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33582,7 +33582,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Ticketing Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33603,7 +33603,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33613,18 +33613,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01588 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Event Ticketing Platform  
 
 In the Event Ticketing Platform, Map-Reduce is used as described: The Ticketing Platform must analyze ticket search and sales history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33690,7 +33690,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Auction Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33711,7 +33711,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33721,18 +33721,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01593 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Online Auction Platform  
 
 In the Online Auction Platform, Map-Reduce is used as described: The Auction Platform must analyze auction/bid history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33798,7 +33798,7 @@ Best fit: **Map-Reduce** (Allocation Pattern).
 - Architectural problem: process very large file-based data sets efficiently and resiliently using massively parallel computation.
 - Mechanism: runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
 - Map the source-grounded elements (Map, Reduce, Infrastructure) and relation/connector (infrastructure-managed key/value data movement) to the concrete Supply Chain Platform.
-- Likely enhanced quality: Performance/Throughput. Likely trade-off: Complexity.
+- Likely enhanced quality: Performance. Mechanism: parallel Map and Reduce instances can increase batch throughput. Likely weakness: Performance can degrade when framework overhead or partition skew outweighs parallelism.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33819,7 +33819,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant connector/relation: **infrastructure-managed key/value data movement**. Explain which real component plays each role and how an interaction flows. State at least one constraint: input exists as files.
+Concrete mapping for **University Student Portal**: the large input/log files are partitioned by the Infrastructure; Map workers transform each partition into intermediate key/value records; shuffle/sort groups equal keys; Reduce workers aggregate each group into the required result. The Infrastructure distributes tasks, moves intermediate data, monitors workers, and reruns failed work.
 
 
 
@@ -33829,18 +33829,18 @@ Map these elements into the scenario: **Map, Reduce, Infrastructure**. Relevant 
 
 ## Q01598 — Map-Reduce (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Supply Chain Platform  
 
 In the Supply Chain Platform, Map-Reduce is used as described: The Supply Chain Platform must analyze multi-year supply-chain history at very large scale by dividing work across many processors, with infrastructure responsible for distributing tasks and recovering failed workers.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded condition under which that benefit can be lost. Explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Enhanced: **Performance/Throughput** because runs many map instances across processors, shuffles/sorts key-value output, then combines results in reduce functions while infrastructure deploys, monitors and recovers tasks.
-Threatened: **Complexity** because framework overhead is unjustified for small data; unbalanced partitions reduce parallel benefit and multi-reduce workflows become complex.
+Enhanced: **Performance** because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput.
+Weakness: **Performance** can degrade when framework startup, shuffle/sort and synchronization overhead dominate a small workload, or when partition skew leaves one worker as the straggler.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -33906,7 +33906,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Student Portal.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -33927,7 +33927,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -33937,18 +33937,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01603 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** University Student Portal  
 
 In the University Student Portal, Multi-Tier is used as described: The Student Portal must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34014,7 +34014,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Trading Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34035,7 +34035,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34045,18 +34045,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01608 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Online Trading Platform  
 
 In the Online Trading Platform, Multi-Tier is used as described: The Trading Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34122,7 +34122,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Utility Application.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34143,7 +34143,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34153,18 +34153,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01613 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Electricity Utility App  
 
 In the Electricity Utility App, Multi-Tier is used as described: The Utility Application must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34230,7 +34230,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Game Distribution Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34251,7 +34251,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34261,18 +34261,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01618 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Game Store  
 
 In the Digital Game Store, Multi-Tier is used as described: The Game Distribution Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34338,7 +34338,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Flight Booking System.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34359,7 +34359,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34369,18 +34369,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01623 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Flight Booking System  
 
 In the Flight Booking System, Multi-Tier is used as described: The Flight Booking System must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34446,7 +34446,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Marketplace.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34467,7 +34467,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34477,18 +34477,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01628 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** E-Commerce Marketplace  
 
 In the E-Commerce Marketplace, Multi-Tier is used as described: The Marketplace must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34554,7 +34554,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Banking Application.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34575,7 +34575,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34585,18 +34585,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01633 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Banking App  
 
 In the Digital Banking App, Multi-Tier is used as described: The Banking Application must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34662,7 +34662,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Food Delivery Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34683,7 +34683,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34693,18 +34693,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01638 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Food Delivery Platform  
 
 In the Food Delivery Platform, Multi-Tier is used as described: The Food Delivery Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34770,7 +34770,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Hospital Information System.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34791,7 +34791,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34801,18 +34801,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01643 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Hospital Information System  
 
 In the Hospital Information System, Multi-Tier is used as described: The Hospital Information System must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34878,7 +34878,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Traffic Management Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -34899,7 +34899,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -34909,18 +34909,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01648 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Smart Traffic Platform  
 
 In the Smart Traffic Platform, Multi-Tier is used as described: The Traffic Management Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -34986,7 +34986,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Ride-Hailing Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35007,7 +35007,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35017,18 +35017,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01653 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Ride-Hailing Platform  
 
 In the Ride-Hailing Platform, Multi-Tier is used as described: The Ride-Hailing Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35094,7 +35094,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Streaming Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35115,7 +35115,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35125,18 +35125,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01658 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Video Streaming Service  
 
 In the Video Streaming Service, Multi-Tier is used as described: The Streaming Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35202,7 +35202,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Music Streaming Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35223,7 +35223,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35233,18 +35233,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01663 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Music Streaming Service  
 
 In the Music Streaming Service, Multi-Tier is used as described: The Music Streaming Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35310,7 +35310,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Cloud Storage Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35331,7 +35331,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35341,18 +35341,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01668 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Cloud File Storage  
 
 In the Cloud File Storage, Multi-Tier is used as described: The Cloud Storage Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35418,7 +35418,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Social Network.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35439,7 +35439,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35449,18 +35449,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01673 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Social Network  
 
 In the Social Network, Multi-Tier is used as described: The Social Network must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35526,7 +35526,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Smart Home Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35547,7 +35547,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35557,18 +35557,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01678 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Smart Home Platform  
 
 In the Smart Home Platform, Multi-Tier is used as described: The Smart Home Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35634,7 +35634,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Logistics Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35655,7 +35655,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35665,18 +35665,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01683 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Logistics Tracking System  
 
 In the Logistics Tracking System, Multi-Tier is used as described: The Logistics Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35742,7 +35742,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Claims Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35763,7 +35763,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35773,18 +35773,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01688 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Insurance Claims System  
 
 In the Insurance Claims System, Multi-Tier is used as described: The Claims Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35850,7 +35850,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Hotel Booking Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35871,7 +35871,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35881,18 +35881,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01693 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Hotel Booking Platform  
 
 In the Hotel Booking Platform, Multi-Tier is used as described: The Hotel Booking Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -35958,7 +35958,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Learning Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -35979,7 +35979,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -35989,18 +35989,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01698 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Online Learning Platform  
 
 In the Online Learning Platform, Multi-Tier is used as described: The Learning Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36066,7 +36066,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Security Monitoring Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36087,7 +36087,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36097,18 +36097,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01703 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Cybersecurity Monitoring Platform  
 
 In the Cybersecurity Monitoring Platform, Multi-Tier is used as described: The Security Monitoring Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36174,7 +36174,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Warehouse Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36195,7 +36195,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36205,18 +36205,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01708 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Warehouse Management System  
 
 In the Warehouse Management System, Multi-Tier is used as described: The Warehouse Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36282,7 +36282,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete HR Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36303,7 +36303,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36313,18 +36313,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01713 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Payroll and HR System  
 
 In the Payroll and HR System, Multi-Tier is used as described: The HR Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36390,7 +36390,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Telecom Billing Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36411,7 +36411,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36421,18 +36421,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01718 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Telecommunications Billing  
 
 In the Telecommunications Billing, Multi-Tier is used as described: The Telecom Billing Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36498,7 +36498,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Digital Library.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36519,7 +36519,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36529,18 +36529,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01723 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Library  
 
 In the Digital Library, Multi-Tier is used as described: The Digital Library must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36606,7 +36606,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Imaging Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36627,7 +36627,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36637,18 +36637,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01728 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Medical Imaging Platform  
 
 In the Medical Imaging Platform, Multi-Tier is used as described: The Imaging Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36714,7 +36714,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Manufacturing Monitoring Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36735,7 +36735,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36745,18 +36745,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01733 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Manufacturing Monitoring  
 
 In the Manufacturing Monitoring, Multi-Tier is used as described: The Manufacturing Monitoring Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36822,7 +36822,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Citizen Services Portal.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36843,7 +36843,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36853,18 +36853,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01738 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Government Citizen Portal  
 
 In the Government Citizen Portal, Multi-Tier is used as described: The Citizen Services Portal must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -36930,7 +36930,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Digital Wallet.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -36951,7 +36951,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -36961,18 +36961,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01743 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Digital Wallet  
 
 In the Digital Wallet, Multi-Tier is used as described: The Digital Wallet must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -37038,7 +37038,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Ticketing Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -37059,7 +37059,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -37069,18 +37069,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01748 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Event Ticketing Platform  
 
 In the Event Ticketing Platform, Multi-Tier is used as described: The Ticketing Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -37146,7 +37146,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Auction Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -37167,7 +37167,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -37177,18 +37177,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01753 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Online Auction Platform  
 
 In the Online Auction Platform, Multi-Tier is used as described: The Auction Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 
@@ -37254,7 +37254,7 @@ Best fit: **Multi-Tier** (Allocation Pattern).
 - Architectural problem: separate runtime components into logical tiers with constrained communication and potentially map them onto different computing platforms.
 - Mechanism: groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
 - Map the source-grounded elements (Tier (logical grouping of runtime components)) and relation/connector (communicates-with relation, allocated-to relation) to the concrete Supply Chain Platform.
-- Likely enhanced quality: Security. Likely trade-off: Complexity.
+- Likely enhanced quality: Security. Likely weakness: substantial hardware, software, design and operational cost/complexity.
 Full credit requires scenario-specific reasoning, not only the pattern name.
 
 **Exam trap:** Naming a familiar pattern without explaining why its mechanism solves this exact requirement.
@@ -37275,7 +37275,7 @@ Describe the pattern elements and connectors/relations in this concrete scenario
 
 <details><summary>Answer framework / marking outline</summary>
 
-Map these elements into the scenario: **Tier (logical grouping of runtime components)**. Relevant connector/relation: **communicates-with relation, allocated-to relation**. Explain which real component plays each role and how an interaction flows. State at least one constraint: a software component belongs to exactly one tier.
+Concrete mapping for **University Student Portal**: user-interface runtime components form the presentation tier, application/business processing forms the application tier, and persistent records/services form the data tier. Request/reply communication crosses the permitted tier boundaries, and each tier is allocated to its own deployable runtime/platform so it can be secured or scaled independently; each component belongs to one tier.
 
 
 
@@ -37285,18 +37285,18 @@ Map these elements into the scenario: **Tier (logical grouping of runtime compon
 
 ## Q01758 — Multi-Tier (Very Hard, 4 marks)
 
-**Type:** Quality trade-off  
+**Type:** Quality benefit and weakness  
 **Exam family:** Past Paper Q1/Q3  
 **Scenario:** Supply Chain Platform  
 
 In the Supply Chain Platform, Multi-Tier is used as described: The Supply Chain Platform must separate runtime presentation, application processing, and data services into computational groups that can be deployed, secured and scaled on different platforms with constrained cross-group communication.
 
-Explain one quality attribute that the pattern may enhance and a different quality attribute that may be threatened. For each, explain the mechanism rather than merely naming the quality.
+Explain one quality attribute that the pattern may enhance and one source-grounded weakness of the pattern. For each, explain the mechanism rather than merely naming the quality or weakness.
 
 <details><summary>Answer framework / marking outline</summary>
 
 Enhanced: **Security** because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies.
-Threatened: **Complexity** because adds hardware/software/design/operational cost and complexity that may not be justified for small systems.
+Weakness: substantial **cost and complexity** because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
 Qualify the claim ('may/can') and tie each effect to an element, connector, constraint or deployment decision.
 
 

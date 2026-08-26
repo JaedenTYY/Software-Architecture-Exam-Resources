@@ -12,7 +12,15 @@ For the University Student Portal, construct a utility tree containing at least 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for University Student Portal**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary University Student Portal application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The University Student Portal completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The University Student Portal rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the University Student Portal stakeholders.
 
 
 
@@ -84,7 +92,15 @@ For the Online Trading Platform, construct a utility tree containing at least fo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Online Trading Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Online Trading Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Online Trading Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Online Trading Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Online Trading Platform stakeholders.
 
 
 
@@ -156,7 +172,15 @@ For the Electricity Utility App, construct a utility tree containing at least fo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Electricity Utility App**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Electricity Utility App application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Electricity Utility App completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Electricity Utility App rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Electricity Utility App stakeholders.
 
 
 
@@ -228,7 +252,15 @@ For the Digital Game Store, construct a utility tree containing at least four qu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Digital Game Store**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Digital Game Store application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Digital Game Store completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Digital Game Store rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Digital Game Store stakeholders.
 
 
 
@@ -300,7 +332,15 @@ For the Flight Booking System, construct a utility tree containing at least four
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Flight Booking System**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Flight Booking System application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Flight Booking System completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Flight Booking System rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Flight Booking System stakeholders.
 
 
 
@@ -372,7 +412,15 @@ For the E-Commerce Marketplace, construct a utility tree containing at least fou
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for E-Commerce Marketplace**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary E-Commerce Marketplace application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The E-Commerce Marketplace completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The E-Commerce Marketplace rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the E-Commerce Marketplace stakeholders.
 
 
 
@@ -444,7 +492,15 @@ For the Digital Banking App, construct a utility tree containing at least four q
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Digital Banking App**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Digital Banking App application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Digital Banking App completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Digital Banking App rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Digital Banking App stakeholders.
 
 
 
@@ -516,7 +572,15 @@ For the Food Delivery Platform, construct a utility tree containing at least fou
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Food Delivery Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Food Delivery Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Food Delivery Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Food Delivery Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Food Delivery Platform stakeholders.
 
 
 
@@ -588,7 +652,15 @@ For the Hospital Information System, construct a utility tree containing at leas
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Hospital Information System**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Hospital Information System application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Hospital Information System completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Hospital Information System rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Hospital Information System stakeholders.
 
 
 
@@ -660,7 +732,15 @@ For the Smart Traffic Platform, construct a utility tree containing at least fou
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Smart Traffic Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Smart Traffic Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Smart Traffic Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Smart Traffic Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Smart Traffic Platform stakeholders.
 
 
 
@@ -732,7 +812,15 @@ For the Ride-Hailing Platform, construct a utility tree containing at least four
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Ride-Hailing Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Ride-Hailing Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Ride-Hailing Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Ride-Hailing Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Ride-Hailing Platform stakeholders.
 
 
 
@@ -804,7 +892,15 @@ For the Video Streaming Service, construct a utility tree containing at least fo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Video Streaming Service**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Video Streaming Service application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Video Streaming Service completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Video Streaming Service rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Video Streaming Service stakeholders.
 
 
 
@@ -876,7 +972,15 @@ For the Music Streaming Service, construct a utility tree containing at least fo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Music Streaming Service**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Music Streaming Service application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Music Streaming Service completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Music Streaming Service rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Music Streaming Service stakeholders.
 
 
 
@@ -948,7 +1052,15 @@ For the Cloud File Storage, construct a utility tree containing at least four qu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Cloud File Storage**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Cloud File Storage application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Cloud File Storage completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Cloud File Storage rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Cloud File Storage stakeholders.
 
 
 
@@ -1020,7 +1132,15 @@ For the Social Network, construct a utility tree containing at least four qualit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Social Network**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Social Network application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Social Network completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Social Network rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Social Network stakeholders.
 
 
 
@@ -1092,7 +1212,15 @@ For the Smart Home Platform, construct a utility tree containing at least four q
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Smart Home Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Smart Home Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Smart Home Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Smart Home Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Smart Home Platform stakeholders.
 
 
 
@@ -1164,7 +1292,15 @@ For the Logistics Tracking System, construct a utility tree containing at least 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Logistics Tracking System**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Logistics Tracking System application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Logistics Tracking System completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Logistics Tracking System rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Logistics Tracking System stakeholders.
 
 
 
@@ -1236,7 +1372,15 @@ For the Insurance Claims System, construct a utility tree containing at least fo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Insurance Claims System**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Insurance Claims System application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Insurance Claims System completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Insurance Claims System rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Insurance Claims System stakeholders.
 
 
 
@@ -1308,7 +1452,15 @@ For the Hotel Booking Platform, construct a utility tree containing at least fou
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Hotel Booking Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Hotel Booking Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Hotel Booking Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Hotel Booking Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Hotel Booking Platform stakeholders.
 
 
 
@@ -1380,7 +1532,15 @@ For the Online Learning Platform, construct a utility tree containing at least f
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Online Learning Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Online Learning Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Online Learning Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Online Learning Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Online Learning Platform stakeholders.
 
 
 
@@ -1452,7 +1612,15 @@ For the Cybersecurity Monitoring Platform, construct a utility tree containing a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Cybersecurity Monitoring Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Cybersecurity Monitoring Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Cybersecurity Monitoring Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Cybersecurity Monitoring Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Cybersecurity Monitoring Platform stakeholders.
 
 
 
@@ -1524,7 +1692,15 @@ For the Warehouse Management System, construct a utility tree containing at leas
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Warehouse Management System**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Warehouse Management System application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Warehouse Management System completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Warehouse Management System rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Warehouse Management System stakeholders.
 
 
 
@@ -1596,7 +1772,15 @@ For the Payroll and HR System, construct a utility tree containing at least four
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Payroll and HR System**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Payroll and HR System application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Payroll and HR System completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Payroll and HR System rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Payroll and HR System stakeholders.
 
 
 
@@ -1668,7 +1852,15 @@ For the Telecommunications Billing, construct a utility tree containing at least
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Telecommunications Billing**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Telecommunications Billing application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Telecommunications Billing completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Telecommunications Billing rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Telecommunications Billing stakeholders.
 
 
 
@@ -1740,7 +1932,15 @@ For the Digital Library, construct a utility tree containing at least four quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Digital Library**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Digital Library application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Digital Library completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Digital Library rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Digital Library stakeholders.
 
 
 
@@ -1812,7 +2012,15 @@ For the Medical Imaging Platform, construct a utility tree containing at least f
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Medical Imaging Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Medical Imaging Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Medical Imaging Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Medical Imaging Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Medical Imaging Platform stakeholders.
 
 
 
@@ -1884,7 +2092,15 @@ For the Manufacturing Monitoring, construct a utility tree containing at least f
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Manufacturing Monitoring**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Manufacturing Monitoring application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Manufacturing Monitoring completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Manufacturing Monitoring rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Manufacturing Monitoring stakeholders.
 
 
 
@@ -1956,7 +2172,15 @@ For the Government Citizen Portal, construct a utility tree containing at least 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Government Citizen Portal**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Government Citizen Portal application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Government Citizen Portal completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Government Citizen Portal rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Government Citizen Portal stakeholders.
 
 
 
@@ -2028,7 +2252,15 @@ For the Digital Wallet, construct a utility tree containing at least four qualit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Digital Wallet**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Digital Wallet application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Digital Wallet completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Digital Wallet rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Digital Wallet stakeholders.
 
 
 
@@ -2100,7 +2332,15 @@ For the Event Ticketing Platform, construct a utility tree containing at least f
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Event Ticketing Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Event Ticketing Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Event Ticketing Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Event Ticketing Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Event Ticketing Platform stakeholders.
 
 
 
@@ -2172,7 +2412,15 @@ For the Online Auction Platform, construct a utility tree containing at least fo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Online Auction Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Online Auction Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Online Auction Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Online Auction Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Online Auction Platform stakeholders.
 
 
 
@@ -2244,7 +2492,15 @@ For the Supply Chain Platform, construct a utility tree containing at least four
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Utility → Quality Attribute → Refinement → concrete QA scenario [Business Value, Architectural Impact]**. Reuse six-part scenarios as leaves. H,H leaves deserve the most attention. Business value = mission/stakeholder importance; architectural impact = how profoundly satisfying it affects architecture.
+**Example answer for Supply Chain Platform**
+
+Utility
+- **Availability → Fault recovery:** During normal operation, the primary Supply Chain Platform application instance fails. The platform detects the fault, transfers service to a healthy instance and restores access within 5 seconds with no more than 1 failed request. **[H, H]**
+- **Performance → Peak-load response:** During the busiest period, 500 concurrent users submit core requests. The Supply Chain Platform completes at least 95% within 2 seconds while sustaining 500 requests per second. **[H, H]**
+- **Security → Access control:** During normal operation, an unauthenticated actor requests a protected record. The Supply Chain Platform rejects the request within 1 second, exposes no protected fields and creates an audit record. **[H, H]**
+- **Modifiability → Localized business-rule change:** During development, the product owner requests a new validation rule. One developer implements and tests it within 2 working days while changing no more than 2 modules. **[M, H]**
+
+**First architectural driver:** start with the Availability, Performance and Security leaves because each is **[H, H]**. If one leaf must be selected, choose Availability fault recovery first: it requires early structural decisions such as redundancy, health monitoring, failover and state recovery that are expensive to retrofit. The H/M/L ratings are an example and should be confirmed with the Supply Chain Platform stakeholders.
 
 
 
