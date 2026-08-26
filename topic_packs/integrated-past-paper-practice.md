@@ -22,7 +22,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core University Student Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the University Student Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -50,7 +50,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core University Student Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the University Student Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -78,7 +78,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core University Student Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the University Student Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -106,7 +106,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core University Student Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the University Student Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -134,7 +134,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Trading Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Trading Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -162,7 +162,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Trading Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Trading Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -190,7 +190,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Trading Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Trading Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -218,7 +218,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Trading Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Trading Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -246,7 +246,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Electricity Utility App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Electricity Utility App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -274,7 +274,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Electricity Utility App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Electricity Utility App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -302,7 +302,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Electricity Utility App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Electricity Utility App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -330,7 +330,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Electricity Utility App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Electricity Utility App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -358,7 +358,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Game Store requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Game Store application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -386,7 +386,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Game Store requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Game Store application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -414,7 +414,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Game Store requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Game Store application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -442,7 +442,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Game Store requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Game Store application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -470,7 +470,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Flight Booking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Flight Booking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -498,7 +498,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Flight Booking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Flight Booking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -526,7 +526,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Flight Booking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Flight Booking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -554,7 +554,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Flight Booking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Flight Booking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -582,7 +582,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core E-Commerce Marketplace requests during a five-minute peak; Environment: peak-load operation; Artifact: the E-Commerce Marketplace application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -610,7 +610,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core E-Commerce Marketplace requests during a five-minute peak; Environment: peak-load operation; Artifact: the E-Commerce Marketplace application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -638,7 +638,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core E-Commerce Marketplace requests during a five-minute peak; Environment: peak-load operation; Artifact: the E-Commerce Marketplace application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -666,7 +666,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core E-Commerce Marketplace requests during a five-minute peak; Environment: peak-load operation; Artifact: the E-Commerce Marketplace application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -694,7 +694,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Banking App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Banking App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -722,7 +722,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Banking App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Banking App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -750,7 +750,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Banking App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Banking App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -778,7 +778,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Banking App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Banking App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -806,7 +806,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Food Delivery Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Food Delivery Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -834,7 +834,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Food Delivery Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Food Delivery Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -862,7 +862,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Food Delivery Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Food Delivery Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -890,7 +890,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Food Delivery Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Food Delivery Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -918,7 +918,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hospital Information System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hospital Information System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -946,7 +946,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hospital Information System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hospital Information System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -974,7 +974,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hospital Information System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hospital Information System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1002,7 +1002,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hospital Information System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hospital Information System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1030,7 +1030,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Traffic Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Traffic Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1058,7 +1058,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Traffic Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Traffic Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1086,7 +1086,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Traffic Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Traffic Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1114,7 +1114,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Traffic Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Traffic Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1142,7 +1142,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Ride-Hailing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Ride-Hailing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1170,7 +1170,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Ride-Hailing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Ride-Hailing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1198,7 +1198,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Ride-Hailing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Ride-Hailing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1226,7 +1226,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Ride-Hailing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Ride-Hailing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1254,7 +1254,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Video Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Video Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1282,7 +1282,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Video Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Video Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1310,7 +1310,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Video Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Video Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1338,7 +1338,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Video Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Video Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1366,7 +1366,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Music Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Music Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1394,7 +1394,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Music Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Music Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1422,7 +1422,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Music Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Music Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1450,7 +1450,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Music Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Music Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1478,7 +1478,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cloud File Storage requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cloud File Storage application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1506,7 +1506,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cloud File Storage requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cloud File Storage application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1534,7 +1534,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cloud File Storage requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cloud File Storage application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1562,7 +1562,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cloud File Storage requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cloud File Storage application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1590,7 +1590,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Social Network requests during a five-minute peak; Environment: peak-load operation; Artifact: the Social Network application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1618,7 +1618,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Social Network requests during a five-minute peak; Environment: peak-load operation; Artifact: the Social Network application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1646,7 +1646,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Social Network requests during a five-minute peak; Environment: peak-load operation; Artifact: the Social Network application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1674,7 +1674,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Social Network requests during a five-minute peak; Environment: peak-load operation; Artifact: the Social Network application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1702,7 +1702,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Home Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Home Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1730,7 +1730,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Home Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Home Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1758,7 +1758,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Home Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Home Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1786,7 +1786,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Smart Home Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Home Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1814,7 +1814,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Logistics Tracking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Logistics Tracking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1842,7 +1842,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Logistics Tracking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Logistics Tracking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1870,7 +1870,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Logistics Tracking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Logistics Tracking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1898,7 +1898,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Logistics Tracking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Logistics Tracking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1926,7 +1926,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Insurance Claims System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Insurance Claims System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1954,7 +1954,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Insurance Claims System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Insurance Claims System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -1982,7 +1982,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Insurance Claims System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Insurance Claims System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2010,7 +2010,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Insurance Claims System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Insurance Claims System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2038,7 +2038,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hotel Booking Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hotel Booking Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2066,7 +2066,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hotel Booking Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hotel Booking Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2094,7 +2094,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hotel Booking Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hotel Booking Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2122,7 +2122,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Hotel Booking Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hotel Booking Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2150,7 +2150,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Learning Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Learning Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2178,7 +2178,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Learning Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Learning Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2206,7 +2206,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Learning Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Learning Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2234,7 +2234,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Learning Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Learning Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2262,7 +2262,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cybersecurity Monitoring Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cybersecurity Monitoring Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2290,7 +2290,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cybersecurity Monitoring Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cybersecurity Monitoring Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2318,7 +2318,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cybersecurity Monitoring Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cybersecurity Monitoring Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2346,7 +2346,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Cybersecurity Monitoring Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cybersecurity Monitoring Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2374,7 +2374,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Warehouse Management System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Warehouse Management System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2402,7 +2402,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Warehouse Management System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Warehouse Management System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2430,7 +2430,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Warehouse Management System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Warehouse Management System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2458,7 +2458,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Warehouse Management System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Warehouse Management System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2486,7 +2486,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Payroll and HR System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Payroll and HR System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2514,7 +2514,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Payroll and HR System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Payroll and HR System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2542,7 +2542,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Payroll and HR System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Payroll and HR System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2570,7 +2570,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Payroll and HR System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Payroll and HR System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2598,7 +2598,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Telecommunications Billing requests during a five-minute peak; Environment: peak-load operation; Artifact: the Telecommunications Billing application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2626,7 +2626,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Telecommunications Billing requests during a five-minute peak; Environment: peak-load operation; Artifact: the Telecommunications Billing application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2654,7 +2654,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Telecommunications Billing requests during a five-minute peak; Environment: peak-load operation; Artifact: the Telecommunications Billing application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2682,7 +2682,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Telecommunications Billing requests during a five-minute peak; Environment: peak-load operation; Artifact: the Telecommunications Billing application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2710,7 +2710,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Library requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Library application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2738,7 +2738,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Library requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Library application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2766,7 +2766,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Library requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Library application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2794,7 +2794,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Library requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Library application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2822,7 +2822,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Medical Imaging Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Medical Imaging Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2850,7 +2850,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Medical Imaging Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Medical Imaging Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2878,7 +2878,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Medical Imaging Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Medical Imaging Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2906,7 +2906,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Medical Imaging Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Medical Imaging Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2934,7 +2934,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Manufacturing Monitoring requests during a five-minute peak; Environment: peak-load operation; Artifact: the Manufacturing Monitoring application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2962,7 +2962,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Manufacturing Monitoring requests during a five-minute peak; Environment: peak-load operation; Artifact: the Manufacturing Monitoring application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -2990,7 +2990,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Manufacturing Monitoring requests during a five-minute peak; Environment: peak-load operation; Artifact: the Manufacturing Monitoring application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3018,7 +3018,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Manufacturing Monitoring requests during a five-minute peak; Environment: peak-load operation; Artifact: the Manufacturing Monitoring application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3046,7 +3046,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Government Citizen Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the Government Citizen Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3074,7 +3074,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Government Citizen Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the Government Citizen Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3102,7 +3102,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Government Citizen Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the Government Citizen Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3130,7 +3130,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Government Citizen Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the Government Citizen Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3158,7 +3158,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Wallet requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Wallet application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3186,7 +3186,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Wallet requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Wallet application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3214,7 +3214,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Wallet requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Wallet application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3242,7 +3242,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Digital Wallet requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Wallet application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3270,7 +3270,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Event Ticketing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Event Ticketing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3298,7 +3298,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Event Ticketing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Event Ticketing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3326,7 +3326,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Event Ticketing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Event Ticketing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3354,7 +3354,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Event Ticketing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Event Ticketing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3382,7 +3382,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Auction Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Auction Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3410,7 +3410,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Auction Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Auction Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3438,7 +3438,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Auction Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Auction Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3466,7 +3466,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Online Auction Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Auction Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3494,7 +3494,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Model-View-Controller** - isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized; likely trade-off: Modifiability vs Performance.
 R2: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Supply Chain Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Supply Chain Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3522,7 +3522,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Supply Chain Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Supply Chain Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3550,7 +3550,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Publish-Subscribe** - decouples producers from consumers so subscribers can be added/removed without changing publisher correctness; likely trade-off: Modifiability vs Performance (latency).
 R2: **Peer-to-Peer** - distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears; likely trade-off: Availability vs Security.
 R3: **Client-Server** - centralizes service provision so many distributed clients can request the same managed resource or functionality; likely trade-off: Modifiability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Supply Chain Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Supply Chain Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3578,7 +3578,7 @@ c) Choose one runtime quality attribute for one feature and specify it formally 
 R1: **Pipe-and-Filter** - decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently; likely trade-off: Modifiability vs Performance (latency).
 R2: **Shared-Data** - mediates producers and consumers through persistent shared storage so they need not directly know each other; likely trade-off: Modifiability vs Performance.
 R3: **Service-Oriented Architecture** - consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows; likely trade-off: Interoperability vs Performance.
-Formal scenario: state all six labels and make Response Measure objectively testable. Tie the quality to the selected feature.
+**Part (c) worked Performance scenario for Requirement 2:** Source: 500 concurrent authenticated users; Stimulus: submit core Supply Chain Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Supply Chain Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
 
 
 
@@ -3599,7 +3599,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The University Student Portal must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core University Student Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the University Student Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The University Student Portal must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active University Student Portal service instance crashes; Environment: normal operation with active user sessions; Artifact: the University Student Portal service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The University Student Portal must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected University Student Portal record; Environment: normal operation while legitimate users are active; Artifact: the University Student Portal API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the University Student Portal must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing University Student Portal transaction; Environment: development and test time before release; Artifact: the University Student Portal application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core University Student Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the University Student Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active University Student Portal service instance crashes; Environment: normal operation with active user sessions; Artifact: the University Student Portal service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected University Student Portal record; Environment: normal operation while legitimate users are active; Artifact: the University Student Portal API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing University Student Portal transaction; Environment: development and test time before release; Artifact: the University Student Portal application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main University Student Portal views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -3621,7 +3649,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **UI/business/data concerns must be separated so changes can be localized**. Elements: Layer; relation/connector: allowed-to-use relation. Enhanced candidate: Modifiability because groups semantically coherent responsibilities behind public interfaces and restricts dependencies between layers. Threatened candidate: Performance because extra layers add indirection, up-front structure and possible performance penalties.
+**Part (a) - concrete feature:** In the University Student Portal, separate the University Student Portal presentation, application rules and persistence adapters so each can change locally. Layer is suitable because its problem is to separate implementation responsibilities and control allowed dependencies.
+
+**Part (b) - elements and relations:** the University Student Portal UI is the presentation layer, use-case services form the application layer, domain rules form the domain layer and repository adapters form the data-access layer; allowed-to-use dependencies point downward through those interfaces.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because cohesive responsibilities and restricted dependencies localize most changes.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because extra layer crossings add calls, translation and indirection. A concrete failure case is that a University Student Portal screen queries the database directly. A schema change then forces changes in both UI and persistence code, so the intended modifiability benefit is lost; the bypass may be faster, but it breaks the layer constraint
 
 
 
@@ -3642,7 +3676,13 @@ c) The system must notify dependent objects when a seat becomes available in a p
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the University Student Portal, Subject = UniversityStudentPortalStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the University Student Portal, Context = UniversityStudentPortalTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -3663,7 +3703,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Online Trading Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Online Trading Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Trading Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Online Trading Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Online Trading Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Trading Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Online Trading Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Online Trading Platform record; Environment: normal operation while legitimate users are active; Artifact: the Online Trading Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Online Trading Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Online Trading Platform transaction; Environment: development and test time before release; Artifact: the Online Trading Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Online Trading Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Trading Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Online Trading Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Trading Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Online Trading Platform record; Environment: normal operation while legitimate users are active; Artifact: the Online Trading Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Online Trading Platform transaction; Environment: development and test time before release; Artifact: the Online Trading Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Online Trading Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -3685,7 +3753,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **clients should not know which distributed server provides the requested service**. Elements: Client, Server, Broker, Client-side proxy, Server-side proxy; relation/connector: broker-mediated request/reply / attachment. Enhanced candidate: Modifiability because uses an intermediary to locate providers, forward requests and return results, allowing bindings to change dynamically. Threatened candidate: Performance because the broker adds latency, may bottleneck, may be a single point of failure and increases testing/security complexity.
+**Part (a) - concrete feature:** In the Online Trading Platform, let Online Trading Platform clients invoke a replaceable remote provider through one location-transparent intermediary. Broker is suitable because its problem is to invoke distributed providers without binding clients to provider identity or location.
+
+**Part (b) - elements and relations:** the Online Trading Platform front end is the Client, remote capability instances are Servers, and the Broker plus optional proxies locate a Server, forward the request and return the reply.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because providers can move or be replaced while clients remain bound to the broker contract.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because broker mediation adds network hops and processing latency. A concrete failure case is that all Online Trading Platform calls pass through one unreplicated Broker that becomes overloaded. Provider location is hidden, but requests still time out, so the pattern does not guarantee performance or availability
 
 
 
@@ -3706,7 +3780,13 @@ c) The system must notify users/components when a watched stock reaches a target
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Online Trading Platform Web/Mobile Client --HTTPS request/reply--> Online Trading Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Online Trading Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -3727,7 +3807,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Electricity Utility App must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Electricity Utility App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Electricity Utility App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Electricity Utility App must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Electricity Utility App service instance crashes; Environment: normal operation with active user sessions; Artifact: the Electricity Utility App service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Electricity Utility App must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Electricity Utility App record; Environment: normal operation while legitimate users are active; Artifact: the Electricity Utility App API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Electricity Utility App must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Electricity Utility App transaction; Environment: development and test time before release; Artifact: the Electricity Utility App application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Electricity Utility App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Electricity Utility App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Electricity Utility App service instance crashes; Environment: normal operation with active user sessions; Artifact: the Electricity Utility App service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Electricity Utility App record; Environment: normal operation while legitimate users are active; Artifact: the Electricity Utility App API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Electricity Utility App transaction; Environment: development and test time before release; Artifact: the Electricity Utility App application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Electricity Utility App has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -3749,7 +3857,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Performance. Frequent Model changes can trigger many View refreshes or notifications, adding update overhead and latency.
+**Part (a) - concrete feature:** In the Electricity Utility App, show the same Electricity Utility App state in multiple synchronized views while keeping input logic separate. Model-View-Controller is suitable because its problem is to separate application state and behavior from presentation and user-input handling.
+
+**Part (b) - elements and relations:** the Electricity Utility App domain data and operations form the Model, dashboard/table/mobile representations are Views, and input handlers are Controllers; Controllers update the Model and Views refresh from Model notifications.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because presentation and input behavior can change without rewriting core application state and rules.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because frequent Model changes can trigger excessive View notifications and rendering. A concrete failure case is that each Electricity Utility App View keeps its own copy of business state and writes it directly. The views become inconsistent and every rule change must be duplicated, so MVC no longer provides synchronized state or localized UI change
 
 
 
@@ -3770,7 +3884,13 @@ c) The system must notify dependent objects when consumption exceeds a threshold
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Electricity Utility App, Subject = ElectricityUtilityAppStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Electricity Utility App, Context = ElectricityUtilityAppTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -3791,7 +3911,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Digital Game Store must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Game Store requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Game Store application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Digital Game Store must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Digital Game Store service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Game Store service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Digital Game Store must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Game Store record; Environment: normal operation while legitimate users are active; Artifact: the Digital Game Store API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Digital Game Store must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Game Store transaction; Environment: development and test time before release; Artifact: the Digital Game Store application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Game Store requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Game Store application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Digital Game Store service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Game Store service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Game Store record; Environment: normal operation while legitimate users are active; Artifact: the Digital Game Store API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Game Store transaction; Environment: development and test time before release; Artifact: the Digital Game Store application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Digital Game Store views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -3813,7 +3961,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance (latency) because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+**Part (a) - concrete feature:** In the Digital Game Store, process Digital Game Store input through validation, normalization, enrichment and output stages. Pipe-and-Filter is suitable because its problem is to perform successive independent transformations of data.
+
+**Part (b) - elements and relations:** each Digital Game Store transformation is a Filter and each Pipe carries one Filter's output to the next Filter without performing transformation logic itself.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because independent Filters can be replaced, reordered or reused behind stable data contracts.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because buffering, copying, conversion and synchronization across many stages add latency. A concrete failure case is that one Digital Game Store Filter depends on another Filter's private state and emits an incompatible format. Stages can no longer be replaced independently and conversion failures stop the pipeline, so the claimed modifiability and throughput are not achieved
 
 
 
@@ -3834,7 +3988,13 @@ c) The system must notify users/components when a new game matches user preferen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Digital Game Store Web/Mobile Client --HTTPS request/reply--> Digital Game Store Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Digital Game Store status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -3855,7 +4015,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Flight Booking System must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Flight Booking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Flight Booking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Flight Booking System must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Flight Booking System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Flight Booking System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Flight Booking System must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Flight Booking System record; Environment: normal operation while legitimate users are active; Artifact: the Flight Booking System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Flight Booking System must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Flight Booking System transaction; Environment: development and test time before release; Artifact: the Flight Booking System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Flight Booking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Flight Booking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Flight Booking System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Flight Booking System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Flight Booking System record; Environment: normal operation while legitimate users are active; Artifact: the Flight Booking System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Flight Booking System transaction; Environment: development and test time before release; Artifact: the Flight Booking System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Flight Booking System views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -3877,7 +4065,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Modifiability because common services are factored into one location or a small number of locations, localizing changes shared by many clients. Threatened candidate: Performance because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
+**Part (a) - concrete feature:** In the Flight Booking System, let distributed Flight Booking System clients request authoritative records and operations from a central service. Client-Server is suitable because its problem is to provide shared centrally managed services to distributed requesters.
+
+**Part (b) - elements and relations:** web/mobile applications are Clients, the Flight Booking System application service is the Server, and network request/reply connectors carry operations and results.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because a shared service or rule can be changed centrally instead of in every client.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because concentrated requests can make the Server or its shared dependencies a bottleneck. A concrete failure case is that the Flight Booking System uses one Server and one database with no failover. A server crash stops every Client, while a peak burst queues all requests, so centralization alone guarantees neither Availability nor Performance
 
 
 
@@ -3898,7 +4092,13 @@ c) The system must notify dependent objects when a fare promotion becomes availa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Flight Booking System, Subject = FlightBookingSystemStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Flight Booking System, Context = FlightBookingSystemTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -3919,7 +4119,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The E-Commerce Marketplace must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core E-Commerce Marketplace requests during a five-minute peak; Environment: peak-load operation; Artifact: the E-Commerce Marketplace application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The E-Commerce Marketplace must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active E-Commerce Marketplace service instance crashes; Environment: normal operation with active user sessions; Artifact: the E-Commerce Marketplace service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The E-Commerce Marketplace must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected E-Commerce Marketplace record; Environment: normal operation while legitimate users are active; Artifact: the E-Commerce Marketplace API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the E-Commerce Marketplace must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing E-Commerce Marketplace transaction; Environment: development and test time before release; Artifact: the E-Commerce Marketplace application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core E-Commerce Marketplace requests during a five-minute peak; Environment: peak-load operation; Artifact: the E-Commerce Marketplace application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active E-Commerce Marketplace service instance crashes; Environment: normal operation with active user sessions; Artifact: the E-Commerce Marketplace service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected E-Commerce Marketplace record; Environment: normal operation while legitimate users are active; Artifact: the E-Commerce Marketplace API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing E-Commerce Marketplace transaction; Environment: development and test time before release; Artifact: the E-Commerce Marketplace application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main E-Commerce Marketplace views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -3941,7 +4169,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **participants both request and provide resources and can join/leave dynamically**. Elements: Peer, optional specialized peer/supernode; relation/connector: peer request/reply and discovery/search. Enhanced candidate: Availability because distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears. Threatened candidate: Security because decentralization makes trust, consistency, backup, recovery and security management harder; small networks may not achieve expected qualities.
+**Part (a) - concrete feature:** In the E-Commerce Marketplace, let E-Commerce Marketplace participant devices contribute and retrieve shared resources as peers. Peer-to-Peer is suitable because its problem is to share resources among equal participants that can both request and provide.
+
+**Part (b) - elements and relations:** each participating E-Commerce Marketplace node is a Peer, optional supernodes assist discovery, and peer request/reply plus discovery connectors locate and transfer resources.
+
+**Part (c) - enhanced quality:** **Availability** may improve because overlapping providers can keep a resource available when one Peer leaves.
+
+**Part (d) - trade-off/weakness:** **Security** may be threatened because decentralized trust, authorization and data validation are harder to control consistently. A concrete failure case is that a required E-Commerce Marketplace resource exists on only one Peer and discovery has no alternative route. When that Peer disconnects the resource is unavailable, proving that the P2P label alone does not guarantee Availability
 
 
 
@@ -3962,7 +4196,13 @@ c) The system must notify users/components when a saved product goes on sale. De
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** E-Commerce Marketplace Web/Mobile Client --HTTPS request/reply--> E-Commerce Marketplace Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the E-Commerce Marketplace status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -3983,7 +4223,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Digital Banking App must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Banking App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Banking App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Digital Banking App must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Digital Banking App service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Banking App service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Digital Banking App must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Banking App record; Environment: normal operation while legitimate users are active; Artifact: the Digital Banking App API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Digital Banking App must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Banking App transaction; Environment: development and test time before release; Artifact: the Digital Banking App application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Banking App requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Banking App application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Digital Banking App service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Banking App service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Banking App record; Environment: normal operation while legitimate users are active; Artifact: the Digital Banking App API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Banking App transaction; Environment: development and test time before release; Artifact: the Digital Banking App application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Digital Banking App has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -4005,7 +4273,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the system must integrate third-party/legacy/network services behind published interfaces**. Elements: Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server; relation/connector: SOAP, REST request/reply, asynchronous messaging. Enhanced candidate: Interoperability because consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows. Threatened candidate: Performance because middleware adds overhead and failure points; independent providers can evolve outside your control and services may give no performance guarantees.
+**Part (a) - concrete feature:** In the Digital Banking App, integrate the Digital Banking App with independently managed payment, identity or external-data services. Service-Oriented Architecture is suitable because its problem is to integrate independently managed network services through published contracts.
+
+**Part (b) - elements and relations:** the Digital Banking App is a Service Consumer, external capabilities are Service Providers, published REST/SOAP/message contracts are connectors, and a registry, ESB or orchestrator is added only where discovery, transformation or workflow is required.
+
+**Part (c) - enhanced quality:** **Interoperability** may improve because consumers depend on published syntax and semantics rather than provider implementation technology.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because remote calls and middleware add latency and independently managed providers may offer weak performance guarantees. A concrete failure case is that an external Digital Banking App provider changes message semantics without versioning its contract. Calls still connect but data is interpreted incorrectly, so published syntax alone has not delivered meaningful Interoperability
 
 
 
@@ -4026,7 +4300,13 @@ c) The system must notify dependent objects when a suspicious transaction is det
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Digital Banking App, Subject = DigitalBankingAppStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Digital Banking App, Context = DigitalBankingAppTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4047,7 +4327,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Food Delivery Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Food Delivery Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Food Delivery Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Food Delivery Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Food Delivery Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Food Delivery Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Food Delivery Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Food Delivery Platform record; Environment: normal operation while legitimate users are active; Artifact: the Food Delivery Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Food Delivery Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Food Delivery Platform transaction; Environment: development and test time before release; Artifact: the Food Delivery Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Food Delivery Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Food Delivery Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Food Delivery Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Food Delivery Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Food Delivery Platform record; Environment: normal operation while legitimate users are active; Artifact: the Food Delivery Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Food Delivery Platform transaction; Environment: development and test time before release; Artifact: the Food Delivery Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Food Delivery Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4069,7 +4377,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance (latency) because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+**Part (a) - concrete feature:** In the Food Delivery Platform, send Food Delivery Platform status events to all currently interested users and components without naming each recipient. Publish-Subscribe is suitable because its problem is to distribute events to a changing set of interested runtime consumers.
+
+**Part (b) - elements and relations:** the Food Delivery Platform status component is the Publisher, interested notification/dashboard components are Subscribers, and an event distributor or publish-subscribe connector handles announce/listen delivery.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because Subscribers can be added or removed without changing Publisher correctness.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because event distribution, fan-out and queueing add latency and processing work. A concrete failure case is that the Food Delivery Platform Publisher directly calls a fixed list of recipients and waits synchronously for each one. A slow recipient delays all delivery and adding a recipient changes the Publisher, so the intended decoupling and latency characteristics are lost
 
 
 
@@ -4090,7 +4404,13 @@ c) The system must notify users/components when the rider is approaching the del
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Food Delivery Platform Web/Mobile Client --HTTPS request/reply--> Food Delivery Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Food Delivery Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -4111,7 +4431,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Hospital Information System must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Hospital Information System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hospital Information System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Hospital Information System must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Hospital Information System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Hospital Information System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Hospital Information System must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Hospital Information System record; Environment: normal operation while legitimate users are active; Artifact: the Hospital Information System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Hospital Information System must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Hospital Information System transaction; Environment: development and test time before release; Artifact: the Hospital Information System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Hospital Information System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hospital Information System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Hospital Information System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Hospital Information System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Hospital Information System record; Environment: normal operation while legitimate users are active; Artifact: the Hospital Information System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Hospital Information System transaction; Environment: development and test time before release; Artifact: the Hospital Information System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Hospital Information System has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -4133,7 +4481,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **many independent components must read/write a common persistent repository**. Elements: Shared-data store, Data accessor; relation/connector: data reading/writing connector. Enhanced candidate: Modifiability because mediates producers and consumers through persistent shared storage so they need not directly know each other. Threatened candidate: Performance because the store can bottleneck or fail centrally, while accessors remain coupled to shared schema and consistency/security concerns.
+**Part (a) - concrete feature:** In the Hospital Information System, let independent Hospital Information System services read and update the same authoritative records. Shared-Data is suitable because its problem is to let independent components communicate indirectly through a common persistent repository.
+
+**Part (b) - elements and relations:** the Hospital Information System database is the Shared-Data Store, application/reporting/processing services are Data Accessors, and read/write transactions are the data-access connectors.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because producers and consumers need not call or know one another directly.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because the central Store can bottleneck and all Accessors remain coupled to its schema and consistency rules. A concrete failure case is that every Hospital Information System Accessor depends on undocumented columns and one database instance. A schema change breaks all Accessors and a store outage stops them together, so indirect communication has created schema coupling and a single failure point
 
 
 
@@ -4154,7 +4508,13 @@ c) The system must notify dependent objects when a critical lab value is recorde
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Hospital Information System, Subject = HospitalInformationSystemStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Hospital Information System, Context = HospitalInformationSystemTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4175,7 +4535,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Smart Traffic Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Smart Traffic Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Traffic Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Smart Traffic Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Smart Traffic Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Smart Traffic Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Smart Traffic Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Smart Traffic Platform record; Environment: normal operation while legitimate users are active; Artifact: the Smart Traffic Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Smart Traffic Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Smart Traffic Platform transaction; Environment: development and test time before release; Artifact: the Smart Traffic Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Smart Traffic Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Traffic Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Smart Traffic Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Smart Traffic Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Smart Traffic Platform record; Environment: normal operation while legitimate users are active; Artifact: the Smart Traffic Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Smart Traffic Platform transaction; Environment: development and test time before release; Artifact: the Smart Traffic Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Smart Traffic Platform has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -4197,7 +4585,13 @@ d) Describe a source-grounded weakness or condition under which the performance 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput. Weakness candidate: Performance can degrade when framework overhead dominates a small workload or partition skew leaves one worker as the straggler.
+**Part (a) - concrete feature:** In the Smart Traffic Platform, analyze the Smart Traffic Platform historical event/log dataset in parallel. Map-Reduce is suitable because its problem is to process very large batch datasets using infrastructure-managed parallel work.
+
+**Part (b) - elements and relations:** Map workers process Smart Traffic Platform input partitions into key/value records, infrastructure shuffles and sorts equal keys, Reduce workers aggregate each group, and the infrastructure deploys, monitors and reruns tasks.
+
+**Part (c) - enhanced quality:** **Performance** may improve because parallel Map and Reduce tasks can increase batch throughput.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because startup, shuffle/sort and synchronization overhead or partition skew can erase the parallel benefit. A concrete failure case is that one Smart Traffic Platform partition contains most records for a hot key. One Reduce worker becomes the straggler while others idle, so total completion time is set by that worker and adding workers does not deliver the expected Performance gain
 
 
 
@@ -4218,7 +4612,13 @@ c) The system must notify users/components when congestion exceeds a threshold. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Smart Traffic Platform Web/Mobile Client --HTTPS request/reply--> Smart Traffic Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Smart Traffic Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -4239,7 +4639,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Ride-Hailing Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Ride-Hailing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Ride-Hailing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Ride-Hailing Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Ride-Hailing Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Ride-Hailing Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Ride-Hailing Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Ride-Hailing Platform record; Environment: normal operation while legitimate users are active; Artifact: the Ride-Hailing Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Ride-Hailing Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Ride-Hailing Platform transaction; Environment: development and test time before release; Artifact: the Ride-Hailing Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Ride-Hailing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Ride-Hailing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Ride-Hailing Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Ride-Hailing Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Ride-Hailing Platform record; Environment: normal operation while legitimate users are active; Artifact: the Ride-Hailing Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Ride-Hailing Platform transaction; Environment: development and test time before release; Artifact: the Ride-Hailing Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Ride-Hailing Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4261,7 +4689,13 @@ d) Describe a source-grounded weakness of the pattern and explain its cause. [2]
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **runtime components are grouped into tiers and deployed/scaled/securitized separately**. Elements: Tier (logical grouping of runtime components); relation/connector: communicates-with relation, allocated-to relation. Enhanced candidate: Security because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies. Weakness candidate: substantial cost and complexity because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
+**Part (a) - concrete feature:** In the Ride-Hailing Platform, deploy the Ride-Hailing Platform presentation, application processing and data management on separate runtime tiers. Multi-Tier is suitable because its problem is to separate runtime component groups into independently deployed tiers.
+
+**Part (b) - elements and relations:** browser/mobile components form the presentation tier, Ride-Hailing Platform services form the application tier, and database components form the data tier; network request/reply connectors cross only permitted tier boundaries.
+
+**Part (c) - enhanced quality:** **Security** may improve because separate deployment boundaries allow different exposure, privileges and protection policies.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because cross-tier network calls, serialization and chatty interactions add latency. A concrete failure case is that all Ride-Hailing Platform tiers are placed on one host with the database publicly reachable. The diagram still has three named tiers, but there is no real failure or security isolation, so the expected Security and Availability consequences are not achieved
 
 
 
@@ -4282,7 +4716,13 @@ c) The system must notify dependent objects when a driver accepts the trip. Deci
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Ride-Hailing Platform, Subject = RideHailingPlatformStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Ride-Hailing Platform, Context = RideHailingPlatformTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4303,7 +4743,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Video Streaming Service must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Video Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Video Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Video Streaming Service must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Video Streaming Service service instance crashes; Environment: normal operation with active user sessions; Artifact: the Video Streaming Service service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Video Streaming Service must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Video Streaming Service record; Environment: normal operation while legitimate users are active; Artifact: the Video Streaming Service API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Video Streaming Service must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Video Streaming Service transaction; Environment: development and test time before release; Artifact: the Video Streaming Service application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Video Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Video Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Video Streaming Service service instance crashes; Environment: normal operation with active user sessions; Artifact: the Video Streaming Service service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Video Streaming Service record; Environment: normal operation while legitimate users are active; Artifact: the Video Streaming Service API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Video Streaming Service transaction; Environment: development and test time before release; Artifact: the Video Streaming Service application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Video Streaming Service views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4325,7 +4793,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **UI/business/data concerns must be separated so changes can be localized**. Elements: Layer; relation/connector: allowed-to-use relation. Enhanced candidate: Modifiability because groups semantically coherent responsibilities behind public interfaces and restricts dependencies between layers. Threatened candidate: Performance because extra layers add indirection, up-front structure and possible performance penalties.
+**Part (a) - concrete feature:** In the Video Streaming Service, separate the Video Streaming Service presentation, application rules and persistence adapters so each can change locally. Layer is suitable because its problem is to separate implementation responsibilities and control allowed dependencies.
+
+**Part (b) - elements and relations:** the Video Streaming Service UI is the presentation layer, use-case services form the application layer, domain rules form the domain layer and repository adapters form the data-access layer; allowed-to-use dependencies point downward through those interfaces.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because cohesive responsibilities and restricted dependencies localize most changes.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because extra layer crossings add calls, translation and indirection. A concrete failure case is that a Video Streaming Service screen queries the database directly. A schema change then forces changes in both UI and persistence code, so the intended modifiability benefit is lost; the bypass may be faster, but it breaks the layer constraint
 
 
 
@@ -4346,7 +4820,13 @@ c) The system must notify users/components when a followed series releases an ep
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Video Streaming Service Web/Mobile Client --HTTPS request/reply--> Video Streaming Service Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Video Streaming Service status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -4367,7 +4847,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Music Streaming Service must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Music Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Music Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Music Streaming Service must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Music Streaming Service service instance crashes; Environment: normal operation with active user sessions; Artifact: the Music Streaming Service service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Music Streaming Service must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Music Streaming Service record; Environment: normal operation while legitimate users are active; Artifact: the Music Streaming Service API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Music Streaming Service must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Music Streaming Service transaction; Environment: development and test time before release; Artifact: the Music Streaming Service application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Music Streaming Service requests during a five-minute peak; Environment: peak-load operation; Artifact: the Music Streaming Service application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Music Streaming Service service instance crashes; Environment: normal operation with active user sessions; Artifact: the Music Streaming Service service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Music Streaming Service record; Environment: normal operation while legitimate users are active; Artifact: the Music Streaming Service API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Music Streaming Service transaction; Environment: development and test time before release; Artifact: the Music Streaming Service application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Music Streaming Service views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4389,7 +4897,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **clients should not know which distributed server provides the requested service**. Elements: Client, Server, Broker, Client-side proxy, Server-side proxy; relation/connector: broker-mediated request/reply / attachment. Enhanced candidate: Modifiability because uses an intermediary to locate providers, forward requests and return results, allowing bindings to change dynamically. Threatened candidate: Performance because the broker adds latency, may bottleneck, may be a single point of failure and increases testing/security complexity.
+**Part (a) - concrete feature:** In the Music Streaming Service, let Music Streaming Service clients invoke a replaceable remote provider through one location-transparent intermediary. Broker is suitable because its problem is to invoke distributed providers without binding clients to provider identity or location.
+
+**Part (b) - elements and relations:** the Music Streaming Service front end is the Client, remote capability instances are Servers, and the Broker plus optional proxies locate a Server, forward the request and return the reply.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because providers can move or be replaced while clients remain bound to the broker contract.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because broker mediation adds network hops and processing latency. A concrete failure case is that all Music Streaming Service calls pass through one unreplicated Broker that becomes overloaded. Provider location is hidden, but requests still time out, so the pattern does not guarantee performance or availability
 
 
 
@@ -4410,7 +4924,13 @@ c) The system must notify dependent objects when a followed artist releases a tr
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Music Streaming Service, Subject = MusicStreamingServiceStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Music Streaming Service, Context = MusicStreamingServiceTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4431,7 +4951,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Cloud File Storage must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Cloud File Storage requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cloud File Storage application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Cloud File Storage must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Cloud File Storage service instance crashes; Environment: normal operation with active user sessions; Artifact: the Cloud File Storage service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Cloud File Storage must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Cloud File Storage record; Environment: normal operation while legitimate users are active; Artifact: the Cloud File Storage API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Cloud File Storage must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Cloud File Storage transaction; Environment: development and test time before release; Artifact: the Cloud File Storage application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Cloud File Storage requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cloud File Storage application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Cloud File Storage service instance crashes; Environment: normal operation with active user sessions; Artifact: the Cloud File Storage service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Cloud File Storage record; Environment: normal operation while legitimate users are active; Artifact: the Cloud File Storage API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Cloud File Storage transaction; Environment: development and test time before release; Artifact: the Cloud File Storage application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Cloud File Storage views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4453,7 +5001,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Performance. Frequent Model changes can trigger many View refreshes or notifications, adding update overhead and latency.
+**Part (a) - concrete feature:** In the Cloud File Storage, show the same Cloud File Storage state in multiple synchronized views while keeping input logic separate. Model-View-Controller is suitable because its problem is to separate application state and behavior from presentation and user-input handling.
+
+**Part (b) - elements and relations:** the Cloud File Storage domain data and operations form the Model, dashboard/table/mobile representations are Views, and input handlers are Controllers; Controllers update the Model and Views refresh from Model notifications.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because presentation and input behavior can change without rewriting core application state and rules.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because frequent Model changes can trigger excessive View notifications and rendering. A concrete failure case is that each Cloud File Storage View keeps its own copy of business state and writes it directly. The views become inconsistent and every rule change must be duplicated, so MVC no longer provides synchronized state or localized UI change
 
 
 
@@ -4474,7 +5028,13 @@ c) The system must notify users/components when a shared file is modified. Decid
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Cloud File Storage Web/Mobile Client --HTTPS request/reply--> Cloud File Storage Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Cloud File Storage status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -4495,7 +5055,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Social Network must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Social Network requests during a five-minute peak; Environment: peak-load operation; Artifact: the Social Network application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Social Network must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Social Network service instance crashes; Environment: normal operation with active user sessions; Artifact: the Social Network service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Social Network must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Social Network record; Environment: normal operation while legitimate users are active; Artifact: the Social Network API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Social Network must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Social Network transaction; Environment: development and test time before release; Artifact: the Social Network application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Social Network requests during a five-minute peak; Environment: peak-load operation; Artifact: the Social Network application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Social Network service instance crashes; Environment: normal operation with active user sessions; Artifact: the Social Network service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Social Network record; Environment: normal operation while legitimate users are active; Artifact: the Social Network API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Social Network transaction; Environment: development and test time before release; Artifact: the Social Network application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Social Network views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4517,7 +5105,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance (latency) because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+**Part (a) - concrete feature:** In the Social Network, process Social Network input through validation, normalization, enrichment and output stages. Pipe-and-Filter is suitable because its problem is to perform successive independent transformations of data.
+
+**Part (b) - elements and relations:** each Social Network transformation is a Filter and each Pipe carries one Filter's output to the next Filter without performing transformation logic itself.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because independent Filters can be replaced, reordered or reused behind stable data contracts.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because buffering, copying, conversion and synchronization across many stages add latency. A concrete failure case is that one Social Network Filter depends on another Filter's private state and emits an incompatible format. Stages can no longer be replaced independently and conversion failures stop the pipeline, so the claimed modifiability and throughput are not achieved
 
 
 
@@ -4538,7 +5132,13 @@ c) The system must notify dependent objects when a followed account publishes co
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Social Network, Subject = SocialNetworkStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Social Network, Context = SocialNetworkTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4559,7 +5159,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Smart Home Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Smart Home Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Home Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Smart Home Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Smart Home Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Smart Home Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Smart Home Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Smart Home Platform record; Environment: normal operation while legitimate users are active; Artifact: the Smart Home Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Smart Home Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Smart Home Platform transaction; Environment: development and test time before release; Artifact: the Smart Home Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Smart Home Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Smart Home Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Smart Home Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Smart Home Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Smart Home Platform record; Environment: normal operation while legitimate users are active; Artifact: the Smart Home Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Smart Home Platform transaction; Environment: development and test time before release; Artifact: the Smart Home Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Smart Home Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4581,7 +5209,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Modifiability because common services are factored into one location or a small number of locations, localizing changes shared by many clients. Threatened candidate: Performance because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
+**Part (a) - concrete feature:** In the Smart Home Platform, let distributed Smart Home Platform clients request authoritative records and operations from a central service. Client-Server is suitable because its problem is to provide shared centrally managed services to distributed requesters.
+
+**Part (b) - elements and relations:** web/mobile applications are Clients, the Smart Home Platform application service is the Server, and network request/reply connectors carry operations and results.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because a shared service or rule can be changed centrally instead of in every client.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because concentrated requests can make the Server or its shared dependencies a bottleneck. A concrete failure case is that the Smart Home Platform uses one Server and one database with no failover. A server crash stops every Client, while a peak burst queues all requests, so centralization alone guarantees neither Availability nor Performance
 
 
 
@@ -4602,7 +5236,13 @@ c) The system must notify users/components when a smoke sensor enters alarm stat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Smart Home Platform Web/Mobile Client --HTTPS request/reply--> Smart Home Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Smart Home Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -4623,7 +5263,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Logistics Tracking System must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Logistics Tracking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Logistics Tracking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Logistics Tracking System must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Logistics Tracking System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Logistics Tracking System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Logistics Tracking System must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Logistics Tracking System record; Environment: normal operation while legitimate users are active; Artifact: the Logistics Tracking System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Logistics Tracking System must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Logistics Tracking System transaction; Environment: development and test time before release; Artifact: the Logistics Tracking System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Logistics Tracking System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Logistics Tracking System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Logistics Tracking System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Logistics Tracking System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Logistics Tracking System record; Environment: normal operation while legitimate users are active; Artifact: the Logistics Tracking System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Logistics Tracking System transaction; Environment: development and test time before release; Artifact: the Logistics Tracking System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Logistics Tracking System views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4645,7 +5313,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **participants both request and provide resources and can join/leave dynamically**. Elements: Peer, optional specialized peer/supernode; relation/connector: peer request/reply and discovery/search. Enhanced candidate: Availability because distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears. Threatened candidate: Security because decentralization makes trust, consistency, backup, recovery and security management harder; small networks may not achieve expected qualities.
+**Part (a) - concrete feature:** In the Logistics Tracking System, let Logistics Tracking System participant devices contribute and retrieve shared resources as peers. Peer-to-Peer is suitable because its problem is to share resources among equal participants that can both request and provide.
+
+**Part (b) - elements and relations:** each participating Logistics Tracking System node is a Peer, optional supernodes assist discovery, and peer request/reply plus discovery connectors locate and transfer resources.
+
+**Part (c) - enhanced quality:** **Availability** may improve because overlapping providers can keep a resource available when one Peer leaves.
+
+**Part (d) - trade-off/weakness:** **Security** may be threatened because decentralized trust, authorization and data validation are harder to control consistently. A concrete failure case is that a required Logistics Tracking System resource exists on only one Peer and discovery has no alternative route. When that Peer disconnects the resource is unavailable, proving that the P2P label alone does not guarantee Availability
 
 
 
@@ -4666,7 +5340,13 @@ c) The system must notify dependent objects when a shipment is delayed. Decide w
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Logistics Tracking System, Subject = LogisticsTrackingSystemStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Logistics Tracking System, Context = LogisticsTrackingSystemTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4687,7 +5367,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Insurance Claims System must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Insurance Claims System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Insurance Claims System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Insurance Claims System must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Insurance Claims System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Insurance Claims System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Insurance Claims System must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Insurance Claims System record; Environment: normal operation while legitimate users are active; Artifact: the Insurance Claims System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Insurance Claims System must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Insurance Claims System transaction; Environment: development and test time before release; Artifact: the Insurance Claims System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Insurance Claims System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Insurance Claims System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Insurance Claims System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Insurance Claims System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Insurance Claims System record; Environment: normal operation while legitimate users are active; Artifact: the Insurance Claims System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Insurance Claims System transaction; Environment: development and test time before release; Artifact: the Insurance Claims System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Insurance Claims System has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -4709,7 +5417,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the system must integrate third-party/legacy/network services behind published interfaces**. Elements: Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server; relation/connector: SOAP, REST request/reply, asynchronous messaging. Enhanced candidate: Interoperability because consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows. Threatened candidate: Performance because middleware adds overhead and failure points; independent providers can evolve outside your control and services may give no performance guarantees.
+**Part (a) - concrete feature:** In the Insurance Claims System, integrate the Insurance Claims System with independently managed payment, identity or external-data services. Service-Oriented Architecture is suitable because its problem is to integrate independently managed network services through published contracts.
+
+**Part (b) - elements and relations:** the Insurance Claims System is a Service Consumer, external capabilities are Service Providers, published REST/SOAP/message contracts are connectors, and a registry, ESB or orchestrator is added only where discovery, transformation or workflow is required.
+
+**Part (c) - enhanced quality:** **Interoperability** may improve because consumers depend on published syntax and semantics rather than provider implementation technology.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because remote calls and middleware add latency and independently managed providers may offer weak performance guarantees. A concrete failure case is that an external Insurance Claims System provider changes message semantics without versioning its contract. Calls still connect but data is interpreted incorrectly, so published syntax alone has not delivered meaningful Interoperability
 
 
 
@@ -4730,7 +5444,13 @@ c) The system must notify users/components when a high-risk claim is submitted. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Insurance Claims System Web/Mobile Client --HTTPS request/reply--> Insurance Claims System Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Insurance Claims System status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -4751,7 +5471,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Hotel Booking Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Hotel Booking Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hotel Booking Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Hotel Booking Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Hotel Booking Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Hotel Booking Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Hotel Booking Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Hotel Booking Platform record; Environment: normal operation while legitimate users are active; Artifact: the Hotel Booking Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Hotel Booking Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Hotel Booking Platform transaction; Environment: development and test time before release; Artifact: the Hotel Booking Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Hotel Booking Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Hotel Booking Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Hotel Booking Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Hotel Booking Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Hotel Booking Platform record; Environment: normal operation while legitimate users are active; Artifact: the Hotel Booking Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Hotel Booking Platform transaction; Environment: development and test time before release; Artifact: the Hotel Booking Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Hotel Booking Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4773,7 +5521,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance (latency) because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+**Part (a) - concrete feature:** In the Hotel Booking Platform, send Hotel Booking Platform status events to all currently interested users and components without naming each recipient. Publish-Subscribe is suitable because its problem is to distribute events to a changing set of interested runtime consumers.
+
+**Part (b) - elements and relations:** the Hotel Booking Platform status component is the Publisher, interested notification/dashboard components are Subscribers, and an event distributor or publish-subscribe connector handles announce/listen delivery.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because Subscribers can be added or removed without changing Publisher correctness.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because event distribution, fan-out and queueing add latency and processing work. A concrete failure case is that the Hotel Booking Platform Publisher directly calls a fixed list of recipients and waits synchronously for each one. A slow recipient delays all delivery and adding a recipient changes the Publisher, so the intended decoupling and latency characteristics are lost
 
 
 
@@ -4794,7 +5548,13 @@ c) The system must notify dependent objects when a saved hotel drops below a tar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Hotel Booking Platform, Subject = HotelBookingPlatformStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Hotel Booking Platform, Context = HotelBookingPlatformTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4815,7 +5575,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Online Learning Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Online Learning Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Learning Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Online Learning Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Online Learning Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Learning Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Online Learning Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Online Learning Platform record; Environment: normal operation while legitimate users are active; Artifact: the Online Learning Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Online Learning Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Online Learning Platform transaction; Environment: development and test time before release; Artifact: the Online Learning Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Online Learning Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Learning Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Online Learning Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Learning Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Online Learning Platform record; Environment: normal operation while legitimate users are active; Artifact: the Online Learning Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Online Learning Platform transaction; Environment: development and test time before release; Artifact: the Online Learning Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Online Learning Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4837,7 +5625,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **many independent components must read/write a common persistent repository**. Elements: Shared-data store, Data accessor; relation/connector: data reading/writing connector. Enhanced candidate: Modifiability because mediates producers and consumers through persistent shared storage so they need not directly know each other. Threatened candidate: Performance because the store can bottleneck or fail centrally, while accessors remain coupled to shared schema and consistency/security concerns.
+**Part (a) - concrete feature:** In the Online Learning Platform, let independent Online Learning Platform services read and update the same authoritative records. Shared-Data is suitable because its problem is to let independent components communicate indirectly through a common persistent repository.
+
+**Part (b) - elements and relations:** the Online Learning Platform database is the Shared-Data Store, application/reporting/processing services are Data Accessors, and read/write transactions are the data-access connectors.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because producers and consumers need not call or know one another directly.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because the central Store can bottleneck and all Accessors remain coupled to its schema and consistency rules. A concrete failure case is that every Online Learning Platform Accessor depends on undocumented columns and one database instance. A schema change breaks all Accessors and a store outage stops them together, so indirect communication has created schema coupling and a single failure point
 
 
 
@@ -4858,7 +5652,13 @@ c) The system must notify users/components when a new lesson is released. Decide
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Online Learning Platform Web/Mobile Client --HTTPS request/reply--> Online Learning Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Online Learning Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -4879,7 +5679,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Cybersecurity Monitoring Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Cybersecurity Monitoring Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cybersecurity Monitoring Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Cybersecurity Monitoring Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Cybersecurity Monitoring Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Cybersecurity Monitoring Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Cybersecurity Monitoring Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Cybersecurity Monitoring Platform record; Environment: normal operation while legitimate users are active; Artifact: the Cybersecurity Monitoring Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Cybersecurity Monitoring Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Cybersecurity Monitoring Platform transaction; Environment: development and test time before release; Artifact: the Cybersecurity Monitoring Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Cybersecurity Monitoring Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Cybersecurity Monitoring Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Cybersecurity Monitoring Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Cybersecurity Monitoring Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Cybersecurity Monitoring Platform record; Environment: normal operation while legitimate users are active; Artifact: the Cybersecurity Monitoring Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Cybersecurity Monitoring Platform transaction; Environment: development and test time before release; Artifact: the Cybersecurity Monitoring Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Cybersecurity Monitoring Platform has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -4901,7 +5729,13 @@ d) Describe a source-grounded weakness or condition under which the performance 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput. Weakness candidate: Performance can degrade when framework overhead dominates a small workload or partition skew leaves one worker as the straggler.
+**Part (a) - concrete feature:** In the Cybersecurity Monitoring Platform, analyze the Cybersecurity Monitoring Platform historical event/log dataset in parallel. Map-Reduce is suitable because its problem is to process very large batch datasets using infrastructure-managed parallel work.
+
+**Part (b) - elements and relations:** Map workers process Cybersecurity Monitoring Platform input partitions into key/value records, infrastructure shuffles and sorts equal keys, Reduce workers aggregate each group, and the infrastructure deploys, monitors and reruns tasks.
+
+**Part (c) - enhanced quality:** **Performance** may improve because parallel Map and Reduce tasks can increase batch throughput.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because startup, shuffle/sort and synchronization overhead or partition skew can erase the parallel benefit. A concrete failure case is that one Cybersecurity Monitoring Platform partition contains most records for a hot key. One Reduce worker becomes the straggler while others idle, so total completion time is set by that worker and adding workers does not deliver the expected Performance gain
 
 
 
@@ -4922,7 +5756,13 @@ c) The system must notify dependent objects when a high-severity intrusion signa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Cybersecurity Monitoring Platform, Subject = CybersecurityMonitoringPlatformStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Cybersecurity Monitoring Platform, Context = CybersecurityMonitoringPlatformTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -4943,7 +5783,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Warehouse Management System must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Warehouse Management System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Warehouse Management System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Warehouse Management System must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Warehouse Management System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Warehouse Management System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Warehouse Management System must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Warehouse Management System record; Environment: normal operation while legitimate users are active; Artifact: the Warehouse Management System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Warehouse Management System must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Warehouse Management System transaction; Environment: development and test time before release; Artifact: the Warehouse Management System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Warehouse Management System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Warehouse Management System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Warehouse Management System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Warehouse Management System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Warehouse Management System record; Environment: normal operation while legitimate users are active; Artifact: the Warehouse Management System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Warehouse Management System transaction; Environment: development and test time before release; Artifact: the Warehouse Management System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Warehouse Management System views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -4965,7 +5833,13 @@ d) Describe a source-grounded weakness of the pattern and explain its cause. [2]
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **runtime components are grouped into tiers and deployed/scaled/securitized separately**. Elements: Tier (logical grouping of runtime components); relation/connector: communicates-with relation, allocated-to relation. Enhanced candidate: Security because groups computationally independent runtime components and constrains cross-tier communication, permitting specialized deployment, scaling and security policies. Weakness candidate: substantial cost and complexity because separate tiers add hardware, software, design, implementation and operational overhead that may not be justified for a simple system.
+**Part (a) - concrete feature:** In the Warehouse Management System, deploy the Warehouse Management System presentation, application processing and data management on separate runtime tiers. Multi-Tier is suitable because its problem is to separate runtime component groups into independently deployed tiers.
+
+**Part (b) - elements and relations:** browser/mobile components form the presentation tier, Warehouse Management System services form the application tier, and database components form the data tier; network request/reply connectors cross only permitted tier boundaries.
+
+**Part (c) - enhanced quality:** **Security** may improve because separate deployment boundaries allow different exposure, privileges and protection policies.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because cross-tier network calls, serialization and chatty interactions add latency. A concrete failure case is that all Warehouse Management System tiers are placed on one host with the database publicly reachable. The diagram still has three named tiers, but there is no real failure or security isolation, so the expected Security and Availability consequences are not achieved
 
 
 
@@ -4986,7 +5860,13 @@ c) The system must notify users/components when inventory drops below reorder le
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Warehouse Management System Web/Mobile Client --HTTPS request/reply--> Warehouse Management System Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Warehouse Management System status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -5007,7 +5887,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Payroll and HR System must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Payroll and HR System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Payroll and HR System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Payroll and HR System must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Payroll and HR System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Payroll and HR System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Payroll and HR System must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Payroll and HR System record; Environment: normal operation while legitimate users are active; Artifact: the Payroll and HR System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Payroll and HR System must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Payroll and HR System transaction; Environment: development and test time before release; Artifact: the Payroll and HR System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Payroll and HR System requests during a five-minute peak; Environment: peak-load operation; Artifact: the Payroll and HR System application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Payroll and HR System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Payroll and HR System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Payroll and HR System record; Environment: normal operation while legitimate users are active; Artifact: the Payroll and HR System API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Payroll and HR System transaction; Environment: development and test time before release; Artifact: the Payroll and HR System application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Payroll and HR System views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -5029,7 +5937,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **UI/business/data concerns must be separated so changes can be localized**. Elements: Layer; relation/connector: allowed-to-use relation. Enhanced candidate: Modifiability because groups semantically coherent responsibilities behind public interfaces and restricts dependencies between layers. Threatened candidate: Performance because extra layers add indirection, up-front structure and possible performance penalties.
+**Part (a) - concrete feature:** In the Payroll and HR System, separate the Payroll and HR System presentation, application rules and persistence adapters so each can change locally. Layer is suitable because its problem is to separate implementation responsibilities and control allowed dependencies.
+
+**Part (b) - elements and relations:** the Payroll and HR System UI is the presentation layer, use-case services form the application layer, domain rules form the domain layer and repository adapters form the data-access layer; allowed-to-use dependencies point downward through those interfaces.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because cohesive responsibilities and restricted dependencies localize most changes.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because extra layer crossings add calls, translation and indirection. A concrete failure case is that a Payroll and HR System screen queries the database directly. A schema change then forces changes in both UI and persistence code, so the intended modifiability benefit is lost; the bypass may be faster, but it breaks the layer constraint
 
 
 
@@ -5050,7 +5964,13 @@ c) The system must notify dependent objects when a leave request changes state. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Payroll and HR System, Subject = PayrollAndHRSystemStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Payroll and HR System, Context = PayrollAndHRSystemTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -5071,7 +5991,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Telecommunications Billing must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Telecommunications Billing requests during a five-minute peak; Environment: peak-load operation; Artifact: the Telecommunications Billing application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Telecommunications Billing must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Telecommunications Billing service instance crashes; Environment: normal operation with active user sessions; Artifact: the Telecommunications Billing service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Telecommunications Billing must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Telecommunications Billing record; Environment: normal operation while legitimate users are active; Artifact: the Telecommunications Billing API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Telecommunications Billing must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Telecommunications Billing transaction; Environment: development and test time before release; Artifact: the Telecommunications Billing application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Telecommunications Billing requests during a five-minute peak; Environment: peak-load operation; Artifact: the Telecommunications Billing application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Telecommunications Billing service instance crashes; Environment: normal operation with active user sessions; Artifact: the Telecommunications Billing service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Telecommunications Billing record; Environment: normal operation while legitimate users are active; Artifact: the Telecommunications Billing API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Telecommunications Billing transaction; Environment: development and test time before release; Artifact: the Telecommunications Billing application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Telecommunications Billing has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -5093,7 +6041,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **clients should not know which distributed server provides the requested service**. Elements: Client, Server, Broker, Client-side proxy, Server-side proxy; relation/connector: broker-mediated request/reply / attachment. Enhanced candidate: Modifiability because uses an intermediary to locate providers, forward requests and return results, allowing bindings to change dynamically. Threatened candidate: Performance because the broker adds latency, may bottleneck, may be a single point of failure and increases testing/security complexity.
+**Part (a) - concrete feature:** In the Telecommunications Billing, let Telecommunications Billing clients invoke a replaceable remote provider through one location-transparent intermediary. Broker is suitable because its problem is to invoke distributed providers without binding clients to provider identity or location.
+
+**Part (b) - elements and relations:** the Telecommunications Billing front end is the Client, remote capability instances are Servers, and the Broker plus optional proxies locate a Server, forward the request and return the reply.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because providers can move or be replaced while clients remain bound to the broker contract.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because broker mediation adds network hops and processing latency. A concrete failure case is that all Telecommunications Billing calls pass through one unreplicated Broker that becomes overloaded. Provider location is hidden, but requests still time out, so the pattern does not guarantee performance or availability
 
 
 
@@ -5114,7 +6068,13 @@ c) The system must notify users/components when mobile data usage exceeds a thre
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Telecommunications Billing Web/Mobile Client --HTTPS request/reply--> Telecommunications Billing Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Telecommunications Billing status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -5135,7 +6095,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Digital Library must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Library requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Library application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Digital Library must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Digital Library service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Library service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Digital Library must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Library record; Environment: normal operation while legitimate users are active; Artifact: the Digital Library API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Digital Library must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Library transaction; Environment: development and test time before release; Artifact: the Digital Library application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Library requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Library application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Digital Library service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Library service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Library record; Environment: normal operation while legitimate users are active; Artifact: the Digital Library API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Library transaction; Environment: development and test time before release; Artifact: the Digital Library application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Digital Library views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -5157,7 +6145,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the same underlying data must appear in multiple responsive UI representations**. Elements: Model, View, Controller; relation/connector: notification/events/callbacks and method invocations. Enhanced candidate: Modifiability because isolates application state in the model, presentation in views and user-action mediation in controllers; notifications keep views synchronized. Threatened candidate: Performance. Frequent Model changes can trigger many View refreshes or notifications, adding update overhead and latency.
+**Part (a) - concrete feature:** In the Digital Library, show the same Digital Library state in multiple synchronized views while keeping input logic separate. Model-View-Controller is suitable because its problem is to separate application state and behavior from presentation and user-input handling.
+
+**Part (b) - elements and relations:** the Digital Library domain data and operations form the Model, dashboard/table/mobile representations are Views, and input handlers are Controllers; Controllers update the Model and Views refresh from Model notifications.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because presentation and input behavior can change without rewriting core application state and rules.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because frequent Model changes can trigger excessive View notifications and rendering. A concrete failure case is that each Digital Library View keeps its own copy of business state and writes it directly. The views become inconsistent and every rule change must be duplicated, so MVC no longer provides synchronized state or localized UI change
 
 
 
@@ -5178,7 +6172,13 @@ c) The system must notify dependent objects when a reserved title becomes availa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Digital Library, Subject = DigitalLibraryStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Digital Library, Context = DigitalLibraryTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -5199,7 +6199,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Medical Imaging Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Medical Imaging Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Medical Imaging Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Medical Imaging Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Medical Imaging Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Medical Imaging Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Medical Imaging Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Medical Imaging Platform record; Environment: normal operation while legitimate users are active; Artifact: the Medical Imaging Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Medical Imaging Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Medical Imaging Platform transaction; Environment: development and test time before release; Artifact: the Medical Imaging Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Medical Imaging Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Medical Imaging Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Medical Imaging Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Medical Imaging Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Medical Imaging Platform record; Environment: normal operation while legitimate users are active; Artifact: the Medical Imaging Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Medical Imaging Platform transaction; Environment: development and test time before release; Artifact: the Medical Imaging Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Medical Imaging Platform has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -5221,7 +6249,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **input data undergoes a sequence of transformations before becoming output**. Elements: Filter, Pipe; relation/connector: pipe carrying data streams between filter ports. Enhanced candidate: Modifiability because decomposes processing into independent filters; buffered pipes permit pipeline parallelism where different filters process different data items concurrently. Threatened candidate: Performance (latency) because many stages add buffering/synchronization/data-copy overhead and a failed mandatory stage can stop the end-to-end pipeline.
+**Part (a) - concrete feature:** In the Medical Imaging Platform, process Medical Imaging Platform input through validation, normalization, enrichment and output stages. Pipe-and-Filter is suitable because its problem is to perform successive independent transformations of data.
+
+**Part (b) - elements and relations:** each Medical Imaging Platform transformation is a Filter and each Pipe carries one Filter's output to the next Filter without performing transformation logic itself.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because independent Filters can be replaced, reordered or reused behind stable data contracts.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because buffering, copying, conversion and synchronization across many stages add latency. A concrete failure case is that one Medical Imaging Platform Filter depends on another Filter's private state and emits an incompatible format. Stages can no longer be replaced independently and conversion failures stop the pipeline, so the claimed modifiability and throughput are not achieved
 
 
 
@@ -5242,7 +6276,13 @@ c) The system must notify users/components when a priority study arrives. Decide
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Medical Imaging Platform Web/Mobile Client --HTTPS request/reply--> Medical Imaging Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Medical Imaging Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -5263,7 +6303,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Manufacturing Monitoring must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Manufacturing Monitoring requests during a five-minute peak; Environment: peak-load operation; Artifact: the Manufacturing Monitoring application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Manufacturing Monitoring must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Manufacturing Monitoring service instance crashes; Environment: normal operation with active user sessions; Artifact: the Manufacturing Monitoring service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Manufacturing Monitoring must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Manufacturing Monitoring record; Environment: normal operation while legitimate users are active; Artifact: the Manufacturing Monitoring API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Manufacturing Monitoring must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Manufacturing Monitoring transaction; Environment: development and test time before release; Artifact: the Manufacturing Monitoring application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Manufacturing Monitoring requests during a five-minute peak; Environment: peak-load operation; Artifact: the Manufacturing Monitoring application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Manufacturing Monitoring service instance crashes; Environment: normal operation with active user sessions; Artifact: the Manufacturing Monitoring service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Manufacturing Monitoring record; Environment: normal operation while legitimate users are active; Artifact: the Manufacturing Monitoring API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Manufacturing Monitoring transaction; Environment: development and test time before release; Artifact: the Manufacturing Monitoring application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Manufacturing Monitoring has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -5285,7 +6353,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **users on distributed devices retrieve centrally managed online services/data**. Elements: Client, Server; relation/connector: request/reply connector. Enhanced candidate: Modifiability because common services are factored into one location or a small number of locations, localizing changes shared by many clients. Threatened candidate: Performance because many client requests can make the server a bottleneck, increasing response time or reducing throughput.
+**Part (a) - concrete feature:** In the Manufacturing Monitoring, let distributed Manufacturing Monitoring clients request authoritative records and operations from a central service. Client-Server is suitable because its problem is to provide shared centrally managed services to distributed requesters.
+
+**Part (b) - elements and relations:** web/mobile applications are Clients, the Manufacturing Monitoring application service is the Server, and network request/reply connectors carry operations and results.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because a shared service or rule can be changed centrally instead of in every client.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because concentrated requests can make the Server or its shared dependencies a bottleneck. A concrete failure case is that the Manufacturing Monitoring uses one Server and one database with no failover. A server crash stops every Client, while a peak burst queues all requests, so centralization alone guarantees neither Availability nor Performance
 
 
 
@@ -5306,7 +6380,13 @@ c) The system must notify dependent objects when machine vibration exceeds a saf
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Manufacturing Monitoring, Subject = ManufacturingMonitoringStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Manufacturing Monitoring, Context = ManufacturingMonitoringTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -5327,7 +6407,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Government Citizen Portal must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Government Citizen Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the Government Citizen Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Government Citizen Portal must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Government Citizen Portal service instance crashes; Environment: normal operation with active user sessions; Artifact: the Government Citizen Portal service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Government Citizen Portal must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Government Citizen Portal record; Environment: normal operation while legitimate users are active; Artifact: the Government Citizen Portal API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Government Citizen Portal must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Government Citizen Portal transaction; Environment: development and test time before release; Artifact: the Government Citizen Portal application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Government Citizen Portal requests during a five-minute peak; Environment: peak-load operation; Artifact: the Government Citizen Portal application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Government Citizen Portal service instance crashes; Environment: normal operation with active user sessions; Artifact: the Government Citizen Portal service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Government Citizen Portal record; Environment: normal operation while legitimate users are active; Artifact: the Government Citizen Portal API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Government Citizen Portal transaction; Environment: development and test time before release; Artifact: the Government Citizen Portal application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Government Citizen Portal views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -5349,7 +6457,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **participants both request and provide resources and can join/leave dynamically**. Elements: Peer, optional specialized peer/supernode; relation/connector: peer request/reply and discovery/search. Enhanced candidate: Availability because distributes both demand and service/resource provision across peers; overlapping peer capabilities provide alternatives when one peer disappears. Threatened candidate: Security because decentralization makes trust, consistency, backup, recovery and security management harder; small networks may not achieve expected qualities.
+**Part (a) - concrete feature:** In the Government Citizen Portal, let Government Citizen Portal participant devices contribute and retrieve shared resources as peers. Peer-to-Peer is suitable because its problem is to share resources among equal participants that can both request and provide.
+
+**Part (b) - elements and relations:** each participating Government Citizen Portal node is a Peer, optional supernodes assist discovery, and peer request/reply plus discovery connectors locate and transfer resources.
+
+**Part (c) - enhanced quality:** **Availability** may improve because overlapping providers can keep a resource available when one Peer leaves.
+
+**Part (d) - trade-off/weakness:** **Security** may be threatened because decentralized trust, authorization and data validation are harder to control consistently. A concrete failure case is that a required Government Citizen Portal resource exists on only one Peer and discovery has no alternative route. When that Peer disconnects the resource is unavailable, proving that the P2P label alone does not guarantee Availability
 
 
 
@@ -5370,7 +6484,13 @@ c) The system must notify users/components when an application status changes. D
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Government Citizen Portal Web/Mobile Client --HTTPS request/reply--> Government Citizen Portal Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Government Citizen Portal status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -5391,7 +6511,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Digital Wallet must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Wallet requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Wallet application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Digital Wallet must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Digital Wallet service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Wallet service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Digital Wallet must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Wallet record; Environment: normal operation while legitimate users are active; Artifact: the Digital Wallet API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Digital Wallet must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Wallet transaction; Environment: development and test time before release; Artifact: the Digital Wallet application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Digital Wallet requests during a five-minute peak; Environment: peak-load operation; Artifact: the Digital Wallet application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Digital Wallet service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Wallet service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Digital Wallet record; Environment: normal operation while legitimate users are active; Artifact: the Digital Wallet API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Digital Wallet transaction; Environment: development and test time before release; Artifact: the Digital Wallet application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Digital Wallet has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -5413,7 +6561,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **the system must integrate third-party/legacy/network services behind published interfaces**. Elements: Service provider, Service consumer, optional ESB, optional service registry, optional orchestration server; relation/connector: SOAP, REST request/reply, asynchronous messaging. Enhanced candidate: Interoperability because consumers use published service contracts; registries hide provider identity/location, ESBs route/transform messages, and orchestration coordinates workflows. Threatened candidate: Performance because middleware adds overhead and failure points; independent providers can evolve outside your control and services may give no performance guarantees.
+**Part (a) - concrete feature:** In the Digital Wallet, integrate the Digital Wallet with independently managed payment, identity or external-data services. Service-Oriented Architecture is suitable because its problem is to integrate independently managed network services through published contracts.
+
+**Part (b) - elements and relations:** the Digital Wallet is a Service Consumer, external capabilities are Service Providers, published REST/SOAP/message contracts are connectors, and a registry, ESB or orchestrator is added only where discovery, transformation or workflow is required.
+
+**Part (c) - enhanced quality:** **Interoperability** may improve because consumers depend on published syntax and semantics rather than provider implementation technology.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because remote calls and middleware add latency and independently managed providers may offer weak performance guarantees. A concrete failure case is that an external Digital Wallet provider changes message semantics without versioning its contract. Calls still connect but data is interpreted incorrectly, so published syntax alone has not delivered meaningful Interoperability
 
 
 
@@ -5434,7 +6588,13 @@ c) The system must notify dependent objects when a transaction exceeds a configu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Digital Wallet, Subject = DigitalWalletStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Digital Wallet, Context = DigitalWalletTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -5455,7 +6615,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Event Ticketing Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Event Ticketing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Event Ticketing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Event Ticketing Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Event Ticketing Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Event Ticketing Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Event Ticketing Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Event Ticketing Platform record; Environment: normal operation while legitimate users are active; Artifact: the Event Ticketing Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Event Ticketing Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Event Ticketing Platform transaction; Environment: development and test time before release; Artifact: the Event Ticketing Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Event Ticketing Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Event Ticketing Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Event Ticketing Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Event Ticketing Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Event Ticketing Platform record; Environment: normal operation while legitimate users are active; Artifact: the Event Ticketing Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Event Ticketing Platform transaction; Environment: development and test time before release; Artifact: the Event Ticketing Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Event Ticketing Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -5477,7 +6665,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **notify a changing/unknown set of interested consumers when an event occurs**. Elements: Publisher component, Subscriber component, event distributor / publish-subscribe connector; relation/connector: publish-subscribe connector with announce/listen roles. Enhanced candidate: Modifiability because decouples producers from consumers so subscribers can be added/removed without changing publisher correctness. Threatened candidate: Performance (latency) because event distribution adds latency; ordering and delivery may be less controlled or guaranteed and broadcast can waste work.
+**Part (a) - concrete feature:** In the Event Ticketing Platform, send Event Ticketing Platform status events to all currently interested users and components without naming each recipient. Publish-Subscribe is suitable because its problem is to distribute events to a changing set of interested runtime consumers.
+
+**Part (b) - elements and relations:** the Event Ticketing Platform status component is the Publisher, interested notification/dashboard components are Subscribers, and an event distributor or publish-subscribe connector handles announce/listen delivery.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because Subscribers can be added or removed without changing Publisher correctness.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because event distribution, fan-out and queueing add latency and processing work. A concrete failure case is that the Event Ticketing Platform Publisher directly calls a fixed list of recipients and waits synchronously for each one. A slow recipient delays all delivery and adding a recipient changes the Publisher, so the intended decoupling and latency characteristics are lost
 
 
 
@@ -5498,7 +6692,13 @@ c) The system must notify users/components when tickets for a followed event go 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Event Ticketing Platform Web/Mobile Client --HTTPS request/reply--> Event Ticketing Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Event Ticketing Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 
@@ -5519,7 +6719,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Online Auction Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Online Auction Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Auction Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Online Auction Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Online Auction Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Auction Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Online Auction Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Online Auction Platform record; Environment: normal operation while legitimate users are active; Artifact: the Online Auction Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Online Auction Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Online Auction Platform transaction; Environment: development and test time before release; Artifact: the Online Auction Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Online Auction Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Online Auction Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Online Auction Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Auction Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Online Auction Platform record; Environment: normal operation while legitimate users are active; Artifact: the Online Auction Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Online Auction Platform transaction; Environment: development and test time before release; Artifact: the Online Auction Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **semiformal UML** for the main Online Auction Platform views. It provides standardized element/relation semantics and useful tool support at moderate cost. Informal box-and-line notation is cheaper but too ambiguous for dependable cross-team documentation; formal notation is more precise and analyzable but its cost and specialist skill are not justified for this normal commercial context. A safety- or mission-critical version would justify formal notation for its critical views.
 
 
 
@@ -5541,7 +6769,13 @@ d) Describe a different quality attribute that may be threatened and explain the
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **many independent components must read/write a common persistent repository**. Elements: Shared-data store, Data accessor; relation/connector: data reading/writing connector. Enhanced candidate: Modifiability because mediates producers and consumers through persistent shared storage so they need not directly know each other. Threatened candidate: Performance because the store can bottleneck or fail centrally, while accessors remain coupled to shared schema and consistency/security concerns.
+**Part (a) - concrete feature:** In the Online Auction Platform, let independent Online Auction Platform services read and update the same authoritative records. Shared-Data is suitable because its problem is to let independent components communicate indirectly through a common persistent repository.
+
+**Part (b) - elements and relations:** the Online Auction Platform database is the Shared-Data Store, application/reporting/processing services are Data Accessors, and read/write transactions are the data-access connectors.
+
+**Part (c) - enhanced quality:** **Modifiability** may improve because producers and consumers need not call or know one another directly.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because the central Store can bottleneck and all Accessors remain coupled to its schema and consistency rules. A concrete failure case is that every Online Auction Platform Accessor depends on undocumented columns and one database instance. A schema change breaks all Accessors and a store outage stops them together, so indirect communication has created schema coupling and a single failure point
 
 
 
@@ -5562,7 +6796,13 @@ c) The system must notify dependent objects when another bidder exceeds the user
 
 <details><summary>Answer framework / marking outline</summary>
 
-Behavioral patterns concern algorithms, responsibilities and communication/control among objects. Choose two valid catalog patterns and state intent + example + motivation. Part (c): **Observer** - one-to-many dependency; Subject notifies Observer dependents automatically when state changes, avoiding tight coupling to a fixed number of dependents.
+**Part (a):** Behavioral patterns organize algorithms, responsibilities and communication/control among collaborating objects.
+
+**Part (b), example 1 - Observer:** In the Online Auction Platform, Subject = OnlineAuctionPlatformStatusModel; Observers = DashboardView and NotificationAdapter; attach()/detach() maintain the changing set and notifyObservers() calls update() after status changes. It is motivated by a changing set of dependents that must update without concrete coupling to the Subject.
+
+**Part (b), example 2 - State:** In the Online Auction Platform, Context = OnlineAuctionPlatformTransaction; State = TransactionState; ConcreteStates = Draft, Submitted and Completed; submit() and cancel() behave through the current State and transitions replace that State. It is motivated by state-specific behavior that would otherwise be spread across conditionals.
+
+**Part (c): Observer.** Model the condition named in the question as Subject state; the dependent UI/notification objects implement Observer and register with the Subject. When the condition occurs, notifyObservers() invokes update() on the current dependents. State is not the answer because the requirement is notification of other objects, not variation of one Context's own behavior.
 
 
 
@@ -5583,7 +6823,35 @@ c) Choose between informal, semiformal and formal notation for documenting the m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Part (a): give four logically distinct, measurable six-part scenarios. Part (b): **Utility → QA → refinement → same scenario [B,A]**; reuse the exact scenarios rather than inventing unrelated leaves. Part (c): semiformal/UML is usually defensible for a normal commercial system; justify informal/formal alternatives and change the recommendation if the system is safety/mission critical.
+**Part (a) - four worked requirements**
+
+**S1 Performance**
+Informal: The Supply Chain Platform must respond quickly during peak demand.
+Formal: Source: 500 concurrent authenticated users; Stimulus: submit core Supply Chain Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Supply Chain Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.
+
+**S2 Availability**
+Informal: The Supply Chain Platform must continue serving users after one application instance fails.
+Formal: Source: an application-server fault; Stimulus: the active Supply Chain Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Supply Chain Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.
+
+**S3 Security**
+Informal: The Supply Chain Platform must prevent unauthorised access to protected records.
+Formal: Source: an unauthenticated external actor; Stimulus: requests a protected Supply Chain Platform record; Environment: normal operation while legitimate users are active; Artifact: the Supply Chain Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.
+
+**S4 Modifiability**
+Informal: A business-rule change in the Supply Chain Platform must remain localized and inexpensive.
+Formal: Source: the product owner; Stimulus: requests a new validation rule for an existing Supply Chain Platform transaction; Environment: development and test time before release; Artifact: the Supply Chain Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.
+
+**Part (b) - Utility Tree using the exact same scenarios**
+
+- Utility -> Performance -> Peak response -> **S1: Source: 500 concurrent authenticated users; Stimulus: submit core Supply Chain Platform requests during a five-minute peak; Environment: peak-load operation; Artifact: the Supply Chain Platform application service; Response: process and return each result without exhausting resources; Response Measure: at least 95% complete within 2 seconds while sustaining 500 requests/second.** [H,H]
+- Utility -> Availability -> Fault recovery -> **S2: Source: an application-server fault; Stimulus: the active Supply Chain Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Supply Chain Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request.** [H,H]
+- Utility -> Security -> Access control -> **S3: Source: an unauthenticated external actor; Stimulus: requests a protected Supply Chain Platform record; Environment: normal operation while legitimate users are active; Artifact: the Supply Chain Platform API and protected store; Response: reject the request, disclose no protected fields and create an audit event; Response Measure: zero protected fields are disclosed; rejection occurs within 1 second and one audit record is written.** [H,H]
+- Utility -> Modifiability -> Localized rule change -> **S4: Source: the product owner; Stimulus: requests a new validation rule for an existing Supply Chain Platform transaction; Environment: development and test time before release; Artifact: the Supply Chain Platform application and rule modules; Response: implement and regression-test the rule without changing unrelated behavior; Response Measure: one developer completes it within 2 working days and modifies no more than 2 modules.** [M,H]
+
+The H,H leaves drive architecture first because they combine high stakeholder value with high structural impact.
+
+**Part (c) - notation decision**
+Choose **formal notation for the safety/security-critical views**, supplemented by UML for communication. The Supply Chain Platform has mission-critical consequences, so precise syntax/semantics and rigorous analysis justify the higher cost and specialist skill. Informal notation is cheapest but ambiguous; semiformal UML is clearer and cheaper than formal notation but cannot provide the same proof-level analysis.
 
 
 
@@ -5605,7 +6873,13 @@ d) Describe a source-grounded weakness or condition under which the performance 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Construct a scenario matching this pattern clue: **analyze enormous file-based datasets by splitting work into parallel map and reduce stages**. Elements: Map, Reduce, Infrastructure; relation/connector: infrastructure-managed key/value data movement. Enhanced candidate: Performance because many Map instances process partitions concurrently and Reduce instances combine grouped results, increasing batch throughput. Weakness candidate: Performance can degrade when framework overhead dominates a small workload or partition skew leaves one worker as the straggler.
+**Part (a) - concrete feature:** In the Supply Chain Platform, analyze the Supply Chain Platform historical event/log dataset in parallel. Map-Reduce is suitable because its problem is to process very large batch datasets using infrastructure-managed parallel work.
+
+**Part (b) - elements and relations:** Map workers process Supply Chain Platform input partitions into key/value records, infrastructure shuffles and sorts equal keys, Reduce workers aggregate each group, and the infrastructure deploys, monitors and reruns tasks.
+
+**Part (c) - enhanced quality:** **Performance** may improve because parallel Map and Reduce tasks can increase batch throughput.
+
+**Part (d) - trade-off/weakness:** **Performance** may be threatened because startup, shuffle/sort and synchronization overhead or partition skew can erase the parallel benefit. A concrete failure case is that one Supply Chain Platform partition contains most records for a hot key. One Reduce worker becomes the straggler while others idle, so total completion time is set by that worker and adding workers does not deliver the expected Performance gain
 
 
 
@@ -5626,7 +6900,13 @@ c) The system must notify users/components when a supplier reports a disruption.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Client-Server view: runtime clients, server(s), request/reply. Layer view: implementation layers and allowed-to-use relation. Mapping may be many-to-many (e.g., presentation modules implement client component; business/data modules implement server-side components). Part (c): Observer when the question explicitly asks for implementation-level object notification.
+**Part (a) - Client-Server C&C view:** Supply Chain Platform Web/Mobile Client --HTTPS request/reply--> Supply Chain Platform Application Service --SQL request/reply--> Records Database. The first two boxes are runtime components; HTTPS and SQL are connectors.
+
+**Part (a) - Layer module view:** Presentation Module -> Application Module -> Domain Module -> Data-Access Module, where -> means allowed-to-use. The UI cannot bypass Application/Domain code to access persistence.
+
+**Part (b) - mapping:** Presentation Module **implements** the Web/Mobile Client; Application and Domain Modules together **implement** the Application Service; Data-Access Module implements the SQL-side adapter used by the Application Service. This is many-to-many because several modules realize one runtime service.
+
+**Part (c) - Observer:** the Supply Chain Platform status model is the Subject; UI and notification adapters are Observers. They register through the Observer interface and are updated automatically when the condition in the question occurs, avoiding direct coupling to a fixed recipient list.
 
 
 

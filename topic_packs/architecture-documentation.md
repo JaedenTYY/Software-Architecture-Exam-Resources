@@ -12,7 +12,11 @@ You must document an architectural view of the University Student Portal. Compar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial University Student Portal, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -30,7 +34,14 @@ Design a documentation entry for one architectural view of the University Studen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example University Student Portal C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the University Student Portal boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -48,7 +59,13 @@ For the University Student Portal, a module view shows UI, business, and data mo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **University Student Portal** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -66,7 +83,11 @@ You must document an architectural view of the Online Trading Platform. Compare 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Online Trading Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -84,7 +105,14 @@ Design a documentation entry for one architectural view of the Online Trading Pl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Online Trading Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Online Trading Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -102,7 +130,13 @@ For the Online Trading Platform, a module view shows UI, business, and data modu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Online Trading Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -120,7 +154,11 @@ You must document an architectural view of the Electricity Utility App. Compare 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Electricity Utility App is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -138,7 +176,14 @@ Design a documentation entry for one architectural view of the Electricity Utili
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Electricity Utility App C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Electricity Utility App boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -156,7 +201,13 @@ For the Electricity Utility App, a module view shows UI, business, and data modu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Electricity Utility App** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -174,7 +225,11 @@ You must document an architectural view of the Digital Game Store. Compare infor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Digital Game Store, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -192,7 +247,14 @@ Design a documentation entry for one architectural view of the Digital Game Stor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Digital Game Store C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Digital Game Store boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -210,7 +272,13 @@ For the Digital Game Store, a module view shows UI, business, and data modules w
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Digital Game Store** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -228,7 +296,11 @@ You must document an architectural view of the Flight Booking System. Compare in
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Flight Booking System, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -246,7 +318,14 @@ Design a documentation entry for one architectural view of the Flight Booking Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Flight Booking System C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Flight Booking System boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -264,7 +343,13 @@ For the Flight Booking System, a module view shows UI, business, and data module
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Flight Booking System** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -282,7 +367,11 @@ You must document an architectural view of the E-Commerce Marketplace. Compare i
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial E-Commerce Marketplace, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -300,7 +389,14 @@ Design a documentation entry for one architectural view of the E-Commerce Market
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example E-Commerce Marketplace C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the E-Commerce Marketplace boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -318,7 +414,13 @@ For the E-Commerce Marketplace, a module view shows UI, business, and data modul
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **E-Commerce Marketplace** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -336,7 +438,11 @@ You must document an architectural view of the Digital Banking App. Compare info
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Digital Banking App is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -354,7 +460,14 @@ Design a documentation entry for one architectural view of the Digital Banking A
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Digital Banking App C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Digital Banking App boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -372,7 +485,13 @@ For the Digital Banking App, a module view shows UI, business, and data modules 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Digital Banking App** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -390,7 +509,11 @@ You must document an architectural view of the Food Delivery Platform. Compare i
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Food Delivery Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -408,7 +531,14 @@ Design a documentation entry for one architectural view of the Food Delivery Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Food Delivery Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Food Delivery Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -426,7 +556,13 @@ For the Food Delivery Platform, a module view shows UI, business, and data modul
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Food Delivery Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -444,7 +580,11 @@ You must document an architectural view of the Hospital Information System. Comp
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Hospital Information System is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -462,7 +602,14 @@ Design a documentation entry for one architectural view of the Hospital Informat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Hospital Information System C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Hospital Information System boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -480,7 +627,13 @@ For the Hospital Information System, a module view shows UI, business, and data 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Hospital Information System** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -498,7 +651,11 @@ You must document an architectural view of the Smart Traffic Platform. Compare i
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Smart Traffic Platform is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -516,7 +673,14 @@ Design a documentation entry for one architectural view of the Smart Traffic Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Smart Traffic Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Smart Traffic Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -534,7 +698,13 @@ For the Smart Traffic Platform, a module view shows UI, business, and data modul
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Smart Traffic Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -552,7 +722,11 @@ You must document an architectural view of the Ride-Hailing Platform. Compare in
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Ride-Hailing Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -570,7 +744,14 @@ Design a documentation entry for one architectural view of the Ride-Hailing Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Ride-Hailing Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Ride-Hailing Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -588,7 +769,13 @@ For the Ride-Hailing Platform, a module view shows UI, business, and data module
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Ride-Hailing Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -606,7 +793,11 @@ You must document an architectural view of the Video Streaming Service. Compare 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Video Streaming Service, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -624,7 +815,14 @@ Design a documentation entry for one architectural view of the Video Streaming S
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Video Streaming Service C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Video Streaming Service boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -642,7 +840,13 @@ For the Video Streaming Service, a module view shows UI, business, and data modu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Video Streaming Service** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -660,7 +864,11 @@ You must document an architectural view of the Music Streaming Service. Compare 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Music Streaming Service, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -678,7 +886,14 @@ Design a documentation entry for one architectural view of the Music Streaming S
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Music Streaming Service C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Music Streaming Service boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -696,7 +911,13 @@ For the Music Streaming Service, a module view shows UI, business, and data modu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Music Streaming Service** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -714,7 +935,11 @@ You must document an architectural view of the Cloud File Storage. Compare infor
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Cloud File Storage, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -732,7 +957,14 @@ Design a documentation entry for one architectural view of the Cloud File Storag
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Cloud File Storage C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Cloud File Storage boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -750,7 +982,13 @@ For the Cloud File Storage, a module view shows UI, business, and data modules w
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Cloud File Storage** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -768,7 +1006,11 @@ You must document an architectural view of the Social Network. Compare informal,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Social Network, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -786,7 +1028,14 @@ Design a documentation entry for one architectural view of the Social Network. E
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Social Network C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Social Network boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -804,7 +1053,13 @@ For the Social Network, a module view shows UI, business, and data modules while
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Social Network** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -822,7 +1077,11 @@ You must document an architectural view of the Smart Home Platform. Compare info
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Smart Home Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -840,7 +1099,14 @@ Design a documentation entry for one architectural view of the Smart Home Platfo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Smart Home Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Smart Home Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -858,7 +1124,13 @@ For the Smart Home Platform, a module view shows UI, business, and data modules 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Smart Home Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -876,7 +1148,11 @@ You must document an architectural view of the Logistics Tracking System. Compar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Logistics Tracking System, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -894,7 +1170,14 @@ Design a documentation entry for one architectural view of the Logistics Trackin
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Logistics Tracking System C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Logistics Tracking System boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -912,7 +1195,13 @@ For the Logistics Tracking System, a module view shows UI, business, and data mo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Logistics Tracking System** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -930,7 +1219,11 @@ You must document an architectural view of the Insurance Claims System. Compare 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Insurance Claims System is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -948,7 +1241,14 @@ Design a documentation entry for one architectural view of the Insurance Claims 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Insurance Claims System C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Insurance Claims System boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -966,7 +1266,13 @@ For the Insurance Claims System, a module view shows UI, business, and data modu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Insurance Claims System** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -984,7 +1290,11 @@ You must document an architectural view of the Hotel Booking Platform. Compare i
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Hotel Booking Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1002,7 +1312,14 @@ Design a documentation entry for one architectural view of the Hotel Booking Pla
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Hotel Booking Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Hotel Booking Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1020,7 +1337,13 @@ For the Hotel Booking Platform, a module view shows UI, business, and data modul
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Hotel Booking Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1038,7 +1361,11 @@ You must document an architectural view of the Online Learning Platform. Compare
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Online Learning Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1056,7 +1383,14 @@ Design a documentation entry for one architectural view of the Online Learning P
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Online Learning Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Online Learning Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1074,7 +1408,13 @@ For the Online Learning Platform, a module view shows UI, business, and data mod
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Online Learning Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1092,7 +1432,11 @@ You must document an architectural view of the Cybersecurity Monitoring Platform
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Cybersecurity Monitoring Platform is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1110,7 +1454,14 @@ Design a documentation entry for one architectural view of the Cybersecurity Mon
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Cybersecurity Monitoring Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Cybersecurity Monitoring Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1128,7 +1479,13 @@ For the Cybersecurity Monitoring Platform, a module view shows UI, business, and
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Cybersecurity Monitoring Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1146,7 +1503,11 @@ You must document an architectural view of the Warehouse Management System. Comp
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Warehouse Management System, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1164,7 +1525,14 @@ Design a documentation entry for one architectural view of the Warehouse Managem
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Warehouse Management System C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Warehouse Management System boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1182,7 +1550,13 @@ For the Warehouse Management System, a module view shows UI, business, and data 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Warehouse Management System** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1200,7 +1574,11 @@ You must document an architectural view of the Payroll and HR System. Compare in
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Payroll and HR System, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1218,7 +1596,14 @@ Design a documentation entry for one architectural view of the Payroll and HR Sy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Payroll and HR System C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Payroll and HR System boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1236,7 +1621,13 @@ For the Payroll and HR System, a module view shows UI, business, and data module
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Payroll and HR System** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1254,7 +1645,11 @@ You must document an architectural view of the Telecommunications Billing. Compa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Telecommunications Billing is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1272,7 +1667,14 @@ Design a documentation entry for one architectural view of the Telecommunication
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Telecommunications Billing C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Telecommunications Billing boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1290,7 +1692,13 @@ For the Telecommunications Billing, a module view shows UI, business, and data m
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Telecommunications Billing** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1308,7 +1716,11 @@ You must document an architectural view of the Digital Library. Compare informal
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Digital Library, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1326,7 +1738,14 @@ Design a documentation entry for one architectural view of the Digital Library. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Digital Library C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Digital Library boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1344,7 +1763,13 @@ For the Digital Library, a module view shows UI, business, and data modules whil
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Digital Library** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1362,7 +1787,11 @@ You must document an architectural view of the Medical Imaging Platform. Compare
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Medical Imaging Platform is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1380,7 +1809,14 @@ Design a documentation entry for one architectural view of the Medical Imaging P
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Medical Imaging Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Medical Imaging Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1398,7 +1834,13 @@ For the Medical Imaging Platform, a module view shows UI, business, and data mod
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Medical Imaging Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1416,7 +1858,11 @@ You must document an architectural view of the Manufacturing Monitoring. Compare
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Manufacturing Monitoring is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1434,7 +1880,14 @@ Design a documentation entry for one architectural view of the Manufacturing Mon
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Manufacturing Monitoring C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Manufacturing Monitoring boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1452,7 +1905,13 @@ For the Manufacturing Monitoring, a module view shows UI, business, and data mod
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Manufacturing Monitoring** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1470,7 +1929,11 @@ You must document an architectural view of the Government Citizen Portal. Compar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Government Citizen Portal, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1488,7 +1951,14 @@ Design a documentation entry for one architectural view of the Government Citize
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Government Citizen Portal C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Government Citizen Portal boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1506,7 +1976,13 @@ For the Government Citizen Portal, a module view shows UI, business, and data mo
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Government Citizen Portal** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1524,7 +2000,11 @@ You must document an architectural view of the Digital Wallet. Compare informal,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Digital Wallet is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1542,7 +2022,14 @@ Design a documentation entry for one architectural view of the Digital Wallet. E
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Digital Wallet C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Digital Wallet boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1560,7 +2047,13 @@ For the Digital Wallet, a module view shows UI, business, and data modules while
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Digital Wallet** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1578,7 +2071,11 @@ You must document an architectural view of the Event Ticketing Platform. Compare
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Event Ticketing Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1596,7 +2093,14 @@ Design a documentation entry for one architectural view of the Event Ticketing P
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Event Ticketing Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Event Ticketing Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1614,7 +2118,13 @@ For the Event Ticketing Platform, a module view shows UI, business, and data mod
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Event Ticketing Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1632,7 +2142,11 @@ You must document an architectural view of the Online Auction Platform. Compare 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** For the normal commercial Online Auction Platform, choose **semiformal UML** for the main views. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1650,7 +2164,14 @@ Design a documentation entry for one architectural view of the Online Auction Pl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Online Auction Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Online Auction Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1668,7 +2189,13 @@ For the Online Auction Platform, a module view shows UI, business, and data modu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Online Auction Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 
@@ -1686,7 +2213,11 @@ You must document an architectural view of the Supply Chain Platform. Compare in
 
 <details><summary>Answer framework / marking outline</summary>
 
-Informal: low precision/low cost, flexible box-line/text, weak formal analysis. Semiformal: standardized notation such as UML, medium precision/cost, usually suitable for normal commercial systems. Formal: mathematically precise syntax/semantics and rigorous analysis, high effort/skill; justify it for safety/security/mission-critical contexts where proof-level precision is worth the cost.
+**Informal notation:** flexible box-line/text, low effort and low precision; it is useful for early sketches but ambiguous and weak for automated analysis.
+**Semiformal notation:** standardized syntax such as UML, medium effort/precision and useful tools; it supports consistent team communication but not mathematical proof.
+**Formal notation:** precise mathematical syntax/semantics and rigorous analysis, but high cost and specialist skill.
+
+**Recommendation:** Because the Supply Chain Platform is safety/security/mission critical, choose **formal notation for critical behavior and constraints**, supplemented by UML views for communication. Formal notation becomes justified when failure can threaten life, mission, major financial integrity or regulatory compliance; otherwise its extra rigor usually does not repay its cost.
 
 
 
@@ -1704,7 +2235,14 @@ Design a documentation entry for one architectural view of the Supply Chain Plat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Primary Presentation: main elements/relations in the view vocabulary plus a key. Element Catalog: element/relation properties, interfaces, non-obvious behavior. Context Diagram: scope/environment. Variability Guide: how variation points are exercised. Rationale: why design/pattern choices were made. Common lecture warning: a graphical primary presentation without a key.
+**Example Supply Chain Platform C&C-view entry**
+
+- **Primary Presentation:** Web/Mobile Client --HTTPS request/reply--> Application Service --SQL--> Records Database. The key identifies components and connectors.
+- **Element Catalog:** Client renders input/results; Application Service owns use cases and authorization; Records Database stores authoritative records. HTTPS and SQL connector responsibilities and interfaces are listed.
+- **Context Diagram:** users and approved external systems are outside the Supply Chain Platform boundary; identity/payment providers are external dependencies.
+- **Variability Guide:** additional client channels implement the same API; application-service replicas may be added behind the endpoint.
+- **Rationale:** centralized services protect authoritative state, while explicit connectors expose security, performance and availability decisions.
+- **Mistake to avoid:** an unlabeled box-and-line picture with no key, interfaces or relation semantics.
 
 
 
@@ -1722,7 +2260,13 @@ For the Supply Chain Platform, a module view shows UI, business, and data module
 
 <details><summary>Answer framework / marking outline</summary>
 
-Mappings associate elements across views so readers understand one unified architecture. They are often many-to-many because several modules can realize one runtime component and one module can contribute to multiple runtime components. Use relation wording such as module **implements** C&C component; C&C component **is implemented by** module(s); deployment views use **allocated to**.
+A cross-view mapping states how elements in different views realize the same **Supply Chain Platform** architecture. It is often many-to-many because several modules can implement one runtime component and one shared module can execute in several components.
+
+**Concrete correspondences:**
+1. The UI module **implements** the Web/Mobile Client component; that Client **is implemented by** the UI module.
+2. The Application and Domain modules together **implement** the Application Service component, while the Data-Access module implements its SQL connector to the Records Database.
+
+In a deployment view, the Application Service would additionally be **allocated to** application-server nodes.
 
 
 

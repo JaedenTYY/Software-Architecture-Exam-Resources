@@ -12,7 +12,7 @@ The University Student Portal must react when a seat becomes available in a pref
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **University Student Portal**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -30,7 +30,7 @@ The Online Trading Platform must react when a watched stock reaches a target pri
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Online Trading Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -48,7 +48,7 @@ The Electricity Utility App must react when consumption exceeds a threshold. Com
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Electricity Utility App**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -66,7 +66,7 @@ The Digital Game Store must react when a new game matches user preferences. Comp
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Digital Game Store**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -84,7 +84,7 @@ The Flight Booking System must react when a fare promotion becomes available. Co
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Flight Booking System**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -102,7 +102,7 @@ The E-Commerce Marketplace must react when a saved product goes on sale. Compare
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **E-Commerce Marketplace**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -120,7 +120,7 @@ The Digital Banking App must react when a suspicious transaction is detected. Co
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Digital Banking App**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -138,7 +138,7 @@ The Food Delivery Platform must react when the rider is approaching the delivery
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Food Delivery Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -156,7 +156,7 @@ The Hospital Information System must react when a critical lab value is recorded
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Hospital Information System**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -174,7 +174,7 @@ The Smart Traffic Platform must react when congestion exceeds a threshold. Compa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Smart Traffic Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -192,7 +192,7 @@ The Ride-Hailing Platform must react when a driver accepts the trip. Compare arc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Ride-Hailing Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -210,7 +210,7 @@ The Video Streaming Service must react when a followed series releases an episod
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Video Streaming Service**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -228,7 +228,7 @@ The Music Streaming Service must react when a followed artist releases a track. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Music Streaming Service**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -246,7 +246,7 @@ The Cloud File Storage must react when a shared file is modified. Compare archit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Cloud File Storage**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -264,7 +264,7 @@ The Social Network must react when a followed account publishes content. Compare
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Social Network**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -282,7 +282,7 @@ The Smart Home Platform must react when a smoke sensor enters alarm state. Compa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Smart Home Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -300,7 +300,7 @@ The Logistics Tracking System must react when a shipment is delayed. Compare arc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Logistics Tracking System**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -318,7 +318,7 @@ The Insurance Claims System must react when a high-risk claim is submitted. Comp
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Insurance Claims System**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -336,7 +336,7 @@ The Hotel Booking Platform must react when a saved hotel drops below a target pr
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Hotel Booking Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -354,7 +354,7 @@ The Online Learning Platform must react when a new lesson is released. Compare a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Online Learning Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -372,7 +372,7 @@ The Cybersecurity Monitoring Platform must react when a high-severity intrusion 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Cybersecurity Monitoring Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -390,7 +390,7 @@ The Warehouse Management System must react when inventory drops below reorder le
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Warehouse Management System**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -408,7 +408,7 @@ The Payroll and HR System must react when a leave request changes state. Compare
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Payroll and HR System**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -426,7 +426,7 @@ The Telecommunications Billing must react when mobile data usage exceeds a thres
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Telecommunications Billing**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -444,7 +444,7 @@ The Digital Library must react when a reserved title becomes available. Compare 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Digital Library**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -462,7 +462,7 @@ The Medical Imaging Platform must react when a priority study arrives. Compare a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Medical Imaging Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -480,7 +480,7 @@ The Manufacturing Monitoring must react when machine vibration exceeds a safe li
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Manufacturing Monitoring**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -498,7 +498,7 @@ The Government Citizen Portal must react when an application status changes. Com
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Government Citizen Portal**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -516,7 +516,7 @@ The Digital Wallet must react when a transaction exceeds a configured amount. Co
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Digital Wallet**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -534,7 +534,7 @@ The Event Ticketing Platform must react when tickets for a followed event go on 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Event Ticketing Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -552,7 +552,7 @@ The Online Auction Platform must react when another bidder exceeds the user's bi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Online Auction Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 
@@ -570,7 +570,7 @@ The Supply Chain Platform must react when a supplier reports a disruption. Compa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Publish-Subscribe is a C&C architectural pattern describing event-producing/consuming runtime components and an event-distribution connector. Observer is a behavioral object design pattern defining a one-to-many dependency among objects (Subject/Observer). Use Publish-Subscribe for system-level event architecture; use Observer when the question asks for an implementation-level/object design pattern. Both reduce producer-to-recipient coupling.
+For the **Supply Chain Platform**, use **Publish-Subscribe** when separate runtime components distribute the event through an event channel: the availability/status component publishes, and user-notification/dashboard components subscribe. Use **Observer** inside one implementation when a Subject object calls update() on registered Observer objects after its state changes. Both reduce direct producer-recipient coupling, but they are not interchangeable: Publish-Subscribe is a C&C architecture with an event-distribution connector; Observer is a Behavioral object pattern with Subject/Observer relationships.
 
 
 

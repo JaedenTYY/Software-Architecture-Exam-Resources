@@ -12,7 +12,13 @@ The University Student Portal is enterprise-critical and its architecture must b
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **University Student Portal** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -30,7 +36,7 @@ During ATAM for the University Student Portal, stakeholders introduce a high-pri
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **University Student Portal** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -48,7 +54,7 @@ The University Student Portal is a smaller, lower-risk project with limited time
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **University Student Portal**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the University Student Portal becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -66,7 +72,13 @@ The Online Trading Platform is enterprise-critical and its architecture must be 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Online Trading Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -84,7 +96,7 @@ During ATAM for the Online Trading Platform, stakeholders introduce a high-prior
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Online Trading Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -102,7 +114,7 @@ The Online Trading Platform is a smaller, lower-risk project with limited time. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Online Trading Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Online Trading Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -120,7 +132,13 @@ The Electricity Utility App is enterprise-critical and its architecture must be 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Electricity Utility App** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -138,7 +156,7 @@ During ATAM for the Electricity Utility App, stakeholders introduce a high-prior
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Electricity Utility App** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -156,7 +174,7 @@ The Electricity Utility App is a smaller, lower-risk project with limited time. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Electricity Utility App**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Electricity Utility App becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -174,7 +192,13 @@ The Digital Game Store is enterprise-critical and its architecture must be evalu
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Digital Game Store** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -192,7 +216,7 @@ During ATAM for the Digital Game Store, stakeholders introduce a high-priority s
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Digital Game Store** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -210,7 +234,7 @@ The Digital Game Store is a smaller, lower-risk project with limited time. Compa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Digital Game Store**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Digital Game Store becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -228,7 +252,13 @@ The Flight Booking System is enterprise-critical and its architecture must be ev
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Flight Booking System** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -246,7 +276,7 @@ During ATAM for the Flight Booking System, stakeholders introduce a high-priorit
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Flight Booking System** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -264,7 +294,7 @@ The Flight Booking System is a smaller, lower-risk project with limited time. Co
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Flight Booking System**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Flight Booking System becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -282,7 +312,13 @@ The E-Commerce Marketplace is enterprise-critical and its architecture must be e
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **E-Commerce Marketplace** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -300,7 +336,7 @@ During ATAM for the E-Commerce Marketplace, stakeholders introduce a high-priori
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **E-Commerce Marketplace** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -318,7 +354,7 @@ The E-Commerce Marketplace is a smaller, lower-risk project with limited time. C
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **E-Commerce Marketplace**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the E-Commerce Marketplace becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -336,7 +372,13 @@ The Digital Banking App is enterprise-critical and its architecture must be eval
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Digital Banking App** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -354,7 +396,7 @@ During ATAM for the Digital Banking App, stakeholders introduce a high-priority 
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Digital Banking App** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -372,7 +414,7 @@ The Digital Banking App is a smaller, lower-risk project with limited time. Comp
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Digital Banking App**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Digital Banking App becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -390,7 +432,13 @@ The Food Delivery Platform is enterprise-critical and its architecture must be e
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Food Delivery Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -408,7 +456,7 @@ During ATAM for the Food Delivery Platform, stakeholders introduce a high-priori
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Food Delivery Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -426,7 +474,7 @@ The Food Delivery Platform is a smaller, lower-risk project with limited time. C
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Food Delivery Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Food Delivery Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -444,7 +492,13 @@ The Hospital Information System is enterprise-critical and its architecture must
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Hospital Information System** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -462,7 +516,7 @@ During ATAM for the Hospital Information System, stakeholders introduce a high-p
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Hospital Information System** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -480,7 +534,7 @@ The Hospital Information System is a smaller, lower-risk project with limited ti
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Hospital Information System**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Hospital Information System becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -498,7 +552,13 @@ The Smart Traffic Platform is enterprise-critical and its architecture must be e
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Smart Traffic Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -516,7 +576,7 @@ During ATAM for the Smart Traffic Platform, stakeholders introduce a high-priori
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Smart Traffic Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -534,7 +594,7 @@ The Smart Traffic Platform is a smaller, lower-risk project with limited time. C
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Smart Traffic Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Smart Traffic Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -552,7 +612,13 @@ The Ride-Hailing Platform is enterprise-critical and its architecture must be ev
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Ride-Hailing Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -570,7 +636,7 @@ During ATAM for the Ride-Hailing Platform, stakeholders introduce a high-priorit
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Ride-Hailing Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -588,7 +654,7 @@ The Ride-Hailing Platform is a smaller, lower-risk project with limited time. Co
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Ride-Hailing Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Ride-Hailing Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -606,7 +672,13 @@ The Video Streaming Service is enterprise-critical and its architecture must be 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Video Streaming Service** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -624,7 +696,7 @@ During ATAM for the Video Streaming Service, stakeholders introduce a high-prior
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Video Streaming Service** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -642,7 +714,7 @@ The Video Streaming Service is a smaller, lower-risk project with limited time. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Video Streaming Service**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Video Streaming Service becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -660,7 +732,13 @@ The Music Streaming Service is enterprise-critical and its architecture must be 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Music Streaming Service** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -678,7 +756,7 @@ During ATAM for the Music Streaming Service, stakeholders introduce a high-prior
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Music Streaming Service** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -696,7 +774,7 @@ The Music Streaming Service is a smaller, lower-risk project with limited time. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Music Streaming Service**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Music Streaming Service becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -714,7 +792,13 @@ The Cloud File Storage is enterprise-critical and its architecture must be evalu
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Cloud File Storage** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -732,7 +816,7 @@ During ATAM for the Cloud File Storage, stakeholders introduce a high-priority s
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Cloud File Storage** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -750,7 +834,7 @@ The Cloud File Storage is a smaller, lower-risk project with limited time. Compa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Cloud File Storage**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Cloud File Storage becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -768,7 +852,13 @@ The Social Network is enterprise-critical and its architecture must be evaluated
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Social Network** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -786,7 +876,7 @@ During ATAM for the Social Network, stakeholders introduce a high-priority scena
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Social Network** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -804,7 +894,7 @@ The Social Network is a smaller, lower-risk project with limited time. Compare f
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Social Network**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Social Network becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -822,7 +912,13 @@ The Smart Home Platform is enterprise-critical and its architecture must be eval
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Smart Home Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -840,7 +936,7 @@ During ATAM for the Smart Home Platform, stakeholders introduce a high-priority 
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Smart Home Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -858,7 +954,7 @@ The Smart Home Platform is a smaller, lower-risk project with limited time. Comp
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Smart Home Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Smart Home Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -876,7 +972,13 @@ The Logistics Tracking System is enterprise-critical and its architecture must b
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Logistics Tracking System** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -894,7 +996,7 @@ During ATAM for the Logistics Tracking System, stakeholders introduce a high-pri
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Logistics Tracking System** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -912,7 +1014,7 @@ The Logistics Tracking System is a smaller, lower-risk project with limited time
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Logistics Tracking System**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Logistics Tracking System becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -930,7 +1032,13 @@ The Insurance Claims System is enterprise-critical and its architecture must be 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Insurance Claims System** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -948,7 +1056,7 @@ During ATAM for the Insurance Claims System, stakeholders introduce a high-prior
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Insurance Claims System** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -966,7 +1074,7 @@ The Insurance Claims System is a smaller, lower-risk project with limited time. 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Insurance Claims System**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Insurance Claims System becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -984,7 +1092,13 @@ The Hotel Booking Platform is enterprise-critical and its architecture must be e
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Hotel Booking Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -1002,7 +1116,7 @@ During ATAM for the Hotel Booking Platform, stakeholders introduce a high-priori
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Hotel Booking Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -1020,7 +1134,7 @@ The Hotel Booking Platform is a smaller, lower-risk project with limited time. C
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Hotel Booking Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Hotel Booking Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -1038,7 +1152,13 @@ The Online Learning Platform is enterprise-critical and its architecture must be
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Online Learning Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -1056,7 +1176,7 @@ During ATAM for the Online Learning Platform, stakeholders introduce a high-prio
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Online Learning Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -1074,7 +1194,7 @@ The Online Learning Platform is a smaller, lower-risk project with limited time.
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Online Learning Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Online Learning Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -1092,7 +1212,13 @@ The Cybersecurity Monitoring Platform is enterprise-critical and its architectur
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Cybersecurity Monitoring Platform** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -1110,7 +1236,7 @@ During ATAM for the Cybersecurity Monitoring Platform, stakeholders introduce a 
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Cybersecurity Monitoring Platform** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -1128,7 +1254,7 @@ The Cybersecurity Monitoring Platform is a smaller, lower-risk project with limi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Cybersecurity Monitoring Platform**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Cybersecurity Monitoring Platform becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -1146,7 +1272,13 @@ The Warehouse Management System is enterprise-critical and its architecture must
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Warehouse Management System** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -1164,7 +1296,7 @@ During ATAM for the Warehouse Management System, stakeholders introduce a high-p
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Warehouse Management System** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -1182,7 +1314,7 @@ The Warehouse Management System is a smaller, lower-risk project with limited ti
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Warehouse Management System**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Warehouse Management System becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -1200,7 +1332,13 @@ The Payroll and HR System is enterprise-critical and its architecture must be ev
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Payroll and HR System** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -1218,7 +1356,7 @@ During ATAM for the Payroll and HR System, stakeholders introduce a high-priorit
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Payroll and HR System** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -1236,7 +1374,7 @@ The Payroll and HR System is a smaller, lower-risk project with limited time. Co
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Payroll and HR System**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Payroll and HR System becomes mission critical or architectural failure becomes expensive.
 
 
 
@@ -1254,7 +1392,13 @@ The Telecommunications Billing is enterprise-critical and its architecture must 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ATAM can evaluate an architecture before the system is built and with many stakeholders. Steps: 1 Present the ATAM; 2 Present business drivers; 3 Present the architecture; 4 Identify architectural approaches; 5 Generate the quality-attribute utility tree; 6 Analyze architectural approaches; 7 Brainstorm and prioritize scenarios; 8 Analyze architectural approaches using new high-ranked scenarios; 9 Present results. Outputs include architecture presentation, business goals, prioritized QA scenarios/utility tree, risks/non-risks, risk themes, mappings of decisions to QA requirements, sensitivity/trade-off points. Risk = decision may cause undesirable QA consequences; non-risk = analyzed as safe. Sensitivity point strongly affects a QA; trade-off point affects multiple QAs in competing directions.
+ATAM is appropriate before constructing the enterprise-critical **Telecommunications Billing** because stakeholders can evaluate architectural approaches against business drivers and concrete QA scenarios while changes are still affordable.
+
+**Nine steps:** 1) present ATAM; 2) present business drivers; 3) present the architecture; 4) identify architectural approaches; 5) generate the QA Utility Tree; 6) analyze architectural approaches; 7) brainstorm and prioritize scenarios; 8) analyze approaches against the new high-ranked scenarios; 9) present results.
+
+**Outputs:** business goals, architecture/approach descriptions, prioritized QA scenarios and Utility Tree, risks, non-risks, sensitivity points, trade-off points, risk themes and mappings from decisions to QA requirements.
+
+**Concrete distinctions:** one unreplicated database is a **risk** to Availability; tested application-service failover meeting its target is a **non-risk** for that scenario; health-check timeout is a **sensitivity point** because small changes strongly affect recovery time; cache duration is a **trade-off point** because it improves Performance but may worsen Security/data freshness.
 
 
 
@@ -1272,7 +1416,7 @@ During ATAM for the Telecommunications Billing, stakeholders introduce a high-pr
 
 <details><summary>Answer framework / marking outline</summary>
 
-A large discrepancy means stakeholders and architect may not share the same understanding of system success/drivers. Step 7 brainstorms/prioritizes stakeholder scenarios and compares them with the utility tree. Step 8 analyzes the highest-ranked new scenarios against architectural approaches. Step 9 groups risks into risk themes, ties them to threatened business drivers and presents results.
+The new high-priority **Telecommunications Billing** scenario is itself evidence of risk: the architect's Utility Tree omitted something stakeholders consider central to business success, so the architecture may have been designed against the wrong drivers. In step 7, record, consolidate and rank the scenario against the existing tree. In step 8, walk it through the documented approaches and identify risks, non-risks, sensitivity and trade-off points. In step 9, group the findings into a risk theme, connect that theme to the threatened business goal, assign follow-up ownership and present it rather than hiding the disagreement.
 
 
 
@@ -1290,7 +1434,7 @@ The Telecommunications Billing is a smaller, lower-risk project with limited tim
 
 <details><summary>Answer framework / marking outline</summary>
 
-Full ATAM is a substantial multi-day/person-day, often outsider-led evaluation suitable when architectural mistakes are expensive. A lightweight evaluation can take a half-day/day, use internal participants and compress/omit steps when shared context already exists. It saves time/cost but sacrifices some depth, breadth and independent objectivity.
+For the smaller, lower-risk **Telecommunications Billing**, use a **lightweight evaluation**: a half-day/day internal workshop that preserves business-driver review, a small prioritized scenario set, approach analysis and recorded risks, but compresses presentations and participant breadth. Full ATAM is multi-day/person-day, broader and often outsider-led; it provides deeper scenario coverage, stronger independence and better cross-stakeholder discovery. Tailoring saves time and cost, but loses depth, breadth and independent challenge, so any omitted steps and residual risks must be recorded. Escalate to full ATAM if the Telecommunications Billing becomes mission critical or architectural failure becomes expensive.
 
 
 

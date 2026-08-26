@@ -28,7 +28,7 @@
   const concepts = [
     {
       id: "availability", label: "Availability", category: "quality",
-      aliases: ["availability","available","uptime","readiness to provide service","service remains available","continues working","continue operating","still works","users continue normally","service restored","recovery from faults","server crashes","component crashes","backend dies","keep service usable","service usable when backend dies","unreachable component","fault tolerance","adding more servers does not guarantee","more servers does not automatically guarantee"],
+      aliases: ["availability","available","uptime","readiness to provide service","service remains available","service continues","continues after failure","continues after one service instance fails","another peer can continue providing","traffic redirects","redirected to another","continues working","continue operating","still works","users continue normally","service restored","recovery from faults","server crashes","component crashes","backend dies","keep service usable","service usable when backend dies","unreachable component","fault tolerance","adding more servers does not guarantee","more servers does not automatically guarantee"],
       related: ["fault","failure","failover","redundancy","single-point-of-failure","health-check","recovery"]
     },
     { id: "fault", label: "Fault", category: "quality-detail", answerEligibleAsQualityAttribute: false, aliases: ["fault","internal fault","defect","bug","component crash","server crash","hardware fault","software fault","fault occurs"], related: ["failure","availability","recovery"] },

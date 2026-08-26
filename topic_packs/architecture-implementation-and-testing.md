@@ -12,7 +12,9 @@ During implementation of the University Student Portal, developers repeatedly by
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented University Student Portal code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -30,7 +32,9 @@ For the University Student Portal, compare how architecture informs **unit testi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one University Student Portal module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -48,7 +52,11 @@ A test team for the University Student Portal argues that black-box testing make
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **University Student Portal** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -66,7 +74,9 @@ During implementation of the Online Trading Platform, developers repeatedly bypa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Online Trading Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -84,7 +94,9 @@ For the Online Trading Platform, compare how architecture informs **unit testing
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Online Trading Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -102,7 +114,11 @@ A test team for the Online Trading Platform argues that black-box testing makes 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Online Trading Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -120,7 +136,9 @@ During implementation of the Electricity Utility App, developers repeatedly bypa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Electricity Utility App code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -138,7 +156,9 @@ For the Electricity Utility App, compare how architecture informs **unit testing
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Electricity Utility App module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -156,7 +176,11 @@ A test team for the Electricity Utility App argues that black-box testing makes 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Electricity Utility App** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -174,7 +198,9 @@ During implementation of the Digital Game Store, developers repeatedly bypass do
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Digital Game Store code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -192,7 +218,9 @@ For the Digital Game Store, compare how architecture informs **unit testing, int
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Digital Game Store module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -210,7 +238,11 @@ A test team for the Digital Game Store argues that black-box testing makes archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Digital Game Store** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -228,7 +260,9 @@ During implementation of the Flight Booking System, developers repeatedly bypass
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Flight Booking System code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -246,7 +280,9 @@ For the Flight Booking System, compare how architecture informs **unit testing, 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Flight Booking System module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -264,7 +300,11 @@ A test team for the Flight Booking System argues that black-box testing makes ar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Flight Booking System** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -282,7 +322,9 @@ During implementation of the E-Commerce Marketplace, developers repeatedly bypas
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented E-Commerce Marketplace code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -300,7 +342,9 @@ For the E-Commerce Marketplace, compare how architecture informs **unit testing,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one E-Commerce Marketplace module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -318,7 +362,11 @@ A test team for the E-Commerce Marketplace argues that black-box testing makes a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **E-Commerce Marketplace** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -336,7 +384,9 @@ During implementation of the Digital Banking App, developers repeatedly bypass d
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Digital Banking App code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -354,7 +404,9 @@ For the Digital Banking App, compare how architecture informs **unit testing, in
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Digital Banking App module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -372,7 +424,11 @@ A test team for the Digital Banking App argues that black-box testing makes arch
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Digital Banking App** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -390,7 +446,9 @@ During implementation of the Food Delivery Platform, developers repeatedly bypas
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Food Delivery Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -408,7 +466,9 @@ For the Food Delivery Platform, compare how architecture informs **unit testing,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Food Delivery Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -426,7 +486,11 @@ A test team for the Food Delivery Platform argues that black-box testing makes a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Food Delivery Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -444,7 +508,9 @@ During implementation of the Hospital Information System, developers repeatedly 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Hospital Information System code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -462,7 +528,9 @@ For the Hospital Information System, compare how architecture informs **unit tes
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Hospital Information System module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -480,7 +548,11 @@ A test team for the Hospital Information System argues that black-box testing ma
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Hospital Information System** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -498,7 +570,9 @@ During implementation of the Smart Traffic Platform, developers repeatedly bypas
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Smart Traffic Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -516,7 +590,9 @@ For the Smart Traffic Platform, compare how architecture informs **unit testing,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Smart Traffic Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -534,7 +610,11 @@ A test team for the Smart Traffic Platform argues that black-box testing makes a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Smart Traffic Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -552,7 +632,9 @@ During implementation of the Ride-Hailing Platform, developers repeatedly bypass
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Ride-Hailing Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -570,7 +652,9 @@ For the Ride-Hailing Platform, compare how architecture informs **unit testing, 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Ride-Hailing Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -588,7 +672,11 @@ A test team for the Ride-Hailing Platform argues that black-box testing makes ar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Ride-Hailing Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -606,7 +694,9 @@ During implementation of the Video Streaming Service, developers repeatedly bypa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Video Streaming Service code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -624,7 +714,9 @@ For the Video Streaming Service, compare how architecture informs **unit testing
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Video Streaming Service module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -642,7 +734,11 @@ A test team for the Video Streaming Service argues that black-box testing makes 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Video Streaming Service** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -660,7 +756,9 @@ During implementation of the Music Streaming Service, developers repeatedly bypa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Music Streaming Service code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -678,7 +776,9 @@ For the Music Streaming Service, compare how architecture informs **unit testing
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Music Streaming Service module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -696,7 +796,11 @@ A test team for the Music Streaming Service argues that black-box testing makes 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Music Streaming Service** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -714,7 +818,9 @@ During implementation of the Cloud File Storage, developers repeatedly bypass do
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Cloud File Storage code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -732,7 +838,9 @@ For the Cloud File Storage, compare how architecture informs **unit testing, int
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Cloud File Storage module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -750,7 +858,11 @@ A test team for the Cloud File Storage argues that black-box testing makes archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Cloud File Storage** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -768,7 +880,9 @@ During implementation of the Social Network, developers repeatedly bypass docume
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Social Network code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -786,7 +900,9 @@ For the Social Network, compare how architecture informs **unit testing, integra
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Social Network module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -804,7 +920,11 @@ A test team for the Social Network argues that black-box testing makes architect
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Social Network** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -822,7 +942,9 @@ During implementation of the Smart Home Platform, developers repeatedly bypass d
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Smart Home Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -840,7 +962,9 @@ For the Smart Home Platform, compare how architecture informs **unit testing, in
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Smart Home Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -858,7 +982,11 @@ A test team for the Smart Home Platform argues that black-box testing makes arch
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Smart Home Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -876,7 +1004,9 @@ During implementation of the Logistics Tracking System, developers repeatedly by
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Logistics Tracking System code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -894,7 +1024,9 @@ For the Logistics Tracking System, compare how architecture informs **unit testi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Logistics Tracking System module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -912,7 +1044,11 @@ A test team for the Logistics Tracking System argues that black-box testing make
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Logistics Tracking System** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -930,7 +1066,9 @@ During implementation of the Insurance Claims System, developers repeatedly bypa
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Insurance Claims System code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -948,7 +1086,9 @@ For the Insurance Claims System, compare how architecture informs **unit testing
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Insurance Claims System module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -966,7 +1106,11 @@ A test team for the Insurance Claims System argues that black-box testing makes 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Insurance Claims System** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -984,7 +1128,9 @@ During implementation of the Hotel Booking Platform, developers repeatedly bypas
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Hotel Booking Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -1002,7 +1148,9 @@ For the Hotel Booking Platform, compare how architecture informs **unit testing,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Hotel Booking Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -1020,7 +1168,11 @@ A test team for the Hotel Booking Platform argues that black-box testing makes a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Hotel Booking Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -1038,7 +1190,9 @@ During implementation of the Online Learning Platform, developers repeatedly byp
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Online Learning Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -1056,7 +1210,9 @@ For the Online Learning Platform, compare how architecture informs **unit testin
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Online Learning Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -1074,7 +1230,11 @@ A test team for the Online Learning Platform argues that black-box testing makes
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Online Learning Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -1092,7 +1252,9 @@ During implementation of the Cybersecurity Monitoring Platform, developers repea
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Cybersecurity Monitoring Platform code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -1110,7 +1272,9 @@ For the Cybersecurity Monitoring Platform, compare how architecture informs **un
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Cybersecurity Monitoring Platform module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -1128,7 +1292,11 @@ A test team for the Cybersecurity Monitoring Platform argues that black-box test
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Cybersecurity Monitoring Platform** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -1146,7 +1314,9 @@ During implementation of the Warehouse Management System, developers repeatedly 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Warehouse Management System code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -1164,7 +1334,9 @@ For the Warehouse Management System, compare how architecture informs **unit tes
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Warehouse Management System module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -1182,7 +1354,11 @@ A test team for the Warehouse Management System argues that black-box testing ma
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Warehouse Management System** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -1200,7 +1376,9 @@ During implementation of the Payroll and HR System, developers repeatedly bypass
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Payroll and HR System code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -1218,7 +1396,9 @@ For the Payroll and HR System, compare how architecture informs **unit testing, 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Payroll and HR System module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -1236,7 +1416,11 @@ A test team for the Payroll and HR System argues that black-box testing makes ar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Payroll and HR System** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 
@@ -1254,7 +1438,9 @@ During implementation of the Telecommunications Billing, developers repeatedly b
 
 <details><summary>Answer framework / marking outline</summary>
 
-Architecture erosion is drift between implemented code and intended/documented architecture. It can invalidate QA reasoning because dependencies/interactions no longer obey the analyzed design. Techniques: embed design knowledge in code/comments/conventions; use frameworks; use code templates; enforce architectural rules with tools/build checks; mark documentation out of date; schedule code/document synchronization.
+**Architecture erosion** occurs when implemented Telecommunications Billing code drifts from documented constraints. For example, a Presentation module directly calling the database bypasses the Application and Data-Access interfaces. Earlier Modifiability, Security and failure analyses are then invalid because the real dependencies no longer match the analyzed architecture.
+
+Use at least these controls: 1) encode dependency rules in build/static-analysis checks; 2) provide frameworks and code templates that make the permitted path easy; 3) keep architectural interfaces, naming and comments visible in code; 4) review architecture-sensitive changes; 5) mark stale documentation and schedule code/document synchronization. The direct database call should fail a conformance check before merge.
 
 
 
@@ -1272,7 +1458,9 @@ For the Telecommunications Billing, compare how architecture informs **unit test
 
 <details><summary>Answer framework / marking outline</summary>
 
-Unit: architecture helps define units, responsibilities and interfaces; harnesses can test functional behavior, synthetic performance load or fault injection. Integration: architecture defines increments/interfaces and is where runtime QAs such as performance, reliability/availability and security can be tested end-to-end, including process failure and long-running resource behavior. Acceptance: architecture has a smaller but useful role in selecting/stressing QA behavior.
+**Unit testing:** test one Telecommunications Billing module behind its interface, such as a registration-rule service with repository and clock test doubles.
+**Integration testing:** assemble the Client, Application Service, database connector and failover infrastructure to test cross-element contracts and runtime qualities. A concrete Availability test kills the active service instance under user load and passes only if routing recovers within 5 seconds with no more than 1 failed request. Architecture is essential because the harness must know the process boundary, health-check connector, shared state and fault-injection point.
+**Acceptance testing:** exercise complete stakeholder workflows and agreed QA measures on the deployed system, such as successful registration and the peak-response target. Architecture guides which critical paths and environmental dependencies must be represented.
 
 
 
@@ -1290,7 +1478,11 @@ A test team for the Telecommunications Billing argues that black-box testing mak
 
 <details><summary>Answer framework / marking outline</summary>
 
-Black-box uses requirements rather than implementation internals, but architectural elements/interfaces carry responsibilities and interface contracts that guide tests. White-box uses internal structures/control paths and can target architecture internals. Gray-box uses partial internal knowledge, e.g. component interactions. Architecture helps identify critical units, interfaces, risks and harness boundaries at all levels.
+Reject the claim: black-box tests hide implementation details, but the **Telecommunications Billing** architecture still identifies critical responsibilities, interfaces, failure boundaries and QA risks.
+
+- **Black-box:** call the public registration API and verify its contract and 2-second response target without inspecting internals; architecture identifies the externally significant service boundary.
+- **White-box:** inspect Application-to-Data-Access control/dependency paths and test every branch or forbidden direct database dependency.
+- **Gray-box:** use knowledge of the Client -> Application Service -> Database interaction to inject a database timeout and verify failover/error handling while still testing through a public interface.
 
 
 

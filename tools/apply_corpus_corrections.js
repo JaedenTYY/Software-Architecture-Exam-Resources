@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require("fs");
 const path = require("path");
+const { applyWorkedAnswers } = require("./corpus_worked_answers.js");
 
 const ROOT = path.resolve(__dirname, "..");
 const QUESTIONS_JSON = path.join(ROOT, "questions.json");
@@ -360,6 +361,7 @@ function correctedQuestion(question) {
   correctConcretePatternMapping(corrected);
   addWorkedQualityAnswer(corrected);
   addWorkedUtilityTreeAnswer(corrected);
+  applyWorkedAnswers(corrected);
   correctSourceReferences(corrected);
   return corrected;
 }

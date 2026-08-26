@@ -12,7 +12,7 @@ In the University Student Portal, the team chooses the Broker pattern but then d
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **University Student Portal Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the University Student Portal scenarios.
 
 
 
@@ -30,7 +30,7 @@ In the Online Trading Platform, the team chooses the Broker pattern but then dis
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Online Trading Platform Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Online Trading Platform scenarios.
 
 
 
@@ -48,7 +48,7 @@ In the Electricity Utility App, the team chooses the Broker pattern but then dis
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Electricity Utility App Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Electricity Utility App scenarios.
 
 
 
@@ -66,7 +66,7 @@ In the Digital Game Store, the team chooses the Broker pattern but then discover
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Digital Game Store Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Digital Game Store scenarios.
 
 
 
@@ -84,7 +84,7 @@ In the Flight Booking System, the team chooses the Broker pattern but then disco
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Flight Booking System Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Flight Booking System scenarios.
 
 
 
@@ -102,7 +102,7 @@ In the E-Commerce Marketplace, the team chooses the Broker pattern but then disc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **E-Commerce Marketplace Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the E-Commerce Marketplace scenarios.
 
 
 
@@ -120,7 +120,7 @@ In the Digital Banking App, the team chooses the Broker pattern but then discove
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Digital Banking App Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Digital Banking App scenarios.
 
 
 
@@ -138,7 +138,7 @@ In the Food Delivery Platform, the team chooses the Broker pattern but then disc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Food Delivery Platform Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Food Delivery Platform scenarios.
 
 
 
@@ -156,7 +156,7 @@ In the Hospital Information System, the team chooses the Broker pattern but then
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Hospital Information System Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Hospital Information System scenarios.
 
 
 
@@ -174,7 +174,7 @@ In the Smart Traffic Platform, the team chooses the Broker pattern but then disc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Smart Traffic Platform Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Smart Traffic Platform scenarios.
 
 
 
@@ -192,7 +192,7 @@ In the Ride-Hailing Platform, the team chooses the Broker pattern but then disco
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Ride-Hailing Platform Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Ride-Hailing Platform scenarios.
 
 
 
@@ -210,7 +210,7 @@ In the Video Streaming Service, the team chooses the Broker pattern but then dis
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Video Streaming Service Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Video Streaming Service scenarios.
 
 
 
@@ -228,7 +228,7 @@ In the Music Streaming Service, the team chooses the Broker pattern but then dis
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Music Streaming Service Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Music Streaming Service scenarios.
 
 
 
@@ -246,7 +246,7 @@ In the Cloud File Storage, the team chooses the Broker pattern but then discover
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Cloud File Storage Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Cloud File Storage scenarios.
 
 
 
@@ -264,7 +264,7 @@ In the Social Network, the team chooses the Broker pattern but then discovers av
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Social Network Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Social Network scenarios.
 
 
 
@@ -282,7 +282,7 @@ In the Smart Home Platform, the team chooses the Broker pattern but then discove
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Smart Home Platform Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Smart Home Platform scenarios.
 
 
 
@@ -300,7 +300,7 @@ In the Logistics Tracking System, the team chooses the Broker pattern but then d
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Logistics Tracking System Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Logistics Tracking System scenarios.
 
 
 
@@ -318,7 +318,7 @@ In the Insurance Claims System, the team chooses the Broker pattern but then dis
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Insurance Claims System Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Insurance Claims System scenarios.
 
 
 
@@ -336,7 +336,7 @@ In the Hotel Booking Platform, the team chooses the Broker pattern but then disc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Hotel Booking Platform Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Hotel Booking Platform scenarios.
 
 
 
@@ -354,7 +354,7 @@ In the Online Learning Platform, the team chooses the Broker pattern but then di
 
 <details><summary>Answer framework / marking outline</summary>
 
-Patterns are reusable packages of related design decisions; tactics are smaller focused design decisions aimed at a QA response ('molecule vs atom'). Broker augmentation in the lecture: **increase available resources** (multiple brokers), **maintain multiple copies**, **load balancing/scheduling resources**, and fault detection such as **heartbeat, exception detection or ping/echo**. Tactics introduce side effects such as cost, complexity, performance, security or modifiability concerns; refinement ends when remaining side effects are acceptable.
+A pattern is a reusable package of related architectural decisions; a tactic is a smaller decision aimed at one QA response. For the **Online Learning Platform Broker**, deploy two Broker instances, replicate registration state, load-balance requests and use heartbeat/ping detection to remove a failed Broker. These Availability tactics reduce the single failure point and the scheduling tactic reduces overload. They introduce extra cost, synchronization/consistency work, failover complexity and additional attack/configuration surfaces; replication traffic can also hurt Performance. Stop refining only when those measured side effects are acceptable against the Online Learning Platform scenarios.
 
 
 

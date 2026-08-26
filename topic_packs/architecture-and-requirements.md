@@ -38,7 +38,7 @@ The University Student Portal backlog contains: (i) rename a menu label, (ii) A 
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the University Student Portal.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -56,7 +56,11 @@ The University Student Portal has many stakeholders but weakly specified quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **University Student Portal** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active University Student Portal service instance crashes; Environment: normal operation with active user sessions; Artifact: the University Student Portal service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -74,7 +78,11 @@ Management of the University Student Portal gives a demanding quantitative quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **University Student Portal** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -118,7 +126,7 @@ The Online Trading Platform backlog contains: (i) rename a menu label, (ii) A tr
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Online Trading Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -136,7 +144,11 @@ The Online Trading Platform has many stakeholders but weakly specified quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Online Trading Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Online Trading Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Trading Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -154,7 +166,11 @@ Management of the Online Trading Platform gives a demanding quantitative quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Online Trading Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -198,7 +214,7 @@ The Electricity Utility App backlog contains: (i) rename a menu label, (ii) A ut
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Electricity Utility App.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -216,7 +232,11 @@ The Electricity Utility App has many stakeholders but weakly specified quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Electricity Utility App** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Electricity Utility App service instance crashes; Environment: normal operation with active user sessions; Artifact: the Electricity Utility App service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -234,7 +254,11 @@ Management of the Electricity Utility App gives a demanding quantitative quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Electricity Utility App** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -278,7 +302,7 @@ The Digital Game Store backlog contains: (i) rename a menu label, (ii) A gamer m
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Digital Game Store.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -296,7 +320,11 @@ The Digital Game Store has many stakeholders but weakly specified quality requir
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Digital Game Store** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Digital Game Store service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Game Store service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -314,7 +342,11 @@ Management of the Digital Game Store gives a demanding quantitative quality requ
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Digital Game Store** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -358,7 +390,7 @@ The Flight Booking System backlog contains: (i) rename a menu label, (ii) A pass
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Flight Booking System.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -376,7 +408,11 @@ The Flight Booking System has many stakeholders but weakly specified quality req
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Flight Booking System** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Flight Booking System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Flight Booking System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -394,7 +430,11 @@ Management of the Flight Booking System gives a demanding quantitative quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Flight Booking System** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -438,7 +478,7 @@ The E-Commerce Marketplace backlog contains: (i) rename a menu label, (ii) A sho
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the E-Commerce Marketplace.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -456,7 +496,11 @@ The E-Commerce Marketplace has many stakeholders but weakly specified quality re
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **E-Commerce Marketplace** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active E-Commerce Marketplace service instance crashes; Environment: normal operation with active user sessions; Artifact: the E-Commerce Marketplace service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -474,7 +518,11 @@ Management of the E-Commerce Marketplace gives a demanding quantitative quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **E-Commerce Marketplace** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -518,7 +566,7 @@ The Digital Banking App backlog contains: (i) rename a menu label, (ii) A bank c
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Digital Banking App.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -536,7 +584,11 @@ The Digital Banking App has many stakeholders but weakly specified quality requi
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Digital Banking App** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Digital Banking App service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Banking App service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -554,7 +606,11 @@ Management of the Digital Banking App gives a demanding quantitative quality req
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Digital Banking App** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -598,7 +654,7 @@ The Food Delivery Platform backlog contains: (i) rename a menu label, (ii) A cus
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Food Delivery Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -616,7 +672,11 @@ The Food Delivery Platform has many stakeholders but weakly specified quality re
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Food Delivery Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Food Delivery Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Food Delivery Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -634,7 +694,11 @@ Management of the Food Delivery Platform gives a demanding quantitative quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Food Delivery Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -678,7 +742,7 @@ The Hospital Information System backlog contains: (i) rename a menu label, (ii) 
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Hospital Information System.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -696,7 +760,11 @@ The Hospital Information System has many stakeholders but weakly specified quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Hospital Information System** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Hospital Information System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Hospital Information System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -714,7 +782,11 @@ Management of the Hospital Information System gives a demanding quantitative qua
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Hospital Information System** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -758,7 +830,7 @@ The Smart Traffic Platform backlog contains: (i) rename a menu label, (ii) A tra
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Smart Traffic Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -776,7 +848,11 @@ The Smart Traffic Platform has many stakeholders but weakly specified quality re
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Smart Traffic Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Smart Traffic Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Smart Traffic Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -794,7 +870,11 @@ Management of the Smart Traffic Platform gives a demanding quantitative quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Smart Traffic Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -838,7 +918,7 @@ The Ride-Hailing Platform backlog contains: (i) rename a menu label, (ii) A ride
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Ride-Hailing Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -856,7 +936,11 @@ The Ride-Hailing Platform has many stakeholders but weakly specified quality req
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Ride-Hailing Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Ride-Hailing Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Ride-Hailing Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -874,7 +958,11 @@ Management of the Ride-Hailing Platform gives a demanding quantitative quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Ride-Hailing Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -918,7 +1006,7 @@ The Video Streaming Service backlog contains: (i) rename a menu label, (ii) A vi
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Video Streaming Service.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -936,7 +1024,11 @@ The Video Streaming Service has many stakeholders but weakly specified quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Video Streaming Service** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Video Streaming Service service instance crashes; Environment: normal operation with active user sessions; Artifact: the Video Streaming Service service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -954,7 +1046,11 @@ Management of the Video Streaming Service gives a demanding quantitative quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Video Streaming Service** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -998,7 +1094,7 @@ The Music Streaming Service backlog contains: (i) rename a menu label, (ii) A li
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Music Streaming Service.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1016,7 +1112,11 @@ The Music Streaming Service has many stakeholders but weakly specified quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Music Streaming Service** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Music Streaming Service service instance crashes; Environment: normal operation with active user sessions; Artifact: the Music Streaming Service service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1034,7 +1134,11 @@ Management of the Music Streaming Service gives a demanding quantitative quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Music Streaming Service** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1078,7 +1182,7 @@ The Cloud File Storage backlog contains: (i) rename a menu label, (ii) A user mu
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Cloud File Storage.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1096,7 +1200,11 @@ The Cloud File Storage has many stakeholders but weakly specified quality requir
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Cloud File Storage** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Cloud File Storage service instance crashes; Environment: normal operation with active user sessions; Artifact: the Cloud File Storage service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1114,7 +1222,11 @@ Management of the Cloud File Storage gives a demanding quantitative quality requ
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Cloud File Storage** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1158,7 +1270,7 @@ The Social Network backlog contains: (i) rename a menu label, (ii) A member must
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Social Network.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1176,7 +1288,11 @@ The Social Network has many stakeholders but weakly specified quality requiremen
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Social Network** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Social Network service instance crashes; Environment: normal operation with active user sessions; Artifact: the Social Network service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1194,7 +1310,11 @@ Management of the Social Network gives a demanding quantitative quality requirem
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Social Network** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1238,7 +1358,7 @@ The Smart Home Platform backlog contains: (i) rename a menu label, (ii) A homeow
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Smart Home Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1256,7 +1376,11 @@ The Smart Home Platform has many stakeholders but weakly specified quality requi
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Smart Home Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Smart Home Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Smart Home Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1274,7 +1398,11 @@ Management of the Smart Home Platform gives a demanding quantitative quality req
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Smart Home Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1318,7 +1446,7 @@ The Logistics Tracking System backlog contains: (i) rename a menu label, (ii) A 
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Logistics Tracking System.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1336,7 +1464,11 @@ The Logistics Tracking System has many stakeholders but weakly specified quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Logistics Tracking System** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Logistics Tracking System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Logistics Tracking System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1354,7 +1486,11 @@ Management of the Logistics Tracking System gives a demanding quantitative quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Logistics Tracking System** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1398,7 +1534,7 @@ The Insurance Claims System backlog contains: (i) rename a menu label, (ii) A cl
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Insurance Claims System.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1416,7 +1552,11 @@ The Insurance Claims System has many stakeholders but weakly specified quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Insurance Claims System** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Insurance Claims System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Insurance Claims System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1434,7 +1574,11 @@ Management of the Insurance Claims System gives a demanding quantitative quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Insurance Claims System** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1478,7 +1622,7 @@ The Hotel Booking Platform backlog contains: (i) rename a menu label, (ii) A gue
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Hotel Booking Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1496,7 +1640,11 @@ The Hotel Booking Platform has many stakeholders but weakly specified quality re
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Hotel Booking Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Hotel Booking Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Hotel Booking Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1514,7 +1662,11 @@ Management of the Hotel Booking Platform gives a demanding quantitative quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Hotel Booking Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1558,7 +1710,7 @@ The Online Learning Platform backlog contains: (i) rename a menu label, (ii) A l
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Online Learning Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1576,7 +1728,11 @@ The Online Learning Platform has many stakeholders but weakly specified quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Online Learning Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Online Learning Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Learning Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1594,7 +1750,11 @@ Management of the Online Learning Platform gives a demanding quantitative qualit
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Online Learning Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1638,7 +1798,7 @@ The Cybersecurity Monitoring Platform backlog contains: (i) rename a menu label,
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Cybersecurity Monitoring Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1656,7 +1816,11 @@ The Cybersecurity Monitoring Platform has many stakeholders but weakly specified
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Cybersecurity Monitoring Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Cybersecurity Monitoring Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Cybersecurity Monitoring Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1674,7 +1838,11 @@ Management of the Cybersecurity Monitoring Platform gives a demanding quantitati
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Cybersecurity Monitoring Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1718,7 +1886,7 @@ The Warehouse Management System backlog contains: (i) rename a menu label, (ii) 
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Warehouse Management System.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1736,7 +1904,11 @@ The Warehouse Management System has many stakeholders but weakly specified quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Warehouse Management System** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Warehouse Management System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Warehouse Management System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1754,7 +1926,11 @@ Management of the Warehouse Management System gives a demanding quantitative qua
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Warehouse Management System** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1798,7 +1974,7 @@ The Payroll and HR System backlog contains: (i) rename a menu label, (ii) A HR o
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Payroll and HR System.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1816,7 +1992,11 @@ The Payroll and HR System has many stakeholders but weakly specified quality req
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Payroll and HR System** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Payroll and HR System service instance crashes; Environment: normal operation with active user sessions; Artifact: the Payroll and HR System service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1834,7 +2014,11 @@ Management of the Payroll and HR System gives a demanding quantitative quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Payroll and HR System** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1878,7 +2062,7 @@ The Telecommunications Billing backlog contains: (i) rename a menu label, (ii) A
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Telecommunications Billing.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1896,7 +2080,11 @@ The Telecommunications Billing has many stakeholders but weakly specified qualit
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Telecommunications Billing** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Telecommunications Billing service instance crashes; Environment: normal operation with active user sessions; Artifact: the Telecommunications Billing service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1914,7 +2102,11 @@ Management of the Telecommunications Billing gives a demanding quantitative qual
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Telecommunications Billing** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -1958,7 +2150,7 @@ The Digital Library backlog contains: (i) rename a menu label, (ii) A reader mus
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Digital Library.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -1976,7 +2168,11 @@ The Digital Library has many stakeholders but weakly specified quality requireme
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Digital Library** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Digital Library service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Library service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -1994,7 +2190,11 @@ Management of the Digital Library gives a demanding quantitative quality require
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Digital Library** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -2038,7 +2238,7 @@ The Medical Imaging Platform backlog contains: (i) rename a menu label, (ii) A r
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Medical Imaging Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -2056,7 +2256,11 @@ The Medical Imaging Platform has many stakeholders but weakly specified quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Medical Imaging Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Medical Imaging Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Medical Imaging Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -2074,7 +2278,11 @@ Management of the Medical Imaging Platform gives a demanding quantitative qualit
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Medical Imaging Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -2118,7 +2326,7 @@ The Manufacturing Monitoring backlog contains: (i) rename a menu label, (ii) A p
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Manufacturing Monitoring.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -2136,7 +2344,11 @@ The Manufacturing Monitoring has many stakeholders but weakly specified quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Manufacturing Monitoring** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Manufacturing Monitoring service instance crashes; Environment: normal operation with active user sessions; Artifact: the Manufacturing Monitoring service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -2154,7 +2366,11 @@ Management of the Manufacturing Monitoring gives a demanding quantitative qualit
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Manufacturing Monitoring** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -2198,7 +2414,7 @@ The Government Citizen Portal backlog contains: (i) rename a menu label, (ii) A 
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Government Citizen Portal.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -2216,7 +2432,11 @@ The Government Citizen Portal has many stakeholders but weakly specified quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Government Citizen Portal** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Government Citizen Portal service instance crashes; Environment: normal operation with active user sessions; Artifact: the Government Citizen Portal service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -2234,7 +2454,11 @@ Management of the Government Citizen Portal gives a demanding quantitative quali
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Government Citizen Portal** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -2278,7 +2502,7 @@ The Digital Wallet backlog contains: (i) rename a menu label, (ii) A wallet user
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Digital Wallet.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -2296,7 +2520,11 @@ The Digital Wallet has many stakeholders but weakly specified quality requiremen
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Digital Wallet** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Digital Wallet service instance crashes; Environment: normal operation with active user sessions; Artifact: the Digital Wallet service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -2314,7 +2542,11 @@ Management of the Digital Wallet gives a demanding quantitative quality requirem
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Digital Wallet** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -2358,7 +2590,7 @@ The Event Ticketing Platform backlog contains: (i) rename a menu label, (ii) A a
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Event Ticketing Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -2376,7 +2608,11 @@ The Event Ticketing Platform has many stakeholders but weakly specified quality 
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Event Ticketing Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Event Ticketing Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Event Ticketing Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -2394,7 +2630,11 @@ Management of the Event Ticketing Platform gives a demanding quantitative qualit
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Event Ticketing Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -2438,7 +2678,7 @@ The Online Auction Platform backlog contains: (i) rename a menu label, (ii) A bi
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Online Auction Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -2456,7 +2696,11 @@ The Online Auction Platform has many stakeholders but weakly specified quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Online Auction Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Online Auction Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Online Auction Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -2474,7 +2718,11 @@ Management of the Online Auction Platform gives a demanding quantitative quality
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Online Auction Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 
@@ -2518,7 +2766,7 @@ The Supply Chain Platform backlog contains: (i) rename a menu label, (ii) A supp
 
 <details><summary>Answer framework / marking outline</summary>
 
-An ASR has **profound architectural impact** and **high business/mission value**. (ii) and (iii) are strong candidates because they can alter major structure/interaction/integration decisions. Cosmetic changes are usually local unless unusual business/safety context elevates them. ASR status is contextual.
+**Requirements (ii) and (iii) are the likely ASRs for the Supply Chain Platform.** Both have high stakeholder/business value and profound architectural impact. Requirement (ii) requires distributed clients plus one authoritative service/data model, influencing Client-Server interaction, consistency, Security and Availability. Requirement (iii) requires contracts/adapters for independently managed external providers, influencing SOA-style integration and Interoperability. Renaming a menu label and changing an icon are local presentation changes, so (i) and (iv) are not ASRs unless an unusual legal, safety or system-wide Usability concern makes them architecturally significant.
 
 
 
@@ -2536,7 +2784,11 @@ The Supply Chain Platform has many stakeholders but weakly specified quality req
 
 <details><summary>Answer framework / marking outline</summary>
 
-QAW is stakeholder-focused and generates/prioritizes/refines system-level QA scenarios before architecture is completed. Steps: 1 presentation/introductions; 2 business/mission presentation; 3 architectural plan presentation; 4 identify architectural drivers; 5 scenario brainstorming; 6 consolidate; 7 prioritize; 8 refine top scenarios into six-part form. Outputs: clarified drivers and prioritized/refined QA scenarios suitable for utility-tree capture.
+QAW is suitable because the **Supply Chain Platform** architecture is not final and its many stakeholders need to turn vague quality wishes into prioritized, testable scenarios.
+
+**Eight steps:** 1) QAW presentation and introductions; 2) business/mission presentation; 3) architectural-plan presentation; 4) identify architectural drivers; 5) brainstorm scenarios; 6) consolidate duplicates; 7) prioritize scenarios; 8) refine the highest priorities into six-part form.
+
+**Concrete output:** a top-ranked scenario could be: Source: an application-server fault; Stimulus: the active Supply Chain Platform service instance crashes; Environment: normal operation with active user sessions; Artifact: the Supply Chain Platform service and failover infrastructure; Response: detect the failure, remove the instance and route work to a healthy replica; Response Measure: service is restored within 5 seconds with no more than 1 failed request. Other outputs are an agreed driver list, consolidated/prioritized scenarios and refined ASRs ready for a Utility Tree and architecture design.
 
 
 
@@ -2554,7 +2806,11 @@ Management of the Supply Chain Platform gives a demanding quantitative quality r
 
 <details><summary>Answer framework / marking outline</summary>
 
-PALM elicits/document business goals and establishes pedigree for QA drivers. Steps: 1 PALM overview; 2 business drivers; 3 architecture drivers; 4 business-goal elicitation/consolidation/prioritization; 5 identify potential QAs from goals; 6 assign pedigree to existing QA drivers and investigate quantitative sources; 7 conclusion/next steps. A justified number is defended; an arbitrary one may be renegotiated.
+PALM helps the **Supply Chain Platform** trace a numerical quality target back to the business goal and evidence that created it.
+
+**Seven steps:** 1) present PALM; 2) present business drivers; 3) present architectural drivers; 4) elicit, consolidate and prioritize business goals; 5) derive potential QAs from those goals; 6) assign pedigree to existing QA drivers and investigate quantitative sources; 7) conclude and record next actions.
+
+**Worked decision:** suppose the unexplained requirement says 99.999% availability. If it comes from a legal/mission obligation and outage-cost evidence, keep it and fund redundancy/failover. If a measured business process tolerates 30 minutes of scheduled downtime, change it to a supported availability target. If no stakeholder, source or consequence can justify the number, relax or remove it and record the weak pedigree instead of forcing costly architecture around an arbitrary target.
 
 
 

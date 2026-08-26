@@ -16765,14 +16765,14 @@
       "kind": "reference"
     }
   ],
-  "corpusHash": "38a05707ec4c27843b086403f52475d0fc6b91c2fee549eb28049d7d4fe3c8b7",
-  "sourceTextHash": "38a05707ec4c27843b086403f52475d0fc6b91c2fee549eb28049d7d4fe3c8b7",
+  "corpusHash": "bd2a9121ae47bc3fcf53c3c3f74933b17a77da5b9427f68f54afffb7c4bae22d",
+  "sourceTextHash": "bd2a9121ae47bc3fcf53c3c3f74933b17a77da5b9427f68f54afffb7c4bae22d",
   "files": {
     "vectors": "vector_index.bin"
   },
   "timingsMs": {
-    "modelLoad": 123,
-    "documentEmbedding": 47705
+    "modelLoad": 125,
+    "documentEmbedding": 50270
   },
-  "generatedAt": "2026-08-25T19:53:01.832Z"
+  "generatedAt": "2026-08-26T03:11:17.817Z"
 }

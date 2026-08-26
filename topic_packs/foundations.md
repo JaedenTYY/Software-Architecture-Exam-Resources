@@ -12,7 +12,12 @@ For the University Student Portal, explain the course definition of software arc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the University Student Portal, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -30,7 +35,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **University Student Portal** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the University Student Portal, not merely four headings from the lecture list.
 
 
 
@@ -48,7 +60,14 @@ Analyze the University Student Portal through the **technical, project life-cycl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **University Student Portal**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -66,7 +85,12 @@ For the Online Trading Platform, explain the course definition of software archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Online Trading Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -84,7 +108,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Online Trading Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Online Trading Platform, not merely four headings from the lecture list.
 
 
 
@@ -102,7 +133,14 @@ Analyze the Online Trading Platform through the **technical, project life-cycle,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Online Trading Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -120,7 +158,12 @@ For the Electricity Utility App, explain the course definition of software archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Electricity Utility App, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -138,7 +181,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Electricity Utility App** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Electricity Utility App, not merely four headings from the lecture list.
 
 
 
@@ -156,7 +206,14 @@ Analyze the Electricity Utility App through the **technical, project life-cycle,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Electricity Utility App**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -174,7 +231,12 @@ For the Digital Game Store, explain the course definition of software architectu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Digital Game Store, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -192,7 +254,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Digital Game Store** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Digital Game Store, not merely four headings from the lecture list.
 
 
 
@@ -210,7 +279,14 @@ Analyze the Digital Game Store through the **technical, project life-cycle, busi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Digital Game Store**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -228,7 +304,12 @@ For the Flight Booking System, explain the course definition of software archite
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Flight Booking System, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -246,7 +327,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Flight Booking System** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Flight Booking System, not merely four headings from the lecture list.
 
 
 
@@ -264,7 +352,14 @@ Analyze the Flight Booking System through the **technical, project life-cycle, b
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Flight Booking System**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -282,7 +377,12 @@ For the E-Commerce Marketplace, explain the course definition of software archit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the E-Commerce Marketplace, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -300,7 +400,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **E-Commerce Marketplace** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the E-Commerce Marketplace, not merely four headings from the lecture list.
 
 
 
@@ -318,7 +425,14 @@ Analyze the E-Commerce Marketplace through the **technical, project life-cycle, 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **E-Commerce Marketplace**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -336,7 +450,12 @@ For the Digital Banking App, explain the course definition of software architect
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Digital Banking App, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -354,7 +473,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Digital Banking App** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Digital Banking App, not merely four headings from the lecture list.
 
 
 
@@ -372,7 +498,14 @@ Analyze the Digital Banking App through the **technical, project life-cycle, bus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Digital Banking App**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -390,7 +523,12 @@ For the Food Delivery Platform, explain the course definition of software archit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Food Delivery Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -408,7 +546,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Food Delivery Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Food Delivery Platform, not merely four headings from the lecture list.
 
 
 
@@ -426,7 +571,14 @@ Analyze the Food Delivery Platform through the **technical, project life-cycle, 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Food Delivery Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -444,7 +596,12 @@ For the Hospital Information System, explain the course definition of software a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Hospital Information System, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -462,7 +619,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Hospital Information System** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Hospital Information System, not merely four headings from the lecture list.
 
 
 
@@ -480,7 +644,14 @@ Analyze the Hospital Information System through the **technical, project life-cy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Hospital Information System**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -498,7 +669,12 @@ For the Smart Traffic Platform, explain the course definition of software archit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Smart Traffic Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -516,7 +692,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Smart Traffic Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Smart Traffic Platform, not merely four headings from the lecture list.
 
 
 
@@ -534,7 +717,14 @@ Analyze the Smart Traffic Platform through the **technical, project life-cycle, 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Smart Traffic Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -552,7 +742,12 @@ For the Ride-Hailing Platform, explain the course definition of software archite
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Ride-Hailing Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -570,7 +765,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Ride-Hailing Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Ride-Hailing Platform, not merely four headings from the lecture list.
 
 
 
@@ -588,7 +790,14 @@ Analyze the Ride-Hailing Platform through the **technical, project life-cycle, b
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Ride-Hailing Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -606,7 +815,12 @@ For the Video Streaming Service, explain the course definition of software archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Video Streaming Service, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -624,7 +838,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Video Streaming Service** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Video Streaming Service, not merely four headings from the lecture list.
 
 
 
@@ -642,7 +863,14 @@ Analyze the Video Streaming Service through the **technical, project life-cycle,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Video Streaming Service**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -660,7 +888,12 @@ For the Music Streaming Service, explain the course definition of software archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Music Streaming Service, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -678,7 +911,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Music Streaming Service** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Music Streaming Service, not merely four headings from the lecture list.
 
 
 
@@ -696,7 +936,14 @@ Analyze the Music Streaming Service through the **technical, project life-cycle,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Music Streaming Service**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -714,7 +961,12 @@ For the Cloud File Storage, explain the course definition of software architectu
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Cloud File Storage, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -732,7 +984,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Cloud File Storage** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Cloud File Storage, not merely four headings from the lecture list.
 
 
 
@@ -750,7 +1009,14 @@ Analyze the Cloud File Storage through the **technical, project life-cycle, busi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Cloud File Storage**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -768,7 +1034,12 @@ For the Social Network, explain the course definition of software architecture a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Social Network, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -786,7 +1057,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Social Network** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Social Network, not merely four headings from the lecture list.
 
 
 
@@ -804,7 +1082,14 @@ Analyze the Social Network through the **technical, project life-cycle, business
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Social Network**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -822,7 +1107,12 @@ For the Smart Home Platform, explain the course definition of software architect
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Smart Home Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -840,7 +1130,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Smart Home Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Smart Home Platform, not merely four headings from the lecture list.
 
 
 
@@ -858,7 +1155,14 @@ Analyze the Smart Home Platform through the **technical, project life-cycle, bus
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Smart Home Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -876,7 +1180,12 @@ For the Logistics Tracking System, explain the course definition of software arc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Logistics Tracking System, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -894,7 +1203,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Logistics Tracking System** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Logistics Tracking System, not merely four headings from the lecture list.
 
 
 
@@ -912,7 +1228,14 @@ Analyze the Logistics Tracking System through the **technical, project life-cycl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Logistics Tracking System**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -930,7 +1253,12 @@ For the Insurance Claims System, explain the course definition of software archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Insurance Claims System, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -948,7 +1276,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Insurance Claims System** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Insurance Claims System, not merely four headings from the lecture list.
 
 
 
@@ -966,7 +1301,14 @@ Analyze the Insurance Claims System through the **technical, project life-cycle,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Insurance Claims System**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -984,7 +1326,12 @@ For the Hotel Booking Platform, explain the course definition of software archit
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Hotel Booking Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1002,7 +1349,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Hotel Booking Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Hotel Booking Platform, not merely four headings from the lecture list.
 
 
 
@@ -1020,7 +1374,14 @@ Analyze the Hotel Booking Platform through the **technical, project life-cycle, 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Hotel Booking Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1038,7 +1399,12 @@ For the Online Learning Platform, explain the course definition of software arch
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Online Learning Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1056,7 +1422,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Online Learning Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Online Learning Platform, not merely four headings from the lecture list.
 
 
 
@@ -1074,7 +1447,14 @@ Analyze the Online Learning Platform through the **technical, project life-cycle
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Online Learning Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1092,7 +1472,12 @@ For the Cybersecurity Monitoring Platform, explain the course definition of soft
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Cybersecurity Monitoring Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1110,7 +1495,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Cybersecurity Monitoring Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Cybersecurity Monitoring Platform, not merely four headings from the lecture list.
 
 
 
@@ -1128,7 +1520,14 @@ Analyze the Cybersecurity Monitoring Platform through the **technical, project l
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Cybersecurity Monitoring Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1146,7 +1545,12 @@ For the Warehouse Management System, explain the course definition of software a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Warehouse Management System, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1164,7 +1568,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Warehouse Management System** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Warehouse Management System, not merely four headings from the lecture list.
 
 
 
@@ -1182,7 +1593,14 @@ Analyze the Warehouse Management System through the **technical, project life-cy
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Warehouse Management System**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1200,7 +1618,12 @@ For the Payroll and HR System, explain the course definition of software archite
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Payroll and HR System, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1218,7 +1641,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Payroll and HR System** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Payroll and HR System, not merely four headings from the lecture list.
 
 
 
@@ -1236,7 +1666,14 @@ Analyze the Payroll and HR System through the **technical, project life-cycle, b
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Payroll and HR System**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1254,7 +1691,12 @@ For the Telecommunications Billing, explain the course definition of software ar
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Telecommunications Billing, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1272,7 +1714,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Telecommunications Billing** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Telecommunications Billing, not merely four headings from the lecture list.
 
 
 
@@ -1290,7 +1739,14 @@ Analyze the Telecommunications Billing through the **technical, project life-cyc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Telecommunications Billing**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1308,7 +1764,12 @@ For the Digital Library, explain the course definition of software architecture 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Digital Library, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1326,7 +1787,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Digital Library** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Digital Library, not merely four headings from the lecture list.
 
 
 
@@ -1344,7 +1812,14 @@ Analyze the Digital Library through the **technical, project life-cycle, busines
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Digital Library**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1362,7 +1837,12 @@ For the Medical Imaging Platform, explain the course definition of software arch
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Medical Imaging Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1380,7 +1860,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Medical Imaging Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Medical Imaging Platform, not merely four headings from the lecture list.
 
 
 
@@ -1398,7 +1885,14 @@ Analyze the Medical Imaging Platform through the **technical, project life-cycle
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Medical Imaging Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1416,7 +1910,12 @@ For the Manufacturing Monitoring, explain the course definition of software arch
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Manufacturing Monitoring, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1434,7 +1933,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Manufacturing Monitoring** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Manufacturing Monitoring, not merely four headings from the lecture list.
 
 
 
@@ -1452,7 +1958,14 @@ Analyze the Manufacturing Monitoring through the **technical, project life-cycle
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Manufacturing Monitoring**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1470,7 +1983,12 @@ For the Government Citizen Portal, explain the course definition of software arc
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Government Citizen Portal, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1488,7 +2006,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Government Citizen Portal** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Government Citizen Portal, not merely four headings from the lecture list.
 
 
 
@@ -1506,7 +2031,14 @@ Analyze the Government Citizen Portal through the **technical, project life-cycl
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Government Citizen Portal**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1524,7 +2056,12 @@ For the Digital Wallet, explain the course definition of software architecture a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Digital Wallet, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1542,7 +2079,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Digital Wallet** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Digital Wallet, not merely four headings from the lecture list.
 
 
 
@@ -1560,7 +2104,14 @@ Analyze the Digital Wallet through the **technical, project life-cycle, business
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Digital Wallet**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1578,7 +2129,12 @@ For the Event Ticketing Platform, explain the course definition of software arch
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Event Ticketing Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1596,7 +2152,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Event Ticketing Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Event Ticketing Platform, not merely four headings from the lecture list.
 
 
 
@@ -1614,7 +2177,14 @@ Analyze the Event Ticketing Platform through the **technical, project life-cycle
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Event Ticketing Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1632,7 +2202,12 @@ For the Online Auction Platform, explain the course definition of software archi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Online Auction Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1650,7 +2225,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Online Auction Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Online Auction Platform, not merely four headings from the lecture list.
 
 
 
@@ -1668,7 +2250,14 @@ Analyze the Online Auction Platform through the **technical, project life-cycle,
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Online Auction Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 
@@ -1686,7 +2275,12 @@ For the Supply Chain Platform, explain the course definition of software archite
 
 <details><summary>Answer framework / marking outline</summary>
 
-Course definition: **the set of structures needed to reason about the system, comprising software elements, relations among them, and properties of both**. A decision is architectural when it supports reasoning about stakeholder-important system properties. (a) normally no; (b) yes; (c) yes; (d) normally no, unless unusual context makes it system-significant. Architecture abstracts away private details with no ramifications outside one element.
+Software architecture is **the set of structures needed to reason about the Supply Chain Platform, comprising software elements, relations among them and properties of both**.
+
+- **(a) Renaming a local variable: not architectural.** It is private to one implementation element and does not affect stakeholder-important reasoning.
+- **(b) Separating a security-sensitive service: architectural.** It introduces a service/trust boundary and changes deployment, communication and Security analysis.
+- **(c) Synchronous versus asynchronous communication: architectural.** It changes runtime connectors and affects Performance, Availability and failure behavior.
+- **(d) Changing a button label: normally not architectural.** It is local presentation content unless a legal, safety or system-wide Usability requirement gives it external significance.
 
 
 
@@ -1704,7 +2298,14 @@ Choose **four** of the lecturer's thirteen reasons that software architecture is
 
 <details><summary>Answer framework / marking outline</summary>
 
-Any four source-grounded reasons are valid if applied correctly. The thirteen include: enable or inhibit driving quality attributes; reason about and manage change; predict system qualities early; enhance stakeholder communication; carry earliest/fundamental/hard-to-change design decisions; constrain subsequent implementation; influence organizational structure (and vice versa); enable evolutionary prototyping; support cost and schedule estimation; serve as a transferable/reusable model for product lines; focus on assembly of independently developed components; restrict design vocabulary to reduce complexity; provide a basis for training. A high-mark answer explains the causal mechanism in this scenario rather than listing headings.
+Four concrete reasons architecture matters to the **Supply Chain Platform** are:
+
+1. **Quality attributes:** replicating stateless application services with health checks and failover makes an Availability scenario testable before all features are built.
+2. **Change and evolution:** separating presentation, application rules and persistence behind interfaces limits the modules affected when the UI or database technology changes.
+3. **Stakeholder communication:** a C&C view lets developers, operators and owners agree which client, service and database interactions cross trust or network boundaries.
+4. **Project consequence:** explicit service boundaries and interfaces support team work allocation, integration planning, cost estimation and earlier risk testing.
+
+These are causal applications to the Supply Chain Platform, not merely four headings from the lecture list.
 
 
 
@@ -1722,7 +2323,14 @@ Analyze the Supply Chain Platform through the **technical, project life-cycle, b
 
 <details><summary>Answer framework / marking outline</summary>
 
-Four contexts: **technical** (desired qualities/current technical environment), **project life-cycle** (development process, integration/implementation/testing), **business** (stakeholder/business goals), **professional** (architect skills, knowledge, experience and communication). Architecture is both influenced by these contexts and influences later requirements, team/project organization, business possibilities and professional practice - the Architecture Influence Cycle.
+For the **Supply Chain Platform**:
+
+- **Technical context:** the required peak response and failover targets push the design toward scalable services and redundancy.
+- **Project life-cycle context:** separate teams and staged integration favor explicit service/module interfaces and automated conformance checks.
+- **Business context:** protected, continuously available core transactions make Security and Availability architectural drivers.
+- **Professional context:** the architect's experience with layered services and operational monitoring influences the selected patterns and tactics.
+
+The influence also runs outward: the resulting service boundaries shape team ownership and release planning, the reusable interfaces enable new business channels, and the operational practices improve the organization's architectural capability.
 
 
 

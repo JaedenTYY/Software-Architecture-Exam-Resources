@@ -12,7 +12,7 @@ For the University Student Portal, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the University Student Portal:** Place authentication and authorization policy in one University Student Portal IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -30,7 +30,7 @@ For the University Student Portal, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the University Student Portal:** Use asynchronous publish-subscribe for University Student Portal status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -48,7 +48,7 @@ For the University Student Portal, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the University Student Portal:** Define one versioned canonical University Student Portal record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -66,7 +66,7 @@ For the University Student Portal, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the University Student Portal:** Give the University Student Portal application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -84,7 +84,7 @@ For the University Student Portal, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the University Student Portal:** Deploy University Student Portal presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -102,7 +102,7 @@ For the University Student Portal, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the University Student Portal:** Bind the University Student Portal payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -120,7 +120,7 @@ For the University Student Portal, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the University Student Portal:** Use a transactional relational database for authoritative University Student Portal records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -138,7 +138,7 @@ For the Online Trading Platform, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Trading Platform:** Place authentication and authorization policy in one Online Trading Platform IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -156,7 +156,7 @@ For the Online Trading Platform, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Trading Platform:** Use asynchronous publish-subscribe for Online Trading Platform status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -174,7 +174,7 @@ For the Online Trading Platform, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Trading Platform:** Define one versioned canonical Online Trading Platform record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -192,7 +192,7 @@ For the Online Trading Platform, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Trading Platform:** Give the Online Trading Platform application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -210,7 +210,7 @@ For the Online Trading Platform, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Trading Platform:** Deploy Online Trading Platform presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -228,7 +228,7 @@ For the Online Trading Platform, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Trading Platform:** Bind the Online Trading Platform payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -246,7 +246,7 @@ For the Online Trading Platform, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Trading Platform:** Use a transactional relational database for authoritative Online Trading Platform records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -264,7 +264,7 @@ For the Electricity Utility App, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Electricity Utility App:** Place authentication and authorization policy in one Electricity Utility App IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -282,7 +282,7 @@ For the Electricity Utility App, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Electricity Utility App:** Use asynchronous publish-subscribe for Electricity Utility App status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -300,7 +300,7 @@ For the Electricity Utility App, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Electricity Utility App:** Define one versioned canonical Electricity Utility App record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -318,7 +318,7 @@ For the Electricity Utility App, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Electricity Utility App:** Give the Electricity Utility App application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -336,7 +336,7 @@ For the Electricity Utility App, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Electricity Utility App:** Deploy Electricity Utility App presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -354,7 +354,7 @@ For the Electricity Utility App, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Electricity Utility App:** Bind the Electricity Utility App payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -372,7 +372,7 @@ For the Electricity Utility App, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Electricity Utility App:** Use a transactional relational database for authoritative Electricity Utility App records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -390,7 +390,7 @@ For the Digital Game Store, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Game Store:** Place authentication and authorization policy in one Digital Game Store IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -408,7 +408,7 @@ For the Digital Game Store, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Game Store:** Use asynchronous publish-subscribe for Digital Game Store status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -426,7 +426,7 @@ For the Digital Game Store, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Game Store:** Define one versioned canonical Digital Game Store record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -444,7 +444,7 @@ For the Digital Game Store, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Game Store:** Give the Digital Game Store application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -462,7 +462,7 @@ For the Digital Game Store, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Game Store:** Deploy Digital Game Store presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -480,7 +480,7 @@ For the Digital Game Store, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Game Store:** Bind the Digital Game Store payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -498,7 +498,7 @@ For the Digital Game Store, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Game Store:** Use a transactional relational database for authoritative Digital Game Store records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -516,7 +516,7 @@ For the Flight Booking System, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Flight Booking System:** Place authentication and authorization policy in one Flight Booking System IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -534,7 +534,7 @@ For the Flight Booking System, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Flight Booking System:** Use asynchronous publish-subscribe for Flight Booking System status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -552,7 +552,7 @@ For the Flight Booking System, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Flight Booking System:** Define one versioned canonical Flight Booking System record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -570,7 +570,7 @@ For the Flight Booking System, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Flight Booking System:** Give the Flight Booking System application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -588,7 +588,7 @@ For the Flight Booking System, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Flight Booking System:** Deploy Flight Booking System presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -606,7 +606,7 @@ For the Flight Booking System, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Flight Booking System:** Bind the Flight Booking System payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -624,7 +624,7 @@ For the Flight Booking System, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Flight Booking System:** Use a transactional relational database for authoritative Flight Booking System records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -642,7 +642,7 @@ For the E-Commerce Marketplace, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the E-Commerce Marketplace:** Place authentication and authorization policy in one E-Commerce Marketplace IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -660,7 +660,7 @@ For the E-Commerce Marketplace, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the E-Commerce Marketplace:** Use asynchronous publish-subscribe for E-Commerce Marketplace status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -678,7 +678,7 @@ For the E-Commerce Marketplace, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the E-Commerce Marketplace:** Define one versioned canonical E-Commerce Marketplace record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -696,7 +696,7 @@ For the E-Commerce Marketplace, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the E-Commerce Marketplace:** Give the E-Commerce Marketplace application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -714,7 +714,7 @@ For the E-Commerce Marketplace, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the E-Commerce Marketplace:** Deploy E-Commerce Marketplace presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -732,7 +732,7 @@ For the E-Commerce Marketplace, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the E-Commerce Marketplace:** Bind the E-Commerce Marketplace payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -750,7 +750,7 @@ For the E-Commerce Marketplace, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the E-Commerce Marketplace:** Use a transactional relational database for authoritative E-Commerce Marketplace records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -768,7 +768,7 @@ For the Digital Banking App, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Banking App:** Place authentication and authorization policy in one Digital Banking App IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -786,7 +786,7 @@ For the Digital Banking App, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Banking App:** Use asynchronous publish-subscribe for Digital Banking App status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -804,7 +804,7 @@ For the Digital Banking App, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Banking App:** Define one versioned canonical Digital Banking App record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -822,7 +822,7 @@ For the Digital Banking App, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Banking App:** Give the Digital Banking App application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -840,7 +840,7 @@ For the Digital Banking App, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Banking App:** Deploy Digital Banking App presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -858,7 +858,7 @@ For the Digital Banking App, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Banking App:** Bind the Digital Banking App payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -876,7 +876,7 @@ For the Digital Banking App, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Digital Banking App:** Use a transactional relational database for authoritative Digital Banking App records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -894,7 +894,7 @@ For the Food Delivery Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Food Delivery Platform:** Place authentication and authorization policy in one Food Delivery Platform IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -912,7 +912,7 @@ For the Food Delivery Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Food Delivery Platform:** Use asynchronous publish-subscribe for Food Delivery Platform status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -930,7 +930,7 @@ For the Food Delivery Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Food Delivery Platform:** Define one versioned canonical Food Delivery Platform record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -948,7 +948,7 @@ For the Food Delivery Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Food Delivery Platform:** Give the Food Delivery Platform application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -966,7 +966,7 @@ For the Food Delivery Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Food Delivery Platform:** Deploy Food Delivery Platform presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -984,7 +984,7 @@ For the Food Delivery Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Food Delivery Platform:** Bind the Food Delivery Platform payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1002,7 +1002,7 @@ For the Food Delivery Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Food Delivery Platform:** Use a transactional relational database for authoritative Food Delivery Platform records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1020,7 +1020,7 @@ For the Hospital Information System, explain how the architectural design-decisi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hospital Information System:** Place authentication and authorization policy in one Hospital Information System IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1038,7 +1038,7 @@ For the Hospital Information System, explain how the architectural design-decisi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hospital Information System:** Use asynchronous publish-subscribe for Hospital Information System status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1056,7 +1056,7 @@ For the Hospital Information System, explain how the architectural design-decisi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hospital Information System:** Define one versioned canonical Hospital Information System record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1074,7 +1074,7 @@ For the Hospital Information System, explain how the architectural design-decisi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hospital Information System:** Give the Hospital Information System application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1092,7 +1092,7 @@ For the Hospital Information System, explain how the architectural design-decisi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hospital Information System:** Deploy Hospital Information System presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1110,7 +1110,7 @@ For the Hospital Information System, explain how the architectural design-decisi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hospital Information System:** Bind the Hospital Information System payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1128,7 +1128,7 @@ For the Hospital Information System, explain how the architectural design-decisi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hospital Information System:** Use a transactional relational database for authoritative Hospital Information System records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1146,7 +1146,7 @@ For the Smart Traffic Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Traffic Platform:** Place authentication and authorization policy in one Smart Traffic Platform IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1164,7 +1164,7 @@ For the Smart Traffic Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Traffic Platform:** Use asynchronous publish-subscribe for Smart Traffic Platform status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1182,7 +1182,7 @@ For the Smart Traffic Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Traffic Platform:** Define one versioned canonical Smart Traffic Platform record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1200,7 +1200,7 @@ For the Smart Traffic Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Traffic Platform:** Give the Smart Traffic Platform application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1218,7 +1218,7 @@ For the Smart Traffic Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Traffic Platform:** Deploy Smart Traffic Platform presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1236,7 +1236,7 @@ For the Smart Traffic Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Traffic Platform:** Bind the Smart Traffic Platform payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1254,7 +1254,7 @@ For the Smart Traffic Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Traffic Platform:** Use a transactional relational database for authoritative Smart Traffic Platform records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1272,7 +1272,7 @@ For the Ride-Hailing Platform, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Ride-Hailing Platform:** Place authentication and authorization policy in one Ride-Hailing Platform IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1290,7 +1290,7 @@ For the Ride-Hailing Platform, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Ride-Hailing Platform:** Use asynchronous publish-subscribe for Ride-Hailing Platform status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1308,7 +1308,7 @@ For the Ride-Hailing Platform, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Ride-Hailing Platform:** Define one versioned canonical Ride-Hailing Platform record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1326,7 +1326,7 @@ For the Ride-Hailing Platform, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Ride-Hailing Platform:** Give the Ride-Hailing Platform application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1344,7 +1344,7 @@ For the Ride-Hailing Platform, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Ride-Hailing Platform:** Deploy Ride-Hailing Platform presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1362,7 +1362,7 @@ For the Ride-Hailing Platform, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Ride-Hailing Platform:** Bind the Ride-Hailing Platform payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1380,7 +1380,7 @@ For the Ride-Hailing Platform, explain how the architectural design-decision cat
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Ride-Hailing Platform:** Use a transactional relational database for authoritative Ride-Hailing Platform records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1398,7 +1398,7 @@ For the Video Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Video Streaming Service:** Place authentication and authorization policy in one Video Streaming Service IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1416,7 +1416,7 @@ For the Video Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Video Streaming Service:** Use asynchronous publish-subscribe for Video Streaming Service status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1434,7 +1434,7 @@ For the Video Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Video Streaming Service:** Define one versioned canonical Video Streaming Service record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1452,7 +1452,7 @@ For the Video Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Video Streaming Service:** Give the Video Streaming Service application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1470,7 +1470,7 @@ For the Video Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Video Streaming Service:** Deploy Video Streaming Service presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1488,7 +1488,7 @@ For the Video Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Video Streaming Service:** Bind the Video Streaming Service payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1506,7 +1506,7 @@ For the Video Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Video Streaming Service:** Use a transactional relational database for authoritative Video Streaming Service records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1524,7 +1524,7 @@ For the Music Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Music Streaming Service:** Place authentication and authorization policy in one Music Streaming Service IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1542,7 +1542,7 @@ For the Music Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Music Streaming Service:** Use asynchronous publish-subscribe for Music Streaming Service status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1560,7 +1560,7 @@ For the Music Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Music Streaming Service:** Define one versioned canonical Music Streaming Service record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1578,7 +1578,7 @@ For the Music Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Music Streaming Service:** Give the Music Streaming Service application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1596,7 +1596,7 @@ For the Music Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Music Streaming Service:** Deploy Music Streaming Service presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1614,7 +1614,7 @@ For the Music Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Music Streaming Service:** Bind the Music Streaming Service payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1632,7 +1632,7 @@ For the Music Streaming Service, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Music Streaming Service:** Use a transactional relational database for authoritative Music Streaming Service records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1650,7 +1650,7 @@ For the Cloud File Storage, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Cloud File Storage:** Place authentication and authorization policy in one Cloud File Storage IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1668,7 +1668,7 @@ For the Cloud File Storage, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Cloud File Storage:** Use asynchronous publish-subscribe for Cloud File Storage status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1686,7 +1686,7 @@ For the Cloud File Storage, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Cloud File Storage:** Define one versioned canonical Cloud File Storage record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1704,7 +1704,7 @@ For the Cloud File Storage, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Cloud File Storage:** Give the Cloud File Storage application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1722,7 +1722,7 @@ For the Cloud File Storage, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Cloud File Storage:** Deploy Cloud File Storage presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1740,7 +1740,7 @@ For the Cloud File Storage, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Cloud File Storage:** Bind the Cloud File Storage payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1758,7 +1758,7 @@ For the Cloud File Storage, explain how the architectural design-decision catego
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Cloud File Storage:** Use a transactional relational database for authoritative Cloud File Storage records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1776,7 +1776,7 @@ For the Social Network, explain how the architectural design-decision category *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Social Network:** Place authentication and authorization policy in one Social Network IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1794,7 +1794,7 @@ For the Social Network, explain how the architectural design-decision category *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Social Network:** Use asynchronous publish-subscribe for Social Network status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1812,7 +1812,7 @@ For the Social Network, explain how the architectural design-decision category *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Social Network:** Define one versioned canonical Social Network record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1830,7 +1830,7 @@ For the Social Network, explain how the architectural design-decision category *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Social Network:** Give the Social Network application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1848,7 +1848,7 @@ For the Social Network, explain how the architectural design-decision category *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Social Network:** Deploy Social Network presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1866,7 +1866,7 @@ For the Social Network, explain how the architectural design-decision category *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Social Network:** Bind the Social Network payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -1884,7 +1884,7 @@ For the Social Network, explain how the architectural design-decision category *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Social Network:** Use a transactional relational database for authoritative Social Network records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -1902,7 +1902,7 @@ For the Smart Home Platform, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Home Platform:** Place authentication and authorization policy in one Smart Home Platform IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -1920,7 +1920,7 @@ For the Smart Home Platform, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Home Platform:** Use asynchronous publish-subscribe for Smart Home Platform status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -1938,7 +1938,7 @@ For the Smart Home Platform, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Home Platform:** Define one versioned canonical Smart Home Platform record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -1956,7 +1956,7 @@ For the Smart Home Platform, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Home Platform:** Give the Smart Home Platform application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -1974,7 +1974,7 @@ For the Smart Home Platform, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Home Platform:** Deploy Smart Home Platform presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -1992,7 +1992,7 @@ For the Smart Home Platform, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Home Platform:** Bind the Smart Home Platform payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -2010,7 +2010,7 @@ For the Smart Home Platform, explain how the architectural design-decision categ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Smart Home Platform:** Use a transactional relational database for authoritative Smart Home Platform records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -2028,7 +2028,7 @@ For the Logistics Tracking System, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Logistics Tracking System:** Place authentication and authorization policy in one Logistics Tracking System IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -2046,7 +2046,7 @@ For the Logistics Tracking System, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Logistics Tracking System:** Use asynchronous publish-subscribe for Logistics Tracking System status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -2064,7 +2064,7 @@ For the Logistics Tracking System, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Logistics Tracking System:** Define one versioned canonical Logistics Tracking System record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -2082,7 +2082,7 @@ For the Logistics Tracking System, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Logistics Tracking System:** Give the Logistics Tracking System application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -2100,7 +2100,7 @@ For the Logistics Tracking System, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Logistics Tracking System:** Deploy Logistics Tracking System presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -2118,7 +2118,7 @@ For the Logistics Tracking System, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Logistics Tracking System:** Bind the Logistics Tracking System payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -2136,7 +2136,7 @@ For the Logistics Tracking System, explain how the architectural design-decision
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Logistics Tracking System:** Use a transactional relational database for authoritative Logistics Tracking System records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -2154,7 +2154,7 @@ For the Insurance Claims System, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Insurance Claims System:** Place authentication and authorization policy in one Insurance Claims System IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -2172,7 +2172,7 @@ For the Insurance Claims System, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Insurance Claims System:** Use asynchronous publish-subscribe for Insurance Claims System status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -2190,7 +2190,7 @@ For the Insurance Claims System, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Insurance Claims System:** Define one versioned canonical Insurance Claims System record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -2208,7 +2208,7 @@ For the Insurance Claims System, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Insurance Claims System:** Give the Insurance Claims System application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -2226,7 +2226,7 @@ For the Insurance Claims System, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Insurance Claims System:** Deploy Insurance Claims System presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -2244,7 +2244,7 @@ For the Insurance Claims System, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Insurance Claims System:** Bind the Insurance Claims System payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -2262,7 +2262,7 @@ For the Insurance Claims System, explain how the architectural design-decision c
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Insurance Claims System:** Use a transactional relational database for authoritative Insurance Claims System records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -2280,7 +2280,7 @@ For the Hotel Booking Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hotel Booking Platform:** Place authentication and authorization policy in one Hotel Booking Platform IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -2298,7 +2298,7 @@ For the Hotel Booking Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hotel Booking Platform:** Use asynchronous publish-subscribe for Hotel Booking Platform status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -2316,7 +2316,7 @@ For the Hotel Booking Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hotel Booking Platform:** Define one versioned canonical Hotel Booking Platform record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -2334,7 +2334,7 @@ For the Hotel Booking Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hotel Booking Platform:** Give the Hotel Booking Platform application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -2352,7 +2352,7 @@ For the Hotel Booking Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hotel Booking Platform:** Deploy Hotel Booking Platform presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -2370,7 +2370,7 @@ For the Hotel Booking Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hotel Booking Platform:** Bind the Hotel Booking Platform payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -2388,7 +2388,7 @@ For the Hotel Booking Platform, explain how the architectural design-decision ca
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Hotel Booking Platform:** Use a transactional relational database for authoritative Hotel Booking Platform records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 
@@ -2406,7 +2406,7 @@ For the Online Learning Platform, explain how the architectural design-decision 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Allocation of responsibilities** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Learning Platform:** Place authentication and authorization policy in one Online Learning Platform IdentityService while feature modules request access decisions through its interface. Security improves because policy is enforced consistently; Performance may worsen because each protected operation adds a service call and the service can bottleneck.
 
 
 
@@ -2424,7 +2424,7 @@ For the Online Learning Platform, explain how the architectural design-decision 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Coordination model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Learning Platform:** Use asynchronous publish-subscribe for Online Learning Platform status changes instead of direct calls from the producer to every recipient. Modifiability improves because recipients can change independently; Performance predictability may worsen because queueing and fan-out add latency.
 
 
 
@@ -2442,7 +2442,7 @@ For the Online Learning Platform, explain how the architectural design-decision 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Data model** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Learning Platform:** Define one versioned canonical Online Learning Platform record schema at the integration boundary. Interoperability improves because independent systems share syntax and semantics; Modifiability may worsen because incompatible schema changes require coordinated versioning or adapters.
 
 
 
@@ -2460,7 +2460,7 @@ For the Online Learning Platform, explain how the architectural design-decision 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Management of resources** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Learning Platform:** Give the Online Learning Platform application service a bounded database-connection pool with per-client quotas. Performance improves under expected load by reusing connections; Availability can be threatened if the pool is exhausted and no timeout, back-pressure or reserved capacity protects critical requests.
 
 
 
@@ -2478,7 +2478,7 @@ For the Online Learning Platform, explain how the architectural design-decision 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Mapping among architectural elements** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Learning Platform:** Deploy Online Learning Platform presentation, application and data components on separate tiers and replicate the application tier. Security improves through network isolation and Availability improves through replaceable application instances; Performance may worsen because calls cross process/network boundaries.
 
 
 
@@ -2496,7 +2496,7 @@ For the Online Learning Platform, explain how the architectural design-decision 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Binding-time decisions** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Learning Platform:** Bind the Online Learning Platform payment/provider endpoint from validated deployment configuration at startup instead of compiling one provider address into clients. Modifiability improves because providers can change without rebuilding clients; Availability or Security can be harmed by an invalid or malicious configuration, so validation and rollback are required.
 
 
 
@@ -2514,7 +2514,7 @@ For the Online Learning Platform, explain how the architectural design-decision 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Use **Choice of technology** as the lens and state a concrete architectural decision. Trace that decision to a mechanism and at least two QA consequences. The lecture's seven categories exist because qualities depend on responsibility placement, coordination, data, resources, mapping, binding time and technology. Avoid unsupported claims such as 'X improves performance'.
+**Concrete decision for the Online Learning Platform:** Use a transactional relational database for authoritative Online Learning Platform records. Security and consistency-related protection improve through mature access control and atomic transactions; Modifiability may worsen if vendor-specific SQL and deployment features spread through business modules.
 
 
 

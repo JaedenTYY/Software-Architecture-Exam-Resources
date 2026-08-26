@@ -12,7 +12,11 @@ You are beginning architecture design for the University Student Portal. Apply t
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One University Student Portal iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -30,7 +34,9 @@ Explain why architecture design for the University Student Portal should be view
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the University Student Portal ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -48,7 +54,9 @@ The University Student Portal has system-wide performance and availability requi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **University Student Portal** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -66,7 +74,11 @@ You are beginning architecture design for the Online Trading Platform. Apply the
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Online Trading Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -84,7 +96,9 @@ Explain why architecture design for the Online Trading Platform should be viewed
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Online Trading Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -102,7 +116,9 @@ The Online Trading Platform has system-wide performance and availability require
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Online Trading Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -120,7 +136,11 @@ You are beginning architecture design for the Electricity Utility App. Apply the
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Electricity Utility App iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -138,7 +158,9 @@ Explain why architecture design for the Electricity Utility App should be viewed
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Electricity Utility App ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -156,7 +178,9 @@ The Electricity Utility App has system-wide performance and availability require
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Electricity Utility App** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -174,7 +198,11 @@ You are beginning architecture design for the Digital Game Store. Apply the **At
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Digital Game Store iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -192,7 +220,9 @@ Explain why architecture design for the Digital Game Store should be viewed as *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Digital Game Store ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -210,7 +240,9 @@ The Digital Game Store has system-wide performance and availability requirements
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Digital Game Store** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -228,7 +260,11 @@ You are beginning architecture design for the Flight Booking System. Apply the *
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Flight Booking System iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -246,7 +282,9 @@ Explain why architecture design for the Flight Booking System should be viewed a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Flight Booking System ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -264,7 +302,9 @@ The Flight Booking System has system-wide performance and availability requireme
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Flight Booking System** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -282,7 +322,11 @@ You are beginning architecture design for the E-Commerce Marketplace. Apply the 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One E-Commerce Marketplace iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -300,7 +344,9 @@ Explain why architecture design for the E-Commerce Marketplace should be viewed 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the E-Commerce Marketplace ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -318,7 +364,9 @@ The E-Commerce Marketplace has system-wide performance and availability requirem
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **E-Commerce Marketplace** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -336,7 +384,11 @@ You are beginning architecture design for the Digital Banking App. Apply the **A
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Digital Banking App iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -354,7 +406,9 @@ Explain why architecture design for the Digital Banking App should be viewed as 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Digital Banking App ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -372,7 +426,9 @@ The Digital Banking App has system-wide performance and availability requirement
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Digital Banking App** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -390,7 +446,11 @@ You are beginning architecture design for the Food Delivery Platform. Apply the 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Food Delivery Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -408,7 +468,9 @@ Explain why architecture design for the Food Delivery Platform should be viewed 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Food Delivery Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -426,7 +488,9 @@ The Food Delivery Platform has system-wide performance and availability requirem
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Food Delivery Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -444,7 +508,11 @@ You are beginning architecture design for the Hospital Information System. Apply
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Hospital Information System iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -462,7 +530,9 @@ Explain why architecture design for the Hospital Information System should be vi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Hospital Information System ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -480,7 +550,9 @@ The Hospital Information System has system-wide performance and availability req
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Hospital Information System** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -498,7 +570,11 @@ You are beginning architecture design for the Smart Traffic Platform. Apply the 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Smart Traffic Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -516,7 +592,9 @@ Explain why architecture design for the Smart Traffic Platform should be viewed 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Smart Traffic Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -534,7 +612,9 @@ The Smart Traffic Platform has system-wide performance and availability requirem
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Smart Traffic Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -552,7 +632,11 @@ You are beginning architecture design for the Ride-Hailing Platform. Apply the *
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Ride-Hailing Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -570,7 +654,9 @@ Explain why architecture design for the Ride-Hailing Platform should be viewed a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Ride-Hailing Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -588,7 +674,9 @@ The Ride-Hailing Platform has system-wide performance and availability requireme
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Ride-Hailing Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -606,7 +694,11 @@ You are beginning architecture design for the Video Streaming Service. Apply the
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Video Streaming Service iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -624,7 +716,9 @@ Explain why architecture design for the Video Streaming Service should be viewed
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Video Streaming Service ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -642,7 +736,9 @@ The Video Streaming Service has system-wide performance and availability require
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Video Streaming Service** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -660,7 +756,11 @@ You are beginning architecture design for the Music Streaming Service. Apply the
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Music Streaming Service iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -678,7 +778,9 @@ Explain why architecture design for the Music Streaming Service should be viewed
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Music Streaming Service ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -696,7 +798,9 @@ The Music Streaming Service has system-wide performance and availability require
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Music Streaming Service** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -714,7 +818,11 @@ You are beginning architecture design for the Cloud File Storage. Apply the **At
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Cloud File Storage iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -732,7 +840,9 @@ Explain why architecture design for the Cloud File Storage should be viewed as *
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Cloud File Storage ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -750,7 +860,9 @@ The Cloud File Storage has system-wide performance and availability requirements
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Cloud File Storage** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -768,7 +880,11 @@ You are beginning architecture design for the Social Network. Apply the **Attrib
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Social Network iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -786,7 +902,9 @@ Explain why architecture design for the Social Network should be viewed as **gen
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Social Network ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -804,7 +922,9 @@ The Social Network has system-wide performance and availability requirements. Ex
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Social Network** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -822,7 +942,11 @@ You are beginning architecture design for the Smart Home Platform. Apply the **A
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Smart Home Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -840,7 +964,9 @@ Explain why architecture design for the Smart Home Platform should be viewed as 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Smart Home Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -858,7 +984,9 @@ The Smart Home Platform has system-wide performance and availability requirement
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Smart Home Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -876,7 +1004,11 @@ You are beginning architecture design for the Logistics Tracking System. Apply t
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Logistics Tracking System iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -894,7 +1026,9 @@ Explain why architecture design for the Logistics Tracking System should be view
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Logistics Tracking System ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -912,7 +1046,9 @@ The Logistics Tracking System has system-wide performance and availability requi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Logistics Tracking System** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -930,7 +1066,11 @@ You are beginning architecture design for the Insurance Claims System. Apply the
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Insurance Claims System iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -948,7 +1088,9 @@ Explain why architecture design for the Insurance Claims System should be viewed
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Insurance Claims System ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -966,7 +1108,9 @@ The Insurance Claims System has system-wide performance and availability require
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Insurance Claims System** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -984,7 +1128,11 @@ You are beginning architecture design for the Hotel Booking Platform. Apply the 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Hotel Booking Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -1002,7 +1150,9 @@ Explain why architecture design for the Hotel Booking Platform should be viewed 
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Hotel Booking Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -1020,7 +1170,9 @@ The Hotel Booking Platform has system-wide performance and availability requirem
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Hotel Booking Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -1038,7 +1190,11 @@ You are beginning architecture design for the Online Learning Platform. Apply th
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Online Learning Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -1056,7 +1212,9 @@ Explain why architecture design for the Online Learning Platform should be viewe
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Online Learning Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -1074,7 +1232,9 @@ The Online Learning Platform has system-wide performance and availability requir
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Online Learning Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -1092,7 +1252,11 @@ You are beginning architecture design for the Cybersecurity Monitoring Platform.
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Cybersecurity Monitoring Platform iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -1110,7 +1274,9 @@ Explain why architecture design for the Cybersecurity Monitoring Platform should
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Cybersecurity Monitoring Platform ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -1128,7 +1294,9 @@ The Cybersecurity Monitoring Platform has system-wide performance and availabili
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Cybersecurity Monitoring Platform** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -1146,7 +1314,11 @@ You are beginning architecture design for the Warehouse Management System. Apply
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Warehouse Management System iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -1164,7 +1336,9 @@ Explain why architecture design for the Warehouse Management System should be vi
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Warehouse Management System ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -1182,7 +1356,9 @@ The Warehouse Management System has system-wide performance and availability req
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Warehouse Management System** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -1200,7 +1376,11 @@ You are beginning architecture design for the Payroll and HR System. Apply the *
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Payroll and HR System iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -1218,7 +1398,9 @@ Explain why architecture design for the Payroll and HR System should be viewed a
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Payroll and HR System ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -1236,7 +1418,9 @@ The Payroll and HR System has system-wide performance and availability requireme
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Payroll and HR System** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 
@@ -1254,7 +1438,11 @@ You are beginning architecture design for the Telecommunications Billing. Apply 
 
 <details><summary>Answer framework / marking outline</summary>
 
-ADD: 1 choose an element; 2 identify ASRs for it; 3 generate a design solution; 4 verify/refine requirements and generate input for next iteration; 5 repeat until ASRs are satisfied. The design is a hypothesis. In step 4, backtrack when an important ASR is unsatisfied and cannot be fixed merely by further elaborating the current design. Decisions made become constraints on later iterations.
+**ADD steps:** 1) choose an element to design; 2) identify the ASRs for that element; 3) generate a design solution; 4) verify/refine requirements and produce input for the next iteration; 5) repeat until the ASRs are satisfied.
+
+**One Telecommunications Billing iteration:** choose the application-service element. The ASR is that the core user transaction must remain available after one service-instance failure and recover within 5 seconds. Select stateless service replicas behind a health-checking load balancer with shared durable state. Verify by killing one replica under load and measuring recovery and failed requests. The next iteration decomposes the service and designs state/session handling.
+
+**Backtracking:** backtrack if the test shows the shared database or session design still prevents the 5-second recovery target and further decomposition cannot repair that structural weakness.
 
 
 
@@ -1272,7 +1460,9 @@ Explain why architecture design for the Telecommunications Billing should be vie
 
 <details><summary>Answer framework / marking outline</summary>
 
-Treat the current design as the hypothesis 'this design satisfies the requirements'. Test it against ASRs/analysis. If it fails, the next design preserves what worked and specifically addresses discovered weaknesses; otherwise the process becomes guess-and-test. Initial hypotheses may come from existing systems, frameworks, known patterns, design checklists or domain decomposition.
+Architecture design is **generate and test** because each design is a reasoned hypothesis about satisfying the Telecommunications Billing ASRs. For example, generate a hypothesis of stateless application-service replicas behind a load balancer, then test it against a 5-second failover scenario and peak-load response target.
+
+The initial hypothesis may come from a proven reference architecture, an existing system, known patterns/tactics, a framework or domain decomposition. If fault injection exposes a shared-database failure point, preserve the successful stateless service boundary but revise the next hypothesis with database replication/failover. Randomly replacing unrelated parts would be guess-and-test because it would not respond to the observed weakness.
 
 
 
@@ -1290,7 +1480,9 @@ The Telecommunications Billing has system-wide performance and availability requ
 
 <details><summary>Answer framework / marking outline</summary>
 
-Whole-system QAs remain architectural drivers. Decomposition divides the system into elements and refines/allocates portions of QA responsibilities to them; combined interactions still must satisfy the end-to-end requirement. Existing/legacy components are constraints the decomposition must accommodate.
+Decomposition does not remove the **Telecommunications Billing** end-to-end Performance and Availability obligations; it allocates parts of them to collaborating elements.
+
+For a 2-second response target, allocate at most 200 ms to the client/network, 1 second to the application service, 500 ms to persistence and 300 ms contingency, then verify the complete path. For a 5-second recovery target, require health checks and replaceable application replicas, plus database failover and recoverable session state. A pre-existing database that cannot replicate is a constraint: the architect must add a supported failover mechanism, renegotiate the target or record the unresolved risk. The composed interactions must still meet the original system-level measures.
 
 
 

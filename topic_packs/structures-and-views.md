@@ -12,7 +12,13 @@ For the University Student Portal, choose the most appropriate architectural str
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **University Student Portal**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -30,7 +36,13 @@ For the Online Trading Platform, choose the most appropriate architectural struc
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Online Trading Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -48,7 +60,13 @@ For the Electricity Utility App, choose the most appropriate architectural struc
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Electricity Utility App**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -66,7 +84,13 @@ For the Digital Game Store, choose the most appropriate architectural structure 
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Digital Game Store**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -84,7 +108,13 @@ For the Flight Booking System, choose the most appropriate architectural structu
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Flight Booking System**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -102,7 +132,13 @@ For the E-Commerce Marketplace, choose the most appropriate architectural struct
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **E-Commerce Marketplace**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -120,7 +156,13 @@ For the Digital Banking App, choose the most appropriate architectural structure
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Digital Banking App**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -138,7 +180,13 @@ For the Food Delivery Platform, choose the most appropriate architectural struct
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Food Delivery Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -156,7 +204,13 @@ For the Hospital Information System, choose the most appropriate architectural s
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Hospital Information System**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -174,7 +228,13 @@ For the Smart Traffic Platform, choose the most appropriate architectural struct
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Smart Traffic Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -192,7 +252,13 @@ For the Ride-Hailing Platform, choose the most appropriate architectural structu
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Ride-Hailing Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -210,7 +276,13 @@ For the Video Streaming Service, choose the most appropriate architectural struc
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Video Streaming Service**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -228,7 +300,13 @@ For the Music Streaming Service, choose the most appropriate architectural struc
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Music Streaming Service**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -246,7 +324,13 @@ For the Cloud File Storage, choose the most appropriate architectural structure 
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Cloud File Storage**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -264,7 +348,13 @@ For the Social Network, choose the most appropriate architectural structure for 
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Social Network**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -282,7 +372,13 @@ For the Smart Home Platform, choose the most appropriate architectural structure
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Smart Home Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -300,7 +396,13 @@ For the Logistics Tracking System, choose the most appropriate architectural str
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Logistics Tracking System**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -318,7 +420,13 @@ For the Insurance Claims System, choose the most appropriate architectural struc
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Insurance Claims System**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -336,7 +444,13 @@ For the Hotel Booking Platform, choose the most appropriate architectural struct
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Hotel Booking Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -354,7 +468,13 @@ For the Online Learning Platform, choose the most appropriate architectural stru
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Online Learning Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -372,7 +492,13 @@ For the Cybersecurity Monitoring Platform, choose the most appropriate architect
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Cybersecurity Monitoring Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -390,7 +516,13 @@ For the Warehouse Management System, choose the most appropriate architectural s
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Warehouse Management System**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -408,7 +540,13 @@ For the Payroll and HR System, choose the most appropriate architectural structu
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Payroll and HR System**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -426,7 +564,13 @@ For the Telecommunications Billing, choose the most appropriate architectural st
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Telecommunications Billing**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -444,7 +588,13 @@ For the Digital Library, choose the most appropriate architectural structure for
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Digital Library**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -462,7 +612,13 @@ For the Medical Imaging Platform, choose the most appropriate architectural stru
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Medical Imaging Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -480,7 +636,13 @@ For the Manufacturing Monitoring, choose the most appropriate architectural stru
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Manufacturing Monitoring**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -498,7 +660,13 @@ For the Government Citizen Portal, choose the most appropriate architectural str
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Government Citizen Portal**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -516,7 +684,13 @@ For the Digital Wallet, choose the most appropriate architectural structure for 
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Digital Wallet**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -534,7 +708,13 @@ For the Event Ticketing Platform, choose the most appropriate architectural stru
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Event Ticketing Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -552,7 +732,13 @@ For the Online Auction Platform, choose the most appropriate architectural struc
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Online Auction Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 
@@ -570,7 +756,13 @@ For the Supply Chain Platform, choose the most appropriate architectural structu
 
 <details><summary>Answer framework / marking outline</summary>
 
-(a) **Module structure** - static organization of implementation units/responsibilities. (b) **Component-and-Connector** - runtime components and interaction mechanisms. (c) **Allocation** - mapping software to environment such as hardware, files or teams. One system can have all three; they are complementary views.
+For the **Supply Chain Platform**:
+
+- **(a) Module structure:** show Presentation, Application, Domain and Data-Access modules plus allowed-to-use dependencies. It answers how implementation responsibilities are organized.
+- **(b) Component-and-Connector structure:** show the runtime Client sending a registration request to the Application Service, which checks the Records Database and returns the result. It answers how runtime elements interact.
+- **(c) Allocation structure:** show the Client allocated to a user device, Application Service replicas to server nodes and the database to a managed data node. It answers where software executes.
+
+The three are complementary, not interchangeable: module, runtime and environment-allocation questions require different element and relation types.
 
 
 

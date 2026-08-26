@@ -38,6 +38,13 @@ for (const question of questions) {
   if (/Environment: state an explicit|Replace it with a six-part scenario|A good answer explains|Use \*\*Utility →|Map these elements into the scenario|Explain which real component plays each role/i.test(answer)) {
     add(violations, "ANSWER_DELEGATES_REQUIRED_WORK", question, "answer_outline", "Answer gives instructions for constructing an answer instead of supplying the requested worked example.");
   }
+  if (/Full credit requires|Construct an edge case|Qualify the claim|scenario mapping must|Evidence should map|alternative must be rejected|Strong answers pick|Any four source-grounded|high-mark answer|Use \*\*[^*]+\*\* as the lens|Part \(a\): give|Choose two valid|Construct a scenario matching|Formal scenario: state|Use relation wording|Tie the choice to|Discuss .*trade-?offs/i.test(answer)) {
+    add(violations, "ANSWER_DELEGATES_SUBPART", question, "answer_outline", "Answer leaves a requested selection, mapping, example, scenario, trade-off or justification for the student to perform.");
+  }
+
+  if (question.scenario && normalize(prompt).includes(normalize(question.scenario)) && !normalize(answer).includes(normalize(question.scenario))) {
+    add(violations, "SCENARIO_NOT_APPLIED", question, "answer_outline", "Prompt asks about a named scenario but the answer does not apply its reasoning to that scenario.");
+  }
 
   if (question.topic === "Quality Attributes") {
     if (!normalize(answer).includes(normalize(question.scenario))) add(violations, "QA_EXAMPLE_NOT_SCENARIO_SPECIFIC", question, "answer_outline", "Quality Attribute answer does not apply its example to the named scenario.");
@@ -53,6 +60,13 @@ for (const question of questions) {
     if (!normalize(answer).includes(normalize(question.scenario)) || !qaBranches.every(branch => answer.includes(branch)) || !/\[[HML], [HML]\]/.test(answer)) {
       add(violations, "INCOMPLETE_UTILITY_TREE_EXAMPLE", question, "answer_outline", "Utility Tree answer must include a scenario-specific worked tree with four rated quality branches.");
     }
+  }
+
+  if (question.topic === "Integrated Past-Paper Practice") {
+    const required = question.subtopic === "Q3 Pattern Deep Dive" ? ["Part (a)", "Part (b)", "Part (c)", "Part (d)"] : ["Part (a)", "Part (b)", "Part (c)"];
+    const q1Complete = question.subtopic !== "Q1 Pattern Selection" || (/R1:/.test(answer) && /R2:/.test(answer) && /R3:/.test(answer) && /Source:/.test(answer) && /Response Measure:/.test(answer));
+    const otherComplete = question.subtopic === "Q1 Pattern Selection" || required.every(label => answer.includes(label));
+    if (!q1Complete || !otherComplete) add(violations, "INCOMPLETE_MULTI_PART_ANSWER", question, "answer_outline", "Integrated answer does not directly complete every requested subpart.");
   }
 
   if (question.type === "Elements and relations") {
@@ -92,7 +106,7 @@ for (const row of missingSources.values()) {
 const report = {
   ok: violations.length === 0,
   auditedQuestions: questions.length,
-  checks: ["placeholders", "worked-answer completeness", "Quality Attribute scenarios", "Utility Tree examples", "scenario-role mapping", "source references", "answer repetition", "tags", "code completeness", "answer length"],
+  checks: ["placeholders", "worked-answer completeness", "delegated subparts", "scenario application", "multi-part coverage", "Quality Attribute scenarios", "Utility Tree examples", "scenario-role mapping", "source references", "answer repetition", "tags", "code completeness", "answer length"],
   violations,
   warnings,
   missingSourceReferences: [...missingSources.values()]
